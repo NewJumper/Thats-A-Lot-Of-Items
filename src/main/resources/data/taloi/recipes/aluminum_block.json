@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "taloi:aluminum_ingot"
+    }
+  },
+  "result": {
+    "item": "taloi:aluminum_block",
+    "count": 1
+  }
+}

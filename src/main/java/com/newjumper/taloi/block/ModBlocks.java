@@ -22,13 +22,19 @@ public class ModBlocks {
 
     // blocks
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block", () ->
-            new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f)));
+            new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ALUMINUM_ORE = registerBlock("aluminum_ore", () ->
-            new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3f)));
+            new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3f)
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = registerBlock("raw_aluminum_block", () ->
-            new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f)));
+            new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()));
 
     // in game mod tab
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

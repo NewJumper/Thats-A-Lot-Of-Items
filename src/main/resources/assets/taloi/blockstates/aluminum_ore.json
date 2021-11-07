@@ -1,5 +1,5 @@
 {
-  "variants" : {
-    "" : { "model" :  "taloi:block/aluminum_ore"}
+  "variants": {
+    "": { "model":  "taloi:block/aluminum_ore" }
   }
 }
