@@ -6,5 +6,35 @@
   "item.taloi.raw_aluminum" : "Raw Aluminum",
   "block.taloi.aluminum_block" : "Block of Aluminum",
   "block.taloi.aluminum_ore" : "Aluminum Ore",
-  "block.taloi.raw_aluminum_block" : "Block of Raw Aluminum"
+  "block.taloi.raw_aluminum_block" : "Block of Raw Aluminum",
+
+  "item.taloi.iridium_ingot" : "Iridium Ingot",
+  "item.taloi.raw_iridium" : "Raw Iridium",
+
+  "item.taloi.lead_ingot" : "Lead Ingot",
+  "item.taloi.raw_lead" : "Raw Lead",
+
+  "item.taloi.magnesium_ingot" : "Magnesium Ingot",
+  "item.taloi.raw_magnesium" : "Raw Magnesium",
+
+  "item.taloi.osmium_ingot" : "Osmium Ingot",
+  "item.taloi.raw_osmium" : "Raw Osmium",
+
+  "item.taloi.platinum_ingot" : "Platinum Ingot",
+  "item.taloi.raw_platinum" : "Raw Platinum",
+
+  "item.taloi.silicon_ingot" : "Silicon Ingot",
+  "item.taloi.raw_silicon" : "Raw Silicon",
+
+  "item.taloi.tin_ingot" : "Tin Ingot",
+  "item.taloi.raw_tin" : "Raw Tin",
+
+  "item.taloi.tungsten_ingot" : "Tungsten Ingot",
+  "item.taloi.raw_tungsten" : "Raw Tungsten",
+
+  "item.taloi.refined_uranium" : "Refined Uranium",
+  "item.taloi.raw_uranium" : "Raw Uranium",
+
+  "item.taloi.zinc_ingot" : "Zinc Ingot",
+  "item.taloi.raw_zinc" : "Raw Zinc"
 }
