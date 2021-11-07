@@ -1,0 +1,10 @@
+{
+  "itemGroup.taloiItemTab" : "TALOI Items",
+  "itemGroup.taloiBlockTab" : "TALOI Blocks",
+
+  "item.taloi.aluminum_ingot" : "Aluminum Ingot",
+  "item.taloi.raw_aluminum" : "Raw Aluminum",
+  "block.taloi.aluminum_block" : "Block of Aluminum",
+  "block.taloi.aluminum_ore" : "Aluminum Ore",
+  "block.taloi.raw_aluminum_block" : "Block of Raw Aluminum"
+}
