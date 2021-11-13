@@ -10,31 +10,67 @@
 
   "item.taloi.iridium_ingot" : "Iridium Ingot",
   "item.taloi.raw_iridium" : "Raw Iridium",
+  "block.taloi.iridium_block" : "Block of Iridium",
+  "block.taloi.iridium_ore" : "Iridium Ore",
+  "block.taloi.raw_iridium_block" : "Block of Raw Iridium",
 
   "item.taloi.lead_ingot" : "Lead Ingot",
   "item.taloi.raw_lead" : "Raw Lead",
+  "block.taloi.lead_block" : "Block of Lead",
+  "block.taloi.lead_ore" : "Lead Ore",
+  "block.taloi.raw_lead_block" : "Block of Raw Lead",
 
   "item.taloi.magnesium_ingot" : "Magnesium Ingot",
   "item.taloi.raw_magnesium" : "Raw Magnesium",
+  "block.taloi.magnesium_block" : "Block of Magnesium",
+  "block.taloi.magnesium_ore" : "Magnesium Ore",
+  "block.taloi.raw_magnesium_block" : "Block of Raw Magnesium",
 
   "item.taloi.osmium_ingot" : "Osmium Ingot",
   "item.taloi.raw_osmium" : "Raw Osmium",
+  "block.taloi.osmium_block" : "Block of Osmium",
+  "block.taloi.osmium_ore" : "Osmium Ore",
+  "block.taloi.raw_osmium_block" : "Block of Raw Osmium",
 
   "item.taloi.platinum_ingot" : "Platinum Ingot",
   "item.taloi.raw_platinum" : "Raw Platinum",
+  "block.taloi.platinum_block" : "Block of Platinum",
+  "block.taloi.platinum_ore" : "Platinum Ore",
+  "block.taloi.raw_platinum_block" : "Block of Raw Platinum",
 
   "item.taloi.silicon_ingot" : "Silicon Ingot",
   "item.taloi.raw_silicon" : "Raw Silicon",
+  "block.taloi.silicon_block" : "Block of Silicon",
+  "block.taloi.silicon_ore" : "Silicon Ore",
+  "block.taloi.raw_silicon_block" : "Block of Raw Silicon",
 
   "item.taloi.tin_ingot" : "Tin Ingot",
   "item.taloi.raw_tin" : "Raw Tin",
+  "block.taloi.tin_block" : "Block of Tin",
+  "block.taloi.tin_ore" : "Tin Ore",
+  "block.taloi.raw_tin_block" : "Block of Raw Tin",
 
   "item.taloi.tungsten_ingot" : "Tungsten Ingot",
   "item.taloi.raw_tungsten" : "Raw Tungsten",
+  "block.taloi.tungsten_block" : "Block of Tungsten",
+  "block.taloi.tungsten_ore" : "Tungsten Ore",
+  "block.taloi.raw_tungsten_block" : "Block of Raw Tungsten",
 
   "item.taloi.refined_uranium" : "Refined Uranium",
   "item.taloi.raw_uranium" : "Raw Uranium",
+  "block.taloi.uranium_block" : "Block of Uranium",
+  "block.taloi.uranium_ore" : "Uranium Ore",
+  "block.taloi.raw_uranium_block" : "Block of Raw Uranium",
 
   "item.taloi.zinc_ingot" : "Zinc Ingot",
-  "item.taloi.raw_zinc" : "Raw Zinc"
+  "item.taloi.raw_zinc" : "Raw Zinc",
+  "block.taloi.zinc_block" : "Block of Zinc",
+  "block.taloi.zinc_ore" : "Zinc Ore",
+  "block.taloi.raw_zinc_block" : "Block of Raw Zinc",
+
+  "item.taloi.rice_bowl" : "Bowl of Rice",
+
+  "item.taloi.blowtorch" : "Blowtorch",
+
+  "block.taloi.bouncy_block" : "Bouncy Block"
 }

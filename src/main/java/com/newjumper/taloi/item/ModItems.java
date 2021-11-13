@@ -1,6 +1,7 @@
 package com.newjumper.taloi.item;
 
-import net.minecraft.world.item.CreativeModeTab;
+import com.newjumper.taloi.item.custom.BlowtorchItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -12,6 +13,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ThatsALotOfItems.MOD_ID);
 
+    // INGOTS AND RAW VARIANTS
     public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () ->
             new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
@@ -77,6 +79,20 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_ZINC = ITEMS.register("raw_zinc", () ->
             new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+
+    // FOOD
+    public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () ->
+            new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)
+                    .stacksTo(1)
+                    .food(new FoodProperties.Builder()
+                            .nutrition(6)
+                            .saturationMod(0.2f)
+                            .build())));
+
+    // TOOLS
+    public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () ->
+            new BlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)
+                    .durability(102)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
