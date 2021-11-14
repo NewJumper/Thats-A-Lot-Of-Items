@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/aluminum"
+      "item": "taloi:iridium_ingot"
     }
   },
   "result": {
-    "item": "taloi:aluminum_block",
+    "item": "taloi:iridium_block",
     "count": 1
   }
 }

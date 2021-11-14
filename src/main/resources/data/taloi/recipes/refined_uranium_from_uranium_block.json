@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "refined_uranium",
+  "ingredients": [
+    {
+      "item": "taloi:uranium_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:refined_uranium",
+    "count": 9
+  }
+}

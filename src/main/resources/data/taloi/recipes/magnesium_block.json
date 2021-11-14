@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/aluminum"
+      "item": "taloi:magnesium_ingot"
     }
   },
   "result": {
-    "item": "taloi:aluminum_block",
+    "item": "taloi:magnesium_block",
     "count": 1
   }
 }

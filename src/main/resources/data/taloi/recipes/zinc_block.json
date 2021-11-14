@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/aluminum"
+      "item": "taloi:zinc_ingot"
     }
   },
   "result": {
-    "item": "taloi:aluminum_block",
+    "item": "taloi:zinc_block",
     "count": 1
   }
 }

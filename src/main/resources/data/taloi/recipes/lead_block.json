@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/aluminum"
+      "item": "taloi:lead_ingot"
     }
   },
   "result": {
-    "item": "taloi:aluminum_block",
+    "item": "taloi:lead_block",
     "count": 1
   }
 }
