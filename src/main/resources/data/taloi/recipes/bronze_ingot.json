@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "bronze_ingot",
+  "ingredients": [
+    {
+      "item": "taloi:bronze_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:bronze_ingot",
+    "count": 9
+  }
+}

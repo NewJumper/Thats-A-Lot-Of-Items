@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:raw_iridium_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:raw_iridium",
+    "count": 9
+  }
+}

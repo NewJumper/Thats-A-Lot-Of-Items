@@ -187,6 +187,17 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
+    // ALLOY BLOCKS
+    public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block", () ->
+            new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block", () ->
+            new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
+
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->
             new BouncyBlock(BlockBehaviour.Properties.of(Material.METAL)

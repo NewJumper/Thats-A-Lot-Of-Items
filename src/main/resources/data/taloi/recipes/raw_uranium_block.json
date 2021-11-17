@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "taloi:raw_uranium"
+    }
+  },
+  "result": {
+    "item": "taloi:raw_uranium_block",
+    "count": 1
+  }
+}

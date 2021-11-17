@@ -33,6 +33,9 @@
     "taloi:raw_uranium_block",
     "taloi:zinc_block",
     "taloi:zinc_ore",
-    "taloi:raw_zinc_block"
+    "taloi:raw_zinc_block",
+
+    "taloi:bronze_block",
+    "taloi:steel_block"
   ]
 }

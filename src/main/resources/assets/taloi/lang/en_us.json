@@ -68,6 +68,19 @@
   "block.taloi.zinc_ore" : "Zinc Ore",
   "block.taloi.raw_zinc_block" : "Block of Raw Zinc",
 
+  "item.taloi.hardened_carbonite" : "Hardened Carbonite",
+  "item.taloi.bronze_ingot" : "Bronze Ingot",
+  "item.taloi.carbonite" : "Carbonite",
+  "item.taloi.ferroniobium_ingot" : "Ferroniobium Ingot",
+  "item.taloi.futurite" : "Futurite",
+  "item.taloi.sermium" : "Sermium",
+  "item.taloi.steel_ingot" : "Steel Ingot",
+  "item.taloi.alloy_x" : "Alloy X",
+  "item.taloi.alloy_z" : "Alloy Z",
+
+  "item.taloi.bronze_block" : "Bronze Block",
+  "item.taloi.steel_block" : "Steel Block",
+
   "item.taloi.rice_bowl" : "Bowl of Rice",
 
   "item.taloi.blowtorch" : "Blowtorch",

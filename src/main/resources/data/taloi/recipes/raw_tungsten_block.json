@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "taloi:raw_tungsten"
+    }
+  },
+  "result": {
+    "item": "taloi:raw_tungsten_block",
+    "count": 1
+  }
+}

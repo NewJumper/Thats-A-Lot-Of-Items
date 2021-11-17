@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "taloi:raw_tin"
+    }
+  },
+  "result": {
+    "item": "taloi:raw_tin_block",
+    "count": 1
+  }
+}
