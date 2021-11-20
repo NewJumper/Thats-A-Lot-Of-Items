@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "taloi:item/ferroniobium"
+    "layer0": "taloi:item/ferroniobium_ingot"
   }
 }
