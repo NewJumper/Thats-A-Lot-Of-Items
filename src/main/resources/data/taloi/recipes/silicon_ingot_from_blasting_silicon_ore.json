@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "silicon_ingot",
+  "ingredient": {
+    "item": "taloi:silicon_ore"
+  },
+  "result": "taloi:silicon_ingot",
+  "experience": 1,
+  "cookingtime": 100
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "lead_ingot",
+  "ingredient": {
+    "item": "taloi:lead_ore"
+  },
+  "result": "taloi:lead_ingot",
+  "experience": 1,
+  "cookingtime": 100
+}

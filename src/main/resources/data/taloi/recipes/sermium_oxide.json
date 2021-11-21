@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sermium",
+  "ingredients": [
+    {
+      "item": "taloi:sermium"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "taloi:sermium_oxide",
+    "count": 2
+  }
+}

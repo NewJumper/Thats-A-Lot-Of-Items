@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "iridium_ingot",
+  "ingredient": {
+    "item": "taloi:iridium_ore"
+  },
+  "result": "taloi:iridium_ingot",
+  "experience": 1,
+  "cookingtime": 100
+}

@@ -1,6 +1,7 @@
 package com.newjumper.taloi.item;
 
 import com.newjumper.taloi.item.custom.BlowtorchItem;
+import com.newjumper.taloi.item.custom.SermiumOxideItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -107,6 +108,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> ALLOY_Z = ITEMS.register("alloy_z", () ->
             new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+
+    // PROCESSING
+    public static final RegistryObject<Item> SERMIUM_OXIDE = ITEMS.register("sermium_oxide", () ->
+            new SermiumOxideItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     // FOOD
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () ->
