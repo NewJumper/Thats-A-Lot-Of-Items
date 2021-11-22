@@ -239,6 +239,45 @@ public class ModBlocks {
                     .randomTicks()
                     .sound(SoundType.GRASS)));
 
+    public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () ->
+            new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () ->
+            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
+                    .instabreak()
+                    .randomTicks()
+                    .sound(SoundType.GRASS)));
+
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->
             new BouncyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)

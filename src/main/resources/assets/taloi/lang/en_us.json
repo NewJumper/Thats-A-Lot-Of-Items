@@ -88,6 +88,13 @@
   "block.taloi.stripped_evergreen_log" : "Stripped Evergreen Log",
   "block.taloi.stripped_evergreen_wood" : "Stripped Evergreen Wood",
   "block.taloi.evergreen_sapling" : "Evergreen Sapling",
+  "block.taloi.willow_log" : "Willow Log",
+  "block.taloi.willow_wood" : "Willow Wood",
+  "block.taloi.willow_leaves" : "Willow Leaves",
+  "block.taloi.willow_planks" : "Willow Planks",
+  "block.taloi.stripped_willow_log" : "Stripped Willow Log",
+  "block.taloi.stripped_willow_wood" : "Stripped Willow Wood",
+  "block.taloi.willow_sapling" : "Willow Sapling",
 
   "item.taloi.sermium_oxide" : "Sermium Oxide",
 
