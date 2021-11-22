@@ -81,6 +81,14 @@
   "item.taloi.bronze_block" : "Bronze Block",
   "item.taloi.steel_block" : "Steel Block",
 
+  "block.taloi.evergreen_log" : "Evergreen Log",
+  "block.taloi.evergreen_wood" : "Evergreen Wood",
+  "block.taloi.evergreen_leaves" : "Evergreen Leaves",
+  "block.taloi.evergreen_planks" : "Evergreen Planks",
+  "block.taloi.stripped_evergreen_log" : "Stripped Evergreen Log",
+  "block.taloi.stripped_evergreen_wood" : "Stripped Evergreen Wood",
+  "block.taloi.evergreen_sapling" : "Evergreen Sapling",
+
   "item.taloi.sermium_oxide" : "Sermium Oxide",
 
   "item.taloi.rice_bowl" : "Bowl of Rice",

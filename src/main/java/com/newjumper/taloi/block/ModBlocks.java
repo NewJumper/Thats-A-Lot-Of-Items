@@ -8,6 +8,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -198,9 +202,47 @@ public class ModBlocks {
                     .strength(6f)
                     .requiresCorrectToolForDrops()));
 
+    // TREES AND PLANTS
+    public static final RegistryObject<Block> EVERGREEN_LOG = registerBlock("evergreen_log", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
+            new Block(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(0.2f)
+                    .sound(SoundType.GRASS)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () ->
+            new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_EVERGREEN_WOOD = registerBlock("stripped_evergreen_wood", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () ->
+            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
+                    .instabreak()
+                    .randomTicks()
+                    .sound(SoundType.GRASS)));
+
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->
-            new BouncyBlock(BlockBehaviour.Properties.of(Material.METAL)
+            new BouncyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(-1f)));
 
     // in game mod tab

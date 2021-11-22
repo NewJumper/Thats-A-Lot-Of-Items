@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "taloi:evergreen_leaves"
+    "#minecraft:logs_that_burn"
   ]
 }

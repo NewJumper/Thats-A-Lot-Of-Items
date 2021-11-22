@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "taloi:block/evergreen_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "taloi:block/evergreen_log"
+    },
+    "axis=z": {
+      "model": "taloi:block/evergreen_log_horizontal",
+      "x": 90
+    }
+  }
+}
