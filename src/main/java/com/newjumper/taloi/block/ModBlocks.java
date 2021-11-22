@@ -7,10 +7,7 @@ import com.newjumper.taloi.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -214,9 +211,11 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
-            new Block(BlockBehaviour.Properties.of(Material.GRASS)
+            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
                     .strength(0.2f)
+                    .randomTicks()
                     .sound(SoundType.GRASS)
+                    .noOcclusion()
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () ->
@@ -238,7 +237,8 @@ public class ModBlocks {
             new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak()
                     .randomTicks()
-                    .sound(SoundType.GRASS)));
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()));
 
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->
