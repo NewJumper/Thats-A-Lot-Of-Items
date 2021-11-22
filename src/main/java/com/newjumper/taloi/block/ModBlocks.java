@@ -237,6 +237,7 @@ public class ModBlocks {
             new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak()
                     .randomTicks()
+                    .noCollission()
                     .sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log", () ->
@@ -276,6 +277,7 @@ public class ModBlocks {
             new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak()
                     .randomTicks()
+                    .noCollission()
                     .sound(SoundType.GRASS)));
 
     // MISCELLANEOUS BLOCKS
