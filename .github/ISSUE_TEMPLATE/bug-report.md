@@ -1,7 +1,6 @@
 ---
 name: Bug Report
 about: Found a bug? Let us know!
-title: taloi#
 labels: bug
 assignees: ''
 
