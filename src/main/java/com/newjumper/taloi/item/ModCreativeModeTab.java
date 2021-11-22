@@ -8,13 +8,13 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab TALOI_ITEM_TAB = new CreativeModeTab("taloiItemTab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.ALUMINUM_INGOT.get());
+            return new ItemStack(ModItems.ALLOY_X.get());
         }
     };
     public static final CreativeModeTab TALOI_BLOCK_TAB = new CreativeModeTab("taloiBlockTab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.ALUMINUM_BLOCK.get());
+            return new ItemStack(ModBlocks.TUNGSTEN_BLOCK.get());
         }
     };
 }

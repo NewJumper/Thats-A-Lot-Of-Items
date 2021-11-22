@@ -237,8 +237,7 @@ public class ModBlocks {
             new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
                     .instabreak()
                     .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()));
+                    .sound(SoundType.GRASS)));
 
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->
