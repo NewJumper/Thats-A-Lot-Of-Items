@@ -210,14 +210,6 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(0.2f)
-                    .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () ->
             new Block(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
@@ -242,6 +234,14 @@ public class ModBlocks {
             new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> EVERGREEN_FENCE = registerBlock("evergreen_fence", () ->
             new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
@@ -270,14 +270,6 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(0.2f)
-                    .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () ->
             new Block(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
@@ -302,6 +294,14 @@ public class ModBlocks {
             new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> WILLOW_FENCE = registerBlock("willow_fence", () ->
             new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
