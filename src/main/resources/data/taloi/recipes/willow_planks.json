@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "taloi:willow_logs"
+      "item": "taloi:willow_log"
     }
   ],
   "result": {

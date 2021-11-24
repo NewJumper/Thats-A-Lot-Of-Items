@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "taloi:evergreen_logs"
+      "item": "taloi:evergreen_log"
     }
   ],
   "result": {

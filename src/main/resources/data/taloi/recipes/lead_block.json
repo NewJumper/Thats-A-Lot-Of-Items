@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "taloi:lead_ingot"
+      "tag": "forge:ingots/lead"
     }
   },
   "result": {

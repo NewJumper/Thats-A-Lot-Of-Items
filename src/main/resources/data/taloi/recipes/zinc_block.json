@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "taloi:zinc_ingot"
+      "tag": "forge:ingots/zinc"
     }
   },
   "result": {

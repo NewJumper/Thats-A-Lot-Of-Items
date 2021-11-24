@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
+    "#  ",
+    "## ",
     "###"
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/osmium"
+      "item": "taloi:limestone"
     }
   },
   "result": {
-    "item": "taloi:osmium_block",
-    "count": 1
+    "item": "taloi:limestone_stairs",
+    "count": 4
   }
 }

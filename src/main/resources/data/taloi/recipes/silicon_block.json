@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "taloi:silicon_ingot"
+      "tag": "forge:ingots/silicon"
     }
   },
   "result": {

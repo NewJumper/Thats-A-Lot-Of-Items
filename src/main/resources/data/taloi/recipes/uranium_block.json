@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "taloi:uranium_ingot"
+      "tag": "forge:ingots/uranium"
     }
   },
   "result": {

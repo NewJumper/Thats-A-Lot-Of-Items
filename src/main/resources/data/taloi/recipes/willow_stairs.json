@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
+    "#  ",
+    "## ",
     "###"
   ],
   "key": {
     "#": {
-      "tag": "forge:ingots/osmium"
+      "item": "taloi:willow_planks"
     }
   },
   "result": {
-    "item": "taloi:osmium_block",
-    "count": 1
+    "item": "taloi:willow_stairs",
+    "count": 4
   }
 }
