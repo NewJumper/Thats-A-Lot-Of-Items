@@ -1,7 +1,9 @@
 <h1 align="center">
 That's A Lot Of Items <br>
-[![Build Status](https://github.com/Anuken/Mindustry/workflows/Tests/badge.svg?event=push)](https://github.com/NewJumper/Thats-A-Lot-Of-Items/actions)
 </h1>
+
+[![Build Status](https://github.com/Anuken/Mindustry/workflows/Tests/badge.svg?event=push)](https://github.com/NewJumper/Thats-A-Lot-Of-Items/actions)
+
 
 A mod which brings a lot more into the world of Minecraft. Ranging from tons of new ores, machinery, items, blocks, and a bunch of other random stuff, this mod will bring diversity and more creativity into your world.
 
