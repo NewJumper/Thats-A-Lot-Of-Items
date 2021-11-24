@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "taloi:block/polished_limestone",
+    "top": "taloi:block/polished_limestone",
+    "side": "taloi:block/polished_limestone"
+  }
+}

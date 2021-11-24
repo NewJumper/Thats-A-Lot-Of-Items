@@ -36,6 +36,15 @@
     "taloi:raw_zinc_block",
 
     "taloi:bronze_block",
-    "taloi:steel_block"
+    "taloi:steel_block",
+
+    "taloi:limestone",
+    "taloi:marble",
+    "taloi:polished_limestone",
+    "taloi:smooth_marble",
+
+    "#minecraft:slabs",
+    "#minecraft:stairs",
+    "#minecraft:walls"
   ]
 }

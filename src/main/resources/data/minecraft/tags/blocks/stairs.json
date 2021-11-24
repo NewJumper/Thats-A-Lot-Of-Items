@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:limestone_stairs",
+    "taloi:marble_stairs",
+    "taloi:polished_limestone_stairs",
+    "taloi:smooth_marble_stairs"
+  ]
+}

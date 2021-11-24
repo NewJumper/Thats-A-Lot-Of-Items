@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "#minecraft:logs",
-    "#minecraft:planks"
+    "#minecraft:planks",
+    "#minecraft:wooden_slabs",
+    "#minecraft:wooden_stairs",
+    "#minecraft:wooden_fences",
+    "#minecraft:fence_gates"
   ]
 }

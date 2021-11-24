@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "taloi:limestone"
+  },
+  "result": "taloi:polished_limestone",
+  "count": 1
+}
