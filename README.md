@@ -1,6 +1,4 @@
-<h1 align="center">
-That's A Lot Of Items <br>
-</h1>
+<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/master/src/main/resources/assets/logo_banner.png" alt="Logo" width="1024"></p>
 
 <a href="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"><img src="https://img.shields.io/badge/Minecraft-1.17-71c46e"></a>
 <a href="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"><img src="https://img.shields.io/badge/Forge-37.0.116-d68f54"></a>
@@ -23,7 +21,8 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 
 **The Geyser Plains** might look empty, but there are plenty of springs and fresh pools of water and an unknown substance. Quite an unusual and mystifying place.
 
-**The Mystic Hills**, often bordered by geyser plains, is home to the most unusual terrain. A dead wasteland, while also being full of wildlife. Something is hidden deep within this biome, something dangerous.
+**The Mystic Hills**, often bordered by geyser plains, is home to the most unusual terrain. A dead wasteland, while also being full of wildlife. Something is hidden deep within this biome, something dangerous.![logo](https://user-images.githubusercontent.com/55116298/143321757-470bee45-3743-4668-a359-4a6b6934b5ee.png)
+
 
 **The Salt Basin** is a large hilly biome with very limited water, but a lot of salt!
 
