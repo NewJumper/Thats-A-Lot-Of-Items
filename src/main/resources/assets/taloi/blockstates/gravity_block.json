@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model":  "taloi:block/gravity_block" }
+  }
+}

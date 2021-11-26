@@ -2,6 +2,9 @@ package com.newjumper.taloi.block;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.custom.BouncyBlock;
+import com.newjumper.taloi.block.custom.FeatheryBlock;
+import com.newjumper.taloi.block.custom.GravityBlock;
+import com.newjumper.taloi.block.custom.SpeedyBlock;
 import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -235,14 +238,6 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(0.2f)
-                    .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> EVERGREEN_FENCE = registerBlock("evergreen_fence", () ->
             new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
@@ -252,6 +247,14 @@ public class ModBlocks {
             new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () ->
             new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
@@ -295,14 +298,6 @@ public class ModBlocks {
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(0.2f)
-                    .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> WILLOW_FENCE = registerBlock("willow_fence", () ->
             new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
@@ -312,6 +307,14 @@ public class ModBlocks {
             new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f)
                     .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () ->
             new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
@@ -417,9 +420,182 @@ public class ModBlocks {
                     .sound(SoundType.BASALT)
                     .requiresCorrectToolForDrops()));
 
+    // ADDING ON TO MINECRAFT BLOCKS
+    public static final RegistryObject<Block> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () ->
+            new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ORANGE_CONCRETE_STAIRS = registerBlock("orange_concrete_stairs", () ->
+            new StairBlock(Blocks.ORANGE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ORANGE_CONCRETE_SLAB = registerBlock("orange_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MAGENTA_CONCRETE_STAIRS = registerBlock("magenta_concrete_stairs", () ->
+            new StairBlock(Blocks.MAGENTA_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MAGENTA_CONCRETE_SLAB = registerBlock("magenta_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_STAIRS = registerBlock("light_blue_concrete_stairs", () ->
+            new StairBlock(Blocks.LIGHT_BLUE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_SLAB = registerBlock("light_blue_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> YELLOW_CONCRETE_STAIRS = registerBlock("yellow_concrete_stairs", () ->
+            new StairBlock(Blocks.YELLOW_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> YELLOW_CONCRETE_SLAB = registerBlock("yellow_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIME_CONCRETE_STAIRS = registerBlock("lime_concrete_stairs", () ->
+            new StairBlock(Blocks.LIME_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIME_CONCRETE_SLAB = registerBlock("lime_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PINK_CONCRETE_STAIRS = registerBlock("pink_concrete_stairs", () ->
+            new StairBlock(Blocks.PINK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PINK_CONCRETE_SLAB = registerBlock("pink_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GRAY_CONCRETE_STAIRS = registerBlock("gray_concrete_stairs", () ->
+            new StairBlock(Blocks.GRAY_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GRAY_CONCRETE_SLAB = registerBlock("gray_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_STAIRS = registerBlock("light_gray_concrete_stairs", () ->
+            new StairBlock(Blocks.LIGHT_GRAY_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_SLAB = registerBlock("light_gray_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CYAN_CONCRETE_STAIRS = registerBlock("cyan_concrete_stairs", () ->
+            new StairBlock(Blocks.CYAN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CYAN_CONCRETE_SLAB = registerBlock("cyan_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PURPLE_CONCRETE_STAIRS = registerBlock("purple_concrete_stairs", () ->
+            new StairBlock(Blocks.PURPLE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PURPLE_CONCRETE_SLAB = registerBlock("purple_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLUE_CONCRETE_STAIRS = registerBlock("blue_concrete_stairs", () ->
+            new StairBlock(Blocks.BLUE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLUE_CONCRETE_SLAB = registerBlock("blue_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BROWN_CONCRETE_STAIRS = registerBlock("brown_concrete_stairs", () ->
+            new StairBlock(Blocks.BROWN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BROWN_CONCRETE_SLAB = registerBlock("brown_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GREEN_CONCRETE_STAIRS = registerBlock("green_concrete_stairs", () ->
+            new StairBlock(Blocks.GREEN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GREEN_CONCRETE_SLAB = registerBlock("green_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RED_CONCRETE_STAIRS = registerBlock("red_concrete_stairs", () ->
+            new StairBlock(Blocks.RED_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RED_CONCRETE_SLAB = registerBlock("red_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = registerBlock("black_concrete_stairs", () ->
+            new StairBlock(Blocks.BLACK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLACK_CONCRETE_SLAB = registerBlock("black_concrete_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.8f)
+                    .requiresCorrectToolForDrops()));
+
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->
             new BouncyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(-1f)));
+
+    public static final RegistryObject<Block> FEATHERY_BLOCK = registerBlock("feathery_block", () ->
+            new FeatheryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(-1f)));
+
+    public static final RegistryObject<Block> GRAVITY_BLOCK = registerBlock("gravity_block", () ->
+            new GravityBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(-1f)));
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () ->
+            new SpeedyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(-1f)));
 
     // in game mod tab
