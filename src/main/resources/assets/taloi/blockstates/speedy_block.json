@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model":  "taloi:block/speed_block" }
+    "": { "model":  "taloi:block/speedy_block" }
   }
 }
