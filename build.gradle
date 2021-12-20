@@ -17,7 +17,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.17.1-0.7.0'
+version = '1.17.1-0.7.1'
 group = 'com.newjumper.taloi' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'taloi'
 
