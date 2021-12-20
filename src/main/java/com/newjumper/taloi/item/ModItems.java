@@ -4,6 +4,7 @@ import com.newjumper.taloi.item.custom.BlowtorchItem;
 import com.newjumper.taloi.item.custom.SermiumOxideItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -113,10 +114,13 @@ public class ModItems {
     public static final RegistryObject<Item> SERMIUM_OXIDE = ITEMS.register("sermium_oxide", () ->
             new SermiumOxideItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
-    // TOOLS
+    // TOOLS / WEAPONS
     public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () ->
             new BlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)
                     .durability(102)));
+
+    public static final RegistryObject<Item> ALUMINUM_SWORD = ITEMS.register("aluminum_sword", () ->
+            new SwordItem(ModTiers.ALUMINUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     public static final RegistryObject<Item> ALUMINUM_SHOVEL = ITEMS.register("aluminum_shovel", () ->
             new ShovelItem(ModTiers.ALUMINUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
@@ -130,6 +134,9 @@ public class ModItems {
     public static final RegistryObject<Item> ALUMINUM_HOE = ITEMS.register("aluminum_hoe", () ->
             new HoeItem(ModTiers.ALUMINUM, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
+    public static final RegistryObject<Item> IRIDIUM_SWORD = ITEMS.register("iridium_sword", () ->
+            new SwordItem(ModTiers.IRIDIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
     public static final RegistryObject<Item> IRIDIUM_SHOVEL = ITEMS.register("iridium_shovel", () ->
             new ShovelItem(ModTiers.IRIDIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
@@ -141,6 +148,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe", () ->
             new HoeItem(ModTiers.IRIDIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
+    public static final RegistryObject<Item> LEAD_SWORD = ITEMS.register("lead_sword", () ->
+            new SwordItem(ModTiers.LEAD, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     public static final RegistryObject<Item> LEAD_SHOVEL = ITEMS.register("lead_shovel", () ->
             new ShovelItem(ModTiers.LEAD, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
@@ -154,6 +164,9 @@ public class ModItems {
     public static final RegistryObject<Item> LEAD_HOE = ITEMS.register("lead_hoe", () ->
             new HoeItem(ModTiers.LEAD, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
+    public static final RegistryObject<Item> MAGNESIUM_SWORD = ITEMS.register("magnesium_sword", () ->
+            new SwordItem(ModTiers.MAGNESIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
     public static final RegistryObject<Item> MAGNESIUM_SHOVEL = ITEMS.register("magnesium_shovel", () ->
             new ShovelItem(ModTiers.MAGNESIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
@@ -165,6 +178,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> MAGNESIUM_HOE = ITEMS.register("magnesium_hoe", () ->
             new HoeItem(ModTiers.MAGNESIUM, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
+    public static final RegistryObject<Item> OSMIUM_SWORD = ITEMS.register("osmium_sword", () ->
+            new SwordItem(ModTiers.OSMIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     public static final RegistryObject<Item> OSMIUM_SHOVEL = ITEMS.register("osmium_shovel", () ->
             new ShovelItem(ModTiers.OSMIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
@@ -178,6 +194,9 @@ public class ModItems {
     public static final RegistryObject<Item> OSMIUM_HOE = ITEMS.register("osmium_hoe", () ->
             new HoeItem(ModTiers.OSMIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
+    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", () ->
+            new SwordItem(ModTiers.PLATINUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
     public static final RegistryObject<Item> PLATINUM_SHOVEL = ITEMS.register("platinum_shovel", () ->
             new ShovelItem(ModTiers.PLATINUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
@@ -189,6 +208,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe", () ->
             new HoeItem(ModTiers.PLATINUM, -3, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
+    public static final RegistryObject<Item> TIN_SWORD = ITEMS.register("tin_sword", () ->
+            new SwordItem(ModTiers.TIN, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     public static final RegistryObject<Item> TIN_SHOVEL = ITEMS.register("tin_shovel", () ->
             new ShovelItem(ModTiers.TIN, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
@@ -202,6 +224,9 @@ public class ModItems {
     public static final RegistryObject<Item> TIN_HOE = ITEMS.register("tin_hoe", () ->
             new HoeItem(ModTiers.TIN, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
+    public static final RegistryObject<Item> TUNGSTEN_SWORD = ITEMS.register("tungsten_sword", () ->
+            new SwordItem(ModTiers.TUNGSTEN, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
     public static final RegistryObject<Item> TUNGSTEN_SHOVEL = ITEMS.register("tungsten_shovel", () ->
             new ShovelItem(ModTiers.TUNGSTEN, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
@@ -214,6 +239,9 @@ public class ModItems {
     public static final RegistryObject<Item> TUNGSTEN_HOE = ITEMS.register("tungsten_hoe", () ->
             new HoeItem(ModTiers.TUNGSTEN, -4, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
+    public static final RegistryObject<Item> ZINC_SWORD = ITEMS.register("zinc_sword", () ->
+            new SwordItem(ModTiers.ZINC, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
+
     public static final RegistryObject<Item> ZINC_SHOVEL = ITEMS.register("zinc_shovel", () ->
             new ShovelItem(ModTiers.ZINC, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
@@ -225,34 +253,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> ZINC_HOE = ITEMS.register("zinc_hoe", () ->
             new HoeItem(ModTiers.ZINC, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    // WEAPONS
-    public static final RegistryObject<Item> ALUMINUM_SWORD = ITEMS.register("aluminum_sword", () ->
-            new SwordItem(ModTiers.ALUMINUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> IRIDIUM_SWORD = ITEMS.register("iridium_sword", () ->
-            new SwordItem(ModTiers.IRIDIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_SWORD = ITEMS.register("lead_sword", () ->
-            new SwordItem(ModTiers.LEAD, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_SWORD = ITEMS.register("magnesium_sword", () ->
-            new SwordItem(ModTiers.MAGNESIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> OSMIUM_SWORD = ITEMS.register("osmium_sword", () ->
-            new SwordItem(ModTiers.OSMIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", () ->
-            new SwordItem(ModTiers.PLATINUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> TIN_SWORD = ITEMS.register("tin_sword", () ->
-            new SwordItem(ModTiers.TIN, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> TUNGSTEN_SWORD = ITEMS.register("tungsten_sword", () ->
-            new SwordItem(ModTiers.TUNGSTEN, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_SWORD = ITEMS.register("zinc_sword", () ->
-            new SwordItem(ModTiers.ZINC, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     // FOOD
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () ->
