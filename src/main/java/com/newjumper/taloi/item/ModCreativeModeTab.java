@@ -5,16 +5,22 @@ import net.minecraft.world.item.ItemStack;
 import com.newjumper.taloi.block.ModBlocks;
 
 public class ModCreativeModeTab {
+    public static final CreativeModeTab TALOI_BLOCK_TAB = new CreativeModeTab("taloi_block_tab") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModBlocks.TUNGSTEN_BLOCK.get());
+        }
+    };
     public static final CreativeModeTab TALOI_ITEM_TAB = new CreativeModeTab("taloi_item_tab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.ALLOY_X.get());
         }
     };
-    public static final CreativeModeTab TALOI_BLOCK_TAB = new CreativeModeTab("taloi_block_tab") {
+    public static final CreativeModeTab TALOI_TOOL_TAB = new CreativeModeTab("taloi_tool_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.TUNGSTEN_BLOCK.get());
+            return new ItemStack(ModItems.ALUMINUM_PICKAXE.get());
         }
     };
 }

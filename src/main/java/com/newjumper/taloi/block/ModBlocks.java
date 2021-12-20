@@ -43,17 +43,17 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> IRIDIUM_BLOCK = registerBlock("iridium_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f, 6f)
+                    .strength(11f, 11f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> IRIDIUM_ORE = registerBlock("iridium_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3f, 3f)
+                    .strength(8f, 8f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_IRIDIUM_BLOCK = registerBlock("raw_iridium_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f, 6f)
+                    .strength(11f, 11f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LEAD_BLOCK = registerBlock("lead_block", () ->
@@ -88,32 +88,32 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> OSMIUM_BLOCK = registerBlock("osmium_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f, 6f)
+                    .strength(12f, 12f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> OSMIUM_ORE = registerBlock("osmium_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3f, 3f)
+                    .strength(9f, 10f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_OSMIUM_BLOCK = registerBlock("raw_osmium_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f, 6f)
+                    .strength(12f, 12f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> PLATINUM_BLOCK = registerBlock("platinum_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(8f, 10f)
+                    .strength(11f, 11f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f, 6f)
+                    .strength(8f, 8f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_PLATINUM_BLOCK = registerBlock("raw_platinum_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(8f, 10f)
+                    .strength(11f, 11f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SILICON_BLOCK = registerBlock("silicon_block", () ->
@@ -148,32 +148,32 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TUNGSTEN_BLOCK = registerBlock("tungsten_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(12f, 12f)
+                    .strength(10f, 10f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(9f, 10f)
+                    .strength(8f, 8f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_TUNGSTEN_BLOCK = registerBlock("raw_tungsten_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(12f, 12f)
+                    .strength(10f, 10f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(10f, 10f)
+                    .strength(8f, 8f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(8f, 10f)
+                    .strength(6f, 6f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(10f, 10f)
+                    .strength(8f, 8f)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ZINC_BLOCK = registerBlock("zinc_block", () ->
