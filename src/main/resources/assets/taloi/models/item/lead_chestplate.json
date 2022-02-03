@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "taloi:item/lead_chestplate"
-  }
-}

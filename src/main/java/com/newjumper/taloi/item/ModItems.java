@@ -5,7 +5,6 @@ import com.newjumper.taloi.item.custom.SermiumOxideItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -146,36 +145,6 @@ public class ModItems {
     public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe", () ->
             new HoeItem(ModTiers.OSMIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
-    public static final RegistryObject<Item> LEAD_SWORD = ITEMS.register("lead_sword", () ->
-            new SwordItem(Tiers.IRON, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_SHOVEL = ITEMS.register("lead_shovel", () ->
-            new ShovelItem(Tiers.IRON, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_PICKAXE = ITEMS.register("lead_pickaxe", () ->
-            new PickaxeItem(Tiers.IRON, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_AXE = ITEMS.register("lead_axe", () ->
-            new AxeItem(Tiers.IRON, 6, -3.1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_HOE = ITEMS.register("lead_hoe", () ->
-            new HoeItem(Tiers.IRON, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_SWORD = ITEMS.register("magnesium_sword", () ->
-            new SwordItem(Tiers.IRON, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_SHOVEL = ITEMS.register("magnesium_shovel", () ->
-            new ShovelItem(Tiers.IRON, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_PICKAXE = ITEMS.register("magnesium_pickaxe", () ->
-            new PickaxeItem(Tiers.IRON, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_AXE = ITEMS.register("magnesium_axe", () ->
-            new AxeItem(Tiers.IRON, 6, -3.1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_HOE = ITEMS.register("magnesium_hoe", () ->
-            new HoeItem(Tiers.IRON, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
     public static final RegistryObject<Item> OSMIUM_SWORD = ITEMS.register("osmium_sword", () ->
             new SwordItem(ModTiers.OSMIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
@@ -236,21 +205,6 @@ public class ModItems {
     public static final RegistryObject<Item> TUNGSTEN_HOE = ITEMS.register("tungsten_hoe", () ->
             new HoeItem(Tiers.NETHERITE, -4, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
-    public static final RegistryObject<Item> ZINC_SWORD = ITEMS.register("zinc_sword", () ->
-            new SwordItem(Tiers.IRON, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_SHOVEL = ITEMS.register("zinc_shovel", () ->
-            new ShovelItem(Tiers.IRON, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_PICKAXE = ITEMS.register("zinc_pickaxe", () ->
-            new PickaxeItem(Tiers.IRON, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_AXE = ITEMS.register("zinc_axe", () ->
-            new AxeItem(Tiers.IRON, 6, -3.1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_HOE = ITEMS.register("zinc_hoe", () ->
-            new HoeItem(Tiers.IRON, -2, -1f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
     public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () ->
             new BlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)
                     .durability(102)));
@@ -279,30 +233,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> IRIDIUM_BOOTS = ITEMS.register("iridium_boots", () ->
             new ArmorItem(ModArmorMaterial.OSMIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_HELMET = ITEMS.register("lead_helmet", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_CHESTPLATE = ITEMS.register("lead_chestplate", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_LEGGINGS = ITEMS.register("lead_leggings", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> LEAD_BOOTS = ITEMS.register("lead_boots", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_HELMET = ITEMS.register("magnesium_helmet", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_CHESTPLATE = ITEMS.register("magnesium_chestplate", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_LEGGINGS = ITEMS.register("magnesium_leggings", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> MAGNESIUM_BOOTS = ITEMS.register("magnesium_boots", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     public static final RegistryObject<Item> OSMIUM_HELMET = ITEMS.register("osmium_helmet", () ->
             new ArmorItem(ModArmorMaterial.OSMIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
@@ -352,19 +282,7 @@ public class ModItems {
     public static final RegistryObject<Item> TUNGSTEN_BOOTS = ITEMS.register("tungsten_boots", () ->
             new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
-    public static final RegistryObject<Item> ZINC_HELMET = ITEMS.register("zinc_helmet", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_CHESTPLATE = ITEMS.register("zinc_chestplate", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_LEGGINGS = ITEMS.register("zinc_leggings", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    public static final RegistryObject<Item> ZINC_BOOTS = ITEMS.register("zinc_boots", () ->
-            new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-
-    // FOOD
+    // FOOD AND CROPS
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () ->
             new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)
                     .stacksTo(1)
@@ -372,6 +290,8 @@ public class ModItems {
                             .nutrition(6)
                             .saturationMod(0.2f)
                             .build())));
+
+    // tomato_seeds
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

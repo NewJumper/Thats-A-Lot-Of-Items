@@ -1,10 +1,7 @@
 package com.newjumper.taloi.block;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.block.custom.BouncyBlock;
-import com.newjumper.taloi.block.custom.FeatheryBlock;
-import com.newjumper.taloi.block.custom.GravityBlock;
-import com.newjumper.taloi.block.custom.SpeedyBlock;
+import com.newjumper.taloi.block.custom.*;
 import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -580,6 +577,9 @@ public class ModBlocks {
             new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.8f)
                     .requiresCorrectToolForDrops()));
+
+    // CROPS
+    // tomatoes
 
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () ->

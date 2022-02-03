@@ -183,7 +183,6 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.FEATHERY_BLOCK.get());
         this.dropSelf(ModBlocks.GRAVITY_BLOCK.get());
         this.dropSelf(ModBlocks.SPEEDY_BLOCK.get());
-
     }
 
     @Override
