@@ -14,7 +14,7 @@ public enum OreType {
     PLATINUM_ORE(Lazy.of(ModBlocks.PLATINUM_ORE), 3, 0, 16, 3),
     SILICON_ORE(Lazy.of(ModBlocks.SILICON_ORE), 5, 0, 24, 7),
     TIN_ORE(Lazy.of(ModBlocks.TIN_ORE), 10, 24, 80, 10),
-    TUNGSTEN_ORE(Lazy.of(ModBlocks.TUNGSTEN_ORE), 3, 0, 16, 2),
+    TUNGSTEN_ORE(Lazy.of(ModBlocks.TUNGSTEN_ORE), 3, 0, 10, 2),
     URANIUM_ORE(Lazy.of(ModBlocks.URANIUM_ORE), 3, 0, 10, 2),
     ZINC_ORE(Lazy.of(ModBlocks.ZINC_ORE), 8, 0, 64, 8);
 

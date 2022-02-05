@@ -33,6 +33,8 @@ public class ModOreGeneration {
         spawnOreInSpecificBiome(Biomes.MOUNTAINS, OreType.SILICON_ORE, event, LevelStem.OVERWORLD.toString());
         spawnOreInSpecificBiome(Biomes.MOUNTAIN_EDGE, OreType.SILICON_ORE, event, LevelStem.OVERWORLD.toString());
         spawnOreInAllBiomes(OreType.TIN_ORE, event, LevelStem.OVERWORLD.toString());
+        spawnOreInSpecificBiome(Biomes.MOUNTAINS, OreType.TUNGSTEN_ORE, event, LevelStem.OVERWORLD.toString());
+        spawnOreInSpecificBiome(Biomes.MOUNTAIN_EDGE, OreType.TUNGSTEN_ORE, event, LevelStem.OVERWORLD.toString());
         spawnOreInSpecificBiome(Biomes.BADLANDS, OreType.URANIUM_ORE, event, LevelStem.OVERWORLD.toString());
         spawnOreInSpecificBiome(Biomes.BADLANDS_PLATEAU, OreType.URANIUM_ORE, event, LevelStem.OVERWORLD.toString());
         spawnOreInAllBiomes(OreType.ZINC_ORE, event, LevelStem.OVERWORLD.toString());

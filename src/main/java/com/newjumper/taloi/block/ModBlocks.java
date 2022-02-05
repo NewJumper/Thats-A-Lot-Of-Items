@@ -4,12 +4,16 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.custom.*;
 import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -201,124 +205,60 @@ public class ModBlocks {
 
     // TREES AND PLANTS
     public static final RegistryObject<Block> EVERGREEN_LOG = registerBlock("evergreen_log", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () ->
-            new Block(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> EVERGREEN_STAIRS = registerBlock("evergreen_stairs", () ->
-            new StairBlock(() -> EVERGREEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new StairBlock(() -> EVERGREEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> EVERGREEN_SLAB = registerBlock("evergreen_slab", () ->
-            new SlabBlock( BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
 
     public static final RegistryObject<Block> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_EVERGREEN_WOOD = registerBlock("stripped_evergreen_wood", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> EVERGREEN_FENCE = registerBlock("evergreen_fence", () ->
-            new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> EVERGREEN_FENCE_GATE = registerBlock("evergreen_fence_gate", () ->
-            new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
 
     public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(0.2f)
-                    .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
+            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () ->
-            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak()
-                    .randomTicks()
-                    .noCollission()
-                    .sound(SoundType.GRASS)));
+            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () ->
-            new Block(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> WILLOW_STAIRS = registerBlock("willow_stairs", () ->
-            new StairBlock(() -> WILLOW_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new StairBlock(() -> WILLOW_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> WILLOW_SLAB = registerBlock("willow_slab", () ->
-            new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
 
     public static final RegistryObject<Block> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> WILLOW_FENCE = registerBlock("willow_fence", () ->
-            new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
-
+            new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", () ->
-            new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f)
-                    .sound(SoundType.WOOD)));
+            new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
 
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(0.2f)
-                    .randomTicks()
-                    .sound(SoundType.GRASS)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
+            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () ->
-            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
-                    .instabreak()
-                    .randomTicks()
-                    .noCollission()
-                    .sound(SoundType.GRASS)));
+            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     // NATURAL GENERATION
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone", () ->
