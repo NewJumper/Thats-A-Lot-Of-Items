@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "taloi:evergreen_sapling"
+    "taloi:evergreen_sapling",
+    "taloi:willow_sapling"
   ]
 }

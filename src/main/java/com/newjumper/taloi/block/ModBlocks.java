@@ -4,6 +4,8 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.custom.*;
 import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.world.features.tree.EvergreenTreeGrower;
+import com.newjumper.taloi.world.features.tree.WillowTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
@@ -227,10 +229,10 @@ public class ModBlocks {
             new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
 
     public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            new ModFlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () ->
-            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new EvergreenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log", () ->
             new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
@@ -255,10 +257,10 @@ public class ModBlocks {
             new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
 
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            new ModFlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () ->
-            new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new WillowTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     // NATURAL GENERATION
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone", () ->
