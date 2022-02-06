@@ -12,7 +12,7 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 ###### *Most of the following content is either in progress or to be added*
 ---
 ### Some content within the mod:
-- New ores: aluminum, magnesium, osmium, tungsten, and uranium
+- New ores: aluminum, magnesium, osmium, tungsten, uranium, and plenty more
 - Alloys: carbonite, Futurite, Sermium, steel, and some mysterious alloys
 - Lots of natural generation: marble, limestone, evergreen trees, willow trees, and plants
 - New structures: 4 new dungeons you'll have to find and discover!
@@ -24,7 +24,7 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 
 **The Geyser Plains** might look empty, but there are plenty of springs and fresh pools of water and an unknown substance. Quite an unusual and mystifying place.
 
-**The Mystic Hills**, often bordered by geyser plains, is home to the most unusual terrain. A dead wasteland, while also being full of wildlife. Something is hidden deep within this biome, something dangerous.
+**The Mystic Hills**, often bordered by geyser plains, is home to the most unusual terrain. A dead wasteland, with willow trees scattered about and little wildlife. Something is hidden deep within this biome, something dangerous.
 
 **The Salt Basin** is a large hilly biome with very limited water, but a lot of salt!
 
