@@ -48,10 +48,10 @@ public class ThatsALotOfItems {
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
-                    .put(ModBlocks.EVERGREEN_LOG.get(), ModBlocks.STRIPPED_EVERGREEN_LOG.get())
-                    .put(ModBlocks.EVERGREEN_WOOD.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD.get())
-                    .put(ModBlocks.WILLOW_LOG.get(), ModBlocks.STRIPPED_WILLOW_LOG.get())
-                    .put(ModBlocks.WILLOW_WOOD.get(), ModBlocks.STRIPPED_WILLOW_WOOD.get()).build();
+                .put(ModBlocks.EVERGREEN_LOG.get(), ModBlocks.STRIPPED_EVERGREEN_LOG.get())
+                .put(ModBlocks.EVERGREEN_WOOD.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD.get())
+                .put(ModBlocks.WILLOW_LOG.get(), ModBlocks.STRIPPED_WILLOW_LOG.get())
+                .put(ModBlocks.WILLOW_WOOD.get(), ModBlocks.STRIPPED_WILLOW_WOOD.get()).build();
         });
     }
 }
