@@ -1,14 +1,11 @@
 package com.newjumper.taloi.world.gen;
 
-import com.newjumper.taloi.world.features.ModConfiguredFeatures;
+import com.newjumper.taloi.world.features.ModPlacedFeatures;
 import net.minecraft.core.Registry;
-import net.minecraft.data.worldgen.Features;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.FeatureDecorator;
-import net.minecraft.world.level.levelgen.placement.FrequencyWithExtraChanceDecoratorConfiguration;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
@@ -22,21 +19,13 @@ public class ModTreeGeneration {
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
         if(types.contains(BiomeDictionary.Type.PLAINS)) {
-            List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-
-            base.add(() -> ModConfiguredFeatures.EVERGREEN
-                .decorated(Features.Decorators.HEIGHTMAP_WITH_TREE_THRESHOLD_SQUARED)
-                .decorated(FeatureDecorator.COUNT_EXTRA
-                .configured(new FrequencyWithExtraChanceDecoratorConfiguration(0, 0.2f, 1))));
+            List<Supplier<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            base.add(() -> ModPlacedFeatures.EVERGREEN_PLACED);
         }
 
         if(types.contains(BiomeDictionary.Type.PLAINS)) {
-            List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-
-            base.add(() -> ModConfiguredFeatures.WILLOW
-                    .decorated(Features.Decorators.HEIGHTMAP_WITH_TREE_THRESHOLD_SQUARED)
-                    .decorated(FeatureDecorator.COUNT_EXTRA
-                            .configured(new FrequencyWithExtraChanceDecoratorConfiguration(0, 0.1f, 1))));
+            List<Supplier<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            base.add(() -> ModPlacedFeatures.WILLOW_PLACED);
         }
     }
 }
