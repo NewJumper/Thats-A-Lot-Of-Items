@@ -1,6 +1,7 @@
 package com.newjumper.taloi.item;
 
 import com.newjumper.taloi.item.custom.BlowtorchItem;
+import com.newjumper.taloi.item.custom.MetalDetectorItem;
 import com.newjumper.taloi.item.custom.SermiumOxideItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
@@ -101,6 +102,7 @@ public class ModItems {
     public static final RegistryObject<Item> TUNGSTEN_HOE = ITEMS.register("tungsten_hoe", () -> new HoeItem(Tiers.NETHERITE, -4, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
 
     public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new BlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).durability(102)));
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     // ARMOR
     public static final RegistryObject<Item> ALUMINUM_HELMET = ITEMS.register("aluminum_helmet", () -> new ArmorItem(ArmorMaterials.IRON, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));

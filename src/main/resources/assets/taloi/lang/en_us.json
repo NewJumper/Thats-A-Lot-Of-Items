@@ -191,6 +191,7 @@
   "item.taloi.tungsten_hoe" : "Tungsten Hoe",
 
   "item.taloi.blowtorch" : "Blowtorch",
+  "item.taloi.metal_detector" : "Metal Detector",
 
   "item.taloi.aluminum_helmet" : "Aluminum Helmet",
   "item.taloi.aluminum_chestplate" : "Aluminum Chestplate",
@@ -220,5 +221,7 @@
   "block.taloi.bouncy_block" : "Bouncy Block",
   "block.taloi.feathery_block" : "Feathery Block",
   "block.taloi.gravity_block" : "Gravity Block",
-  "block.taloi.speedy_block" : "Speedy Block"
+  "block.taloi.speedy_block" : "Speedy Block",
+
+  "item.taloi.metal_detector.no_ore" : "No ores found"
 }
