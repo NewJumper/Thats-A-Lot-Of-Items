@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/master/src/main/resources/logo_banner.png" alt="Logo" width="1024"></p>
+<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/mc-1.18.1/src/main/resources/logo_banner.png?raw=true" alt="Logo" width="1024"></p>
 <h1 align="center">
   <a href="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"><img src="https://img.shields.io/badge/Mod Version-0.10.3-54c3d6"></a>
   <a><img src="https://img.shields.io/badge/Minecraft Ver.-1.18.1-71c46e"></a>
