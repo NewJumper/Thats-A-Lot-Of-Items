@@ -25,4 +25,11 @@ public class ModCreativeModeTab {
             return new ItemStack(ModItems.ALUMINUM_PICKAXE.get());
         }
     };
+
+    public static final CreativeModeTab TALOI_ARMOR_TAB = new CreativeModeTab("taloi_armor_tab") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.ALUMINUM_CHESTPLATE.get());
+        }
+    };
 }

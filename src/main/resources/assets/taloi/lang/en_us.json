@@ -2,6 +2,7 @@
   "itemGroup.taloi_block_tab" : "TALOI Blocks",
   "itemGroup.taloi_item_tab" : "TALOI Items",
   "itemGroup.taloi_tool_tab" : "TALOI Tools",
+  "itemGroup.taloi_armor_tab" : "TALOI Armors",
 
   "item.taloi.aluminum_ingot" : "Aluminum Ingot",
   "item.taloi.raw_aluminum" : "Raw Aluminum",
