@@ -4,7 +4,7 @@
   <a><img src="https://img.shields.io/badge/Minecraft Ver.-1.18.1-71c46e"></a>
   <a href="https://files.minecraftforge.net/net/minecraftforge/forge/"><img src="https://img.shields.io/badge/Forge Ver.-39.0.66-d68f54"></a>
   <a href="https://discord.gg/QndwkU7"><img src="https://img.shields.io/discord/631321825439383553?color=4d7591&label=Discord" alt="Discord"></a>
-  <a href="https://github.com/NewJumper/Thats-A-Lot-Of-Items/actions"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/actions/workflows/gradle.yml/badge.svg?event=push"></a>
+  <!--- <a href="https://github.com/NewJumper/Thats-A-Lot-Of-Items/actions"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/actions/workflows/gradle.yml/badge.svg?event=push"></a> -->
 </h1>
 
 A mod which brings a lot more into the world of Minecraft. Ranging from tons of new ores, machinery, items, blocks, and a bunch of other random stuff, this mod will bring diversity and more creativity into your world.
