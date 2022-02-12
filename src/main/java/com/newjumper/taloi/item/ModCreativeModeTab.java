@@ -26,7 +26,7 @@ public class ModCreativeModeTab {
         }
     };
 
-    public static final CreativeModeTab TALOI_ARMOR_TAB = new CreativeModeTab("taloi_armor_tab") {
+    public static final CreativeModeTab TALOI_COMBAT_TAB = new CreativeModeTab("taloi_combat_tab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.ALUMINUM_CHESTPLATE.get());

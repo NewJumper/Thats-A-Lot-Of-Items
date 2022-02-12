@@ -164,7 +164,7 @@ public class ModBlocks {
             .strength(6f, 7f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    // TREES AND PLANTS
+    // TREES & PLANTS
     public static final RegistryObject<Block> EVERGREEN_LOG = registerBlock("evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 

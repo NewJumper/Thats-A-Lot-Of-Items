@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:aluminum_ore",
+    "taloi:iridium_ore",
+    "taloi:lead_ore",
+    "taloi:magnesium_ore",
+    "taloi:osmium_ore",
+    "taloi:platinum_ore",
+    "taloi:silicon_ore",
+    "taloi:tin_ore",
+    "taloi:tungsten_ore",
+    "taloi:uranium_ore",
+    "taloi:zinc_ore"
+  ]
+}

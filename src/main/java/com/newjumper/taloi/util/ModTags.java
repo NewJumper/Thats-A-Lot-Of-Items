@@ -10,23 +10,25 @@ import net.minecraftforge.common.Tags;
 
 public class ModTags {
     public static class Blocks {
-        private static Tags.IOptionalNamedTag<Block> createTag(String name) {
+        public static final Tags.IOptionalNamedTag<Block> TALOI_ORES = tag("taloi_ores");
+
+        private static Tags.IOptionalNamedTag<Block> tag(String name) {
             return BlockTags.createOptional(new ResourceLocation(ThatsALotOfItems.MOD_ID, name));
         }
 
-        private static Tags.IOptionalNamedTag<Block> createForgeTag(String name) {
+        private static Tags.IOptionalNamedTag<Block> forgeTag(String name) {
             return BlockTags.createOptional(new ResourceLocation("forge", name));
         }
     }
 
     public static class Items {
-        public static final Tags.IOptionalNamedTag<Item> ALUMINUM_INGOTS = createForgeTag("ingots/aluminum");
+        // public static final Tags.IOptionalNamedTag<Item> ALUMINUM_INGOTS = forgeTag("ingots/aluminum");
 
-        private static Tags.IOptionalNamedTag<Item> createTag(String name) {
+        private static Tags.IOptionalNamedTag<Item> tag(String name) {
             return ItemTags.createOptional(new ResourceLocation(ThatsALotOfItems.MOD_ID, name));
         }
 
-        private static Tags.IOptionalNamedTag<Item> createForgeTag(String name) {
+        private static Tags.IOptionalNamedTag<Item> forgeTag(String name) {
             return ItemTags.createOptional(new ResourceLocation("forge", name));
         }
     }

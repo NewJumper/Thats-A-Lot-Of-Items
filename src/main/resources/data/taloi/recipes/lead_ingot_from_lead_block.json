@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "taloi:lead_ingot",
+    "tag": "forge:ingots/lead",
     "count": 9
   }
 }

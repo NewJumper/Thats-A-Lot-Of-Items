@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "taloi:iridium_ingot",
+    "tag": "forge:ingots/iridium",
     "count": 9
   }
 }
