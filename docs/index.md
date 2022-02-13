@@ -2,7 +2,6 @@
 
 You can use the [editor on GitHub](https://github.com/NewJumper/Thats-A-Lot-Of-Items/edit/mc-1.18.1/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
-Latest Game Version: [$latestRelease]($latestReleaseLink)
 HELLOW
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
