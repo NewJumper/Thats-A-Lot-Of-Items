@@ -11,9 +11,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    OSMIUM("osmium", 40, new int[]{4, 7, 9, 4}, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> {
+    OSMIUM("osmium", 40, new int[]{4, 7, 9, 4}, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
-    });
+    }),
+    TUNGSTEN("tungsten", 43, new int[]{5, 8, 10, 5}, 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.4F, () -> {
+        return Ingredient.of(ModItems.OSMIUM_INGOT.get());
+    });;
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
