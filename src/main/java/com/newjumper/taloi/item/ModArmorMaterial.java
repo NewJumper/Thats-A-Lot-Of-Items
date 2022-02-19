@@ -11,14 +11,20 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    OSMIUM("osmium", 40, new int[]{4, 7, 9, 4}, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
+    OSMIUM("osmium", 40, new int[]{ 4, 7, 9, 4 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     }),
-    TUNGSTEN("tungsten", 43, new int[]{5, 8, 10, 5}, 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.4F, () -> {
+    TUNGSTEN("tungsten", 43, new int[]{ 5, 8, 10, 5 }, 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.3F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
-    });;
+    }),
+    SERMIUM("sermium", 45, new int[]{ 6, 10, 13, 6 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 6.0F, 0.4F, () -> {
+        return Ingredient.of(ModItems.OSMIUM_INGOT.get());
+    }),
+    FUTURITE("futurite", 49, new int[]{ 8, 12, 15, 8 }, 21, SoundEvents.ARMOR_EQUIP_NETHERITE, 8.0F, 0.4F, () -> {
+        return Ingredient.of(ModItems.OSMIUM_INGOT.get());
+    });
 
-    private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
+    private static final int[] HEALTH_PER_SLOT = new int[]{ 13, 15, 16, 11 };
     private final String name;
     private final int durabilityMultiplier;
     private final int[] slotProtections;
