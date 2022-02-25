@@ -11,16 +11,16 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    OSMIUM("osmium", 40, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
+    OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     }),
-    TUNGSTEN("tungsten", 43, new int[]{ 3, 7, 9, 3 }, 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.3F, () -> {
+    TUNGSTEN("tungsten", 40, new int[]{ 3, 7, 9, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     }),
-    SERMIUM("sermium", 45, new int[]{ 4, 7, 9, 4 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 6.0F, 0.4F, () -> {
+    SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     }),
-    FUTURITE("futurite", 49, new int[]{ 5, 8, 10, 5 }, 21, SoundEvents.ARMOR_EQUIP_NETHERITE, 8.0F, 0.4F, () -> {
+    FUTURITE("futurite", 44, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.2F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     });
 
@@ -34,7 +34,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    private ModArmorMaterials(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+    ModArmorMaterials(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.slotProtections = slotProtections;
