@@ -14,7 +14,7 @@ import net.minecraft.world.level.Level;
 import java.util.Map;
 
 public class SermiumArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP = (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>()).put(ModArmorMaterials.SERMIUM, new MobEffectInstance(MobEffects.REGENERATION, 9999, 0)).build();
+    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP = (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>()).put(ModArmorMaterials.SERMIUM, new MobEffectInstance(MobEffects.REGENERATION, 199980, 0)).build();
 
     public SermiumArmorItem(ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
         super(pMaterial, pSlot, pProperties);
