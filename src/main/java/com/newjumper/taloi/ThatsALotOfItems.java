@@ -28,7 +28,6 @@ public class ThatsALotOfItems {
         ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 
