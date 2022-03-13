@@ -7,14 +7,14 @@
   ],
   "key": {
     "D": {
-      "item": "taloi:diamond"
+      "item": "minecraft:diamond"
     },
     "G": {
-      "item": "golden_apple"
+      "item": "minecraft:golden_apple"
     }
   },
   "result": {
-    "item": "taloi:aluminum_block",
+    "item": "taloi:diamond_apple",
     "count": 1
   }
 }
