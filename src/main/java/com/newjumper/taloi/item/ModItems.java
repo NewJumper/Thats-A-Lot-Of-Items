@@ -157,6 +157,7 @@ public class ModItems {
 
     // FOOD & CROPS
     public static final RegistryObject<Item> DIAMOND_APPLE = ITEMS.register("diamond_apple", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.RARE).food(ModFoods.DIAMOND_APPLE)));
+    public static final RegistryObject<Item> FUTURITE_APPLE = ITEMS.register("futurite_apple", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE)));
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).stacksTo(1).food(ModFoods.RICE_BOWL)));
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).food(ModFoods.TOMATO)));
 
