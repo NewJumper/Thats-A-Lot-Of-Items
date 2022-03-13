@@ -238,46 +238,6 @@ public class ModBlocks {
             .sound(SoundType.CALCITE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> POLISHED_LIMESTONE = registerBlock("polished_limestone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.STONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> POLISHED_LIMESTONE_STAIRS = registerBlock("polished_limestone_stairs", () -> new StairBlock(() -> POLISHED_LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.STONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> POLISHED_LIMESTONE_SLAB = registerBlock("polished_limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.STONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = registerBlock("polished_limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.STONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> SMOOTH_MARBLE = registerBlock("smooth_marble", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> SMOOTH_MARBLE_STAIRS = registerBlock("smooth_marble_stairs", () -> new StairBlock(() -> SMOOTH_MARBLE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> SMOOTH_MARBLE_SLAB = registerBlock("smooth_marble_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> SMOOTH_MARBLE_WALL = registerBlock("smooth_marble_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
-            .strength(1.5f, 6f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
     // ADDING ON TO MINECRAFT BLOCKS
     public static final RegistryObject<Block> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "taloi:smooth_marble"
-  },
-  "result": "taloi:smooth_marble_wall",
-  "count": 1
-}

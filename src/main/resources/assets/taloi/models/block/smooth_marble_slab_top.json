@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "taloi:block/smooth_marble",
-    "top": "taloi:block/smooth_marble",
-    "side": "taloi:block/smooth_marble"
-  }
-}
