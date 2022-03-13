@@ -132,18 +132,6 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.MARBLE_SLAB.get());
         this.dropSelf(ModBlocks.MARBLE_WALL.get());
 
-        // POLISHED LIMESTONE
-        this.dropSelf(ModBlocks.POLISHED_LIMESTONE.get());
-        this.dropSelf(ModBlocks.POLISHED_LIMESTONE_STAIRS.get());
-        this.dropSelf(ModBlocks.POLISHED_LIMESTONE_SLAB.get());
-        this.dropSelf(ModBlocks.POLISHED_LIMESTONE_WALL.get());
-
-        // SMOOTH MARBLE
-        this.dropSelf(ModBlocks.SMOOTH_MARBLE.get());
-        this.dropSelf(ModBlocks.SMOOTH_MARBLE_STAIRS.get());
-        this.dropSelf(ModBlocks.SMOOTH_MARBLE_SLAB.get());
-        this.dropSelf(ModBlocks.SMOOTH_MARBLE_WALL.get());
-
         // CONCRETE STAIRS / SLABS
         this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
         this.dropSelf(ModBlocks.WHITE_CONCRETE_SLAB.get());
