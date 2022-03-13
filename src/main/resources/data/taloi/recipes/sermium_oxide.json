@@ -3,13 +3,10 @@
   "group": "sermium",
   "ingredients": [
     {
-      "item": "taloi:sermium"
+      "item": "taloi:sermium_core"
     },
     {
       "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:coal"
     }
   ],
   "result": {
