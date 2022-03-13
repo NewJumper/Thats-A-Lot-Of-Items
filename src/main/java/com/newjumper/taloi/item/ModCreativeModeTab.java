@@ -15,7 +15,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab TALOI_ITEM_TAB = new CreativeModeTab("taloi_item_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.ALLOY_X.get());
+            return new ItemStack(ModItems.FUTURITE.get());
         }
     };
 
