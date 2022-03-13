@@ -3,6 +3,7 @@ package com.newjumper.taloi;
 import com.google.common.collect.ImmutableMap;
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.painting.ModPaintings;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.AxeItem;
@@ -26,6 +27,7 @@ public class ThatsALotOfItems {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModPaintings.register(eventBus);
 
         eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);

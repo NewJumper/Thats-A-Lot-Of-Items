@@ -1,6 +1,6 @@
 That's A Lot Of Items credits and info:
 
-All code and textures were made by me, NewJumper.
+All art, code, and textures were made by me, NewJumper.
 
 This project started off as a huge list of items, blocks, tools, armor, weapons,
 and a lot more in a Google Docs, but I soon realized it was going to be quite a
