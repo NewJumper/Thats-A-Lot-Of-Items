@@ -16,7 +16,6 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 - New ores: aluminum, magnesium, osmium, tungsten, uranium, and plenty more
 - Alloys: carbonite, Futurite, Sermium, steel, and some mysterious alloys
 - Lots of natural generation: marble, limestone, evergreen trees, willow trees, and plants
-- New structures: 4 new dungeons you'll have to find and discover!
 
 ### Biomes:
 **The Coniferous Forest** is a place for tree lovers to go. Filled with tall, beautiful evergreen trees, the forest is well suited for creatures of magnificent beauty.
