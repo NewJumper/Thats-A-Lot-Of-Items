@@ -6,3 +6,7 @@ Minecraft Ver: v1.18.1
 Forge Ver: v39.1.2
 
 This wiki will provide you with everything you need to know about this mod and how to advance.
+
+<style>
+  .store{ width: 250px; }
+</style>
