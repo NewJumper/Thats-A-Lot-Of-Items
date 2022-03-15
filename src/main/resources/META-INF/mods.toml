@@ -14,9 +14,9 @@ displayName="That's A Lot Of Items" #mandatory
 
 displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items" #optional
 
-logoFile="logo_banner.png" #optional
+logoFile="logo_banner_dark.png" #optional
 
-credits="Content, code, and art by NewJumper" #optional
+credits="All art, code, and textures by NewJumper" #optional
 
 authors="NewJumper" #optional
 
