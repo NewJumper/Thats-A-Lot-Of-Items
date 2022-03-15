@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "taloi:sermium"
+    }
+  },
+  "result": {
+    "item": "minecraft:sermium_boots"
+  }
+}

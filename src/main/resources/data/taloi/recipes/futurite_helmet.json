@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "taloi:futurite"
+    }
+  },
+  "result": {
+    "item": "minecraft:futurite_helmet"
+  }
+}
