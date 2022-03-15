@@ -80,8 +80,8 @@
   "item.taloi.alloy_x" : "Alloy X",
   "item.taloi.alloy_z" : "Alloy Z",
 
-  "item.taloi.bronze_block" : "Bronze Block",
-  "item.taloi.steel_block" : "Steel Block",
+  "item.taloi.bronze_block" : "Block of Bronze",
+  "item.taloi.steel_block" : "Block of Steel",
 
   "block.taloi.evergreen_log" : "Evergreen Log",
   "block.taloi.evergreen_wood" : "Evergreen Wood",
