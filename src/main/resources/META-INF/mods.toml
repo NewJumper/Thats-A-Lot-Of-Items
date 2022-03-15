@@ -1,25 +1,19 @@
-modLoader="javafml" #mandatory
-
-loaderVersion="[39,)" #mandatory
+modLoader="javafml"
+loaderVersion="[39,)"
 
 license="MIT"
 
-[[mods]] #mandatory
+[[mods]]
+modId="taloi"
+version="${file.jarVersion}"
 
-modId="taloi" #mandatory
+displayName="That's A Lot Of Items"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"
 
-version="${file.jarVersion}" #mandatory
+logoFile="logo_banner_dark.png"
 
-displayName="That's A Lot Of Items" #mandatory
-
-displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items" #optional
-
-logoFile="logo_banner_dark.png" #optional
-
-credits="All art, code, and textures by NewJumper" #optional
-
-authors="NewJumper" #optional
-
+credits="All art, code, and textures by NewJumper"
+authors="NewJumper"
 description='''
 A mod about adding a whole lot more into the world of Minecraft.
 '''
