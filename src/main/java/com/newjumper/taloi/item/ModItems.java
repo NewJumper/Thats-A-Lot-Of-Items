@@ -111,6 +111,8 @@ public class ModItems {
     public static final RegistryObject<Item> FUTURITE_AXE = ITEMS.register("futurite_axe", () -> new AxeItem(ModTiers.FUTURITE, 6, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
     // public static final RegistryObject<Item> FUTURITE_OMNI_TOOL = ITEMS.register("futurite_omni_tool", () -> new ShovelItem(ModTiers.FUTURITE, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB))); BALANCE VALUES
 
+    public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).durability(1700)));
+
     public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new BlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).durability(102)));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 

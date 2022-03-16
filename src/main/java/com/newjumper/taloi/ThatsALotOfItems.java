@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.painting.ModPaintings;
+import com.newjumper.taloi.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.AxeItem;
@@ -38,6 +39,10 @@ public class ThatsALotOfItems {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ModItemProperties.addModItemProperties();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
