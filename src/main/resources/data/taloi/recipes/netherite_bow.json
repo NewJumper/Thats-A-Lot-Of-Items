@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " NS",
+    "NBS",
+    " NS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bow"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "taloi:netherite_bow"
+  }
+}
