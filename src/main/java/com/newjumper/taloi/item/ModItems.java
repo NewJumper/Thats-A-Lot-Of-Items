@@ -3,6 +3,7 @@ package com.newjumper.taloi.item;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.item.custom.*;
+import com.newjumper.taloi.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -169,6 +170,8 @@ public class ModItems {
 
     // add tomato_seeds
     // add crops and seeds stuff
+
+    public static final RegistryObject<Item> MUSIC_DISC_THE_CAVES = ITEMS.register("music_disc_the_caves", () -> new RecordItem(11, ModSounds.THE_CAVES, new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

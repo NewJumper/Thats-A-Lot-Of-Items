@@ -93,6 +93,9 @@
   "item.taloi.rice_bowl" : "Bowl of Rice",
   "item.taloi.tomato" : "Tomato",
 
+  "item.taloi.music_disc_the_caves" : "Music Disc",
+  "item.taloi.music_disc_the_caves.desc" : "NewJumper - The Caves",
+
   "item.taloi.aluminum_sword" : "Aluminum Sword",
   "item.taloi.aluminum_shovel" : "Aluminum Shovel",
   "item.taloi.aluminum_pickaxe" : "Aluminum Pickaxe",

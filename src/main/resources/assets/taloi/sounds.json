@@ -1,0 +1,10 @@
+{
+  "the_caves": {
+    "sounds": [
+      {
+        "name": "taloi:the_caves",
+        "stream": true
+      }
+    ]
+  }
+}
