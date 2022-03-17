@@ -2,9 +2,12 @@
   "type": "minecraft:smelting",
   "group": "refined_uranium",
   "ingredient": {
-    "item": "taloi:uranium_ore"
+    "tag": "forge:ores/uranium"
   },
-  "result": "taloi:refined_uranium",
+  "result": {
+    "tag": "forge:ingots/uranium",
+    "count": 1
+  },
   "experience": 1,
   "cookingtime": 300
 }

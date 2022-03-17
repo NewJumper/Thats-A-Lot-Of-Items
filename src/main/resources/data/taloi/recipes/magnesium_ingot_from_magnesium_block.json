@@ -3,7 +3,7 @@
   "group": "magnesium_ingot",
   "ingredients": [
     {
-      "item": "taloi:magnesium_block"
+      "tag": "forge:storage_blocks/magnesium"
     }
   ],
   "result": {

@@ -2,9 +2,12 @@
   "type": "minecraft:blasting",
   "group": "osmium_ingot",
   "ingredient": {
-    "item": "taloi:osmium_ore"
+    "tag": "forge:ores/osmium"
   },
-  "result": "taloi:osmium_ingot",
+  "result": {
+    "tag": "forge:ingots/osmium",
+    "count": 1
+  },
   "experience": 1,
   "cookingtime": 100
 }

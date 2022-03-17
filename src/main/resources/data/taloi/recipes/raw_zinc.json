@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_zinc_block"
+      "tag": "forge:storage_blocks/raw_zinc"
     }
   ],
   "result": {
-    "item": "taloi:raw_zinc",
+    "tag": "forge:raw_materials/zinc",
     "count": 9
   }
 }

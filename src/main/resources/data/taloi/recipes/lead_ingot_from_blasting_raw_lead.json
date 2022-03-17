@@ -2,9 +2,12 @@
   "type": "minecraft:blasting",
   "group": "lead_ingot",
   "ingredient": {
-    "item": "taloi:raw_lead"
+    "tag": "forge:raw_materials/lead"
   },
-  "result": "taloi:lead_ingot",
+  "result": {
+    "tag": "forge:ingots/lead",
+    "count": 1
+  },
   "experience": 1,
   "cookingtime": 100
 }

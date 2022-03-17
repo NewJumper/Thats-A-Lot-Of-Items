@@ -3,7 +3,7 @@
   "group": "iridium_ingot",
   "ingredients": [
     {
-      "item": "taloi:iridium_block"
+      "tag": "forge:storage_blocks/iridium"
     }
   ],
   "result": {

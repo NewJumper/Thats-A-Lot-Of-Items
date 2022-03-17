@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_osmium_block"
+      "tag": "forge:storage_blocks/raw_osmium"
     }
   ],
   "result": {
-    "item": "taloi:raw_osmium",
+    "tag": "forge:raw_materials/osmium",
     "count": 9
   }
 }

@@ -3,7 +3,7 @@
   "group": "silicon_ingot",
   "ingredients": [
     {
-      "item": "taloi:silicon_block"
+      "tag": "forge:storage_blocks/silicon"
     }
   ],
   "result": {

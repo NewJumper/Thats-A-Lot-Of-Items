@@ -3,7 +3,7 @@
   "group": "osmium_ingot",
   "ingredients": [
     {
-      "item": "taloi:osmium_block"
+      "tag": "forge:storage_blocks/osmium"
     }
   ],
   "result": {

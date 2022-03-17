@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_aluminum_block"
+      "tag": "forge:storage_blocks/raw_aluminum"
     }
   ],
   "result": {
-    "item": "taloi:raw_aluminum",
+    "tag": "forge:raw_materials/aluminum",
     "count": 9
   }
 }

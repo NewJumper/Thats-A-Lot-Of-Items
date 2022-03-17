@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_silicon_block"
+      "tag": "forge:storage_blocks/raw_silicon"
     }
   ],
   "result": {
-    "item": "taloi:raw_silicon",
+    "tag": "forge:raw_materials/silicon",
     "count": 9
   }
 }

@@ -3,7 +3,7 @@
   "group": "platinum_ingot",
   "ingredients": [
     {
-      "item": "taloi:platinum_block"
+      "tag": "forge:storage_blocks/platinum"
     }
   ],
   "result": {

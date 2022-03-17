@@ -3,7 +3,7 @@
   "group": "steel_ingot",
   "ingredients": [
     {
-      "item": "taloi:steel_block"
+      "tag": "forge:storage_blocks/steel"
     }
   ],
   "result": {

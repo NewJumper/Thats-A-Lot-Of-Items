@@ -2,9 +2,12 @@
   "type": "minecraft:blasting",
   "group": "tungsten_ingot",
   "ingredient": {
-    "item": "taloi:raw_tungsten"
+    "tag": "forge:raw_materials/tungsten"
   },
-  "result": "taloi:tungsten_ingot",
+  "result": {
+    "tag": "forge:ingots/tungsten",
+    "count": 1
+  },
   "experience": 1,
   "cookingtime": 100
 }

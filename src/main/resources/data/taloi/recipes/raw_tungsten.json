@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_tungsten_block"
+      "tag": "forge:storage_blocks/raw_tungsten"
     }
   ],
   "result": {
-    "item": "taloi:raw_tungsten",
+    "tag": "forge:raw_materials/tungsten",
     "count": 9
   }
 }

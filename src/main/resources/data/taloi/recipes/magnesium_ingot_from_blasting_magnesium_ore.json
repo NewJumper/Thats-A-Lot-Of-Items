@@ -2,9 +2,12 @@
   "type": "minecraft:blasting",
   "group": "magnesium_ingot",
   "ingredient": {
-    "item": "taloi:magnesium_ore"
+    "tag": "forge:ores/magnesium"
   },
-  "result": "taloi:magnesium_ingot",
+  "result": {
+    "tag": "forge:ingots/magnesium",
+    "count": 1
+  },
   "experience": 1,
   "cookingtime": 100
 }

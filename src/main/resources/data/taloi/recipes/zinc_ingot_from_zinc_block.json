@@ -3,7 +3,7 @@
   "group": "zinc_ingot",
   "ingredients": [
     {
-      "item": "taloi:zinc_block"
+      "tag": "forge:storage_blocks/zinc"
     }
   ],
   "result": {

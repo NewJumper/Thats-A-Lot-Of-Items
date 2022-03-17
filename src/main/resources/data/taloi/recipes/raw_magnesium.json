@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_magnesium_block"
+      "tag": "forge:storage_materials/raw_magnesium"
     }
   ],
   "result": {
-    "item": "taloi:raw_magnesium",
+    "tag": "forge:raw_materials/magnesium",
     "count": 9
   }
 }

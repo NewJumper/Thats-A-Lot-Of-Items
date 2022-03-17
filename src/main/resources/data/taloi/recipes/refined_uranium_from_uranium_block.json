@@ -3,7 +3,7 @@
   "group": "refined_uranium",
   "ingredients": [
     {
-      "item": "taloi:uranium_block"
+      "tag": "forge:storage_blocks/uranium"
     }
   ],
   "result": {

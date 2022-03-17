@@ -3,7 +3,7 @@
   "group": "bronze_ingot",
   "ingredients": [
     {
-      "item": "taloi:bronze_block"
+      "tag": "forge:storage_blocks/bronze"
     }
   ],
   "result": {

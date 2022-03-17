@@ -2,9 +2,12 @@
   "type": "minecraft:blasting",
   "group": "platinum_ingot",
   "ingredient": {
-    "item": "taloi:raw_platinum"
+    "tag": "forge:raw_materials/platinum"
   },
-  "result": "taloi:platinum_ingot",
+  "result": {
+    "tag": "forge:ingots/platinum",
+    "count": 1
+  },
   "experience": 1,
   "cookingtime": 100
 }

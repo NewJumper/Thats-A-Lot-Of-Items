@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_lead_block"
+      "tag": "forge:storage_blocks/raw_lead"
     }
   ],
   "result": {
-    "item": "taloi:raw_lead",
+    "tag": "forge:raw_materials/lead",
     "count": 9
   }
 }

@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_uranium_block"
+      "tag": "forge:storage_blocks/raw_uranium"
     }
   ],
   "result": {
-    "item": "taloi:raw_uranium",
+    "tag": "forge:raw_materials/uranium",
     "count": 9
   }
 }

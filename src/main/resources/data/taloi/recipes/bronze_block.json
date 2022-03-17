@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "taloi:bronze_block",
+    "tag": "forge:storage_blocks/bronze",
     "count": 1
   }
 }

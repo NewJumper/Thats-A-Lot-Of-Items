@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "taloi:raw_platinum"
+      "tag": "forge:raw_materials/platinum"
     }
   },
   "result": {
-    "item": "taloi:raw_platinum_block",
+    "tag": "forge:storage_blocks/raw_platinum",
     "count": 1
   }
 }
