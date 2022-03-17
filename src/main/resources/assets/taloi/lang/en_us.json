@@ -72,13 +72,13 @@
 
   "item.taloi.hardened_carbonite" : "Hardened Carbonite",
   "item.taloi.bronze_ingot" : "Bronze Ingot",
-  "item.taloi.bronze_block" : "Block of Bronze",
+  "block.taloi.bronze_block" : "Block of Bronze",
   "item.taloi.carbonite" : "Carbonite",
   "item.taloi.ferroniobium_ingot" : "Ferroniobium Ingot",
   "item.taloi.futurite" : "Futurite",
   "item.taloi.sermium" : "Sermium",
   "item.taloi.steel_ingot" : "Steel Ingot",
-  "item.taloi.steel_block" : "Block of Steel",
+  "block.taloi.steel_block" : "Block of Steel",
   "item.taloi.alloy_x" : "Alloy X",
   "item.taloi.alloy_z" : "Alloy Z",
 

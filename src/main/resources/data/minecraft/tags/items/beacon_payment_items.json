@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:iridium_ingot",
+    "taloi:magnesium_ingot",
+    "taloi:osmium_ingot",
+    "taloi:platinum_ingot",
+    "taloi:tungsten_ingot",
+    "taloi:bronze_ingot",
+    "taloi:steel_ingot"
+  ]
+}

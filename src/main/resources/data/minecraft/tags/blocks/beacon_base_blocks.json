@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:iridium_block",
+    "taloi:magnesium_block",
+    "taloi:osmium_block",
+    "taloi:platinum_block",
+    "taloi:tungsten_block",
+    "taloi:bronze_block",
+    "taloi:steel_block"
+  ]
+}
