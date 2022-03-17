@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "futurite",
+  "ingredients": [
+    {
+      "item": "taloi:futurite"
+    }
+  ],
+  "result": {
+    "tag": "taloi:futurite_bit",
+    "count": 9
+  }
+}

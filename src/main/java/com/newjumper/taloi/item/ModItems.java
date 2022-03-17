@@ -58,6 +58,9 @@ public class ModItems {
     public static final RegistryObject<Item> ALLOY_X = ITEMS.register("alloy_x", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> ALLOY_Z = ITEMS.register("alloy_z", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
+    // NUGGETS
+    public static final RegistryObject<Item> FUTURITE_BIT = ITEMS.register("futurite_bit", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+
     // PROCESSING
     public static final RegistryObject<Item> SERMIUM_CORE = ITEMS.register("sermium_core", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> SERMIUM_OXIDE = ITEMS.register("sermium_oxide", () -> new SermiumOxideItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
@@ -158,8 +161,9 @@ public class ModItems {
     public static final RegistryObject<Item> FUTURITE_BOOTS = ITEMS.register("futurite_boots", () -> new ArmorItem(ModArmorMaterials.FUTURITE, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
 
     // FOOD & CROPS
+    public static final RegistryObject<Item> DESTABILIZED_FUTURITE_APPLE = ITEMS.register("destabilized_futurite_apple", () -> new DestabilizedFuturiteAppleItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE).stacksTo(32)));
     public static final RegistryObject<Item> DIAMOND_APPLE = ITEMS.register("diamond_apple", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.RARE).food(ModFoods.DIAMOND_APPLE)));
-    public static final RegistryObject<Item> FUTURITE_APPLE = ITEMS.register("futurite_apple", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE)));
+    public static final RegistryObject<Item> FUTURITE_APPLE = ITEMS.register("futurite_apple", () -> new FuturiteAppleItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE).stacksTo(16)));
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).stacksTo(1).food(ModFoods.RICE_BOWL)));
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).food(ModFoods.TOMATO)));
 
