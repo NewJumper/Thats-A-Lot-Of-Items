@@ -15,7 +15,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.18.1-0.13.1'
+version = '1.18.1-0.13.2'
 group = 'com.newjumper.taloi'
 archivesBaseName = 'taloi'
 
