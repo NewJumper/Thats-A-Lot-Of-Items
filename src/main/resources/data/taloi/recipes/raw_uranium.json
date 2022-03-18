@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "tag": "forge:raw_materials/uranium",
+    "item": "taloi:raw_uranium",
     "count": 9
   }
 }

@@ -5,7 +5,7 @@
     "tag": "forge:raw_materials/osmium"
   },
   "result": {
-    "tag": "forge:ingots/osmium",
+    "item": "taloi:osmium_ingot",
     "count": 1
   },
   "experience": 1,

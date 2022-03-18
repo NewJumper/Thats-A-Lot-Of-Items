@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "tag": "forge:raw_materials/magnesium",
+    "item": "taloi:raw_magnesium",
     "count": 9
   }
 }

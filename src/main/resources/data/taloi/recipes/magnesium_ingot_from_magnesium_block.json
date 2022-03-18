@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "tag": "forge:ingots/magnesium",
+    "item": "taloi:magnesium_ingot",
     "count": 9
   }
 }

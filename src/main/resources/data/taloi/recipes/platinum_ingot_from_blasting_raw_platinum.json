@@ -5,7 +5,7 @@
     "tag": "forge:raw_materials/platinum"
   },
   "result": {
-    "tag": "forge:ingots/platinum",
+    "item": "taloi:platinum_ingot",
     "count": 1
   },
   "experience": 1,

@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "tag": "forge:storage_blocks/raw_platinum",
+    "item": "taloi:raw_platinum_block",
     "count": 1
   }
 }

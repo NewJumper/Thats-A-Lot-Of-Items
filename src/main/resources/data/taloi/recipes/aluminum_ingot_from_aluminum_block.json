@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "aluminum_ingot",
   "ingredients": [
     {
       "tag": "forge:storage_blocks/aluminum"
     }
   ],
   "result": {
-    "tag": "forge:ingots/aluminum",
+    "item": "taloi:aluminum_ingot",
     "count": 9
   }
 }

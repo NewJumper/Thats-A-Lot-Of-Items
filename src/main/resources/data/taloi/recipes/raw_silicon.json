@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "tag": "forge:raw_materials/silicon",
+    "item": "taloi:raw_silicon",
     "count": 9
   }
 }

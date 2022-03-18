@@ -5,7 +5,7 @@
     "tag": "forge:ores/iridium"
   },
   "result": {
-    "tag": "forge:ingots/iridium",
+    "item": "taloi:iridium_ingot",
     "count": 1
   },
   "experience": 1,

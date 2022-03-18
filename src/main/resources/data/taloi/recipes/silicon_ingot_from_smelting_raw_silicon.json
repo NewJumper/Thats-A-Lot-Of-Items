@@ -5,7 +5,7 @@
     "tag": "forge:raw_materials/silicon"
   },
   "result": {
-    "tag": "forge:ingots/silicon",
+    "item": "taloi:silicon_ingot",
     "count": 1
   },
   "experience": 1,

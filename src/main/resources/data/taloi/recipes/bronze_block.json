@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "tag": "forge:storage_blocks/bronze",
+    "item": "forge:storage_blocks/bronze",
     "count": 1
   }
 }

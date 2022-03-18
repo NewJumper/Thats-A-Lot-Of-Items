@@ -5,7 +5,7 @@
     "tag": "forge:ores/tin"
   },
   "result": {
-    "tag": "forge:ingots/tin",
+    "item": "taloi:tin_ingot",
     "count": 1
   },
   "experience": 1,

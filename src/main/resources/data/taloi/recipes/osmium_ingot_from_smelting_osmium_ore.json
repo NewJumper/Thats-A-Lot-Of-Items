@@ -5,7 +5,7 @@
     "tag": "forge:ores/osmium"
   },
   "result": {
-    "tag": "forge:ingots/osmium",
+    "item": "taloi:osmium_ingot",
     "count": 1
   },
   "experience": 1,

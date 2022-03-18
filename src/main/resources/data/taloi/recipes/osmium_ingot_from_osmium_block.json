@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "tag": "forge:ingots/osmium",
+    "item": "taloi:osmium_ingot",
     "count": 9
   }
 }

@@ -1,11 +1,10 @@
 {
   "type": "minecraft:blasting",
-  "group": "aluminum_ingot",
   "ingredient": {
     "tag": "forge:ores/aluminum"
   },
   "result": {
-    "tag": "forge:ingots/aluminum",
+    "item": "taloi:aluminum_ingot",
     "count": 1
   },
   "experience": 1,

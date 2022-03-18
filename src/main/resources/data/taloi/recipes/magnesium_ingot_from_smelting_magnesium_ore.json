@@ -5,7 +5,7 @@
     "tag": "forge:ores/magnesium"
   },
   "result": {
-    "tag": "forge:ingots/magnesium",
+    "item": "taloi:magnesium_ingot",
     "count": 1
   },
   "experience": 1,

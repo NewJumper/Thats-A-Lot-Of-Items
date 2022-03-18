@@ -1,11 +1,10 @@
 {
   "type": "minecraft:smelting",
-  "group": "aluminum_ingot",
   "ingredient": {
     "tag": "forge:raw_materials/aluminum"
   },
   "result": {
-    "tag": "forge:ingots/aluminum",
+    "item": "taloi:aluminum_ingot",
     "count": 1
   },
   "experience": 1,
