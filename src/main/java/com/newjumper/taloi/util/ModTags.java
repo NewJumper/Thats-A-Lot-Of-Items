@@ -22,8 +22,6 @@ public class ModTags {
     }
 
     public static class Items {
-        // public static final Tags.IOptionalNamedTag<Item> ALUMINUM_INGOTS = forgeTag("ingots/aluminum");
-
         private static Tags.IOptionalNamedTag<Item> tag(String name) {
             return ItemTags.createOptional(new ResourceLocation(ThatsALotOfItems.MOD_ID, name));
         }

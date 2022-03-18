@@ -1,6 +1,7 @@
 package com.newjumper.taloi.item.custom;
 
 import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -49,8 +50,6 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isOreBlock(Block block) {
-        return Tags.Blocks.ORES.contains(block);
-                //block == Blocks.COAL_ORE || block == Blocks.IRON_ORE || block == Blocks.COPPER_ORE || block == Blocks.REDSTONE_ORE || block == Blocks.LAPIS_ORE || block == Blocks.EMERALD_ORE || block == Blocks.GOLD_ORE || block == Blocks.DIAMOND_ORE ||
-               //block == Blocks.DEEPSLATE_COAL_ORE || block == Blocks.DEEPSLATE_IRON_ORE || block == Blocks.DEEPSLATE_COPPER_ORE || block == Blocks.DEEPSLATE_REDSTONE_ORE || block == Blocks.DEEPSLATE_LAPIS_ORE || block == Blocks.DEEPSLATE_EMERALD_ORE || block == Blocks.DEEPSLATE_GOLD_ORE || block == Blocks.DEEPSLATE_DIAMOND_ORE;
+        return Tags.Blocks.ORES.contains(block) || ModTags.Blocks.TALOI_ORES.contains(block);
     }
 }
