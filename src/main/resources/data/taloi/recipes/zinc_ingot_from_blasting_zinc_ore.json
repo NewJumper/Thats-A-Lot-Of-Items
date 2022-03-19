@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "zinc_ingot",
   "ingredient": {
     "tag": "forge:ores/zinc"
   },

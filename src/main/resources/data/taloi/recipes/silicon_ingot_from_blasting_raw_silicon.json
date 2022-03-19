@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "silicon_ingot",
   "ingredient": {
     "tag": "forge:raw_materials/silicon"
   },

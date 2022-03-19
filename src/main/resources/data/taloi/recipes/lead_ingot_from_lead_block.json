@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "lead_ingot",
   "ingredients": [
     {
       "tag": "forge:storage_blocks/lead"

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:smelting",
-  "group": "zinc_ingot",
   "ingredient": {
     "tag": "forge:raw_materials/zinc"
   },

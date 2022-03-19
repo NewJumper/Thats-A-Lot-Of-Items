@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "tin_ingot",
   "ingredient": {
     "tag": "forge:raw_materials/tin"
   },

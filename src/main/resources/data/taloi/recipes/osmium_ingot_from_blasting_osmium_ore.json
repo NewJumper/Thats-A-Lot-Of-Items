@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "osmium_ingot",
   "ingredient": {
     "tag": "forge:ores/osmium"
   },

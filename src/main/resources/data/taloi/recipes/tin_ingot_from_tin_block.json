@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "tin_ingot",
   "ingredients": [
     {
       "tag": "forge:storage_blocks/tin"

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "lead_ingot",
   "ingredient": {
     "tag": "forge:raw_materials/lead"
   },

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "magnesium_ingot",
   "ingredient": {
     "tag": "forge:ores/magnesium"
   },

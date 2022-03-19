@@ -1,6 +1,5 @@
 {
   "type": "minecraft:blasting",
-  "group": "platinum_ingot",
   "ingredient": {
     "tag": "forge:ores/platinum"
   },

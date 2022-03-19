@@ -1,6 +1,5 @@
 {
   "type": "minecraft:smelting",
-  "group": "platinum_ingot",
   "ingredient": {
     "tag": "forge:raw_materials/platinum"
   },
