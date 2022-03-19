@@ -104,6 +104,8 @@ public class ModBlockLootTables extends BlockLoot {
             return createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get());
         });
         this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
+        this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
+        this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
 
         // WILLOW
         this.dropSelf(ModBlocks.WILLOW_LOG.get());
@@ -119,6 +121,8 @@ public class ModBlockLootTables extends BlockLoot {
             return createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get());
         });
         this.dropSelf(ModBlocks.WILLOW_SAPLING.get());
+        this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
+        this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
 
         // LIMESTONE
         this.dropSelf(ModBlocks.LIMESTONE.get());
