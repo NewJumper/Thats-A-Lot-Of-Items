@@ -189,6 +189,8 @@
   "block.taloi.evergreen_fence_gate" : "Evergreen Fence Gate",
   "block.taloi.evergreen_leaves" : "Evergreen Leaves",
   "block.taloi.evergreen_sapling" : "Evergreen Sapling",
+  "block.taloi.evergreen_button" : "Evergreen Button",
+  "block.taloi.evergreen_pressure_plate" : "Evergreen Pressure Plate",
   "block.taloi.willow_log" : "Willow Log",
   "block.taloi.willow_wood" : "Willow Wood",
   "block.taloi.willow_planks" : "Willow Planks",
@@ -200,6 +202,8 @@
   "block.taloi.willow_fence_gate" : "Willow Fence Gate",
   "block.taloi.willow_leaves" : "Willow Leaves",
   "block.taloi.willow_sapling" : "Willow Sapling",
+  "block.taloi.willow_button" : "Willow Button",
+  "block.taloi.willow_pressure_plate" : "Willow Pressure Plate",
 
   "block.taloi.limestone" : "Limestone",
   "block.taloi.limestone_stairs" : "Limestone Stairs",

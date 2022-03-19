@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "taloi:block/willow_pressure_plate"
+    },
+    "powered=true": {
+      "model": "taloi:block/willow_pressure_plate_down"
+    }
+  }
+}
