@@ -2,7 +2,7 @@
   "the_caves": {
     "sounds": [
       {
-        "name": "taloi:the_caves",
+        "name": "taloi:music_disc_the_caves",
         "stream": true
       }
     ]
