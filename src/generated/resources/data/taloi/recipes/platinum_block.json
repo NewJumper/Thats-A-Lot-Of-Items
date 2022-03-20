@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "tag": "forge:ingots/platinum"
+    }
+  },
+  "result": {
+    "item": "taloi:platinum_block"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "taloi:silicon_ore"
+  },
+  "result": "taloi:silicon_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

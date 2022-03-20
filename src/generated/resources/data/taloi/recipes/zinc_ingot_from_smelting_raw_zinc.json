@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:raw_materials/zinc"
+  },
+  "result": "taloi:zinc_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

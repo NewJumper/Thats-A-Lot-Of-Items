@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "taloi:marble"
+    }
+  },
+  "result": {
+    "item": "taloi:marble_wall",
+    "count": 6
+  }
+}

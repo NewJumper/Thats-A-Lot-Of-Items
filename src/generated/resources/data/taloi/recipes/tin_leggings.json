@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "A A",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/tin"
+    }
+  },
+  "result": {
+    "item": "taloi:tin_leggings"
+  }
+}

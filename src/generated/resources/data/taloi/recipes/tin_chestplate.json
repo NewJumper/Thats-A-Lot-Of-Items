@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/tin"
+    }
+  },
+  "result": {
+    "item": "taloi:tin_chestplate"
+  }
+}

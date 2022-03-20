@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "forge:raw_materials/tin"
+  },
+  "result": "taloi:tin_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:raw_platinum_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:raw_platinum",
+    "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:silicon_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:silicon_ingot",
+    "count": 9
+  }
+}

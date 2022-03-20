@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:ingots/silicon"
+    }
+  },
+  "result": {
+    "item": "taloi:silicon_block"
+  }
+}

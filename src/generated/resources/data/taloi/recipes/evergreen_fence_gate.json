@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SES",
+    "SES"
+  ],
+  "key": {
+    "E": {
+      "item": "taloi:evergreen_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "taloi:evergreen_fence_gate"
+  }
+}

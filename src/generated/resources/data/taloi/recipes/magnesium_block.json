@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "tag": "forge:ingots/magnesium"
+    }
+  },
+  "result": {
+    "item": "taloi:magnesium_block"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W  ",
+    "WW ",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "taloi:willow_planks"
+    }
+  },
+  "result": {
+    "item": "taloi:willow_stairs",
+    "count": 4
+  }
+}

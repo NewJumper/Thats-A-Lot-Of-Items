@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "UUU",
+    "UUU",
+    "UUU"
+  ],
+  "key": {
+    "U": {
+      "tag": "forge:ingots/uranium"
+    }
+  },
+  "result": {
+    "item": "taloi:uranium_block"
+  }
+}

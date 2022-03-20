@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/tungsten"
+    }
+  },
+  "result": {
+    "item": "taloi:tungsten_chestplate"
+  }
+}

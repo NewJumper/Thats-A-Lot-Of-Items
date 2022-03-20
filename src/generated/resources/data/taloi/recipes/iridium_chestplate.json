@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/iridium"
+    }
+  },
+  "result": {
+    "item": "taloi:iridium_chestplate"
+  }
+}

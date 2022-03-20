@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "taloi:futurite"
+    }
+  },
+  "result": {
+    "item": "taloi:futurite_chestplate"
+  }
+}

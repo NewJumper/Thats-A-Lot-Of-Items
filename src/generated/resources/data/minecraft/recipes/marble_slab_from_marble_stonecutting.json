@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "taloi:marble"
+  },
+  "result": "taloi:marble_slab",
+  "count": 1
+}

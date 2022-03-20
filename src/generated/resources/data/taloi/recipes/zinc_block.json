@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ZZZ",
+    "ZZZ",
+    "ZZZ"
+  ],
+  "key": {
+    "Z": {
+      "tag": "forge:ingots/zinc"
+    }
+  },
+  "result": {
+    "item": "taloi:zinc_block"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:evergreen_log"
+    }
+  ],
+  "result": {
+    "item": "taloi:evergreen_planks",
+    "count": 4
+  }
+}

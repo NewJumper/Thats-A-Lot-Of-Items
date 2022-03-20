@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "taloi:aluminum_ore"
+  },
+  "result": "taloi:aluminum_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}

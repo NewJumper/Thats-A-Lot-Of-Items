@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "tag": "forge:ingots/tungsten"
+    }
+  },
+  "result": {
+    "item": "taloi:tungsten_block"
+  }
+}

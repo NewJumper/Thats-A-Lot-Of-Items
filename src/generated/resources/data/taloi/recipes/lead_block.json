@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "forge:ingots/lead"
+    }
+  },
+  "result": {
+    "item": "taloi:lead_block"
+  }
+}

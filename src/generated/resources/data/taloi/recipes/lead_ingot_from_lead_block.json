@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:lead_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:lead_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW",
+    "WW"
+  ],
+  "key": {
+    "W": {
+      "item": "taloi:willow_log"
+    }
+  },
+  "result": {
+    "item": "taloi:willow_wood",
+    "count": 3
+  }
+}

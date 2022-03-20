@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "tag": "forge:raw_materials/iridium"
+    }
+  },
+  "result": {
+    "item": "taloi:raw_iridium_block"
+  }
+}

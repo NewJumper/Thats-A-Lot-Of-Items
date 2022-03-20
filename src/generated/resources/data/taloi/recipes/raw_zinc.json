@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:raw_zinc_block"
+    }
+  ],
+  "result": {
+    "item": "taloi:raw_zinc",
+    "count": 9
+  }
+}

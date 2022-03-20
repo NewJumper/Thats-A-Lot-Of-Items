@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "key": {
+    "W": {
+      "item": "taloi:willow_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "taloi:willow_fence",
+    "count": 3
+  }
+}

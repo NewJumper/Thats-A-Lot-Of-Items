@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "taloi:zinc_ore"
+  },
+  "result": "taloi:zinc_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

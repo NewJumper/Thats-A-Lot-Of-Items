@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:raw_materials/silicon"
+  },
+  "result": "taloi:silicon_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}
