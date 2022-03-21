@@ -78,7 +78,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE_GATE.get());
-        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get()));
+        this.dropSelf(ModBlocks.EVERGREEN_LEAVES.get());
+//        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get()));
         this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
         this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
         this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
@@ -93,7 +94,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE_GATE.get());
-        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get()));
+        this.dropSelf(ModBlocks.WILLOW_LEAVES.get());
+//        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get()));
         this.dropSelf(ModBlocks.WILLOW_SAPLING.get());
         this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
         this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
