@@ -12,79 +12,57 @@ public class ModBlockLootTables extends BlockLoot {
         // ALUMINUM
         this.dropSelf(ModBlocks.ALUMINUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());
-        this.add(ModBlocks.ALUMINUM_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.ALUMINUM_ORE.get(), ModItems.RAW_ALUMINUM.get());
-        });
+        this.add(ModBlocks.ALUMINUM_ORE.get(), (block) -> createOreDrop(ModBlocks.ALUMINUM_ORE.get(), ModItems.RAW_ALUMINUM.get()));
 
         // IRIDIUM
         this.dropSelf(ModBlocks.IRIDIUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_IRIDIUM_BLOCK.get());
-        this.add(ModBlocks.IRIDIUM_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.IRIDIUM_ORE.get(), ModItems.RAW_IRIDIUM.get());
-        });
+        this.add(ModBlocks.IRIDIUM_ORE.get(), (block) -> createOreDrop(ModBlocks.IRIDIUM_ORE.get(), ModItems.RAW_IRIDIUM.get()));
 
         // LEAD
         this.dropSelf(ModBlocks.LEAD_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_LEAD_BLOCK.get());
-        this.add(ModBlocks.LEAD_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.LEAD_ORE.get(), ModItems.RAW_LEAD.get());
-        });
+        this.add(ModBlocks.LEAD_ORE.get(), (block) -> createOreDrop(ModBlocks.LEAD_ORE.get(), ModItems.RAW_LEAD.get()));
 
         // MAGNESIUM
         this.dropSelf(ModBlocks.MAGNESIUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_MAGNESIUM_BLOCK.get());
-        this.add(ModBlocks.MAGNESIUM_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.MAGNESIUM_ORE.get(), ModItems.RAW_MAGNESIUM.get());
-        });
+        this.add(ModBlocks.MAGNESIUM_ORE.get(), (block) -> createOreDrop(ModBlocks.MAGNESIUM_ORE.get(), ModItems.RAW_MAGNESIUM.get()));
 
         // OSMIUM
         this.dropSelf(ModBlocks.OSMIUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_OSMIUM_BLOCK.get());
-        this.add(ModBlocks.OSMIUM_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.OSMIUM_ORE.get(), ModItems.RAW_OSMIUM.get());
-        });
+        this.add(ModBlocks.OSMIUM_ORE.get(), (block) -> createOreDrop(ModBlocks.OSMIUM_ORE.get(), ModItems.RAW_OSMIUM.get()));
 
         // PLATINUM
         this.dropSelf(ModBlocks.PLATINUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_PLATINUM_BLOCK.get());
-        this.add(ModBlocks.PLATINUM_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.PLATINUM_ORE.get(), ModItems.RAW_PLATINUM.get());
-        });
+        this.add(ModBlocks.PLATINUM_ORE.get(), (block) -> createOreDrop(ModBlocks.PLATINUM_ORE.get(), ModItems.RAW_PLATINUM.get()));
 
         // SILICON
         this.dropSelf(ModBlocks.SILICON_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_SILICON_BLOCK.get());
-        this.add(ModBlocks.SILICON_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.SILICON_ORE.get(), ModItems.RAW_SILICON.get());
-        });
+        this.add(ModBlocks.SILICON_ORE.get(), (block) -> createOreDrop(ModBlocks.SILICON_ORE.get(), ModItems.RAW_SILICON.get()));
 
         // TIN
         this.dropSelf(ModBlocks.TIN_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
-        this.add(ModBlocks.TIN_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get());
-        });
+        this.add(ModBlocks.TIN_ORE.get(), (block) -> createOreDrop(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
 
         // TUNGSTEN
         this.dropSelf(ModBlocks.TUNGSTEN_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_TUNGSTEN_BLOCK.get());
-        this.add(ModBlocks.TUNGSTEN_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.TUNGSTEN_ORE.get(), ModItems.RAW_TUNGSTEN.get());
-        });
+        this.add(ModBlocks.TUNGSTEN_ORE.get(), (block) -> createOreDrop(ModBlocks.TUNGSTEN_ORE.get(), ModItems.RAW_TUNGSTEN.get()));
 
         // URANIUM
         this.dropSelf(ModBlocks.URANIUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_URANIUM_BLOCK.get());
-        this.add(ModBlocks.URANIUM_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.URANIUM_ORE.get(), ModItems.RAW_URANIUM.get());
-        });
+        this.add(ModBlocks.URANIUM_ORE.get(), (block) -> createOreDrop(ModBlocks.URANIUM_ORE.get(), ModItems.RAW_URANIUM.get()));
 
         // ZINC
         this.dropSelf(ModBlocks.ZINC_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_ZINC_BLOCK.get());
-        this.add(ModBlocks.ZINC_ORE.get(), (block) -> {
-            return createOreDrop(ModBlocks.ZINC_ORE.get(), ModItems.RAW_ZINC.get());
-        });
+        this.add(ModBlocks.ZINC_ORE.get(), (block) -> createOreDrop(ModBlocks.ZINC_ORE.get(), ModItems.RAW_ZINC.get()));
 
         // ALLOYS
         this.dropSelf(ModBlocks.BRONZE_BLOCK.get());
@@ -100,9 +78,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE_GATE.get());
-        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> {
-            return createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get());
-        });
+        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get()));
         this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
         this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
         this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
@@ -117,9 +93,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE_GATE.get());
-        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> {
-            return createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get());
-        });
+        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get()));
         this.dropSelf(ModBlocks.WILLOW_SAPLING.get());
         this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
         this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
