@@ -1,7 +1,7 @@
 package com.newjumper.taloi.data;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.data.loottables.ModLootTableProvider;
+import com.newjumper.taloi.data.loottables.LootTablesProvider;
 import com.newjumper.taloi.data.recipes.CraftingRecipesProvider;
 import com.newjumper.taloi.data.recipes.SmeltingRecipesProvider;
 import com.newjumper.taloi.data.recipes.StonecuttingRecipesProvider;
@@ -17,7 +17,7 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
 
         // loot tables
-        generator.addProvider(new ModLootTableProvider(generator));
+        generator.addProvider(new LootTablesProvider(generator));
 
         // recipes
         generator.addProvider(new CraftingRecipesProvider(generator));

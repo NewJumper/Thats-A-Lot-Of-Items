@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:limestone_wall_from_limestone_stonecutting"
+      "taloi:marble_stairs_from_marble_stonecutting"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "taloi:limestone"
+              "taloi:marble"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:limestone_wall_from_limestone_stonecutting"
+        "recipe": "taloi:marble_stairs_from_marble_stonecutting"
       }
     }
   },

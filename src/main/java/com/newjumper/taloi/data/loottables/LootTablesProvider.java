@@ -16,10 +16,10 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class ModLootTableProvider extends LootTableProvider {
+public class LootTablesProvider extends LootTableProvider {
     private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> loot_tables = ImmutableList.of(Pair.of(ModBlockLootTables::new, LootContextParamSets.BLOCK));
 
-    public ModLootTableProvider(DataGenerator pGenerator) {
+    public LootTablesProvider(DataGenerator pGenerator) {
         super(pGenerator);
     }
 

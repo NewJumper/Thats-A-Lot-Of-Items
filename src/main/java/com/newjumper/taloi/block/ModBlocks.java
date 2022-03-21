@@ -219,29 +219,29 @@ public class ModBlocks {
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
             .strength(1.5f, 6f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> MARBLE = registerBlock("marble", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 6f)
-            .sound(SoundType.CALCITE)
+            .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> MARBLE_STAIRS = registerBlock("marble_stairs", () -> new StairBlock(() -> MARBLE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 6f)
-            .sound(SoundType.CALCITE)
+            .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> MARBLE_SLAB = registerBlock("marble_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 6f)
-            .sound(SoundType.CALCITE)
+            .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> MARBLE_WALL = registerBlock("marble_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> MARBLE_WALL = registerBlock("marble_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(MARBLE.get())
             .strength(1.5f, 6f)
-            .sound(SoundType.CALCITE)
+            .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // ADDING ON TO MINECRAFT BLOCKS
