@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model":  "taloi:block/zinc_block" }
+    "": { "model": "taloi:block/zinc_block" }
   }
 }

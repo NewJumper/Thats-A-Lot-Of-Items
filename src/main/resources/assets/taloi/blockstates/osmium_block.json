@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model":  "taloi:block/osmium_block" }
+    "": { "model": "taloi:block/osmium_block" }
   }
 }
