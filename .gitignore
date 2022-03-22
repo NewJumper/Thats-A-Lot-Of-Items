@@ -23,3 +23,6 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+
+# not working, needs updating, or testing
+/src/main/java/com/newjumper/taloi/world

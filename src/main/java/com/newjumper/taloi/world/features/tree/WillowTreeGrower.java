@@ -1,3 +1,4 @@
+/*
 package com.newjumper.taloi.world.features.tree;
 
 import com.newjumper.taloi.world.features.ModConfiguredFeatures;
@@ -15,3 +16,4 @@ public class WillowTreeGrower extends AbstractTreeGrower {
         return (ConfiguredFeature<TreeConfiguration, ?>)ModConfiguredFeatures.WILLOW;
     }
 }
+*/

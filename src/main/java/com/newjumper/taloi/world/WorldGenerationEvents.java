@@ -1,3 +1,4 @@
+/*
 package com.newjumper.taloi.world;
 
 import com.newjumper.taloi.ThatsALotOfItems;
@@ -15,3 +16,4 @@ public class WorldGenerationEvents {
         ModTreeGeneration.generateTrees(event);
     }
 }
+*/

@@ -1,8 +1,8 @@
 package com.newjumper.taloi.item.custom;
 
-import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.util.ModTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
@@ -10,7 +10,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 
 public class MetalDetectorItem extends Item {
@@ -50,6 +49,7 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isOreBlock(Block block) {
-        return Tags.Blocks.ORES.contains(block) || ModTags.Blocks.TALOI_ORES.contains(block);
+        return Registry.BLOCK.getHolderOrThrow(Registry.BLOCK.getResourceKey(block).get()).is(ModTags.Blocks.TALOI_ORES) || Registry.BLOCK.getHolderOrThrow(Registry.BLOCK.getResourceKey(block).get()).is(Tags.Blocks.ORES);
+//        return Tags.Blocks.ORES.contains(block) || ModTags.Blocks.TALOI_ORES.contains(block);
     }
 }

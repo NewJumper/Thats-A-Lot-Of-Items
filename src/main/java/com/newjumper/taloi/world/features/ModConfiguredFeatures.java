@@ -1,3 +1,4 @@
+/*
 package com.newjumper.taloi.world.features;
 
 import com.newjumper.taloi.block.ModBlocks;
@@ -43,3 +44,4 @@ public class ModConfiguredFeatures {
         return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, name, configuredFeature);
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.newjumper.taloi.world.gen;
 
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -104,3 +105,4 @@ public class ModOreGeneration {
         return Feature.ORE.configured(oreFeatureConfig).placed(heightRangePlacement);
     }
 }
+*/

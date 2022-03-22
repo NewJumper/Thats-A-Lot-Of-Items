@@ -1,3 +1,4 @@
+/*
 package com.newjumper.taloi.world.gen;
 
 import com.newjumper.taloi.world.features.ModPlacedFeatures;
@@ -29,3 +30,4 @@ public class ModTreeGeneration {
         }
     }
 }
+*/

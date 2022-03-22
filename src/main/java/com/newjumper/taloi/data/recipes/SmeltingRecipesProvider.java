@@ -7,10 +7,10 @@ import com.newjumper.taloi.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -96,7 +96,7 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(block), pResult, 1, 100)
                 .unlockedBy("has_material", has(hasBlock)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
     }
-    private void blastingRecipe(Consumer<FinishedRecipe> consumer, Tags.IOptionalNamedTag<Item> pTag, Item pResult, Block hasBlock, String pPath) {
+    private void blastingRecipe(Consumer<FinishedRecipe> consumer, TagKey<Item> pTag, Item pResult, Block hasBlock, String pPath) {
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(pTag), pResult, 1, 100)
                 .unlockedBy("has_material", has(hasBlock)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
     }
@@ -105,7 +105,7 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(block), pResult, 1, 200)
                 .unlockedBy("has_material", has(hasBlock)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
     }
-    private void smeltingRecipe(Consumer<FinishedRecipe> consumer, Tags.IOptionalNamedTag<Item> pTag, Item pResult, Block hasBlock, String pPath) {
+    private void smeltingRecipe(Consumer<FinishedRecipe> consumer, TagKey<Item> pTag, Item pResult, Block hasBlock, String pPath) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(pTag), pResult, 1, 200)
                 .unlockedBy("has_material", has(hasBlock)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
     }

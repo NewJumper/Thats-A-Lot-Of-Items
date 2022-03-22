@@ -1,3 +1,4 @@
+/*
 package com.newjumper.taloi.world.features;
 
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -9,3 +10,4 @@ public class ModPlacedFeatures {
 
     public static final PlacedFeature WILLOW_PLACED = PlacementUtils.register("willow_placed", ModConfiguredFeatures.WILLOW_TREE_CHECKED.placed(VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.1f, 1))));
 }
+*/

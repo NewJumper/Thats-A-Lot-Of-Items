@@ -4,12 +4,16 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.util.ModTags;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -894,5 +898,9 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(Items.IRON_INGOT)
                 .requires(ModItems.SERMIUM_CORE.get())
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
+    }
+
+    private static InventoryChangeTrigger.TriggerInstance has(TagKey<Item> pTag) {
+        return inventoryTrigger(ItemPredicate.Builder.item().of(pTag).build());
     }
 }
