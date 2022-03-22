@@ -9,7 +9,7 @@
 
 A mod which brings a lot more into the world of Minecraft. Ranging from tons of new ores, machinery, items, blocks, and a bunch of other random stuff, this mod will bring diversity and more creativity into your world.
 
-###### *Wiki: https://newjumper.github.io/Thats-A-Lot-Of-Items/*
+###### *Wiki: https://newjumper.github.io/Thats-A-Lot-Of-Items/* no more wiki
 ###### *Most of the following content is either in progress or to be added*
 ---
 ### Some content within the mod:
