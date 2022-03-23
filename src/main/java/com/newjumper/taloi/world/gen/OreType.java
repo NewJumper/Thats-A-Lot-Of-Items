@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
+    // THIS FILE IS NO LONGER IN USE
     ALUMINUM_ORE(Lazy.of(ModBlocks.ALUMINUM_ORE), 10, 0, 64, 12),
     ALUMINUM_ORE_2(Lazy.of(ModBlocks.ALUMINUM_ORE), 12, 64, 128, 4),
     IRIDIUM_ORE(Lazy.of(ModBlocks.IRIDIUM_ORE), 7, 18, 32, 6),
