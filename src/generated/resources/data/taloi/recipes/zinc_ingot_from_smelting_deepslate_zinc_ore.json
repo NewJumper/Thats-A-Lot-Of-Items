@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "taloi:silicon_ore"
+    "item": "taloi:deepslate_zinc_ore"
   },
-  "result": "taloi:silicon_ingot",
+  "result": "taloi:zinc_ingot",
   "experience": 1.0,
   "cookingtime": 200
 }

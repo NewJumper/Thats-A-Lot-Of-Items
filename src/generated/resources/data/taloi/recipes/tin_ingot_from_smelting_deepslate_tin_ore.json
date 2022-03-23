@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "taloi:deepslate_tin_ore"
+  },
+  "result": "taloi:tin_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

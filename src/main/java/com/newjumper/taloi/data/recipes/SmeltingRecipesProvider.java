@@ -74,12 +74,12 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, ModTags.Items.RAW_PLATINUM, ModItems.PLATINUM_INGOT.get(), ModBlocks.PLATINUM_ORE.get(), "platinum_ingot_from_smelting_raw_platinum");
 
         // SILICON
-        blastingRecipe(consumer, ModBlocks.SILICON_ORE.get(), ModItems.SILICON_INGOT.get(), ModBlocks.SILICON_ORE.get(), "silicon_ingot_from_blasting_silicon_ore");
-        blastingRecipe(consumer, ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModItems.SILICON_INGOT.get(), ModBlocks.DEEPSLATE_SILICON_ORE.get(), "silicon_ingot_from_blasting_deepslate_silicon_ore");
-        blastingRecipe(consumer, ModTags.Items.RAW_SILICON, ModItems.SILICON_INGOT.get(), ModBlocks.SILICON_ORE.get(), "silicon_ingot_from_blasting_raw_silicon");
-        smeltingRecipe(consumer, ModBlocks.SILICON_ORE.get(), ModItems.SILICON_INGOT.get(), ModBlocks.SILICON_ORE.get(), "silicon_ingot_from_smelting_silicon_ore");
-        smeltingRecipe(consumer, ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModItems.SILICON_INGOT.get(), ModBlocks.DEEPSLATE_SILICON_ORE.get(), "silicon_ingot_from_smelting_deepslate_silicon_ore");
-        smeltingRecipe(consumer, ModTags.Items.RAW_SILICON, ModItems.SILICON_INGOT.get(), ModBlocks.SILICON_ORE.get(), "silicon_ingot_from_smelting_raw_silicon");
+        blastingRecipe(consumer, ModBlocks.SILICON_ORE.get(), ModItems.SILICON.get(), ModBlocks.SILICON_ORE.get(), "silicon_from_blasting_silicon_ore");
+        blastingRecipe(consumer, ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModItems.SILICON.get(), ModBlocks.DEEPSLATE_SILICON_ORE.get(), "silicon_from_blasting_deepslate_silicon_ore");
+        blastingRecipe(consumer, ModTags.Items.RAW_SILICON, ModItems.SILICON.get(), ModBlocks.SILICON_ORE.get(), "silicon_from_blasting_raw_silicon");
+        smeltingRecipe(consumer, ModBlocks.SILICON_ORE.get(), ModItems.SILICON.get(), ModBlocks.SILICON_ORE.get(), "silicon_from_smelting_silicon_ore");
+        smeltingRecipe(consumer, ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModItems.SILICON.get(), ModBlocks.DEEPSLATE_SILICON_ORE.get(), "silicon_from_smelting_deepslate_silicon_ore");
+        smeltingRecipe(consumer, ModTags.Items.RAW_SILICON, ModItems.SILICON.get(), ModBlocks.SILICON_ORE.get(), "silicon_from_smelting_raw_silicon");
 
         // TIN
         blastingRecipe(consumer, ModBlocks.TIN_ORE.get(), ModItems.TIN_INGOT.get(), ModBlocks.TIN_ORE.get(), "tin_ingot_from_blasting_tin_ore");

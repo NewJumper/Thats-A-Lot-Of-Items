@@ -262,9 +262,9 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("SSS")
                 .pattern("SSS")
                 .unlockedBy("has_material", has(ModTags.Items.SILICON)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(ModItems.SILICON_INGOT.get(), 9)
+        ShapelessRecipeBuilder.shapeless(ModItems.SILICON.get(), 9)
                 .requires(ModBlocks.SILICON_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_ingot_from_silicon_block"));
+                .unlockedBy("has_material", has(ModTags.Items.SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_SILICON_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_SILICON)
                 .pattern("RRR")

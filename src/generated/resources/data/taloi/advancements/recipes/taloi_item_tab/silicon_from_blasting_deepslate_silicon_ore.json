@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:silicon_ingot_from_blasting_silicon_ore"
+      "taloi:silicon_from_blasting_deepslate_silicon_ore"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "taloi:silicon_ore"
+              "taloi:deepslate_silicon_ore"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:silicon_ingot_from_blasting_silicon_ore"
+        "recipe": "taloi:silicon_from_blasting_deepslate_silicon_ore"
       }
     }
   },

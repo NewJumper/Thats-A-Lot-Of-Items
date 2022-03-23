@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "taloi:deepslate_zinc_ore"
+  },
+  "result": "taloi:zinc_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}

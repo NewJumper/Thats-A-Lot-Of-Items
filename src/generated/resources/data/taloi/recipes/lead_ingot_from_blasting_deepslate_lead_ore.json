@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "taloi:silicon_ore"
+    "item": "taloi:deepslate_lead_ore"
   },
-  "result": "taloi:silicon_ingot",
+  "result": "taloi:lead_ingot",
   "experience": 1.0,
   "cookingtime": 100
 }

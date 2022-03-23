@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:silicon_ingot_from_smelting_silicon_ore"
+      "taloi:silicon_from_silicon_block"
     ]
   },
   "criteria": {
@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:silicon_ore"
-            ]
+            "tag": "forge:ingots/silicon"
           }
         ]
       }
@@ -21,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:silicon_ingot_from_smelting_silicon_ore"
+        "recipe": "taloi:silicon_from_silicon_block"
       }
     }
   },

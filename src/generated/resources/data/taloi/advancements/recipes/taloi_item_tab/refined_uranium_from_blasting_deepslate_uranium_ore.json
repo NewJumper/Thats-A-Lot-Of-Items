@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:silicon_ingot_from_silicon_block"
+      "taloi:refined_uranium_from_blasting_deepslate_uranium_ore"
     ]
   },
   "criteria": {
@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/silicon"
+            "items": [
+              "taloi:deepslate_uranium_ore"
+            ]
           }
         ]
       }
@@ -19,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:silicon_ingot_from_silicon_block"
+        "recipe": "taloi:refined_uranium_from_blasting_deepslate_uranium_ore"
       }
     }
   },

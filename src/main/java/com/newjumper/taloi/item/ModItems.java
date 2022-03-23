@@ -33,7 +33,7 @@ public class ModItems {
     public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     public static final RegistryObject<Item> RAW_SILICON = ITEMS.register("raw_silicon", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
-    public static final RegistryObject<Item> SILICON_INGOT = ITEMS.register("silicon_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> SILICON = ITEMS.register("silicon", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));

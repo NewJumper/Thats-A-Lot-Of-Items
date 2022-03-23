@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "taloi:deepslate_magnesium_ore"
+  },
+  "result": "taloi:magnesium_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}
