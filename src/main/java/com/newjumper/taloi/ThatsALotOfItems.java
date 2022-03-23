@@ -32,7 +32,6 @@ public class ThatsALotOfItems {
         ModPaintings.register(eventBus);
         ModSounds.register(eventBus);
 
-        eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient);
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -44,15 +43,5 @@ public class ThatsALotOfItems {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
 
         ModItemProperties.addModItemProperties();
-    }
-
-    private void setup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
-                .put(ModBlocks.EVERGREEN_LOG.get(), ModBlocks.STRIPPED_EVERGREEN_LOG.get())
-                .put(ModBlocks.EVERGREEN_WOOD.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD.get())
-                .put(ModBlocks.WILLOW_LOG.get(), ModBlocks.STRIPPED_WILLOW_LOG.get())
-                .put(ModBlocks.WILLOW_WOOD.get(), ModBlocks.STRIPPED_WILLOW_WOOD.get()).build();
-        });
     }
 }
