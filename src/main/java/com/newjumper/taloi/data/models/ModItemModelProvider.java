@@ -239,6 +239,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("alloy_x").parent(itemGenerated).texture("layer0", "item/alloy_x");
         getBuilder("alloy_z").parent(itemGenerated).texture("layer0", "item/alloy_z");
 
+        // NUGGETS
+        getBuilder("futurite_bit").parent(itemGenerated).texture("layer0", "item/futurite_bit");
+
         // ARMOR
         getBuilder("aluminum_helmet").parent(itemGenerated).texture("layer0", "item/aluminum_helmet");
         getBuilder("aluminum_chestplate").parent(itemGenerated).texture("layer0", "item/aluminum_chestplate");
