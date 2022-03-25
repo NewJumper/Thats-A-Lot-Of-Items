@@ -268,14 +268,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("tungsten_helmet").parent(itemGenerated).texture("layer0", "item/tungsten_helmet");
         getBuilder("tungsten_chestplate").parent(itemGenerated).texture("layer0", "item/tungsten_chestplate");
         getBuilder("tungsten_leggings").parent(itemGenerated).texture("layer0", "item/tungsten_leggings");
-        getBuilder("tungsten_boots").parent(itemGenerated).texture("layer0", "item/tungsten_boots");
+        getBuilder("tungsten_boots").parent(itemGenerated).texture("layer0", "item/tungsten_boots");*/
 
-        getBuilder("futurite_helmet").parent(itemGenerated).texture("layer0", "item/futurite_helmet");*/
+        getBuilder("futurite_helmet").parent(itemGenerated).texture("layer0", "item/futurite_helmet");
         getBuilder("futurite_chestplate").parent(itemGenerated).texture("layer0", "item/futurite_chestplate");
-        /*getBuilder("futurite_leggings").parent(itemGenerated).texture("layer0", "item/futurite_leggings");
+        getBuilder("futurite_leggings").parent(itemGenerated).texture("layer0", "item/futurite_leggings");
         getBuilder("futurite_boots").parent(itemGenerated).texture("layer0", "item/futurite_boots");
 
-        getBuilder("sermium_helmet").parent(itemGenerated).texture("layer0", "item/sermium_helmet");
+        /*getBuilder("sermium_helmet").parent(itemGenerated).texture("layer0", "item/sermium_helmet");
         getBuilder("sermium_chestplate").parent(itemGenerated).texture("layer0", "item/sermium_chestplate");
         getBuilder("sermium_leggings").parent(itemGenerated).texture("layer0", "item/sermium_leggings");
         getBuilder("sermium_boots").parent(itemGenerated).texture("layer0", "item/sermium_boots");*/
