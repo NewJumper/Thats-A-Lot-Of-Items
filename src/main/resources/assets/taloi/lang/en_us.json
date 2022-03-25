@@ -81,12 +81,12 @@
   "block.taloi.deepslate_zinc_ore" : "Deepslate Zinc Ore",
   "block.taloi.raw_zinc_block" : "Block of Raw Zinc",
 
-  "item.taloi.hardened_carbonite" : "Hardened Carbonite",
   "item.taloi.bronze_ingot" : "Bronze Ingot",
   "block.taloi.bronze_block" : "Block of Bronze",
   "item.taloi.carbonite" : "Carbonite",
   "item.taloi.ferroniobium_ingot" : "Ferroniobium Ingot",
   "item.taloi.futurite" : "Futurite",
+  "item.taloi.hardened_carbonite" : "Hardened Carbonite",
   "item.taloi.sermium" : "Sermium",
   "item.taloi.steel_ingot" : "Steel Ingot",
   "block.taloi.steel_block" : "Block of Steel",

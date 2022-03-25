@@ -899,8 +899,4 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModItems.SERMIUM_CORE.get())
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
     }
-
-    private static InventoryChangeTrigger.TriggerInstance has(TagKey<Item> pTag) {
-        return inventoryTrigger(ItemPredicate.Builder.item().of(pTag).build());
-    }
 }

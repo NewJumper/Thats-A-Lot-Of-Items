@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "taloi:block/limestone",
-    "top": "taloi:block/limestone",
-    "side": "taloi:block/limestone"
-  }
-}

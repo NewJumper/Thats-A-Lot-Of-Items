@@ -48,11 +48,11 @@ public class ModItems {
     public static final RegistryObject<Item> ZINC_INGOT = ITEMS.register("zinc_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     // ALLOYS
-    public static final RegistryObject<Item> HARDENED_CARBONITE = ITEMS.register("hardened_carbonite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> CARBONITE = ITEMS.register("carbonite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> FERRONIOBIUM_INGOT = ITEMS.register("ferroniobium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> FUTURITE = ITEMS.register("futurite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> HARDENED_CARBONITE = ITEMS.register("hardened_carbonite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> SERMIUM = ITEMS.register("sermium", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> ALLOY_X = ITEMS.register("alloy_x", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));

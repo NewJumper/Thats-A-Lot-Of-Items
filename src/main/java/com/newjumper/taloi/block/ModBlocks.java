@@ -209,43 +209,43 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // TREES & PLANTS
-    public static final RegistryObject<Block> EVERGREEN_LOG = registerBlock("evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<RotatedPillarBlock> EVERGREEN_LOG = registerBlock("evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> EVERGREEN_STAIRS = registerBlock("evergreen_stairs", () -> new StairBlock(() -> EVERGREEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> EVERGREEN_SLAB = registerBlock("evergreen_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> EVERGREEN_STAIRS = registerBlock("evergreen_stairs", () -> new StairBlock(() -> EVERGREEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> EVERGREEN_SLAB = registerBlock("evergreen_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> STRIPPED_EVERGREEN_WOOD = registerBlock("stripped_evergreen_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> EVERGREEN_FENCE = registerBlock("evergreen_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> EVERGREEN_FENCE_GATE = registerBlock("evergreen_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceBlock> EVERGREEN_FENCE = registerBlock("evergreen_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceGateBlock> EVERGREEN_FENCE_GATE = registerBlock("evergreen_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () -> new ModFlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () -> new SaplingBlock(new EvergreenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> EVERGREEN_BUTTON = registerBlock("evergreen_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> EVERGREEN_PRESSURE_PLATE = registerBlock("evergreen_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<ButtonBlock> EVERGREEN_BUTTON = registerBlock("evergreen_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<PressurePlateBlock> EVERGREEN_PRESSURE_PLATE = registerBlock("evergreen_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<RotatedPillarBlock> WILLOW_LOG = registerBlock("willow_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WILLOW_STAIRS = registerBlock("willow_stairs", () -> new StairBlock(() -> WILLOW_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WILLOW_SLAB = registerBlock("willow_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> WILLOW_STAIRS = registerBlock("willow_stairs", () -> new StairBlock(() -> WILLOW_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> WILLOW_SLAB = registerBlock("willow_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> WILLOW_FENCE = registerBlock("willow_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceBlock> WILLOW_FENCE = registerBlock("willow_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceGateBlock> WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () -> new ModFlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () -> new SaplingBlock(new WillowTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> WILLOW_BUTTON = registerBlock("willow_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<ButtonBlock> WILLOW_BUTTON = registerBlock("willow_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<PressurePlateBlock> WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // NATURAL GENERATION
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
@@ -253,17 +253,17 @@ public class ModBlocks {
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlock("limestone_stairs", () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> LIMESTONE_STAIRS = registerBlock("limestone_stairs", () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 5f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIMESTONE_SLAB = registerBlock("limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> LIMESTONE_SLAB = registerBlock("limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 5f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
+    public static final RegistryObject<WallBlock> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
             .strength(1.5f, 6f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
@@ -273,147 +273,147 @@ public class ModBlocks {
             .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> MARBLE_STAIRS = registerBlock("marble_stairs", () -> new StairBlock(() -> MARBLE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> MARBLE_STAIRS = registerBlock("marble_stairs", () -> new StairBlock(() -> MARBLE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 6f)
             .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> MARBLE_SLAB = registerBlock("marble_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> MARBLE_SLAB = registerBlock("marble_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 6f)
             .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> MARBLE_WALL = registerBlock("marble_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(MARBLE.get())
+    public static final RegistryObject<WallBlock> MARBLE_WALL = registerBlock("marble_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(MARBLE.get())
             .strength(1.5f, 6f)
             .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // ADDING ON TO MINECRAFT BLOCKS
-    public static final RegistryObject<Block> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> ORANGE_CONCRETE_STAIRS = registerBlock("orange_concrete_stairs", () -> new StairBlock(Blocks.ORANGE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> ORANGE_CONCRETE_STAIRS = registerBlock("orange_concrete_stairs", () -> new StairBlock(Blocks.ORANGE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> ORANGE_CONCRETE_SLAB = registerBlock("orange_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> ORANGE_CONCRETE_SLAB = registerBlock("orange_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> MAGENTA_CONCRETE_STAIRS = registerBlock("magenta_concrete_stairs", () -> new StairBlock(Blocks.MAGENTA_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> MAGENTA_CONCRETE_STAIRS = registerBlock("magenta_concrete_stairs", () -> new StairBlock(Blocks.MAGENTA_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> MAGENTA_CONCRETE_SLAB = registerBlock("magenta_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> MAGENTA_CONCRETE_SLAB = registerBlock("magenta_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_STAIRS = registerBlock("light_blue_concrete_stairs", () -> new StairBlock(Blocks.LIGHT_BLUE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> LIGHT_BLUE_CONCRETE_STAIRS = registerBlock("light_blue_concrete_stairs", () -> new StairBlock(Blocks.LIGHT_BLUE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_SLAB = registerBlock("light_blue_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> LIGHT_BLUE_CONCRETE_SLAB = registerBlock("light_blue_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> YELLOW_CONCRETE_STAIRS = registerBlock("yellow_concrete_stairs", () -> new StairBlock(Blocks.YELLOW_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> YELLOW_CONCRETE_STAIRS = registerBlock("yellow_concrete_stairs", () -> new StairBlock(Blocks.YELLOW_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> YELLOW_CONCRETE_SLAB = registerBlock("yellow_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> YELLOW_CONCRETE_SLAB = registerBlock("yellow_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIME_CONCRETE_STAIRS = registerBlock("lime_concrete_stairs", () -> new StairBlock(Blocks.LIME_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> LIME_CONCRETE_STAIRS = registerBlock("lime_concrete_stairs", () -> new StairBlock(Blocks.LIME_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIME_CONCRETE_SLAB = registerBlock("lime_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> LIME_CONCRETE_SLAB = registerBlock("lime_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> PINK_CONCRETE_STAIRS = registerBlock("pink_concrete_stairs", () -> new StairBlock(Blocks.PINK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> PINK_CONCRETE_STAIRS = registerBlock("pink_concrete_stairs", () -> new StairBlock(Blocks.PINK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> PINK_CONCRETE_SLAB = registerBlock("pink_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> PINK_CONCRETE_SLAB = registerBlock("pink_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> GRAY_CONCRETE_STAIRS = registerBlock("gray_concrete_stairs", () -> new StairBlock(Blocks.GRAY_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> GRAY_CONCRETE_STAIRS = registerBlock("gray_concrete_stairs", () -> new StairBlock(Blocks.GRAY_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> GRAY_CONCRETE_SLAB = registerBlock("gray_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> GRAY_CONCRETE_SLAB = registerBlock("gray_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_STAIRS = registerBlock("light_gray_concrete_stairs", () -> new StairBlock(Blocks.LIGHT_GRAY_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> LIGHT_GRAY_CONCRETE_STAIRS = registerBlock("light_gray_concrete_stairs", () -> new StairBlock(Blocks.LIGHT_GRAY_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_SLAB = registerBlock("light_gray_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> LIGHT_GRAY_CONCRETE_SLAB = registerBlock("light_gray_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> CYAN_CONCRETE_STAIRS = registerBlock("cyan_concrete_stairs", () -> new StairBlock(Blocks.CYAN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> CYAN_CONCRETE_STAIRS = registerBlock("cyan_concrete_stairs", () -> new StairBlock(Blocks.CYAN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> CYAN_CONCRETE_SLAB = registerBlock("cyan_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> CYAN_CONCRETE_SLAB = registerBlock("cyan_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> PURPLE_CONCRETE_STAIRS = registerBlock("purple_concrete_stairs", () -> new StairBlock(Blocks.PURPLE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> PURPLE_CONCRETE_STAIRS = registerBlock("purple_concrete_stairs", () -> new StairBlock(Blocks.PURPLE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> PURPLE_CONCRETE_SLAB = registerBlock("purple_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> PURPLE_CONCRETE_SLAB = registerBlock("purple_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> BLUE_CONCRETE_STAIRS = registerBlock("blue_concrete_stairs", () -> new StairBlock(Blocks.BLUE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> BLUE_CONCRETE_STAIRS = registerBlock("blue_concrete_stairs", () -> new StairBlock(Blocks.BLUE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> BLUE_CONCRETE_SLAB = registerBlock("blue_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> BLUE_CONCRETE_SLAB = registerBlock("blue_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> BROWN_CONCRETE_STAIRS = registerBlock("brown_concrete_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> BROWN_CONCRETE_STAIRS = registerBlock("brown_concrete_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> BROWN_CONCRETE_SLAB = registerBlock("brown_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> BROWN_CONCRETE_SLAB = registerBlock("brown_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> GREEN_CONCRETE_STAIRS = registerBlock("green_concrete_stairs", () -> new StairBlock(Blocks.GREEN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> GREEN_CONCRETE_STAIRS = registerBlock("green_concrete_stairs", () -> new StairBlock(Blocks.GREEN_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> GREEN_CONCRETE_SLAB = registerBlock("green_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> GREEN_CONCRETE_SLAB = registerBlock("green_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> RED_CONCRETE_STAIRS = registerBlock("red_concrete_stairs", () -> new StairBlock(Blocks.RED_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> RED_CONCRETE_STAIRS = registerBlock("red_concrete_stairs", () -> new StairBlock(Blocks.RED_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> RED_CONCRETE_SLAB = registerBlock("red_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> RED_CONCRETE_SLAB = registerBlock("red_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = registerBlock("black_concrete_stairs", () -> new StairBlock(Blocks.BLACK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<StairBlock> BLACK_CONCRETE_STAIRS = registerBlock("black_concrete_stairs", () -> new StairBlock(Blocks.BLACK_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> BLACK_CONCRETE_SLAB = registerBlock("black_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> BLACK_CONCRETE_SLAB = registerBlock("black_concrete_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 

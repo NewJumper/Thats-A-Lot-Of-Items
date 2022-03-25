@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "taloi:block/willow_planks",
-    "top": "taloi:block/willow_planks",
-    "side": "taloi:block/willow_planks"
-  }
-}

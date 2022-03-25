@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "taloi:block/feathery_block"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "taloi:block/evergreen_planks",
-    "top": "taloi:block/evergreen_planks",
-    "side": "taloi:block/evergreen_planks"
-  }
-}

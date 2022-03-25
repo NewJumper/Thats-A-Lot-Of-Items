@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "taloi:block/pink_concrete_slab_top"
+    },
+    "type=bottom": {
+      "model": "taloi:block/pink_concrete_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/pink_concrete"
+    }
+  }
+}

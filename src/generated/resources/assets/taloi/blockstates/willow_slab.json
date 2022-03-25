@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "taloi:block/willow_slab_top"
+    },
+    "type=bottom": {
+      "model": "taloi:block/willow_slab"
+    },
+    "type=double": {
+      "model": "taloi:block/willow_planks"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "taloi:block/willow_planks",
+    "bottom": "taloi:block/willow_planks",
+    "top": "taloi:block/willow_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "taloi:block/evergreen_sapling"
+  }
+}

@@ -2,9 +2,8 @@ package com.newjumper.taloi.data;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.data.loottables.LootTablesProvider;
-import com.newjumper.taloi.data.recipes.CraftingRecipesProvider;
-import com.newjumper.taloi.data.recipes.SmeltingRecipesProvider;
-import com.newjumper.taloi.data.recipes.StonecuttingRecipesProvider;
+import com.newjumper.taloi.data.models.*;
+import com.newjumper.taloi.data.recipes.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +17,10 @@ public class DataGenerators {
 
         // loot tables
         generator.addProvider(new LootTablesProvider(generator));
+
+        // models
+        generator.addProvider(new ModBlockStateProvider(generator, event.getExistingFileHelper()));
+        generator.addProvider(new ModItemModelProvider(generator, event.getExistingFileHelper()));
 
         // recipes
         generator.addProvider(new CraftingRecipesProvider(generator));

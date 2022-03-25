@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "taloi:block/evergreen_slab_top"
+    },
+    "type=bottom": {
+      "model": "taloi:block/evergreen_slab"
+    },
+    "type=double": {
+      "model": "taloi:block/evergreen_planks"
+    }
+  }
+}
