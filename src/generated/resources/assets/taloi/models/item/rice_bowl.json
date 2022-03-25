@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "taloi:block/evergreen_sapling"
+    "layer0": "taloi:item/rice_bowl"
   }
 }

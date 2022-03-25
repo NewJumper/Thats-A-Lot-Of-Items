@@ -14,6 +14,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+        ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
 
         // - BLOCKS -
         // EVERGREEN
@@ -27,7 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("evergreen_fence", modLoc("block/evergreen_fence_inventory"));
         withExistingParent("evergreen_fence_gate", modLoc("block/evergreen_fence_gate"));
         withExistingParent("evergreen_leaves", modLoc("block/evergreen_leaves"));
-        getBuilder("evergreen_sapling").parent(itemGenerated).texture("layer0", "item/evergreen_sapling");
+        getBuilder("evergreen_sapling").parent(itemGenerated).texture("layer0", "block/evergreen_sapling");
         withExistingParent("evergreen_button", modLoc("block/evergreen_button_inventory"));
         withExistingParent("evergreen_pressure_plate", modLoc("block/evergreen_pressure_plate"));
 
@@ -42,7 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("willow_fence", modLoc("block/willow_fence_inventory"));
         withExistingParent("willow_fence_gate", modLoc("block/willow_fence_gate"));
         withExistingParent("willow_leaves", modLoc("block/willow_leaves"));
-        getBuilder("willow_sapling").parent(itemGenerated).texture("layer0", "item/willow_sapling");
+        getBuilder("willow_sapling").parent(itemGenerated).texture("layer0", "block/willow_sapling");
         withExistingParent("willow_button", modLoc("block/willow_button_inventory"));
         withExistingParent("willow_pressure_plate", modLoc("block/willow_pressure_plate"));
 
@@ -237,5 +238,109 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("steel_ingot").parent(itemGenerated).texture("layer0", "item/steel_ingot");
         getBuilder("alloy_x").parent(itemGenerated).texture("layer0", "item/alloy_x");
         getBuilder("alloy_z").parent(itemGenerated).texture("layer0", "item/alloy_z");
+
+        // ARMOR
+        /*getBuilder("aluminum_helmet").parent(itemGenerated).texture("layer0", "item/aluminum_helmet");
+        getBuilder("aluminum_chestplate").parent(itemGenerated).texture("layer0", "item/aluminum_chestplate");
+        getBuilder("aluminum_leggings").parent(itemGenerated).texture("layer0", "item/aluminum_leggings");
+        getBuilder("aluminum_boots").parent(itemGenerated).texture("layer0", "item/aluminum_boots");
+
+        getBuilder("iridium_helmet").parent(itemGenerated).texture("layer0", "item/iridium_helmet");
+        getBuilder("iridium_chestplate").parent(itemGenerated).texture("layer0", "item/iridium_chestplate");
+        getBuilder("iridium_leggings").parent(itemGenerated).texture("layer0", "item/iridium_leggings");
+        getBuilder("iridium_boots").parent(itemGenerated).texture("layer0", "item/iridium_boots");
+
+        getBuilder("osmium_helmet").parent(itemGenerated).texture("layer0", "item/osmium_helmet");
+        getBuilder("osmium_chestplate").parent(itemGenerated).texture("layer0", "item/osmium_chestplate");
+        getBuilder("osmium_leggings").parent(itemGenerated).texture("layer0", "item/osmium_leggings");
+        getBuilder("osmium_boots").parent(itemGenerated).texture("layer0", "item/osmium_boots");
+
+        getBuilder("platinum_helmet").parent(itemGenerated).texture("layer0", "item/platinum_helmet");
+        getBuilder("platinum_chestplate").parent(itemGenerated).texture("layer0", "item/platinum_chestplate");
+        getBuilder("platinum_leggings").parent(itemGenerated).texture("layer0", "item/platinum_leggings");
+        getBuilder("platinum_boots").parent(itemGenerated).texture("layer0", "item/platinum_boots");
+
+        getBuilder("tin_helmet").parent(itemGenerated).texture("layer0", "item/tin_helmet");
+        getBuilder("tin_chestplate").parent(itemGenerated).texture("layer0", "item/tin_chestplate");
+        getBuilder("tin_leggings").parent(itemGenerated).texture("layer0", "item/tin_leggings");
+        getBuilder("tin_boots").parent(itemGenerated).texture("layer0", "item/tin_boots");
+
+        getBuilder("tungsten_helmet").parent(itemGenerated).texture("layer0", "item/tungsten_helmet");
+        getBuilder("tungsten_chestplate").parent(itemGenerated).texture("layer0", "item/tungsten_chestplate");
+        getBuilder("tungsten_leggings").parent(itemGenerated).texture("layer0", "item/tungsten_leggings");
+        getBuilder("tungsten_boots").parent(itemGenerated).texture("layer0", "item/tungsten_boots");
+
+        getBuilder("futurite_helmet").parent(itemGenerated).texture("layer0", "item/futurite_helmet");*/
+        getBuilder("futurite_chestplate").parent(itemGenerated).texture("layer0", "item/futurite_chestplate");
+        /*getBuilder("futurite_leggings").parent(itemGenerated).texture("layer0", "item/futurite_leggings");
+        getBuilder("futurite_boots").parent(itemGenerated).texture("layer0", "item/futurite_boots");
+
+        getBuilder("sermium_helmet").parent(itemGenerated).texture("layer0", "item/sermium_helmet");
+        getBuilder("sermium_chestplate").parent(itemGenerated).texture("layer0", "item/sermium_chestplate");
+        getBuilder("sermium_leggings").parent(itemGenerated).texture("layer0", "item/sermium_leggings");
+        getBuilder("sermium_boots").parent(itemGenerated).texture("layer0", "item/sermium_boots");*/
+
+        // TOOLS
+        getBuilder("aluminum_shovel").parent(itemHandheld).texture("layer0", "item/aluminum_shovel");
+        getBuilder("aluminum_pickaxe").parent(itemHandheld).texture("layer0", "item/aluminum_pickaxe");
+        getBuilder("aluminum_axe").parent(itemHandheld).texture("layer0", "item/aluminum_axe");
+        getBuilder("aluminum_hoe").parent(itemHandheld).texture("layer0", "item/aluminum_hoe");
+
+        getBuilder("iridium_shovel").parent(itemHandheld).texture("layer0", "item/iridium_shovel");
+        getBuilder("iridium_pickaxe").parent(itemHandheld).texture("layer0", "item/iridium_pickaxe");
+        getBuilder("iridium_axe").parent(itemHandheld).texture("layer0", "item/iridium_axe");
+        getBuilder("iridium_hoe").parent(itemHandheld).texture("layer0", "item/iridium_hoe");
+
+        getBuilder("osmium_shovel").parent(itemHandheld).texture("layer0", "item/osmium_shovel");
+        getBuilder("osmium_pickaxe").parent(itemHandheld).texture("layer0", "item/osmium_pickaxe");
+        getBuilder("osmium_axe").parent(itemHandheld).texture("layer0", "item/osmium_axe");
+        getBuilder("osmium_hoe").parent(itemHandheld).texture("layer0", "item/osmium_hoe");
+
+        getBuilder("platinum_shovel").parent(itemHandheld).texture("layer0", "item/platinum_shovel");
+        getBuilder("platinum_pickaxe").parent(itemHandheld).texture("layer0", "item/platinum_pickaxe");
+        getBuilder("platinum_axe").parent(itemHandheld).texture("layer0", "item/platinum_axe");
+        getBuilder("platinum_hoe").parent(itemHandheld).texture("layer0", "item/platinum_hoe");
+
+        getBuilder("tin_shovel").parent(itemHandheld).texture("layer0", "item/tin_shovel");
+        getBuilder("tin_pickaxe").parent(itemHandheld).texture("layer0", "item/tin_pickaxe");
+        getBuilder("tin_axe").parent(itemHandheld).texture("layer0", "item/tin_axe");
+        getBuilder("tin_hoe").parent(itemHandheld).texture("layer0", "item/tin_hoe");
+
+        getBuilder("tungsten_shovel").parent(itemHandheld).texture("layer0", "item/tungsten_shovel");
+        getBuilder("tungsten_pickaxe").parent(itemHandheld).texture("layer0", "item/tungsten_pickaxe");
+        getBuilder("tungsten_axe").parent(itemHandheld).texture("layer0", "item/tungsten_axe");
+        getBuilder("tungsten_hoe").parent(itemHandheld).texture("layer0", "item/tungsten_hoe");
+
+        /*getBuilder("futurite_shovel").parent(itemHandheld).texture("layer0", "item/futurite_shovel");
+        getBuilder("futurite_pickaxe").parent(itemHandheld).texture("layer0", "item/futurite_pickaxe");
+        getBuilder("futurite_axe").parent(itemHandheld).texture("layer0", "item/futurite_axe");
+
+        getBuilder("sermium_shovel").parent(itemHandheld).texture("layer0", "item/sermium_shovel");
+        getBuilder("sermium_pickaxe").parent(itemHandheld).texture("layer0", "item/sermium_pickaxe");
+        getBuilder("sermium_axe").parent(itemHandheld).texture("layer0", "item/sermium_axe");*/
+
+        // WEAPONS
+        getBuilder("aluminum_sword").parent(itemHandheld).texture("layer0", "item/aluminum_sword");
+        getBuilder("iridium_sword").parent(itemHandheld).texture("layer0", "item/iridium_sword");
+        getBuilder("osmium_sword").parent(itemHandheld).texture("layer0", "item/osmium_sword");
+        getBuilder("platinum_sword").parent(itemHandheld).texture("layer0", "item/platinum_sword");
+        getBuilder("tin_sword").parent(itemHandheld).texture("layer0", "item/tin_sword");
+        getBuilder("tungsten_sword").parent(itemHandheld).texture("layer0", "item/tungsten_sword");
+//        getBuilder("futurite_sword").parent(itemHandheld).texture("layer0", "item/futurite_sword");
+//        getBuilder("sermium_sword").parent(itemHandheld).texture("layer0", "item/sermium_sword");
+
+        // FOOD
+        getBuilder("destabilized_futurite_apple").parent(itemGenerated).texture("layer0", "item/destabilized_futurite_apple");
+        getBuilder("diamond_apple").parent(itemGenerated).texture("layer0", "item/diamond_apple");
+        getBuilder("futurite_apple").parent(itemGenerated).texture("layer0", "item/futurite_apple");
+        getBuilder("rice_bowl").parent(itemGenerated).texture("layer0", "item/rice_bowl");
+        getBuilder("tomato").parent(itemGenerated).texture("layer0", "item/tomato");
+
+        // MISC
+        getBuilder("blowtorch").parent(itemGenerated).texture("layer0", "item/blowtorch");
+        getBuilder("metal_detector").parent(itemGenerated).texture("layer0", "item/metal_detector");
+        getBuilder("music_disc_the_caves").parent(itemGenerated).texture("layer0", "item/music_disc_the_caves");
+        getBuilder("sermium_core").parent(itemGenerated).texture("layer0", "item/sermium_core");
+        getBuilder("sermium_oxide").parent(itemGenerated).texture("layer0", "item/sermium_oxide");
     }
 }
