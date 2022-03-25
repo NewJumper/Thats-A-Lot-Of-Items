@@ -311,13 +311,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("tungsten_axe").parent(itemHandheld).texture("layer0", "item/tungsten_axe");
         getBuilder("tungsten_hoe").parent(itemHandheld).texture("layer0", "item/tungsten_hoe");
 
-        /*getBuilder("futurite_shovel").parent(itemHandheld).texture("layer0", "item/futurite_shovel");
+        getBuilder("futurite_shovel").parent(itemHandheld).texture("layer0", "item/futurite_shovel");
         getBuilder("futurite_pickaxe").parent(itemHandheld).texture("layer0", "item/futurite_pickaxe");
         getBuilder("futurite_axe").parent(itemHandheld).texture("layer0", "item/futurite_axe");
 
         getBuilder("sermium_shovel").parent(itemHandheld).texture("layer0", "item/sermium_shovel");
         getBuilder("sermium_pickaxe").parent(itemHandheld).texture("layer0", "item/sermium_pickaxe");
-        getBuilder("sermium_axe").parent(itemHandheld).texture("layer0", "item/sermium_axe");*/
+        getBuilder("sermium_axe").parent(itemHandheld).texture("layer0", "item/sermium_axe");
 
         // WEAPONS
         getBuilder("aluminum_sword").parent(itemHandheld).texture("layer0", "item/aluminum_sword");
@@ -326,8 +326,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("platinum_sword").parent(itemHandheld).texture("layer0", "item/platinum_sword");
         getBuilder("tin_sword").parent(itemHandheld).texture("layer0", "item/tin_sword");
         getBuilder("tungsten_sword").parent(itemHandheld).texture("layer0", "item/tungsten_sword");
-//        getBuilder("futurite_sword").parent(itemHandheld).texture("layer0", "item/futurite_sword");
-//        getBuilder("sermium_sword").parent(itemHandheld).texture("layer0", "item/sermium_sword");
+        getBuilder("futurite_sword").parent(itemHandheld).texture("layer0", "item/futurite_sword");
+        getBuilder("sermium_sword").parent(itemHandheld).texture("layer0", "item/sermium_sword");
 
         // FOOD
         getBuilder("destabilized_futurite_apple").parent(itemGenerated).texture("layer0", "item/destabilized_futurite_apple");
