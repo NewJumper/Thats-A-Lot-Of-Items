@@ -93,6 +93,16 @@
   "item.taloi.alloy_x" : "Alloy X",
   "item.taloi.alloy_z" : "Alloy Z",
 
+  "item.taloi.aluminum_nugget" : "Aluminum Nugget",
+  "item.taloi.iridium_nugget" : "Iridium Nugget",
+  "item.taloi.lead_nugget" : "Lead Nugget",
+  "item.taloi.magnesium_nugget" : "Magnesium Nugget",
+  "item.taloi.osmium_nugget" : "Osmium Nugget",
+  "item.taloi.platinum_nugget" : "Platinum Nugget",
+  "item.taloi.tin_nugget" : "Tin Nugget",
+  "item.taloi.tungsten_nugget" : "Tungsten Nugget",
+  "item.taloi.uranium_bit" : "Uranium Bit",
+  "item.taloi.zinc_nugget" : "Zinc Nugget",
   "item.taloi.futurite_bit" : "Futurite Bit",
 
   "item.taloi.sermium_core" : "Sermium Core",

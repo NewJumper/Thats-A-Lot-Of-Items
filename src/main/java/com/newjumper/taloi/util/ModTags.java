@@ -24,19 +24,19 @@ public class ModTags {
 
     public static class Items {
         // INGOTS
-        public static final TagKey<Item> ALUMINUM = forgeTag("ingots/aluminum");
-        public static final TagKey<Item> IRIDIUM = forgeTag("ingots/iridium");
-        public static final TagKey<Item> LEAD = forgeTag("ingots/lead");
-        public static final TagKey<Item> MAGNESIUM = forgeTag("ingots/magnesium");
-        public static final TagKey<Item> OSMIUM = forgeTag("ingots/osmium");
-        public static final TagKey<Item> PLATINUM = forgeTag("ingots/platinum");
-        public static final TagKey<Item> SILICON = forgeTag("ingots/silicon");
-        public static final TagKey<Item> TIN = forgeTag("ingots/tin");
-        public static final TagKey<Item> TUNGSTEN = forgeTag("ingots/tungsten");
-        public static final TagKey<Item> URANIUM = forgeTag("ingots/uranium");
-        public static final TagKey<Item> ZINC = forgeTag("ingots/zinc");
-        public static final TagKey<Item> BRONZE = forgeTag("ingots/bronze");
-        public static final TagKey<Item> STEEL = forgeTag("ingots/steel");
+        public static final TagKey<Item> INGOT_ALUMINUM = forgeTag("ingots/aluminum");
+        public static final TagKey<Item> INGOT_IRIDIUM = forgeTag("ingots/iridium");
+        public static final TagKey<Item> INGOT_LEAD = forgeTag("ingots/lead");
+        public static final TagKey<Item> INGOT_MAGNESIUM = forgeTag("ingots/magnesium");
+        public static final TagKey<Item> INGOT_OSMIUM = forgeTag("ingots/osmium");
+        public static final TagKey<Item> INGOT_PLATINUM = forgeTag("ingots/platinum");
+        public static final TagKey<Item> INGOT_SILICON = forgeTag("ingots/silicon");
+        public static final TagKey<Item> INGOT_TIN = forgeTag("ingots/tin");
+        public static final TagKey<Item> INGOT_TUNGSTEN = forgeTag("ingots/tungsten");
+        public static final TagKey<Item> INGOT_URANIUM = forgeTag("ingots/uranium");
+        public static final TagKey<Item> INGOT_ZINC = forgeTag("ingots/zinc");
+        public static final TagKey<Item> INGOT_BRONZE = forgeTag("ingots/bronze");
+        public static final TagKey<Item> INGOT_STEEL = forgeTag("ingots/steel");
 
         // RAW MATERIALS
         public static final TagKey<Item> RAW_ALUMINUM = forgeTag("raw_materials/aluminum");
@@ -50,6 +50,18 @@ public class ModTags {
         public static final TagKey<Item> RAW_TUNGSTEN = forgeTag("raw_materials/tungsten");
         public static final TagKey<Item> RAW_URANIUM = forgeTag("raw_materials/uranium");
         public static final TagKey<Item> RAW_ZINC = forgeTag("raw_materials/zinc");
+
+        // NUGGETS
+        public static final TagKey<Item> NUGGET_ALUMINUM = forgeTag("nuggets/aluminum");
+        public static final TagKey<Item> NUGGET_IRIDIUM = forgeTag("nuggets/iridium");
+        public static final TagKey<Item> NUGGET_LEAD = forgeTag("nuggets/lead");
+        public static final TagKey<Item> NUGGET_MAGNESIUM = forgeTag("nuggets/magnesium");
+        public static final TagKey<Item> NUGGET_OSMIUM = forgeTag("nuggets/osmium");
+        public static final TagKey<Item> NUGGET_PLATINUM = forgeTag("nuggets/platinum");
+        public static final TagKey<Item> NUGGET_TIN = forgeTag("nuggets/tin");
+        public static final TagKey<Item> NUGGET_TUNGSTEN = forgeTag("nuggets/tungsten");
+        public static final TagKey<Item> NUGGET_URANIUM = forgeTag("nuggets/uranium");
+        public static final TagKey<Item> NUGGET_ZINC = forgeTag("nuggets/zinc");
 
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));

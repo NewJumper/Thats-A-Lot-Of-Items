@@ -240,6 +240,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("alloy_z").parent(itemGenerated).texture("layer0", "item/alloy_z");
 
         // NUGGETS
+        getBuilder("aluminum_nugget").parent(itemGenerated).texture("layer0", "item/aluminum_nugget");
+        getBuilder("iridium_nugget").parent(itemGenerated).texture("layer0", "item/iridium_nugget");
+        getBuilder("lead_nugget").parent(itemGenerated).texture("layer0", "item/lead_nugget");
+        getBuilder("magnesium_nugget").parent(itemGenerated).texture("layer0", "item/magnesium_nugget");
+        getBuilder("osmium_nugget").parent(itemGenerated).texture("layer0", "item/osmium_nugget");
+        getBuilder("platinum_nugget").parent(itemGenerated).texture("layer0", "item/platinum_nugget");
+        getBuilder("tin_nugget").parent(itemGenerated).texture("layer0", "item/tin_nugget");
+        getBuilder("tungsten_nugget").parent(itemGenerated).texture("layer0", "item/tungsten_nugget");
+        getBuilder("uranium_bit").parent(itemGenerated).texture("layer0", "item/uranium_bit");
+        getBuilder("zinc_nugget").parent(itemGenerated).texture("layer0", "item/zinc_nugget");
         getBuilder("futurite_bit").parent(itemGenerated).texture("layer0", "item/futurite_bit");
 
         // ARMOR
