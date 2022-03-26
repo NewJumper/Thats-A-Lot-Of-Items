@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:story/enter_the_end",
+  "display": {
+    "icon": {
+      "item": "taloi:futurite"
+    },
+    "title": {
+      "translate": "advancements.story.obtain_futurite.title"
+    },
+    "description": {
+      "translate": "advancements.story.obtain_futurite.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "lava_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:futurite"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

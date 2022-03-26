@@ -268,5 +268,8 @@
   "block.taloi.black_concrete_stairs" : "Black Concrete Stairs",
   "block.taloi.black_concrete_slab" : "Black Concrete Slab",
 
-  "item.taloi.metal_detector.no_ore" : "No ores found"
+  "item.taloi.metal_detector.no_ore" : "No ores found",
+
+  "advancements.story.obtain_futurite.title": "Mechanics!",
+  "advancements.story.obtain_futurite.description": "Obtain Futurite using a Processor"
 }
