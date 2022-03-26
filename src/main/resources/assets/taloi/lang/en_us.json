@@ -270,6 +270,10 @@
 
   "item.taloi.metal_detector.no_ore" : "No ores found",
 
-  "advancements.story.obtain_futurite.title": "Mechanics!",
-  "advancements.story.obtain_futurite.description": "Obtain Futurite using a Processor"
+  "advancements.taloi.root.title": "That's A Lot Of Items",
+  "advancements.taloi.root.description": "The beginning of a new end",
+  "advancements.taloi.obtain_sermium.title": "Better Technology",
+  "advancements.taloi.obtain_sermium.description": "Obtain Sermium using a Processor",
+  "advancements.taloi.obtain_futurite.title": "Next Gen Technology",
+  "advancements.taloi.obtain_futurite.description": "Obtain Futurite using a Processor"
 }

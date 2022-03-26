@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "taloi:evergreen_log"
+    },
+    "title": {
+      "translate": "advancements.taloi.root.title"
+    },
+    "description": {
+      "translate": "advancements.taloi.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "taloi:textures/gui/advancements/backgrounds/taloi.png"
+  },
+  "criteria": {
+    "evergreen_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:evergreen_log"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "evergreen_log"
+    ]
+  ]
+}

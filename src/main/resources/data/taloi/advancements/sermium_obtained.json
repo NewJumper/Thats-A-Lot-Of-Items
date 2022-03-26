@@ -1,14 +1,14 @@
 {
-  "parent": "taloi:sermium_obtained",
+  "parent": "taloi:root",
   "display": {
     "icon": {
-      "item": "taloi:futurite"
+      "item": "taloi:sermium"
     },
     "title": {
-      "translate": "advancements.taloi.obtain_futurite.title"
+      "translate": "advancements.taloi.obtain_sermium.title"
     },
     "description": {
-      "translate": "advancements.taloi.obtain_futurite.description"
+      "translate": "advancements.taloi.obtain_sermium.description"
     },
     "frame": "goal",
     "show_toast": true,
@@ -19,13 +19,13 @@
     "experience": 50
   },
   "criteria": {
-    "futurite": {
+    "sermium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:futurite"
+              "taloi:sermium"
             ]
           }
         ]
@@ -34,7 +34,7 @@
   },
   "requirements": [
     [
-      "futurite"
+      "sermium"
     ]
   ]
 }
