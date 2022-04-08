@@ -9,6 +9,48 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModBlockLootTables extends BlockLoot {
     @Override
     protected void addTables() {
+        // EVERGREEN
+        this.dropSelf(ModBlocks.EVERGREEN_LOG.get());
+        this.dropSelf(ModBlocks.EVERGREEN_WOOD.get());
+        this.dropSelf(ModBlocks.EVERGREEN_PLANKS.get());
+        this.dropSelf(ModBlocks.EVERGREEN_STAIRS.get());
+        this.dropSelf(ModBlocks.EVERGREEN_SLAB.get());
+        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
+        this.dropSelf(ModBlocks.EVERGREEN_FENCE.get());
+        this.dropSelf(ModBlocks.EVERGREEN_FENCE_GATE.get());
+        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get()));
+        this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
+        this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
+        this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
+
+        // WILLOW
+        this.dropSelf(ModBlocks.WILLOW_LOG.get());
+        this.dropSelf(ModBlocks.WILLOW_WOOD.get());
+        this.dropSelf(ModBlocks.WILLOW_PLANKS.get());
+        this.dropSelf(ModBlocks.WILLOW_STAIRS.get());
+        this.dropSelf(ModBlocks.WILLOW_SLAB.get());
+        this.dropSelf(ModBlocks.STRIPPED_WILLOW_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD.get());
+        this.dropSelf(ModBlocks.WILLOW_FENCE.get());
+        this.dropSelf(ModBlocks.WILLOW_FENCE_GATE.get());
+        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get()));
+        this.dropSelf(ModBlocks.WILLOW_SAPLING.get());
+        this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
+        this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
+
+        // LIMESTONE
+        this.dropSelf(ModBlocks.LIMESTONE.get());
+        this.dropSelf(ModBlocks.LIMESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIMESTONE_SLAB.get());
+        this.dropSelf(ModBlocks.LIMESTONE_WALL.get());
+
+        // MARBLE
+        this.dropSelf(ModBlocks.MARBLE.get());
+        this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
+        this.dropSelf(ModBlocks.MARBLE_SLAB.get());
+        this.dropSelf(ModBlocks.MARBLE_WALL.get());
+
         // ALUMINUM
         this.dropSelf(ModBlocks.ALUMINUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());
@@ -78,48 +120,6 @@ public class ModBlockLootTables extends BlockLoot {
         // ALLOYS
         this.dropSelf(ModBlocks.BRONZE_BLOCK.get());
         this.dropSelf(ModBlocks.STEEL_BLOCK.get());
-
-        // EVERGREEN
-        this.dropSelf(ModBlocks.EVERGREEN_LOG.get());
-        this.dropSelf(ModBlocks.EVERGREEN_WOOD.get());
-        this.dropSelf(ModBlocks.EVERGREEN_PLANKS.get());
-        this.dropSelf(ModBlocks.EVERGREEN_STAIRS.get());
-        this.dropSelf(ModBlocks.EVERGREEN_SLAB.get());
-        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_LOG.get());
-        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
-        this.dropSelf(ModBlocks.EVERGREEN_FENCE.get());
-        this.dropSelf(ModBlocks.EVERGREEN_FENCE_GATE.get());
-        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get()));
-        this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
-        this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
-        this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
-
-        // WILLOW
-        this.dropSelf(ModBlocks.WILLOW_LOG.get());
-        this.dropSelf(ModBlocks.WILLOW_WOOD.get());
-        this.dropSelf(ModBlocks.WILLOW_PLANKS.get());
-        this.dropSelf(ModBlocks.WILLOW_STAIRS.get());
-        this.dropSelf(ModBlocks.WILLOW_SLAB.get());
-        this.dropSelf(ModBlocks.STRIPPED_WILLOW_LOG.get());
-        this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD.get());
-        this.dropSelf(ModBlocks.WILLOW_FENCE.get());
-        this.dropSelf(ModBlocks.WILLOW_FENCE_GATE.get());
-        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get()));
-        this.dropSelf(ModBlocks.WILLOW_SAPLING.get());
-        this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
-        this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
-
-        // LIMESTONE
-        this.dropSelf(ModBlocks.LIMESTONE.get());
-        this.dropSelf(ModBlocks.LIMESTONE_STAIRS.get());
-        this.dropSelf(ModBlocks.LIMESTONE_SLAB.get());
-        this.dropSelf(ModBlocks.LIMESTONE_WALL.get());
-
-        // MARBLE
-        this.dropSelf(ModBlocks.MARBLE.get());
-        this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
-        this.dropSelf(ModBlocks.MARBLE_SLAB.get());
-        this.dropSelf(ModBlocks.MARBLE_WALL.get());
 
         // CONCRETE STAIRS / SLABS
         this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
