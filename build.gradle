@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '1.18.2-0.15.2'
+version = '1.18.2-0.16.0'
 group = 'com.newjumper.taloi'
 archivesBaseName = 'taloi'
 
@@ -76,9 +76,7 @@ minecraft {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
-
             property 'forge.logging.console.level', 'debug'
-
             args '--mod', 'taloi', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
@@ -95,7 +93,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {}
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.31'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.42'
 }
 
 jar {
