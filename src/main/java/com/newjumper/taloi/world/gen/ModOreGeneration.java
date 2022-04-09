@@ -6,7 +6,6 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ModOreGeneration {

@@ -1,6 +1,5 @@
 package com.newjumper.taloi;
 
-import com.google.common.collect.ImmutableMap;
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.painting.ModPaintings;
@@ -8,13 +7,10 @@ import com.newjumper.taloi.sound.ModSounds;
 import com.newjumper.taloi.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
