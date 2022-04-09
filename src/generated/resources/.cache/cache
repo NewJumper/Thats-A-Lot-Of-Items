@@ -342,6 +342,7 @@ ac7a2b94c8444b94d25138e8a8526bad1b368f61 assets/taloi/models/item/blue_concrete_
 cd9533d28da99c75a56d4e5de36d4e0060d0b71c assets/taloi/models/item/brown_concrete_slab.json
 a3c4efa43a59c1b26456067eb195f185222b1098 assets/taloi/models/item/brown_concrete_stairs.json
 4aeebe38e5313c35bde149d8cfbcf84241216a93 assets/taloi/models/item/carbonite.json
+58a4adafa25fae9361a6e40602e6e05c11a37181 assets/taloi/models/item/copper_plate.json
 868f9cb5c276c6269ebef2e8602295e1a159904b assets/taloi/models/item/cyan_concrete_slab.json
 595ae211bc442f25f175cc312dcd26ece6a7b4e2 assets/taloi/models/item/cyan_concrete_stairs.json
 f4500b9b359640d61a341bcef54164b9d9db752a assets/taloi/models/item/deepslate_aluminum_ore.json
@@ -357,6 +358,7 @@ a7fc036b64946a3577f6abb96de0a3f8016b8470 assets/taloi/models/item/deepslate_tung
 f6354a681d6b7478798cc8aaa86d66b350e24689 assets/taloi/models/item/deepslate_zinc_ore.json
 b46b2a14697d20635d88dc3fc0c446089ee194e1 assets/taloi/models/item/destabilized_futurite_apple.json
 41ca2a47b54c157cc03225077f3cb82d0bfdfc8e assets/taloi/models/item/diamond_apple.json
+816adf5929c45c5e340f15c84aaf95e846868eb7 assets/taloi/models/item/diamond_plate.json
 5084eb08b168e6729e34ad7e7981d18b5486033e assets/taloi/models/item/evergreen_button.json
 4e10907d43c301182db873985d7ee2854033fc09 assets/taloi/models/item/evergreen_fence.json
 9a506e5d7f8456e8c33df600d79521f4ac066d52 assets/taloi/models/item/evergreen_fence_gate.json
@@ -381,12 +383,14 @@ f2fc5c0c73c8016414b0959db67a1bc10be7eddf assets/taloi/models/item/futurite_leggi
 48ef194479fe3ab616be54c2de26cf7715889316 assets/taloi/models/item/futurite_pickaxe.json
 461b007f1f8676ce41a516886894e44663d038d8 assets/taloi/models/item/futurite_shovel.json
 b70fb46d833878067dfa2b97bf453b7924a1f8d1 assets/taloi/models/item/futurite_sword.json
+b0a4a57e428c4f49583018613edac231f0fb84f9 assets/taloi/models/item/gold_disk.json
 d073ff37c7507b97ae63cc5bf33e018ff36db51a assets/taloi/models/item/gravity_block.json
 4eb40e6187b81d092510ee6b5ff58f847c004bca assets/taloi/models/item/gray_concrete_slab.json
 e7e46fd56f00b5c672821d79f1676874eeff9769 assets/taloi/models/item/gray_concrete_stairs.json
 853d7df7a1650d9517ec00acc78e7277a39d8c51 assets/taloi/models/item/green_concrete_slab.json
 16a78c5c44e115d8b2ed4d7471ab1ad672e1d9e2 assets/taloi/models/item/green_concrete_stairs.json
 9c12c9f00b3b9bb45fbc4dc6db05b1f5a33edc98 assets/taloi/models/item/hardened_carbonite.json
+80eae1fc0740dfc5e05258ef87d79912d2cdb8e9 assets/taloi/models/item/induction_plate.json
 c1a4f5036a99308a24e010ff359f8d8345ddc1d5 assets/taloi/models/item/iridium_axe.json
 33266566501e645bacc8f5080039be16f1b55f3e assets/taloi/models/item/iridium_block.json
 0acf5ab26255bb4ab782832f4e6c61f51e19bf77 assets/taloi/models/item/iridium_boots.json
@@ -420,6 +424,7 @@ a33ad0a2edab0cd222a75bc92c6f4f8c1298efd0 assets/taloi/models/item/magenta_concre
 544588491857805d8d9ffea8cbab9f3f6941bf7b assets/taloi/models/item/magnesium_ingot.json
 00bee43d475c3c66dd65393ced9859764ce07e65 assets/taloi/models/item/magnesium_nugget.json
 e8e62f5aaf1aff7449a0a044e085d2f627c67272 assets/taloi/models/item/magnesium_ore.json
+c4014bfc9ef222b2f0f9b5dcfa29dd0e25f9aed2 assets/taloi/models/item/magnesium_plate.json
 cad0d85ef657b42f6862817d846fa70aee0e28fd assets/taloi/models/item/marble.json
 b78da002f4bc25554193b390fb0dc9cbc6894356 assets/taloi/models/item/marble_slab.json
 e3a2a9dd2937873bd5c132d35b62c8151649a02f assets/taloi/models/item/marble_stairs.json
@@ -483,7 +488,9 @@ d048c6db4c04b4747637bdc41a1ad9a6edfb0cad assets/taloi/models/item/raw_zinc.json
 55021c307f8c5b2561ea238167f04159b878411f assets/taloi/models/item/red_concrete_slab.json
 f8792e33ebd12226f9147b68d7e3b61d8a3273a0 assets/taloi/models/item/red_concrete_stairs.json
 df9fd0cf4f517cb1a9f5c38ad798e88c6823e6fa assets/taloi/models/item/refined_uranium.json
+ef434b1aef55eaa36869bd9c28c91bd40131208d assets/taloi/models/item/reinforced_copper_plate.json
 b5c6b03e08f22ff48f3ef98c12441fb02568c5a2 assets/taloi/models/item/rice_bowl.json
+8339d3cc1a6b1407aa0f025561e86d510f21bd34 assets/taloi/models/item/semiconductor_plate.json
 94b91fded07a2ad8248d292a7cadfbdc8fa0c747 assets/taloi/models/item/sermium.json
 283c03e4667ecdbb956c7317516984b146731c94 assets/taloi/models/item/sermium_axe.json
 87a030fd48e900e8e673077790a79b04b14152df assets/taloi/models/item/sermium_boots.json
@@ -502,6 +509,7 @@ b30587080cb41b9d8f36fdf711f1faa64ade59ef assets/taloi/models/item/sermium_sword.
 03a59ce9f0110cbfd6c69eee6dcddbc21d0af9dd assets/taloi/models/item/speedy_block.json
 9e254635f45e1a11f92221bd38823c494430d094 assets/taloi/models/item/steel_block.json
 290df8441e6d44ab439dc07880b0112562786908 assets/taloi/models/item/steel_ingot.json
+42b79013e33f3cacfcd5c17fefb2437b8163c1d9 assets/taloi/models/item/steel_plate.json
 1031d0781110b62d4a9f875a573617356734a151 assets/taloi/models/item/stripped_evergreen_log.json
 5bd1c248a364d56d4935433985bf2536c847d935 assets/taloi/models/item/stripped_evergreen_wood.json
 75ee2bdf355066565a6beadb17d19507f60ad259 assets/taloi/models/item/stripped_willow_log.json
