@@ -71,8 +71,16 @@ public class ModItems {
     public static final RegistryObject<Item> ZINC_NUGGET = ITEMS.register("zinc_nugget", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> FUTURITE_BIT = ITEMS.register("futurite_bit", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
-    // PRESSING
+    // PLATES
+    public static final RegistryObject<Item> COPPER_PLATE = ITEMS.register("copper_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> DIAMOND_PLATE = ITEMS.register("diamond_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> GOLD_DISK = ITEMS.register("gold_disk", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> INDUCTION_PLATE = ITEMS.register("induction_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> MAGNESIUM_PLATE = ITEMS.register("magnesium_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> REINFORCED_COPPER_PLATE = ITEMS.register("reinforced_copper_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> SEMICONDUCTOR_PLATE = ITEMS.register("semiconductor_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> SERMIUM_PLATE = ITEMS.register("sermium_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> STEEL_PLATE = ITEMS.register("steel_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     // PROCESSING
     public static final RegistryObject<Item> SERMIUM_CORE = ITEMS.register("sermium_core", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));

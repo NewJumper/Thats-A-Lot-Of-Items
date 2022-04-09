@@ -240,7 +240,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("alloy_z").parent(itemGenerated).texture("layer0", "item/alloy_z");
 
         // PLATES
+        getBuilder("copper_plate").parent(itemGenerated).texture("layer0", "item/copper_plate");
+        getBuilder("diamond_plate").parent(itemGenerated).texture("layer0", "item/diamond_plate");
+        getBuilder("gold_disk").parent(itemGenerated).texture("layer0", "item/gold_disk");
+        getBuilder("induction_plate").parent(itemGenerated).texture("layer0", "item/induction_plate");
+        getBuilder("magnesium_plate").parent(itemGenerated).texture("layer0", "item/magnesium_plate");
+        getBuilder("reinforced_copper_plate").parent(itemGenerated).texture("layer0", "item/reinforced_copper_plate");
+        getBuilder("semiconductor_plate").parent(itemGenerated).texture("layer0", "item/semiconductor_plate");
         getBuilder("sermium_plate").parent(itemGenerated).texture("layer0", "item/sermium_plate");
+        getBuilder("steel_plate").parent(itemGenerated).texture("layer0", "item/steel_plate");
 
         // NUGGETS
         getBuilder("aluminum_nugget").parent(itemGenerated).texture("layer0", "item/aluminum_nugget");

@@ -171,7 +171,15 @@
   "item.taloi.alloy_x" : "Alloy X",
   "item.taloi.alloy_z" : "Alloy Z",
 
+  "item.taloi.copper_plate" : "Copper Plate",
+  "item.taloi.diamond_plate" : "Diamond Plate",
+  "item.taloi.gold_disk" : "Gold Disk",
+  "item.taloi.induction_plate" : "Induction Plate",
+  "item.taloi.magnesium_plate" : "Magnesium Plate",
+  "item.taloi.reinforced_copper_plate" : "Reinforced Copper Plate",
+  "item.taloi.semiconductor_plate" : "Semiconductor Plate",
   "item.taloi.sermium_plate" : "Sermium Plate",
+  "item.taloi.steel_plate" : "Steel Plate",
 
   "item.taloi.aluminum_nugget" : "Aluminum Nugget",
   "item.taloi.iridium_nugget" : "Iridium Nugget",
