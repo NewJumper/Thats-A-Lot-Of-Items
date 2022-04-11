@@ -316,6 +316,7 @@ aeda767be0fac9b085c1e554e6f879168331d1e1 assets/taloi/models/block/willow_wood.j
 f97a13b10ec03360a7f673295d52516e39d732ea assets/taloi/models/block/yellow_concrete_stairs_outer.json
 ae3699d356ee9eb02759e0237d3769745d7bd6db assets/taloi/models/block/zinc_block.json
 2aed1f79cd481926aa25968647cdffa9dc59c177 assets/taloi/models/block/zinc_ore.json
+1976587801d1d66d75919ff1b1a53a77822d42bb assets/taloi/models/item/alloy_plate.json
 bf095787cae5b42a4ea57455b815e8fd57913396 assets/taloi/models/item/alloy_x.json
 7236fe4ce1833dc7fba559ad912d6f47b1c03e30 assets/taloi/models/item/alloy_z.json
 f46a036bf0c56353fd1b9b649cc3a0a06642ef9b assets/taloi/models/item/aluminum_axe.json
@@ -341,6 +342,7 @@ ac7a2b94c8444b94d25138e8a8526bad1b368f61 assets/taloi/models/item/blue_concrete_
 472b4f51b3daaaf4deb8c4d2a49d3786f8aca860 assets/taloi/models/item/bronze_ingot.json
 cd9533d28da99c75a56d4e5de36d4e0060d0b71c assets/taloi/models/item/brown_concrete_slab.json
 a3c4efa43a59c1b26456067eb195f185222b1098 assets/taloi/models/item/brown_concrete_stairs.json
+8913245369e024d5d048493a442f50a9ed751658 assets/taloi/models/item/carbon_plate.json
 4aeebe38e5313c35bde149d8cfbcf84241216a93 assets/taloi/models/item/carbonite.json
 58a4adafa25fae9361a6e40602e6e05c11a37181 assets/taloi/models/item/copper_plate.json
 868f9cb5c276c6269ebef2e8602295e1a159904b assets/taloi/models/item/cyan_concrete_slab.json
@@ -372,6 +374,8 @@ bf9bb85ff95b13f02b2c1d7a13cd2c5a0cb355ca assets/taloi/models/item/evergreen_slab
 58e033b6e199c83186affd14d230a4dd7a2d63bc assets/taloi/models/item/evergreen_wood.json
 8bec9af623ffbb3bfb968ab8e041c30032079dfa assets/taloi/models/item/feathery_block.json
 5cc63c4e560f28db95ada85e98725ebcc6476009 assets/taloi/models/item/ferroniobium_ingot.json
+83efd5d1826751e9895b04ab0a14f3a37e46f16e assets/taloi/models/item/ferroniobium_plate.json
+5af4a7421de5e9e03b3de35711566e6489b15cd9 assets/taloi/models/item/forge_plate.json
 a8b5bca1a1f7b10bea056b66269f9c5aae0c64fc assets/taloi/models/item/futurite.json
 9965972dbe76709641583cb395da50ff6bbf9d9d assets/taloi/models/item/futurite_apple.json
 cdce795659e31746e350666eb8905faf38d30df4 assets/taloi/models/item/futurite_axe.json

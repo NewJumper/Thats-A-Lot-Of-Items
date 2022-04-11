@@ -171,8 +171,12 @@
   "item.taloi.alloy_x" : "Alloy X",
   "item.taloi.alloy_z" : "Alloy Z",
 
+  "item.taloi.alloy_plate" : "Alloy Plate",
+  "item.taloi.carbon_plate" : "Carbon Plate",
   "item.taloi.copper_plate" : "Copper Plate",
   "item.taloi.diamond_plate" : "Diamond Plate",
+  "item.taloi.ferroniobium_plate" : "Ferroniobium Plate",
+  "item.taloi.forge_plate" : "Forge Plate",
   "item.taloi.gold_disk" : "Gold Disk",
   "item.taloi.induction_plate" : "Induction Plate",
   "item.taloi.magnesium_plate" : "Magnesium Plate",
