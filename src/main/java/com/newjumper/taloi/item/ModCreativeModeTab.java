@@ -22,14 +22,14 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab TALOI_TOOL_TAB = new CreativeModeTab("taloi_tool_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.ALUMINUM_PICKAXE.get());
+            return new ItemStack(ModItems.FUTURITE_PICKAXE.get());
         }
     };
 
     public static final CreativeModeTab TALOI_COMBAT_TAB = new CreativeModeTab("taloi_combat_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.ALUMINUM_CHESTPLATE.get());
+            return new ItemStack(ModItems.SERMIUM_CHESTPLATE.get());
         }
     };
 }

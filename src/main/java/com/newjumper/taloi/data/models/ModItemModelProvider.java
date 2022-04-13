@@ -268,11 +268,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("futurite_bit").parent(itemGenerated).texture("layer0", "item/futurite_bit");
 
         // ARMOR
-        getBuilder("aluminum_helmet").parent(itemGenerated).texture("layer0", "item/aluminum_helmet");
-        getBuilder("aluminum_chestplate").parent(itemGenerated).texture("layer0", "item/aluminum_chestplate");
-        getBuilder("aluminum_leggings").parent(itemGenerated).texture("layer0", "item/aluminum_leggings");
-        getBuilder("aluminum_boots").parent(itemGenerated).texture("layer0", "item/aluminum_boots");
-
         getBuilder("iridium_helmet").parent(itemGenerated).texture("layer0", "item/iridium_helmet");
         getBuilder("iridium_chestplate").parent(itemGenerated).texture("layer0", "item/iridium_chestplate");
         getBuilder("iridium_leggings").parent(itemGenerated).texture("layer0", "item/iridium_leggings");
@@ -304,11 +299,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("sermium_boots").parent(itemGenerated).texture("layer0", "item/sermium_boots");
 
         // TOOLS
-        getBuilder("aluminum_shovel").parent(itemHandheld).texture("layer0", "item/aluminum_shovel");
-        getBuilder("aluminum_pickaxe").parent(itemHandheld).texture("layer0", "item/aluminum_pickaxe");
-        getBuilder("aluminum_axe").parent(itemHandheld).texture("layer0", "item/aluminum_axe");
-        getBuilder("aluminum_hoe").parent(itemHandheld).texture("layer0", "item/aluminum_hoe");
-
         getBuilder("iridium_shovel").parent(itemHandheld).texture("layer0", "item/iridium_shovel");
         getBuilder("iridium_pickaxe").parent(itemHandheld).texture("layer0", "item/iridium_pickaxe");
         getBuilder("iridium_axe").parent(itemHandheld).texture("layer0", "item/iridium_axe");
@@ -338,7 +328,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("sermium_axe").parent(itemHandheld).texture("layer0", "item/sermium_axe");
 
         // WEAPONS
-        getBuilder("aluminum_sword").parent(itemHandheld).texture("layer0", "item/aluminum_sword");
         getBuilder("iridium_sword").parent(itemHandheld).texture("layer0", "item/iridium_sword");
         getBuilder("osmium_sword").parent(itemHandheld).texture("layer0", "item/osmium_sword");
         getBuilder("platinum_sword").parent(itemHandheld).texture("layer0", "item/platinum_sword");

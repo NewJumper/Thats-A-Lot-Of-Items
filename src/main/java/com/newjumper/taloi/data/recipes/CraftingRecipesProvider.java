@@ -433,43 +433,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.STEEL_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.INGOT_STEEL)).save(consumer);
 
-        // ALUMINUM TOOLS
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_SWORD.get(), 1)
-                .define('X', ModTags.Items.INGOT_ALUMINUM)
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("X")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_SHOVEL.get(), 1)
-                .define('X', ModTags.Items.INGOT_ALUMINUM)
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("#")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_PICKAXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_ALUMINUM)
-                .define('#', Items.STICK)
-                .pattern("XXX")
-                .pattern(" # ")
-                .pattern(" # ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_AXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_ALUMINUM)
-                .define('#', Items.STICK)
-                .pattern("XX")
-                .pattern("X#")
-                .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_HOE.get(), 1)
-                .define('X', ModTags.Items.INGOT_ALUMINUM)
-                .define('#', Items.STICK)
-                .pattern("XX")
-                .pattern(" #")
-                .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-
         // IRIDIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SWORD.get(), 1)
                 .define('X', ModTags.Items.INGOT_IRIDIUM)
@@ -678,30 +641,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern(" #")
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
         
-        // ALUMINUM ARMOR
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_HELMET.get(), 1)
-                .define('A', ModTags.Items.INGOT_ALUMINUM)
-                .pattern("AAA")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_CHESTPLATE.get(), 1)
-                .define('A', ModTags.Items.INGOT_ALUMINUM)
-                .pattern("A A")
-                .pattern("AAA")
-                .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_LEGGINGS.get(), 1)
-                .define('A', ModTags.Items.INGOT_ALUMINUM)
-                .pattern("AAA")
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_BOOTS.get(), 1)
-                .define('A', ModTags.Items.INGOT_ALUMINUM)
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
-
         // IRIDIUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_HELMET.get(), 1)
                 .define('A', ModTags.Items.INGOT_IRIDIUM)
