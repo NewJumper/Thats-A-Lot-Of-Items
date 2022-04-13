@@ -1,39 +1,28 @@
 modLoader="javafml"
 loaderVersion="[40,)"
-
 license="AGPL-3.0"
 
 [[mods]]
-modId="taloi"
-version="1.18.2-0.16.0"
+    modId="taloi"
+    version="1.18.2-0.16.0"
 
-displayName="That's A Lot Of Items"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"
+    displayName="That's A Lot Of Items"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"
+    authors="NewJumper"
+    credits="All art, code, and textures by NewJumper"
+    logoFile="logo_banner_dark.png"
 
-logoFile="logo_banner_dark.png"
+    description='''A mod features a bunch of random stuff dumped into block game.'''
 
-credits="All art, code, and textures by NewJumper"
-authors="NewJumper"
-description='''
-A mod about adding a whole lot more into the world of Minecraft.
-'''
-
-[[dependencies.taloi]] #optional
-    # the modid of the dependency
-    modId="forge" #mandatory
-    # Does this dependency have to exist - if not, ordering below must be specified
-    mandatory=true #mandatory
-    # The version range of the dependency
-    versionRange="[40,)" #mandatory
-    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-    ordering="NONE"
-    # Side this dependency is applied on - BOTH, CLIENT or SERVER
-    side="BOTH"
-# Here's another dependency
 [[dependencies.taloi]]
     modId="minecraft"
     mandatory=true
-# This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="[1.18.2,1.19)"
-    ordering="NONE"
     side="BOTH"
+
+[[dependencies.taloi]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    side="BOTH"
+

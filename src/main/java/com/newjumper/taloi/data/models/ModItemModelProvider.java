@@ -288,11 +288,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("platinum_leggings").parent(itemGenerated).texture("layer0", "item/platinum_leggings");
         getBuilder("platinum_boots").parent(itemGenerated).texture("layer0", "item/platinum_boots");
 
-        getBuilder("tin_helmet").parent(itemGenerated).texture("layer0", "item/tin_helmet");
-        getBuilder("tin_chestplate").parent(itemGenerated).texture("layer0", "item/tin_chestplate");
-        getBuilder("tin_leggings").parent(itemGenerated).texture("layer0", "item/tin_leggings");
-        getBuilder("tin_boots").parent(itemGenerated).texture("layer0", "item/tin_boots");
-
         getBuilder("tungsten_helmet").parent(itemGenerated).texture("layer0", "item/tungsten_helmet");
         getBuilder("tungsten_chestplate").parent(itemGenerated).texture("layer0", "item/tungsten_chestplate");
         getBuilder("tungsten_leggings").parent(itemGenerated).texture("layer0", "item/tungsten_leggings");
@@ -329,11 +324,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("platinum_axe").parent(itemHandheld).texture("layer0", "item/platinum_axe");
         getBuilder("platinum_hoe").parent(itemHandheld).texture("layer0", "item/platinum_hoe");
 
-        getBuilder("tin_shovel").parent(itemHandheld).texture("layer0", "item/tin_shovel");
-        getBuilder("tin_pickaxe").parent(itemHandheld).texture("layer0", "item/tin_pickaxe");
-        getBuilder("tin_axe").parent(itemHandheld).texture("layer0", "item/tin_axe");
-        getBuilder("tin_hoe").parent(itemHandheld).texture("layer0", "item/tin_hoe");
-
         getBuilder("tungsten_shovel").parent(itemHandheld).texture("layer0", "item/tungsten_shovel");
         getBuilder("tungsten_pickaxe").parent(itemHandheld).texture("layer0", "item/tungsten_pickaxe");
         getBuilder("tungsten_axe").parent(itemHandheld).texture("layer0", "item/tungsten_axe");
@@ -352,7 +342,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("iridium_sword").parent(itemHandheld).texture("layer0", "item/iridium_sword");
         getBuilder("osmium_sword").parent(itemHandheld).texture("layer0", "item/osmium_sword");
         getBuilder("platinum_sword").parent(itemHandheld).texture("layer0", "item/platinum_sword");
-        getBuilder("tin_sword").parent(itemHandheld).texture("layer0", "item/tin_sword");
         getBuilder("tungsten_sword").parent(itemHandheld).texture("layer0", "item/tungsten_sword");
         getBuilder("futurite_sword").parent(itemHandheld).texture("layer0", "item/futurite_sword");
         getBuilder("sermium_sword").parent(itemHandheld).texture("layer0", "item/sermium_sword");

@@ -581,43 +581,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern(" #")
                 .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
 
-        // TIN TOOLS
-        ShapedRecipeBuilder.shaped(ModItems.TIN_SWORD.get(), 1)
-                .define('X', ModTags.Items.INGOT_TIN)
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("X")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_SHOVEL.get(), 1)
-                .define('X', ModTags.Items.INGOT_TIN)
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("#")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_PICKAXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_TIN)
-                .define('#', Items.STICK)
-                .pattern("XXX")
-                .pattern(" # ")
-                .pattern(" # ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_AXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_TIN)
-                .define('#', Items.STICK)
-                .pattern("XX")
-                .pattern("X#")
-                .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_HOE.get(), 1)
-                .define('X', ModTags.Items.INGOT_TIN)
-                .define('#', Items.STICK)
-                .pattern("XX")
-                .pattern(" #")
-                .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-
         // TUNGSTEN TOOLS
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_SWORD.get(), 1)
                 .define('X', ModTags.Items.INGOT_TUNGSTEN)
@@ -810,30 +773,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("A A")
                 .pattern("A A")
                 .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
-
-        // TIN ARMOR
-        ShapedRecipeBuilder.shaped(ModItems.TIN_HELMET.get(), 1)
-                .define('A', ModTags.Items.INGOT_TIN)
-                .pattern("AAA")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_CHESTPLATE.get(), 1)
-                .define('A', ModTags.Items.INGOT_TIN)
-                .pattern("A A")
-                .pattern("AAA")
-                .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_LEGGINGS.get(), 1)
-                .define('A', ModTags.Items.INGOT_TIN)
-                .pattern("AAA")
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.TIN_BOOTS.get(), 1)
-                .define('A', ModTags.Items.INGOT_TIN)
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
 
         // TUNGSTEN ARMOR
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_HELMET.get(), 1)
