@@ -14,11 +14,11 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 ---
 ### Some content within the mod:
 - New ores: aluminum, magnesium, osmium, tungsten, uranium, and plenty more
-- Alloys: carbonite, Futurite, Sermium, steel, and some mysterious alloys
+- Alloys: bronze, Futurite, Sermium, steel, plus more
 - Lots of natural generation: marble, limestone, evergreen trees, willow trees, and plants
 
 ### Biomes:
-**The Coniferous Forest** is a place for tree lovers to go. Filled with tall, beautiful evergreen trees, the forest is well suited for creatures of magnificent beauty.
+**The Coniferous Forest** is the place for tree lovers to go. Filled with tall, beautiful evergreen trees, the forest is well suited for creatures of magnificent beauty.
 
 **The Dense Coniferous Forest** is much like the coniferous forest, but packed to the brim with trees. Stay too long, you can easily lose yourself in the forest and never find the way out.
 
@@ -27,6 +27,3 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 **The Mystic Hills**, often bordered by geyser plains, is home to the most unusual terrain. A dead wasteland, with willow trees scattered about and little wildlife. Something is hidden deep within this biome, something dangerous.
 
 **The Salt Basin** is a large hilly biome with very limited water, but a lot of salt!
-
-### Mobs:
-*to be decided*
