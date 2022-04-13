@@ -119,13 +119,11 @@ public class ModItems {
     public static final RegistryObject<Item> SERMIUM_SHOVEL = ITEMS.register("sermium_shovel", () -> new ShovelItem(ModTiers.SERMIUM, 1.5f, -2.9f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
     public static final RegistryObject<Item> SERMIUM_PICKAXE = ITEMS.register("sermium_pickaxe", () -> new PickaxeItem(ModTiers.SERMIUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
     public static final RegistryObject<Item> SERMIUM_AXE = ITEMS.register("sermium_axe", () -> new AxeItem(ModTiers.SERMIUM, 6, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-    // public static final RegistryObject<Item> SERMIUM_OMNI_TOOL = ITEMS.register("sermium_omni_tool", () -> new AxeItem(ModTiers.SERMIUM, 5, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB))); BALANCE VALUES
 
     public static final RegistryObject<Item> FUTURITE_SWORD = ITEMS.register("futurite_sword", () -> new SwordItem(ModTiers.FUTURITE, 4, -2f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
     public static final RegistryObject<Item> FUTURITE_SHOVEL = ITEMS.register("futurite_shovel", () -> new ShovelItem(ModTiers.FUTURITE, 1.5f, -2.9f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
     public static final RegistryObject<Item> FUTURITE_PICKAXE = ITEMS.register("futurite_pickaxe", () -> new PickaxeItem(ModTiers.FUTURITE, 1, -2.7f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
     public static final RegistryObject<Item> FUTURITE_AXE = ITEMS.register("futurite_axe", () -> new AxeItem(ModTiers.FUTURITE, 6, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB)));
-    // public static final RegistryObject<Item> FUTURITE_OMNI_TOOL = ITEMS.register("futurite_omni_tool", () -> new ShovelItem(ModTiers.FUTURITE, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOL_TAB))); BALANCE VALUES
 
     public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).durability(1700)));
 
