@@ -14,7 +14,7 @@ A mod which brings a lot more into the world of Minecraft. Ranging from tons of 
 ---
 ### Some content within the mod:
 - New ores: aluminum, magnesium, osmium, tungsten, uranium, and plenty more
-- Alloys: carbonite, Futurite, Sermium, steel, and some mysterious alloys
+- Alloys: bronze, Futurite, Sermium, steel, plus more
 - Lots of natural generation: marble, limestone, evergreen trees, willow trees, and plants
 
 ### Biomes:
