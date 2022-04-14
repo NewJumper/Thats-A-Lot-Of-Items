@@ -20,7 +20,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     }),
-    FUTURITE("futurite", 44, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.2F, () -> {
+    FUTURITE("futurite", 42, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.2F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     });
 
