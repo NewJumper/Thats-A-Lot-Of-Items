@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "taloi:sermium_chestplate"
+  },
+  "addition": {
+    "item": "taloi:futurite_plate"
+  },
+  "result": {
+    "item": "taloi:futurite_chestplate"
+  }
+}

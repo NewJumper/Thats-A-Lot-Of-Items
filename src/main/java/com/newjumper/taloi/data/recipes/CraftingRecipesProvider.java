@@ -737,54 +737,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("A A")
                 .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
 
-        // FUTURITE ARMOR
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_HELMET.get(), 1)
-                .define('A', ModItems.FUTURITE.get())
-                .pattern("AAA")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_CHESTPLATE.get(), 1)
-                .define('A', ModItems.FUTURITE.get())
-                .pattern("A A")
-                .pattern("AAA")
-                .pattern("AAA")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_LEGGINGS.get(), 1)
-                .define('A', ModItems.FUTURITE.get())
-                .pattern("AAA")
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_BOOTS.get(), 1)
-                .define('A', ModItems.FUTURITE.get())
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-
-        // SERMIUM ARMOR
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_HELMET.get(), 1)
-                .define('A', ModItems.SERMIUM.get())
-                .pattern("AAA")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_CHESTPLATE.get(), 1)
-                .define('A', ModItems.SERMIUM.get())
-                .pattern("A A")
-                .pattern("AAA")
-                .pattern("AAA")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_LEGGINGS.get(), 1)
-                .define('A', ModItems.SERMIUM.get())
-                .pattern("AAA")
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_BOOTS.get(), 1)
-                .define('A', ModItems.SERMIUM.get())
-                .pattern("A A")
-                .pattern("A A")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-
         ShapedRecipeBuilder.shaped(ModItems.NETHERITE_BOW.get(), 1)
                 .define('B', Items.BOW)
                 .define('N', Items.NETHERITE_INGOT)

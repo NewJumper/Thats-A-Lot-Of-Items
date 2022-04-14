@@ -25,6 +25,6 @@ public class DataGenerators {
         // recipes
         generator.addProvider(new CraftingRecipesProvider(generator));
         generator.addProvider(new SmeltingRecipesProvider(generator));
-        generator.addProvider(new StonecuttingRecipesProvider(generator));
+        generator.addProvider(new OtherRecipesProvider(generator));
     }
 }
