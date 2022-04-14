@@ -580,66 +580,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern(" #")
                 .pattern(" #")
                 .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
-
-        // FUTURITE TOOLS
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_SWORD.get(), 1)
-                .define('X', ModItems.FUTURITE.get())
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("X")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_SHOVEL.get(), 1)
-                .define('X', ModItems.FUTURITE.get())
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("#")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_PICKAXE.get(), 1)
-                .define('X', ModItems.FUTURITE.get())
-                .define('#', Items.STICK)
-                .pattern("XXX")
-                .pattern(" # ")
-                .pattern(" # ")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.FUTURITE_AXE.get(), 1)
-                .define('X', ModItems.FUTURITE.get())
-                .define('#', Items.STICK)
-                .pattern("XX")
-                .pattern("X#")
-                .pattern(" #")
-                .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
-
-        // SERMIUM TOOLS
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_SWORD.get(), 1)
-                .define('X', ModItems.SERMIUM.get())
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("X")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_SHOVEL.get(), 1)
-                .define('X', ModItems.SERMIUM.get())
-                .define('#', Items.STICK)
-                .pattern("X")
-                .pattern("#")
-                .pattern("#")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_PICKAXE.get(), 1)
-                .define('X', ModItems.SERMIUM.get())
-                .define('#', Items.STICK)
-                .pattern("XXX")
-                .pattern(" # ")
-                .pattern(" # ")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModItems.SERMIUM_AXE.get(), 1)
-                .define('X', ModItems.SERMIUM.get())
-                .define('#', Items.STICK)
-                .pattern("XX")
-                .pattern("X#")
-                .pattern(" #")
-                .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
         
         // IRIDIUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_HELMET.get(), 1)
@@ -736,15 +676,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("A A")
                 .pattern("A A")
                 .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(ModItems.NETHERITE_BOW.get(), 1)
-                .define('B', Items.BOW)
-                .define('N', Items.NETHERITE_INGOT)
-                .define('S', Items.STRING)
-                .pattern(" NS")
-                .pattern("NBS")
-                .pattern(" NS")
-                .unlockedBy("has_material", has(Items.BOW)).save(consumer);
 
         // NUGGETS
         ShapelessRecipeBuilder.shapeless(ModItems.ALUMINUM_NUGGET.get(), 9)

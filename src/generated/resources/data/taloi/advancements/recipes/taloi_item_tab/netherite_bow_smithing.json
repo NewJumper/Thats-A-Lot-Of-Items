@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:futurite_axe"
+      "taloi:netherite_bow_smithing"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "taloi:futurite"
+              "minecraft:netherite_ingot"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:futurite_axe"
+        "recipe": "taloi:netherite_bow_smithing"
       }
     }
   },

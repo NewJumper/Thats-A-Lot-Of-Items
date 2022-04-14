@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "taloi:sermium_pickaxe"
+  },
+  "addition": {
+    "item": "taloi:futurite_plate"
+  },
+  "result": {
+    "item": "taloi:futurite_pickaxe"
+  }
+}

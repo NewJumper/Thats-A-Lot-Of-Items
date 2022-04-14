@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:futurite_sword"
+      "taloi:sermium_pickaxe_smithing"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "taloi:futurite"
+              "taloi:sermium_plate"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:futurite_sword"
+        "recipe": "taloi:sermium_pickaxe_smithing"
       }
     }
   },
