@@ -241,18 +241,21 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // PLATES
         getBuilder("alloy_plate").parent(itemGenerated).texture("layer0", "item/alloy_plate");
+        getBuilder("bronze_plate").parent(itemGenerated).texture("layer0", "item/bronze_plate");
         getBuilder("carbon_plate").parent(itemGenerated).texture("layer0", "item/carbon_plate");
         getBuilder("copper_plate").parent(itemGenerated).texture("layer0", "item/copper_plate");
         getBuilder("diamond_plate").parent(itemGenerated).texture("layer0", "item/diamond_plate");
-        getBuilder("ferroniobium_plate").parent(itemGenerated).texture("layer0", "item/ferroniobium_plate");
         getBuilder("forge_plate").parent(itemGenerated).texture("layer0", "item/forge_plate");
+        getBuilder("futurite_plate").parent(itemGenerated).texture("layer0", "item/futurite_plate");
         getBuilder("gold_disk").parent(itemGenerated).texture("layer0", "item/gold_disk");
         getBuilder("induction_plate").parent(itemGenerated).texture("layer0", "item/induction_plate");
         getBuilder("magnesium_plate").parent(itemGenerated).texture("layer0", "item/magnesium_plate");
         getBuilder("reinforced_copper_plate").parent(itemGenerated).texture("layer0", "item/reinforced_copper_plate");
         getBuilder("semiconductor_plate").parent(itemGenerated).texture("layer0", "item/semiconductor_plate");
         getBuilder("sermium_plate").parent(itemGenerated).texture("layer0", "item/sermium_plate");
+        getBuilder("silicon_plate").parent(itemGenerated).texture("layer0", "item/silicon_plate");
         getBuilder("steel_plate").parent(itemGenerated).texture("layer0", "item/steel_plate");
+        getBuilder("tungsten_plate").parent(itemGenerated).texture("layer0", "item/tungsten_plate");
 
         // NUGGETS
         getBuilder("aluminum_nugget").parent(itemGenerated).texture("layer0", "item/aluminum_nugget");

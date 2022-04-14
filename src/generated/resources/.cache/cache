@@ -331,6 +331,7 @@ ac7a2b94c8444b94d25138e8a8526bad1b368f61 assets/taloi/models/item/blue_concrete_
 7834db38d7adf5f4b4b8fdc0313a94511da13ca3 assets/taloi/models/item/bouncy_block.json
 11776fc537c4f8f52dddc3f0617b791434c8aced assets/taloi/models/item/bronze_block.json
 472b4f51b3daaaf4deb8c4d2a49d3786f8aca860 assets/taloi/models/item/bronze_ingot.json
+8f06cfa3b380ad3420b5ea422fed8e8727315517 assets/taloi/models/item/bronze_plate.json
 cd9533d28da99c75a56d4e5de36d4e0060d0b71c assets/taloi/models/item/brown_concrete_slab.json
 a3c4efa43a59c1b26456067eb195f185222b1098 assets/taloi/models/item/brown_concrete_stairs.json
 8913245369e024d5d048493a442f50a9ed751658 assets/taloi/models/item/carbon_plate.json
@@ -365,7 +366,6 @@ bf9bb85ff95b13f02b2c1d7a13cd2c5a0cb355ca assets/taloi/models/item/evergreen_slab
 58e033b6e199c83186affd14d230a4dd7a2d63bc assets/taloi/models/item/evergreen_wood.json
 8bec9af623ffbb3bfb968ab8e041c30032079dfa assets/taloi/models/item/feathery_block.json
 5cc63c4e560f28db95ada85e98725ebcc6476009 assets/taloi/models/item/ferroniobium_ingot.json
-83efd5d1826751e9895b04ab0a14f3a37e46f16e assets/taloi/models/item/ferroniobium_plate.json
 5af4a7421de5e9e03b3de35711566e6489b15cd9 assets/taloi/models/item/forge_plate.json
 a8b5bca1a1f7b10bea056b66269f9c5aae0c64fc assets/taloi/models/item/futurite.json
 9965972dbe76709641583cb395da50ff6bbf9d9d assets/taloi/models/item/futurite_apple.json
@@ -376,6 +376,7 @@ e1065e002c3757a4eed33aa73302a8709c6eec9c assets/taloi/models/item/futurite_boots
 91fe20b07f179bb09e1e55e1c98857cc7c142122 assets/taloi/models/item/futurite_helmet.json
 f2fc5c0c73c8016414b0959db67a1bc10be7eddf assets/taloi/models/item/futurite_leggings.json
 48ef194479fe3ab616be54c2de26cf7715889316 assets/taloi/models/item/futurite_pickaxe.json
+fdbd0ae42fdcec16af5b9c6f70a7b9642c8fb861 assets/taloi/models/item/futurite_plate.json
 461b007f1f8676ce41a516886894e44663d038d8 assets/taloi/models/item/futurite_shovel.json
 b70fb46d833878067dfa2b97bf453b7924a1f8d1 assets/taloi/models/item/futurite_sword.json
 b0a4a57e428c4f49583018613edac231f0fb84f9 assets/taloi/models/item/gold_disk.json
@@ -501,6 +502,7 @@ b30587080cb41b9d8f36fdf711f1faa64ade59ef assets/taloi/models/item/sermium_sword.
 8ee07342e94d27cb0a3dcaf00ef319e77eb3f5d0 assets/taloi/models/item/silicon.json
 7c084af5804cf4ba1e566b77fa8167497bc497e8 assets/taloi/models/item/silicon_block.json
 9c554c7e4ab928fb4a795618696485da1a41d385 assets/taloi/models/item/silicon_ore.json
+0264a94b5efd926700b4b5ffd54220a0066b82de assets/taloi/models/item/silicon_plate.json
 03a59ce9f0110cbfd6c69eee6dcddbc21d0af9dd assets/taloi/models/item/speedy_block.json
 9e254635f45e1a11f92221bd38823c494430d094 assets/taloi/models/item/steel_block.json
 290df8441e6d44ab439dc07880b0112562786908 assets/taloi/models/item/steel_ingot.json
@@ -525,6 +527,7 @@ a872f7a039afec90f01fe08d92e60b952f8a0387 assets/taloi/models/item/tungsten_helme
 61bd4ba90391f489e209c76f30ec757c4e675901 assets/taloi/models/item/tungsten_nugget.json
 34691064966b503ef5cbbadc389f655e316fdac8 assets/taloi/models/item/tungsten_ore.json
 a87d8d48d38c6e348086e6eaa284340d4c0ab146 assets/taloi/models/item/tungsten_pickaxe.json
+508fb7a1276d6ed61ab1bf77fc0d5b119ec3bc01 assets/taloi/models/item/tungsten_plate.json
 5c2b40caf143050632df7fa460cc39146bea4990 assets/taloi/models/item/tungsten_shovel.json
 2386ef3a3f29b32e67034424442ff82081e97aa3 assets/taloi/models/item/tungsten_sword.json
 b5dfe3f4862d167964f65ef0a6a0eed7470caf12 assets/taloi/models/item/uranium_bit.json
