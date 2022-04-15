@@ -128,6 +128,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("bronze_block", modLoc("block/bronze_block"));
         withExistingParent("steel_block", modLoc("block/steel_block"));
 
+        // MACHINERY
+        withExistingParent("alpha_constructor", modLoc("block/alpha_constructor"));
+
         // CONCRETE
         withExistingParent("white_concrete_slab", modLoc("block/white_concrete_slab"));
         withExistingParent("white_concrete_stairs", modLoc("block/white_concrete_stairs"));

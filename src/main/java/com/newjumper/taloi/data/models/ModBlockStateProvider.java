@@ -128,6 +128,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.BRONZE_BLOCK.get());
         simpleBlock(ModBlocks.STEEL_BLOCK.get());
 
+        // MACHINERY
+        simpleBlock(ModBlocks.ALPHA_CONSTRUCTOR.get());
+
         // CONCRETE
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));
         stairsBlock(ModBlocks.WHITE_CONCRETE_STAIRS.get(), mcLoc("block/white_concrete"));

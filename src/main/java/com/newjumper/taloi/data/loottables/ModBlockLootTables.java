@@ -121,6 +121,9 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.BRONZE_BLOCK.get());
         this.dropSelf(ModBlocks.STEEL_BLOCK.get());
 
+        // MACHINERY
+        this.dropSelf(ModBlocks.ALPHA_CONSTRUCTOR.get());
+
         // CONCRETE STAIRS / SLABS
         this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
         this.dropSelf(ModBlocks.WHITE_CONCRETE_SLAB.get());
