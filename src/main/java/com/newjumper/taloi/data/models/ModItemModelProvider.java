@@ -346,8 +346,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("tomato").parent(itemGenerated).texture("layer0", "item/tomato");
 
         // MISC
-        getBuilder("blowtorch").parent(itemGenerated).texture("layer0", "item/blowtorch");
-        getBuilder("metal_detector").parent(itemGenerated).texture("layer0", "item/metal_detector");
         getBuilder("music_disc_the_caves").parent(itemGenerated).texture("layer0", "item/music_disc_the_caves");
         getBuilder("sermium_core").parent(itemGenerated).texture("layer0", "item/sermium_core");
         getBuilder("sermium_oxide").parent(itemGenerated).texture("layer0", "item/sermium_oxide");

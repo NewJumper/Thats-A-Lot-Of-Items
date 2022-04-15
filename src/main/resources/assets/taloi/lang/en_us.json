@@ -242,7 +242,6 @@
   "item.taloi.sermium_shovel" : "Sermium Shovel",
   "item.taloi.sermium_pickaxe" : "Sermium Pickaxe",
   "item.taloi.sermium_axe" : "Sermium Axe",
-
   "item.taloi.netherite_bow" : "Netherite Bow",
 
   "item.taloi.aluminum_helmet" : "Aluminum Helmet",
@@ -274,12 +273,8 @@
   "item.taloi.sermium_leggings" : "Sermium Leggings",
   "item.taloi.sermium_boots" : "Sermium Boots",
 
-  "item.taloi.blowtorch" : "Blowtorch",
-  "item.taloi.metal_detector" : "Metal Detector",
   "item.taloi.music_disc_the_caves" : "Music Disc",
   "item.taloi.music_disc_the_caves.desc" : "NewJumper - The Caves",
-
-  "item.taloi.metal_detector.no_ore" : "No ores found",
 
   "advancements.taloi.root.title": "That Is Indeed A Lot Of Items",
   "advancements.taloi.root.description": "The beginning of a new end",

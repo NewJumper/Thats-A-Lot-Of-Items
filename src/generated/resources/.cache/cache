@@ -325,7 +325,6 @@ b4ceffd993cc93ff0e9a4ed248fa1f9d4d695ff8 assets/taloi/models/item/aluminum_block
 da2ef7f56f12704bb5935c217eb2842d4a015d31 assets/taloi/models/item/aluminum_ore.json
 c93c9f730dddd65dcb10797992f3888e3d6d01f6 assets/taloi/models/item/black_concrete_slab.json
 6e2a2a6c78c82413dfeefb502412f7dbb5e8f5f5 assets/taloi/models/item/black_concrete_stairs.json
-7ac23c5491546ca88396f95067212de799a238c1 assets/taloi/models/item/blowtorch.json
 82217c62d0541fadb9c35ccf0ef6ba7960b201e6 assets/taloi/models/item/blue_concrete_slab.json
 ac7a2b94c8444b94d25138e8a8526bad1b368f61 assets/taloi/models/item/blue_concrete_stairs.json
 7834db38d7adf5f4b4b8fdc0313a94511da13ca3 assets/taloi/models/item/bouncy_block.json
@@ -425,7 +424,6 @@ cad0d85ef657b42f6862817d846fa70aee0e28fd assets/taloi/models/item/marble.json
 b78da002f4bc25554193b390fb0dc9cbc6894356 assets/taloi/models/item/marble_slab.json
 e3a2a9dd2937873bd5c132d35b62c8151649a02f assets/taloi/models/item/marble_stairs.json
 923ab7440bd3ec1bbeeaffdc9733201f4579bb81 assets/taloi/models/item/marble_wall.json
-6077c38a1a872cbf9d35cf77c74c9ceac692be2e assets/taloi/models/item/metal_detector.json
 0b856b904b7c2e9772245648874b1470466802df assets/taloi/models/item/music_disc_the_caves.json
 6229429c1e02fcc8872815673a2600af9bd851fc assets/taloi/models/item/orange_concrete_slab.json
 f4d47e52292e1d68b117dd24698a8cab6e8562ab assets/taloi/models/item/orange_concrete_stairs.json
