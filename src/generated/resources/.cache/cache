@@ -1,3 +1,4 @@
+19097e7117b7f1f31a30a4f4dfc08648d2e83942 assets/taloi/blockstates/alpha_constructor.json
 3774ecf766464aa550e43cc8b409b1a365de59f6 assets/taloi/blockstates/aluminum_block.json
 c6edaab2b6a180178cf77ccdd37576f53a7c4134 assets/taloi/blockstates/aluminum_ore.json
 229b74151f3814cff14d54886b0b4cab18d7169f assets/taloi/blockstates/black_concrete_slab.json
@@ -114,6 +115,7 @@ f99b2db68c391e3de338547766b9ed15016d4a7c assets/taloi/blockstates/yellow_concret
 c746201c7bcfd784d689a6aec8635b756aa8ad38 assets/taloi/blockstates/yellow_concrete_stairs.json
 c0472f1a81f96c6fde1e23b95d718358cbcb84d5 assets/taloi/blockstates/zinc_block.json
 83057bd0a3665e0cf4b227d30b4be481ce3f2580 assets/taloi/blockstates/zinc_ore.json
+3b47382c1b280db9b91b2e2ca43017ae4d1f52cb assets/taloi/models/block/alpha_constructor.json
 3e65980e7146c90d2890945881e3d335df34a9f6 assets/taloi/models/block/aluminum_block.json
 b8e4074f0980ecd0dcdc940e0bc76f21cdb1f654 assets/taloi/models/block/aluminum_ore.json
 cf8ef2a51a22844c9648d4ac8f2a977c94b74970 assets/taloi/models/block/black_concrete_slab.json
@@ -319,6 +321,7 @@ ae3699d356ee9eb02759e0237d3769745d7bd6db assets/taloi/models/block/zinc_block.js
 1976587801d1d66d75919ff1b1a53a77822d42bb assets/taloi/models/item/alloy_plate.json
 bf095787cae5b42a4ea57455b815e8fd57913396 assets/taloi/models/item/alloy_x.json
 7236fe4ce1833dc7fba559ad912d6f47b1c03e30 assets/taloi/models/item/alloy_z.json
+31325134134baf9db258cab2928a1f57b31bf033 assets/taloi/models/item/alpha_constructor.json
 b4ceffd993cc93ff0e9a4ed248fa1f9d4d695ff8 assets/taloi/models/item/aluminum_block.json
 9040762d9cc45b922ea372e7a6ea94e73f8709bb assets/taloi/models/item/aluminum_ingot.json
 6700d49c7c38e3222a669f091cfb72e63c56df3d assets/taloi/models/item/aluminum_nugget.json
@@ -769,6 +772,7 @@ f1024effea5d1c27495c5f5bebd700c84f14499f data/taloi/advancements/recipes/taloi_t
 14dabbef76daeb5073c4f894d9e2c8f7f3409b57 data/taloi/advancements/recipes/taloi_tool_tab/tungsten_hoe.json
 41779a9e714c6e9566904fec2b333a27109f6dde data/taloi/advancements/recipes/taloi_tool_tab/tungsten_pickaxe.json
 af05982fde6f864250d3073196cbdb546f81e2d8 data/taloi/advancements/recipes/taloi_tool_tab/tungsten_shovel.json
+d803373640719191c9f1b11f32fbfbdb4474ea31 data/taloi/loot_tables/blocks/alpha_constructor.json
 05e01fc5b562c9a532c653eb2af93dbe7caebe65 data/taloi/loot_tables/blocks/aluminum_block.json
 cf25ee34e2b17c95bbf7fd89deee67ba0dd039e3 data/taloi/loot_tables/blocks/aluminum_ore.json
 85f5f33272aba4f77c888cbcb1c3436b778d0f6a data/taloi/loot_tables/blocks/black_concrete_slab.json
