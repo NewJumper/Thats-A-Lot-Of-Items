@@ -1,0 +1,232 @@
+{
+  "parent": "taloi:root",
+  "display": {
+    "icon": {
+      "item": "taloi:silicon_plate"
+    },
+    "title": {
+      "translate": "advancements.taloi.press_material.title"
+    },
+    "description": {
+      "translate": "advancements.taloi.press_material.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "alloy_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alloy_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "bronze_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:bronze_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "carbon_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:carbon_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "copper_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:copper_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "diamond_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:diamond_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "forge_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:forge_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "futurite_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:futurite_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "gold_disk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:gold_disk"
+            ]
+          }
+        ]
+      }
+    },
+    "induction_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:induction_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "magnesium_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:magnesium_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "reinforced_copper_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:reinforced_copper_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "semiconductor_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:semiconductor_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "sermium_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:sermium_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "silicon_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:silicon_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "steel_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:steel_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "tungsten_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:tungsten_plate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "alloy_plate",
+      "bronze_plate",
+      "carbon_plate",
+      "copper_plate",
+      "diamond_plate",
+      "forge_plate",
+      "futurite_plate",
+      "gold_disk",
+      "induction_plate",
+      "magnesium_plate",
+      "reinforced_copper_plate",
+      "semiconductor_plate",
+      "sermium_plate",
+      "silicon_plate",
+      "steel_plate",
+      "tungsten_plate"
+    ]
+  ]
+}

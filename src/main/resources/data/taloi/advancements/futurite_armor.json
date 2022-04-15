@@ -1,0 +1,56 @@
+{
+  "parent": "taloi:obtain_futurite",
+  "display": {
+    "icon": {
+      "item": "taloi:futurite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.taloi.futurite_armor.title"
+    },
+    "description": {
+      "translate": "advancements.taloi.futurite_armor.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "futurite_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:futurite_helmet"
+            ]
+          },
+          {
+            "items": [
+              "taloi:futurite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "taloi:futurite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "taloi:futurite_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "futurite_armor"
+    ]
+  ]
+}

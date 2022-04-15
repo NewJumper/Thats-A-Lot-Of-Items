@@ -1,31 +1,28 @@
 {
-  "parent": "taloi:sermium_obtained",
+  "parent": "taloi:root",
   "display": {
     "icon": {
-      "item": "taloi:futurite"
+      "item": "taloi:refined_uranium"
     },
     "title": {
-      "translate": "advancements.taloi.obtain_futurite.title"
+      "translate": "advancements.taloi.radioactive.title"
     },
     "description": {
-      "translate": "advancements.taloi.obtain_futurite.description"
+      "translate": "advancements.taloi.radioactive.description"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "rewards": {
-    "experience": 50
-  },
   "criteria": {
-    "futurite": {
+    "refined_uranium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:futurite"
+              "taloi:refined_uranium"
             ]
           }
         ]
@@ -34,7 +31,7 @@
   },
   "requirements": [
     [
-      "futurite"
+      "refined_uranium"
     ]
   ]
 }

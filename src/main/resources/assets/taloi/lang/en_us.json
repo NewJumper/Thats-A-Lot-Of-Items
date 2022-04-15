@@ -281,10 +281,22 @@
 
   "item.taloi.metal_detector.no_ore" : "No ores found",
 
-  "advancements.taloi.root.title": "That's A Lot Of Items",
+  "advancements.taloi.root.title": "That Is Indeed A Lot Of Items",
   "advancements.taloi.root.description": "The beginning of a new end",
-  "advancements.taloi.obtain_sermium.title": "Better Technology",
+  "advancements.taloi.construct_alloy.title": "Alloy Constructor",
+  "advancements.taloi.construct_alloy.description": "Use a constructor to make an alloy",
+  "advancements.taloi.press_material.title": "Metal Slam",
+  "advancements.taloi.press_material.description": "Press a metal into its plate counterpart",
+  "advancements.taloi.radioactive.title": "Radioactive",
+  "advancements.taloi.radioactive.description": "I'm getting some weird readings off of this...",
+  "advancements.taloi.obtain_sermium.title": "Upgraded Technology",
   "advancements.taloi.obtain_sermium.description": "Obtain Sermium using a Processor",
-  "advancements.taloi.obtain_futurite.title": "Next Gen Technology",
-  "advancements.taloi.obtain_futurite.description": "Obtain Futurite using a Processor"
+  "advancements.taloi.sermium_armor.title": "There's Competition!",
+  "advancements.taloi.sermium_armor.description": "Obtain a piece of Sermium armor through a smithing table",
+  "advancements.taloi.obtain_futurite.title": "The Future Is HERE!",
+  "advancements.taloi.obtain_futurite.description": "Obtain Futurite using a Processor",
+  "advancements.taloi.eat_futurite_apple.title": "The Better Apple?",
+  "advancements.taloi.eat_futurite_apple.description": "Eat a Futurite apple",
+  "advancements.taloi.futurite_armor.title": "Better, Stronger, Powerful",
+  "advancements.taloi.futurite_armor.description": "Construct a full set of Futurite armor"
 }

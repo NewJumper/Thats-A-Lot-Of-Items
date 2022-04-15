@@ -1,0 +1,37 @@
+{
+  "parent": "taloi:obtain_futurite",
+  "display": {
+    "icon": {
+      "item": "taloi:futurite_apple"
+    },
+    "title": {
+      "translate": "advancements.taloi.eat_futurite_apple.title"
+    },
+    "description": {
+      "translate": "advancements.taloi.eat_futurite_apple.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "destabilized_futurite_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:destabilized_futurite_apple"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "destabilized_futurite_apple"
+    ]
+  ]
+}
