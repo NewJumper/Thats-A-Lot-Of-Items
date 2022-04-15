@@ -269,6 +269,7 @@
   "item.taloi.futurite_leggings" : "Futurite Leggings",
   "item.taloi.futurite_boots" : "Futurite Boots",
   "item.taloi.sermium_helmet" : "Sermium Helmet",
+  "item.taloi.sermium_helmet.desc" : "Provides Regeneration if whole set is equipped.",
   "item.taloi.sermium_chestplate" : "Sermium Chestplate",
   "item.taloi.sermium_leggings" : "Sermium Leggings",
   "item.taloi.sermium_boots" : "Sermium Boots",
