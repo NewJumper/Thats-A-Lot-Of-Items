@@ -101,6 +101,10 @@
   "block.taloi.bronze_block" : "Block of Bronze",
   "block.taloi.steel_block" : "Block of Steel",
 
+  "block.taloi.alpha_constructor" : "Alpha Constructor",
+  "block.taloi.beta_constructor" : "Beta Constructor",
+  "block.taloi.unstable_constructor" : "Unstable Constructor",
+
   "block.taloi.bouncy_block" : "Bouncy Block",
   "block.taloi.feathery_block" : "Feathery Block",
   "block.taloi.gravity_block" : "Gravity Block",
