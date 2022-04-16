@@ -15,7 +15,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab TALOI_MACHINERY_TAB = new CreativeModeTab("taloi_machinery_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.TUNGSTEN_BLOCK.get());
+            return new ItemStack(ModBlocks.ALPHA_CONSTRUCTOR.get());
         }
     };
 
