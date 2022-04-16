@@ -123,6 +123,8 @@ public class ModBlockLootTables extends BlockLoot {
 
         // MACHINERY
         this.dropSelf(ModBlocks.ALPHA_CONSTRUCTOR.get());
+        this.dropSelf(ModBlocks.BETA_CONSTRUCTOR.get());
+        this.dropSelf(ModBlocks.UNSTABLE_CONSTRUCTOR.get());
 
         // CONCRETE STAIRS / SLABS
         this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());

@@ -130,6 +130,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // MACHINERY
         simpleBlock(ModBlocks.ALPHA_CONSTRUCTOR.get());
+        simpleBlock(ModBlocks.BETA_CONSTRUCTOR.get());
+        simpleBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get());
 
         // CONCRETE
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));

@@ -130,6 +130,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // MACHINERY
         withExistingParent("alpha_constructor", modLoc("block/alpha_constructor"));
+        withExistingParent("beta_constructor", modLoc("block/beta_constructor"));
+        withExistingParent("unstable_constructor", modLoc("block/unstable_constructor"));
 
         // CONCRETE
         withExistingParent("white_concrete_slab", modLoc("block/white_concrete_slab"));
