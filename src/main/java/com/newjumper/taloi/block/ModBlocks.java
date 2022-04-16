@@ -263,6 +263,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALPHA_CONSTRUCTOR = registerBlock("alpha_constructor", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
+    public static final RegistryObject<Block> BETA_CONSTRUCTOR = registerBlock("beta_constructor", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            .strength(4.5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
+    public static final RegistryObject<Block> UNSTABLE_CONSTRUCTOR = registerBlock("unstable_constructor", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            .strength(4.5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
     // CONCRETE STAIRS & SLABS
     public static final RegistryObject<StairBlock> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
