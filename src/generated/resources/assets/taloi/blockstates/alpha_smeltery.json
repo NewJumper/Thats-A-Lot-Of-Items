@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "taloi:block/alpha_smeltery"
+    },
+    "facing=south": {
+      "model": "taloi:block/alpha_smeltery",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "taloi:block/alpha_smeltery",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "taloi:block/alpha_smeltery",
+      "y": 90
+    }
+  }
+}
