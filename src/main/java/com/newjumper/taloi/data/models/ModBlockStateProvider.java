@@ -129,9 +129,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.STEEL_BLOCK.get());
 
         // MACHINERY
-        simpleBlock(ModBlocks.ALPHA_CONSTRUCTOR.get());
-        simpleBlock(ModBlocks.BETA_CONSTRUCTOR.get());
-        simpleBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get());
+        horizontalBlock(ModBlocks.ALPHA_CONSTRUCTOR.get(), modLoc("block/alpha_constructor_side"), modLoc("block/constructor_front"), modLoc("block/constructor_top"));
+        horizontalBlock(ModBlocks.BETA_CONSTRUCTOR.get(), modLoc("block/beta_constructor_side"), modLoc("block/constructor_front"), modLoc("block/constructor_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), modLoc("block/unstable_constructor_side"), modLoc("block/unstable_constructor_front"), modLoc("block/constructor_top"));
 
         // CONCRETE
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));

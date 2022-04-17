@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "taloi:block/alpha_constructor"
+    "side": "taloi:block/alpha_constructor_side",
+    "front": "taloi:block/constructor_front",
+    "top": "taloi:block/constructor_top"
   }
 }

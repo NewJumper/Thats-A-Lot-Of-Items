@@ -260,13 +260,13 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // MACHINERY
-    public static final RegistryObject<Block> ALPHA_CONSTRUCTOR = registerBlock("alpha_constructor", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_CONSTRUCTOR = registerBlock("alpha_constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_CONSTRUCTOR = registerBlock("beta_constructor", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_CONSTRUCTOR = registerBlock("beta_constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> UNSTABLE_CONSTRUCTOR = registerBlock("unstable_constructor", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> UNSTABLE_CONSTRUCTOR = registerBlock("unstable_constructor", () -> new UnstableConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 

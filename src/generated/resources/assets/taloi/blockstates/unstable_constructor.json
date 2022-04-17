@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "taloi:block/unstable_constructor"
+    },
+    "facing=south": {
+      "model": "taloi:block/unstable_constructor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "taloi:block/unstable_constructor",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "taloi:block/unstable_constructor",
+      "y": 90
     }
   }
 }
