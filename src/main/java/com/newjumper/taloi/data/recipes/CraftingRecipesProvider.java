@@ -712,6 +712,38 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModItems.FUTURITE.get())
                 .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
 
+        // MACHINERY
+        ShapedRecipeBuilder.shaped(ModItems.ALPHA_MACHINE_FRAME.get(), 1)
+                .define('R', Items.REDSTONE)
+                .define('G', Items.GLASS)
+                .define('O', Items.OBSIDIAN)
+                .define('C', ModItems.COPPER_PLATE.get())
+                .define('S', ModItems.STEEL_PLATE.get())
+                .pattern("RCR")
+                .pattern("SGS")
+                .pattern("ROR")
+                .unlockedBy("has_material", has(ModItems.STEEL_PLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.BETA_MACHINE_FRAME.get(), 1)
+                .define('G', Items.GOLD_INGOT)
+                .define('O', Items.OBSIDIAN)
+                .define('C', ModItems.REINFORCED_COPPER_PLATE.get())
+                .define('A', ModItems.ALLOY_PLATE.get())
+                .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
+                .pattern("GCG")
+                .pattern("AMA")
+                .pattern("GOG")
+                .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.UNSTABLE_MACHINE_FRAME.get(), 1)
+                .define('O', Items.OBSIDIAN)
+                .define('D', ModItems.DIAMOND_PLATE.get())
+                .define('C', ModItems.REINFORCED_COPPER_PLATE.get())
+                .define('A', ModItems.ALLOY_PLATE.get())
+                .define('M', ModItems.BETA_MACHINE_FRAME.get())
+                .pattern("DCD")
+                .pattern("AMA")
+                .pattern("DOD")
+                .unlockedBy("has_material", has(ModItems.BETA_MACHINE_FRAME.get())).save(consumer);
+
         // FOOD
         ShapedRecipeBuilder.shaped(ModItems.DIAMOND_APPLE.get(), 1)
                 .define('D', Items.DIAMOND)

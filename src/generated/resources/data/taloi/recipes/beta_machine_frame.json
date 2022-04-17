@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GCG",
+    "AMA",
+    "GOG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "taloi:reinforced_copper_plate"
+    },
+    "A": {
+      "item": "taloi:alloy_plate"
+    },
+    "M": {
+      "item": "taloi:alpha_machine_frame"
+    }
+  },
+  "result": {
+    "item": "taloi:beta_machine_frame"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RCR",
+    "SGS",
+    "ROR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "item": "taloi:copper_plate"
+    },
+    "S": {
+      "item": "taloi:steel_plate"
+    }
+  },
+  "result": {
+    "item": "taloi:alpha_machine_frame"
+  }
+}
