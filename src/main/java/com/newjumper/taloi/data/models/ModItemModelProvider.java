@@ -342,6 +342,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("tungsten_sword").parent(itemHandheld).texture("layer0", "item/tungsten_sword");
         getBuilder("futurite_sword").parent(itemHandheld).texture("layer0", "item/futurite_sword");
         getBuilder("sermium_sword").parent(itemHandheld).texture("layer0", "item/sermium_sword");
+        getBuilder("netherite_bow_pulling_0").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_0");
+        getBuilder("netherite_bow_pulling_1").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_1");
+        getBuilder("netherite_bow_pulling_2").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_2");
 
         // FOOD
         getBuilder("destabilized_futurite_apple").parent(itemGenerated).texture("layer0", "item/destabilized_futurite_apple");
