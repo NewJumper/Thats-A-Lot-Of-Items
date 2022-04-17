@@ -133,6 +133,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_CONSTRUCTOR.get(), modLoc("block/beta_constructor_side"), modLoc("block/constructor_front"), modLoc("block/constructor_top"));
         horizontalBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), modLoc("block/unstable_constructor_side"), modLoc("block/unstable_constructor_front"), modLoc("block/constructor_top"));
 
+        horizontalBlock(ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), modLoc("block/alpha_hydraulic_press_side"), modLoc("block/hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
+        horizontalBlock(ModBlocks.BETA_HYDRAULIC_PRESS.get(), modLoc("block/beta_hydraulic_press_side"), modLoc("block/hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), modLoc("block/unstable_hydraulic_press_side"), modLoc("block/unstable_hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
+
         // CONCRETE
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));
         stairsBlock(ModBlocks.WHITE_CONCRETE_STAIRS.get(), mcLoc("block/white_concrete"));

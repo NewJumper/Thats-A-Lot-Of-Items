@@ -126,6 +126,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.BETA_CONSTRUCTOR.get());
         this.dropSelf(ModBlocks.UNSTABLE_CONSTRUCTOR.get());
 
+        this.dropSelf(ModBlocks.ALPHA_HYDRAULIC_PRESS.get());
+        this.dropSelf(ModBlocks.BETA_HYDRAULIC_PRESS.get());
+        this.dropSelf(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get());
+
         // CONCRETE
         this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
         this.add(ModBlocks.WHITE_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);

@@ -270,6 +270,16 @@ public class ModBlocks {
             .strength(4.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
+    public static final RegistryObject<Block> ALPHA_HYDRAULIC_PRESS = registerBlock("alpha_hydraulic_press", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            .strength(4.5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
+    public static final RegistryObject<Block> BETA_HYDRAULIC_PRESS = registerBlock("beta_hydraulic_press", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            .strength(4.5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
+    public static final RegistryObject<Block> UNSTABLE_HYDRAULIC_PRESS = registerBlock("unstable_hydraulic_press", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            .strength(4.5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
+
     // CONCRETE STAIRS & SLABS
     public static final RegistryObject<StairBlock> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)

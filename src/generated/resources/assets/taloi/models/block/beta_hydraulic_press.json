@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "side": "taloi:block/beta_hydraulic_press_side",
+    "front": "taloi:block/hydraulic_press_front",
+    "top": "taloi:block/hydraulic_press_top"
+  }
+}
