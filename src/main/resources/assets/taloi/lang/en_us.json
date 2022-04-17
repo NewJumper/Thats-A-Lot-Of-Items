@@ -170,9 +170,9 @@
   "item.taloi.zinc_ingot" : "Zinc Ingot",
   "item.taloi.raw_zinc" : "Raw Zinc",
 
-  "block.taloi.alpha_machine_frame" : "Alpha Machine Frame",
-  "block.taloi.beta_machine_frame" : "Beta Machine Frame",
-  "block.taloi.unstable_machine_frame" : "Unstable Machine Frame",
+  "item.taloi.alpha_machine_frame" : "Alpha Machine Frame",
+  "item.taloi.beta_machine_frame" : "Beta Machine Frame",
+  "item.taloi.unstable_machine_frame" : "Unstable Machine Frame",
 
   "item.taloi.bronze_ingot" : "Bronze Ingot",
   "item.taloi.carbonite" : "Carbonite",
