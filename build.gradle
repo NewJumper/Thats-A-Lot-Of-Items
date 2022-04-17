@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '1.18.2-0.16.0'
+version = '1.18.2-0.16.1'
 group = 'com.newjumper.taloi'
 archivesBaseName = 'taloi'
 
@@ -90,10 +90,24 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-repositories {}
+repositories {
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+}
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.0.52'
+
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192")
 }
 
 jar {
