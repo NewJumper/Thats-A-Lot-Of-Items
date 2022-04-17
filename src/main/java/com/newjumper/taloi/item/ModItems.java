@@ -47,6 +47,11 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_ZINC = ITEMS.register("raw_zinc", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> ZINC_INGOT = ITEMS.register("zinc_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
+    // MACHINERY
+    public static final RegistryObject<Item> ALPHA_MACHINE_FRAME = ITEMS.register("alpha_machine_frame", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_MACHINERY_TAB)));
+    public static final RegistryObject<Item> BETA_MACHINE_FRAME = ITEMS.register("beta_machine_frame", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_MACHINERY_TAB)));
+    public static final RegistryObject<Item> UNSTABLE_MACHINE_FRAME = ITEMS.register("unstable_machine_frame", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_MACHINERY_TAB)));
+
     // ALLOYS
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> CARBONITE = ITEMS.register("carbonite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));

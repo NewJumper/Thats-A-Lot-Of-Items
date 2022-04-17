@@ -105,6 +105,10 @@
   "block.taloi.beta_constructor" : "Beta Constructor",
   "block.taloi.unstable_constructor" : "Unstable Constructor",
 
+  "block.taloi.alpha_hydraulic_press" : "Alpha Hydraulic Press",
+  "block.taloi.beta_hydraulic_press" : "Beta Hydraulic Press",
+  "block.taloi.unstable_hydraulic_press" : "Unstable Hydraulic Press",
+
   "block.taloi.bouncy_block" : "Bouncy Block",
   "block.taloi.feathery_block" : "Feathery Block",
   "block.taloi.gravity_block" : "Gravity Block",
@@ -165,6 +169,10 @@
   "item.taloi.raw_uranium" : "Raw Uranium",
   "item.taloi.zinc_ingot" : "Zinc Ingot",
   "item.taloi.raw_zinc" : "Raw Zinc",
+
+  "block.taloi.alpha_machine_frame" : "Alpha Machine Frame",
+  "block.taloi.beta_machine_frame" : "Beta Machine Frame",
+  "block.taloi.unstable_machine_frame" : "Unstable Machine Frame",
 
   "item.taloi.bronze_ingot" : "Bronze Ingot",
   "item.taloi.carbonite" : "Carbonite",

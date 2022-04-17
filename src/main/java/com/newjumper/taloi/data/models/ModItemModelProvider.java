@@ -237,6 +237,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("zinc_ingot").parent(itemGenerated).texture("layer0", "item/zinc_ingot");
         getBuilder("raw_zinc").parent(itemGenerated).texture("layer0", "item/raw_zinc");
 
+        // MACHINERY
+        getBuilder("alpha_machine_frame").parent(itemGenerated).texture("layer0", "item/alpha_machine_frame");
+        getBuilder("beta_machine_frame").parent(itemGenerated).texture("layer0", "item/beta_machine_frame");
+        getBuilder("unstable_machine_frame").parent(itemGenerated).texture("layer0", "item/unstable_machine_frame");
+
         // ALLOYS
         getBuilder("bronze_ingot").parent(itemGenerated).texture("layer0", "item/bronze_ingot");
         getBuilder("carbonite").parent(itemGenerated).texture("layer0", "item/carbonite");
