@@ -9,7 +9,7 @@
 
 TALOI brings a lot more into the world of Minecraft. Ranging from tons of new ores, machinery, items, blocks, and a bunch of other random stuff, this mod will bring diversity and more creativity into your world.
 
-This mod is only available for Forge. I will probably never make it for Fabric.
+This mod is only available on Forge, there are not plans for Fabric, yet.
 
 ###### *Wiki: https://newjumper.github.io/Thats-A-Lot-Of-Items/* no more wiki
 ###### *Most of the following content is either in progress or to be added*
