@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '1.18.2-0.16.2'
+version = '1.18.2-0.17.0'
 group = 'com.newjumper.taloi'
 archivesBaseName = 'taloi'
 
@@ -104,7 +104,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.52'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
 
     compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192")
