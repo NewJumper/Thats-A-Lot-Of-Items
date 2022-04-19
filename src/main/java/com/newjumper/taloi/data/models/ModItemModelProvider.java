@@ -58,67 +58,47 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("marble_stairs", modLoc("block/marble_stairs"));
         withExistingParent("marble_wall", modLoc("block/marble_wall_inventory"));
 
-        // ALUMINUM
+        // ORES & BLOCKS
         withExistingParent("aluminum_block", modLoc("block/aluminum_block"));
         withExistingParent("aluminum_ore", modLoc("block/aluminum_ore"));
         withExistingParent("deepslate_aluminum_ore", modLoc("block/deepslate_aluminum_ore"));
         withExistingParent("raw_aluminum_block", modLoc("block/raw_aluminum_block"));
-
-        // IRIDIUM
         withExistingParent("iridium_block", modLoc("block/iridium_block"));
         withExistingParent("iridium_ore", modLoc("block/iridium_ore"));
         withExistingParent("deepslate_iridium_ore", modLoc("block/deepslate_iridium_ore"));
         withExistingParent("raw_iridium_block", modLoc("block/raw_iridium_block"));
-
-        // LEAD
         withExistingParent("lead_block", modLoc("block/lead_block"));
         withExistingParent("lead_ore", modLoc("block/lead_ore"));
         withExistingParent("deepslate_lead_ore", modLoc("block/deepslate_lead_ore"));
         withExistingParent("raw_lead_block", modLoc("block/raw_lead_block"));
-
-        // MAGNESIUM
         withExistingParent("magnesium_block", modLoc("block/magnesium_block"));
         withExistingParent("magnesium_ore", modLoc("block/magnesium_ore"));
         withExistingParent("deepslate_magnesium_ore", modLoc("block/deepslate_magnesium_ore"));
         withExistingParent("raw_magnesium_block", modLoc("block/raw_magnesium_block"));
-
-        // OSMIUM
         withExistingParent("osmium_block", modLoc("block/osmium_block"));
         withExistingParent("osmium_ore", modLoc("block/osmium_ore"));
         withExistingParent("deepslate_osmium_ore", modLoc("block/deepslate_osmium_ore"));
         withExistingParent("raw_osmium_block", modLoc("block/raw_osmium_block"));
-
-        // PLATINUM
         withExistingParent("platinum_block", modLoc("block/platinum_block"));
         withExistingParent("platinum_ore", modLoc("block/platinum_ore"));
         withExistingParent("deepslate_platinum_ore", modLoc("block/deepslate_platinum_ore"));
         withExistingParent("raw_platinum_block", modLoc("block/raw_platinum_block"));
-
-        // SILICON
         withExistingParent("silicon_block", modLoc("block/silicon_block"));
         withExistingParent("silicon_ore", modLoc("block/silicon_ore"));
         withExistingParent("deepslate_silicon_ore", modLoc("block/deepslate_silicon_ore"));
         withExistingParent("raw_silicon_block", modLoc("block/raw_silicon_block"));
-
-        // TIN
         withExistingParent("tin_block", modLoc("block/tin_block"));
         withExistingParent("tin_ore", modLoc("block/tin_ore"));
         withExistingParent("deepslate_tin_ore", modLoc("block/deepslate_tin_ore"));
         withExistingParent("raw_tin_block", modLoc("block/raw_tin_block"));
-
-        // TUNGSTEN
         withExistingParent("tungsten_block", modLoc("block/tungsten_block"));
         withExistingParent("tungsten_ore", modLoc("block/tungsten_ore"));
         withExistingParent("deepslate_tungsten_ore", modLoc("block/deepslate_tungsten_ore"));
         withExistingParent("raw_tungsten_block", modLoc("block/raw_tungsten_block"));
-
-        // URANIUM
         withExistingParent("uranium_block", modLoc("block/uranium_block"));
         withExistingParent("uranium_ore", modLoc("block/uranium_ore"));
         withExistingParent("deepslate_uranium_ore", modLoc("block/deepslate_uranium_ore"));
         withExistingParent("raw_uranium_block", modLoc("block/raw_uranium_block"));
-
-        // ZINC
         withExistingParent("zinc_block", modLoc("block/zinc_block"));
         withExistingParent("zinc_ore", modLoc("block/zinc_ore"));
         withExistingParent("deepslate_zinc_ore", modLoc("block/deepslate_zinc_ore"));
@@ -137,6 +117,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("beta_hydraulic_press", modLoc("block/beta_hydraulic_press"));
         withExistingParent("unstable_hydraulic_press", modLoc("block/unstable_hydraulic_press"));
 
+        withExistingParent("alpha_processor", modLoc("block/alpha_processor"));
+        withExistingParent("beta_processor", modLoc("block/beta_processor"));
+        withExistingParent("unstable_processor", modLoc("block/unstable_processor"));
+
         withExistingParent("alpha_smeltery", modLoc("block/alpha_smeltery"));
         withExistingParent("beta_smeltery", modLoc("block/beta_smeltery"));
         withExistingParent("unstable_smeltery", modLoc("block/unstable_smeltery"));
@@ -144,49 +128,34 @@ public class ModItemModelProvider extends ItemModelProvider {
         // CONCRETE
         withExistingParent("white_concrete_slab", modLoc("block/white_concrete_slab"));
         withExistingParent("white_concrete_stairs", modLoc("block/white_concrete_stairs"));
-
         withExistingParent("orange_concrete_slab", modLoc("block/orange_concrete_slab"));
         withExistingParent("orange_concrete_stairs", modLoc("block/orange_concrete_stairs"));
-
         withExistingParent("magenta_concrete_slab", modLoc("block/magenta_concrete_slab"));
         withExistingParent("magenta_concrete_stairs", modLoc("block/magenta_concrete_stairs"));
-
         withExistingParent("light_blue_concrete_slab", modLoc("block/light_blue_concrete_slab"));
         withExistingParent("light_blue_concrete_stairs", modLoc("block/light_blue_concrete_stairs"));
-
         withExistingParent("yellow_concrete_slab", modLoc("block/yellow_concrete_slab"));
         withExistingParent("yellow_concrete_stairs", modLoc("block/yellow_concrete_stairs"));
-
         withExistingParent("lime_concrete_slab", modLoc("block/lime_concrete_slab"));
         withExistingParent("lime_concrete_stairs", modLoc("block/lime_concrete_stairs"));
-
         withExistingParent("pink_concrete_slab", modLoc("block/pink_concrete_slab"));
         withExistingParent("pink_concrete_stairs", modLoc("block/pink_concrete_stairs"));
-
         withExistingParent("gray_concrete_slab", modLoc("block/gray_concrete_slab"));
         withExistingParent("gray_concrete_stairs", modLoc("block/gray_concrete_stairs"));
-
         withExistingParent("light_gray_concrete_slab", modLoc("block/light_gray_concrete_slab"));
         withExistingParent("light_gray_concrete_stairs", modLoc("block/light_gray_concrete_stairs"));
-
         withExistingParent("cyan_concrete_slab", modLoc("block/cyan_concrete_slab"));
         withExistingParent("cyan_concrete_stairs", modLoc("block/cyan_concrete_stairs"));
-
         withExistingParent("purple_concrete_slab", modLoc("block/purple_concrete_slab"));
         withExistingParent("purple_concrete_stairs", modLoc("block/purple_concrete_stairs"));
-
         withExistingParent("blue_concrete_slab", modLoc("block/blue_concrete_slab"));
         withExistingParent("blue_concrete_stairs", modLoc("block/blue_concrete_stairs"));
-
         withExistingParent("brown_concrete_slab", modLoc("block/brown_concrete_slab"));
         withExistingParent("brown_concrete_stairs", modLoc("block/brown_concrete_stairs"));
-
         withExistingParent("green_concrete_slab", modLoc("block/green_concrete_slab"));
         withExistingParent("green_concrete_stairs", modLoc("block/green_concrete_stairs"));
-
         withExistingParent("red_concrete_slab", modLoc("block/red_concrete_slab"));
         withExistingParent("red_concrete_stairs", modLoc("block/red_concrete_stairs"));
-
         withExistingParent("black_concrete_slab", modLoc("block/black_concrete_slab"));
         withExistingParent("black_concrete_stairs", modLoc("block/black_concrete_stairs"));
 
@@ -196,48 +165,29 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("gravity_block", modLoc("block/gravity_block"));
         withExistingParent("speedy_block", modLoc("block/speedy_block"));
 
+
         // - ITEMS -
-        // ALUMINUM
+        // NATURAL INGOTS & RAW
         getBuilder("aluminum_ingot").parent(itemGenerated).texture("layer0", "item/aluminum_ingot");
         getBuilder("raw_aluminum").parent(itemGenerated).texture("layer0", "item/raw_aluminum");
-
-        // IRIDIUM
         getBuilder("iridium_ingot").parent(itemGenerated).texture("layer0", "item/iridium_ingot");
         getBuilder("raw_iridium").parent(itemGenerated).texture("layer0", "item/raw_iridium");
-
-        // LEAD
         getBuilder("lead_ingot").parent(itemGenerated).texture("layer0", "item/lead_ingot");
         getBuilder("raw_lead").parent(itemGenerated).texture("layer0", "item/raw_lead");
-
-        // MAGNESIUM
         getBuilder("magnesium_ingot").parent(itemGenerated).texture("layer0", "item/magnesium_ingot");
         getBuilder("raw_magnesium").parent(itemGenerated).texture("layer0", "item/raw_magnesium");
-
-        // OSMIUM
         getBuilder("osmium_ingot").parent(itemGenerated).texture("layer0", "item/osmium_ingot");
         getBuilder("raw_osmium").parent(itemGenerated).texture("layer0", "item/raw_osmium");
-
-        // PLATINUM
         getBuilder("platinum_ingot").parent(itemGenerated).texture("layer0", "item/platinum_ingot");
         getBuilder("raw_platinum").parent(itemGenerated).texture("layer0", "item/raw_platinum");
-
-        // SILICON
         getBuilder("silicon").parent(itemGenerated).texture("layer0", "item/silicon");
         getBuilder("raw_silicon").parent(itemGenerated).texture("layer0", "item/raw_silicon");
-
-        // TIN
         getBuilder("tin_ingot").parent(itemGenerated).texture("layer0", "item/tin_ingot");
         getBuilder("raw_tin").parent(itemGenerated).texture("layer0", "item/raw_tin");
-
-        // TUNGSTEN
         getBuilder("tungsten_ingot").parent(itemGenerated).texture("layer0", "item/tungsten_ingot");
         getBuilder("raw_tungsten").parent(itemGenerated).texture("layer0", "item/raw_tungsten");
-
-        // URANIUM
         getBuilder("refined_uranium").parent(itemGenerated).texture("layer0", "item/refined_uranium");
         getBuilder("raw_uranium").parent(itemGenerated).texture("layer0", "item/raw_uranium");
-
-        // ZINC
         getBuilder("zinc_ingot").parent(itemGenerated).texture("layer0", "item/zinc_ingot");
         getBuilder("raw_zinc").parent(itemGenerated).texture("layer0", "item/raw_zinc");
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "side": "taloi:block/alpha_processor_side",
+    "front": "taloi:block/processor_front",
+    "top": "taloi:block/processor_top"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "taloi:block/beta_processor"
+    },
+    "facing=south": {
+      "model": "taloi:block/beta_processor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "taloi:block/beta_processor",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "taloi:block/beta_processor",
+      "y": 90
+    }
+  }
+}

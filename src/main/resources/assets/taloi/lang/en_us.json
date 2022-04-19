@@ -109,6 +109,10 @@
   "block.taloi.beta_hydraulic_press" : "Beta Hydraulic Press",
   "block.taloi.unstable_hydraulic_press" : "Unstable Hydraulic Press",
 
+  "block.taloi.alpha_processor" : "Alpha Processor",
+  "block.taloi.beta_processor" : "Beta Processor",
+  "block.taloi.unstable_processor" : "Unstable Processor",
+
   "block.taloi.alpha_smeltery" : "Alpha Smeltery",
   "block.taloi.beta_smeltery" : "Beta Smeltery",
   "block.taloi.unstable_smeltery" : "Unstable Smeltery",

@@ -137,6 +137,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_HYDRAULIC_PRESS.get(), modLoc("block/beta_hydraulic_press_side"), modLoc("block/hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
         horizontalBlock(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), modLoc("block/unstable_hydraulic_press_side"), modLoc("block/unstable_hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
 
+        horizontalBlock(ModBlocks.ALPHA_PROCESSOR.get(), modLoc("block/alpha_processor_side"), modLoc("block/processor_front"), modLoc("block/processor_top"));
+        horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), modLoc("block/beta_processor_side"), modLoc("block/processor_front"), modLoc("block/processor_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), modLoc("block/unstable_processor_side"), modLoc("block/unstable_processor_front"), modLoc("block/processor_top"));
+
         horizontalBlock(ModBlocks.ALPHA_SMELTERY.get(), modLoc("block/alpha_smeltery_side"), modLoc("block/smeltery_front"), modLoc("block/smeltery_top"));
         horizontalBlock(ModBlocks.BETA_SMELTERY.get(), modLoc("block/beta_smeltery_side"), modLoc("block/smeltery_front"), modLoc("block/smeltery_top"));
         horizontalBlock(ModBlocks.UNSTABLE_SMELTERY.get(), modLoc("block/unstable_smeltery_side"), modLoc("block/unstable_smeltery_front"), modLoc("block/smeltery_top"));
