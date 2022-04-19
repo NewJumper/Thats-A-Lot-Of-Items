@@ -9,7 +9,7 @@
 
 TALOI brings a lot more into the world of Minecraft. Ranging from tons of new ores, machinery, items, blocks, and a bunch of other random stuff, this mod will bring diversity and more creativity into your world.
 
-This mod is only available on Forge, there are not plans for Fabric, yet.
+This mod is only available on Forge, there are no plans for Fabric, yet.
 
 Changelog of TALOI can be found in releases, along with the mod file for the specific version. As a reminder, the mod is still in beta, so there will be bugs, crashes, or something is missing. If that is the case, create a new issue and I will hopefully try to get it fixed!
 
