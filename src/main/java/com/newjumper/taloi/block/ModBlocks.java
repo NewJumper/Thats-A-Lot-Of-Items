@@ -261,33 +261,33 @@ public class ModBlocks {
 
     // MACHINERY
     public static final RegistryObject<Block> ALPHA_CONSTRUCTOR = registerBlock("alpha_constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> BETA_CONSTRUCTOR = registerBlock("beta_constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_CONSTRUCTOR = registerBlock("unstable_constructor", () -> new UnstableConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
     public static final RegistryObject<Block> ALPHA_HYDRAULIC_PRESS = registerBlock("alpha_hydraulic_press", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> BETA_HYDRAULIC_PRESS = registerBlock("beta_hydraulic_press", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_HYDRAULIC_PRESS = registerBlock("unstable_hydraulic_press", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
     public static final RegistryObject<Block> ALPHA_SMELTERY = registerBlock("alpha_smeltery", () -> new SmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> BETA_SMELTERY = registerBlock("beta_smeltery", () -> new SmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_SMELTERY = registerBlock("unstable_smeltery", () -> new SmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4.5f)
+            .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
     // CONCRETE STAIRS & SLABS
