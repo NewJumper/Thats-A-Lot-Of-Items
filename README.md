@@ -1,5 +1,5 @@
-<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/mc-1.18.x/src/main/resources/logo_banner_dark.png#gh-dark-mode-only" alt="Logo" width="1024"></p>
-<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/mc-1.18.x/src/main/resources/logo_banner_light.png#gh-light-mode-only" alt="Logo" width="1024"></p>
+<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/mc-1.18.x/src/main/resources/banner_dark.png#gh-dark-mode-only" alt="Logo" width="1024"></p>
+<p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/mc-1.18.x/src/main/resources/banner_light.png#gh-light-mode-only" alt="Logo" width="1024"></p>
 <h1 align="center">
   <a href="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"><img src="https://img.shields.io/badge/Mod Version-0.17.0-54c3d6"></a>
   <a><img src="https://img.shields.io/badge/Minecraft Ver.-1.18.2-71c46e"></a>
