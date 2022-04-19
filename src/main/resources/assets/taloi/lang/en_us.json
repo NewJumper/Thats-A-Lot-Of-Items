@@ -205,6 +205,11 @@
   "item.taloi.steel_plate" : "Steel Plate",
   "item.taloi.tungsten_plate" : "Tungsten Plate",
 
+  "item.taloi.futurite_infused_netherite_ingot" : "Futurite Infused Netherite Ingot",
+  "item.taloi.sermium_infused_netherite_ingot" : "Sermium Infused Netherite Ingot",
+  "item.taloi.sermium_core" : "Sermium Core",
+  "item.taloi.sermium_oxide" : "Sermium Oxide",
+
   "item.taloi.aluminum_nugget" : "Aluminum Nugget",
   "item.taloi.iridium_nugget" : "Iridium Nugget",
   "item.taloi.lead_nugget" : "Lead Nugget",
@@ -216,9 +221,6 @@
   "item.taloi.uranium_bit" : "Uranium Bit",
   "item.taloi.zinc_nugget" : "Zinc Nugget",
   "item.taloi.futurite_bit" : "Futurite Bit",
-
-  "item.taloi.sermium_core" : "Sermium Core",
-  "item.taloi.sermium_oxide" : "Sermium Oxide",
 
   "item.taloi.destabilized_futurite_apple" : "Destabilized Futurite Apple",
   "item.taloi.diamond_apple" : "Diamond Apple",

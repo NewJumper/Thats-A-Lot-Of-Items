@@ -4,7 +4,7 @@
     "item": "minecraft:netherite_axe"
   },
   "addition": {
-    "item": "taloi:sermium_plate"
+    "item": "taloi:sermium_infused_netherite_ingot"
   },
   "result": {
     "item": "taloi:sermium_axe"

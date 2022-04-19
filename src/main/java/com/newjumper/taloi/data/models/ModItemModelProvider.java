@@ -275,6 +275,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("steel_plate").parent(itemGenerated).texture("layer0", "item/steel_plate");
         getBuilder("tungsten_plate").parent(itemGenerated).texture("layer0", "item/tungsten_plate");
 
+        // PROCESSING
+        getBuilder("futurite_infused_netherite_ingot").parent(itemGenerated).texture("layer0", "item/futurite_infused_netherite_ingot");
+        getBuilder("sermium_infused_netherite_ingot").parent(itemGenerated).texture("layer0", "item/sermium_infused_netherite_ingot");
+        getBuilder("sermium_core").parent(itemGenerated).texture("layer0", "item/sermium_core");
+        getBuilder("sermium_oxide").parent(itemGenerated).texture("layer0", "item/sermium_oxide");
+
         // NUGGETS
         getBuilder("aluminum_nugget").parent(itemGenerated).texture("layer0", "item/aluminum_nugget");
         getBuilder("iridium_nugget").parent(itemGenerated).texture("layer0", "item/iridium_nugget");
@@ -368,7 +374,5 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // MISC
         getBuilder("music_disc_the_caves").parent(itemGenerated).texture("layer0", "item/music_disc_the_caves");
-        getBuilder("sermium_core").parent(itemGenerated).texture("layer0", "item/sermium_core");
-        getBuilder("sermium_oxide").parent(itemGenerated).texture("layer0", "item/sermium_oxide");
     }
 }
