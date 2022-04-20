@@ -3,12 +3,15 @@
   "values": [
     "taloi:platinum_block",
     "taloi:platinum_ore",
+    "taloi:deepslate_platinum_ore",
     "taloi:raw_platinum_block",
     "taloi:tungsten_block",
     "taloi:tungsten_ore",
+    "taloi:deepslate_tungsten_ore",
     "taloi:raw_tungsten_block",
     "taloi:uranium_block",
     "taloi:uranium_ore",
+    "taloi:deepslate_uranium_ore",
     "taloi:raw_uranium_block"
   ]
 }
