@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RPR",
+    "BMS",
+    "IFI"
+  ],
+  "key": {
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
+    "P": {
+      "item": "minecraft:blaze_powder"
+    },
+    "B": {
+      "item": "minecraft:blast_furnace"
+    },
+    "S": {
+      "item": "minecraft:smoker"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "M": {
+      "item": "taloi:alpha_machine_frame"
+    },
+    "I": {
+      "item": "taloi:silicon_plate"
+    }
+  },
+  "result": {
+    "item": "taloi:alpha_smeltery"
+  }
+}

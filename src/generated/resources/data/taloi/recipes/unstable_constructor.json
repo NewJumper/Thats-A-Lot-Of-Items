@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI",
+    "TMT",
+    "IBI"
+  ],
+  "key": {
+    "I": {
+      "item": "taloi:induction_plate"
+    },
+    "S": {
+      "item": "taloi:steel_plate"
+    },
+    "T": {
+      "item": "taloi:tungsten_plate"
+    },
+    "M": {
+      "item": "taloi:unstable_machine_frame"
+    },
+    "B": {
+      "item": "taloi:beta_constructor"
+    }
+  },
+  "result": {
+    "item": "taloi:unstable_constructor"
+  }
+}

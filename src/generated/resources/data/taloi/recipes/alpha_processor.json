@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RCR",
+    "BMB",
+    "SIS"
+  ],
+  "key": {
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
+    "I": {
+      "tag": "forge:ingots/copper"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "item": "minecraft:coal_block"
+    },
+    "M": {
+      "item": "taloi:alpha_machine_frame"
+    },
+    "S": {
+      "item": "taloi:silicon_plate"
+    }
+  },
+  "result": {
+    "item": "taloi:alpha_processor"
+  }
+}

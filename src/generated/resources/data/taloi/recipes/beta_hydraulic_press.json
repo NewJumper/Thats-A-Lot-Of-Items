@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CHC",
+    "GMG",
+    "EAE"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "C": {
+      "item": "taloi:coal_infused_iron_ingot"
+    },
+    "H": {
+      "item": "taloi:hardened_carbonite"
+    },
+    "M": {
+      "item": "taloi:beta_machine_frame"
+    },
+    "E": {
+      "item": "taloi:emerald_infused_zinc_ingot"
+    },
+    "A": {
+      "item": "taloi:alpha_hydraulic_press"
+    }
+  },
+  "result": {
+    "item": "taloi:beta_hydraulic_press"
+  }
+}

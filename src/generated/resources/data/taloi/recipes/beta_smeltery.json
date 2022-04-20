@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EHE",
+    "GMG",
+    "DAD"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "E": {
+      "item": "taloi:emerald_infused_tungsten_ingot"
+    },
+    "H": {
+      "item": "taloi:hardened_carbonite"
+    },
+    "M": {
+      "item": "taloi:beta_machine_frame"
+    },
+    "D": {
+      "item": "taloi:diamond_infused_uranium"
+    },
+    "A": {
+      "item": "taloi:alpha_smeltery"
+    }
+  },
+  "result": {
+    "item": "taloi:beta_smeltery"
+  }
+}

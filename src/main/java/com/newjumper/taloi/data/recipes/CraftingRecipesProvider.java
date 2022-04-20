@@ -11,6 +11,8 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -714,9 +716,9 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
         // MACHINERY
         ShapedRecipeBuilder.shaped(ModItems.ALPHA_MACHINE_FRAME.get(), 1)
-                .define('R', Items.REDSTONE)
-                .define('G', Items.GLASS)
-                .define('O', Items.OBSIDIAN)
+                .define('R', Tags.Items.DUSTS_REDSTONE)
+                .define('G', Blocks.GLASS)
+                .define('O', Blocks.OBSIDIAN)
                 .define('C', ModItems.COPPER_PLATE.get())
                 .define('S', ModItems.STEEL_PLATE.get())
                 .pattern("RCR")
@@ -724,8 +726,8 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("ROR")
                 .unlockedBy("has_material", has(ModItems.STEEL_PLATE.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.BETA_MACHINE_FRAME.get(), 1)
-                .define('G', Items.GOLD_INGOT)
-                .define('O', Items.OBSIDIAN)
+                .define('G', Tags.Items.INGOTS_GOLD)
+                .define('O', Blocks.OBSIDIAN)
                 .define('C', ModItems.REINFORCED_COPPER_PLATE.get())
                 .define('A', ModItems.ALLOY_PLATE.get())
                 .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
@@ -734,7 +736,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("GOG")
                 .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.UNSTABLE_MACHINE_FRAME.get(), 1)
-                .define('O', Items.OBSIDIAN)
+                .define('O', Blocks.OBSIDIAN)
                 .define('D', ModItems.DIAMOND_PLATE.get())
                 .define('C', ModItems.REINFORCED_COPPER_PLATE.get())
                 .define('A', ModItems.ALLOY_PLATE.get())
@@ -743,6 +745,141 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("AMA")
                 .pattern("DOD")
                 .unlockedBy("has_material", has(ModItems.BETA_MACHINE_FRAME.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.ALPHA_CONSTRUCTOR.get(), 1)
+                .define('R', Tags.Items.DUSTS_REDSTONE)
+                .define('B', Tags.Items.SLIMEBALLS)
+                .define('C', Tags.Items.INGOTS_COPPER)
+                .define('S', ModItems.STEEL_INGOT.get())
+                .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
+                .define('P', ModItems.SILICON_PLATE.get())
+                .pattern("RBR")
+                .pattern("SMS")
+                .pattern("PCP")
+                .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BETA_CONSTRUCTOR.get(), 1)
+                .define('G', Blocks.GLASS)
+                .define('C', ModItems.COAL_INFUSED_LEAD_INGOT.get())
+                .define('H', ModItems.HARDENED_CARBONITE.get())
+                .define('M', ModItems.BETA_MACHINE_FRAME.get())
+                .define('D', ModItems.DIAMOND_INFUSED_TIN_INGOT.get())
+                .define('A', ModBlocks.ALPHA_CONSTRUCTOR.get())
+                .pattern("CHC")
+                .pattern("GMG")
+                .pattern("DAD")
+                .unlockedBy("has_material", has(ModBlocks.ALPHA_CONSTRUCTOR.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), 1)
+                .define('I', ModItems.INDUCTION_PLATE.get())
+                .define('S', ModItems.STEEL_PLATE.get())
+                .define('T', ModItems.TUNGSTEN_PLATE.get())
+                .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
+                .define('B', ModBlocks.BETA_CONSTRUCTOR.get())
+                .pattern("ISI")
+                .pattern("TMT")
+                .pattern("IBI")
+                .unlockedBy("has_material", has(ModBlocks.BETA_CONSTRUCTOR.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), 1)
+                .define('R', Tags.Items.DUSTS_REDSTONE)
+                .define('C', Tags.Items.INGOTS_COPPER)
+                .define('I', Blocks.IRON_BLOCK)
+                .define('G', Blocks.GLASS)
+                .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
+                .define('S', ModItems.SILICON_PLATE.get())
+                .pattern("RIR")
+                .pattern("GMG")
+                .pattern("SCS")
+                .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BETA_HYDRAULIC_PRESS.get(), 1)
+                .define('G', Blocks.GLASS)
+                .define('C', ModItems.COAL_INFUSED_IRON_INGOT.get())
+                .define('H', ModItems.HARDENED_CARBONITE.get())
+                .define('M', ModItems.BETA_MACHINE_FRAME.get())
+                .define('E', ModItems.EMERALD_INFUSED_ZINC_INGOT.get())
+                .define('A', ModBlocks.ALPHA_HYDRAULIC_PRESS.get())
+                .pattern("CHC")
+                .pattern("GMG")
+                .pattern("EAE")
+                .unlockedBy("has_material", has(ModBlocks.ALPHA_HYDRAULIC_PRESS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), 1)
+                .define('E', ModItems.EMERALD_INFUSED_OSMIUM_INGOT.get())
+                .define('T', ModItems.TUNGSTEN_PLATE.get())
+                .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
+                .define('S', ModItems.SEMICONDUCTOR_PLATE.get())
+                .define('B', ModBlocks.BETA_HYDRAULIC_PRESS.get())
+                .pattern("ETE")
+                .pattern("TMT")
+                .pattern("SBS")
+                .unlockedBy("has_material", has(ModBlocks.BETA_HYDRAULIC_PRESS.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.ALPHA_PROCESSOR.get(), 1)
+                .define('R', Tags.Items.DUSTS_REDSTONE)
+                .define('I', Tags.Items.INGOTS_COPPER)
+                .define('B', Items.BLAZE_POWDER)
+                .define('C', Blocks.COAL_BLOCK)
+                .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
+                .define('S', ModItems.SILICON_PLATE.get())
+                .pattern("RCR")
+                .pattern("BMB")
+                .pattern("SIS")
+                .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BETA_PROCESSOR.get(), 1)
+                .define('G', Blocks.GLASS)
+                .define('E', ModItems.EMERALD_INFUSED_OSMIUM_INGOT.get())
+                .define('H', ModItems.HARDENED_CARBONITE.get())
+                .define('M', ModItems.BETA_MACHINE_FRAME.get())
+                .define('D', ModItems.DIAMOND_INFUSED_URANIUM.get())
+                .define('A', ModBlocks.ALPHA_PROCESSOR.get())
+                .pattern("EHE")
+                .pattern("GMG")
+                .pattern("DAD")
+                .unlockedBy("has_material", has(ModBlocks.ALPHA_PROCESSOR.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_PROCESSOR.get(), 1)
+                .define('F', ModItems.FORGE_PLATE.get())
+                .define('S', ModItems.SERMIUM_PLATE.get())
+                .define('T', ModItems.TUNGSTEN_PLATE.get())
+                .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
+                .define('I', ModItems.INDUCTION_PLATE.get())
+                .define('B', ModBlocks.BETA_PROCESSOR.get())
+                .pattern("FSF")
+                .pattern("TMT")
+                .pattern("IBI")
+                .unlockedBy("has_material", has(ModBlocks.BETA_PROCESSOR.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.ALPHA_SMELTERY.get(), 1)
+                .define('R', Tags.Items.DUSTS_REDSTONE)
+                .define('P', Items.BLAZE_POWDER)
+                .define('B', Blocks.BLAST_FURNACE)
+                .define('S', Blocks.SMOKER)
+                .define('F', Blocks.FURNACE)
+                .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
+                .define('I', ModItems.SILICON_PLATE.get())
+                .pattern("RPR")
+                .pattern("BMS")
+                .pattern("IFI")
+                .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BETA_SMELTERY.get(), 1)
+                .define('G', Blocks.GLASS)
+                .define('E', ModItems.EMERALD_INFUSED_TUNGSTEN_INGOT.get())
+                .define('H', ModItems.HARDENED_CARBONITE.get())
+                .define('M', ModItems.BETA_MACHINE_FRAME.get())
+                .define('D', ModItems.DIAMOND_INFUSED_URANIUM.get())
+                .define('A', ModBlocks.ALPHA_SMELTERY.get())
+                .pattern("EHE")
+                .pattern("GMG")
+                .pattern("DAD")
+                .unlockedBy("has_material", has(ModBlocks.ALPHA_SMELTERY.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_SMELTERY.get(), 1)
+                .define('F', ModItems.FORGE_PLATE.get())
+                .define('S', ModItems.SERMIUM_PLATE.get())
+                .define('T', ModItems.TUNGSTEN_PLATE.get())
+                .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
+                .define('I', ModItems.INDUCTION_PLATE.get())
+                .define('B', ModBlocks.BETA_SMELTERY.get())
+                .pattern("FSF")
+                .pattern("TMT")
+                .pattern("IBI")
+                .unlockedBy("has_material", has(ModBlocks.BETA_SMELTERY.get())).save(consumer);
 
         // FOOD
         ShapedRecipeBuilder.shaped(ModItems.DIAMOND_APPLE.get(), 1)

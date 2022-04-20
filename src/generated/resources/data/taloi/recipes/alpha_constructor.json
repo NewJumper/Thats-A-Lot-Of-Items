@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RBR",
+    "SMS",
+    "PCP"
+  ],
+  "key": {
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
+    "B": {
+      "tag": "forge:slimeballs"
+    },
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "S": {
+      "item": "taloi:steel_ingot"
+    },
+    "M": {
+      "item": "taloi:alpha_machine_frame"
+    },
+    "P": {
+      "item": "taloi:silicon_plate"
+    }
+  },
+  "result": {
+    "item": "taloi:alpha_constructor"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CHC",
+    "GMG",
+    "DAD"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "C": {
+      "item": "taloi:coal_infused_lead_ingot"
+    },
+    "H": {
+      "item": "taloi:hardened_carbonite"
+    },
+    "M": {
+      "item": "taloi:beta_machine_frame"
+    },
+    "D": {
+      "item": "taloi:diamond_infused_tin_ingot"
+    },
+    "A": {
+      "item": "taloi:alpha_constructor"
+    }
+  },
+  "result": {
+    "item": "taloi:beta_constructor"
+  }
+}
