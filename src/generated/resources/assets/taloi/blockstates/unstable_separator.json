@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "taloi:block/unstable_separator"
+    },
+    "facing=south": {
+      "model": "taloi:block/unstable_separator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "taloi:block/unstable_separator",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "taloi:block/unstable_separator",
+      "y": 90
+    }
+  }
+}

@@ -134,6 +134,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.BETA_PROCESSOR.get());
         this.dropSelf(ModBlocks.UNSTABLE_PROCESSOR.get());
 
+        this.dropSelf(ModBlocks.ALPHA_SEPARATOR.get());
+        this.dropSelf(ModBlocks.BETA_SEPARATOR.get());
+        this.dropSelf(ModBlocks.UNSTABLE_SEPARATOR.get());
+
         this.dropSelf(ModBlocks.ALPHA_SMELTERY.get());
         this.dropSelf(ModBlocks.BETA_SMELTERY.get());
         this.dropSelf(ModBlocks.UNSTABLE_SMELTERY.get());

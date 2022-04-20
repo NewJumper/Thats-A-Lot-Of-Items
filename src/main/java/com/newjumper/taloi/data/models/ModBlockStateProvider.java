@@ -141,6 +141,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), modLoc("block/beta_processor_side"), modLoc("block/processor_front"), modLoc("block/processor_top"));
         horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), modLoc("block/unstable_processor_side"), modLoc("block/unstable_processor_front"), modLoc("block/processor_top"));
 
+        horizontalBlock(ModBlocks.ALPHA_SEPARATOR.get(), modLoc("block/alpha_separator_side"), modLoc("block/separator_front"), modLoc("block/separator_top"));
+        horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), modLoc("block/beta_separator_side"), modLoc("block/separator_front"), modLoc("block/separator_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), modLoc("block/unstable_separator_side"), modLoc("block/unstable_separator_front"), modLoc("block/separator_top"));
+
         horizontalBlock(ModBlocks.ALPHA_SMELTERY.get(), modLoc("block/alpha_smeltery_side"), modLoc("block/smeltery_front"), modLoc("block/smeltery_top"));
         horizontalBlock(ModBlocks.BETA_SMELTERY.get(), modLoc("block/beta_smeltery_side"), modLoc("block/smeltery_front"), modLoc("block/smeltery_top"));
         horizontalBlock(ModBlocks.UNSTABLE_SMELTERY.get(), modLoc("block/unstable_smeltery_side"), modLoc("block/unstable_smeltery_front"), modLoc("block/smeltery_top"));

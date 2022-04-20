@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "side": "taloi:block/unstable_separator_side",
+    "front": "taloi:block/unstable_separator_front",
+    "top": "taloi:block/separator_top"
+  }
+}

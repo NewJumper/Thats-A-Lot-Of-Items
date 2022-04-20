@@ -121,6 +121,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("beta_processor", modLoc("block/beta_processor"));
         withExistingParent("unstable_processor", modLoc("block/unstable_processor"));
 
+        withExistingParent("alpha_separator", modLoc("block/alpha_separator"));
+        withExistingParent("beta_separator", modLoc("block/beta_separator"));
+        withExistingParent("unstable_separator", modLoc("block/unstable_separator"));
+
         withExistingParent("alpha_smeltery", modLoc("block/alpha_smeltery"));
         withExistingParent("beta_smeltery", modLoc("block/beta_smeltery"));
         withExistingParent("unstable_smeltery", modLoc("block/unstable_smeltery"));
