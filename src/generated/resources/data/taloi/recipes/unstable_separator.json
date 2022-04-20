@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI",
+    "TMT",
+    "FBF"
+  ],
+  "key": {
+    "I": {
+      "item": "taloi:induction_plate"
+    },
+    "S": {
+      "item": "taloi:sermium_plate"
+    },
+    "T": {
+      "item": "taloi:tungsten_plate"
+    },
+    "M": {
+      "item": "taloi:unstable_machine_frame"
+    },
+    "F": {
+      "item": "taloi:forge_plate"
+    },
+    "B": {
+      "item": "taloi:beta_separator"
+    }
+  },
+  "result": {
+    "item": "taloi:unstable_separator"
+  }
+}

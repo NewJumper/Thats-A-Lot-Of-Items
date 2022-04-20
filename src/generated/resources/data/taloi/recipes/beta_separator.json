@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DHD",
+    "GMG",
+    "UAU"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "D": {
+      "item": "taloi:diamond_infused_steel_ingot"
+    },
+    "H": {
+      "item": "taloi:hardened_carbonite"
+    },
+    "M": {
+      "item": "taloi:beta_machine_frame"
+    },
+    "U": {
+      "item": "taloi:diamond_infused_uranium"
+    },
+    "A": {
+      "item": "taloi:alpha_separator"
+    }
+  },
+  "result": {
+    "item": "taloi:beta_separator"
+  }
+}
