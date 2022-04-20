@@ -835,15 +835,15 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("DAD")
                 .unlockedBy("has_material", has(ModBlocks.ALPHA_PROCESSOR.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_PROCESSOR.get(), 1)
-                .define('F', ModItems.FORGE_PLATE.get())
+                .define('I', ModItems.INDUCTION_PLATE.get())
                 .define('S', ModItems.SERMIUM_PLATE.get())
                 .define('T', ModItems.TUNGSTEN_PLATE.get())
                 .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
-                .define('I', ModItems.INDUCTION_PLATE.get())
+                .define('F', ModItems.FORGE_PLATE.get())
                 .define('B', ModBlocks.BETA_PROCESSOR.get())
-                .pattern("FSF")
+                .pattern("ISI")
                 .pattern("TMT")
-                .pattern("IBI")
+                .pattern("FBF")
                 .unlockedBy("has_material", has(ModBlocks.BETA_PROCESSOR.get())).save(consumer);
 
         ShapedRecipeBuilder.shaped(ModBlocks.ALPHA_SMELTERY.get(), 1)
@@ -870,15 +870,15 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("DAD")
                 .unlockedBy("has_material", has(ModBlocks.ALPHA_SMELTERY.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_SMELTERY.get(), 1)
-                .define('F', ModItems.FORGE_PLATE.get())
+                .define('I', ModItems.INDUCTION_PLATE.get())
                 .define('S', ModItems.SERMIUM_PLATE.get())
                 .define('T', ModItems.TUNGSTEN_PLATE.get())
                 .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
-                .define('I', ModItems.INDUCTION_PLATE.get())
+                .define('F', ModItems.FORGE_PLATE.get())
                 .define('B', ModBlocks.BETA_SMELTERY.get())
-                .pattern("FSF")
+                .pattern("ISI")
                 .pattern("TMT")
-                .pattern("IBI")
+                .pattern("FBF")
                 .unlockedBy("has_material", has(ModBlocks.BETA_SMELTERY.get())).save(consumer);
 
         // FOOD

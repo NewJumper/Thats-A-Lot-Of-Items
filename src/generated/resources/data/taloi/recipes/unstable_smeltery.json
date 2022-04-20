@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "FSF",
+    "ISI",
     "TMT",
-    "IBI"
+    "FBF"
   ],
   "key": {
-    "F": {
-      "item": "taloi:forge_plate"
+    "I": {
+      "item": "taloi:induction_plate"
     },
     "S": {
       "item": "taloi:sermium_plate"
@@ -18,8 +18,8 @@
     "M": {
       "item": "taloi:unstable_machine_frame"
     },
-    "I": {
-      "item": "taloi:induction_plate"
+    "F": {
+      "item": "taloi:forge_plate"
     },
     "B": {
       "item": "taloi:beta_smeltery"
