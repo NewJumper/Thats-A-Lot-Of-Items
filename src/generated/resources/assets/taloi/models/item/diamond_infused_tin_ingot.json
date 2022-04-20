@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "taloi:item/diamond_infused_tin_ingot"
+  }
+}

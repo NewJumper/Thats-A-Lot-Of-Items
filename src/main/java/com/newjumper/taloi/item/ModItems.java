@@ -82,6 +82,14 @@ public class ModItems {
     public static final RegistryObject<Item> TUNGSTEN_PLATE = ITEMS.register("tungsten_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
 
     // PROCESSING
+    public static final RegistryObject<Item> COAL_INFUSED_IRON_INGOT = ITEMS.register("coal_infused_iron_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> COAL_INFUSED_LEAD_INGOT = ITEMS.register("coal_infused_lead_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> DIAMOND_INFUSED_MAGNESIUM_INGOT = ITEMS.register("diamond_infused_magnesium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> DIAMOND_INFUSED_TIN_INGOT = ITEMS.register("diamond_infused_tin_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> DIAMOND_INFUSED_URANIUM = ITEMS.register("diamond_infused_uranium", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> EMERALD_INFUSED_OSMIUM_INGOT = ITEMS.register("emerald_infused_osmium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> EMERALD_INFUSED_TUNGSTEN_INGOT = ITEMS.register("emerald_infused_tungsten_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> EMERALD_INFUSED_ZINC_INGOT = ITEMS.register("emerald_infused_zinc_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> FUTURITE_INFUSED_NETHERITE_INGOT = ITEMS.register("futurite_infused_netherite_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> SERMIUM_INFUSED_NETHERITE_INGOT = ITEMS.register("sermium_infused_netherite_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> SERMIUM_CORE = ITEMS.register("sermium_core", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));

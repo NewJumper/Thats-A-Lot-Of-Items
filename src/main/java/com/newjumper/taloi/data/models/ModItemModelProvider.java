@@ -226,6 +226,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("tungsten_plate").parent(itemGenerated).texture("layer0", "item/tungsten_plate");
 
         // PROCESSING
+        getBuilder("coal_infused_iron_ingot").parent(itemGenerated).texture("layer0", "item/coal_infused_iron_ingot");
+        getBuilder("coal_infused_lead_ingot").parent(itemGenerated).texture("layer0", "item/coal_infused_lead_ingot");
+        getBuilder("diamond_infused_magnesium_ingot").parent(itemGenerated).texture("layer0", "item/diamond_infused_magnesium_ingot");
+        getBuilder("diamond_infused_tin_ingot").parent(itemGenerated).texture("layer0", "item/diamond_infused_tin_ingot");
+        getBuilder("diamond_infused_uranium").parent(itemGenerated).texture("layer0", "item/diamond_infused_uranium");
+        getBuilder("emerald_infused_osmium_ingot").parent(itemGenerated).texture("layer0", "item/emerald_infused_osmium_ingot");
+        getBuilder("emerald_infused_tungsten_ingot").parent(itemGenerated).texture("layer0", "item/emerald_infused_tungsten_ingot");
+        getBuilder("emerald_infused_zinc_ingot").parent(itemGenerated).texture("layer0", "item/emerald_infused_zinc_ingot");
         getBuilder("futurite_infused_netherite_ingot").parent(itemGenerated).texture("layer0", "item/futurite_infused_netherite_ingot");
         getBuilder("sermium_infused_netherite_ingot").parent(itemGenerated).texture("layer0", "item/sermium_infused_netherite_ingot");
         getBuilder("sermium_core").parent(itemGenerated).texture("layer0", "item/sermium_core");
