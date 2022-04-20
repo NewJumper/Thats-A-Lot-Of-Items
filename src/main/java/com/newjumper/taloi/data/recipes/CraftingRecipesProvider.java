@@ -883,7 +883,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
         // FOOD
         ShapedRecipeBuilder.shaped(ModItems.DIAMOND_APPLE.get(), 1)
-                .define('D', Items.DIAMOND)
+                .define('D', Tags.Items.GEMS_DIAMOND)
                 .define('G', Items.GOLDEN_APPLE)
                 .pattern("DDD")
                 .pattern("DGD")
@@ -911,7 +911,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ModItems.SERMIUM_OXIDE.get(), 2)
-                .requires(Items.IRON_INGOT)
+                .requires(Tags.Items.INGOTS_IRON)
                 .requires(ModItems.SERMIUM_CORE.get())
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
     }
