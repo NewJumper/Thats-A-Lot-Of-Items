@@ -84,7 +84,7 @@ public class ModItems {
     // PROCESSING
     public static final RegistryObject<Item> COAL_INFUSED_IRON_INGOT = ITEMS.register("coal_infused_iron_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> COAL_INFUSED_LEAD_INGOT = ITEMS.register("coal_infused_lead_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
-    public static final RegistryObject<Item> DIAMOND_INFUSED_MAGNESIUM_INGOT = ITEMS.register("diamond_infused_magnesium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
+    public static final RegistryObject<Item> DIAMOND_INFUSED_STEEL_INGOT = ITEMS.register("diamond_infused_steel_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> DIAMOND_INFUSED_TIN_INGOT = ITEMS.register("diamond_infused_tin_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> DIAMOND_INFUSED_URANIUM = ITEMS.register("diamond_infused_uranium", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
     public static final RegistryObject<Item> EMERALD_INFUSED_OSMIUM_INGOT = ITEMS.register("emerald_infused_osmium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB)));
