@@ -9,9 +9,8 @@
 
 TALOI brings a lot more into the world of Minecraft. Ranging from tons of new ores, machinery, items, blocks, and a bunch of other random stuff, this mod will bring diversity and more creativity into your world.
 
-TALOI is available for download on CurseForge [here](https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items)
 The mod is only available on Forge, there are no plans for Fabric, yet.
 
-Changelog of TALOI can be found in releases, along with the mod file for the specific version. As a reminder, the mod is still in beta, so there will be bugs, crashes, and some things missing. If that is the case, create a new issue and I will hopefully try to get it fixed!
+Changelog of TALOI can be found in releases, along with the mod file for the specific version. TALOI is available for download on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items). As a reminder, the mod is still in beta, so there will be bugs, crashes, and some things missing. If that is the case, create a new issue and I will hopefully try to get it fixed!
 
 ###### *Wiki: https://newjumper.github.io/Thats-A-Lot-Of-Items/* no more wiki
