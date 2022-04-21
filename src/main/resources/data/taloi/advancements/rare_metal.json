@@ -1,31 +1,28 @@
 {
-  "parent": "taloi:construct_alloy",
+  "parent": "taloi:root",
   "display": {
     "icon": {
-      "item": "taloi:sermium"
+      "item": "taloi:tungsten_ingot"
     },
     "title": {
-      "translate": "advancements.taloi.obtain_sermium.title"
+      "translate": "advancements.taloi.rare_metal.title"
     },
     "description": {
-      "translate": "advancements.taloi.obtain_sermium.description"
+      "translate": "advancements.taloi.rare_metal.description"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "rewards": {
-    "experience": 25
-  },
   "criteria": {
-    "sermium": {
+    "tungsten": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:sermium"
+              "taloi:raw_tungsten"
             ]
           }
         ]
@@ -34,7 +31,7 @@
   },
   "requirements": [
     [
-      "sermium"
+      "tungsten"
     ]
   ]
 }

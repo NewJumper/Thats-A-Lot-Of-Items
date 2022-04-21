@@ -1,40 +1,40 @@
 {
+  "parent": "taloi:machinery",
   "display": {
     "icon": {
-      "item": "taloi:evergreen_log"
+      "item": "taloi:coal_infused_iron_ingot"
     },
     "title": {
-      "translate": "advancements.taloi.root.title"
+      "translate": "advancements.taloi.infuse_ingot.title"
     },
     "description": {
-      "translate": "advancements.taloi.root.description"
+      "translate": "advancements.taloi.infuse_ingot.description"
     },
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "taloi:textures/gui/advancements/backgrounds/taloi.png"
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
   },
   "criteria": {
-    "evergreen_log": {
+    "infused_iron": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:evergreen_log"
+              "taloi:coal_infused_iron_ingot"
             ]
           }
         ]
       }
     },
-    "willow_log": {
+    "infused_lead": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:willow_log"
+              "taloi:coal_infused_lead_ingot"
             ]
           }
         ]
@@ -43,8 +43,8 @@
   },
   "requirements": [
     [
-      "evergreen_log",
-      "willow_log"
+      "infused_iron",
+      "infused_lead"
     ]
   ]
 }

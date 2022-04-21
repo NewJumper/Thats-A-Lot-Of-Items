@@ -1,5 +1,5 @@
 {
-  "parent": "taloi:root",
+  "parent": "taloi:machinery",
   "display": {
     "icon": {
       "item": "taloi:steel_ingot"

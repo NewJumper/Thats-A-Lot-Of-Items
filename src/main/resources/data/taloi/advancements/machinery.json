@@ -1,0 +1,63 @@
+{
+  "parent": "taloi:root",
+  "display": {
+    "icon": {
+      "item": "taloi:unstable_machine_frame"
+    },
+    "title": {
+      "translate": "advancements.taloi.machinery.title"
+    },
+    "description": {
+      "translate": "advancements.taloi.machinery.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "alpha_machine_frame": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alpha_machine_frame"
+            ]
+          }
+        ]
+      }
+    },
+    "beta_machine_frame": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alpha_machine_frame"
+            ]
+          }
+        ]
+      }
+    },
+    "unstable_machine_frame": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alpha_machine_frame"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "alpha_machine_frame",
+      "beta_machine_frame",
+      "unstable_machine_frame"
+    ]
+  ]
+}
