@@ -1,4 +1,4 @@
-package com.newjumper.taloi.block.custom;
+package com.newjumper.taloi.block.machine;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;

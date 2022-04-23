@@ -2,6 +2,7 @@ package com.newjumper.taloi.block;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.custom.*;
+import com.newjumper.taloi.block.machine.*;
 import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.world.features.tree.EvergreenTreeGrower;
@@ -260,10 +261,10 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // MACHINERY
-    public static final RegistryObject<Block> ALPHA_CONSTRUCTOR = registerBlock("alpha_constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_CONSTRUCTOR = registerBlock("alpha_constructor", () -> new AlphaConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_CONSTRUCTOR = registerBlock("beta_constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_CONSTRUCTOR = registerBlock("beta_constructor", () -> new BetaConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_CONSTRUCTOR = registerBlock("unstable_constructor", () -> new UnstableConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)

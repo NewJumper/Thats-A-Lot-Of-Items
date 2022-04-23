@@ -1,4 +1,4 @@
-package com.newjumper.taloi.block.custom;
+package com.newjumper.taloi.block.machine;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -10,10 +10,10 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.Nullable;
 
-public class SmelteryBlock extends BaseEntityBlock {
+public class HydraulicPressBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public SmelteryBlock(Properties properties) {
+    public HydraulicPressBlock(Properties properties) {
         super(properties);
     }
 

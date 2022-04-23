@@ -1,10 +1,14 @@
 package com.newjumper.taloi;
 
 import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.painting.ModPaintings;
+import com.newjumper.taloi.screen.ConstructorScreen;
+import com.newjumper.taloi.screen.ModMenuTypes;
 import com.newjumper.taloi.sound.ModSounds;
 import com.newjumper.taloi.util.ModItemProperties;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +29,8 @@ public class ThatsALotOfItems {
 
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
         ModPaintings.register(eventBus);
         ModSounds.register(eventBus);
 
@@ -39,5 +45,7 @@ public class ThatsALotOfItems {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
 
         ModItemProperties.addModItemProperties();
+
+        MenuScreens.register(ModMenuTypes.CONSTRUCTING_MENU.get(), ConstructorScreen::new);
     }
 }
