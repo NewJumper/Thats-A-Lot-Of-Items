@@ -1,0 +1,14 @@
+{
+  "type": "taloi:constructing",
+  "ingredients": [
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "taloi:coal_infused_iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "taloi:carbonite"
+  }
+}

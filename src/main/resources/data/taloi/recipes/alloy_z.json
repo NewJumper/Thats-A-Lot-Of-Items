@@ -2,13 +2,13 @@
   "type": "taloi:constructing",
   "ingredients": [
     {
-      "item": "minecraft:coal"
+      "item": "taloi:iridium_ingot"
     },
     {
-      "item": "minecraft:iron_ingot"
+      "item": "taloi:silicon"
     }
   ],
   "result": {
-    "item": "taloi:steel_ingot"
+    "item": "taloi:alloy_z"
   }
 }

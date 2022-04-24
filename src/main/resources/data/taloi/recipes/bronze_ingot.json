@@ -1,0 +1,14 @@
+{
+  "type": "taloi:constructing",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "taloi:tin_ingot"
+    }
+  ],
+  "result": {
+    "item": "taloi:bronze_ingot"
+  }
+}
