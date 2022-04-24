@@ -1,6 +1,7 @@
 package com.newjumper.taloi.screen;
 
 import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -31,7 +32,7 @@ public class UnstableConstructorMenu extends AbstractContainerMenu {
         addPlayerInventory(inventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 31, 47));
+            this.addSlot(new ModFuelSlot(handler, 0, 31, 47));
             this.addSlot(new SlotItemHandler(handler, 1, 69, 14));
             this.addSlot(new SlotItemHandler(handler, 2, 69, 35));
             this.addSlot(new SlotItemHandler(handler, 3, 69, 56));
