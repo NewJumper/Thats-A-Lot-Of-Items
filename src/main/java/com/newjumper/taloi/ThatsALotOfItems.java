@@ -4,8 +4,7 @@ import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.painting.ModPaintings;
-import com.newjumper.taloi.screen.ConstructorScreen;
-import com.newjumper.taloi.screen.ModMenuTypes;
+import com.newjumper.taloi.screen.*;
 import com.newjumper.taloi.sound.ModSounds;
 import com.newjumper.taloi.util.ModItemProperties;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -46,6 +45,9 @@ public class ThatsALotOfItems {
 
         ModItemProperties.addModItemProperties();
 
-        MenuScreens.register(ModMenuTypes.CONSTRUCTING_MENU.get(), ConstructorScreen::new);
+        MenuScreens.register(ModMenuTypes.CONSTRUCTOR_MENU.get(), ConstructorScreen::new);
+        MenuScreens.register(ModMenuTypes.UNSTABLE_CONSTRUCTOR_MENU.get(), UnstableConstructorScreen::new);
+        MenuScreens.register(ModMenuTypes.HYDRAULIC_PRESS_MENU.get(), HydraulicPressScreen::new);
+        MenuScreens.register(ModMenuTypes.UNSTABLE_HYDRAULIC_PRESS_MENU.get(), UnstableHydraulicPressScreen::new);
     }
 }

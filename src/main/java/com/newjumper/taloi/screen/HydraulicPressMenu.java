@@ -14,16 +14,16 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class ConstructorMenu extends AbstractContainerMenu {
+public class HydraulicPressMenu extends AbstractContainerMenu {
     private final BlockEntity blockEntity;
     private final Level level;
 
-    public ConstructorMenu(int pContainerId, Inventory inventory, FriendlyByteBuf buffer) {
+    public HydraulicPressMenu(int pContainerId, Inventory inventory, FriendlyByteBuf buffer) {
         this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()));
     }
 
-    public ConstructorMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity) {
-        super(ModMenuTypes.CONSTRUCTOR_MENU.get(), pContainerId);
+    public HydraulicPressMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity) {
+        super(ModMenuTypes.HYDRAULIC_PRESS_MENU.get(), pContainerId);
         this.blockEntity = blockEntity;
         this.level = inventory.player.level;
 
@@ -32,8 +32,8 @@ public class ConstructorMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new SlotItemHandler(handler, 0, 31, 47));
-            this.addSlot(new SlotItemHandler(handler, 1, 69, 17));
-            this.addSlot(new SlotItemHandler(handler, 2, 69, 53));
+            this.addSlot(new SlotItemHandler(handler, 1, 65, 35));
+            this.addSlot(new SlotItemHandler(handler, 2, 88, 35));
             this.addSlot(new ModResultSlot(handler, 3, 125, 35));
         });
     }
@@ -73,8 +73,8 @@ public class ConstructorMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_CONSTRUCTOR.get()) ||
-                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_CONSTRUCTOR.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_HYDRAULIC_PRESS.get()) ||
+                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_HYDRAULIC_PRESS.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

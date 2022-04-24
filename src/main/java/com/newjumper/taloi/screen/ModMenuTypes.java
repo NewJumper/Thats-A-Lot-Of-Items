@@ -13,7 +13,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, ThatsALotOfItems.MOD_ID);
 
-    public static final RegistryObject<MenuType<ConstructorMenu>> CONSTRUCTING_MENU = registerMenuType(ConstructorMenu::new, "constructing_menu");
+    public static final RegistryObject<MenuType<ConstructorMenu>> CONSTRUCTOR_MENU = registerMenuType(ConstructorMenu::new, "constructor_menu");
+    public static final RegistryObject<MenuType<UnstableConstructorMenu>> UNSTABLE_CONSTRUCTOR_MENU = registerMenuType(UnstableConstructorMenu::new, "unstable_constructor_menu");
+    public static final RegistryObject<MenuType<HydraulicPressMenu>> HYDRAULIC_PRESS_MENU = registerMenuType(HydraulicPressMenu::new, "hydraulic_press_menu");
+    public static final RegistryObject<MenuType<UnstableHydraulicPressMenu>> UNSTABLE_HYDRAULIC_PRESS_MENU = registerMenuType(UnstableHydraulicPressMenu::new, "unstable_hydraulic_press_menu");
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

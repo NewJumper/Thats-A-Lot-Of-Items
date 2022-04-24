@@ -1,7 +1,7 @@
 package com.newjumper.taloi.block.machine;
 
+import com.newjumper.taloi.block.entity.AlphaHydraulicPressBlockEntity;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
-import com.newjumper.taloi.block.entity.UnstableHydraulicPressBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -21,10 +21,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
-public class UnstableHydraulicPressBlock extends BaseEntityBlock {
+public class AlphaHydraulicPressBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public UnstableHydraulicPressBlock(Properties properties) {
+    public AlphaHydraulicPressBlock(Properties properties) {
         super(properties);
     }
 
@@ -57,8 +57,8 @@ public class UnstableHydraulicPressBlock extends BaseEntityBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof UnstableHydraulicPressBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (UnstableHydraulicPressBlockEntity)entity, pPos);
+            if(entity instanceof AlphaHydraulicPressBlockEntity) {
+                NetworkHooks.openGui(((ServerPlayer)pPlayer), (AlphaHydraulicPressBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }
@@ -71,8 +71,8 @@ public class UnstableHydraulicPressBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof UnstableHydraulicPressBlockEntity) {
-                ((UnstableHydraulicPressBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof AlphaHydraulicPressBlockEntity) {
+                ((AlphaHydraulicPressBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
@@ -81,12 +81,12 @@ public class UnstableHydraulicPressBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.UNSTABLE_HYDRAULIC_PRESS.get(), UnstableHydraulicPressBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.ALPHA_HYDRAULIC_PRESS.get(), AlphaHydraulicPressBlockEntity::tick);
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new UnstableHydraulicPressBlockEntity(pPos, pState);
+        return new AlphaHydraulicPressBlockEntity(pPos, pState);
     }
 }

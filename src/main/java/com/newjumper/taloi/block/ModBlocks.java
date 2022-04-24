@@ -271,30 +271,30 @@ public class ModBlocks {
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
-    public static final RegistryObject<Block> ALPHA_HYDRAULIC_PRESS = registerBlock("alpha_hydraulic_press", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_HYDRAULIC_PRESS = registerBlock("alpha_hydraulic_press", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_HYDRAULIC_PRESS = registerBlock("beta_hydraulic_press", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_HYDRAULIC_PRESS = registerBlock("beta_hydraulic_press", () -> new BetaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_HYDRAULIC_PRESS = registerBlock("unstable_hydraulic_press", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
-    public static final RegistryObject<Block> ALPHA_PROCESSOR = registerBlock("alpha_processor", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_PROCESSOR = registerBlock("alpha_processor", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_PROCESSOR = registerBlock("beta_processor", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_PROCESSOR = registerBlock("beta_processor", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_PROCESSOR = registerBlock("unstable_processor", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
-    public static final RegistryObject<Block> ALPHA_SEPARATOR = registerBlock("alpha_separator", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_SEPARATOR = registerBlock("alpha_separator", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_SEPARATOR = registerBlock("beta_separator", () -> new HydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_SEPARATOR = registerBlock("beta_separator", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
     public static final RegistryObject<Block> UNSTABLE_SEPARATOR = registerBlock("unstable_separator", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
