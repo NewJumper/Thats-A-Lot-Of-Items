@@ -281,33 +281,33 @@ public class ModBlocks {
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
-    public static final RegistryObject<Block> ALPHA_PROCESSOR = registerBlock("alpha_processor", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_PROCESSOR = registerBlock("alpha_processor", () -> new AlphaProcessorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_PROCESSOR = registerBlock("beta_processor", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_PROCESSOR = registerBlock("beta_processor", () -> new BetaProcessorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> UNSTABLE_PROCESSOR = registerBlock("unstable_processor", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> UNSTABLE_PROCESSOR = registerBlock("unstable_processor", () -> new UnstableProcessorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
-    public static final RegistryObject<Block> ALPHA_SEPARATOR = registerBlock("alpha_separator", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_SEPARATOR = registerBlock("alpha_separator", () -> new AlphaSeparatorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_SEPARATOR = registerBlock("beta_separator", () -> new AlphaHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_SEPARATOR = registerBlock("beta_separator", () -> new BetaSeparatorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> UNSTABLE_SEPARATOR = registerBlock("unstable_separator", () -> new UnstableHydraulicPressBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> UNSTABLE_SEPARATOR = registerBlock("unstable_separator", () -> new UnstableSeparatorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 
-    public static final RegistryObject<Block> ALPHA_SMELTERY = registerBlock("alpha_smeltery", () -> new SmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> ALPHA_SMELTERY = registerBlock("alpha_smeltery", () -> new AlphaSmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> BETA_SMELTERY = registerBlock("beta_smeltery", () -> new SmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> BETA_SMELTERY = registerBlock("beta_smeltery", () -> new BetaSmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(3.5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
-    public static final RegistryObject<Block> UNSTABLE_SMELTERY = registerBlock("unstable_smeltery", () -> new SmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+    public static final RegistryObject<Block> UNSTABLE_SMELTERY = registerBlock("unstable_smeltery", () -> new UnstableSmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINERY_TAB);
 

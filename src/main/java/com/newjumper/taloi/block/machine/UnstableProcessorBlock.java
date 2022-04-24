@@ -10,10 +10,10 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.Nullable;
 
-public class SmelteryBlock extends BaseEntityBlock {
+public class UnstableProcessorBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public SmelteryBlock(Properties properties) {
+    public UnstableProcessorBlock(Properties properties) {
         super(properties);
     }
 
