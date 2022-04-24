@@ -25,6 +25,10 @@ public class ConstructorScreen extends AbstractContainerScreen<ConstructorMenu> 
         int y = (height - imageHeight) / 2;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+
+        if(menu.isOn()) {
+            blit(pPoseStack, x + 89, y + 24, 176, 14, menu.getScaledProgress(), 40);
+        }
     }
 
     @Override

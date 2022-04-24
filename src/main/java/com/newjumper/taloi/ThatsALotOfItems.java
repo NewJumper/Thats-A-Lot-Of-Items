@@ -4,6 +4,7 @@ import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.painting.ModPaintings;
+import com.newjumper.taloi.recipe.ModRecipes;
 import com.newjumper.taloi.screen.*;
 import com.newjumper.taloi.sound.ModSounds;
 import com.newjumper.taloi.util.ModItemProperties;
@@ -31,6 +32,7 @@ public class ThatsALotOfItems {
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
         ModPaintings.register(eventBus);
+        ModRecipes.register(eventBus);
         ModSounds.register(eventBus);
 
         eventBus.addListener(this::setupClient);

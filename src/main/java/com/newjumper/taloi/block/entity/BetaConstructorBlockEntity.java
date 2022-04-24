@@ -1,6 +1,8 @@
 package com.newjumper.taloi.block.entity;
 
 import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.recipe.ConstructingRecipe;
+import com.newjumper.taloi.recipe.ModRecipes;
 import com.newjumper.taloi.screen.ConstructorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,9 +15,11 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -27,6 +31,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import java.util.Optional;
 
 public class BetaConstructorBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
@@ -36,9 +41,33 @@ public class BetaConstructorBlockEntity extends BlockEntity implements MenuProvi
         }
     };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    protected final ContainerData data;
+    private int currentProgress = 0;
+    private int maxProgress = 100;
 
     public BetaConstructorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.BETA_CONSTRUCTOR.get(), pWorldPosition, pBlockState);
+
+        this.data = new ContainerData() {
+            public int get(int index) {
+                switch (index) {
+                    case 0: return BetaConstructorBlockEntity.this.currentProgress;
+                    case 1: return BetaConstructorBlockEntity.this.maxProgress;
+                    default: return 0;
+                }
+            }
+
+            public void set(int index, int value) {
+                switch(index) {
+                    case 0: BetaConstructorBlockEntity.this.currentProgress = value; break;
+                    case 1: BetaConstructorBlockEntity.this.maxProgress = value; break;
+                }
+            }
+
+            public int getCount() {
+                return 2;
+            }
+        };
     }
 
     @Override
@@ -49,17 +78,17 @@ public class BetaConstructorBlockEntity extends BlockEntity implements MenuProvi
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new ConstructorMenu(pContainerId, pInventory, this);
+        return new ConstructorMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Nonnull
     @Override
-    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @javax.annotation.Nullable Direction facing) {
+        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return lazyItemHandler.cast();
         }
 
-        return super.getCapability(cap, side);
+        return super.getCapability(capability, facing);
     }
 
     @Override
@@ -75,15 +104,17 @@ public class BetaConstructorBlockEntity extends BlockEntity implements MenuProvi
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
-        tag.put("inventory", itemHandler.serializeNBT());
-        super.saveAdditional(tag);
+    protected void saveAdditional(@NotNull CompoundTag pTag) {
+        pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.putInt("beta_constructor.currentProgress", currentProgress);
+        super.saveAdditional(pTag);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
+        currentProgress = nbt.getInt("beta_constructor.currentProgress");
     }
 
     public void drops() {
@@ -95,28 +126,59 @@ public class BetaConstructorBlockEntity extends BlockEntity implements MenuProvi
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    // static methods for crafting so it's not convoluted
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, BetaConstructorBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity) && hasNotReachedStackLimit(pBlockEntity)) craftItem(pBlockEntity);
+        if(hasRecipe(pBlockEntity)) {
+            pBlockEntity.currentProgress++;
+            setChanged(pLevel, pPos, pState);
+            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
+                craftItem(pBlockEntity);
+            }
+        } else {
+            pBlockEntity.resetProgress();
+            setChanged(pLevel, pPos, pState);
+        }
     }
 
-    private static void craftItem(BetaConstructorBlockEntity entity) {
-        entity.itemHandler.extractItem(0, 1, false);
-        entity.itemHandler.extractItem(1, 1, false);
-        entity.itemHandler.extractItem(2, 1, false);
+    private static boolean hasRecipe(BetaConstructorBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
 
-        entity.itemHandler.setStackInSlot(3, new ItemStack(ModItems.STEEL_INGOT.get(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+        Optional<ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, inventory, level);
+
+        return match.isPresent() && canCraftResult(inventory, match.get().getResultItem()) && hasFuelInFirstSlot(blockEntity);
     }
 
-    private static boolean hasRecipe(BetaConstructorBlockEntity entity) {
-        boolean hasItemInFuelSlot = entity.itemHandler.getStackInSlot(0).getItem() == Items.COAL;
-        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(1).getItem() == Items.IRON_INGOT;
-        boolean hasItemInSecondSlot = entity.itemHandler.getStackInSlot(2).getItem() == Items.COAL;
-
-        return hasItemInFuelSlot && hasItemInFirstSlot && hasItemInSecondSlot;
+    private static boolean hasFuelInFirstSlot(BetaConstructorBlockEntity blockEntity) {
+        return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
     }
 
-    private static boolean hasNotReachedStackLimit(BetaConstructorBlockEntity entity) {
-        return entity.itemHandler.getStackInSlot(3).getCount() < entity.itemHandler.getStackInSlot(3).getMaxStackSize();
+    private static void craftItem(BetaConstructorBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, inventory, level);
+
+        if(match.isPresent()) {
+            blockEntity.itemHandler.extractItem(0,1, false);
+            blockEntity.itemHandler.extractItem(1,1, false);
+            blockEntity.itemHandler.extractItem(2,1, false);
+            blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
+
+            blockEntity.resetProgress();
+        }
+    }
+
+    private void resetProgress() {
+        this.currentProgress = 0;
+    }
+
+    private static boolean canCraftResult(SimpleContainer container, ItemStack result) {
+        return (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize()) && (container.getItem(3).getItem() == result.getItem() || container.getItem(3).isEmpty());
     }
 }

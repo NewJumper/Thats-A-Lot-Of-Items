@@ -422,7 +422,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.BRONZE_INGOT.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.BRONZE_INGOT.get(), 9)
                 .requires(ModBlocks.BRONZE_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_BRONZE)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOT_BRONZE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_bronze_block"));
 
         // STEEL
         ShapedRecipeBuilder.shaped(ModBlocks.STEEL_BLOCK.get(), 1)
@@ -433,7 +433,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.STEEL_INGOT.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.STEEL_INGOT.get(), 9)
                 .requires(ModBlocks.STEEL_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_STEEL)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOT_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_steel_block"));
 
         // IRIDIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SWORD.get(), 1)

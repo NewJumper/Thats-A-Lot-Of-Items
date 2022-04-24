@@ -5,9 +5,7 @@ import com.newjumper.taloi.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -15,17 +13,22 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class ConstructorMenu extends AbstractContainerMenu {
+    private static final int VANILLA_SLOT_COUNT = 36;
+    private static final int BLOCK_SLOT_COUNT = 4;
+    private static final int BLOCK_FIRST_SLOT_INDEX = VANILLA_SLOT_COUNT;
     private final BlockEntity blockEntity;
+    private final ContainerData containerData;
     private final Level level;
 
     public ConstructorMenu(int pContainerId, Inventory inventory, FriendlyByteBuf buffer) {
-        this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()));
+        this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public ConstructorMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity) {
+    public ConstructorMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity, ContainerData containerData) {
         super(ModMenuTypes.CONSTRUCTOR_MENU.get(), pContainerId);
         this.blockEntity = blockEntity;
         this.level = inventory.player.level;
+        this.containerData = containerData;
 
         checkContainerSize(inventory, 4);
         addPlayerInventory(inventory);
@@ -36,11 +39,9 @@ public class ConstructorMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(handler, 2, 69, 53));
             this.addSlot(new ModResultSlot(handler, 3, 125, 35));
         });
-    }
 
-    private static final int VANILLA_SLOT_COUNT = 36;
-    private static final int BLOCK_SLOT_COUNT = 4;
-    private static final int BLOCK_FIRST_SLOT_INDEX = VANILLA_SLOT_COUNT;
+        addDataSlots(containerData);
+    }
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
@@ -71,12 +72,6 @@ public class ConstructorMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
-    @Override
-    public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_CONSTRUCTOR.get()) ||
-                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_CONSTRUCTOR.get());
-    }
-
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
@@ -87,5 +82,23 @@ public class ConstructorMenu extends AbstractContainerMenu {
         for (int i = 0; i < 9; i++) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
+    }
+
+    @Override
+    public boolean stillValid(Player pPlayer) {
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_CONSTRUCTOR.get()) ||
+                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_CONSTRUCTOR.get());
+    }
+
+    public boolean isOn() {
+        return containerData.get(0) > 0;
+    }
+
+    public int getScaledProgress() {
+        int currentProgress = this.containerData.get(0);
+        int maxProgress = this.containerData.get(1);
+        int progressBarLength = 27;
+
+        return maxProgress != 0 && currentProgress != 0 ? currentProgress * progressBarLength / maxProgress : 0;
     }
 }
