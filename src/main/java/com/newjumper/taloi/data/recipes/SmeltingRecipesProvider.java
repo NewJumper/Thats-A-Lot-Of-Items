@@ -22,9 +22,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        // >>>>>>>>>>>>>>> REPLACE ALL ORES WITH TAGS <<<<<<<<<<<<<<<
-
-        // recipe( consumer,  block/item input,  item output,  recipe unlocked with,  file name )
         // ALUMINUM
         blastingRecipe(consumer, ModBlocks.ALUMINUM_ORE.get(), ModItems.ALUMINUM_INGOT.get(), ModBlocks.ALUMINUM_ORE.get(), "aluminum_ingot_from_blasting_aluminum_ore");
         blastingRecipe(consumer, ModBlocks.DEEPSLATE_ALUMINUM_ORE.get(), ModItems.ALUMINUM_INGOT.get(), ModBlocks.DEEPSLATE_ALUMINUM_ORE.get(), "aluminum_ingot_from_blasting_deepslate_aluminum_ore");

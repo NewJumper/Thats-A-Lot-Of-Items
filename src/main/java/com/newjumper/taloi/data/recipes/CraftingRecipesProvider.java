@@ -24,8 +24,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        // >>>>>>>>>>>>>>> REPLACE ALL ORE BLOCKS WITH TAGS <<<<<<<<<<<<<<<
-
         // EVERGREEN
         ShapedRecipeBuilder.shaped(ModBlocks.EVERGREEN_WOOD.get(), 3)
                 .define('E', ModBlocks.EVERGREEN_LOG.get())
