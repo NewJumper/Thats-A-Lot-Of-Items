@@ -1,7 +1,7 @@
 package com.newjumper.taloi.data;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.data.loottables.LootTablesProvider;
+import com.newjumper.taloi.data.loot.LootTablesProvider;
 import com.newjumper.taloi.data.models.*;
 import com.newjumper.taloi.data.recipes.*;
 import net.minecraft.data.DataGenerator;

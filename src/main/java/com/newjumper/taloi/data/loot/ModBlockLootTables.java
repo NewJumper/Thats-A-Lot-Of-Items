@@ -1,4 +1,4 @@
-package com.newjumper.taloi.data.loottables;
+package com.newjumper.taloi.data.loot;
 
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.item.ModItems;
