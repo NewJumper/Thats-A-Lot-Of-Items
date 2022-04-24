@@ -1,7 +1,6 @@
 package com.newjumper.taloi.block.entity;
 
 import com.newjumper.taloi.recipe.ConstructingRecipe;
-import com.newjumper.taloi.recipe.ModRecipes;
 import com.newjumper.taloi.screen.ConstructorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -41,7 +40,7 @@ public class AlphaConstructorBlockEntity extends BlockEntity implements MenuProv
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     protected final ContainerData data;
     private int currentProgress = 0;
-    private int maxProgress = 100;
+    private int maxProgress = 200;
 
     public AlphaConstructorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.ALPHA_CONSTRUCTOR.get(), pWorldPosition, pBlockState);

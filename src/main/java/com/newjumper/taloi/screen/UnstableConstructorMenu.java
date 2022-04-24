@@ -33,9 +33,9 @@ public class UnstableConstructorMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 31, 47));
-            this.addSlot(new SlotItemHandler(handler, 1, 69, 14));
+            this.addSlot(new SlotItemHandler(handler, 1, 69, 17));
             this.addSlot(new SlotItemHandler(handler, 2, 69, 35));
-            this.addSlot(new SlotItemHandler(handler, 3, 69, 56));
+            this.addSlot(new SlotItemHandler(handler, 3, 69, 53));
             this.addSlot(new ModResultSlot(handler, 4, 125, 35));
         });
     }

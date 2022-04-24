@@ -1,8 +1,6 @@
 package com.newjumper.taloi.block.entity;
 
-import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.recipe.ConstructingRecipe;
-import com.newjumper.taloi.recipe.ModRecipes;
 import com.newjumper.taloi.screen.ConstructorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -17,7 +15,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;

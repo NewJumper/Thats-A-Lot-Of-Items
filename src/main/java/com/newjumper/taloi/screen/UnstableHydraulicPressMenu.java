@@ -33,9 +33,9 @@ public class UnstableHydraulicPressMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 24, 47));
-            this.addSlot(new SlotItemHandler(handler, 1, 54, 35));
+            this.addSlot(new SlotItemHandler(handler, 1, 56, 35));
             this.addSlot(new SlotItemHandler(handler, 2, 76, 35));
-            this.addSlot(new SlotItemHandler(handler, 3, 98, 35));
+            this.addSlot(new SlotItemHandler(handler, 3, 96, 35));
             this.addSlot(new ModResultSlot(handler, 4, 132, 35));
         });
     }

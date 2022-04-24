@@ -33,8 +33,8 @@ public class HydraulicPressMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 31, 47));
-            this.addSlot(new SlotItemHandler(handler, 1, 65, 35));
-            this.addSlot(new SlotItemHandler(handler, 2, 88, 35));
+            this.addSlot(new SlotItemHandler(handler, 1, 66, 35));
+            this.addSlot(new SlotItemHandler(handler, 2, 86, 35));
             this.addSlot(new ModResultSlot(handler, 3, 125, 35));
         });
     }
