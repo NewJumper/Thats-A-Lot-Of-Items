@@ -17,6 +17,8 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<UnstableConstructorMenu>> UNSTABLE_CONSTRUCTOR_MENU = registerMenuType(UnstableConstructorMenu::new, "unstable_constructor_menu");
     public static final RegistryObject<MenuType<HydraulicPressMenu>> HYDRAULIC_PRESS_MENU = registerMenuType(HydraulicPressMenu::new, "hydraulic_press_menu");
     public static final RegistryObject<MenuType<UnstableHydraulicPressMenu>> UNSTABLE_HYDRAULIC_PRESS_MENU = registerMenuType(UnstableHydraulicPressMenu::new, "unstable_hydraulic_press_menu");
+    public static final RegistryObject<MenuType<ProcessorMenu>> PROCESSOR_MENU = registerMenuType(ProcessorMenu::new, "processor_menu");
+    public static final RegistryObject<MenuType<SeparatorMenu>> SEPARATOR_MENU = registerMenuType(SeparatorMenu::new, "separator_menu");
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
