@@ -1,5 +1,6 @@
 package com.newjumper.taloi.screen.slot;
 
+import com.newjumper.taloi.item.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.items.IItemHandler;
@@ -13,6 +14,6 @@ public class ProcessorBaseSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(@NotNull ItemStack stack) {
-        return stack.getItem() == Items.COAL || stack.getItem() == Items.DIAMOND || stack.getItem() == Items.EMERALD;
+        return stack.getItem() == Items.COAL || stack.getItem() == Items.DIAMOND || stack.getItem() == Items.EMERALD || stack.getItem() == ModItems.FUTURITE.get() || stack.getItem() == ModItems.SERMIUM.get();
     }
 }
