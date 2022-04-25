@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "minecraft:coal"
+  },
+  "ingot": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": {
+    "item": "taloi:coal_infused_iron_ingot"
+  }
+}

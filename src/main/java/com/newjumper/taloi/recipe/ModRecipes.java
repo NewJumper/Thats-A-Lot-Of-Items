@@ -13,6 +13,8 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<ConstructingRecipe>> CONSTRUCTING = RECIPE_SERIALIZERS.register("constructing", ConstructingRecipe.Serializer::new);
     public static final RegistryObject<RecipeSerializer<UnstableConstructingRecipe>> UNSTABLE_CONSTRUCTING = RECIPE_SERIALIZERS.register("unstable_constructing", UnstableConstructingRecipe.Serializer::new);
 
+    public static final RegistryObject<RecipeSerializer<ProcessingRecipe>> PROCESSING = RECIPE_SERIALIZERS.register("processing", ProcessingRecipe.Serializer::new);
+
     public static void register(IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);
     }
