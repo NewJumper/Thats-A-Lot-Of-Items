@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.entity;
 
-import com.newjumper.taloi.recipe.ConstructingRecipe;
+import com.newjumper.taloi.recipe.UnstableConstructingRecipe;
 import com.newjumper.taloi.screen.UnstableConstructorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -143,7 +143,7 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, inventory, level);
+        Optional<UnstableConstructingRecipe> match = level.getRecipeManager().getRecipeFor(UnstableConstructingRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent() && canCraftResult(inventory, match.get().getResultItem()) && hasFuelInFirstSlot(blockEntity);
     }
@@ -159,7 +159,7 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, inventory, level);
+        Optional<UnstableConstructingRecipe> match = level.getRecipeManager().getRecipeFor(UnstableConstructingRecipe.Type.INSTANCE, inventory, level);
 
         if(match.isPresent()) {
             blockEntity.itemHandler.extractItem(0,1, false);

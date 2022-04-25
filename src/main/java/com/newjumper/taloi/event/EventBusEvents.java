@@ -3,7 +3,6 @@ package com.newjumper.taloi.event;
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.event.loot.TheCavesAdditionModifier;
 import com.newjumper.taloi.recipe.ConstructingRecipe;
-import com.newjumper.taloi.recipe.ModRecipes;
 import com.newjumper.taloi.recipe.UnstableConstructingRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
