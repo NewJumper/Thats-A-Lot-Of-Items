@@ -4,6 +4,7 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.event.loot.TheCavesAdditionModifier;
 import com.newjumper.taloi.recipe.ConstructingRecipe;
 import com.newjumper.taloi.recipe.ModRecipes;
+import com.newjumper.taloi.recipe.UnstableConstructingRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -23,6 +24,7 @@ public class EventBusEvents {
 
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> registryEvent) {
-        Registry.register(Registry.RECIPE_TYPE, ConstructingRecipe.Type.ID, ConstructingRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, "constructing", ConstructingRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, "unstable_constructing", UnstableConstructingRecipe.Type.INSTANCE);
     }
 }

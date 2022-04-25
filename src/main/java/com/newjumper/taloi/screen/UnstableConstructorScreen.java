@@ -25,6 +25,11 @@ public class UnstableConstructorScreen extends AbstractContainerScreen<UnstableC
         int y = (height - imageHeight) / 2;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+
+        if(menu.isOn()) {
+            blit(pPoseStack, x + 89, y + 23, 176, 14, menu.getScaledProgress(), 40);
+            blit(pPoseStack, x + 31, y + 30, 176, 0, 14, 14);
+        }
     }
 
     @Override

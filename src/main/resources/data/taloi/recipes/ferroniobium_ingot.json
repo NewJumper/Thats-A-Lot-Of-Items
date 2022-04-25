@@ -1,0 +1,17 @@
+{
+  "type": "taloi:unstable_constructing",
+  "ingredients": [
+    {
+      "item": "taloi:alloy_plate"
+    },
+    {
+      "item": "taloi:magnesium_ingot"
+    },
+    {
+      "item": "taloi:steel_plate"
+    }
+  ],
+  "result": {
+    "item": "taloi:ferroniobium_ingot"
+  }
+}

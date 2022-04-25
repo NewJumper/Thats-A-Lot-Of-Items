@@ -13,12 +13,12 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class ConstructingRecipe implements Recipe<SimpleContainer> {
+public class UnstableConstructingRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final NonNullList<Ingredient> ingredients;
     private final ItemStack result;
 
-    public ConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
+    public UnstableConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
         this.id = pId;
         this.ingredients = ingredients;
         this.result = pResult;
@@ -26,8 +26,9 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        return (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2))) ||
-                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2))); // me being lazy lllollololllol
+        return (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
+                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3))) ||
+                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3)));
     }
 
     @Override
@@ -52,7 +53,7 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.CONSTRUCTING.get();
+        return ModRecipes.UNSTABLE_CONSTRUCTING.get();
     }
 
     @Override
@@ -60,30 +61,30 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<ConstructingRecipe> {
+    public static class Type implements RecipeType<UnstableConstructingRecipe> {
         private Type() {}
         public static final Type INSTANCE = new Type();
     }
 
-    public static class Serializer implements RecipeSerializer<ConstructingRecipe> {
+    public static class Serializer implements RecipeSerializer<UnstableConstructingRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(ThatsALotOfItems.MOD_ID,"constructing");
+        public static final ResourceLocation ID = new ResourceLocation(ThatsALotOfItems.MOD_ID,"unstable_constructing");
 
         @Override
-        public ConstructingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+        public UnstableConstructingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
             JsonArray input = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
-            NonNullList<Ingredient> ingredients = NonNullList.withSize(2, Ingredient.EMPTY);
+            NonNullList<Ingredient> ingredients = NonNullList.withSize(3, Ingredient.EMPTY);
             for (int i = 0; i < ingredients.size(); i++) {
                 ingredients.set(i, Ingredient.fromJson(input.get(i)));
             }
 
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
 
-            return new ConstructingRecipe(pRecipeId, ingredients, result);
+            return new UnstableConstructingRecipe(pRecipeId, ingredients, result);
         }
 
         @Override
-        public ConstructingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+        public UnstableConstructingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> ingredients = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
             for (int i = 0; i < ingredients.size(); i++) {
                 ingredients.set(i, Ingredient.fromNetwork(pBuffer));
@@ -91,11 +92,11 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
 
             ItemStack result = pBuffer.readItem();
 
-            return new ConstructingRecipe(pRecipeId, ingredients, result);
+            return new UnstableConstructingRecipe(pRecipeId, ingredients, result);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, ConstructingRecipe pRecipe) {
+        public void toNetwork(FriendlyByteBuf pBuffer, UnstableConstructingRecipe pRecipe) {
             pBuffer.writeInt(pRecipe.getIngredients().size());
             for (Ingredient ingredient : pRecipe.getIngredients()) {
                 ingredient.toNetwork(pBuffer);

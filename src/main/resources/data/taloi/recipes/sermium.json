@@ -1,0 +1,17 @@
+{
+  "type": "taloi:unstable_constructing",
+  "ingredients": [
+    {
+      "item": "taloi:hardened_carbonite"
+    },
+    {
+      "item": "taloi:refined_uranium"
+    },
+    {
+      "item": "taloi:ferroniobium_ingot"
+    }
+  ],
+  "result": {
+    "item": "taloi:sermium"
+  }
+}
