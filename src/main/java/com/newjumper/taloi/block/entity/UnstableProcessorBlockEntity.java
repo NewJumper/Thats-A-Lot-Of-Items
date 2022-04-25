@@ -40,7 +40,7 @@ public class UnstableProcessorBlockEntity extends BlockEntity implements MenuPro
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     protected final ContainerData data;
     private int currentProgress = 0;
-    private int maxProgress = 100;
+    private int maxProgress = 50;
 
     public UnstableProcessorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.UNSTABLE_PROCESSOR.get(), pWorldPosition, pBlockState);
