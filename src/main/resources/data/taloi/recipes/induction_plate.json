@@ -1,0 +1,17 @@
+{
+  "type": "taloi:unstable_pressing",
+  "ingredients": [
+    {
+      "item": "taloi:alloy_plate"
+    },
+    {
+      "item": "taloi:reinforced_copper_plate"
+    },
+    {
+      "item": "taloi:semiconductor_plate"
+    }
+  ],
+  "result": {
+    "item": "taloi:induction_plate"
+  }
+}

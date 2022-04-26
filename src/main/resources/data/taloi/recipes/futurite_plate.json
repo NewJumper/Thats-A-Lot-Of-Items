@@ -1,0 +1,17 @@
+{
+  "type": "taloi:unstable_pressing",
+  "ingredients": [
+    {
+      "item": "taloi:alloy_plate"
+    },
+    {
+      "item": "taloi:forge_plate"
+    },
+    {
+      "item": "taloi:futurite"
+    }
+  ],
+  "result": {
+    "item": "taloi:futurite_plate"
+  }
+}

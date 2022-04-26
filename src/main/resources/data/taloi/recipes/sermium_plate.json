@@ -1,0 +1,17 @@
+{
+  "type": "taloi:unstable_pressing",
+  "ingredients": [
+    {
+      "item": "taloi:sermium"
+    },
+    {
+      "item": "taloi:sermium"
+    },
+    {
+      "item": "taloi:silicon_plate"
+    }
+  ],
+  "result": {
+    "item": "taloi:sermium_plate"
+  }
+}

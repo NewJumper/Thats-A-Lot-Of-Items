@@ -1,0 +1,17 @@
+{
+  "type": "taloi:unstable_pressing",
+  "ingredients": [
+    {
+      "item": "taloi:ferroniobium_ingot"
+    },
+    {
+      "item": "taloi:sermium_plate"
+    },
+    {
+      "item": "taloi:steel_plate"
+    }
+  ],
+  "result": {
+    "item": "taloi:forge_plate"
+  }
+}
