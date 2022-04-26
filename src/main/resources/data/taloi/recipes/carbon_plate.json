@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "taloi:carbonite"
+    },
+    {
+      "item": "taloi:carbonite"
+    }
+  ],
+  "result": {
+    "item": "taloi:carbon_plate"
+  }
+}

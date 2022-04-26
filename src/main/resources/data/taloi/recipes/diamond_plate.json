@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "taloi:diamond_plate"
+  }
+}

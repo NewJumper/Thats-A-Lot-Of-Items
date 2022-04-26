@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "taloi:silicon"
+    },
+    {
+      "item": "taloi:silicon"
+    }
+  ],
+  "result": {
+    "item": "taloi:silicon_plate"
+  }
+}

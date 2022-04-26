@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "taloi:tungsten_ingot"
+    },
+    {
+      "item": "taloi:tungsten_ingot"
+    }
+  ],
+  "result": {
+    "item": "taloi:tungsten_plate"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "taloi:silicon_plate"
+    }
+  ],
+  "result": {
+    "item": "taloi:gold_disk"
+  }
+}

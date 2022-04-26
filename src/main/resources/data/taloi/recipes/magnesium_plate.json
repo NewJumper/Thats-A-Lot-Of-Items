@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "taloi:magnesium_ingot"
+    },
+    {
+      "item": "taloi:magnesium_ingot"
+    }
+  ],
+  "result": {
+    "item": "taloi:magnesium_plate"
+  }
+}

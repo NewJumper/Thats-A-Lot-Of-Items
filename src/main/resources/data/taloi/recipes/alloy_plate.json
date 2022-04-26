@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "taloi:alloy_x"
+    },
+    {
+      "item": "taloi:alloy_z"
+    }
+  ],
+  "result": {
+    "item": "taloi:alloy_plate"
+  }
+}
