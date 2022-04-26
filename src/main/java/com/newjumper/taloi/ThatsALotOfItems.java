@@ -52,5 +52,6 @@ public class ThatsALotOfItems {
         MenuScreens.register(ModMenuTypes.HYDRAULIC_PRESS_MENU.get(), HydraulicPressScreen::new);
         MenuScreens.register(ModMenuTypes.UNSTABLE_HYDRAULIC_PRESS_MENU.get(), UnstableHydraulicPressScreen::new);
         MenuScreens.register(ModMenuTypes.PROCESSOR_MENU.get(), ProcessorScreen::new);
+        MenuScreens.register(ModMenuTypes.SEPARATOR_MENU.get(), SeparatorScreen::new);
     }
 }
