@@ -16,6 +16,9 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class UnstableHydraulicPressMenu extends AbstractContainerMenu {
+    private static final int VANILLA_SLOT_COUNT = 36;
+    private static final int BLOCK_SLOT_COUNT = 5;
+    private static final int BLOCK_FIRST_SLOT_INDEX = VANILLA_SLOT_COUNT;
     private final BlockEntity blockEntity;
     private final Level level;
 
@@ -39,10 +42,6 @@ public class UnstableHydraulicPressMenu extends AbstractContainerMenu {
             this.addSlot(new ModResultSlot(handler, 4, 132, 35));
         });
     }
-
-    private static final int VANILLA_SLOT_COUNT = 36;
-    private static final int BLOCK_SLOT_COUNT = 5;
-    private static final int BLOCK_FIRST_SLOT_INDEX = VANILLA_SLOT_COUNT;
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.entity;
 
-import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.recipe.PressingRecipe;
 import com.newjumper.taloi.screen.HydraulicPressMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,9 +13,10 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -27,6 +28,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import java.util.Optional;
 
 public class BetaHydraulicPressBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
@@ -36,9 +38,33 @@ public class BetaHydraulicPressBlockEntity extends BlockEntity implements MenuPr
         }
     };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    protected final ContainerData data;
+    private int currentProgress = 0;
+    private int maxProgress = 200;
 
     public BetaHydraulicPressBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.BETA_HYDRAULIC_PRESS.get(), pWorldPosition, pBlockState);
+
+        this.data = new ContainerData() {
+            public int get(int index) {
+                switch (index) {
+                    case 0: return BetaHydraulicPressBlockEntity.this.currentProgress;
+                    case 1: return BetaHydraulicPressBlockEntity.this.maxProgress;
+                    default: return 0;
+                }
+            }
+
+            public void set(int index, int value) {
+                switch(index) {
+                    case 0: BetaHydraulicPressBlockEntity.this.currentProgress = value; break;
+                    case 1: BetaHydraulicPressBlockEntity.this.maxProgress = value; break;
+                }
+            }
+
+            public int getCount() {
+                return 2;
+            }
+        };
     }
 
     @Override
@@ -49,17 +75,17 @@ public class BetaHydraulicPressBlockEntity extends BlockEntity implements MenuPr
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new HydraulicPressMenu(pContainerId, pInventory, this);
+        return new HydraulicPressMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Nonnull
     @Override
-    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @javax.annotation.Nullable Direction facing) {
+        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return lazyItemHandler.cast();
         }
 
-        return super.getCapability(cap, side);
+        return super.getCapability(capability, facing);
     }
 
     @Override
@@ -75,15 +101,17 @@ public class BetaHydraulicPressBlockEntity extends BlockEntity implements MenuPr
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
-        tag.put("inventory", itemHandler.serializeNBT());
-        super.saveAdditional(tag);
+    protected void saveAdditional(@NotNull CompoundTag pTag) {
+        pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.putInt("beta_hydraulic_press.currentProgress", currentProgress);
+        super.saveAdditional(pTag);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
+        currentProgress = nbt.getInt("beta_hydraulic_press.currentProgress");
     }
 
     public void drops() {
@@ -95,28 +123,59 @@ public class BetaHydraulicPressBlockEntity extends BlockEntity implements MenuPr
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    // static methods for crafting so it's not convoluted
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, BetaHydraulicPressBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity) && hasNotReachedStackLimit(pBlockEntity)) craftItem(pBlockEntity);
+        if(hasRecipe(pBlockEntity)) {
+            pBlockEntity.currentProgress++;
+            setChanged(pLevel, pPos, pState);
+            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
+                craftItem(pBlockEntity);
+            }
+        } else {
+            pBlockEntity.resetProgress();
+            setChanged(pLevel, pPos, pState);
+        }
     }
 
-    private static void craftItem(BetaHydraulicPressBlockEntity entity) {
-        entity.itemHandler.extractItem(0, 1, false);
-        entity.itemHandler.extractItem(1, 1, false);
-        entity.itemHandler.extractItem(2, 1, false);
+    private static boolean hasRecipe(BetaHydraulicPressBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
 
-        entity.itemHandler.setStackInSlot(3, new ItemStack(ModItems.COPPER_PLATE.get(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+        Optional<PressingRecipe> match = level.getRecipeManager().getRecipeFor(PressingRecipe.Type.INSTANCE, inventory, level);
+
+        return match.isPresent() && canCraftResult(inventory, match.get().getResultItem()) && hasFuelInFirstSlot(blockEntity);
     }
 
-    private static boolean hasRecipe(BetaHydraulicPressBlockEntity entity) {
-        boolean hasItemInFuelSlot = entity.itemHandler.getStackInSlot(0).getItem() == Items.COAL;
-        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(1).getItem() == Items.COPPER_INGOT;
-        boolean hasItemInSecondSlot = entity.itemHandler.getStackInSlot(2).getItem() == Items.COPPER_INGOT;
-
-        return hasItemInFuelSlot && hasItemInFirstSlot && hasItemInSecondSlot;
+    private static boolean hasFuelInFirstSlot(BetaHydraulicPressBlockEntity blockEntity) {
+        return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
     }
 
-    private static boolean hasNotReachedStackLimit(BetaHydraulicPressBlockEntity entity) {
-        return entity.itemHandler.getStackInSlot(3).getCount() < entity.itemHandler.getStackInSlot(3).getMaxStackSize();
+    private static void craftItem(BetaHydraulicPressBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<PressingRecipe> match = level.getRecipeManager().getRecipeFor(PressingRecipe.Type.INSTANCE, inventory, level);
+
+        if(match.isPresent()) {
+            blockEntity.itemHandler.extractItem(0,1, false);
+            blockEntity.itemHandler.extractItem(1,1, false);
+            blockEntity.itemHandler.extractItem(2,1, false);
+            blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
+
+            blockEntity.resetProgress();
+        }
+    }
+
+    private void resetProgress() {
+        this.currentProgress = 0;
+    }
+
+    private static boolean canCraftResult(SimpleContainer container, ItemStack result) {
+        return (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize()) && (container.getItem(3).getItem() == result.getItem() || container.getItem(3).isEmpty());
     }
 }
