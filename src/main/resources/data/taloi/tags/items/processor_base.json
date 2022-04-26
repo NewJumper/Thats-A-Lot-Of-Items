@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:coal",
+    "minecraft:diamond",
+    "minecraft:emerald",
+    "taloi:futurite_plate",
+    "taloi:sermium_plate"
+  ]
+}

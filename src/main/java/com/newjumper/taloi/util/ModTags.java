@@ -63,6 +63,9 @@ public class ModTags {
         public static final TagKey<Item> NUGGET_URANIUM = forgeTag("nuggets/uranium");
         public static final TagKey<Item> NUGGET_ZINC = forgeTag("nuggets/zinc");
 
+        // MACHINERY
+        public static final TagKey<Item> PROCESSOR_BASE = taloiTag("processor_base");
+
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
         }
