@@ -2,8 +2,7 @@ package com.newjumper.taloi.event;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.event.loot.TheCavesAdditionModifier;
-import com.newjumper.taloi.recipe.ConstructingRecipe;
-import com.newjumper.taloi.recipe.UnstableConstructingRecipe;
+import com.newjumper.taloi.recipe.*;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -25,5 +24,8 @@ public class EventBusEvents {
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> registryEvent) {
         Registry.register(Registry.RECIPE_TYPE, "constructing", ConstructingRecipe.Type.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, "unstable_constructing", UnstableConstructingRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, "pressing", PressingRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, "unstable_pressing", UnstablePressingRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, "processing", ProcessingRecipe.Type.INSTANCE);
     }
 }
