@@ -106,19 +106,19 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
 
-    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.193:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.193")
 }
 
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "taloi",
-                "Specification-Vendor"    : "taloisareus",
-                "Specification-Version"   : "1",
-                "Implementation-Title"    : project.name,
-                "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "taloisareus",
+                "Specification-Title"     : "That's A Lot Of Items",
+                "Specification-Vendor"    : "NewJumper",
+                "Specification-Version"   : "0.17.0",
+                "Implementation-Title"    : "TALOI",
+                "Implementation-Version"  : "0.17.0",
+                "Implementation-Vendor"   : "NewJumper",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
