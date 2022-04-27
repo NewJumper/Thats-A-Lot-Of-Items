@@ -46,6 +46,11 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    @Override
     public ResourceLocation getId() {
         return id;
     }
