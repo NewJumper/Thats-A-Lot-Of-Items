@@ -3,6 +3,7 @@ package com.newjumper.taloi.screen;
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
+import com.newjumper.taloi.screen.slot.SeparatorOreSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +37,7 @@ public class SeparatorMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 30, 41));
-            this.addSlot(new SlotItemHandler(handler, 1, 51, 41));
+            this.addSlot(new SeparatorOreSlot(handler, 1, 51, 41));
             this.addSlot(new ModResultSlot(handler, 2, 102, 37));
             this.addSlot(new ModResultSlot(handler, 3, 128, 37));
         });

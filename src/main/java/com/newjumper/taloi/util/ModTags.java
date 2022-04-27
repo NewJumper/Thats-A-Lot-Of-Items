@@ -65,6 +65,7 @@ public class ModTags {
 
         // MACHINERY
         public static final TagKey<Item> PROCESSOR_BASE = taloiTag("processor_base");
+        public static final TagKey<Item> SEPARATOR_ORES = taloiTag("separator_ores");
 
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
