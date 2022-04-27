@@ -27,8 +27,11 @@ public class UnstableConstructingRecipe implements Recipe<SimpleContainer> {
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
         return (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
+                (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
+                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
                 (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3))) ||
-                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3)));
+                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
+                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3)));
     }
 
     @Override
