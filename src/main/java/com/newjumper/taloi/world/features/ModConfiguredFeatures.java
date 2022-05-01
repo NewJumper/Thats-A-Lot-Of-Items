@@ -5,7 +5,11 @@ import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -14,7 +18,13 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureCo
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.PineFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -22,25 +32,25 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     // EVERGREEN
-    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> EVERGREEN_TREE = FeatureUtils.register("evergreen", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> EVERGREEN = FeatureUtils.register("evergreen", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
             BlockStateProvider.simple(ModBlocks.EVERGREEN_LOG.get()),
-            new StraightTrunkPlacer(10, 3, 5),
+            new StraightTrunkPlacer(6, 2, 1),
             BlockStateProvider.simple(ModBlocks.EVERGREEN_LEAVES.get()),
-            new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+            new SpruceFoliagePlacer(UniformInt.of(2, 3), ConstantInt.of(1), UniformInt.of(1, 2)),
             new TwoLayersFeatureSize(1, 0, 1)).build());
 
-    public static final Holder<PlacedFeature> EVERGREEN_CHECKED = PlacementUtils.register("evergreen_checked", EVERGREEN_TREE, PlacementUtils.filteredByBlockSurvival(ModBlocks.EVERGREEN_SAPLING.get()));
+    public static final Holder<PlacedFeature> EVERGREEN_CHECKED = PlacementUtils.register("evergreen_checked", EVERGREEN, PlacementUtils.filteredByBlockSurvival(ModBlocks.EVERGREEN_SAPLING.get()));
     public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> EVERGREEN_SPAWN = FeatureUtils.register("evergreen_spawn", Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(EVERGREEN_CHECKED, 0.1f)), EVERGREEN_CHECKED));
 
     // WILLOW
-    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> WILLOW_TREE = FeatureUtils.register("willow", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> WILLOW = FeatureUtils.register("willow", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
             BlockStateProvider.simple(ModBlocks.WILLOW_LOG.get()),
-            new StraightTrunkPlacer(5, 3, 4),
+            new ForkingTrunkPlacer(5, 2, 3),
             BlockStateProvider.simple(ModBlocks.WILLOW_LEAVES.get()),
-            new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+            new RandomSpreadFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(2), 40),
             new TwoLayersFeatureSize(1, 0, 1)).build());
 
-    public static final Holder<PlacedFeature> WILLOW_CHECKED = PlacementUtils.register("willow_checked", WILLOW_TREE, PlacementUtils.filteredByBlockSurvival(ModBlocks.WILLOW_SAPLING.get()));
+    public static final Holder<PlacedFeature> WILLOW_CHECKED = PlacementUtils.register("willow_checked", WILLOW, PlacementUtils.filteredByBlockSurvival(ModBlocks.WILLOW_SAPLING.get()));
     public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> WILLOW_SPAWN = FeatureUtils.register("willow_spawn", Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(WILLOW_CHECKED, 0.1f)), WILLOW_CHECKED));
 
     // ORES
