@@ -45,13 +45,13 @@ public class ThatsALotOfItems {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
 
-        ModItemProperties.addModItemProperties();
-
         MenuScreens.register(ModMenuTypes.CONSTRUCTOR_MENU.get(), ConstructorScreen::new);
         MenuScreens.register(ModMenuTypes.UNSTABLE_CONSTRUCTOR_MENU.get(), UnstableConstructorScreen::new);
         MenuScreens.register(ModMenuTypes.HYDRAULIC_PRESS_MENU.get(), HydraulicPressScreen::new);
         MenuScreens.register(ModMenuTypes.UNSTABLE_HYDRAULIC_PRESS_MENU.get(), UnstableHydraulicPressScreen::new);
         MenuScreens.register(ModMenuTypes.PROCESSOR_MENU.get(), ProcessorScreen::new);
         MenuScreens.register(ModMenuTypes.SEPARATOR_MENU.get(), SeparatorScreen::new);
+
+        ModItemProperties.addModItemProperties();
     }
 }
