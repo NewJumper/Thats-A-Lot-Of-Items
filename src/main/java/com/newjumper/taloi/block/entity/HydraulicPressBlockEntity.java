@@ -1,12 +1,12 @@
 package com.newjumper.taloi.block.entity;
 
-import com.newjumper.taloi.recipe.UnstablePressingRecipe;
-import com.newjumper.taloi.screen.UnstableHydraulicPressMenu;
+import com.newjumper.taloi.recipe.PressingRecipe;
+import com.newjumper.taloi.screen.HydraulicPressMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -19,6 +19,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
@@ -31,8 +32,8 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
-public class UnstableHydraulicPressBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(5) {
+public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvider {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -41,17 +42,17 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private int litTime = 0;
     private int currentProgress = 0;
-    private int maxProgress = 50;
-    private final RecipeType<? extends UnstablePressingRecipe> recipeType = UnstablePressingRecipe.Type.INSTANCE;
+    private int maxProgress = 200;
+    private final RecipeType<? extends PressingRecipe> recipeType;
     protected final ContainerData data = new ContainerData() {
         public int get(int index) {
             switch (index) {
                 case 0:
-                    return UnstableHydraulicPressBlockEntity.this.litTime;
+                    return HydraulicPressBlockEntity.this.litTime;
                 case 1:
-                    return UnstableHydraulicPressBlockEntity.this.currentProgress;
+                    return HydraulicPressBlockEntity.this.currentProgress;
                 case 2:
-                    return UnstableHydraulicPressBlockEntity.this.maxProgress;
+                    return HydraulicPressBlockEntity.this.maxProgress;
                 default:
                     return 0;
             }
@@ -60,13 +61,13 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
         public void set(int index, int value) {
             switch(index) {
                 case 0:
-                    UnstableHydraulicPressBlockEntity.this.litTime = value;
+                    HydraulicPressBlockEntity.this.litTime = value;
                     break;
                 case 1:
-                    UnstableHydraulicPressBlockEntity.this.currentProgress = value;
+                    HydraulicPressBlockEntity.this.currentProgress = value;
                     break;
                 case 2:
-                    UnstableHydraulicPressBlockEntity.this.maxProgress = value;
+                    HydraulicPressBlockEntity.this.maxProgress = value;
                     break;
             }
         }
@@ -76,8 +77,9 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
         }
     };
 
-    public UnstableHydraulicPressBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBlockEntities.UNSTABLE_HYDRAULIC_PRESS.get(), pWorldPosition, pBlockState);
+    public HydraulicPressBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends PressingRecipe> pRecipeType) {
+        super(pType, pWorldPosition, pBlockState);
+        this.recipeType = pRecipeType;
     }
     private boolean isLit() {
         return this.litTime > 0;
@@ -85,31 +87,31 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.uhp");
+        return new TextComponent("Hydraulic Press");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new UnstableHydraulicPressMenu(pContainerId, pInventory, this, this.data);
+        return new HydraulicPressMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(@NotNull CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("uhp.litTime", this.litTime);
-        pTag.putInt("uhp.currentProgress", this.currentProgress);
-        pTag.putInt("uhp.maxProgress", this.maxProgress);
+        pTag.putInt("press.litTime", this.litTime);
+        pTag.putInt("press.currentProgress", this.currentProgress);
+        pTag.putInt("press.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("uhp.litTime");
-        this.currentProgress = nbt.getInt("uhp.currentProgress");
-        this.maxProgress = nbt.getInt("uhp.maxProgress");
+        this.litTime = nbt.getInt("press.litTime");
+        this.currentProgress = nbt.getInt("press.currentProgress");
+        this.maxProgress = nbt.getInt("press.maxProgress");
     }
 
     @Override
@@ -143,7 +145,7 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, UnstableHydraulicPressBlockEntity pBlockEntity) {
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, HydraulicPressBlockEntity pBlockEntity) {
         if(hasRecipe(pBlockEntity)) {
             pBlockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
@@ -156,36 +158,35 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
         }
     }
 
-    private static boolean hasRecipe(UnstableHydraulicPressBlockEntity blockEntity) {
+    private static boolean hasRecipe(HydraulicPressBlockEntity blockEntity) {
         Level level = blockEntity.level;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<UnstablePressingRecipe> match = level.getRecipeManager().getRecipeFor(UnstablePressingRecipe.Type.INSTANCE, inventory, level);
+        Optional<PressingRecipe> match = level.getRecipeManager().getRecipeFor(PressingRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent() && canPress(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
     }
 
-    private static boolean hasFuel(UnstableHydraulicPressBlockEntity blockEntity) {
+    private static boolean hasFuel(HydraulicPressBlockEntity blockEntity) {
         return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
     }
 
-    private static void craftItem(UnstableHydraulicPressBlockEntity blockEntity) {
+    private static void craftItem(HydraulicPressBlockEntity blockEntity) {
         Level level = blockEntity.level;
         SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
         for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<UnstablePressingRecipe> match = level.getRecipeManager().getRecipeFor(UnstablePressingRecipe.Type.INSTANCE, inventory, level);
+        Optional<PressingRecipe> match = level.getRecipeManager().getRecipeFor(PressingRecipe.Type.INSTANCE, inventory, level);
         if(match.isPresent()) {
             blockEntity.itemHandler.extractItem(0,1, false);
             blockEntity.itemHandler.extractItem(1,1, false);
             blockEntity.itemHandler.extractItem(2,1, false);
-            blockEntity.itemHandler.extractItem(3,1, false);
-            blockEntity.itemHandler.setStackInSlot(4, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(4).getCount() + 1));
+            blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
 
             blockEntity.resetProgress();
         }
@@ -196,7 +197,7 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
     }
 
     private static boolean canPress(SimpleContainer container, ItemStack result) {
-        return (container.getItem(4).getItem() == result.getItem() || container.getItem(4).isEmpty()) &&
-               (container.getItem(4).getCount() < container.getItem(4).getMaxStackSize());
+        return (container.getItem(3).getItem() == result.getItem() || container.getItem(3).isEmpty()) &&
+               (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize());
     }
 }

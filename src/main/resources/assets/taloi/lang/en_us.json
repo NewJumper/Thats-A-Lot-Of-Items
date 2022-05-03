@@ -315,6 +315,10 @@
   "container.bc": "Beta Constructor",
   "container.uc": "Unstable Constructor",
 
+  "container.ahp": "Alpha Hydraulic Press",
+  "container.bhp": "Beta Hydraulic Press",
+  "container.uhp": "Unstable Hydraulic Press",
+
   "advancements.taloi.root.title": "That Is Indeed A Lot Of Items",
   "advancements.taloi.root.description": "The beginning of a new end",
   "advancements.taloi.machinery.title": "Machinery",

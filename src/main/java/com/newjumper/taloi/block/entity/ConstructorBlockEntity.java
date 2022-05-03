@@ -100,18 +100,18 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     protected void saveAdditional(@NotNull CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("ac.litTime", this.litTime);
-        pTag.putInt("ac.currentProgress", this.currentProgress);
-        pTag.putInt("ac.maxProgress", this.maxProgress);
+        pTag.putInt("constructor.litTime", this.litTime);
+        pTag.putInt("constructor.currentProgress", this.currentProgress);
+        pTag.putInt("constructor.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("ac.litTime");
-        this.currentProgress = nbt.getInt("ac.currentProgress");
-        this.maxProgress = nbt.getInt("ac.maxProgress");
+        this.litTime = nbt.getInt("constructor.litTime");
+        this.currentProgress = nbt.getInt("constructor.currentProgress");
+        this.maxProgress = nbt.getInt("constructor.maxProgress");
     }
 
     @Override
