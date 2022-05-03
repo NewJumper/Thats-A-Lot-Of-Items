@@ -311,6 +311,10 @@
   "item.taloi.music_disc_the_caves" : "Music Disc",
   "item.taloi.music_disc_the_caves.desc" : "NewJumper - The Caves",
 
+  "container.ac": "Alpha Constructor",
+  "container.bc": "Beta Constructor",
+  "container.uc": "Unstable Constructor",
+
   "advancements.taloi.root.title": "That Is Indeed A Lot Of Items",
   "advancements.taloi.root.description": "The beginning of a new end",
   "advancements.taloi.machinery.title": "Machinery",
