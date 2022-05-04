@@ -14,6 +14,7 @@ import org.jetbrains.annotations.Nullable;
 public class AlphaConstructorBlockEntity extends ConstructorBlockEntity {
     public AlphaConstructorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.ALPHA_CONSTRUCTOR.get(), pWorldPosition, pBlockState, ConstructingRecipe.Type.INSTANCE);
+        data.set(3, 200);
     }
 
     @Override

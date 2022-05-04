@@ -20,6 +20,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -39,8 +40,9 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
         }
     };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-    private int litTime = 0;
-    private int currentProgress = 0;
+    private int litTime;
+    private int maxLitTime;
+    private int currentProgress;
     private int maxProgress = 50;
     private final RecipeType<? extends UnstableConstructingRecipe> recipeType = UnstableConstructingRecipe.Type.INSTANCE;
     protected final ContainerData data = new ContainerData() {
@@ -49,8 +51,10 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
                 case 0:
                     return UnstableConstructorBlockEntity.this.litTime;
                 case 1:
-                    return UnstableConstructorBlockEntity.this.currentProgress;
+                    return UnstableConstructorBlockEntity.this.maxLitTime;
                 case 2:
+                    return UnstableConstructorBlockEntity.this.currentProgress;
+                case 3:
                     return UnstableConstructorBlockEntity.this.maxProgress;
                 default:
                     return 0;
@@ -63,24 +67,24 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
                     UnstableConstructorBlockEntity.this.litTime = value;
                     break;
                 case 1:
-                    UnstableConstructorBlockEntity.this.currentProgress = value;
+                    UnstableConstructorBlockEntity.this.maxLitTime = value;
                     break;
                 case 2:
+                    UnstableConstructorBlockEntity.this.currentProgress = value;
+                    break;
+                case 3:
                     UnstableConstructorBlockEntity.this.maxProgress = value;
                     break;
             }
         }
 
         public int getCount() {
-            return 3;
+            return 4;
         }
     };
 
     public UnstableConstructorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.UNSTABLE_CONSTRUCTOR.get(), pWorldPosition, pBlockState);
-    }
-    private boolean isLit() {
-        return this.litTime > 0;
     }
 
     @Override
@@ -99,6 +103,7 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
         super.saveAdditional(pTag);
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("uc.litTime", this.litTime);
+        pTag.putInt("uc.maxLitTime", this.maxLitTime);
         pTag.putInt("uc.currentProgress", this.currentProgress);
         pTag.putInt("uc.maxProgress", this.maxProgress);
     }
@@ -108,6 +113,7 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         this.litTime = nbt.getInt("uc.litTime");
+        this.maxLitTime = nbt.getInt("uc.maxLitTime");
         this.currentProgress = nbt.getInt("uc.currentProgress");
         this.maxProgress = nbt.getInt("uc.maxProgress");
     }
@@ -143,15 +149,31 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, UnstableConstructorBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity)) {
-            pBlockEntity.currentProgress++;
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, UnstableConstructorBlockEntity blockEntity) {
+        if(hasRecipe(blockEntity)) {
+            blockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
-            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
-                craftItem(pBlockEntity);
+
+            if(blockEntity.currentProgress >= blockEntity.maxProgress) {
+                Level level = blockEntity.level;
+                SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+                for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+                    inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+                }
+
+                Optional<UnstableConstructingRecipe> match = level.getRecipeManager().getRecipeFor(UnstableConstructingRecipe.Type.INSTANCE, inventory, level);
+                if(match.isPresent()) {
+                    blockEntity.itemHandler.extractItem(0,1, false);
+                    blockEntity.itemHandler.extractItem(1,1, false);
+                    blockEntity.itemHandler.extractItem(2,1, false);
+                    blockEntity.itemHandler.extractItem(3,1, false);
+                    blockEntity.itemHandler.setStackInSlot(4, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(4).getCount() + 1));
+
+                    blockEntity.currentProgress = 0;
+                }
             }
         } else {
-            pBlockEntity.resetProgress();
+            blockEntity.currentProgress = 0;
             setChanged(pLevel, pPos, pState);
         }
     }
@@ -168,35 +190,17 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
         return match.isPresent() && canConstruct(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
     }
 
+    private static boolean canConstruct(SimpleContainer container, ItemStack result) {
+        return (container.getItem(4).getItem() == result.getItem() || container.getItem(4).isEmpty()) &&
+               (container.getItem(4).getCount() < container.getItem(4).getMaxStackSize());
+    }
+
     private static boolean hasFuel(UnstableConstructorBlockEntity blockEntity) {
         return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
     }
 
-    private static void craftItem(UnstableConstructorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<UnstableConstructingRecipe> match = level.getRecipeManager().getRecipeFor(UnstableConstructingRecipe.Type.INSTANCE, inventory, level);
-        if(match.isPresent()) {
-            blockEntity.itemHandler.extractItem(0,1, false);
-            blockEntity.itemHandler.extractItem(1,1, false);
-            blockEntity.itemHandler.extractItem(2,1, false);
-            blockEntity.itemHandler.extractItem(3,1, false);
-            blockEntity.itemHandler.setStackInSlot(4, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(4).getCount() + 1));
-
-            blockEntity.resetProgress();
-        }
-    }
-
-    private void resetProgress() {
-        this.currentProgress = 0;
-    }
-
-    private static boolean canConstruct(SimpleContainer container, ItemStack result) {
-        return (container.getItem(4).getItem() == result.getItem() || container.getItem(4).isEmpty()) &&
-               (container.getItem(4).getCount() < container.getItem(4).getMaxStackSize());
+    private int getBurnDuration(ItemStack pFuel) {
+        if (pFuel.isEmpty()) return 0;
+        else return ForgeHooks.getBurnTime(pFuel, this.recipeType);
     }
 }
