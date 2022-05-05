@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -28,19 +28,13 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public class ConstructorBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-        }
-    };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private final ItemStackHandler itemHandler;
     private int litTime;
     private int maxLitTime;
     private int currentProgress;
@@ -83,18 +77,27 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
             return 4;
         }
     };
+    private static int lastSlot;
 
-    public ConstructorBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends ConstructingRecipe> pRecipeType) {
+    public ConstructorBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends ConstructingRecipe> pRecipeType, int slots) {
         super(pType, pWorldPosition, pBlockState);
+
         this.recipeType = pRecipeType;
+        this.itemHandler = new ItemStackHandler(slots) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+        };
+
+        lastSlot = slots - 1;
     }
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("Constructor");
+        return new TranslatableComponent("container.constructor");
     }
 
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
         return new ConstructorMenu(pContainerId, pInventory, this, this.data);
@@ -163,12 +166,12 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
                     inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
                 }
 
-                Optional<ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, inventory, level);
+                Optional<? extends ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
-                    blockEntity.itemHandler.extractItem(0,1, false);
-                    blockEntity.itemHandler.extractItem(1,1, false);
-                    blockEntity.itemHandler.extractItem(2,1, false);
-                    blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
+                    for(int i = 0; i < lastSlot; i++) {
+                        blockEntity.itemHandler.extractItem(i, 1, false);
+                    }
+                    blockEntity.itemHandler.setStackInSlot(lastSlot, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(lastSlot).getCount() + 1));
 
                     blockEntity.currentProgress = 0;
                 }
@@ -186,14 +189,14 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, inventory, level);
+        Optional<? extends ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
 
         return match.isPresent() && canConstruct(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
     }
 
     private static boolean canConstruct(SimpleContainer container, ItemStack result) {
-        return (container.getItem(3).getItem() == result.getItem() || container.getItem(3).isEmpty()) &&
-               (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize());
+        return (container.getItem(lastSlot).getItem() == result.getItem() || container.getItem(lastSlot).isEmpty()) &&
+               (container.getItem(lastSlot).getCount() < container.getItem(lastSlot).getMaxStackSize());
     }
 
     private static boolean hasFuel(ConstructorBlockEntity blockEntity) {

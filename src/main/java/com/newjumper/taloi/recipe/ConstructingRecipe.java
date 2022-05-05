@@ -14,9 +14,9 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class ConstructingRecipe implements Recipe<SimpleContainer> {
-    private final ResourceLocation id;
-    private final NonNullList<Ingredient> ingredients;
-    private final ItemStack result;
+    protected final ResourceLocation id;
+    protected final NonNullList<Ingredient> ingredients;
+    protected final ItemStack result;
 
     public ConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
         this.id = pId;

@@ -1,8 +1,8 @@
 package com.newjumper.taloi.item;
 
+import com.newjumper.taloi.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import com.newjumper.taloi.block.ModBlocks;
 
 public class ModCreativeModeTab {
     public static final CreativeModeTab TALOI_BLOCK_TAB = new CreativeModeTab("taloi_block_tab") {

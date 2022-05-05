@@ -1,7 +1,7 @@
 package com.newjumper.taloi.block.machine;
 
-import com.newjumper.taloi.block.entity.UnstableProcessorBlockEntity;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.UnstableProcessorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;

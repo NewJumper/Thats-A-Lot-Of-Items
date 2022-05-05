@@ -2,8 +2,8 @@ package com.newjumper.taloi.screen;
 
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
-import com.newjumper.taloi.screen.slot.ProcessorBaseSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
+import com.newjumper.taloi.screen.slot.ProcessorBaseSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
