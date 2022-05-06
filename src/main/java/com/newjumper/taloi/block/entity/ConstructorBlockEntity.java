@@ -42,34 +42,21 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     private final RecipeType<? extends ConstructingRecipe> recipeType;
     protected final ContainerData data = new ContainerData() {
         public int get(int index) {
-            switch (index) {
-                case 0:
-                    return ConstructorBlockEntity.this.litTime;
-                case 1:
-                    return ConstructorBlockEntity.this.maxLitTime;
-                case 2:
-                    return ConstructorBlockEntity.this.currentProgress;
-                case 3:
-                    return ConstructorBlockEntity.this.maxProgress;
-                default:
-                    return 0;
-            }
+            return switch (index) {
+                case 0 -> ConstructorBlockEntity.this.litTime;
+                case 1 -> ConstructorBlockEntity.this.maxLitTime;
+                case 2 -> ConstructorBlockEntity.this.currentProgress;
+                case 3 -> ConstructorBlockEntity.this.maxProgress;
+                default -> 0;
+            };
         }
 
         public void set(int index, int value) {
-            switch(index) {
-                case 0:
-                    ConstructorBlockEntity.this.litTime = value;
-                    break;
-                case 1:
-                    ConstructorBlockEntity.this.maxLitTime = value;
-                    break;
-                case 2:
-                    ConstructorBlockEntity.this.currentProgress = value;
-                    break;
-                case 3:
-                    ConstructorBlockEntity.this.maxProgress = value;
-                    break;
+            switch (index) {
+                case 0 -> ConstructorBlockEntity.this.litTime = value;
+                case 1 -> ConstructorBlockEntity.this.maxLitTime = value;
+                case 2 -> ConstructorBlockEntity.this.currentProgress = value;
+                case 3 -> ConstructorBlockEntity.this.maxProgress = value;
             }
         }
 
@@ -77,7 +64,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
             return 4;
         }
     };
-    private static int lastSlot;
+    private static int lastSlotIndex;
 
     public ConstructorBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends ConstructingRecipe> pRecipeType, int slots) {
         super(pType, pWorldPosition, pBlockState);
@@ -90,7 +77,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
             }
         };
 
-        lastSlot = slots - 1;
+        lastSlotIndex = slots - 1;
     }
 
     @Override
@@ -104,13 +91,13 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag pTag) {
-        super.saveAdditional(pTag);
-        pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("constructor.litTime", this.litTime);
-        pTag.putInt("constructor.maxLitTime", this.maxLitTime);
-        pTag.putInt("constructor.currentProgress", this.currentProgress);
-        pTag.putInt("constructor.maxProgress", this.maxProgress);
+    protected void saveAdditional(@NotNull CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        nbt.put("inventory", itemHandler.serializeNBT());
+        nbt.putInt("constructor.litTime", this.litTime);
+        nbt.putInt("constructor.maxLitTime", this.maxLitTime);
+        nbt.putInt("constructor.currentProgress", this.currentProgress);
+        nbt.putInt("constructor.maxProgress", this.maxProgress);
     }
 
     @Override
@@ -168,10 +155,10 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
 
                 Optional<? extends ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
-                    for(int i = 0; i < lastSlot; i++) {
+                    for(int i = 0; i < lastSlotIndex; i++) {
                         blockEntity.itemHandler.extractItem(i, 1, false);
                     }
-                    blockEntity.itemHandler.setStackInSlot(lastSlot, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(lastSlot).getCount() + 1));
+                    blockEntity.itemHandler.setStackInSlot(lastSlotIndex, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(lastSlotIndex).getCount() + 1));
 
                     blockEntity.currentProgress = 0;
                 }
@@ -195,8 +182,8 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     private static boolean canConstruct(SimpleContainer container, ItemStack result) {
-        return (container.getItem(lastSlot).getItem() == result.getItem() || container.getItem(lastSlot).isEmpty()) &&
-               (container.getItem(lastSlot).getCount() < container.getItem(lastSlot).getMaxStackSize());
+        return (container.getItem(lastSlotIndex).getItem() == result.getItem() || container.getItem(lastSlotIndex).isEmpty()) &&
+               (container.getItem(lastSlotIndex).getCount() < container.getItem(lastSlotIndex).getMaxStackSize());
     }
 
     private static boolean hasFuel(ConstructorBlockEntity blockEntity) {
