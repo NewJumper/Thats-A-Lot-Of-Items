@@ -13,7 +13,7 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class UnstableConstructingRecipe extends ConstructingRecipe implements Recipe<SimpleContainer> {
+public class UnstableConstructingRecipe extends ConstructingRecipe {
     public UnstableConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
         super(pId, ingredients, pResult);
     }
@@ -21,11 +21,11 @@ public class UnstableConstructingRecipe extends ConstructingRecipe implements Re
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
         return (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
-                (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
-                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
-                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3))) ||
-                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
-                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3)));
+               (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
+               (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
+               (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3))) ||
+               (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
+               (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3)));
     }
 
     @Override

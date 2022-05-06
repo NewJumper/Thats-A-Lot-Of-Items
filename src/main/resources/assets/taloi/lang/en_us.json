@@ -316,6 +316,7 @@
   "container.bc": "Beta Constructor",
   "container.uc": "Unstable Constructor",
 
+  "container.press": "Hydraulic Press",
   "container.ahp": "Alpha Hydraulic Press",
   "container.bhp": "Beta Hydraulic Press",
   "container.uhp": "Unstable Hydraulic Press",

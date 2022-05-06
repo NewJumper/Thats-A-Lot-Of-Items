@@ -1,7 +1,8 @@
 package com.newjumper.taloi.block.entity;
 
+import com.newjumper.taloi.recipe.PressingRecipe;
 import com.newjumper.taloi.recipe.UnstablePressingRecipe;
-import com.newjumper.taloi.screen.UnstableHydraulicPressMenu;
+import com.newjumper.taloi.screen.UnstableConstructorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -20,96 +21,94 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public class UnstableHydraulicPressBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(5) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-        }
-    };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-    private int litTime = 0;
-    private int currentProgress = 0;
-    private int maxProgress = 50;
-    private final RecipeType<? extends UnstablePressingRecipe> recipeType = UnstablePressingRecipe.Type.INSTANCE;
+    private final ItemStackHandler itemHandler;
+    private int litTime;
+    private int maxLitTime;
+    private int currentProgress;
+    private int maxProgress;
+    private final RecipeType<? extends PressingRecipe> recipeType;
     protected final ContainerData data = new ContainerData() {
         public int get(int index) {
-            switch (index) {
-                case 0:
-                    return UnstableHydraulicPressBlockEntity.this.litTime;
-                case 1:
-                    return UnstableHydraulicPressBlockEntity.this.currentProgress;
-                case 2:
-                    return UnstableHydraulicPressBlockEntity.this.maxProgress;
-                default:
-                    return 0;
-            }
+            return switch (index) {
+                case 0 -> UnstableHydraulicPressBlockEntity.this.litTime;
+                case 1 -> UnstableHydraulicPressBlockEntity.this.maxLitTime;
+                case 2 -> UnstableHydraulicPressBlockEntity.this.currentProgress;
+                case 3 -> UnstableHydraulicPressBlockEntity.this.maxProgress;
+                default -> 0;
+            };
         }
 
         public void set(int index, int value) {
-            switch(index) {
-                case 0:
-                    UnstableHydraulicPressBlockEntity.this.litTime = value;
-                    break;
-                case 1:
-                    UnstableHydraulicPressBlockEntity.this.currentProgress = value;
-                    break;
-                case 2:
-                    UnstableHydraulicPressBlockEntity.this.maxProgress = value;
-                    break;
+            switch (index) {
+                case 0 -> UnstableHydraulicPressBlockEntity.this.litTime = value;
+                case 1 -> UnstableHydraulicPressBlockEntity.this.maxLitTime = value;
+                case 2 -> UnstableHydraulicPressBlockEntity.this.currentProgress = value;
+                case 3 -> UnstableHydraulicPressBlockEntity.this.maxProgress = value;
             }
         }
 
         public int getCount() {
-            return 3;
+            return 4;
         }
     };
+    private static int lastSlotIndex;
 
     public UnstableHydraulicPressBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBlockEntities.UNSTABLE_HYDRAULIC_PRESS.get(), pWorldPosition, pBlockState);
-    }
-    private boolean isLit() {
-        return this.litTime > 0;
+        super(ModBlockEntities.UNSTABLE_CONSTRUCTOR.get(), pWorldPosition, pBlockState);
+
+        this.recipeType = UnstablePressingRecipe.Type.INSTANCE;
+        this.itemHandler = new ItemStackHandler(5) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+        };
+
+        this.data.set(3, 60);
+        lastSlotIndex = 4;
     }
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.uhp");
+        return new TranslatableComponent("container.uc");
     }
 
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new UnstableHydraulicPressMenu(pContainerId, pInventory, this, this.data);
+        return new UnstableConstructorMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag pTag) {
-        super.saveAdditional(pTag);
-        pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("uhp.litTime", this.litTime);
-        pTag.putInt("uhp.currentProgress", this.currentProgress);
-        pTag.putInt("uhp.maxProgress", this.maxProgress);
+    protected void saveAdditional(@NotNull CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        nbt.put("inventory", itemHandler.serializeNBT());
+        nbt.putInt("constructor.litTime", this.litTime);
+        nbt.putInt("constructor.maxLitTime", this.maxLitTime);
+        nbt.putInt("constructor.currentProgress", this.currentProgress);
+        nbt.putInt("constructor.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("uhp.litTime");
-        this.currentProgress = nbt.getInt("uhp.currentProgress");
-        this.maxProgress = nbt.getInt("uhp.maxProgress");
+        this.litTime = nbt.getInt("constructor.litTime");
+        this.maxLitTime = nbt.getInt("constructor.maxLitTime");
+        this.currentProgress = nbt.getInt("constructor.currentProgress");
+        this.maxProgress = nbt.getInt("constructor.maxProgress");
     }
 
     @Override
@@ -143,15 +142,30 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, UnstableHydraulicPressBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity)) {
-            pBlockEntity.currentProgress++;
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, UnstableHydraulicPressBlockEntity blockEntity) {
+        if(hasRecipe(blockEntity)) {
+            blockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
-            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
-                craftItem(pBlockEntity);
+
+            if(blockEntity.currentProgress >= blockEntity.maxProgress) {
+                Level level = blockEntity.level;
+                SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+                for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+                    inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+                }
+
+                Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
+                if(match.isPresent()) {
+                    for(int i = 0; i < lastSlotIndex; i++) {
+                        blockEntity.itemHandler.extractItem(i, 1, false);
+                    }
+                    blockEntity.itemHandler.setStackInSlot(lastSlotIndex, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(lastSlotIndex).getCount() + 1));
+
+                    blockEntity.currentProgress = 0;
+                }
             }
         } else {
-            pBlockEntity.resetProgress();
+            blockEntity.currentProgress = 0;
             setChanged(pLevel, pPos, pState);
         }
     }
@@ -163,40 +177,22 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<UnstablePressingRecipe> match = level.getRecipeManager().getRecipeFor(UnstablePressingRecipe.Type.INSTANCE, inventory, level);
+        Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
 
-        return match.isPresent() && canPress(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
+        return match.isPresent() && canConstruct(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
+    }
+
+    private static boolean canConstruct(SimpleContainer container, ItemStack result) {
+        return (container.getItem(lastSlotIndex).getItem() == result.getItem() || container.getItem(lastSlotIndex).isEmpty()) &&
+                (container.getItem(lastSlotIndex).getCount() < container.getItem(lastSlotIndex).getMaxStackSize());
     }
 
     private static boolean hasFuel(UnstableHydraulicPressBlockEntity blockEntity) {
         return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
     }
 
-    private static void craftItem(UnstableHydraulicPressBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<UnstablePressingRecipe> match = level.getRecipeManager().getRecipeFor(UnstablePressingRecipe.Type.INSTANCE, inventory, level);
-        if(match.isPresent()) {
-            blockEntity.itemHandler.extractItem(0,1, false);
-            blockEntity.itemHandler.extractItem(1,1, false);
-            blockEntity.itemHandler.extractItem(2,1, false);
-            blockEntity.itemHandler.extractItem(3,1, false);
-            blockEntity.itemHandler.setStackInSlot(4, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(4).getCount() + 1));
-
-            blockEntity.resetProgress();
-        }
-    }
-
-    private void resetProgress() {
-        this.currentProgress = 0;
-    }
-
-    private static boolean canPress(SimpleContainer container, ItemStack result) {
-        return (container.getItem(4).getItem() == result.getItem() || container.getItem(4).isEmpty()) &&
-               (container.getItem(4).getCount() < container.getItem(4).getMaxStackSize());
+    private int getBurnDuration(ItemStack pFuel) {
+        if (pFuel.isEmpty()) return 0;
+        else return ForgeHooks.getBurnTime(pFuel, this.recipeType);
     }
 }

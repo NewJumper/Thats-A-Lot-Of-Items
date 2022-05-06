@@ -9,49 +9,26 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class UnstablePressingRecipe implements Recipe<SimpleContainer> {
-    private final ResourceLocation id;
-    private final NonNullList<Ingredient> ingredients;
-    private final ItemStack result;
-
+public class UnstablePressingRecipe extends PressingRecipe {
     public UnstablePressingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
-        this.id = pId;
-        this.ingredients = ingredients;
-        this.result = pResult;
+        super(pId, ingredients, pResult);
     }
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
         return (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
-                (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
-                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
-                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3))) ||
-                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
-                (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3)));
-    }
-
-    @Override
-    public ItemStack assemble(SimpleContainer pContainer) {
-        return result;
-    }
-
-    @Override
-    public boolean canCraftInDimensions(int pWidth, int pHeight) {
-        return true;
-    }
-
-    @Override
-    public ItemStack getResultItem() {
-        return result.copy();
-    }
-
-    @Override
-    public ResourceLocation getId() {
-        return id;
+               (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
+               (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(2).test(pContainer.getItem(3))) ||
+               (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(2).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3))) ||
+               (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)) && ingredients.get(1).test(pContainer.getItem(3))) ||
+               (ingredients.get(2).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2)) && ingredients.get(0).test(pContainer.getItem(3)));
     }
 
     @Override

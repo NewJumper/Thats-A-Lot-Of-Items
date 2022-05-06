@@ -14,9 +14,9 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class PressingRecipe implements Recipe<SimpleContainer> {
-    private final ResourceLocation id;
-    private final NonNullList<Ingredient> ingredients;
-    private final ItemStack result;
+    protected final ResourceLocation id;
+    protected final NonNullList<Ingredient> ingredients;
+    protected final ItemStack result;
 
     public PressingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
         this.id = pId;
@@ -27,7 +27,7 @@ public class PressingRecipe implements Recipe<SimpleContainer> {
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
         return (ingredients.get(0).test(pContainer.getItem(1)) && ingredients.get(1).test(pContainer.getItem(2))) ||
-                (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)));
+               (ingredients.get(1).test(pContainer.getItem(1)) && ingredients.get(0).test(pContainer.getItem(2)));
     }
 
     @Override
@@ -43,6 +43,11 @@ public class PressingRecipe implements Recipe<SimpleContainer> {
     @Override
     public ItemStack getResultItem() {
         return result.copy();
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return ingredients;
     }
 
     @Override

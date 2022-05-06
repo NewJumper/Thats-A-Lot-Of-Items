@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -21,88 +21,83 @@ import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
-        @Override
-        protected void onContentsChanged(int slot) {
-            setChanged();
-        }
-    };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-    private int litTime = 0;
-    private int currentProgress = 0;
-    private int maxProgress = 200;
+    private final ItemStackHandler itemHandler;
+    private int litTime;
+    private int maxLitTime;
+    private int currentProgress;
+    private int maxProgress;
     private final RecipeType<? extends PressingRecipe> recipeType;
     protected final ContainerData data = new ContainerData() {
         public int get(int index) {
-            switch (index) {
-                case 0:
-                    return HydraulicPressBlockEntity.this.litTime;
-                case 1:
-                    return HydraulicPressBlockEntity.this.currentProgress;
-                case 2:
-                    return HydraulicPressBlockEntity.this.maxProgress;
-                default:
-                    return 0;
-            }
+            return switch (index) {
+                case 0 -> HydraulicPressBlockEntity.this.litTime;
+                case 1 -> HydraulicPressBlockEntity.this.maxLitTime;
+                case 2 -> HydraulicPressBlockEntity.this.currentProgress;
+                case 3 -> HydraulicPressBlockEntity.this.maxProgress;
+                default -> 0;
+            };
         }
 
         public void set(int index, int value) {
-            switch(index) {
-                case 0:
-                    HydraulicPressBlockEntity.this.litTime = value;
-                    break;
-                case 1:
-                    HydraulicPressBlockEntity.this.currentProgress = value;
-                    break;
-                case 2:
-                    HydraulicPressBlockEntity.this.maxProgress = value;
-                    break;
+            switch (index) {
+                case 0 -> HydraulicPressBlockEntity.this.litTime = value;
+                case 1 -> HydraulicPressBlockEntity.this.maxLitTime = value;
+                case 2 -> HydraulicPressBlockEntity.this.currentProgress = value;
+                case 3 -> HydraulicPressBlockEntity.this.maxProgress = value;
             }
         }
 
         public int getCount() {
-            return 3;
+            return 4;
         }
     };
+    private static int lastSlotIndex;
 
-    public HydraulicPressBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends PressingRecipe> pRecipeType) {
+    public HydraulicPressBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends PressingRecipe> pRecipeType, int slots) {
         super(pType, pWorldPosition, pBlockState);
+
         this.recipeType = pRecipeType;
-    }
-    private boolean isLit() {
-        return this.litTime > 0;
+        this.itemHandler = new ItemStackHandler(slots) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+        };
+
+        lastSlotIndex = slots - 1;
     }
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("Hydraulic Press");
+        return new TranslatableComponent("container.press");
     }
 
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
         return new HydraulicPressMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag pTag) {
-        super.saveAdditional(pTag);
-        pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("press.litTime", this.litTime);
-        pTag.putInt("press.currentProgress", this.currentProgress);
-        pTag.putInt("press.maxProgress", this.maxProgress);
+    protected void saveAdditional(@NotNull CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        nbt.put("inventory", itemHandler.serializeNBT());
+        nbt.putInt("press.litTime", this.litTime);
+        nbt.putInt("press.maxLitTime", this.maxLitTime);
+        nbt.putInt("press.currentProgress", this.currentProgress);
+        nbt.putInt("press.maxProgress", this.maxProgress);
     }
 
     @Override
@@ -110,6 +105,7 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         this.litTime = nbt.getInt("press.litTime");
+        this.maxLitTime = nbt.getInt("press.maxLitTime");
         this.currentProgress = nbt.getInt("press.currentProgress");
         this.maxProgress = nbt.getInt("press.maxProgress");
     }
@@ -145,15 +141,30 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, HydraulicPressBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity)) {
-            pBlockEntity.currentProgress++;
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, HydraulicPressBlockEntity blockEntity) {
+        if(hasRecipe(blockEntity)) {
+            blockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
-            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
-                craftItem(pBlockEntity);
+
+            if(blockEntity.currentProgress >= blockEntity.maxProgress) {
+                Level level = blockEntity.level;
+                SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+                for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+                    inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+                }
+
+                Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
+                if(match.isPresent()) {
+                    for(int i = 0; i < lastSlotIndex; i++) {
+                        blockEntity.itemHandler.extractItem(i, 1, false);
+                    }
+                    blockEntity.itemHandler.setStackInSlot(lastSlotIndex, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(lastSlotIndex).getCount() + 1));
+
+                    blockEntity.currentProgress = 0;
+                }
             }
         } else {
-            pBlockEntity.resetProgress();
+            blockEntity.currentProgress = 0;
             setChanged(pLevel, pPos, pState);
         }
     }
@@ -165,39 +176,22 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
             inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<PressingRecipe> match = level.getRecipeManager().getRecipeFor(PressingRecipe.Type.INSTANCE, inventory, level);
+        Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
 
         return match.isPresent() && canPress(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
+    }
+
+    private static boolean canPress(SimpleContainer container, ItemStack result) {
+        return (container.getItem(lastSlotIndex).getItem() == result.getItem() || container.getItem(lastSlotIndex).isEmpty()) &&
+                (container.getItem(lastSlotIndex).getCount() < container.getItem(lastSlotIndex).getMaxStackSize());
     }
 
     private static boolean hasFuel(HydraulicPressBlockEntity blockEntity) {
         return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
     }
 
-    private static void craftItem(HydraulicPressBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
-
-        Optional<PressingRecipe> match = level.getRecipeManager().getRecipeFor(PressingRecipe.Type.INSTANCE, inventory, level);
-        if(match.isPresent()) {
-            blockEntity.itemHandler.extractItem(0,1, false);
-            blockEntity.itemHandler.extractItem(1,1, false);
-            blockEntity.itemHandler.extractItem(2,1, false);
-            blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
-
-            blockEntity.resetProgress();
-        }
-    }
-
-    private void resetProgress() {
-        this.currentProgress = 0;
-    }
-
-    private static boolean canPress(SimpleContainer container, ItemStack result) {
-        return (container.getItem(3).getItem() == result.getItem() || container.getItem(3).isEmpty()) &&
-               (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize());
+    private int getBurnDuration(ItemStack pFuel) {
+        if (pFuel.isEmpty()) return 0;
+        else return ForgeHooks.getBurnTime(pFuel, this.recipeType);
     }
 }
