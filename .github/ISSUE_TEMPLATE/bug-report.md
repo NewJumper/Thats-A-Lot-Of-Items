@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Found a bug? Let us know!
+about: Found a bug?
 labels: bug
 assignees: ''
 
@@ -12,8 +12,8 @@ A clear and concise description of what the bug is.
 **To Reproduce**
 Steps to reproduce the behavior:
 1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
+2. Click on '...'
+3. Scroll down to '...'
 4. See error
 
 **Expected behavior**
