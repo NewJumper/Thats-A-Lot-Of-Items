@@ -2,7 +2,7 @@ package com.newjumper.taloi.block.entity;
 
 import com.newjumper.taloi.recipe.PressingRecipe;
 import com.newjumper.taloi.recipe.UnstablePressingRecipe;
-import com.newjumper.taloi.screen.UnstableConstructorMenu;
+import com.newjumper.taloi.screen.UnstableHydraulicPressMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -67,7 +67,7 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
     private static int lastSlotIndex;
 
     public UnstableHydraulicPressBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBlockEntities.UNSTABLE_CONSTRUCTOR.get(), pWorldPosition, pBlockState);
+        super(ModBlockEntities.UNSTABLE_HYDRAULIC_PRESS.get(), pWorldPosition, pBlockState);
 
         this.recipeType = UnstablePressingRecipe.Type.INSTANCE;
         this.itemHandler = new ItemStackHandler(5) {
@@ -88,27 +88,27 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
 
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new UnstableConstructorMenu(pContainerId, pInventory, this, this.data);
+        return new UnstableHydraulicPressMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(@NotNull CompoundTag nbt) {
         super.saveAdditional(nbt);
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("constructor.litTime", this.litTime);
-        nbt.putInt("constructor.maxLitTime", this.maxLitTime);
-        nbt.putInt("constructor.currentProgress", this.currentProgress);
-        nbt.putInt("constructor.maxProgress", this.maxProgress);
+        nbt.putInt("uhp.litTime", this.litTime);
+        nbt.putInt("uhp.maxLitTime", this.maxLitTime);
+        nbt.putInt("uhp.currentProgress", this.currentProgress);
+        nbt.putInt("uhp.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("constructor.litTime");
-        this.maxLitTime = nbt.getInt("constructor.maxLitTime");
-        this.currentProgress = nbt.getInt("constructor.currentProgress");
-        this.maxProgress = nbt.getInt("constructor.maxProgress");
+        this.litTime = nbt.getInt("uhp.litTime");
+        this.maxLitTime = nbt.getInt("uhp.maxLitTime");
+        this.currentProgress = nbt.getInt("uhp.currentProgress");
+        this.maxProgress = nbt.getInt("uhp.maxProgress");
     }
 
     @Override
@@ -179,10 +179,10 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
 
         Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
 
-        return match.isPresent() && canConstruct(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
+        return match.isPresent() && canPress(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
     }
 
-    private static boolean canConstruct(SimpleContainer container, ItemStack result) {
+    private static boolean canPress(SimpleContainer container, ItemStack result) {
         return (container.getItem(lastSlotIndex).getItem() == result.getItem() || container.getItem(lastSlotIndex).isEmpty()) &&
                 (container.getItem(lastSlotIndex).getCount() < container.getItem(lastSlotIndex).getMaxStackSize());
     }

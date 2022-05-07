@@ -22,7 +22,7 @@ public class HydraulicPressMenu extends AbstractContainerMenu {
     private final Level level;
 
     public HydraulicPressMenu(int pContainerId, Inventory inventory, FriendlyByteBuf buffer) {
-        this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()), new SimpleContainerData(3));
+        this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()), new SimpleContainerData(4));
     }
 
     public HydraulicPressMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity, ContainerData containerData) {
@@ -92,12 +92,12 @@ public class HydraulicPressMenu extends AbstractContainerMenu {
     }
 
     public boolean isOn() {
-        return containerData.get(1) > 0;
+        return containerData.get(2) > 0;
     }
 
     public int getScaledProgress() {
-        int currentProgress = this.containerData.get(1);
-        int maxProgress = this.containerData.get(2);
+        int currentProgress = this.containerData.get(2);
+        int maxProgress = this.containerData.get(3);
         int progressBarLength = 17;
 
         return maxProgress != 0 && currentProgress != 0 ? currentProgress * progressBarLength / maxProgress : 0;

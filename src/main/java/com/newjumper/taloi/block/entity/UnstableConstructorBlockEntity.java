@@ -95,20 +95,20 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
     protected void saveAdditional(@NotNull CompoundTag nbt) {
         super.saveAdditional(nbt);
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("constructor.litTime", this.litTime);
-        nbt.putInt("constructor.maxLitTime", this.maxLitTime);
-        nbt.putInt("constructor.currentProgress", this.currentProgress);
-        nbt.putInt("constructor.maxProgress", this.maxProgress);
+        nbt.putInt("uc.litTime", this.litTime);
+        nbt.putInt("uc.maxLitTime", this.maxLitTime);
+        nbt.putInt("uc.currentProgress", this.currentProgress);
+        nbt.putInt("uc.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("constructor.litTime");
-        this.maxLitTime = nbt.getInt("constructor.maxLitTime");
-        this.currentProgress = nbt.getInt("constructor.currentProgress");
-        this.maxProgress = nbt.getInt("constructor.maxProgress");
+        this.litTime = nbt.getInt("uc.litTime");
+        this.maxLitTime = nbt.getInt("uc.maxLitTime");
+        this.currentProgress = nbt.getInt("uc.currentProgress");
+        this.maxProgress = nbt.getInt("uc.maxProgress");
     }
 
     @Override
