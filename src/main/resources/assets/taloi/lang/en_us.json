@@ -326,6 +326,11 @@
   "container.bp": "Beta Processor",
   "container.up": "Unstable Processor",
 
+  "container.separator": "Separator",
+  "container.ase": "Alpha Separator",
+  "container.bse": "Beta Separator",
+  "container.use": "Unstable Separator",
+
   "advancements.taloi.root.title": "That Is Indeed A Lot Of Items",
   "advancements.taloi.root.description": "The beginning of a new end",
   "advancements.taloi.machinery.title": "Machinery",
