@@ -321,6 +321,11 @@
   "container.bhp": "Beta Hydraulic Press",
   "container.uhp": "Unstable Hydraulic Press",
 
+  "container.processor": "Processor",
+  "container.ap": "Alpha Processor",
+  "container.bp": "Beta Processor",
+  "container.up": "Unstable Processor",
+
   "advancements.taloi.root.title": "That Is Indeed A Lot Of Items",
   "advancements.taloi.root.description": "The beginning of a new end",
   "advancements.taloi.machinery.title": "Machinery",
