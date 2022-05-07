@@ -1,5 +1,6 @@
 package com.newjumper.taloi;
 
+import com.mojang.logging.LogUtils;
 import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
@@ -16,13 +17,12 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 
 @Mod(ThatsALotOfItems.MOD_ID)
 public class ThatsALotOfItems {
     public static final String MOD_ID = "taloi";
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     public ThatsALotOfItems() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -35,11 +35,11 @@ public class ThatsALotOfItems {
         ModRecipes.register(eventBus);
         ModSounds.register(eventBus);
 
-        eventBus.addListener(this::setupClient);
+        eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setupClient(final FMLClientSetupEvent event) {
+    private void setup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
