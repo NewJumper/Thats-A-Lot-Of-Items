@@ -4,6 +4,7 @@ import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
 import com.newjumper.taloi.screen.slot.ProcessorBaseSlot;
+import com.newjumper.taloi.screen.slot.ProcessorIngotSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -38,7 +39,7 @@ public class ProcessorMenu extends AbstractContainerMenu {
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 41, 43));
             this.addSlot(new ProcessorBaseSlot(handler, 1, 76, 16));
-            this.addSlot(new SlotItemHandler(handler, 2, 76, 54));
+            this.addSlot(new ProcessorIngotSlot(handler, 2, 76, 54));
             this.addSlot(new ModResultSlot(handler, 3, 119, 35));
         });
 
