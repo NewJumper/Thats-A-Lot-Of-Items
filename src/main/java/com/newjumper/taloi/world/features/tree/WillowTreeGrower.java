@@ -11,7 +11,7 @@ import java.util.Random;
 public class WillowTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
-    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(Random p_204307_, boolean p_204308_) {
+    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(Random pRandom, boolean pLargeHive) {
         return ModConfiguredFeatures.WILLOW;
     }
 }

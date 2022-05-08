@@ -14,10 +14,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class TheCavesAdditionModifier extends LootModifier {
+public class TheCavesAddition extends LootModifier {
     private final Item addition;
 
-    protected TheCavesAdditionModifier(LootItemCondition[] conditionsIn, Item addition) {
+    protected TheCavesAddition(LootItemCondition[] conditionsIn, Item addition) {
         super(conditionsIn);
         this.addition = addition;
     }
@@ -30,15 +30,15 @@ public class TheCavesAdditionModifier extends LootModifier {
         return generatedLoot;
     }
 
-    public static class Serializer extends GlobalLootModifierSerializer<TheCavesAdditionModifier> {
+    public static class Serializer extends GlobalLootModifierSerializer<TheCavesAddition> {
         @Override
-        public TheCavesAdditionModifier read(ResourceLocation name, JsonObject object, LootItemCondition[] conditionsIn) {
+        public TheCavesAddition read(ResourceLocation name, JsonObject object, LootItemCondition[] conditionsIn) {
             Item addition = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "addition")));
-            return new TheCavesAdditionModifier(conditionsIn, addition);
+            return new TheCavesAddition(conditionsIn, addition);
         }
 
         @Override
-        public JsonObject write(TheCavesAdditionModifier instance) {
+        public JsonObject write(TheCavesAddition instance) {
             JsonObject json = makeConditions(instance.conditions);
             json.addProperty("addition", ForgeRegistries.ITEMS.getKey(instance.addition).toString());
 

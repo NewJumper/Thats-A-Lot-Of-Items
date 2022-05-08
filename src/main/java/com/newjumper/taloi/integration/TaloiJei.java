@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Objects;
 
 @JeiPlugin
-public class TALOIjei implements IModPlugin {
+public class TaloiJei implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(ThatsALotOfItems.MOD_ID, "jei_plugin");

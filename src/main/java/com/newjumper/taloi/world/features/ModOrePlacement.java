@@ -5,8 +5,8 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModOrePlacement {
-    public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
-        return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
+    public static List<PlacementModifier> orePlacement(PlacementModifier modifier, PlacementModifier range) {
+        return List.of(modifier, InSquarePlacement.spread(), range, BiomeFilter.biome());
     }
 
     public static List<PlacementModifier> commonOrePlacement(int attempts, PlacementModifier range) {

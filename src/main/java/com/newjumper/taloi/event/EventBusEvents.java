@@ -1,7 +1,7 @@
 package com.newjumper.taloi.event;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.event.loot.TheCavesAdditionModifier;
+import com.newjumper.taloi.event.loot.TheCavesAddition;
 import com.newjumper.taloi.recipe.*;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 public class EventBusEvents {
     @SubscribeEvent
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
-        event.getRegistry().registerAll(new TheCavesAdditionModifier.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"music_disc_the_caves_from_dungeon")));
+        event.getRegistry().registerAll(new TheCavesAddition.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"music_disc_the_caves_from_dungeon")));
     }
 
     @SubscribeEvent
@@ -27,5 +27,6 @@ public class EventBusEvents {
         Registry.register(Registry.RECIPE_TYPE, "pressing", PressingRecipe.Type.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, "unstable_pressing", UnstablePressingRecipe.Type.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, "processing", ProcessingRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, "separating", SeparatingRecipe.Type.INSTANCE);
     }
 }

@@ -58,7 +58,7 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
 
     @Override
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull ConstructingRecipe recipe, @Nonnull IFocusGroup focusGroup) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 31, 47).addIngredients(Ingredient.of(Items.COAL));
+        builder.addSlot(RecipeIngredientRole.CATALYST, 31, 47).addIngredients(Ingredient.of(Items.COAL));
         builder.addSlot(RecipeIngredientRole.INPUT, 69, 17).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.INPUT, 69, 53).addIngredients(recipe.getIngredients().get(1));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 125, 35).addItemStack(recipe.getResultItem());

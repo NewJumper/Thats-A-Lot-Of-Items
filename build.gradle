@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '1.18.2-0.17.1'
+version = "1.18.2-${mod_version}"
 group = 'com.newjumper.taloi'
 archivesBaseName = 'taloi'
 
@@ -28,7 +28,7 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 minecraft {
     mappings channel: 'parchment', version: '2022.05.02-1.18.2'
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     runs {
         client {
@@ -115,9 +115,9 @@ jar {
         attributes([
                 "Specification-Title"     : "That's A Lot Of Items",
                 "Specification-Vendor"    : "NewJumper",
-                "Specification-Version"   : "0.17.0",
+                "Specification-Version"   : "${mod_version}",
                 "Implementation-Title"    : "TALOI",
-                "Implementation-Version"  : "0.17.0",
+                "Implementation-Version"  : "${mod_version}",
                 "Implementation-Vendor"   : "NewJumper",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
