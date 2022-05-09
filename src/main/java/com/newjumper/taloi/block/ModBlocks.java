@@ -424,9 +424,6 @@ public class ModBlocks {
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    // CROPS
-    // tomatoes
-
     // MISCELLANEOUS BLOCKS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new BouncyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(-1f)), ModCreativeModeTab.TALOI_BLOCK_TAB);

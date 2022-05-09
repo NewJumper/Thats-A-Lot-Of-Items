@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockLootTables extends BlockLoot {
+    private static final float[] LEAVES_SAPLING_CHANCES = new float[] { 0.05f, 0.0625f, 0.083333336f, 0.1f };
+
     @Override
     protected void addTables() {
         // EVERGREEN
@@ -19,7 +21,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE_GATE.get());
-        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.EVERGREEN_SAPLING.get()));
+        this.add(ModBlocks.EVERGREEN_LEAVES.get(), (block) -> createLeavesDrops(block, ModBlocks.EVERGREEN_SAPLING.get(), LEAVES_SAPLING_CHANCES));
         this.dropSelf(ModBlocks.EVERGREEN_SAPLING.get());
         this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
         this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
@@ -34,18 +36,17 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE_GATE.get());
-        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(ModBlocks.WILLOW_LEAVES.get(), ModBlocks.WILLOW_SAPLING.get()));
+        this.add(ModBlocks.WILLOW_LEAVES.get(), (block) -> createLeavesDrops(block, ModBlocks.WILLOW_SAPLING.get(), LEAVES_SAPLING_CHANCES));
         this.dropSelf(ModBlocks.WILLOW_SAPLING.get());
         this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
         this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
 
-        // LIMESTONE
+        // NATURAL
         this.dropSelf(ModBlocks.LIMESTONE.get());
         this.dropSelf(ModBlocks.LIMESTONE_STAIRS.get());
         this.add(ModBlocks.LIMESTONE_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(ModBlocks.LIMESTONE_WALL.get());
 
-        // MARBLE
         this.dropSelf(ModBlocks.MARBLE.get());
         this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
         this.add(ModBlocks.MARBLE_SLAB.get(), BlockLoot::createSlabItemTable);

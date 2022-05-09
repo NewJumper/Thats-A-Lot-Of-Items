@@ -183,9 +183,6 @@ public class ModItems {
     public static final RegistryObject<Item> DESTABILIZED_FUTURITE_APPLE = ITEMS.register("destabilized_futurite_apple", () -> new DestabilizedFuturiteAppleItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE).stacksTo(32)));
     public static final RegistryObject<Item> FUTURITE_APPLE = ITEMS.register("futurite_apple", () -> new FuturiteAppleItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE).stacksTo(16)));
 
-    // add tomato_seeds
-    // add crops and seeds stuff
-
     public static final RegistryObject<Item> MUSIC_DISC_THE_CAVES = ITEMS.register("music_disc_the_caves", () -> new RecordItem(11, ModSounds.THE_CAVES, new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEM_TAB).rarity(Rarity.RARE).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
