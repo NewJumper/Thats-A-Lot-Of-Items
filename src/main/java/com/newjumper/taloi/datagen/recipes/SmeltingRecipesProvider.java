@@ -1,4 +1,4 @@
-package com.newjumper.taloi.data.recipes;
+package com.newjumper.taloi.datagen.recipes;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.ModBlocks;

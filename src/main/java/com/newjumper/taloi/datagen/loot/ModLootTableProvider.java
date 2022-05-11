@@ -1,4 +1,4 @@
-package com.newjumper.taloi.data.loot;
+package com.newjumper.taloi.datagen.loot;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
