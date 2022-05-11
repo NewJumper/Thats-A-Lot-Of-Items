@@ -11,8 +11,8 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(DataGenerator gen, ExistingFileHelper existingFileHelper) {
-        super(gen, ThatsALotOfItems.MOD_ID, existingFileHelper);
+    public ModBlockStateProvider(DataGenerator pGenerator, ExistingFileHelper existingFileHelper) {
+        super(pGenerator, ThatsALotOfItems.MOD_ID, existingFileHelper);
     }
 
     @Override
