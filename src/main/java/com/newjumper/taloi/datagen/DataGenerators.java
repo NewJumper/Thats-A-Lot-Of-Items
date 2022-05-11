@@ -1,9 +1,9 @@
-package com.newjumper.taloi.data;
+package com.newjumper.taloi.datagen;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.data.loot.ModLootTableProvider;
-import com.newjumper.taloi.data.models.*;
-import com.newjumper.taloi.data.recipes.*;
+import com.newjumper.taloi.datagen.loot.ModLootTableProvider;
+import com.newjumper.taloi.datagen.models.*;
+import com.newjumper.taloi.datagen.recipes.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

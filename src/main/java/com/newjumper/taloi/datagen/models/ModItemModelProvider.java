@@ -1,4 +1,4 @@
-package com.newjumper.taloi.data.models;
+package com.newjumper.taloi.datagen.models;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import net.minecraft.data.DataGenerator;
