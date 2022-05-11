@@ -73,14 +73,8 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
 
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation pRecipeId) {
-        this.advancement.parent(new ResourceLocation("recipes/root"))
-                .addCriterion("has_the_recipe",
-                        RecipeUnlockedTrigger.unlocked(pRecipeId))
-                .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
-
-        consumer.accept(new ConstructingRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ingredients,
-                this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" +
-                this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
+        this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId)).rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
+        consumer.accept(new ConstructingRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ingredients, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
