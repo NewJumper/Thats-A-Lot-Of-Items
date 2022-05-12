@@ -1,6 +1,7 @@
 package com.newjumper.taloi.datagen;
 
 import com.newjumper.taloi.ThatsALotOfItems;
+import com.newjumper.taloi.datagen.lang.ModLanguageProvider;
 import com.newjumper.taloi.datagen.loot.ModLootTableProvider;
 import com.newjumper.taloi.datagen.models.*;
 import com.newjumper.taloi.datagen.recipes.*;
@@ -16,6 +17,9 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
+
+        // language
+//        generator.addProvider(new ModLanguageProvider(generator));
 
         // loot tables
         generator.addProvider(new ModLootTableProvider(generator));
