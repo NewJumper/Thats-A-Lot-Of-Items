@@ -179,8 +179,8 @@ public class SeparatorBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private static boolean canSeparate(SimpleContainer container, ItemStack resultOre, ItemStack resultRaw) {
-        return ((container.taloi.getItem(2).getItem() == resultOre.getItem() || container.taloi.getItem(2).isEmpty()) && (container.taloi.getItem(3).getItem() == resultRaw.getItem() || container.taloi.getItem(3).isEmpty())) &&
-                ((container.taloi.getItem(2).getCount() < container.taloi.getItem(2).getMaxStackSize()) && (container.taloi.getItem(3).getCount() < container.taloi.getItem(3).getMaxStackSize()));
+        return ((container.getItem(2).getItem() == resultOre.getItem() || container.getItem(2).isEmpty()) && (container.getItem(3).getItem() == resultRaw.getItem() || container.getItem(3).isEmpty())) &&
+               ((container.getItem(2).getCount() < container.getItem(2).getMaxStackSize()) && (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize()));
     }
 
     private static boolean hasFuel(SeparatorBlockEntity blockEntity) {

@@ -182,8 +182,8 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private static boolean canProcess(SimpleContainer container, ItemStack result) {
-        return (container.taloi.getItem(lastSlotIndex).getItem() == result.getItem() || container.taloi.getItem(lastSlotIndex).isEmpty()) &&
-               (container.taloi.getItem(lastSlotIndex).getCount() < container.taloi.getItem(lastSlotIndex).getMaxStackSize());
+        return (container.getItem(lastSlotIndex).getItem() == result.getItem() || container.getItem(lastSlotIndex).isEmpty()) &&
+               (container.getItem(lastSlotIndex).getCount() < container.getItem(lastSlotIndex).getMaxStackSize());
     }
 
     private static boolean hasFuel(ProcessorBlockEntity blockEntity) {
