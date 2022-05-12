@@ -30,10 +30,10 @@ public class ModLanguageProvider extends LanguageProvider {
         add("item.taloi.music_disc_the_caves", "Music Disc");
         add("item.taloi.music_disc_the_caves.desc", "NewJumper - The Caves");
 
-        add("container.constructor", "Constructor");
-        add("container.press", "Hydraulic Press");
-        add("container.processor", "Processor");
-        add("container.separator", "Separator");
+        add("container.taloi.constructor", "Constructor");
+        add("container.taloi.press", "Hydraulic Press");
+        add("container.taloi.processor", "Processor");
+        add("container.taloi.separator", "Separator");
         ModBlockEntities.BLOCK_ENTITIES.getEntries().stream().map(RegistryObject::get).forEach(this::addContainer);
 
         add("advancements.taloi.root.title", "That Is Indeed A Lot Of Items");
@@ -74,7 +74,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
     private void addContainer(BlockEntityType<?> blockEntity) {
         String key = blockEntity.getRegistryName().getPath();
-        add("container." + convertToInitials(key), convertToName(key));
+        add("container.taloi." + convertToInitials(key), convertToName(key));
     }
 
     private String convertToName(String key) {

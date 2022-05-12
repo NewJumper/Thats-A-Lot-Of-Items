@@ -14,6 +14,6 @@ public class BetaConstructorBlockEntity extends ConstructorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.bc");
+        return new TranslatableComponent("container.taloi.bc");
     }
 }

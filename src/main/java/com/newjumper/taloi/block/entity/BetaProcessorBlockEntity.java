@@ -14,6 +14,6 @@ public class BetaProcessorBlockEntity extends ProcessorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.bp");
+        return new TranslatableComponent("container.taloi.bp");
     }
 }

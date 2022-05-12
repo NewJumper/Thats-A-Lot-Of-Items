@@ -14,6 +14,6 @@ public class AlphaHydraulicPressBlockEntity extends HydraulicPressBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.ahp");
+        return new TranslatableComponent("container.taloi.ahp");
     }
 }

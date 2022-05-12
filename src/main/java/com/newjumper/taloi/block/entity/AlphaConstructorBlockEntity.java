@@ -14,6 +14,6 @@ public class AlphaConstructorBlockEntity extends ConstructorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.ac");
+        return new TranslatableComponent("container.taloi.ac");
     }
 }

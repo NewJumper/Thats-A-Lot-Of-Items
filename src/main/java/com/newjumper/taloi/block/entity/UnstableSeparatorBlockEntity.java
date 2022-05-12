@@ -14,6 +14,6 @@ public class UnstableSeparatorBlockEntity extends SeparatorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.use");
+        return new TranslatableComponent("container.taloi.use");
     }
 }

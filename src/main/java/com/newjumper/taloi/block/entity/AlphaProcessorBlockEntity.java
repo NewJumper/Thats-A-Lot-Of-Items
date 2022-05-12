@@ -14,6 +14,6 @@ public class AlphaProcessorBlockEntity extends ProcessorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.ap");
+        return new TranslatableComponent("container.taloi.ap");
     }
 }

@@ -14,6 +14,6 @@ public class AlphaSeparatorBlockEntity extends SeparatorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.ase");
+        return new TranslatableComponent("container.taloi.ase");
     }
 }

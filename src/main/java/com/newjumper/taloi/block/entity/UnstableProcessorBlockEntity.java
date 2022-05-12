@@ -14,6 +14,6 @@ public class UnstableProcessorBlockEntity extends ProcessorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.up");
+        return new TranslatableComponent("container.taloi.up");
     }
 }

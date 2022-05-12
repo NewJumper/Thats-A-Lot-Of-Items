@@ -14,6 +14,6 @@ public class BetaSeparatorBlockEntity extends SeparatorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.bse");
+        return new TranslatableComponent("container.taloi.bse");
     }
 }

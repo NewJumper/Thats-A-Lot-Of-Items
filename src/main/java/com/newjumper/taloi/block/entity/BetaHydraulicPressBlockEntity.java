@@ -14,6 +14,6 @@ public class BetaHydraulicPressBlockEntity extends HydraulicPressBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.bhp");
+        return new TranslatableComponent("container.taloi.bhp");
     }
 }
