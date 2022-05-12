@@ -7,8 +7,8 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, ThatsALotOfItems.MOD_ID, existingFileHelper);
+    public ModItemModelProvider(DataGenerator pGenerator, ExistingFileHelper existingFileHelper) {
+        super(pGenerator, ThatsALotOfItems.MOD_ID, existingFileHelper);
     }
 
     @Override
