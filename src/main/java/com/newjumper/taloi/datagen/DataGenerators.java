@@ -19,7 +19,7 @@ public class DataGenerators {
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
 
         // language
-//        generator.addProvider(new ModLanguageProvider(generator));
+        generator.addProvider(new ModLanguageProvider(generator));
 
         // loot tables
         generator.addProvider(new ModLootTableProvider(generator));

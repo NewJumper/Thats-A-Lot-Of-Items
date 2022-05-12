@@ -26,7 +26,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
         ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(this::addBlock);
         ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).forEach(this::addItem);
-        // ^^^^^^^ CREATES DUPLICATE KEYS FOR BLOCK ITEMS, MUST FIX ^^^^^^^
+        // ^^^^^^^ CREATES DUPLICATE KEYS FOR BLOCK ITEMS, FIX ^^^^^^^
         add("item.taloi.music_disc_the_caves", "Music Disc");
         add("item.taloi.music_disc_the_caves.desc", "NewJumper - The Caves");
 
