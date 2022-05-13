@@ -1,6 +1,7 @@
 package com.newjumper.taloi.world.features;
 
 import net.minecraft.core.Holder;
+import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -11,6 +12,10 @@ public class ModPlacedFeatures {
     // TREES
     public static final Holder<PlacedFeature> EVERGREEN_PLACED = PlacementUtils.register("evergreen_placed", ModConfiguredFeatures.EVERGREEN_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.2f, 1)));
     public static final Holder<PlacedFeature> WILLOW_PLACED = PlacementUtils.register("willow_placed", ModConfiguredFeatures.WILLOW_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.2f, 1)));
+
+    // NATURAL
+    public static final Holder<PlacedFeature> ORE_LIMESTONE = PlacementUtils.register("ore_limestone", ModConfiguredFeatures.LIMESTONE, ModOrePlacement.commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(62))));
+    public static final Holder<PlacedFeature> ORE_MARBLE = PlacementUtils.register("ore_marble", ModConfiguredFeatures.MARBLE, ModOrePlacement.commonOrePlacement(3, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(62))));
 
     // ORES
     public static final Holder<PlacedFeature> ORE_ALUMINUM = PlacementUtils.register("ore_aluminum", ModConfiguredFeatures.ORE_ALUMINUM, ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-16), VerticalAnchor.aboveBottom(64))));

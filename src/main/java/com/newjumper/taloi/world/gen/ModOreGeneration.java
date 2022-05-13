@@ -12,6 +12,9 @@ public class ModOreGeneration {
     public static void generateOres(final BiomeLoadingEvent event) {
         List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
 
+        base.add(ModPlacedFeatures.ORE_LIMESTONE);
+        base.add(ModPlacedFeatures.ORE_MARBLE);
+
         base.add(ModPlacedFeatures.ORE_ALUMINUM);
         base.add(ModPlacedFeatures.ORE_ALUMINUM_LARGE);
         base.add(ModPlacedFeatures.ORE_IRIDIUM);

@@ -7,6 +7,7 @@ import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -22,6 +23,8 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.List;
+
+import static net.minecraft.data.worldgen.features.OreFeatures.NATURAL_STONE;
 
 public class ModConfiguredFeatures {
     // EVERGREEN
@@ -45,6 +48,10 @@ public class ModConfiguredFeatures {
 
     public static final Holder<PlacedFeature> WILLOW_CHECKED = PlacementUtils.register("willow_checked", WILLOW, PlacementUtils.filteredByBlockSurvival(ModBlocks.WILLOW_SAPLING.get()));
     public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> WILLOW_SPAWN = FeatureUtils.register("willow_spawn", Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(WILLOW_CHECKED, 0.1f)), WILLOW_CHECKED));
+
+    // NATURAL
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> LIMESTONE = FeatureUtils.register("limestone", Feature.ORE, new OreConfiguration(NATURAL_STONE, ModBlocks.LIMESTONE.get().defaultBlockState(), 24));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> MARBLE = FeatureUtils.register("marble", Feature.ORE, new OreConfiguration(NATURAL_STONE, ModBlocks.MARBLE.get().defaultBlockState(), 13));
 
     // ORES
     public static final List<OreConfiguration.TargetBlockState> ORE_ALUMINUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ALUMINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ALUMINUM_ORE.get().defaultBlockState()));
