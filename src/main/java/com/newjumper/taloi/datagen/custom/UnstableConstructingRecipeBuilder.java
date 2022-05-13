@@ -22,33 +22,33 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class ConstructingRecipeBuilder implements RecipeBuilder {
+public class UnstableConstructingRecipeBuilder implements RecipeBuilder {
     private final Item result;
     private final int count;
     private final List<Ingredient> ingredients = Lists.newArrayList();
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public ConstructingRecipeBuilder(ItemLike pResult, int pCount) {
+    public UnstableConstructingRecipeBuilder(ItemLike pResult, int pCount) {
         this.result = pResult.asItem();
         this.count = pCount;
     }
 
-    public ConstructingRecipeBuilder requires(TagKey<Item> pTag) {
+    public UnstableConstructingRecipeBuilder requires(TagKey<Item> pTag) {
         return this.requires(pTag, 1);
     }
 
-    public ConstructingRecipeBuilder requires(TagKey<Item> pTag, int pQuantity) {
+    public UnstableConstructingRecipeBuilder requires(TagKey<Item> pTag, int pQuantity) {
         for(int i = 0; i < pQuantity; ++i) {
             this.ingredients.add(Ingredient.of(pTag));
         }
         return this;
     }
 
-    public ConstructingRecipeBuilder requires(ItemLike pItem) {
+    public UnstableConstructingRecipeBuilder requires(ItemLike pItem) {
         return this.requires(pItem, 1);
     }
 
-    public ConstructingRecipeBuilder requires(ItemLike pItem, int pQuantity) {
+    public UnstableConstructingRecipeBuilder requires(ItemLike pItem, int pQuantity) {
         for(int i = 0; i < pQuantity; ++i) {
             this.ingredients.add(Ingredient.of(pItem));
         }
@@ -74,7 +74,7 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation pRecipeId) {
         this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId)).rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new ConstructingRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ingredients, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
+        consumer.accept(new UnstableConstructingRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ingredients, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
@@ -118,7 +118,7 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
 
         @Override
         public RecipeSerializer<?> getType() {
-            return ModRecipes.CONSTRUCTING.get();
+            return ModRecipes.UNSTABLE_CONSTRUCTING.get();
         }
 
         @Nullable

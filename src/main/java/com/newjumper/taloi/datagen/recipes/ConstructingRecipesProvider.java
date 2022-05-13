@@ -2,12 +2,15 @@ package com.newjumper.taloi.datagen.recipes;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.datagen.custom.ConstructingRecipeBuilder;
+import com.newjumper.taloi.datagen.custom.UnstableConstructingRecipeBuilder;
 import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -19,14 +22,52 @@ public class ConstructingRecipesProvider extends RecipeProvider implements ICond
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+        new ConstructingRecipeBuilder(ModItems.BRONZE_INGOT.get(), 1)
+                .requires(Tags.Items.INGOTS_COPPER)
+                .requires(ModTags.Items.INGOT_TIN)
+                .unlockedBy("has_material", has(Items.COPPER_INGOT)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_constructing"));
+
+        new ConstructingRecipeBuilder(ModItems.CARBONITE.get(), 1)
+                .requires(Items.BLAZE_POWDER)
+                .requires(ModItems.COAL_INFUSED_IRON_INGOT.get())
+                .unlockedBy("has_material", has(ModItems.COAL_INFUSED_IRON_INGOT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "carbonite_from_constructing"));
+
+        new UnstableConstructingRecipeBuilder(ModItems.FERRONIOBIUM_INGOT.get(), 1)
+                .requires(ModItems.ALLOY_PLATE.get())
+                .requires(ModItems.MAGNESIUM_INGOT.get())
+                .requires(ModItems.STEEL_PLATE.get())
+                .unlockedBy("has_material", has(ModItems.ALLOY_PLATE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "ferroniobium_ingot_from_constructing"));
+
+        new UnstableConstructingRecipeBuilder(ModItems.FUTURITE.get(), 1)
+                .requires(ModItems.ALLOY_PLATE.get())
+                .requires(ModItems.FORGE_PLATE.get())
+                .requires(ModItems.TUNGSTEN_PLATE.get())
+                .unlockedBy("has_material", has(ModItems.FORGE_PLATE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_from_constructing"));
+
+        new ConstructingRecipeBuilder(ModItems.HARDENED_CARBONITE.get(), 1)
+                .requires(ModItems.CARBON_PLATE.get())
+                .requires(ModItems.SILICON_PLATE.get())
+                .unlockedBy("has_material", has(ModItems.CARBON_PLATE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "hardened_carbonite_from_constructing"));
+
+        new UnstableConstructingRecipeBuilder(ModItems.SERMIUM.get(), 1)
+                .requires(ModItems.HARDENED_CARBONITE.get())
+                .requires(ModItems.REFINED_URANIUM.get())
+                .requires(ModItems.FERRONIOBIUM_INGOT.get())
+                .unlockedBy("has_material", has(ModItems.FERRONIOBIUM_INGOT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "sermium_from_constructing"));
+
         new ConstructingRecipeBuilder(ModItems.STEEL_INGOT.get(), 1)
                 .requires(Items.COAL)
-                .requires(Items.IRON_INGOT)
-                .unlockedBy("has_material", has(Items.IRON_INGOT)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "constructing"));
+                .requires(Tags.Items.INGOTS_IRON)
+                .unlockedBy("has_material", has(Tags.Items.INGOTS_IRON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_constructing"));
 
-        /*new ConstructingRecipeBuilder(ModItems.BRONZE_INGOT.get(), 1)
-                .requires(Items.COPPER_INGOT)
-                .requires(ModItems.TIN_INGOT.get())
-                .unlockedBy("has_material", has(Items.COPPER_INGOT)).save(consumer);*/
+        new ConstructingRecipeBuilder(ModItems.ALLOY_X.get(), 1)
+                .requires(ModTags.Items.INGOT_OSMIUM)
+                .requires(ModTags.Items.INGOT_ZINC)
+                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "alloy_x_from_constructing"));
+
+        new ConstructingRecipeBuilder(ModItems.ALLOY_Z.get(), 1)
+                .requires(ModTags.Items.INGOT_IRIDIUM)
+                .requires(ModTags.Items.INGOT_SILICON)
+                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "alloy_z_from_constructing"));
     }
 }

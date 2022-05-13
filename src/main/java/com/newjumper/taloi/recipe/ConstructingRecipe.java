@@ -68,6 +68,7 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
     public static class Type implements RecipeType<ConstructingRecipe> {
         private Type() {}
         public static final Type INSTANCE = new Type();
+        public static final String ID = "constructing";
     }
 
     public static class Serializer implements RecipeSerializer<ConstructingRecipe> {
