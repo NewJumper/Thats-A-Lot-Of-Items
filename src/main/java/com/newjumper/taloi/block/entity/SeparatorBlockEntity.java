@@ -155,7 +155,7 @@ public class SeparatorBlockEntity extends BlockEntity implements MenuProvider {
                     blockEntity.itemHandler.extractItem(0,1, false);
                     blockEntity.itemHandler.extractItem(1,1, false);
                     blockEntity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(2).getCount() + 1));
-                    blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultRaw().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 2));
+                    blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultOre().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 2));
 
                     blockEntity.currentProgress = 0;
                 }
@@ -175,7 +175,7 @@ public class SeparatorBlockEntity extends BlockEntity implements MenuProvider {
 
         Optional<SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(SeparatingRecipe.Type.INSTANCE, inventory, level);
 
-        return match.isPresent() && canSeparate(inventory, match.get().getResultItem(), match.get().getResultRaw()) && hasFuel(blockEntity);
+        return match.isPresent() && canSeparate(inventory, match.get().getResultItem(), match.get().getResultOre()) && hasFuel(blockEntity);
     }
 
     private static boolean canSeparate(SimpleContainer container, ItemStack resultOre, ItemStack resultRaw) {
