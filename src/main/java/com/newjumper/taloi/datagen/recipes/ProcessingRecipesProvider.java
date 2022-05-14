@@ -26,8 +26,8 @@ public class ProcessingRecipesProvider extends RecipeProvider implements ICondit
         new ProcessingRecipeBuilder(Ingredient.of(Items.COAL), Ingredient.of(ModTags.Items.RAW_LEAD), ModItems.COAL_INFUSED_LEAD_INGOT.get(), 1)
                 .unlockedBy("has_material", has(ModTags.Items.RAW_LEAD)).save(consumer);
 
-        new ProcessingRecipeBuilder(Ingredient.of(Items.DIAMOND), Ingredient.of(ModTags.Items.INGOT_STEEL), ModItems.DIAMOND_INFUSED_STEEL_INGOT.get(), 1)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_STEEL)).save(consumer);
+        new ProcessingRecipeBuilder(Ingredient.of(Items.DIAMOND), Ingredient.of(ModTags.Items.INGOTS_STEEL), ModItems.DIAMOND_INFUSED_STEEL_INGOT.get(), 1)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer);
 
         new ProcessingRecipeBuilder(Ingredient.of(Items.DIAMOND), Ingredient.of(ModTags.Items.RAW_TIN), ModItems.DIAMOND_INFUSED_TIN_INGOT.get(), 1)
                 .unlockedBy("has_material", has(ModTags.Items.RAW_TIN)).save(consumer);

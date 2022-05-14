@@ -26,8 +26,8 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_alloy_z", has(ModItems.ALLOY_Z.get())).save(consumer);
 
         new PressingRecipeBuilder(ModItems.BRONZE_PLATE.get(), 1)
-                .requires(ModTags.Items.INGOT_BRONZE, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_BRONZE)).save(consumer);
+                .requires(ModTags.Items.INGOTS_BRONZE, 2)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_BRONZE)).save(consumer);
 
         new PressingRecipeBuilder(ModItems.CARBON_PLATE.get(), 1)
                 .requires(ModItems.CARBONITE.get(), 2)
@@ -54,7 +54,7 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
 
         new PressingRecipeBuilder(ModItems.GOLD_DISK.get(), 1)
-                .requires(ModTags.Items.INGOT_SILICON)
+                .requires(ModTags.Items.INGOTS_SILICON)
                 .requires(Tags.Items.INGOTS_GOLD)
                 .unlockedBy("has_material", has(Tags.Items.INGOTS_GOLD)).save(consumer);
 
@@ -65,8 +65,8 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.SEMICONDUCTOR_PLATE.get())).save(consumer);
 
         new PressingRecipeBuilder(ModItems.MAGNESIUM_PLATE.get(), 1)
-                .requires(ModTags.Items.INGOT_MAGNESIUM, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_MAGNESIUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_MAGNESIUM, 2)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_MAGNESIUM)).save(consumer);
 
         new PressingRecipeBuilder(ModItems.REINFORCED_COPPER_PLATE.get(), 1)
                 .requires(ModItems.BRONZE_PLATE.get())
@@ -85,15 +85,15 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
 
         new PressingRecipeBuilder(ModItems.SILICON_PLATE.get(), 1)
-                .requires(ModTags.Items.INGOT_SILICON, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_SILICON)).save(consumer);
+                .requires(ModTags.Items.INGOTS_SILICON, 2)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_SILICON)).save(consumer);
 
         new PressingRecipeBuilder(ModItems.STEEL_PLATE.get(), 1)
-                .requires(ModTags.Items.INGOT_STEEL, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_STEEL)).save(consumer);
+                .requires(ModTags.Items.INGOTS_STEEL, 2)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer);
 
         new PressingRecipeBuilder(ModItems.TUNGSTEN_PLATE.get(), 1)
-                .requires(ModTags.Items.INGOT_TUNGSTEN, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .requires(ModTags.Items.INGOTS_TUNGSTEN, 2)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
     }
 }

@@ -133,14 +133,14 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
         // ALUMINUM
         ShapedRecipeBuilder.shaped(ModBlocks.ALUMINUM_BLOCK.get(), 1)
-                .define('A', ModTags.Items.INGOT_ALUMINUM)
+                .define('A', ModTags.Items.INGOTS_ALUMINUM)
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ALUMINUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.ALUMINUM_INGOT.get(), 9)
                 .requires(ModBlocks.ALUMINUM_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_ALUMINUM_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_ALUMINUM)
                 .pattern("RRR")
@@ -151,22 +151,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_ALUMINUM_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_ALUMINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.ALUMINUM_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_ALUMINUM)
+                .define('#', ModTags.Items.NUGGETS_ALUMINUM)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_nugget"));
 
         // IRIDIUM
         ShapedRecipeBuilder.shaped(ModBlocks.IRIDIUM_BLOCK.get(), 1)
-                .define('I', ModTags.Items.INGOT_IRIDIUM)
+                .define('I', ModTags.Items.INGOTS_IRIDIUM)
                 .pattern("III")
                 .pattern("III")
                 .pattern("III")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.IRIDIUM_INGOT.get(), 9)
                 .requires(ModBlocks.IRIDIUM_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_IRIDIUM_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_IRIDIUM)
                 .pattern("RRR")
@@ -177,22 +177,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_IRIDIUM_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_IRIDIUM)
+                .define('#', ModTags.Items.NUGGETS_IRIDIUM)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_nugget"));
 
         // LEAD
         ShapedRecipeBuilder.shaped(ModBlocks.LEAD_BLOCK.get(), 1)
-                .define('L', ModTags.Items.INGOT_LEAD)
+                .define('L', ModTags.Items.INGOTS_LEAD)
                 .pattern("LLL")
                 .pattern("LLL")
                 .pattern("LLL")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_LEAD)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_LEAD)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.LEAD_INGOT.get(), 9)
                 .requires(ModBlocks.LEAD_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_LEAD_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_LEAD)
                 .pattern("RRR")
@@ -203,22 +203,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_LEAD_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_LEAD)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.LEAD_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_LEAD)
+                .define('#', ModTags.Items.NUGGETS_LEAD)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_nugget"));
 
         // MAGNESIUM
         ShapedRecipeBuilder.shaped(ModBlocks.MAGNESIUM_BLOCK.get(), 1)
-                .define('M', ModTags.Items.INGOT_MAGNESIUM)
+                .define('M', ModTags.Items.INGOTS_MAGNESIUM)
                 .pattern("MMM")
                 .pattern("MMM")
                 .pattern("MMM")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_MAGNESIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_MAGNESIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.MAGNESIUM_INGOT.get(), 9)
                 .requires(ModBlocks.MAGNESIUM_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_MAGNESIUM_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_MAGNESIUM)
                 .pattern("RRR")
@@ -229,22 +229,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_MAGNESIUM_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_MAGNESIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.MAGNESIUM_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_MAGNESIUM)
+                .define('#', ModTags.Items.NUGGETS_MAGNESIUM)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_nugget"));
 
         // OSMIUM
         ShapedRecipeBuilder.shaped(ModBlocks.OSMIUM_BLOCK.get(), 1)
-                .define('O', ModTags.Items.INGOT_OSMIUM)
+                .define('O', ModTags.Items.INGOTS_OSMIUM)
                 .pattern("OOO")
                 .pattern("OOO")
                 .pattern("OOO")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.OSMIUM_INGOT.get(), 9)
                 .requires(ModBlocks.OSMIUM_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_OSMIUM_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_OSMIUM)
                 .pattern("RRR")
@@ -255,22 +255,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_OSMIUM_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_OSMIUM)
+                .define('#', ModTags.Items.NUGGETS_OSMIUM)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_nugget"));
 
         // PLATINUM
         ShapedRecipeBuilder.shaped(ModBlocks.PLATINUM_BLOCK.get(), 1)
-                .define('P', ModTags.Items.INGOT_PLATINUM)
+                .define('P', ModTags.Items.INGOTS_PLATINUM)
                 .pattern("PPP")
                 .pattern("PPP")
                 .pattern("PPP")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.PLATINUM_INGOT.get(), 9)
                 .requires(ModBlocks.PLATINUM_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_PLATINUM_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_PLATINUM)
                 .pattern("RRR")
@@ -281,22 +281,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_PLATINUM_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_PLATINUM)
+                .define('#', ModTags.Items.NUGGETS_PLATINUM)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_nugget"));
 
         // SILICON
         ShapedRecipeBuilder.shaped(ModBlocks.SILICON_BLOCK.get(), 1)
-                .define('S', ModTags.Items.INGOT_SILICON)
+                .define('S', ModTags.Items.INGOTS_SILICON)
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_SILICON)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_SILICON)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.SILICON.get(), 9)
                 .requires(ModBlocks.SILICON_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_SILICON_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_SILICON)
                 .pattern("RRR")
@@ -309,14 +309,14 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
         // TIN
         ShapedRecipeBuilder.shaped(ModBlocks.TIN_BLOCK.get(), 1)
-                .define('T', ModTags.Items.INGOT_TIN)
+                .define('T', ModTags.Items.INGOTS_TIN)
                 .pattern("TTT")
                 .pattern("TTT")
                 .pattern("TTT")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TIN)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.TIN_INGOT.get(), 9)
                 .requires(ModBlocks.TIN_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_TIN_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_TIN)
                 .pattern("RRR")
@@ -327,22 +327,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_TIN_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_TIN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TIN_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_TIN)
+                .define('#', ModTags.Items.NUGGETS_TIN)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_nugget"));
 
         // TUNGSTEN
         ShapedRecipeBuilder.shaped(ModBlocks.TUNGSTEN_BLOCK.get(), 1)
-                .define('T', ModTags.Items.INGOT_TUNGSTEN)
+                .define('T', ModTags.Items.INGOTS_TUNGSTEN)
                 .pattern("TTT")
                 .pattern("TTT")
                 .pattern("TTT")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.TUNGSTEN_INGOT.get(), 9)
                 .requires(ModBlocks.TUNGSTEN_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_TUNGSTEN_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_TUNGSTEN)
                 .pattern("RRR")
@@ -353,22 +353,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_TUNGSTEN_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_TUNGSTEN)
+                .define('#', ModTags.Items.NUGGETS_TUNGSTEN)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_nugget"));
 
         // URANIUM
         ShapedRecipeBuilder.shaped(ModBlocks.URANIUM_BLOCK.get(), 1)
-                .define('U', ModTags.Items.INGOT_URANIUM)
+                .define('U', ModTags.Items.INGOTS_URANIUM)
                 .pattern("UUU")
                 .pattern("UUU")
                 .pattern("UUU")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_URANIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_URANIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.REFINED_URANIUM.get(), 9)
                 .requires(ModBlocks.URANIUM_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_URANIUM_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_URANIUM)
                 .pattern("RRR")
@@ -379,22 +379,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_URANIUM_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_URANIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.REFINED_URANIUM.get(), 1)
-                .define('#', ModTags.Items.NUGGET_URANIUM)
+                .define('#', ModTags.Items.NUGGETS_URANIUM)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_bit"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_bit"));
 
         // ZINC
         ShapedRecipeBuilder.shaped(ModBlocks.ZINC_BLOCK.get(), 1)
-                .define('Z', ModTags.Items.INGOT_ZINC)
+                .define('Z', ModTags.Items.INGOTS_ZINC)
                 .pattern("ZZZ")
                 .pattern("ZZZ")
                 .pattern("ZZZ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ZINC)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ZINC)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.ZINC_INGOT.get(), 9)
                 .requires(ModBlocks.ZINC_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_block"));
         ShapedRecipeBuilder.shaped(ModBlocks.RAW_ZINC_BLOCK.get(), 1)
                 .define('R', ModTags.Items.RAW_ZINC)
                 .pattern("RRR")
@@ -405,309 +405,309 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.RAW_ZINC_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.RAW_ZINC)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.ZINC_INGOT.get(), 1)
-                .define('#', ModTags.Items.NUGGET_ZINC)
+                .define('#', ModTags.Items.NUGGETS_ZINC)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
 
         // BRONZE
         ShapedRecipeBuilder.shaped(ModBlocks.BRONZE_BLOCK.get(), 1)
-                .define('B', ModTags.Items.INGOT_BRONZE)
+                .define('B', ModTags.Items.INGOTS_BRONZE)
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .unlockedBy("has_material", has(ModItems.BRONZE_INGOT.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.BRONZE_INGOT.get(), 9)
                 .requires(ModBlocks.BRONZE_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_BRONZE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_bronze_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_BRONZE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_bronze_block"));
 
         // STEEL
         ShapedRecipeBuilder.shaped(ModBlocks.STEEL_BLOCK.get(), 1)
-                .define('S', ModTags.Items.INGOT_STEEL)
+                .define('S', ModTags.Items.INGOTS_STEEL)
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
                 .unlockedBy("has_material", has(ModItems.STEEL_INGOT.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.STEEL_INGOT.get(), 9)
                 .requires(ModBlocks.STEEL_BLOCK.get())
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_steel_block"));
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_steel_block"));
 
         // IRIDIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SWORD.get(), 1)
-                .define('X', ModTags.Items.INGOT_IRIDIUM)
+                .define('X', ModTags.Items.INGOTS_IRIDIUM)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SHOVEL.get(), 1)
-                .define('X', ModTags.Items.INGOT_IRIDIUM)
+                .define('X', ModTags.Items.INGOTS_IRIDIUM)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_PICKAXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_IRIDIUM)
+                .define('X', ModTags.Items.INGOTS_IRIDIUM)
                 .define('#', Items.STICK)
                 .pattern("XXX")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_AXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_IRIDIUM)
+                .define('X', ModTags.Items.INGOTS_IRIDIUM)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern("X#")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_HOE.get(), 1)
-                .define('X', ModTags.Items.INGOT_IRIDIUM)
+                .define('X', ModTags.Items.INGOTS_IRIDIUM)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern(" #")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
 
         // OSMIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_SWORD.get(), 1)
-                .define('X', ModTags.Items.INGOT_OSMIUM)
+                .define('X', ModTags.Items.INGOTS_OSMIUM)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_SHOVEL.get(), 1)
-                .define('X', ModTags.Items.INGOT_OSMIUM)
+                .define('X', ModTags.Items.INGOTS_OSMIUM)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_PICKAXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_OSMIUM)
+                .define('X', ModTags.Items.INGOTS_OSMIUM)
                 .define('#', Items.STICK)
                 .pattern("XXX")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_AXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_OSMIUM)
+                .define('X', ModTags.Items.INGOTS_OSMIUM)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern("X#")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_HOE.get(), 1)
-                .define('X', ModTags.Items.INGOT_OSMIUM)
+                .define('X', ModTags.Items.INGOTS_OSMIUM)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern(" #")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
 
         // PLATINUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_SWORD.get(), 1)
-                .define('X', ModTags.Items.INGOT_PLATINUM)
+                .define('X', ModTags.Items.INGOTS_PLATINUM)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_SHOVEL.get(), 1)
-                .define('X', ModTags.Items.INGOT_PLATINUM)
+                .define('X', ModTags.Items.INGOTS_PLATINUM)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_PICKAXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_PLATINUM)
+                .define('X', ModTags.Items.INGOTS_PLATINUM)
                 .define('#', Items.STICK)
                 .pattern("XXX")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_AXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_PLATINUM)
+                .define('X', ModTags.Items.INGOTS_PLATINUM)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern("X#")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_HOE.get(), 1)
-                .define('X', ModTags.Items.INGOT_PLATINUM)
+                .define('X', ModTags.Items.INGOTS_PLATINUM)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern(" #")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
 
         // TUNGSTEN TOOLS
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_SWORD.get(), 1)
-                .define('X', ModTags.Items.INGOT_TUNGSTEN)
+                .define('X', ModTags.Items.INGOTS_TUNGSTEN)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_SHOVEL.get(), 1)
-                .define('X', ModTags.Items.INGOT_TUNGSTEN)
+                .define('X', ModTags.Items.INGOTS_TUNGSTEN)
                 .define('#', Items.STICK)
                 .pattern("X")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_PICKAXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_TUNGSTEN)
+                .define('X', ModTags.Items.INGOTS_TUNGSTEN)
                 .define('#', Items.STICK)
                 .pattern("XXX")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_AXE.get(), 1)
-                .define('X', ModTags.Items.INGOT_TUNGSTEN)
+                .define('X', ModTags.Items.INGOTS_TUNGSTEN)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern("X#")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_HOE.get(), 1)
-                .define('X', ModTags.Items.INGOT_TUNGSTEN)
+                .define('X', ModTags.Items.INGOTS_TUNGSTEN)
                 .define('#', Items.STICK)
                 .pattern("XX")
                 .pattern(" #")
                 .pattern(" #")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         
         // IRIDIUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_HELMET.get(), 1)
-                .define('A', ModTags.Items.INGOT_IRIDIUM)
+                .define('A', ModTags.Items.INGOTS_IRIDIUM)
                 .pattern("AAA")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_CHESTPLATE.get(), 1)
-                .define('A', ModTags.Items.INGOT_IRIDIUM)
+                .define('A', ModTags.Items.INGOTS_IRIDIUM)
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_LEGGINGS.get(), 1)
-                .define('A', ModTags.Items.INGOT_IRIDIUM)
+                .define('A', ModTags.Items.INGOTS_IRIDIUM)
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_BOOTS.get(), 1)
-                .define('A', ModTags.Items.INGOT_IRIDIUM)
+                .define('A', ModTags.Items.INGOTS_IRIDIUM)
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
 
         // OSMIUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_HELMET.get(), 1)
-                .define('A', ModTags.Items.INGOT_OSMIUM)
+                .define('A', ModTags.Items.INGOTS_OSMIUM)
                 .pattern("AAA")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_CHESTPLATE.get(), 1)
-                .define('A', ModTags.Items.INGOT_OSMIUM)
+                .define('A', ModTags.Items.INGOTS_OSMIUM)
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_LEGGINGS.get(), 1)
-                .define('A', ModTags.Items.INGOT_OSMIUM)
+                .define('A', ModTags.Items.INGOTS_OSMIUM)
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_BOOTS.get(), 1)
-                .define('A', ModTags.Items.INGOT_OSMIUM)
+                .define('A', ModTags.Items.INGOTS_OSMIUM)
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
 
         // PLATINUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_HELMET.get(), 1)
-                .define('A', ModTags.Items.INGOT_PLATINUM)
+                .define('A', ModTags.Items.INGOTS_PLATINUM)
                 .pattern("AAA")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_CHESTPLATE.get(), 1)
-                .define('A', ModTags.Items.INGOT_PLATINUM)
+                .define('A', ModTags.Items.INGOTS_PLATINUM)
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_LEGGINGS.get(), 1)
-                .define('A', ModTags.Items.INGOT_PLATINUM)
+                .define('A', ModTags.Items.INGOTS_PLATINUM)
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.PLATINUM_BOOTS.get(), 1)
-                .define('A', ModTags.Items.INGOT_PLATINUM)
+                .define('A', ModTags.Items.INGOTS_PLATINUM)
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
 
         // TUNGSTEN ARMOR
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_HELMET.get(), 1)
-                .define('A', ModTags.Items.INGOT_TUNGSTEN)
+                .define('A', ModTags.Items.INGOTS_TUNGSTEN)
                 .pattern("AAA")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_CHESTPLATE.get(), 1)
-                .define('A', ModTags.Items.INGOT_TUNGSTEN)
+                .define('A', ModTags.Items.INGOTS_TUNGSTEN)
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_LEGGINGS.get(), 1)
-                .define('A', ModTags.Items.INGOT_TUNGSTEN)
+                .define('A', ModTags.Items.INGOTS_TUNGSTEN)
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.TUNGSTEN_BOOTS.get(), 1)
-                .define('A', ModTags.Items.INGOT_TUNGSTEN)
+                .define('A', ModTags.Items.INGOTS_TUNGSTEN)
                 .pattern("A A")
                 .pattern("A A")
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
 
         // NUGGETS
         ShapelessRecipeBuilder.shapeless(ModItems.ALUMINUM_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_ALUMINUM)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ALUMINUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_ALUMINUM)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ALUMINUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.IRIDIUM_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_IRIDIUM)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_IRIDIUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_IRIDIUM)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.LEAD_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_LEAD)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_LEAD)).save(consumer);
+                .requires(ModTags.Items.INGOTS_LEAD)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_LEAD)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.MAGNESIUM_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_MAGNESIUM)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_MAGNESIUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_MAGNESIUM)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_MAGNESIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.OSMIUM_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_OSMIUM)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_OSMIUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_OSMIUM)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_OSMIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.PLATINUM_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_PLATINUM)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_PLATINUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_PLATINUM)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_PLATINUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.TIN_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_TIN)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TIN)).save(consumer);
+                .requires(ModTags.Items.INGOTS_TIN)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TIN)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.TUNGSTEN_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_TUNGSTEN)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_TUNGSTEN)).save(consumer);
+                .requires(ModTags.Items.INGOTS_TUNGSTEN)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.URANIUM_BIT.get(), 9)
-                .requires(ModTags.Items.INGOT_URANIUM)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_URANIUM)).save(consumer);
+                .requires(ModTags.Items.INGOTS_URANIUM)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_URANIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.ZINC_NUGGET.get(), 9)
-                .requires(ModTags.Items.INGOT_ZINC)
-                .unlockedBy("has_material", has(ModTags.Items.INGOT_ZINC)).save(consumer);
+                .requires(ModTags.Items.INGOTS_ZINC)
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_ZINC)).save(consumer);
         ShapelessRecipeBuilder.shapeless(ModItems.FUTURITE_BIT.get(), 9)
                 .requires(ModItems.FUTURITE.get())
                 .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);

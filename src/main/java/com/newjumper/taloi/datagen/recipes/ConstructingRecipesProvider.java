@@ -24,9 +24,9 @@ public class ConstructingRecipesProvider extends RecipeProvider implements ICond
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         new ConstructingRecipeBuilder(ModItems.BRONZE_INGOT.get(), 1)
                 .requires(Tags.Items.INGOTS_COPPER)
-                .requires(ModTags.Items.INGOT_TIN)
+                .requires(ModTags.Items.INGOTS_TIN)
                 .unlockedBy("has_copper", has(Tags.Items.INGOTS_COPPER))
-                .unlockedBy("has_tin", has(ModTags.Items.INGOT_TIN))
+                .unlockedBy("has_tin", has(ModTags.Items.INGOTS_TIN))
                 .save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_constructing"));
 
         new ConstructingRecipeBuilder(ModItems.CARBONITE.get(), 1)
@@ -65,17 +65,17 @@ public class ConstructingRecipesProvider extends RecipeProvider implements ICond
                 .unlockedBy("has_material", has(Tags.Items.INGOTS_IRON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_constructing"));
 
         new ConstructingRecipeBuilder(ModItems.ALLOY_X.get(), 1)
-                .requires(ModTags.Items.INGOT_OSMIUM)
-                .requires(ModTags.Items.INGOT_ZINC)
-                .unlockedBy("has_osmium", has(ModTags.Items.INGOT_OSMIUM))
-                .unlockedBy("has_zinc", has(ModTags.Items.INGOT_ZINC))
+                .requires(ModTags.Items.INGOTS_OSMIUM)
+                .requires(ModTags.Items.INGOTS_ZINC)
+                .unlockedBy("has_osmium", has(ModTags.Items.INGOTS_OSMIUM))
+                .unlockedBy("has_zinc", has(ModTags.Items.INGOTS_ZINC))
                 .save(consumer);
 
         new ConstructingRecipeBuilder(ModItems.ALLOY_Z.get(), 1)
-                .requires(ModTags.Items.INGOT_IRIDIUM)
-                .requires(ModTags.Items.INGOT_SILICON)
-                .unlockedBy("has_iridium", has(ModTags.Items.INGOT_IRIDIUM))
-                .unlockedBy("has_silicon", has(ModTags.Items.INGOT_SILICON))
+                .requires(ModTags.Items.INGOTS_IRIDIUM)
+                .requires(ModTags.Items.INGOTS_SILICON)
+                .unlockedBy("has_iridium", has(ModTags.Items.INGOTS_IRIDIUM))
+                .unlockedBy("has_silicon", has(ModTags.Items.INGOTS_SILICON))
                 .save(consumer);
     }
 }
