@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "taloi:futurite_plate"
+  },
+  "ingot": {
+    "tag": "forge:ingots/netherite"
+  },
+  "result": {
+    "item": "taloi:futurite_infused_netherite_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "minecraft:lapis_ore"
+  },
+  "resultore": {
+    "item": "minecraft:stone"
+  },
+  "resultraw": {
+    "item": "minecraft:lapis_lazuli"
+  }
+}

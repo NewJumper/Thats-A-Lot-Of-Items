@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "minecraft:redstone_ore"
+  },
+  "resultore": {
+    "item": "minecraft:stone"
+  },
+  "resultraw": {
+    "item": "minecraft:redstone"
+  }
+}

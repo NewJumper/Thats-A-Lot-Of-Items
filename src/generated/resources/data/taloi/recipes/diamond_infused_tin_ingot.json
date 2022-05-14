@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "minecraft:diamond"
+  },
+  "ingot": {
+    "tag": "forge:raw_materials/tin"
+  },
+  "result": {
+    "item": "taloi:diamond_infused_tin_ingot"
+  }
+}

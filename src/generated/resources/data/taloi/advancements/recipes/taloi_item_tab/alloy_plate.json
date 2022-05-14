@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "taloi:alloy_plate"
+    ]
+  },
+  "criteria": {
+    "has_alloy_x": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alloy_x"
+            ]
+          }
+        ]
+      }
+    },
+    "has_alloy_z": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alloy_z"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "taloi:alloy_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_alloy_x",
+      "has_alloy_z",
+      "has_the_recipe"
+    ]
+  ]
+}

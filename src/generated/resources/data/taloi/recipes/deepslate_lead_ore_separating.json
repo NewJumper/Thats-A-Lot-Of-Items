@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "taloi:deepslate_lead_ore"
+  },
+  "resultore": {
+    "item": "minecraft:deepslate"
+  },
+  "resultraw": {
+    "item": "taloi:raw_lead"
+  }
+}

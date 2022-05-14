@@ -1,0 +1,14 @@
+{
+  "type": "taloi:constructing",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "forge:ingots/iron"
+    }
+  ],
+  "result": {
+    "item": "taloi:steel_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "minecraft:emerald"
+  },
+  "ingot": {
+    "tag": "forge:raw_materials/zinc"
+  },
+  "result": {
+    "item": "taloi:emerald_infused_zinc_ingot"
+  }
+}

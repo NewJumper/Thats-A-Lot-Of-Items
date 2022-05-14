@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "taloi:uranium_ore"
+  },
+  "resultore": {
+    "item": "minecraft:stone"
+  },
+  "resultraw": {
+    "item": "taloi:raw_uranium"
+  }
+}

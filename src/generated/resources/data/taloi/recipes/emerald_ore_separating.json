@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "minecraft:emerald_ore"
+  },
+  "resultore": {
+    "item": "minecraft:stone"
+  },
+  "resultraw": {
+    "item": "minecraft:emerald"
+  }
+}

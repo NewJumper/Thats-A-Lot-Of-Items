@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "taloi:deepslate_tungsten_ore"
+  },
+  "resultore": {
+    "item": "minecraft:deepslate"
+  },
+  "resultraw": {
+    "item": "taloi:raw_tungsten"
+  }
+}

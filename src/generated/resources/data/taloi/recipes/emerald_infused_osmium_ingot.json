@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "minecraft:emerald"
+  },
+  "ingot": {
+    "tag": "forge:raw_materials/osmium"
+  },
+  "result": {
+    "item": "taloi:emerald_infused_osmium_ingot"
+  }
+}

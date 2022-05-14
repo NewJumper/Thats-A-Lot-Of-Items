@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "minecraft:emerald"
+  },
+  "ingot": {
+    "tag": "forge:raw_materials/tungsten"
+  },
+  "result": {
+    "item": "taloi:emerald_infused_tungsten_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "minecraft:deepslate_gold_ore"
+  },
+  "resultore": {
+    "item": "minecraft:deepslate"
+  },
+  "resultraw": {
+    "item": "minecraft:gold_ingot"
+  }
+}

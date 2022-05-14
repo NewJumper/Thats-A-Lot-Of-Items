@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "minecraft:deepslate_copper_ore"
+  },
+  "resultore": {
+    "item": "minecraft:deepslate"
+  },
+  "resultraw": {
+    "item": "minecraft:copper_ingot"
+  }
+}

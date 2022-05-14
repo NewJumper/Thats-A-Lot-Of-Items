@@ -1,0 +1,12 @@
+{
+  "type": "taloi:separating",
+  "ore": {
+    "item": "minecraft:deepslate_diamond_ore"
+  },
+  "resultore": {
+    "item": "minecraft:deepslate"
+  },
+  "resultraw": {
+    "item": "minecraft:diamond"
+  }
+}

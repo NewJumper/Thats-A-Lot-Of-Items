@@ -1,0 +1,14 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/silicon"
+    },
+    {
+      "tag": "forge:ingots/silicon"
+    }
+  ],
+  "result": {
+    "item": "taloi:silicon_plate"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "item": "taloi:gold_disk"
+    },
+    {
+      "item": "taloi:gold_disk"
+    },
+    {
+      "item": "taloi:magnesium_plate"
+    },
+    {
+      "item": "taloi:magnesium_plate"
+    }
+  ],
+  "result": {
+    "item": "taloi:semiconductor_plate"
+  }
+}

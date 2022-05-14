@@ -1,0 +1,12 @@
+{
+  "type": "taloi:processing",
+  "base": {
+    "item": "minecraft:diamond"
+  },
+  "ingot": {
+    "tag": "forge:ingots/steel"
+  },
+  "result": {
+    "item": "taloi:diamond_infused_steel_ingot"
+  }
+}

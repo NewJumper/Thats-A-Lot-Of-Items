@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "taloi:hardened_carbonite"
+    ]
+  },
+  "criteria": {
+    "has_carbon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:carbon_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_silicon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:silicon_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "taloi:hardened_carbonite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_carbon",
+      "has_silicon",
+      "has_the_recipe"
+    ]
+  ]
+}
