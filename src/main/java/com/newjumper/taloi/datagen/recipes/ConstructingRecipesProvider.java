@@ -78,4 +78,9 @@ public class ConstructingRecipesProvider extends RecipeProvider implements ICond
                 .unlockedBy("has_silicon", has(ModTags.Items.INGOTS_SILICON))
                 .save(consumer);
     }
+
+    @Override
+    public String getName() {
+        return "Constructing Recipes";
+    }
 }

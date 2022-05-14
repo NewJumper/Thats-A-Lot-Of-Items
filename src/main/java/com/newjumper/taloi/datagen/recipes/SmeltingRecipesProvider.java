@@ -128,4 +128,9 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(pTag), pResult, 1, 200)
                 .unlockedBy("has_material", has(hasBlock)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
     }
+
+    @Override
+    public String getName() {
+        return "Smelting Recipes";
+    }
 }

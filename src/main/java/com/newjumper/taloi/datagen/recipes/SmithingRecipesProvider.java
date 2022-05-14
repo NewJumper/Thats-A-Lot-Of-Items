@@ -59,4 +59,9 @@ public class SmithingRecipesProvider extends RecipeProvider implements IConditio
         UpgradeRecipeBuilder.smithing(Ingredient.of(ModItems.SERMIUM_AXE.get()), Ingredient.of(ModItems.FUTURITE_INFUSED_NETHERITE_INGOT.get()), ModItems.FUTURITE_AXE.get())
                 .unlocks("has_material", has(ModItems.FUTURITE_INFUSED_NETHERITE_INGOT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_axe_smithing"));
     }
+
+    @Override
+    public String getName() {
+        return "Smithing Recipes";
+    }
 }

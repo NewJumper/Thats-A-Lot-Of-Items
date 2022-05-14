@@ -119,4 +119,9 @@ public class SeparatingRecipesProvider extends RecipeProvider implements ICondit
         new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_ZINC_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_ZINC.get(), 2)
                 .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_ZINC_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_zinc_ore_separating"));
     }
+
+    @Override
+    public String getName() {
+        return "Separating Recipes";
+    }
 }

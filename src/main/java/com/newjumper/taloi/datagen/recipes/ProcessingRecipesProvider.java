@@ -50,4 +50,9 @@ public class ProcessingRecipesProvider extends RecipeProvider implements ICondit
         new ProcessingRecipeBuilder(Ingredient.of(ModItems.SERMIUM_PLATE.get()), Ingredient.of(Tags.Items.INGOTS_NETHERITE), ModItems.SERMIUM_INFUSED_NETHERITE_INGOT.get(), 1)
                 .unlockedBy("has_material", has(ModItems.SERMIUM_PLATE.get())).save(consumer);
     }
+
+    @Override
+    public String getName() {
+        return "Processing Recipes";
+    }
 }

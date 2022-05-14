@@ -947,4 +947,9 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModItems.SERMIUM_CORE.get())
                 .unlockedBy("has_material", has(ModItems.SERMIUM.get())).save(consumer);
     }
+
+    @Override
+    public String getName() {
+        return "Crafting Recipes";
+    }
 }

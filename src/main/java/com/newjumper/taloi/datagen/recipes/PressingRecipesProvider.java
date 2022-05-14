@@ -96,4 +96,9 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModTags.Items.INGOTS_TUNGSTEN, 2)
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
     }
+
+    @Override
+    public String getName() {
+        return "Pressing Recipes";
+    }
 }

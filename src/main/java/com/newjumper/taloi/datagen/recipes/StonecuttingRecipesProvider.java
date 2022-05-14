@@ -33,4 +33,9 @@ public class StonecuttingRecipesProvider extends RecipeProvider implements ICond
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MARBLE.get()), ModBlocks.MARBLE_WALL.get(), 1)
                 .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "marble_wall_from_marble_stonecutting"));
     }
+
+    @Override
+    public String getName() {
+        return "Stonecutting Recipes";
+    }
 }
