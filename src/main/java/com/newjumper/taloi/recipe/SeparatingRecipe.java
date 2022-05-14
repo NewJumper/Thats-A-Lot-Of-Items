@@ -41,11 +41,11 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ItemStack getResultItem() {
-        return resultOre.copy();
+        return resultRaw.copy();
     }
 
-    public ItemStack getResultRaw() {
-        return resultRaw.copy();
+    public ItemStack getResultOre() {
+        return resultOre.copy();
     }
 
     @Override
@@ -94,7 +94,7 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
         public void toNetwork(FriendlyByteBuf pBuffer, SeparatingRecipe pRecipe) {
             pRecipe.ore.toNetwork(pBuffer);
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
-            pBuffer.writeItemStack(pRecipe.getResultRaw(), false);
+            pBuffer.writeItemStack(pRecipe.getResultOre(), false);
         }
 
         @Override
