@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:aluminum_nugget",
+    "taloi:iridium_nugget",
+    "taloi:lead_nugget",
+    "taloi:magnesium_nugget",
+    "taloi:osmium_nugget",
+    "taloi:platinum_nugget",
+    "taloi:tin_nugget",
+    "taloi:tungsten_nugget",
+    "taloi:uranium_bit",
+    "taloi:zinc_nugget"
+  ]
+}

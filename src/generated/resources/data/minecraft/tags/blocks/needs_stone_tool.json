@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:limestone",
+    "taloi:marble",
+    "taloi:deepslate_aluminum_ore",
+    "taloi:aluminum_block",
+    "taloi:aluminum_ore",
+    "taloi:raw_aluminum_block",
+    "taloi:deepslate_tin_ore",
+    "taloi:tin_block",
+    "taloi:tin_ore",
+    "taloi:raw_tin_block",
+    "taloi:deepslate_zinc_ore",
+    "taloi:zinc_block",
+    "taloi:zinc_ore",
+    "taloi:raw_zinc_block",
+    "#taloi:machines"
+  ]
+}

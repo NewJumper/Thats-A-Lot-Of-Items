@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:limestone",
+    "taloi:marble",
+    "#taloi:taloi_ores",
+    "#taloi:taloi_storage_blocks",
+    "#taloi:machines"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:deepslate_iridium_ore",
+    "taloi:iridium_block",
+    "taloi:iridium_ore",
+    "taloi:raw_iridium_block",
+    "taloi:deepslate_lead_ore",
+    "taloi:lead_block",
+    "taloi:lead_ore",
+    "taloi:raw_lead_block",
+    "taloi:deepslate_magnesium_ore",
+    "taloi:magnesium_block",
+    "taloi:magnesium_ore",
+    "taloi:raw_magnesium_block",
+    "taloi:deepslate_osmium_ore",
+    "taloi:osmium_block",
+    "taloi:osmium_ore",
+    "taloi:raw_osmium_block",
+    "taloi:deepslate_silicon_ore",
+    "taloi:silicon_block",
+    "taloi:silicon_ore",
+    "taloi:raw_silicon_block",
+    "taloi:bronze_block",
+    "taloi:steel_block"
+  ]
+}

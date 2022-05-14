@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:aluminum_ore",
+    "taloi:iridium_ore",
+    "taloi:lead_ore",
+    "taloi:magnesium_ore",
+    "taloi:osmium_ore",
+    "taloi:platinum_ore",
+    "taloi:silicon_ore",
+    "taloi:tin_ore",
+    "taloi:tungsten_ore",
+    "taloi:uranium_ore",
+    "taloi:zinc_ore",
+    "taloi:deepslate_aluminum_ore",
+    "taloi:deepslate_iridium_ore",
+    "taloi:deepslate_lead_ore",
+    "taloi:deepslate_magnesium_ore",
+    "taloi:deepslate_osmium_ore",
+    "taloi:deepslate_platinum_ore",
+    "taloi:deepslate_silicon_ore",
+    "taloi:deepslate_tin_ore",
+    "taloi:deepslate_tungsten_ore",
+    "taloi:deepslate_uranium_ore",
+    "taloi:deepslate_zinc_ore"
+  ]
+}
