@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "L  ",
+    "LL ",
     "LLL"
   ],
   "key": {
     "L": {
-      "item": "taloi:limestone"
+      "item": "taloi:limestone_bricks"
     }
   },
   "result": {
-    "item": "taloi:limestone_slab",
-    "count": 6
+    "item": "taloi:limestone_brick_stairs",
+    "count": 4
   }
 }

@@ -70,12 +70,29 @@ public class ModBlocks {
             .strength(1.5f, 5f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> LIMESTONE_SLAB = registerBlock("limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<SlabBlock> LIMESTONE_SLAB = registerBlock("limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
             .strength(1.5f, 5f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<WallBlock> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
             .strength(1.5f, 6f)
+            .sound(SoundType.TUFF)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks", () -> new Block(BlockBehaviour.Properties.copy(LIMESTONE.get())
+            .strength(2f, 6f)
+            .sound(SoundType.TUFF)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> LIMESTONE_BRICK_STAIRS = registerBlock("limestone_brick_stairs", () -> new StairBlock(() -> LIMESTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
+            .strength(2f, 6f)
+            .sound(SoundType.TUFF)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> LIMESTONE_BRICK_SLAB = registerBlock("limestone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
+            .strength(2f, 6f)
+            .sound(SoundType.TUFF)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<WallBlock> LIMESTONE_BRICK_WALL = registerBlock("limestone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
+            .strength(2f, 6f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 

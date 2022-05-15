@@ -15,8 +15,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.EVERGREEN_LOG.get());
         this.dropSelf(ModBlocks.EVERGREEN_WOOD.get());
         this.dropSelf(ModBlocks.EVERGREEN_PLANKS.get());
-        this.dropSelf(ModBlocks.EVERGREEN_STAIRS.get());
         this.add(ModBlocks.EVERGREEN_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.EVERGREEN_STAIRS.get());
         this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE.get());
@@ -30,8 +30,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.WILLOW_LOG.get());
         this.dropSelf(ModBlocks.WILLOW_WOOD.get());
         this.dropSelf(ModBlocks.WILLOW_PLANKS.get());
-        this.dropSelf(ModBlocks.WILLOW_STAIRS.get());
         this.add(ModBlocks.WILLOW_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.WILLOW_STAIRS.get());
         this.dropSelf(ModBlocks.STRIPPED_WILLOW_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE.get());
@@ -43,13 +43,18 @@ public class ModBlockLootTables extends BlockLoot {
 
         // NATURAL
         this.dropSelf(ModBlocks.LIMESTONE.get());
-        this.dropSelf(ModBlocks.LIMESTONE_STAIRS.get());
         this.add(ModBlocks.LIMESTONE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIMESTONE_STAIRS.get());
         this.dropSelf(ModBlocks.LIMESTONE_WALL.get());
 
+        this.dropSelf(ModBlocks.LIMESTONE_BRICKS.get());
+        this.add(ModBlocks.LIMESTONE_BRICK_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIMESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIMESTONE_BRICK_WALL.get());
+
         this.dropSelf(ModBlocks.MARBLE.get());
-        this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
         this.add(ModBlocks.MARBLE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
         this.dropSelf(ModBlocks.MARBLE_WALL.get());
 
         // ALUMINUM

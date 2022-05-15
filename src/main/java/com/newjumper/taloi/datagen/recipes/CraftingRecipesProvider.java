@@ -100,35 +100,56 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
         // NATURAL
         ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_SLAB.get(), 6)
-                .define('W', ModBlocks.LIMESTONE.get())
-                .pattern("WWW")
+                .define('L', ModBlocks.LIMESTONE.get())
+                .pattern("LLL")
                 .unlockedBy("has_material", has(ModBlocks.LIMESTONE.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_STAIRS.get(), 4)
-                .define('W', ModBlocks.LIMESTONE.get())
-                .pattern("W  ")
-                .pattern("WW ")
-                .pattern("WWW")
+                .define('L', ModBlocks.LIMESTONE.get())
+                .pattern("L  ")
+                .pattern("LL ")
+                .pattern("LLL")
                 .unlockedBy("has_material", has(ModBlocks.LIMESTONE.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_WALL.get(), 6)
-                .define('W', ModBlocks.LIMESTONE.get())
-                .pattern("WWW")
-                .pattern("WWW")
+                .define('L', ModBlocks.LIMESTONE.get())
+                .pattern("LLL")
+                .pattern("LLL")
                 .unlockedBy("has_material", has(ModBlocks.LIMESTONE.get())).save(consumer);
 
+        ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_BRICKS.get(), 4)
+                .define('L', ModBlocks.LIMESTONE.get())
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_material", has(ModBlocks.LIMESTONE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_BRICK_SLAB.get(), 6)
+                .define('L', ModBlocks.LIMESTONE_BRICKS.get())
+                .pattern("LLL")
+                .unlockedBy("has_material", has(ModBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_BRICK_STAIRS.get(), 4)
+                .define('L', ModBlocks.LIMESTONE_BRICKS.get())
+                .pattern("L  ")
+                .pattern("LL ")
+                .pattern("LLL")
+                .unlockedBy("has_material", has(ModBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_BRICK_WALL.get(), 6)
+                .define('L', ModBlocks.LIMESTONE_BRICKS.get())
+                .pattern("LLL")
+                .pattern("LLL")
+                .unlockedBy("has_material", has(ModBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+
         ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_SLAB.get(), 6)
-                .define('W', ModBlocks.MARBLE.get())
-                .pattern("WWW")
+                .define('M', ModBlocks.MARBLE.get())
+                .pattern("MMM")
                 .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_STAIRS.get(), 4)
-                .define('W', ModBlocks.MARBLE.get())
-                .pattern("W  ")
-                .pattern("WW ")
-                .pattern("WWW")
+                .define('M', ModBlocks.MARBLE.get())
+                .pattern("M  ")
+                .pattern("MM ")
+                .pattern("MMM")
                 .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_WALL.get(), 6)
-                .define('W', ModBlocks.MARBLE.get())
-                .pattern("WWW")
-                .pattern("WWW")
+                .define('M', ModBlocks.MARBLE.get())
+                .pattern("MMM")
+                .pattern("MMM")
                 .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
 
         // ALUMINUM

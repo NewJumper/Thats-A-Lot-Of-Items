@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "taloi:block/limestone_brick_slab_top"
+    },
+    "type=bottom": {
+      "model": "taloi:block/limestone_brick_slab"
+    },
+    "type=double": {
+      "model": "taloi:block/limestone_bricks"
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "W  ",
-    "WW ",
-    "WWW"
+    "L  ",
+    "LL ",
+    "LLL"
   ],
   "key": {
-    "W": {
+    "L": {
       "item": "taloi:limestone"
     }
   },

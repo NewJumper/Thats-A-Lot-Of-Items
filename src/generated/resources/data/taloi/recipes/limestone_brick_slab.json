@@ -5,11 +5,11 @@
   ],
   "key": {
     "L": {
-      "item": "taloi:limestone"
+      "item": "taloi:limestone_bricks"
     }
   },
   "result": {
-    "item": "taloi:limestone_slab",
+    "item": "taloi:limestone_brick_slab",
     "count": 6
   }
 }

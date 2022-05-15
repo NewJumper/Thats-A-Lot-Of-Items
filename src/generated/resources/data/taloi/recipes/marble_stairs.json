@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "W  ",
-    "WW ",
-    "WWW"
+    "M  ",
+    "MM ",
+    "MMM"
   ],
   "key": {
-    "W": {
+    "M": {
       "item": "taloi:marble"
     }
   },

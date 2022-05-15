@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "taloi:limestone_bricks"
+  },
+  "result": "taloi:limestone_stairs",
+  "count": 1
+}

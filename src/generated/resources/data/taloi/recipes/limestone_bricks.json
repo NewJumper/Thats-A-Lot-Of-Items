@@ -1,7 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "LLL"
+    "LL",
+    "LL"
   ],
   "key": {
     "L": {
@@ -9,7 +10,7 @@
     }
   },
   "result": {
-    "item": "taloi:limestone_slab",
-    "count": 6
+    "item": "taloi:limestone_bricks",
+    "count": 4
   }
 }
