@@ -953,6 +953,10 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModItems.DESTABILIZED_FUTURITE_APPLE.get())
                 .requires(ModItems.FUTURITE_BIT.get(), 3)
                 .unlockedBy("has_material", has(ModItems.DIAMOND_APPLE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_apple_from_destabilized_futurite_apple"));
+        ShapelessRecipeBuilder.shapeless(ModItems.RICE_BOWL.get(), 1)
+                .requires(Items.BOWL)
+                .requires(Items.WHEAT, 3)
+                .unlockedBy("has_material", has(Items.BOWL)).save(consumer);
 
         // MISCELLANEOUS
         ShapedRecipeBuilder.shaped(ModItems.SERMIUM_CORE.get(), 2)
