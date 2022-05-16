@@ -332,6 +332,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("netherite_bow_pulling_1").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_1");
         getBuilder("netherite_bow_pulling_2").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_2");
 
+        // GEMS
+        getBuilder("malachite").parent(itemGenerated).texture("layer0", "item/malachite");
+        getBuilder("tanzanite").parent(itemGenerated).texture("layer0", "item/tanzanite");
+        getBuilder("topaz").parent(itemGenerated).texture("layer0", "item/topaz");
+
         // FOOD
         getBuilder("destabilized_futurite_apple").parent(itemGenerated).texture("layer0", "item/destabilized_futurite_apple");
         getBuilder("diamond_apple").parent(itemGenerated).texture("layer0", "item/diamond_apple");
