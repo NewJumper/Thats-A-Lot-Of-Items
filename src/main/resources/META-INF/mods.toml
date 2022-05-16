@@ -8,8 +8,8 @@ license="AGPL-3.0"
 
     displayName="That's A Lot Of Items"
 #     displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"
-#     authors="NewJumper"
-    credits="All art, code, textures, and concepts by NewJumper"
+     authors="NewJumper"
+#    credits="All art, code, textures, and concepts by NewJumper"
     logoFile="logo_blue_white.png"
 
     description='''A mod that features a bunch of random content dumped into a block game.'''
