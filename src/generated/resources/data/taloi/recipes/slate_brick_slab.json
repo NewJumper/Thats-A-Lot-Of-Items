@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "taloi:slate_bricks"
+    }
+  },
+  "result": {
+    "item": "taloi:slate_brick_slab",
+    "count": 6
+  }
+}

@@ -53,15 +53,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(ModBlocks.LIMESTONE_STAIRS.get(), modLoc("block/limestone"));
         wallBlock(ModBlocks.LIMESTONE_WALL.get(), modLoc("block/limestone"));
 
+        simpleBlock(ModBlocks.MARBLE.get());
+        slabBlock(ModBlocks.MARBLE_SLAB.get(), modLoc("block/marble"), modLoc("block/marble"));
+        stairsBlock(ModBlocks.MARBLE_STAIRS.get(), modLoc("block/marble"));
+        wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
+
+        simpleBlock(ModBlocks.SLATE.get());
+        slabBlock(ModBlocks.SLATE_SLAB.get(), modLoc("block/slate"), modLoc("block/slate"));
+        stairsBlock(ModBlocks.SLATE_STAIRS.get(), modLoc("block/slate"));
+        wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
+
+        simpleBlock(ModBlocks.ASPHALT.get());
+
         simpleBlock(ModBlocks.LIMESTONE_BRICKS.get());
         slabBlock(ModBlocks.LIMESTONE_BRICK_SLAB.get(), modLoc("block/limestone_bricks"), modLoc("block/limestone_bricks"));
         stairsBlock(ModBlocks.LIMESTONE_BRICK_STAIRS.get(), modLoc("block/limestone_bricks"));
         wallBlock(ModBlocks.LIMESTONE_BRICK_WALL.get(), modLoc("block/limestone_bricks"));
 
-        simpleBlock(ModBlocks.MARBLE.get());
-        slabBlock(ModBlocks.MARBLE_SLAB.get(), modLoc("block/marble"), modLoc("block/marble"));
-        stairsBlock(ModBlocks.MARBLE_STAIRS.get(), modLoc("block/marble"));
-        wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
+        simpleBlock(ModBlocks.SLATE_BRICKS.get());
+        slabBlock(ModBlocks.SLATE_BRICK_SLAB.get(), modLoc("block/slate_bricks"), modLoc("block/slate_bricks"));
+        stairsBlock(ModBlocks.SLATE_BRICK_STAIRS.get(), modLoc("block/slate_bricks"));
+        wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
 
         // ALUMINUM
         simpleBlock(ModBlocks.ALUMINUM_BLOCK.get());

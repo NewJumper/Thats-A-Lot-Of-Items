@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ST",
+    "TS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sand"
+    },
+    "T": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "taloi:asphalt",
+    "count": 4
+  }
+}

@@ -16,7 +16,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags() {
         tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.WILLOW_LEAVES.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.LIMESTONE.get(), ModBlocks.MARBLE.get())
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(),
+                        ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(), ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE_BRICK_SLAB.get(),
+                        ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get())
                 .addTag(ModTags.Blocks.TALOI_ORES).addTag(ModTags.Blocks.TALOI_STORAGE_BLOCKS).addTag(ModTags.Blocks.MACHINES);
         tag(BlockTags.AXOLOTLS_SPAWNABLE_ON).add(ModBlocks.MARBLE.get());
         tag(BlockTags.BEACON_BASE_BLOCKS).add(ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.MAGNESIUM_BLOCK.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.PLATINUM_BLOCK.get(), ModBlocks.TUNGSTEN_BLOCK.get(), ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get());
@@ -32,20 +34,20 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_OSMIUM_ORE.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.OSMIUM_ORE.get(), ModBlocks.RAW_OSMIUM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModBlocks.SILICON_BLOCK.get(), ModBlocks.SILICON_ORE.get(), ModBlocks.RAW_SILICON_BLOCK.get(),
                 ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get());
-        tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(),
+        tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(),
                 ModBlocks.DEEPSLATE_ALUMINUM_ORE.get(), ModBlocks.ALUMINUM_BLOCK.get(), ModBlocks.ALUMINUM_ORE.get(), ModBlocks.RAW_ALUMINUM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(), ModBlocks.TIN_BLOCK.get(), ModBlocks.TIN_ORE.get(), ModBlocks.RAW_TIN_BLOCK.get(),
                 ModBlocks.DEEPSLATE_ZINC_ORE.get(), ModBlocks.ZINC_BLOCK.get(), ModBlocks.ZINC_ORE.get(), ModBlocks.RAW_ZINC_BLOCK.get())
                 .addTag(ModTags.Blocks.MACHINES);
         tag(BlockTags.PLANKS).add(ModBlocks.EVERGREEN_PLANKS.get(), ModBlocks.WILLOW_PLANKS.get());
         tag(BlockTags.SAPLINGS).add(ModBlocks.EVERGREEN_SAPLING.get(), ModBlocks.WILLOW_SAPLING.get());
-        tag(BlockTags.SLABS).add(ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(),
+        tag(BlockTags.SLABS).add(ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(), ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE_BRICK_SLAB.get(),
                 ModBlocks.WHITE_CONCRETE_SLAB.get(), ModBlocks.ORANGE_CONCRETE_SLAB.get(), ModBlocks.MAGENTA_CONCRETE_SLAB.get(), ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), ModBlocks.YELLOW_CONCRETE_SLAB.get(), ModBlocks.LIME_CONCRETE_SLAB.get(), ModBlocks.PINK_CONCRETE_SLAB.get(), ModBlocks.GRAY_CONCRETE_SLAB.get(),
                 ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), ModBlocks.CYAN_CONCRETE_SLAB.get(), ModBlocks.PURPLE_CONCRETE_SLAB.get(), ModBlocks.BLUE_CONCRETE_SLAB.get(), ModBlocks.BROWN_CONCRETE_SLAB.get(), ModBlocks.GREEN_CONCRETE_SLAB.get(), ModBlocks.RED_CONCRETE_SLAB.get(), ModBlocks.BLACK_CONCRETE_SLAB.get());
-        tag(BlockTags.STAIRS).add(ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(),
+        tag(BlockTags.STAIRS).add(ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get(),
                 ModBlocks.WHITE_CONCRETE_STAIRS.get(), ModBlocks.ORANGE_CONCRETE_STAIRS.get(), ModBlocks.MAGENTA_CONCRETE_STAIRS.get(), ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(), ModBlocks.YELLOW_CONCRETE_STAIRS.get(), ModBlocks.LIME_CONCRETE_STAIRS.get(), ModBlocks.PINK_CONCRETE_STAIRS.get(), ModBlocks.GRAY_CONCRETE_STAIRS.get(),
                 ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(), ModBlocks.CYAN_CONCRETE_STAIRS.get(), ModBlocks.PURPLE_CONCRETE_STAIRS.get(), ModBlocks.BLUE_CONCRETE_STAIRS.get(), ModBlocks.BROWN_CONCRETE_STAIRS.get(), ModBlocks.GREEN_CONCRETE_STAIRS.get(), ModBlocks.RED_CONCRETE_STAIRS.get(), ModBlocks.BLACK_CONCRETE_STAIRS.get());
-        tag(BlockTags.WALLS).add(ModBlocks.LIMESTONE_WALL.get(), ModBlocks.LIMESTONE_BRICK_WALL.get(), ModBlocks.MARBLE_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.LIMESTONE_WALL.get(), ModBlocks.LIMESTONE_BRICK_WALL.get(), ModBlocks.MARBLE_WALL.get(), ModBlocks.SLATE_WALL.get(), ModBlocks.SLATE_BRICK_WALL.get());
         tag(BlockTags.WOODEN_BUTTONS).add(ModBlocks.EVERGREEN_BUTTON.get(), ModBlocks.WILLOW_BUTTON.get());
         tag(BlockTags.WOODEN_FENCES).add(ModBlocks.EVERGREEN_FENCE.get(), ModBlocks.WILLOW_FENCE.get());
         tag(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.EVERGREEN_PRESSURE_PLATE.get(), ModBlocks.WILLOW_PRESSURE_PLATE.get());

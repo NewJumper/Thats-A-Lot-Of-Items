@@ -3,6 +3,8 @@
   "values": [
     "taloi:limestone_wall",
     "taloi:limestone_brick_wall",
-    "taloi:marble_wall"
+    "taloi:marble_wall",
+    "taloi:slate_wall",
+    "taloi:slate_brick_wall"
   ]
 }

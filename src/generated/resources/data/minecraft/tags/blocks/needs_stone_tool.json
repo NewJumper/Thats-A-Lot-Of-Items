@@ -1,9 +1,12 @@
 {
   "replace": false,
   "values": [
+    "taloi:asphalt",
     "taloi:limestone",
     "taloi:limestone_bricks",
     "taloi:marble",
+    "taloi:slate",
+    "taloi:slate_bricks",
     "taloi:deepslate_aluminum_ore",
     "taloi:aluminum_block",
     "taloi:aluminum_ore",
