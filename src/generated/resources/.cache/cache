@@ -776,14 +776,14 @@ f7055048bf592f901dac62bad5259a332687362f data/forge/tags/items/storage_blocks/zi
 5e3a71a3dc7cb51c78bde78a59dd5f1967e2e589 data/minecraft/tags/blocks/leaves.json
 66deedcad2a931ab4964eb5aeae21313f0a01a2e data/minecraft/tags/blocks/logs_that_burn.json
 5e3a71a3dc7cb51c78bde78a59dd5f1967e2e589 data/minecraft/tags/blocks/mineable/hoe.json
-59dcb1dd1e33d86bbf8128a35dbf1e5511ce4b8f data/minecraft/tags/blocks/mineable/pickaxe.json
+be45f968ebc0cf5cd94eddecb8ef56cde554f7ae data/minecraft/tags/blocks/mineable/pickaxe.json
 f39d8e046c6b6ab26fc1f96a59b3cd97a8ce7441 data/minecraft/tags/blocks/needs_diamond_tool.json
 d519457f73303f47b78f5e55396c643bbaf803f4 data/minecraft/tags/blocks/needs_iron_tool.json
 a7d9098fd0df74d1fb8e3296e17f89eaedf85d48 data/minecraft/tags/blocks/needs_stone_tool.json
 54940b7bd7491ae4b2696085a4fc7e3561747553 data/minecraft/tags/blocks/planks.json
 f03ff957a8c20b62d0569bf0ca69e24c7a4f902b data/minecraft/tags/blocks/saplings.json
-8f4837e08466cfadbc9bdf606268a7640c457798 data/minecraft/tags/blocks/slabs.json
-732adab1d9596d3cf9467daec2a5f5f30b59c99d data/minecraft/tags/blocks/stairs.json
+f9cdb2364bd946d010c3a20a9d19273ffa2c049e data/minecraft/tags/blocks/slabs.json
+dbba18596046babaca8df50c5ebc23e12c4d6e92 data/minecraft/tags/blocks/stairs.json
 f3cca49fdd38bb66ea316e145c10be1e58cb83fd data/minecraft/tags/blocks/walls.json
 a944485ad276f636191f832f327ddda1de6cc7bb data/minecraft/tags/blocks/wooden_buttons.json
 9d54d6ac57bb57965320babcbf19090a0d8bba31 data/minecraft/tags/blocks/wooden_fences.json
@@ -1592,6 +1592,8 @@ f2478f71d5f1dcbbc34f18254a59d2a3cc62bf4d data/taloi/recipes/zinc_ingot_from_zinc
 554c22d9a78dcb4256ae6d8b518e10d2bdb6f180 data/taloi/recipes/zinc_ingot_from_zinc_nugget.json
 147db1b93c81b736f8f7050d6d0b4bcd36f68a28 data/taloi/recipes/zinc_nugget.json
 61fcc5e0e9928bbeb232b52d716d91cf2ce3febf data/taloi/recipes/zinc_ore_separating.json
+c08fc986747c8bf4b2cdd65a917cfbd2bb3c355e data/taloi/tags/blocks/concrete_slabs.json
+edaab137df2b634e3e157e11adb79268bbdf220e data/taloi/tags/blocks/concrete_stairs.json
 202ff714d6a7f6bb8802ef3a14c2512895e83614 data/taloi/tags/blocks/evergreen_logs.json
 c4adf73e32849991e482848300b4ad9fdaff61ce data/taloi/tags/blocks/machines.json
 7af9929fb2c130e4d4f0ca757edac69a49524fad data/taloi/tags/blocks/taloi_ores.json

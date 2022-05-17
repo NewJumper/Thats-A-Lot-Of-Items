@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:white_concrete_stairs",
+    "taloi:orange_concrete_stairs",
+    "taloi:magenta_concrete_stairs",
+    "taloi:light_blue_concrete_stairs",
+    "taloi:yellow_concrete_stairs",
+    "taloi:lime_concrete_stairs",
+    "taloi:pink_concrete_stairs",
+    "taloi:gray_concrete_stairs",
+    "taloi:light_gray_concrete_stairs",
+    "taloi:cyan_concrete_stairs",
+    "taloi:purple_concrete_stairs",
+    "taloi:blue_concrete_stairs",
+    "taloi:brown_concrete_stairs",
+    "taloi:green_concrete_stairs",
+    "taloi:red_concrete_stairs",
+    "taloi:black_concrete_stairs"
+  ]
+}

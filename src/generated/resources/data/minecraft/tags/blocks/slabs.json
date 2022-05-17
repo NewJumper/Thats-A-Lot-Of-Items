@@ -6,21 +6,6 @@
     "taloi:marble_slab",
     "taloi:slate_slab",
     "taloi:slate_brick_slab",
-    "taloi:white_concrete_slab",
-    "taloi:orange_concrete_slab",
-    "taloi:magenta_concrete_slab",
-    "taloi:light_blue_concrete_slab",
-    "taloi:yellow_concrete_slab",
-    "taloi:lime_concrete_slab",
-    "taloi:pink_concrete_slab",
-    "taloi:gray_concrete_slab",
-    "taloi:light_gray_concrete_slab",
-    "taloi:cyan_concrete_slab",
-    "taloi:purple_concrete_slab",
-    "taloi:blue_concrete_slab",
-    "taloi:brown_concrete_slab",
-    "taloi:green_concrete_slab",
-    "taloi:red_concrete_slab",
-    "taloi:black_concrete_slab"
+    "#taloi:concrete_slabs"
   ]
 }

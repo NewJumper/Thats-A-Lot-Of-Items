@@ -19,6 +19,8 @@
     "taloi:slate_brick_stairs",
     "#taloi:taloi_ores",
     "#taloi:taloi_storage_blocks",
-    "#taloi:machines"
+    "#taloi:machines",
+    "#taloi:concrete_slabs",
+    "#taloi:concrete_stairs"
   ]
 }

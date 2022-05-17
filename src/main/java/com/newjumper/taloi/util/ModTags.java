@@ -52,6 +52,9 @@ public class ModTags {
 
         public static final TagKey<Block> MACHINES = taloiTag("machines");
 
+        public static final TagKey<Block> CONCRETE_STAIRS = taloiTag("concrete_stairs");
+        public static final TagKey<Block> CONCRETE_SLABS = taloiTag("concrete_slabs");
+
         private static TagKey<Block> forgeTag(String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
         }
