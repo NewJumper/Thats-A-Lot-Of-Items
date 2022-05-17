@@ -52,6 +52,7 @@ public class ModConfiguredFeatures {
     // NATURAL
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> LIMESTONE = FeatureUtils.register("limestone", Feature.ORE, new OreConfiguration(NATURAL_STONE, ModBlocks.LIMESTONE.get().defaultBlockState(), 24));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> MARBLE = FeatureUtils.register("marble", Feature.ORE, new OreConfiguration(NATURAL_STONE, ModBlocks.MARBLE.get().defaultBlockState(), 13));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SLATE = FeatureUtils.register("slate", Feature.ORE, new OreConfiguration(NATURAL_STONE, ModBlocks.SLATE.get().defaultBlockState(), 24));
 
     // ORES
     public static final List<OreConfiguration.TargetBlockState> ORE_ALUMINUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ALUMINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ALUMINUM_ORE.get().defaultBlockState()));

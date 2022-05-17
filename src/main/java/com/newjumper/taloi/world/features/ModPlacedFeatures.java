@@ -16,6 +16,7 @@ public class ModPlacedFeatures {
     // NATURAL
     public static final Holder<PlacedFeature> ORE_LIMESTONE = PlacementUtils.register("ore_limestone", ModConfiguredFeatures.LIMESTONE, ModOrePlacement.commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(62))));
     public static final Holder<PlacedFeature> ORE_MARBLE = PlacementUtils.register("ore_marble", ModConfiguredFeatures.MARBLE, ModOrePlacement.commonOrePlacement(3, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(62))));
+    public static final Holder<PlacedFeature> ORE_SLATE = PlacementUtils.register("ore_slate", ModConfiguredFeatures.SLATE, ModOrePlacement.commonOrePlacement(1, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(64))));
 
     // ORES
     public static final Holder<PlacedFeature> ORE_ALUMINUM = PlacementUtils.register("ore_aluminum", ModConfiguredFeatures.ORE_ALUMINUM, ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-16), VerticalAnchor.aboveBottom(64))));

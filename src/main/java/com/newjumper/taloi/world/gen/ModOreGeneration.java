@@ -14,6 +14,7 @@ public class ModOreGeneration {
 
         base.add(ModPlacedFeatures.ORE_LIMESTONE);
         base.add(ModPlacedFeatures.ORE_MARBLE);
+        base.add(ModPlacedFeatures.ORE_SLATE);
 
         base.add(ModPlacedFeatures.ORE_ALUMINUM);
         base.add(ModPlacedFeatures.ORE_ALUMINUM_LARGE);
