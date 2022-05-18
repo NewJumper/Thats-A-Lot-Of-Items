@@ -39,6 +39,13 @@ public class ProcessingRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
+    public Ingredient getBase() {
+        return base;
+    }
+    public Ingredient getIngot() {
+        return ingot;
+    }
+
     @Override
     public ItemStack getResultItem() {
         return result.copy();

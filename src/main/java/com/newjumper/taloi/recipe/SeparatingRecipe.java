@@ -39,6 +39,10 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
+    public Ingredient getOre() {
+        return ore;
+    }
+
     @Override
     public ItemStack getResultItem() {
         return resultRaw.copy();

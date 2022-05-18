@@ -2,7 +2,7 @@ package com.newjumper.taloi.integration;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.ModBlocks;
-import com.newjumper.taloi.recipe.ConstructingRecipe;
+import com.newjumper.taloi.recipe.PressingRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -19,16 +19,16 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import javax.annotation.Nonnull;
 
-public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingRecipe> {
-    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "constructing");
-    public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/container/constructor.png");
+public class PressingRecipeCategory implements IRecipeCategory<PressingRecipe> {
+    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "pressing");
+    public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/container/hydraulic_press.png");
 
     private final IDrawable background;
     private final IDrawable icon;
 
-    public ConstructingRecipeCategory(IGuiHelper helper) {
+    public PressingRecipeCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 83);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(ModBlocks.ALPHA_CONSTRUCTOR.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(ModBlocks.ALPHA_HYDRAULIC_PRESS.get()));
     }
 
     @Override
@@ -37,13 +37,13 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     }
 
     @Override
-    public Class<? extends ConstructingRecipe> getRecipeClass() {
-        return ConstructingRecipe.class;
+    public Class<? extends PressingRecipe> getRecipeClass() {
+        return PressingRecipe.class;
     }
 
     @Override
     public Component getTitle() {
-        return new TranslatableComponent("container.taloi.constructor");
+        return new TranslatableComponent("container.taloi.press");
     }
 
     @Override
@@ -57,10 +57,10 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     }
 
     @Override
-    public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull ConstructingRecipe recipe, @Nonnull IFocusGroup focusGroup) {
+    public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull PressingRecipe recipe, @Nonnull IFocusGroup focusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 31, 47).addIngredients(Ingredient.of(Items.COAL));
-        builder.addSlot(RecipeIngredientRole.INPUT, 69, 17).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 69, 53).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.INPUT, 66, 35).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 86, 35).addIngredients(recipe.getIngredients().get(1));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 125, 35).addItemStack(recipe.getResultItem());
     }
 }
