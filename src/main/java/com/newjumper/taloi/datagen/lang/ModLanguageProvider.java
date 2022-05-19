@@ -36,30 +36,28 @@ public class ModLanguageProvider extends LanguageProvider {
         add("container.taloi.separator", "Separator");
         ModBlockEntities.BLOCK_ENTITIES.getEntries().stream().map(RegistryObject::get).forEach(this::addContainer);
 
-        add("advancements.taloi.root.title", "That Is Indeed A Lot Of Items");
+        add("advancements.taloi.root.title", "That IS Indeed A Lot Of Items");
         add("advancements.taloi.root.description", "The beginning of a new end");
-        add("advancements.taloi.machinery.title", "Machinery");
         add("advancements.taloi.radioactive.title", "Radioactive");
         add("advancements.taloi.radioactive.description", "I'm getting some weird readings off of this...");
-        add("advancements.taloi.rare_metal.title", "What Luck!");
-        add("advancements.taloi.rare_metal.description", "Find the rare tungsten ore.");
+        add("advancements.taloi.machinery.title", "Machinery");
         add("advancements.taloi.machinery.description", "Craft a machine frame, the building blocks of all machines");
         add("advancements.taloi.construct_alloy.title", "Alloy Constructor");
         add("advancements.taloi.construct_alloy.description", "Use a constructor to make an alloy");
         add("advancements.taloi.press_material.title", "Metal Slam");
-        add("advancements.taloi.press_material.description", "Press a metal into its plate counterpart");
+        add("advancements.taloi.press_material.description", "Press a metal into a plate");
         add("advancements.taloi.infuse_ingot.title", "Infusion");
         add("advancements.taloi.infuse_ingot.description", "Infuse coal, diamonds, or emeralds into an ingot");
         add("advancements.taloi.obtain_sermium.title", "Upgraded Technology");
         add("advancements.taloi.obtain_sermium.description", "Obtain Sermium using a Constructor");
-        add("advancements.taloi.sermium_armor.title", "There's Competition!");
+        add("advancements.taloi.sermium_armor.title", "There's Better?");
         add("advancements.taloi.sermium_armor.description", "Obtain a piece of Sermium armor through a smithing table");
         add("advancements.taloi.obtain_futurite.title", "The Future Is HERE!");
         add("advancements.taloi.obtain_futurite.description", "Obtain Futurite using a Constructor");
-        add("advancements.taloi.eat_futurite_apple.title", "The Better Apple?");
-        add("advancements.taloi.eat_futurite_apple.description", "Eat a Futurite apple");
-        add("advancements.taloi.futurite_armor.title", "Better, Stronger, Powerful");
+        add("advancements.taloi.futurite_armor.title", "Okay, Now This Is OP");
         add("advancements.taloi.futurite_armor.description", "Construct a full set of Futurite armor");
+        add("advancements.taloi.eat_futurite_apple.title", "This Is Insane");
+        add("advancements.taloi.eat_futurite_apple.description", "Eat a Futurite apple");
     }
 
     private void addBlock(Block block) {
