@@ -1,5 +1,5 @@
 {
-  "parent": "taloi:obtain_sermium",
+  "parent": "taloi:main/obtain_sermium",
   "display": {
     "icon": {
       "item": "taloi:sermium_chestplate",
@@ -20,7 +20,7 @@
     "experience": 50
   },
   "criteria": {
-    "sermium_helmet": {
+    "helmet": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -32,7 +32,7 @@
         ]
       }
     },
-    "sermium_chestplate": {
+    "chestplate": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -44,7 +44,7 @@
         ]
       }
     },
-    "sermium_leggings": {
+    "leggings": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -56,7 +56,7 @@
         ]
       }
     },
-    "sermium_boots": {
+    "boots": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -71,10 +71,10 @@
   },
   "requirements": [
     [
-      "sermium_helmet",
-      "sermium_chestplate",
-      "sermium_leggings",
-      "sermium_boots"
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
     ]
   ]
 }

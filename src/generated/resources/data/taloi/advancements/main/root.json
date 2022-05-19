@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "taloi:evergreen_log"
+      "item": "taloi:limestone"
     },
     "title": {
       "translate": "advancements.taloi.root.title"
@@ -16,7 +16,7 @@
     "background": "taloi:textures/gui/advancements/backgrounds/taloi.png"
   },
   "criteria": {
-    "evergreen_log": {
+    "evergreen": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -28,7 +28,43 @@
         ]
       }
     },
-    "willow_log": {
+    "limestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:limestone"
+            ]
+          }
+        ]
+      }
+    },
+    "marble": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:marble"
+            ]
+          }
+        ]
+      }
+    },
+    "slate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:slate"
+            ]
+          }
+        ]
+      }
+    },
+    "willow": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -43,8 +79,11 @@
   },
   "requirements": [
     [
-      "evergreen_log",
-      "willow_log"
+      "evergreen",
+      "limestone",
+      "marble",
+      "slate",
+      "willow"
     ]
   ]
 }

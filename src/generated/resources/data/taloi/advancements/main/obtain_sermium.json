@@ -1,28 +1,31 @@
 {
-  "parent": "taloi:root",
+  "parent": "taloi:main/construct_alloy",
   "display": {
     "icon": {
-      "item": "taloi:refined_uranium"
+      "item": "taloi:sermium"
     },
     "title": {
-      "translate": "advancements.taloi.radioactive.title"
+      "translate": "advancements.taloi.obtain_sermium.title"
     },
     "description": {
-      "translate": "advancements.taloi.radioactive.description"
+      "translate": "advancements.taloi.obtain_sermium.description"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
+  "rewards": {
+    "experience": 25
+  },
   "criteria": {
-    "refined_uranium": {
+    "sermium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:refined_uranium"
+              "taloi:sermium"
             ]
           }
         ]
@@ -31,7 +34,7 @@
   },
   "requirements": [
     [
-      "refined_uranium"
+      "sermium"
     ]
   ]
 }

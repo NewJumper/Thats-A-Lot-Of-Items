@@ -1,5 +1,5 @@
 {
-  "parent": "taloi:root",
+  "parent": "taloi:main/root",
   "display": {
     "icon": {
       "item": "taloi:unstable_machine_frame"
@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "alpha_machine_frame": {
+    "alpha": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -28,25 +28,25 @@
         ]
       }
     },
-    "beta_machine_frame": {
+    "beta": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:alpha_machine_frame"
+              "taloi:beta_machine_frame"
             ]
           }
         ]
       }
     },
-    "unstable_machine_frame": {
+    "unstable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:alpha_machine_frame"
+              "taloi:unstable_machine_frame"
             ]
           }
         ]
@@ -55,9 +55,9 @@
   },
   "requirements": [
     [
-      "alpha_machine_frame",
-      "beta_machine_frame",
-      "unstable_machine_frame"
+      "alpha",
+      "beta",
+      "unstable"
     ]
   ]
 }

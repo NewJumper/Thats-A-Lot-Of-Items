@@ -1,28 +1,31 @@
 {
-  "parent": "taloi:obtain_futurite",
+  "parent": "taloi:main/obtain_sermium",
   "display": {
     "icon": {
-      "item": "taloi:futurite_apple"
+      "item": "taloi:futurite"
     },
     "title": {
-      "translate": "advancements.taloi.eat_futurite_apple.title"
+      "translate": "advancements.taloi.obtain_futurite.title"
     },
     "description": {
-      "translate": "advancements.taloi.eat_futurite_apple.description"
+      "translate": "advancements.taloi.obtain_futurite.description"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
+  "rewards": {
+    "experience": 25
+  },
   "criteria": {
-    "destabilized_futurite_apple": {
+    "futurite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:destabilized_futurite_apple"
+              "taloi:futurite"
             ]
           }
         ]
@@ -31,7 +34,7 @@
   },
   "requirements": [
     [
-      "destabilized_futurite_apple"
+      "futurite"
     ]
   ]
 }

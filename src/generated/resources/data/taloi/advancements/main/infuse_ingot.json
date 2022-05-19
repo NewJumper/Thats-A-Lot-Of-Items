@@ -1,14 +1,14 @@
 {
-  "parent": "taloi:machinery",
+  "parent": "taloi:main/machinery",
   "display": {
     "icon": {
-      "item": "taloi:steel_ingot"
+      "item": "taloi:coal_infused_iron_ingot"
     },
     "title": {
-      "translate": "advancements.taloi.construct_alloy.title"
+      "translate": "advancements.taloi.infuse_ingot.title"
     },
     "description": {
-      "translate": "advancements.taloi.construct_alloy.description"
+      "translate": "advancements.taloi.infuse_ingot.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -16,109 +16,121 @@
     "hidden": false
   },
   "criteria": {
-    "bronze": {
+    "coal_iron": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:bronze_ingot"
+              "taloi:coal_infused_iron_ingot"
             ]
           }
         ]
       }
     },
-    "carbonite": {
+    "coal_lead": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:carbonite"
+              "taloi:coal_infused_lead_ingot"
             ]
           }
         ]
       }
     },
-    "ferroniobium": {
+    "diamond_steel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:ferroniobium_ingot"
+              "taloi:diamond_infused_steel_ingot"
             ]
           }
         ]
       }
     },
-    "futurite": {
+    "diamond_tin": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:futurite"
+              "taloi:diamond_infused_tin_ingot"
             ]
           }
         ]
       }
     },
-    "hardened_carbonite": {
+    "diamond_uranium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:hardened_carbonite"
+              "taloi:diamond_infused_uranium"
             ]
           }
         ]
       }
     },
-    "sermium": {
+    "emerald_osmium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:sermium"
+              "taloi:emerald_infused_osmium_ingot"
             ]
           }
         ]
       }
     },
-    "steel": {
+    "emerald_tungsten": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:steel_ingot"
+              "taloi:emerald_infused_tungsten_ingot"
             ]
           }
         ]
       }
     },
-    "alloy_x": {
+    "emerald_zinc": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:alloy_x"
+              "taloi:emerald_infused_zinc_ingot"
             ]
           }
         ]
       }
     },
-    "alloy_z": {
+    "futurite_netherite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:alloy_z"
+              "taloi:futurite_infused_netherite_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "sermium_netherite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:sermium_infused_netherite_ingot"
             ]
           }
         ]
@@ -127,15 +139,16 @@
   },
   "requirements": [
     [
-      "bronze",
-      "carbonite",
-      "ferroniobium",
-      "futurite",
-      "hardened_carbonite",
-      "sermium",
-      "steel",
-      "alloy_x",
-      "alloy_z"
+      "coal_iron",
+      "coal_lead",
+      "diamond_steel",
+      "diamond_tin",
+      "diamond_uranium",
+      "emerald_osmium",
+      "emerald_tungsten",
+      "emerald_zinc",
+      "futurite_netherite",
+      "sermium_netherite"
     ]
   ]
 }

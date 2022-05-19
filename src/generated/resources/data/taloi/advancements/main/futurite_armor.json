@@ -1,5 +1,5 @@
 {
-  "parent": "taloi:obtain_futurite",
+  "parent": "taloi:main/obtain_futurite",
   "display": {
     "icon": {
       "item": "taloi:futurite_chestplate",
@@ -20,7 +20,7 @@
     "experience": 100
   },
   "criteria": {
-    "futurite_armor": {
+    "armor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -50,7 +50,7 @@
   },
   "requirements": [
     [
-      "futurite_armor"
+      "armor"
     ]
   ]
 }

@@ -1,0 +1,141 @@
+{
+  "parent": "taloi:main/machinery",
+  "display": {
+    "icon": {
+      "item": "taloi:steel_ingot"
+    },
+    "title": {
+      "translate": "advancements.taloi.construct_alloy.title"
+    },
+    "description": {
+      "translate": "advancements.taloi.construct_alloy.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bronze": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:bronze_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "carbonite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:carbonite"
+            ]
+          }
+        ]
+      }
+    },
+    "ferroniobium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:ferroniobium_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "futurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:futurite"
+            ]
+          }
+        ]
+      }
+    },
+    "hardened_carbonite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:hardened_carbonite"
+            ]
+          }
+        ]
+      }
+    },
+    "sermium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:sermium"
+            ]
+          }
+        ]
+      }
+    },
+    "steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:steel_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "alloy_x": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alloy_x"
+            ]
+          }
+        ]
+      }
+    },
+    "alloy_z": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alloy_z"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bronze",
+      "carbonite",
+      "ferroniobium",
+      "futurite",
+      "hardened_carbonite",
+      "sermium",
+      "steel",
+      "alloy_x",
+      "alloy_z"
+    ]
+  ]
+}

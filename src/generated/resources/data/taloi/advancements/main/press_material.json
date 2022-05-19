@@ -1,5 +1,5 @@
 {
-  "parent": "taloi:machinery",
+  "parent": "taloi:main/machinery",
   "display": {
     "icon": {
       "item": "taloi:silicon_plate"
@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "alloy_plate": {
+    "alloy": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -28,7 +28,7 @@
         ]
       }
     },
-    "bronze_plate": {
+    "bronze": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -40,7 +40,7 @@
         ]
       }
     },
-    "carbon_plate": {
+    "carbon": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -52,7 +52,7 @@
         ]
       }
     },
-    "copper_plate": {
+    "copper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -64,7 +64,7 @@
         ]
       }
     },
-    "diamond_plate": {
+    "diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -76,7 +76,7 @@
         ]
       }
     },
-    "forge_plate": {
+    "forge": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -88,7 +88,7 @@
         ]
       }
     },
-    "futurite_plate": {
+    "futurite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -100,7 +100,7 @@
         ]
       }
     },
-    "gold_disk": {
+    "gold": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -112,7 +112,7 @@
         ]
       }
     },
-    "induction_plate": {
+    "induction": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -124,7 +124,7 @@
         ]
       }
     },
-    "magnesium_plate": {
+    "magnesium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -136,7 +136,7 @@
         ]
       }
     },
-    "reinforced_copper_plate": {
+    "reinforced_copper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -148,7 +148,7 @@
         ]
       }
     },
-    "semiconductor_plate": {
+    "semiconductor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -160,7 +160,7 @@
         ]
       }
     },
-    "sermium_plate": {
+    "sermium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -172,7 +172,7 @@
         ]
       }
     },
-    "silicon_plate": {
+    "silicon": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -184,7 +184,7 @@
         ]
       }
     },
-    "steel_plate": {
+    "steel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -196,7 +196,7 @@
         ]
       }
     },
-    "tungsten_plate": {
+    "tungsten": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -211,22 +211,22 @@
   },
   "requirements": [
     [
-      "alloy_plate",
-      "bronze_plate",
-      "carbon_plate",
-      "copper_plate",
-      "diamond_plate",
-      "forge_plate",
-      "futurite_plate",
-      "gold_disk",
-      "induction_plate",
-      "magnesium_plate",
-      "reinforced_copper_plate",
-      "semiconductor_plate",
-      "sermium_plate",
-      "silicon_plate",
-      "steel_plate",
-      "tungsten_plate"
+      "alloy",
+      "bronze",
+      "carbon",
+      "copper",
+      "diamond",
+      "forge",
+      "futurite",
+      "gold",
+      "induction",
+      "magnesium",
+      "reinforced_copper",
+      "semiconductor",
+      "sermium",
+      "silicon",
+      "steel",
+      "tungsten"
     ]
   ]
 }
