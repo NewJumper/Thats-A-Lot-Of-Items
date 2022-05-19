@@ -1,8 +1,8 @@
 package com.newjumper.taloi.datagen.recipes;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.datagen.custom.ConstructingRecipeBuilder;
-import com.newjumper.taloi.datagen.custom.UnstableConstructingRecipeBuilder;
+import com.newjumper.taloi.datagen.recipes.custom.ConstructingRecipeBuilder;
+import com.newjumper.taloi.datagen.recipes.custom.UnstableConstructingRecipeBuilder;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.util.ModTags;
 import net.minecraft.data.DataGenerator;

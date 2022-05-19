@@ -1,4 +1,4 @@
-package com.newjumper.taloi.datagen.custom;
+package com.newjumper.taloi.datagen.recipes.custom;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

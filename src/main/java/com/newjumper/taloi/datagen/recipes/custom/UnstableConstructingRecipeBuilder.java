@@ -1,5 +1,6 @@
-package com.newjumper.taloi.datagen.custom;
+package com.newjumper.taloi.datagen.recipes.custom;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.newjumper.taloi.recipe.ModRecipes;
 import net.minecraft.advancements.Advancement;
@@ -10,26 +11,48 @@ import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import org.apache.commons.compress.utils.Lists;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.function.Consumer;
 
-public class SeparatingRecipeBuilder implements RecipeBuilder {
-    private final Ingredient ore;
-    private final Item resultOre;
-    private final Item resultRaw;
+public class UnstableConstructingRecipeBuilder implements RecipeBuilder {
+    private final Item result;
     private final int count;
+    private final List<Ingredient> ingredients = Lists.newArrayList();
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public SeparatingRecipeBuilder(Ingredient pOre, ItemLike pResultOre, ItemLike pResultRaw, int pCount) {
-        this.ore = pOre;
-        this.resultOre = pResultOre.asItem();
-        this.resultRaw = pResultRaw.asItem();
+    public UnstableConstructingRecipeBuilder(ItemLike pResult, int pCount) {
+        this.result = pResult.asItem();
         this.count = pCount;
+    }
+
+    public UnstableConstructingRecipeBuilder requires(TagKey<Item> pTag) {
+        return this.requires(pTag, 1);
+    }
+
+    public UnstableConstructingRecipeBuilder requires(TagKey<Item> pTag, int pQuantity) {
+        for(int i = 0; i < pQuantity; ++i) {
+            this.ingredients.add(Ingredient.of(pTag));
+        }
+        return this;
+    }
+
+    public UnstableConstructingRecipeBuilder requires(ItemLike pItem) {
+        return this.requires(pItem, 1);
+    }
+
+    public UnstableConstructingRecipeBuilder requires(ItemLike pItem, int pQuantity) {
+        for(int i = 0; i < pQuantity; ++i) {
+            this.ingredients.add(Ingredient.of(pItem));
+        }
+        return this;
     }
 
     @Override
@@ -45,52 +68,47 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
 
     @Override
     public Item getResult() {
-        return resultRaw;
-    }
-
-    public Item getResultOre() {
-        return resultOre;
+        return result;
     }
 
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation pRecipeId) {
         this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId)).rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new SeparatingRecipeBuilder.Result(pRecipeId, this.ore, this.resultOre, this.resultRaw, this.count, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.resultRaw.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
+        consumer.accept(new UnstableConstructingRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ingredients, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
-        private final Ingredient ore;
-        private final Item resultOre;
-        private final Item resultRaw;
+        private final Item result;
         private final int count;
+        private final List<Ingredient> ingredients;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Ingredient pOre, Item pResultOre, Item pResultRaw, int pCount, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
+        public Result(ResourceLocation pId, Item pResult, int pCount, List<Ingredient> pIngredients, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
             this.id = pId;
-            this.ore = pOre;
-            this.resultOre = pResultOre;
-            this.resultRaw = pResultRaw;
+            this.result = pResult;
             this.count = pCount;
+            this.ingredients = pIngredients;
             this.advancement = pAdvancement;
             this.advancementId = pAdvancementId;
         }
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
-            pJson.add("ore", this.ore.toJson());
+            JsonArray jsonarray = new JsonArray();
+            for(Ingredient ingredient : this.ingredients) {
+                jsonarray.add(ingredient.toJson());
+            }
 
-            JsonObject jsonResultOre = new JsonObject();
-            jsonResultOre.addProperty("item", this.resultOre.getRegistryName().toString());
-            JsonObject jsonResultRaw = new JsonObject();
-            jsonResultRaw.addProperty("item", this.resultRaw.getRegistryName().toString());
-            /*if (this.count > 1) {
+            pJson.add("ingredients", jsonarray);
+            JsonObject jsonobject = new JsonObject();
+            jsonobject.addProperty("item", this.result.getRegistryName().toString());
+            if (this.count > 1) {
                 jsonobject.addProperty("count", this.count);
-            }*/
+            }
 
-            pJson.add("resultore", jsonResultOre);
-            pJson.add("resultraw", jsonResultRaw);
+            pJson.add("result", jsonobject);
         }
 
         @Override
@@ -100,7 +118,7 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
 
         @Override
         public RecipeSerializer<?> getType() {
-            return ModRecipes.SEPARATING.get();
+            return ModRecipes.UNSTABLE_CONSTRUCTING.get();
         }
 
         @Nullable

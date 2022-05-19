@@ -1,7 +1,7 @@
 package com.newjumper.taloi.datagen.recipes;
 
-import com.newjumper.taloi.datagen.custom.PressingRecipeBuilder;
-import com.newjumper.taloi.datagen.custom.UnstablePressingRecipeBuilder;
+import com.newjumper.taloi.datagen.recipes.custom.PressingRecipeBuilder;
+import com.newjumper.taloi.datagen.recipes.custom.UnstablePressingRecipeBuilder;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.util.ModTags;
 import net.minecraft.data.DataGenerator;
