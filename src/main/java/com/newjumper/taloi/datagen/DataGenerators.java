@@ -6,6 +6,7 @@ import com.newjumper.taloi.datagen.lang.ModLanguageProvider;
 import com.newjumper.taloi.datagen.loot.ModLootTableProvider;
 import com.newjumper.taloi.datagen.models.*;
 import com.newjumper.taloi.datagen.recipes.*;
+import com.newjumper.taloi.datagen.sounds.ModSoundsProvider;
 import com.newjumper.taloi.datagen.tags.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -43,6 +44,9 @@ public class DataGenerators {
         generator.addProvider(new PressingRecipesProvider(generator));
         generator.addProvider(new ProcessingRecipesProvider(generator));
         generator.addProvider(new SeparatingRecipesProvider(generator));
+
+        // sounds
+        generator.addProvider(new ModSoundsProvider(generator, fileHelper));
 
         // tags
         ModBlockTagsProvider blockTags = new ModBlockTagsProvider(generator, fileHelper);

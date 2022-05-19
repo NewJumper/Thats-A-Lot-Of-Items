@@ -672,6 +672,7 @@ b4af3472897725f1b4bad44f2c343d2e347d8640 assets/taloi/models/item/zinc_block.jso
 a3984453ccf1214327f1c415906172b3b3964fbd assets/taloi/models/item/zinc_ingot.json
 ab8e9c314190d3234546a634ae4f829ad2f8ad61 assets/taloi/models/item/zinc_nugget.json
 7d25c86b35b313431d44108182457a62493eb130 assets/taloi/models/item/zinc_ore.json
+560aba27478c4221874fced6b7e61a26a2e4ffb4 assets/taloi/sounds.json
 c84180be7b971babcec86fb75f5d22eee51b05b6 data/forge/tags/blocks/ores/aluminum.json
 4421b25fb2f8038dd7331c7b527006cfaa53b233 data/forge/tags/blocks/ores/iridium.json
 ba2def3fb9bb0b18f5fa0164616faca0af33862b data/forge/tags/blocks/ores/lead.json
