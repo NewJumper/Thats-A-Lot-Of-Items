@@ -17,7 +17,7 @@ import java.util.List;
 public class TheCavesAddition extends LootModifier {
     private final Item addition;
 
-    protected TheCavesAddition(LootItemCondition[] conditionsIn, Item addition) {
+    public TheCavesAddition(LootItemCondition[] conditionsIn, Item addition) {
         super(conditionsIn);
         this.addition = addition;
     }
@@ -26,7 +26,7 @@ public class TheCavesAddition extends LootModifier {
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
         if(context.getRandom().nextFloat() < 0.04)
-        generatedLoot.add(new ItemStack(addition, 1));
+            generatedLoot.add(new ItemStack(addition, 1));
         return generatedLoot;
     }
 
