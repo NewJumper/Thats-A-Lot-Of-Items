@@ -4,13 +4,13 @@ license="AGPL-3.0"
 
 [[mods]]
     modId="taloi"
-    version="0.17.1"
+    version="0.18.0"
 
     displayName="That's A Lot Of Items"
-#     displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"
-     authors="NewJumper"
-#    credits="All art, code, textures, and concepts by NewJumper"
+    authors="NewJumper"
     logoFile="logo_blue_white.png"
+#   displayURL="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"
+#   credits="All art, code, textures, and concepts by NewJumper"
 
     description='''A mod that features a bunch of random content dumped into a block game.'''
 
