@@ -17,11 +17,13 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
     protected final ResourceLocation id;
     protected final NonNullList<Ingredient> ingredients;
     protected final ItemStack result;
+    protected final float experience;
 
-    public ConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
+    public ConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult, float pExperience) {
         this.id = pId;
         this.ingredients = ingredients;
         this.result = pResult;
+        this.experience = pExperience;
     }
 
     @Override
@@ -41,8 +43,8 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem() {
-        return result.copy();
+    public ResourceLocation getId() {
+        return id;
     }
 
     @Override
@@ -51,8 +53,12 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ResourceLocation getId() {
-        return id;
+    public ItemStack getResultItem() {
+        return result.copy();
+    }
+
+    public float getExperience() {
+        return experience;
     }
 
     @Override
@@ -84,8 +90,9 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
             }
 
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
+            float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
 
-            return new ConstructingRecipe(pRecipeId, ingredients, result);
+            return new ConstructingRecipe(pRecipeId, ingredients, result, experience);
         }
 
         @Override
@@ -96,8 +103,9 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
             }
 
             ItemStack result = pBuffer.readItem();
+            float experience = pBuffer.readFloat();
 
-            return new ConstructingRecipe(pRecipeId, ingredients, result);
+            return new ConstructingRecipe(pRecipeId, ingredients, result, experience);
         }
 
         @Override
@@ -108,6 +116,7 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
             }
 
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
+            pBuffer.writeFloat(pRecipe.getExperience());
         }
 
         @Override

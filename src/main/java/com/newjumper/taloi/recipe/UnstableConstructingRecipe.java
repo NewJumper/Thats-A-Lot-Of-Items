@@ -14,8 +14,8 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class UnstableConstructingRecipe extends ConstructingRecipe {
-    public UnstableConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
-        super(pId, ingredients, pResult);
+    public UnstableConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult, float pExperience) {
+        super(pId, ingredients, pResult, pExperience);
     }
 
     @Override
@@ -56,8 +56,9 @@ public class UnstableConstructingRecipe extends ConstructingRecipe {
             }
 
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
+            float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
 
-            return new UnstableConstructingRecipe(pRecipeId, ingredients, result);
+            return new UnstableConstructingRecipe(pRecipeId, ingredients, result, experience);
         }
 
         @Override
@@ -68,8 +69,9 @@ public class UnstableConstructingRecipe extends ConstructingRecipe {
             }
 
             ItemStack result = pBuffer.readItem();
+            float experience = pBuffer.readFloat();
 
-            return new UnstableConstructingRecipe(pRecipeId, ingredients, result);
+            return new UnstableConstructingRecipe(pRecipeId, ingredients, result, experience);
         }
 
         @Override
@@ -80,6 +82,7 @@ public class UnstableConstructingRecipe extends ConstructingRecipe {
             }
 
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
+            pBuffer.writeFloat(pRecipe.getExperience());
         }
 
         @Override

@@ -5,7 +5,7 @@
       "item": "taloi:hardened_carbonite"
     },
     {
-      "item": "taloi:refined_uranium"
+      "tag": "forge:ingots/uranium"
     },
     {
       "item": "taloi:ferroniobium_ingot"
