@@ -17,8 +17,8 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class UnstablePressingRecipe extends PressingRecipe {
-    public UnstablePressingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult) {
-        super(pId, ingredients, pResult);
+    public UnstablePressingRecipe(ResourceLocation pId, NonNullList<Ingredient> ingredients, ItemStack pResult, float pExperience) {
+        super(pId, ingredients, pResult, pExperience);
     }
 
     @Override
@@ -59,8 +59,9 @@ public class UnstablePressingRecipe extends PressingRecipe {
             }
 
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
+            float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
 
-            return new UnstablePressingRecipe(pRecipeId, ingredients, result);
+            return new UnstablePressingRecipe(pRecipeId, ingredients, result, experience);
         }
 
         @Override
@@ -71,8 +72,9 @@ public class UnstablePressingRecipe extends PressingRecipe {
             }
 
             ItemStack result = pBuffer.readItem();
+            float experience = pBuffer.readFloat();
 
-            return new UnstablePressingRecipe(pRecipeId, ingredients, result);
+            return new UnstablePressingRecipe(pRecipeId, ingredients, result, experience);
         }
 
         @Override
@@ -83,6 +85,7 @@ public class UnstablePressingRecipe extends PressingRecipe {
             }
 
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
+            pBuffer.writeFloat(pRecipe.getExperience());
         }
 
         @Override
