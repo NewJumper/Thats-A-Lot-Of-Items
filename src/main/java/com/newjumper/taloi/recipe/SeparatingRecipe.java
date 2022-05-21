@@ -16,12 +16,14 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
     private final Ingredient ore;
     private final ItemStack resultOre;
     private final ItemStack resultRaw;
+    protected final float experience;
 
-    public SeparatingRecipe(ResourceLocation pId, Ingredient ore, ItemStack resultOre, ItemStack resultRaw) {
+    public SeparatingRecipe(ResourceLocation pId, Ingredient ore, ItemStack resultOre, ItemStack resultRaw, float pExperience) {
         this.id = pId;
         this.ore = ore;
         this.resultOre = resultOre;
         this.resultRaw = resultRaw;
+        this.experience = pExperience;
     }
 
     @Override
@@ -39,6 +41,11 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
+    @Override
+    public ResourceLocation getId() {
+        return id;
+    }
+
     public Ingredient getOre() {
         return ore;
     }
@@ -47,14 +54,12 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
     public ItemStack getResultItem() {
         return resultRaw.copy();
     }
-
     public ItemStack getResultOre() {
         return resultOre.copy();
     }
 
-    @Override
-    public ResourceLocation getId() {
-        return id;
+    public float getExperience() {
+        return experience;
     }
 
     @Override
@@ -81,8 +86,9 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
             Ingredient ore = Ingredient.fromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "ore"));
             ItemStack resultOre = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "resultore"));
             ItemStack resultRaw = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "resultraw"));
+            float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
 
-            return new SeparatingRecipe(pRecipeId, ore, resultOre, resultRaw);
+            return new SeparatingRecipe(pRecipeId, ore, resultOre, resultRaw, experience);
         }
 
         @Override
@@ -90,8 +96,9 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
             Ingredient ore = Ingredient.fromNetwork(pBuffer);
             ItemStack resultOre = pBuffer.readItem();
             ItemStack resultRaw = pBuffer.readItem();
+            float experience = pBuffer.readFloat();
 
-            return new SeparatingRecipe(pRecipeId, ore, resultOre, resultRaw);
+            return new SeparatingRecipe(pRecipeId, ore, resultOre, resultRaw, experience);
         }
 
         @Override
@@ -99,6 +106,7 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
             pRecipe.ore.toNetwork(pBuffer);
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
             pBuffer.writeItemStack(pRecipe.getResultOre(), false);
+            pBuffer.writeFloat(pRecipe.getExperience());
         }
 
         @Override

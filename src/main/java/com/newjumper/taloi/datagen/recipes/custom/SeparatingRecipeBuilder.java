@@ -23,13 +23,15 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
     private final Item resultOre;
     private final Item resultRaw;
     private final int count;
+    private final float experience;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public SeparatingRecipeBuilder(Ingredient pOre, ItemLike pResultOre, ItemLike pResultRaw, int pCount) {
+    public SeparatingRecipeBuilder(Ingredient pOre, ItemLike pResultOre, ItemLike pResultRaw, int pCount, float pExperience) {
         this.ore = pOre;
         this.resultOre = pResultOre.asItem();
         this.resultRaw = pResultRaw.asItem();
         this.count = pCount;
+        this.experience = pExperience;
     }
 
     @Override
@@ -47,7 +49,6 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
     public Item getResult() {
         return resultRaw;
     }
-
     public Item getResultOre() {
         return resultOre;
     }
@@ -55,7 +56,7 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation pRecipeId) {
         this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId)).rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new SeparatingRecipeBuilder.Result(pRecipeId, this.ore, this.resultOre, this.resultRaw, this.count, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.resultRaw.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
+        consumer.accept(new SeparatingRecipeBuilder.Result(pRecipeId, this.ore, this.resultOre, this.resultRaw, this.count, this.experience, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.resultRaw.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
@@ -64,15 +65,17 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
         private final Item resultOre;
         private final Item resultRaw;
         private final int count;
+        private final float experience;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Ingredient pOre, Item pResultOre, Item pResultRaw, int pCount, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
+        public Result(ResourceLocation pId, Ingredient pOre, Item pResultOre, Item pResultRaw, int pCount, float pExperience, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
             this.id = pId;
             this.ore = pOre;
             this.resultOre = pResultOre;
             this.resultRaw = pResultRaw;
             this.count = pCount;
+            this.experience = pExperience;
             this.advancement = pAdvancement;
             this.advancementId = pAdvancementId;
         }
@@ -91,6 +94,7 @@ public class SeparatingRecipeBuilder implements RecipeBuilder {
 
             pJson.add("resultore", jsonResultOre);
             pJson.add("resultraw", jsonResultRaw);
+            pJson.addProperty("experience", this.experience);
         }
 
         @Override
