@@ -14,7 +14,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.OSMIUM_INGOT.get());
     }),
-    TUNGSTEN("tungsten", 40, new int[]{ 3, 7, 9, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
+    TUNGSTEN("tungsten", 39, new int[]{ 4, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.TUNGSTEN_INGOT.get());
     }),
     SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> {
