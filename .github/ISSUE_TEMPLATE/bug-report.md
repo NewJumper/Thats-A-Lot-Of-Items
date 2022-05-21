@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Found a bug?
-labels: bug
+labels: minor bug
 assignees: ''
 
 ---
