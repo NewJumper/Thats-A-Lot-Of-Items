@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TT",
+    "TT"
+  ],
+  "key": {
+    "T": {
+      "item": "taloi:tanzanite"
+    }
+  },
+  "result": {
+    "item": "taloi:tanzanite_block",
+    "count": 3
+  }
+}

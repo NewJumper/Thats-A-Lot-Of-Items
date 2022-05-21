@@ -69,6 +69,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.SLATE_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.SLATE_BRICK_WALL.get());
 
+        this.dropSelf(ModBlocks.MALACHITE_BLOCK.get());
+        this.dropSelf(ModBlocks.TANZANITE_BLOCK.get());
+        this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());
+
         // ALUMINUM
         this.dropSelf(ModBlocks.ALUMINUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());

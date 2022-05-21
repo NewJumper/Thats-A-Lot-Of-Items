@@ -45,6 +45,16 @@ public class ModAdvancementsProvider extends AdvancementProvider {
                 .addCriterion("uranium", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.REFINED_URANIUM.get()))
                 .save(consumer, loc + "radioactive");
 
+        Advancement.Builder.advancement().parent(root)
+                .display(ModItems.TOPAZ.get(),
+                        new TranslatableComponent("advancements.taloi.shiny.title"),
+                        new TranslatableComponent("advancements.taloi.shiny.description"),
+                        null, FrameType.TASK, true, true, false)
+                .addCriterion("malachite", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MALACHITE.get()))
+                .addCriterion("tanzanite", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.TANZANITE.get()))
+                .addCriterion("topaz", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.TOPAZ.get()))
+                .save(consumer, loc + "shiny");
+
         Advancement machinery = Advancement.Builder.advancement().parent(root)
                 .display(ModItems.UNSTABLE_MACHINE_FRAME.get(),
                         new TranslatableComponent("advancements.taloi.machinery.title"),

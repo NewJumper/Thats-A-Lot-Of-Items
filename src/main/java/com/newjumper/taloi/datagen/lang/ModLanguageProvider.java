@@ -40,6 +40,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add("advancements.taloi.root.description", "The beginning of a new end");
         add("advancements.taloi.radioactive.title", "Radioactive");
         add("advancements.taloi.radioactive.description", "I'm getting some weird readings off of this...");
+        add("advancements.taloi.shiny.title", "Sparkly Business");
+        add("advancements.taloi.shiny.description", "More than just amethyst");
         add("advancements.taloi.machinery.title", "Machinery");
         add("advancements.taloi.machinery.description", "Craft a machine frame, the building blocks of all machines");
         add("advancements.taloi.construct_alloy.title", "Alloy Constructor");

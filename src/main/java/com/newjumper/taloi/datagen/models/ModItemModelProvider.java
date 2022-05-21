@@ -75,6 +75,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("slate_brick_stairs", modLoc("block/slate_brick_stairs"));
         withExistingParent("slate_brick_wall", modLoc("block/slate_brick_wall_inventory"));
 
+        withExistingParent("malachite_block", modLoc("block/malachite_block"));
+        withExistingParent("tanzanite_block", modLoc("block/tanzanite_block"));
+        withExistingParent("topaz_block", modLoc("block/topaz_block"));
+
         // ORES & BLOCKS
         withExistingParent("aluminum_block", modLoc("block/aluminum_block"));
         withExistingParent("aluminum_ore", modLoc("block/aluminum_ore"));

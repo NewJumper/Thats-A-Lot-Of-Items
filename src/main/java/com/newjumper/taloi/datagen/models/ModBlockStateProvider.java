@@ -75,6 +75,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(ModBlocks.SLATE_BRICK_STAIRS.get(), modLoc("block/slate_bricks"));
         wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
 
+        simpleBlock(ModBlocks.MALACHITE_BLOCK.get());
+        simpleBlock(ModBlocks.TANZANITE_BLOCK.get());
+        simpleBlock(ModBlocks.TOPAZ_BLOCK.get());
+
         // ALUMINUM
         simpleBlock(ModBlocks.ALUMINUM_BLOCK.get());
         simpleBlock(ModBlocks.ALUMINUM_ORE.get());

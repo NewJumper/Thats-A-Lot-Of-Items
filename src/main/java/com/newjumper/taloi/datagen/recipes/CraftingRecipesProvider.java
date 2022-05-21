@@ -138,6 +138,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("TS")
                 .unlockedBy("has_material", has(Blocks.STONE)).save(consumer);
 
+        // DECORATION
         ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_BRICKS.get(), 4)
                 .define('L', ModBlocks.LIMESTONE.get())
                 .pattern("LL")
@@ -179,6 +180,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("SSS")
                 .pattern("SSS")
                 .unlockedBy("has_material", has(ModBlocks.SLATE_BRICKS.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.MALACHITE_BLOCK.get(), 3)
+                .define('M', ModItems.MALACHITE.get())
+                .pattern("MM")
+                .pattern("MM")
+                .unlockedBy("has_material", has(ModItems.MALACHITE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.TANZANITE_BLOCK.get(), 3)
+                .define('T', ModItems.TANZANITE.get())
+                .pattern("TT")
+                .pattern("TT")
+                .unlockedBy("has_material", has(ModItems.TANZANITE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.TOPAZ_BLOCK.get(), 3)
+                .define('T', ModItems.TOPAZ.get())
+                .pattern("TT")
+                .pattern("TT")
+                .unlockedBy("has_material", has(ModItems.TOPAZ.get())).save(consumer);
 
         // ALUMINUM
         ShapedRecipeBuilder.shaped(ModBlocks.ALUMINUM_BLOCK.get(), 1)

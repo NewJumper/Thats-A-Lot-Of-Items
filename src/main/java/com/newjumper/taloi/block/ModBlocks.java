@@ -113,19 +113,6 @@ public class ModBlocks {
             .sound(SoundType.GILDED_BLACKSTONE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())
-            .strength(1.5f, 5f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> SLATE_BRICK_STAIRS = registerBlock("slate_brick_stairs", () -> new StairBlock(() -> SLATE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
-            .strength(1.5f, 5f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> SLATE_BRICK_SLAB = registerBlock("slate_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
-            .strength(1.5f, 5f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<WallBlock> SLATE_BRICK_WALL = registerBlock("slate_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
-            .strength(1.5f, 6f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
     // DECORATION
     public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 5f)
@@ -146,6 +133,34 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> LIMESTONE_BRICK_WALL = registerBlock("limestone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
             .strength(2f, 6f)
             .sound(SoundType.NETHER_BRICKS)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())
+            .strength(1.5f, 5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> SLATE_BRICK_STAIRS = registerBlock("slate_brick_stairs", () -> new StairBlock(() -> SLATE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
+            .strength(1.5f, 5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> SLATE_BRICK_SLAB = registerBlock("slate_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
+            .strength(1.5f, 5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<WallBlock> SLATE_BRICK_WALL = registerBlock("slate_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
+            .strength(1.5f, 6f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> MALACHITE_BLOCK = registerBlock("malachite_block", () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+            .strength(1.5F)
+            .sound(SoundType.AMETHYST)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> TANZANITE_BLOCK = registerBlock("tanzanite_block", () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+            .strength(1.5F)
+            .sound(SoundType.AMETHYST)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> TOPAZ_BLOCK = registerBlock("topaz_block", () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+            .strength(1.5F)
+            .sound(SoundType.AMETHYST)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // METAL BLOCKS
