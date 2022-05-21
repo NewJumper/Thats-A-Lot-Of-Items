@@ -17,10 +17,12 @@ public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(WandererTradesEvent tradesEvent) {
         List<VillagerTrades.ItemListing> wanderingTrades = tradesEvent.getRareTrades();
+        ItemStack amethyst = new ItemStack(Items.AMETHYST_SHARD, 4);
         ItemStack malachite = new ItemStack(ModItems.MALACHITE.get(), 6);
         ItemStack tanzanite = new ItemStack(ModItems.TANZANITE.get(), 6);
         ItemStack topaz = new ItemStack(ModItems.TOPAZ.get(), 6);
 
+        wanderingTrades.add(((pTrader, pRand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), amethyst, 8, 0, 0)));
         wanderingTrades.add(((pTrader, pRand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), malachite, 16, 0, 0)));
         wanderingTrades.add(((pTrader, pRand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), tanzanite, 16, 0, 0)));
         wanderingTrades.add(((pTrader, pRand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), topaz, 16, 0, 0)));
