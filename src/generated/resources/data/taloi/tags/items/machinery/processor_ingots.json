@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "minecraft:iron_ingot",
-    "minecraft:netherite_ingot",
-    "taloi:lead_ingot",
-    "taloi:osmium_ingot",
-    "taloi:refined_uranium",
     "taloi:steel_ingot",
-    "taloi:tin_ingot",
-    "taloi:tungsten_ingot",
-    "taloi:zinc_ingot"
+    "#forge:raw_materials/iron",
+    "#forge:ingots/netherite",
+    "#forge:raw_materials/lead",
+    "#forge:raw_materials/osmium",
+    "#forge:raw_materials/uranium",
+    "#forge:raw_materials/tin",
+    "#forge:raw_materials/tungsten",
+    "#forge:raw_materials/zinc"
   ]
 }

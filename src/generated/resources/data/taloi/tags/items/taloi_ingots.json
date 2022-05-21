@@ -11,6 +11,8 @@
     "taloi:tin_ingot",
     "taloi:tungsten_ingot",
     "taloi:refined_uranium",
-    "taloi:zinc_ingot"
+    "taloi:zinc_ingot",
+    "taloi:bronze_ingot",
+    "taloi:steel_ingot"
   ]
 }
