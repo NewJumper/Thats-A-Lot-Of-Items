@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 public class EventBusEvents {
     @SubscribeEvent
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
-        event.getRegistry().registerAll(new TheCavesAddition.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"music_disc_the_caves_from_dungeon")));
+        event.getRegistry().registerAll(new TheCavesAddition.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"the_caves_from_dungeon")));
     }
 
     @SubscribeEvent
