@@ -12,16 +12,18 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class ProcessingRecipe implements Recipe<SimpleContainer> {
-    private final ResourceLocation id;
-    private final Ingredient base;
-    private final Ingredient ingot;
-    private final ItemStack result;
+    protected final ResourceLocation id;
+    protected final Ingredient base;
+    protected final Ingredient ingot;
+    protected final ItemStack result;
+    protected final float experience;
 
-    public ProcessingRecipe(ResourceLocation pId, Ingredient base, Ingredient ingot, ItemStack pResult) {
+    public ProcessingRecipe(ResourceLocation pId, Ingredient base, Ingredient ingot, ItemStack pResult, float pExperience) {
         this.id = pId;
         this.base = base;
         this.ingot = ingot;
         this.result = pResult;
+        this.experience = pExperience;
     }
 
     @Override
@@ -39,6 +41,11 @@ public class ProcessingRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
+    @Override
+    public ResourceLocation getId() {
+        return id;
+    }
+
     public Ingredient getBase() {
         return base;
     }
@@ -51,9 +58,8 @@ public class ProcessingRecipe implements Recipe<SimpleContainer> {
         return result.copy();
     }
 
-    @Override
-    public ResourceLocation getId() {
-        return id;
+    public float getExperience() {
+        return experience;
     }
 
     @Override
@@ -80,8 +86,9 @@ public class ProcessingRecipe implements Recipe<SimpleContainer> {
             Ingredient base = Ingredient.fromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "base"));
             Ingredient ingot = Ingredient.fromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "ingot"));
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
+            float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
 
-            return new ProcessingRecipe(pRecipeId, base, ingot, result);
+            return new ProcessingRecipe(pRecipeId, base, ingot, result, experience);
         }
 
         @Override
@@ -89,8 +96,9 @@ public class ProcessingRecipe implements Recipe<SimpleContainer> {
             Ingredient base = Ingredient.fromNetwork(pBuffer);
             Ingredient ingot = Ingredient.fromNetwork(pBuffer);
             ItemStack result = pBuffer.readItem();
+            float experience = pBuffer.readFloat();
 
-            return new ProcessingRecipe(pRecipeId, base, ingot, result);
+            return new ProcessingRecipe(pRecipeId, base, ingot, result, experience);
         }
 
         @Override
@@ -98,6 +106,7 @@ public class ProcessingRecipe implements Recipe<SimpleContainer> {
             pRecipe.base.toNetwork(pBuffer);
             pRecipe.ingot.toNetwork(pBuffer);
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
+            pBuffer.writeFloat(pRecipe.getExperience());
         }
 
         @Override

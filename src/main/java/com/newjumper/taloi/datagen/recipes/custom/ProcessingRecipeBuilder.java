@@ -22,14 +22,14 @@ public class ProcessingRecipeBuilder implements RecipeBuilder {
     private final Ingredient base;
     private final Ingredient ingot;
     private final Item result;
-    private final int count;
+    private final float experience;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public ProcessingRecipeBuilder(Ingredient pBase, Ingredient pIngot, ItemLike pResult, int pCount) {
+    public ProcessingRecipeBuilder(Ingredient pBase, Ingredient pIngot, ItemLike pResult, float pExperience) {
         this.base = pBase;
         this.ingot = pIngot;
         this.result = pResult.asItem();
-        this.count = pCount;
+        this.experience = pExperience;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class ProcessingRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation pRecipeId) {
         this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId)).rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new ProcessingRecipeBuilder.Result(pRecipeId, this.base, this.ingot, this.result, this.count, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
+        consumer.accept(new ProcessingRecipeBuilder.Result(pRecipeId, this.base, this.ingot, this.result, this.experience, this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
@@ -59,16 +59,16 @@ public class ProcessingRecipeBuilder implements RecipeBuilder {
         private final Ingredient base;
         private final Ingredient ingot;
         private final Item result;
-        private final int count;
+        private final float experience;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Ingredient pBase, Ingredient pIngot, Item pResult, int pCount, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
+        public Result(ResourceLocation pId, Ingredient pBase, Ingredient pIngot, Item pResult, float pExperience, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
             this.id = pId;
             this.base = pBase;
             this.ingot = pIngot;
             this.result = pResult;
-            this.count = pCount;
+            this.experience = pExperience;
             this.advancement = pAdvancement;
             this.advancementId = pAdvancementId;
         }
@@ -80,11 +80,9 @@ public class ProcessingRecipeBuilder implements RecipeBuilder {
 
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", this.result.getRegistryName().toString());
-            if (this.count > 1) {
-                jsonobject.addProperty("count", this.count);
-            }
 
             pJson.add("result", jsonobject);
+            pJson.addProperty("experience", this.experience);
         }
 
         @Override
