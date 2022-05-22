@@ -35,11 +35,11 @@ public class ThatsALotOfItems {
         ModRecipes.register(eventBus);
         ModSounds.register(eventBus);
 
-        eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLClientSetupEvent event) {
+    private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
@@ -52,6 +52,6 @@ public class ThatsALotOfItems {
         MenuScreens.register(ModMenuTypes.PROCESSOR_MENU.get(), ProcessorScreen::new);
         MenuScreens.register(ModMenuTypes.SEPARATOR_MENU.get(), SeparatorScreen::new);
 
-        ModItemProperties.addModItemProperties();
+        ModItemProperties.addItemProperties();
     }
 }
