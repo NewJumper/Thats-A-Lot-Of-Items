@@ -5,6 +5,7 @@ import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -25,8 +26,7 @@ public class ModLanguageProvider extends LanguageProvider {
         add("itemGroup.taloi_combat_tab", "TALOI Combat");
 
         ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(this::addBlock);
-        ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).forEach(this::addItem);
-        // ^^^^^^^ CREATES DUPLICATE KEYS FOR BLOCK ITEMS, FIX ^^^^^^^
+        ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).filter(item -> !(item instanceof BlockItem)).forEach(this::addItem);
         add("item.taloi.music_disc_the_caves", "Music Disc");
         add("item.taloi.music_disc_the_caves.desc", "NewJumper - The Caves");
 
