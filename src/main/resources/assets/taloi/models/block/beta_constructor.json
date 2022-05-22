@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "taloi:block/constructor_top",
+    "north": "taloi:block/beta_constructor_front",
+    "south": "taloi:block/constructor_back",
+    "east": "taloi:block/beta_constructor_right",
+    "west": "taloi:block/beta_constructor_left",
+    "up": "taloi:block/constructor_top",
+    "down": "taloi:block/constructor_bottom"
+  }
+}

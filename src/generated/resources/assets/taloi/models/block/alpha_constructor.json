@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "side": "taloi:block/alpha_constructor_side",
-    "front": "taloi:block/constructor_front",
-    "top": "taloi:block/constructor_top"
-  }
-}
