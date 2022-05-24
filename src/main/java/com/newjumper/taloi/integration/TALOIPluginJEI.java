@@ -30,15 +30,7 @@ public class TALOIPluginJEI implements IModPlugin {
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<ConstructingRecipe> constructingRecipes = rm.getAllRecipesFor(ConstructingRecipe.Type.INSTANCE);
-        List<PressingRecipe> pressingRecipes = rm.getAllRecipesFor(PressingRecipe.Type.INSTANCE);
-        List<ProcessingRecipe> processingRecipes = rm.getAllRecipesFor(ProcessingRecipe.Type.INSTANCE);
-        List<SeparatingRecipe> separatingRecipes = rm.getAllRecipesFor(SeparatingRecipe.Type.INSTANCE);
 
         registration.addRecipes(new RecipeType<>(ConstructingRecipeCategory.UID, ConstructingRecipe.class), constructingRecipes);
-//        registration.addRecipes(new RecipeType<>(UnstableConstructingRecipeCategory.UID, UnstableConstructingRecipe.class), constructingRecipes);
-        registration.addRecipes(new RecipeType<>(PressingRecipeCategory.UID, PressingRecipe.class), pressingRecipes);
-//        registration.addRecipes(new RecipeType<>(UnstablePressingRecipeCategory.UID, UnstablePressingRecipe.class), pressingRecipes);
-        registration.addRecipes(new RecipeType<>(ProcessingRecipeCategory.UID, ProcessingRecipe.class), processingRecipes);
-        registration.addRecipes(new RecipeType<>(SeparatingRecipeCategory.UID, SeparatingRecipe.class), separatingRecipes);
     }
 }
