@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 @Mod(ThatsALotOfItems.MOD_ID)
 public class ThatsALotOfItems {
     public static final String MOD_ID = "taloi";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public ThatsALotOfItems() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

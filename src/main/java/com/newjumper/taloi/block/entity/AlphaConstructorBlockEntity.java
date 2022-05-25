@@ -11,9 +11,4 @@ public class AlphaConstructorBlockEntity extends ConstructorBlockEntity {
         super(ModBlockEntities.ALPHA_CONSTRUCTOR.get(), pWorldPosition, pBlockState, ConstructingRecipe.Type.INSTANCE, 4);
         data.set(3, 200);
     }
-
-    @Override
-    public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.ac");
-    }
 }

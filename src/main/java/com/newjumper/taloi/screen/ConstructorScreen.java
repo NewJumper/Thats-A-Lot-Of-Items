@@ -26,10 +26,8 @@ public class ConstructorScreen extends AbstractContainerScreen<ConstructorMenu> 
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
-        if(menu.isOn()) {
-            blit(pPoseStack, x + 89, y + 23, 176, 14, menu.getScaledProgress(), 40);
-            blit(pPoseStack, x + 31, y + 30, 176, 0, 14, 14);
-        }
+        if(menu.isLit()) blit(pPoseStack, x + 31, y + 30 + menu.getFuelProgress(), 176, menu.getFuelProgress(), 14, 14 - menu.getFuelProgress());
+        if(menu.hasIngredients()) blit(pPoseStack, x + 89, y + 23, 176, 14, menu.getProgress(), 40);
     }
 
     @Override

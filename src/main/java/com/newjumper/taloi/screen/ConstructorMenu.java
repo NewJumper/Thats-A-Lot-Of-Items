@@ -25,14 +25,14 @@ public class ConstructorMenu extends AbstractContainerMenu {
         this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()), new SimpleContainerData(4));
     }
 
-    public ConstructorMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity, ContainerData containerData) {
+    public ConstructorMenu(int pContainerId, Inventory pInventory, BlockEntity pBlockEntity, ContainerData pContainerData) {
         super(ModMenuTypes.CONSTRUCTOR_MENU.get(), pContainerId);
-        this.blockEntity = blockEntity;
-        this.level = inventory.player.level;
-        this.containerData = containerData;
+        this.blockEntity = pBlockEntity;
+        this.level = pInventory.player.level;
+        this.containerData = pContainerData;
 
-        checkContainerSize(inventory, 4);
-        addPlayerInventory(inventory);
+        checkContainerSize(pInventory, 4);
+        addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 31, 47));
@@ -41,7 +41,7 @@ public class ConstructorMenu extends AbstractContainerMenu {
             this.addSlot(new ModResultSlot(handler, 3, 125, 35));
         });
 
-        addDataSlots(containerData);
+        addDataSlots(pContainerData);
     }
 
     @Override
@@ -73,33 +73,41 @@ public class ConstructorMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
-    private void addPlayerInventory(Inventory playerInventory) {
+    @Override
+    public boolean stillValid(Player pPlayer) {
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_CONSTRUCTOR.get()) ||
+               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_CONSTRUCTOR.get());
+    }
+
+    private void addInventorySlots(Inventory pInventory) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                this.addSlot(new Slot(pInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
             }
         }
 
         for (int i = 0; i < 9; i++) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+            this.addSlot(new Slot(pInventory, i, 8 + i * 18, 142));
         }
     }
 
-    @Override
-    public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_CONSTRUCTOR.get()) ||
-                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_CONSTRUCTOR.get());
+    public boolean isLit() {
+        return containerData.get(0) > 0;
     }
-
-    public boolean isOn() {
+    public boolean hasIngredients() {
         return containerData.get(2) > 0;
     }
-
-    public int getScaledProgress() {
+    public int getProgress() {
         int currentProgress = this.containerData.get(2);
         int maxProgress = this.containerData.get(3);
         int progressBarLength = 27;
 
         return maxProgress != 0 && currentProgress != 0 ? currentProgress * progressBarLength / maxProgress : 0;
+    }
+    public int getFuelProgress() {
+        int litTime = this.containerData.get(0);
+        int litDuration = this.containerData.get(1);
+
+        return litDuration != 0 && litTime != 0 ? (-13 * (litTime - litDuration)) / litDuration : 0;
     }
 }
