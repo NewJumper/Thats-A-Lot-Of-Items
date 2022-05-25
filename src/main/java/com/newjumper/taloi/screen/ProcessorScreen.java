@@ -26,8 +26,8 @@ public class ProcessorScreen extends AbstractContainerScreen<ProcessorMenu> {
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
-        if(menu.isOn()) {
-            blit(pPoseStack, x + 73, y + 34, 176, 14, 22, menu.getScaledProgress());
+        if(menu.isLit()) {
+            blit(pPoseStack, x + 73, y + 34, 176, 14, 22, menu.getProgress());
             blit(pPoseStack, x + 41, y + 26, 176, 0, 14, 14);
         }
     }

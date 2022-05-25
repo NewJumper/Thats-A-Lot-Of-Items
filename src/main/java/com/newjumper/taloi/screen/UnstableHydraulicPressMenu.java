@@ -21,18 +21,18 @@ public class UnstableHydraulicPressMenu extends AbstractContainerMenu {
     private final ContainerData containerData;
     private final Level level;
 
-    public UnstableHydraulicPressMenu(int pContainerId, Inventory inventory, FriendlyByteBuf buffer) {
-        this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()), new SimpleContainerData(4));
+    public UnstableHydraulicPressMenu(int pContainerId, Inventory pInventory, FriendlyByteBuf pBuffer) {
+        this(pContainerId, pInventory, pInventory.player.level.getBlockEntity(pBuffer.readBlockPos()), new SimpleContainerData(4));
     }
 
-    public UnstableHydraulicPressMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity, ContainerData containerData) {
+    public UnstableHydraulicPressMenu(int pContainerId, Inventory pInventory, BlockEntity pBlockEntity, ContainerData pContainerData) {
         super(ModMenuTypes.UNSTABLE_HYDRAULIC_PRESS_MENU.get(), pContainerId);
-        this.blockEntity = blockEntity;
-        this.level = inventory.player.level;
-        this.containerData = containerData;
+        this.blockEntity = pBlockEntity;
+        this.level = pInventory.player.level;
+        this.containerData = pContainerData;
 
-        checkContainerSize(inventory, 5);
-        addPlayerInventory(inventory);
+        checkContainerSize(pInventory, 5);
+        addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 24, 47));
@@ -42,7 +42,7 @@ public class UnstableHydraulicPressMenu extends AbstractContainerMenu {
             this.addSlot(new ModResultSlot(handler, 4, 132, 35));
         });
 
-        addDataSlots(containerData);
+        addDataSlots(pContainerData);
     }
 
     @Override
@@ -74,32 +74,40 @@ public class UnstableHydraulicPressMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
-    private void addPlayerInventory(Inventory playerInventory) {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 9; j++) {
-                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
-            }
-        }
-
-        for (int i = 0; i < 9; i++) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
-        }
-    }
-
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get());
     }
 
-    public boolean isOn() {
-        return containerData.get(2) > 0;
+    private void addInventorySlots(Inventory pInventory) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 9; j++) {
+                this.addSlot(new Slot(pInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+            }
+        }
+
+        for (int i = 0; i < 9; i++) {
+            this.addSlot(new Slot(pInventory, i, 8 + i * 18, 142));
+        }
     }
 
-    public int getScaledProgress() {
+    public boolean isLit() {
+        return containerData.get(0) > 0;
+    }
+    public boolean hasIngredients() {
+        return containerData.get(2) > 0;
+    }
+    public int getProgress() {
         int currentProgress = this.containerData.get(2);
         int maxProgress = this.containerData.get(3);
         int progressBarLength = 17;
 
         return maxProgress != 0 && currentProgress != 0 ? currentProgress * progressBarLength / maxProgress : 0;
+    }
+    public int getFuelProgress() {
+        int litTime = this.containerData.get(0);
+        int litDuration = this.containerData.get(1);
+
+        return litDuration != 0 && litTime != 0 ? (-13 * (litTime - litDuration)) / litDuration : 0;
     }
 }

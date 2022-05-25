@@ -21,18 +21,18 @@ public class SeparatorMenu extends AbstractContainerMenu {
     private final ContainerData containerData;
     private final Level level;
 
-    public SeparatorMenu(int pContainerId, Inventory inventory, FriendlyByteBuf buffer) {
-        this(pContainerId, inventory, inventory.player.level.getBlockEntity(buffer.readBlockPos()), new SimpleContainerData(4));
+    public SeparatorMenu(int pContainerId, Inventory pInventory, FriendlyByteBuf pBuffer) {
+        this(pContainerId, pInventory, pInventory.player.level.getBlockEntity(pBuffer.readBlockPos()), new SimpleContainerData(4));
     }
 
-    public SeparatorMenu(int pContainerId, Inventory inventory, BlockEntity blockEntity, ContainerData containerData) {
+    public SeparatorMenu(int pContainerId, Inventory pInventory, BlockEntity pBlockEntity, ContainerData pContainerData) {
         super(ModMenuTypes.SEPARATOR_MENU.get(), pContainerId);
-        this.blockEntity = blockEntity;
-        this.level = inventory.player.level;
-        this.containerData = containerData;
+        this.blockEntity = pBlockEntity;
+        this.level = pInventory.player.level;
+        this.containerData = pContainerData;
 
-        checkContainerSize(inventory, 4);
-        addPlayerInventory(inventory);
+        checkContainerSize(pInventory, 4);
+        addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 30, 41));
@@ -41,7 +41,7 @@ public class SeparatorMenu extends AbstractContainerMenu {
             this.addSlot(new ModResultSlot(handler, 3, 128, 37));
         });
 
-        addDataSlots(containerData);
+        addDataSlots(pContainerData);
     }
 
     @Override
@@ -73,34 +73,42 @@ public class SeparatorMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
-    private void addPlayerInventory(Inventory playerInventory) {
+    @Override
+    public boolean stillValid(Player pPlayer) {
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_SEPARATOR.get()) ||
+               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_SEPARATOR.get()) ||
+               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.UNSTABLE_SEPARATOR.get());
+    }
+
+    private void addInventorySlots(Inventory pInventory) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                this.addSlot(new Slot(pInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
             }
         }
 
         for (int i = 0; i < 9; i++) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+            this.addSlot(new Slot(pInventory, i, 8 + i * 18, 142));
         }
     }
 
-    @Override
-    public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_SEPARATOR.get()) ||
-                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_SEPARATOR.get()) ||
-                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.UNSTABLE_SEPARATOR.get());
+    public boolean isLit() {
+        return containerData.get(0) > 0;
     }
-
-    public boolean isOn() {
+    public boolean hasIngredients() {
         return containerData.get(2) > 0;
     }
-
-    public int getScaledProgress() {
+    public int getProgress() {
         int currentProgress = this.containerData.get(2);
         int maxProgress = this.containerData.get(3);
         int progressBarLength = 22;
 
         return maxProgress != 0 && currentProgress != 0 ? currentProgress * progressBarLength / maxProgress : 0;
+    }
+    public int getFuelProgress() {
+        int litTime = this.containerData.get(0);
+        int litDuration = this.containerData.get(1);
+
+        return litDuration != 0 && litTime != 0 ? (-13 * (litTime - litDuration)) / litDuration : 0;
     }
 }
