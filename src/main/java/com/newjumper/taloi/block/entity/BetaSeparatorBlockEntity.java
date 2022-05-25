@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BetaSeparatorBlockEntity extends SeparatorBlockEntity {
     public BetaSeparatorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.BETA_SEPARATOR.get(), pWorldPosition, pBlockState, SeparatingRecipe.Type.INSTANCE);
-        data.set(3, 200);
+        data.set(3, 100);
     }
 
     @Override

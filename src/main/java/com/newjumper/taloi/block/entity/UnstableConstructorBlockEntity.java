@@ -77,7 +77,7 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
             }
         };
 
-        this.data.set(3, 60);
+        this.data.set(3, 100);
         lastSlotIndex = 4;
     }
 

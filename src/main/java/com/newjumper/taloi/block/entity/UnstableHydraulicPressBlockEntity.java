@@ -76,7 +76,7 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
             }
         };
 
-        this.data.set(3, 60);
+        this.data.set(3, 100);
         lastSlotIndex = 4;
     }
 
