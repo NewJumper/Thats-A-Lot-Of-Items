@@ -79,7 +79,7 @@ public class SeparatorBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.separator");
+        return new TranslatableComponent("container.taloi.ase");
     }
 
     @Override

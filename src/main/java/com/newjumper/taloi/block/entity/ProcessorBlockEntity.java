@@ -82,7 +82,7 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.processor");
+        return new TranslatableComponent("container.taloi.ap");
     }
 
     @Override

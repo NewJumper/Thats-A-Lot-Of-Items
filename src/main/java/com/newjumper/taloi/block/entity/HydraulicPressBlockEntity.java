@@ -82,7 +82,7 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.press");
+        return new TranslatableComponent("container.taloi.ahp");
     }
 
     @Override

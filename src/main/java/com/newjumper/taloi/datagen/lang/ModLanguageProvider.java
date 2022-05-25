@@ -27,11 +27,6 @@ public class ModLanguageProvider extends LanguageProvider {
 
         ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(this::addBlock);
         ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).filter(item -> !(item instanceof BlockItem)).forEach(this::addItem);
-
-        add("container.taloi.constructor", "Constructor");
-        add("container.taloi.press", "Hydraulic Press");
-        add("container.taloi.processor", "Processor");
-        add("container.taloi.separator", "Separator");
         ModBlockEntities.BLOCK_ENTITIES.getEntries().stream().map(RegistryObject::get).forEach(this::addContainer);
 
         add("advancements.taloi.root.title", "That IS Indeed A Lot Of Items");
