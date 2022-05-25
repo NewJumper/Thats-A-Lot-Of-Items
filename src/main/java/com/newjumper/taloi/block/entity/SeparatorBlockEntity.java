@@ -161,8 +161,8 @@ public class SeparatorBlockEntity extends BlockEntity implements MenuProvider {
                 Optional<? extends SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
                     pBlockEntity.itemHandler.extractItem(1,1, false);
-                    pBlockEntity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(), pBlockEntity.itemHandler.getStackInSlot(2).getCount() + 1));
-                    pBlockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultOre().getItem(), pBlockEntity.itemHandler.getStackInSlot(3).getCount() + 2));
+                    pBlockEntity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(), pBlockEntity.itemHandler.getStackInSlot(2).getCount() + 2));
+                    pBlockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultOre().getItem(), pBlockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
                     pBlockEntity.currentProgress = 0;
                 }
             }
