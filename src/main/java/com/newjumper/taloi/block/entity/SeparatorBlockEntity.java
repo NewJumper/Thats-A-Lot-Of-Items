@@ -138,53 +138,58 @@ public class SeparatorBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, SeparatorBlockEntity blockEntity) {
-        if(hasRecipe(blockEntity)) {
-            blockEntity.currentProgress++;
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, SeparatorBlockEntity pBlockEntity) {
+        if(pBlockEntity.isLit()) pBlockEntity.litTime--;
+        if(canSeparate(pBlockEntity) && !pBlockEntity.isLit()) {
+            int constant = pBlockEntity.getBurnDuration(pBlockEntity.itemHandler.getStackInSlot(0)) / 200;
+            pBlockEntity.maxLitTime = pBlockEntity.maxProgress * constant;
+            pBlockEntity.litTime = pBlockEntity.maxLitTime;
+            pBlockEntity.itemHandler.extractItem(0, 1, false);
+        }
+
+        if(canSeparate(pBlockEntity) && pBlockEntity.isLit()) {
+            pBlockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
-            if(blockEntity.currentProgress >= blockEntity.maxProgress) {
-                Level level = blockEntity.level;
-                SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-                for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-                    inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+
+            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
+                Level level = pBlockEntity.level;
+                SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
+                for (int i = 0; i < pBlockEntity.itemHandler.getSlots(); i++) {
+                    inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
                 }
 
-                Optional<SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(SeparatingRecipe.Type.INSTANCE, inventory, level);
-
+                Optional<? extends SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
-                    blockEntity.itemHandler.extractItem(0,1, false);
-                    blockEntity.itemHandler.extractItem(1,1, false);
-                    blockEntity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(2).getCount() + 1));
-                    blockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultOre().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + 2));
-
-                    blockEntity.currentProgress = 0;
+                    pBlockEntity.itemHandler.extractItem(1,1, false);
+                    pBlockEntity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(), pBlockEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+                    pBlockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultOre().getItem(), pBlockEntity.itemHandler.getStackInSlot(3).getCount() + 2));
+                    pBlockEntity.currentProgress = 0;
                 }
             }
         } else {
-            blockEntity.currentProgress = 0;
+            pBlockEntity.currentProgress = 0;
             setChanged(pLevel, pPos, pState);
         }
     }
 
-    private static boolean hasRecipe(SeparatorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+    private boolean isLit() {
+        return this.litTime > 0;
+    }
+
+    private static boolean canSeparate(SeparatorBlockEntity pBlockEntity) {
+        Level level = pBlockEntity.level;
+        SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
+        for (int i = 0; i < pBlockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(SeparatingRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent() && canSeparate(inventory, match.get().getResultItem(), match.get().getResultOre()) && hasFuel(blockEntity);
+        Optional<? extends SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
+        return match.isPresent() && hasValidOutput(inventory, match.get().getResultItem(), match.get().getResultOre());
     }
 
-    private static boolean canSeparate(SimpleContainer container, ItemStack resultOre, ItemStack resultRaw) {
-        return ((container.getItem(2).getItem() == resultOre.getItem() || container.getItem(2).isEmpty()) && (container.getItem(3).getItem() == resultRaw.getItem() || container.getItem(3).isEmpty())) &&
-               ((container.getItem(2).getCount() < container.getItem(2).getMaxStackSize()) && (container.getItem(3).getCount() < container.getItem(3).getMaxStackSize()));
-    }
-
-    private static boolean hasFuel(SeparatorBlockEntity blockEntity) {
-        return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
+    private static boolean hasValidOutput(SimpleContainer pContainer, ItemStack pResultOre, ItemStack pResultRaw) {
+        return ((pContainer.getItem(2).getItem() == pResultOre.getItem() || pContainer.getItem(2).isEmpty()) && (pContainer.getItem(3).getItem() == pResultRaw.getItem() || pContainer.getItem(3).isEmpty())) &&
+               ((pContainer.getItem(2).getCount() < pContainer.getItem(2).getMaxStackSize()) && (pContainer.getItem(3).getCount() < pContainer.getItem(3).getMaxStackSize()));
     }
 
     private int getBurnDuration(ItemStack pFuel) {

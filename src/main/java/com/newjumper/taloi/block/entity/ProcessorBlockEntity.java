@@ -141,53 +141,60 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ProcessorBlockEntity blockEntity) {
-        if(hasRecipe(blockEntity)) {
-            blockEntity.currentProgress++;
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ProcessorBlockEntity pBlockEntity) {
+        if(pBlockEntity.isLit()) pBlockEntity.litTime--;
+        if(canProcess(pBlockEntity) && !pBlockEntity.isLit()) {
+            int constant = pBlockEntity.getBurnDuration(pBlockEntity.itemHandler.getStackInSlot(0)) / 200;
+            pBlockEntity.maxLitTime = pBlockEntity.maxProgress * constant;
+            pBlockEntity.litTime = pBlockEntity.maxLitTime;
+            pBlockEntity.itemHandler.extractItem(0, 1, false);
+        }
+
+        if(canProcess(pBlockEntity) && pBlockEntity.isLit()) {
+            pBlockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
 
-            if(blockEntity.currentProgress >= blockEntity.maxProgress) {
-                Level level = blockEntity.level;
-                SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-                for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-                    inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+            if(pBlockEntity.currentProgress >= pBlockEntity.maxProgress) {
+                Level level = pBlockEntity.level;
+                SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
+                for (int i = 0; i < pBlockEntity.itemHandler.getSlots(); i++) {
+                    inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
                 }
 
-                Optional<? extends ProcessingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
+                Optional<? extends ProcessingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
-                    for(int i = 0; i < lastSlotIndex; i++) {
-                        blockEntity.itemHandler.extractItem(i, 1, false);
+                    for(int i = 1; i < lastSlotIndex; i++) {
+                        pBlockEntity.itemHandler.extractItem(i, 1, false);
                     }
-                    blockEntity.itemHandler.setStackInSlot(lastSlotIndex, new ItemStack(match.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(lastSlotIndex).getCount() + 1));
 
-                    blockEntity.currentProgress = 0;
+                    pBlockEntity.itemHandler.setStackInSlot(lastSlotIndex, new ItemStack(match.get().getResultItem().getItem(), pBlockEntity.itemHandler.getStackInSlot(lastSlotIndex).getCount() + 1));
+                    pBlockEntity.currentProgress = 0;
                 }
             }
         } else {
-            blockEntity.currentProgress = 0;
+            pBlockEntity.currentProgress = 0;
             setChanged(pLevel, pPos, pState);
         }
     }
 
-    private static boolean hasRecipe(ProcessorBlockEntity blockEntity) {
-        Level level = blockEntity.level;
-        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for (int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+    private boolean isLit() {
+        return this.litTime > 0;
+    }
+
+    private static boolean canProcess(ProcessorBlockEntity pBlockEntity) {
+        Level level = pBlockEntity.level;
+        SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
+        for (int i = 0; i < pBlockEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<? extends ProcessingRecipe> match = level.getRecipeManager().getRecipeFor(blockEntity.recipeType, inventory, level);
-
-        return match.isPresent() && canProcess(inventory, match.get().getResultItem()) && hasFuel(blockEntity);
+        Optional<? extends ProcessingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
+        return match.isPresent() && hasValidOutput(inventory, match.get().getResultItem());
     }
 
-    private static boolean canProcess(SimpleContainer container, ItemStack result) {
-        return (container.getItem(lastSlotIndex).getItem() == result.getItem() || container.getItem(lastSlotIndex).isEmpty()) &&
-               (container.getItem(lastSlotIndex).getCount() < container.getItem(lastSlotIndex).getMaxStackSize());
-    }
-
-    private static boolean hasFuel(ProcessorBlockEntity blockEntity) {
-        return AbstractFurnaceBlockEntity.isFuel(blockEntity.itemHandler.getStackInSlot(0));
+    private static boolean hasValidOutput(SimpleContainer pContainer, ItemStack pResult) {
+        return (pContainer.getItem(lastSlotIndex).getItem() == pResult.getItem() || pContainer.getItem(lastSlotIndex).isEmpty()) &&
+               (pContainer.getItem(lastSlotIndex).getCount() < pContainer.getItem(lastSlotIndex).getMaxStackSize());
     }
 
     private int getBurnDuration(ItemStack pFuel) {

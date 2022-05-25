@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class UnstableSeparatorBlockEntity extends SeparatorBlockEntity {
     public UnstableSeparatorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.UNSTABLE_SEPARATOR.get(), pWorldPosition, pBlockState, SeparatingRecipe.Type.INSTANCE);
-        data.set(3, 200);
+        data.set(3, 60);
     }
 
     @Override

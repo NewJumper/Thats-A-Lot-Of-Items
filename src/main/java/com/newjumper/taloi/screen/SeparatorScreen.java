@@ -26,10 +26,8 @@ public class SeparatorScreen extends AbstractContainerScreen<SeparatorMenu> {
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
-        if(menu.isLit()) {
-            blit(pPoseStack, x + 71, y + 37, 176, 14, menu.getProgress(), 21);
-            blit(pPoseStack, x + 30, y + 24, 176, 0, 14, 14);
-        }
+        if(menu.isLit()) blit(pPoseStack, x + 30, y + 24 + menu.getFuelProgress(), 176, menu.getFuelProgress(), 14, 14 - menu.getFuelProgress());
+        if(menu.hasIngredients()) blit(pPoseStack, x + 71, y + 37, 176, 14, menu.getProgress(), 21);
     }
 
     @Override
