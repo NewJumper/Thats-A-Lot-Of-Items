@@ -98,7 +98,14 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("SWS")
                 .unlockedBy("has_material", has(ModBlocks.WILLOW_PLANKS.get())).save(consumer);
 
-        // NATURAL
+        // NATURAL & DECORATION
+        ShapedRecipeBuilder.shaped(ModBlocks.ASPHALT.get(), 4)
+                .define('S', Blocks.SAND)
+                .define('T', Blocks.STONE)
+                .pattern("ST")
+                .pattern("TS")
+                .unlockedBy("has_material", has(Blocks.STONE)).save(consumer);
+
         ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_SLAB.get(), 6)
                 .define('L', ModBlocks.LIMESTONE.get())
                 .pattern("LLL")
@@ -115,30 +122,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("LLL")
                 .unlockedBy("has_material", has(ModBlocks.LIMESTONE.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_SLAB.get(), 6)
-                .define('M', ModBlocks.MARBLE.get())
-                .pattern("MMM")
-                .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_STAIRS.get(), 4)
-                .define('M', ModBlocks.MARBLE.get())
-                .pattern("M  ")
-                .pattern("MM ")
-                .pattern("MMM")
-                .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_WALL.get(), 6)
-                .define('M', ModBlocks.MARBLE.get())
-                .pattern("MMM")
-                .pattern("MMM")
-                .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
-
-        ShapedRecipeBuilder.shaped(ModBlocks.ASPHALT.get(), 4)
-                .define('S', Blocks.SAND)
-                .define('T', Blocks.STONE)
-                .pattern("ST")
-                .pattern("TS")
-                .unlockedBy("has_material", has(Blocks.STONE)).save(consumer);
-
-        // DECORATION
         ShapedRecipeBuilder.shaped(ModBlocks.LIMESTONE_BRICKS.get(), 4)
                 .define('L', ModBlocks.LIMESTONE.get())
                 .pattern("LL")
@@ -159,6 +142,38 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("LLL")
                 .pattern("LLL")
                 .unlockedBy("has_material", has(ModBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_SLAB.get(), 6)
+                .define('M', ModBlocks.MARBLE.get())
+                .pattern("MMM")
+                .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_STAIRS.get(), 4)
+                .define('M', ModBlocks.MARBLE.get())
+                .pattern("M  ")
+                .pattern("MM ")
+                .pattern("MMM")
+                .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.MARBLE_WALL.get(), 6)
+                .define('M', ModBlocks.MARBLE.get())
+                .pattern("MMM")
+                .pattern("MMM")
+                .unlockedBy("has_material", has(ModBlocks.MARBLE.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.SLATE_SLAB.get(), 6)
+                .define('S', ModBlocks.SLATE.get())
+                .pattern("SSS")
+                .unlockedBy("has_material", has(ModBlocks.SLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.SLATE_STAIRS.get(), 4)
+                .define('S', ModBlocks.SLATE.get())
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .unlockedBy("has_material", has(ModBlocks.SLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.SLATE_WALL.get(), 6)
+                .define('S', ModBlocks.SLATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .unlockedBy("has_material", has(ModBlocks.SLATE.get())).save(consumer);
 
         ShapedRecipeBuilder.shaped(ModBlocks.SLATE_BRICKS.get(), 4)
                 .define('S', ModBlocks.SLATE.get())
