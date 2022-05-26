@@ -24,125 +24,114 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ThatsALotOfItems.MOD_ID);
 
     // EVERGREEN
+    public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () -> new SaplingBlock(new EvergreenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<RotatedPillarBlock> EVERGREEN_LOG = registerBlock("evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> STRIPPED_EVERGREEN_WOOD = registerBlock("stripped_evergreen_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> EVERGREEN_STAIRS = registerBlock("evergreen_stairs", () -> new StairBlock(() -> EVERGREEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> EVERGREEN_SLAB = registerBlock("evergreen_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<FenceBlock> EVERGREEN_FENCE = registerBlock("evergreen_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<FenceGateBlock> EVERGREEN_FENCE_GATE = registerBlock("evergreen_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
+    public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () -> new ModFlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () -> new SaplingBlock(new EvergreenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
+    public static final RegistryObject<SlabBlock> EVERGREEN_SLAB = registerBlock("evergreen_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceBlock> EVERGREEN_FENCE = registerBlock("evergreen_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> EVERGREEN_STAIRS = registerBlock("evergreen_stairs", () -> new StairBlock(() -> EVERGREEN_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<ButtonBlock> EVERGREEN_BUTTON = registerBlock("evergreen_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<PressurePlateBlock> EVERGREEN_PRESSURE_PLATE = registerBlock("evergreen_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceGateBlock> EVERGREEN_FENCE_GATE = registerBlock("evergreen_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     // WILLOW
+    public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () -> new SaplingBlock(new WillowTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<RotatedPillarBlock> WILLOW_LOG = registerBlock("willow_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> WILLOW_STAIRS = registerBlock("willow_stairs", () -> new StairBlock(() -> WILLOW_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> WILLOW_SLAB = registerBlock("willow_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<FenceBlock> WILLOW_FENCE = registerBlock("willow_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<FenceGateBlock> WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
+    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () -> new ModFlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () -> new SaplingBlock(new WillowTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
+    public static final RegistryObject<SlabBlock> WILLOW_SLAB = registerBlock("willow_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceBlock> WILLOW_FENCE = registerBlock("willow_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> WILLOW_STAIRS = registerBlock("willow_stairs", () -> new StairBlock(() -> WILLOW_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<ButtonBlock> WILLOW_BUTTON = registerBlock("willow_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<PressurePlateBlock> WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).noCollission().strength(0.5F).sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<FenceGateBlock> WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    // NATURAL
+    // NATURAL & DECORATION
+    public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            .strength(1.5f, 5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 5f)
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> LIMESTONE_STAIRS = registerBlock("limestone_stairs", () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(LIMESTONE.get())
-            .strength(1.5f, 5f)
-            .sound(SoundType.TUFF)
+    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks", () -> new Block(BlockBehaviour.Properties.copy(LIMESTONE.get())
+            .strength(2f, 6f)
+            .sound(SoundType.NETHER_BRICKS)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> LIMESTONE_SLAB = registerBlock("limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
-            .strength(1.5f, 5f)
-            .sound(SoundType.TUFF)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<WallBlock> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
-            .strength(1.5f, 6f)
-            .sound(SoundType.TUFF)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
     public static final RegistryObject<Block> MARBLE = registerBlock("marble", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 5f)
             .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> MARBLE_STAIRS = registerBlock("marble_stairs", () -> new StairBlock(() -> MARBLE.get().defaultBlockState(), BlockBehaviour.Properties.copy(MARBLE.get())
-            .strength(1.5f, 5f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> MARBLE_SLAB = registerBlock("marble_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(MARBLE.get())
-            .strength(1.5f, 5f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<WallBlock> MARBLE_WALL = registerBlock("marble_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(MARBLE.get())
-            .strength(1.5f, 6f)
-            .sound(SoundType.BASALT)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
     public static final RegistryObject<Block> SLATE = registerBlock("slate", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.5f, 5f)
             .sound(SoundType.GILDED_BLACKSTONE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> SLATE_STAIRS = registerBlock("slate_stairs", () -> new StairBlock(() -> SLATE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SLATE.get())
-            .strength(1.5f, 5f)
-            .sound(SoundType.GILDED_BLACKSTONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> SLATE_SLAB = registerBlock("slate_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SLATE.get())
-            .strength(1.5f, 5f)
-            .sound(SoundType.GILDED_BLACKSTONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<WallBlock> SLATE_WALL = registerBlock("slate_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SLATE.get())
-            .strength(1.5f, 6f)
-            .sound(SoundType.GILDED_BLACKSTONE)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    // DECORATION
-    public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())
             .strength(1.5f, 5f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks", () -> new Block(BlockBehaviour.Properties.copy(LIMESTONE.get())
-            .strength(2f, 6f)
-            .sound(SoundType.NETHER_BRICKS)
+    public static final RegistryObject<StairBlock> LIMESTONE_STAIRS = registerBlock("limestone_stairs", () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(LIMESTONE.get())
+            .strength(1.5f, 5f)
+            .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<StairBlock> LIMESTONE_BRICK_STAIRS = registerBlock("limestone_brick_stairs", () -> new StairBlock(() -> LIMESTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
             .strength(2f, 6f)
             .sound(SoundType.NETHER_BRICKS)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> MARBLE_STAIRS = registerBlock("marble_stairs", () -> new StairBlock(() -> MARBLE.get().defaultBlockState(), BlockBehaviour.Properties.copy(MARBLE.get())
+            .strength(1.5f, 5f)
+            .sound(SoundType.BASALT)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> SLATE_STAIRS = registerBlock("slate_stairs", () -> new StairBlock(() -> SLATE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SLATE.get())
+            .strength(1.5f, 5f)
+            .sound(SoundType.GILDED_BLACKSTONE)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<StairBlock> SLATE_BRICK_STAIRS = registerBlock("slate_brick_stairs", () -> new StairBlock(() -> SLATE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
+            .strength(1.5f, 5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<SlabBlock> LIMESTONE_SLAB = registerBlock("limestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
+            .strength(1.5f, 5f)
+            .sound(SoundType.TUFF)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<SlabBlock> LIMESTONE_BRICK_SLAB = registerBlock("limestone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
             .strength(2f, 6f)
             .sound(SoundType.NETHER_BRICKS)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> MARBLE_SLAB = registerBlock("marble_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(MARBLE.get())
+            .strength(1.5f, 5f)
+            .sound(SoundType.BASALT)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> SLATE_SLAB = registerBlock("slate_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SLATE.get())
+            .strength(1.5f, 5f)
+            .sound(SoundType.GILDED_BLACKSTONE)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<SlabBlock> SLATE_BRICK_SLAB = registerBlock("slate_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
+            .strength(1.5f, 5f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<WallBlock> LIMESTONE_WALL = registerBlock("limestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE.get())
+            .strength(1.5f, 6f)
+            .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<WallBlock> LIMESTONE_BRICK_WALL = registerBlock("limestone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(LIMESTONE_BRICKS.get())
             .strength(2f, 6f)
             .sound(SoundType.NETHER_BRICKS)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
-    public static final RegistryObject<Block> SLATE_BRICKS = registerBlock("slate_bricks", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())
-            .strength(1.5f, 5f)
+    public static final RegistryObject<WallBlock> MARBLE_WALL = registerBlock("marble_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(MARBLE.get())
+            .strength(1.5f, 6f)
+            .sound(SoundType.BASALT)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<StairBlock> SLATE_BRICK_STAIRS = registerBlock("slate_brick_stairs", () -> new StairBlock(() -> SLATE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
-            .strength(1.5f, 5f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<SlabBlock> SLATE_BRICK_SLAB = registerBlock("slate_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
-            .strength(1.5f, 5f)
+    public static final RegistryObject<WallBlock> SLATE_WALL = registerBlock("slate_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SLATE.get())
+            .strength(1.5f, 6f)
+            .sound(SoundType.GILDED_BLACKSTONE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<WallBlock> SLATE_BRICK_WALL = registerBlock("slate_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SLATE_BRICKS.get())
             .strength(1.5f, 6f)
@@ -152,18 +141,16 @@ public class ModBlocks {
             .strength(1.5F)
             .sound(SoundType.AMETHYST)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
     public static final RegistryObject<Block> TANZANITE_BLOCK = registerBlock("tanzanite_block", () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
             .strength(1.5F)
             .sound(SoundType.AMETHYST)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-
     public static final RegistryObject<Block> TOPAZ_BLOCK = registerBlock("topaz_block", () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
             .strength(1.5F)
             .sound(SoundType.AMETHYST)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    // METAL BLOCKS
+    // METALS
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
@@ -318,7 +305,7 @@ public class ModBlocks {
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    // ALLOY BLOCKS
+    // ALLOYS
     public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(6f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
@@ -491,7 +478,7 @@ public class ModBlocks {
             .strength(1.8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
-    // MISCELLANEOUS BLOCKS
+    // MISCELLANEOUS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new BouncyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
             .strength(-1f)), ModCreativeModeTab.TALOI_BLOCK_TAB);
 

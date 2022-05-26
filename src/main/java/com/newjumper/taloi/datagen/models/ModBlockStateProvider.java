@@ -18,134 +18,121 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         // EVERGREEN
-        axisBlock(ModBlocks.EVERGREEN_LOG.get(), modLoc("block/evergreen_log"), modLoc("block/evergreen_log_top"));
-        simpleBlock(ModBlocks.EVERGREEN_WOOD.get(), models().cubeAll("evergreen_wood", modLoc("block/evergreen_log")));
         simpleBlock(ModBlocks.EVERGREEN_PLANKS.get());
-        slabBlock(ModBlocks.EVERGREEN_SLAB.get(), modLoc("block/evergreen_planks"), modLoc("block/evergreen_planks"));
-        stairsBlock(ModBlocks.EVERGREEN_STAIRS.get(), modLoc("block/evergreen_planks"));
+        simpleBlock(ModBlocks.EVERGREEN_SAPLING.get(), models().cross("evergreen_sapling", modLoc("block/evergreen_sapling")));
+        axisBlock(ModBlocks.EVERGREEN_LOG.get(), modLoc("block/evergreen_log"), modLoc("block/evergreen_log_top"));
         axisBlock(ModBlocks.STRIPPED_EVERGREEN_LOG.get(), modLoc("block/stripped_evergreen_log"), modLoc("block/stripped_evergreen_log_top"));
         simpleBlock(ModBlocks.STRIPPED_EVERGREEN_WOOD.get(), models().cubeAll("stripped_evergreen_wood", modLoc("block/stripped_evergreen_log")));
-        fenceBlock(ModBlocks.EVERGREEN_FENCE.get(), modLoc("block/evergreen_planks"));
-        fenceGateBlock(ModBlocks.EVERGREEN_FENCE_GATE.get(), modLoc("block/evergreen_planks"));
+        simpleBlock(ModBlocks.EVERGREEN_WOOD.get(), models().cubeAll("evergreen_wood", modLoc("block/evergreen_log")));
         simpleBlock(ModBlocks.EVERGREEN_LEAVES.get());
-        simpleBlock(ModBlocks.EVERGREEN_SAPLING.get(), models().cross("evergreen_sapling", modLoc("block/evergreen_sapling")));
+        slabBlock(ModBlocks.EVERGREEN_SLAB.get(), modLoc("block/evergreen_planks"), modLoc("block/evergreen_planks"));
+        fenceBlock(ModBlocks.EVERGREEN_FENCE.get(), modLoc("block/evergreen_planks"));
+        stairsBlock(ModBlocks.EVERGREEN_STAIRS.get(), modLoc("block/evergreen_planks"));
         buttonBlock(ModBlocks.EVERGREEN_BUTTON.get(), modLoc("block/evergreen_planks"));
         pressurePlateBlock(ModBlocks.EVERGREEN_PRESSURE_PLATE.get(), modLoc("block/evergreen_planks"));
+        fenceGateBlock(ModBlocks.EVERGREEN_FENCE_GATE.get(), modLoc("block/evergreen_planks"));
 
         // WILLOW
-        axisBlock(ModBlocks.WILLOW_LOG.get(), modLoc("block/willow_log"), modLoc("block/willow_log_top"));
-        simpleBlock(ModBlocks.WILLOW_WOOD.get(), models().cubeAll("willow_wood", modLoc("block/willow_log")));
         simpleBlock(ModBlocks.WILLOW_PLANKS.get());
-        slabBlock(ModBlocks.WILLOW_SLAB.get(), modLoc("block/willow_planks"), modLoc("block/willow_planks"));
-        stairsBlock(ModBlocks.WILLOW_STAIRS.get(), modLoc("block/willow_planks"));
+        simpleBlock(ModBlocks.WILLOW_SAPLING.get(), models().cross("willow_sapling", modLoc("block/willow_sapling")));
+        axisBlock(ModBlocks.WILLOW_LOG.get(), modLoc("block/willow_log"), modLoc("block/willow_log_top"));
         axisBlock(ModBlocks.STRIPPED_WILLOW_LOG.get(), modLoc("block/stripped_willow_log"), modLoc("block/stripped_willow_log_top"));
         simpleBlock(ModBlocks.STRIPPED_WILLOW_WOOD.get(), models().cubeAll("stripped_willow_wood", modLoc("block/stripped_willow_log")));
-        fenceBlock(ModBlocks.WILLOW_FENCE.get(), modLoc("block/willow_planks"));
-        fenceGateBlock(ModBlocks.WILLOW_FENCE_GATE.get(), modLoc("block/willow_planks"));
+        simpleBlock(ModBlocks.WILLOW_WOOD.get(), models().cubeAll("willow_wood", modLoc("block/willow_log")));
         simpleBlock(ModBlocks.WILLOW_LEAVES.get());
-        simpleBlock(ModBlocks.WILLOW_SAPLING.get(), models().cross("willow_sapling", modLoc("block/willow_sapling")));
+        slabBlock(ModBlocks.WILLOW_SLAB.get(), modLoc("block/willow_planks"), modLoc("block/willow_planks"));
+        fenceBlock(ModBlocks.WILLOW_FENCE.get(), modLoc("block/willow_planks"));
+        stairsBlock(ModBlocks.WILLOW_STAIRS.get(), modLoc("block/willow_planks"));
         buttonBlock(ModBlocks.WILLOW_BUTTON.get(), modLoc("block/willow_planks"));
         pressurePlateBlock(ModBlocks.WILLOW_PRESSURE_PLATE.get(), modLoc("block/willow_planks"));
+        fenceGateBlock(ModBlocks.WILLOW_FENCE_GATE.get(), modLoc("block/willow_planks"));
 
-        // NATURAL
-        simpleBlock(ModBlocks.LIMESTONE.get());
-        slabBlock(ModBlocks.LIMESTONE_SLAB.get(), modLoc("block/limestone"), modLoc("block/limestone"));
-        stairsBlock(ModBlocks.LIMESTONE_STAIRS.get(), modLoc("block/limestone"));
-        wallBlock(ModBlocks.LIMESTONE_WALL.get(), modLoc("block/limestone"));
-
-        simpleBlock(ModBlocks.MARBLE.get());
-        slabBlock(ModBlocks.MARBLE_SLAB.get(), modLoc("block/marble"), modLoc("block/marble"));
-        stairsBlock(ModBlocks.MARBLE_STAIRS.get(), modLoc("block/marble"));
-        wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
-
-        simpleBlock(ModBlocks.SLATE.get());
-        slabBlock(ModBlocks.SLATE_SLAB.get(), modLoc("block/slate"), modLoc("block/slate"));
-        stairsBlock(ModBlocks.SLATE_STAIRS.get(), modLoc("block/slate"));
-        wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
-
+        // NATURAL & DECORATION
         simpleBlock(ModBlocks.ASPHALT.get());
-
+        simpleBlock(ModBlocks.LIMESTONE.get());
         simpleBlock(ModBlocks.LIMESTONE_BRICKS.get());
-        slabBlock(ModBlocks.LIMESTONE_BRICK_SLAB.get(), modLoc("block/limestone_bricks"), modLoc("block/limestone_bricks"));
-        stairsBlock(ModBlocks.LIMESTONE_BRICK_STAIRS.get(), modLoc("block/limestone_bricks"));
-        wallBlock(ModBlocks.LIMESTONE_BRICK_WALL.get(), modLoc("block/limestone_bricks"));
-
+        simpleBlock(ModBlocks.MARBLE.get());
+        simpleBlock(ModBlocks.SLATE.get());
         simpleBlock(ModBlocks.SLATE_BRICKS.get());
+
+        slabBlock(ModBlocks.LIMESTONE_SLAB.get(), modLoc("block/limestone"), modLoc("block/limestone"));
+        slabBlock(ModBlocks.LIMESTONE_BRICK_SLAB.get(), modLoc("block/limestone_bricks"), modLoc("block/limestone_bricks"));
+        slabBlock(ModBlocks.MARBLE_SLAB.get(), modLoc("block/marble"), modLoc("block/marble"));
+        slabBlock(ModBlocks.SLATE_SLAB.get(), modLoc("block/slate"), modLoc("block/slate"));
         slabBlock(ModBlocks.SLATE_BRICK_SLAB.get(), modLoc("block/slate_bricks"), modLoc("block/slate_bricks"));
+
+        stairsBlock(ModBlocks.LIMESTONE_STAIRS.get(), modLoc("block/limestone"));
+        stairsBlock(ModBlocks.LIMESTONE_BRICK_STAIRS.get(), modLoc("block/limestone_bricks"));
+        stairsBlock(ModBlocks.MARBLE_STAIRS.get(), modLoc("block/marble"));
+        stairsBlock(ModBlocks.SLATE_STAIRS.get(), modLoc("block/slate"));
         stairsBlock(ModBlocks.SLATE_BRICK_STAIRS.get(), modLoc("block/slate_bricks"));
+
+        wallBlock(ModBlocks.LIMESTONE_WALL.get(), modLoc("block/limestone"));
+        wallBlock(ModBlocks.LIMESTONE_BRICK_WALL.get(), modLoc("block/limestone_bricks"));
+        wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
+        wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
         wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
 
         simpleBlock(ModBlocks.MALACHITE_BLOCK.get());
         simpleBlock(ModBlocks.TANZANITE_BLOCK.get());
         simpleBlock(ModBlocks.TOPAZ_BLOCK.get());
 
-        // ALUMINUM
+        // METALS
         simpleBlock(ModBlocks.ALUMINUM_BLOCK.get());
         simpleBlock(ModBlocks.ALUMINUM_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_ALUMINUM_ORE.get());
         simpleBlock(ModBlocks.RAW_ALUMINUM_BLOCK.get());
 
-        // IRIDIUM
         simpleBlock(ModBlocks.IRIDIUM_BLOCK.get());
         simpleBlock(ModBlocks.IRIDIUM_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_IRIDIUM_ORE.get());
         simpleBlock(ModBlocks.RAW_IRIDIUM_BLOCK.get());
 
-        // LEAD
         simpleBlock(ModBlocks.LEAD_BLOCK.get());
         simpleBlock(ModBlocks.LEAD_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_LEAD_ORE.get());
         simpleBlock(ModBlocks.RAW_LEAD_BLOCK.get());
 
-        // MAGNESIUM
         simpleBlock(ModBlocks.MAGNESIUM_BLOCK.get());
         simpleBlock(ModBlocks.MAGNESIUM_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_MAGNESIUM_ORE.get());
         simpleBlock(ModBlocks.RAW_MAGNESIUM_BLOCK.get());
 
-        // OSMIUM
         simpleBlock(ModBlocks.OSMIUM_BLOCK.get());
         simpleBlock(ModBlocks.OSMIUM_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_OSMIUM_ORE.get());
         simpleBlock(ModBlocks.RAW_OSMIUM_BLOCK.get());
 
-        // PLATINUM
         simpleBlock(ModBlocks.PLATINUM_BLOCK.get());
         simpleBlock(ModBlocks.PLATINUM_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_PLATINUM_ORE.get());
         simpleBlock(ModBlocks.RAW_PLATINUM_BLOCK.get());
 
-        // SILICON
         simpleBlock(ModBlocks.SILICON_BLOCK.get());
         simpleBlock(ModBlocks.SILICON_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_SILICON_ORE.get());
         simpleBlock(ModBlocks.RAW_SILICON_BLOCK.get());
 
-        // TIN
         simpleBlock(ModBlocks.TIN_BLOCK.get());
         simpleBlock(ModBlocks.TIN_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_TIN_ORE.get());
         simpleBlock(ModBlocks.RAW_TIN_BLOCK.get());
 
-        // TUNGSTEN
         simpleBlock(ModBlocks.TUNGSTEN_BLOCK.get());
         simpleBlock(ModBlocks.TUNGSTEN_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
         simpleBlock(ModBlocks.RAW_TUNGSTEN_BLOCK.get());
 
-        // URANIUM
         simpleBlock(ModBlocks.URANIUM_BLOCK.get());
         simpleBlock(ModBlocks.URANIUM_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_URANIUM_ORE.get());
         simpleBlock(ModBlocks.RAW_URANIUM_BLOCK.get());
 
-        // ZINC
         simpleBlock(ModBlocks.ZINC_BLOCK.get());
         simpleBlock(ModBlocks.ZINC_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_ZINC_ORE.get());
         simpleBlock(ModBlocks.RAW_ZINC_BLOCK.get());
 
-        // ALLOYS
         simpleBlock(ModBlocks.BRONZE_BLOCK.get());
         simpleBlock(ModBlocks.STEEL_BLOCK.get());
 

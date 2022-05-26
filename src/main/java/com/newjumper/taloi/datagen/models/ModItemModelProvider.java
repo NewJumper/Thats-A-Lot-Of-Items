@@ -18,68 +18,66 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // - BLOCKS -
         // EVERGREEN
-        withExistingParent("evergreen_log", modLoc("block/evergreen_log"));
-        withExistingParent("evergreen_wood", modLoc("block/evergreen_wood"));
         withExistingParent("evergreen_planks", modLoc("block/evergreen_planks"));
-        withExistingParent("evergreen_slab", modLoc("block/evergreen_slab"));
-        withExistingParent("evergreen_stairs", modLoc("block/evergreen_stairs"));
+        getBuilder("evergreen_sapling").parent(itemGenerated).texture("layer0", "block/evergreen_sapling");
+        withExistingParent("evergreen_log", modLoc("block/evergreen_log"));
         withExistingParent("stripped_evergreen_log", modLoc("block/stripped_evergreen_log"));
         withExistingParent("stripped_evergreen_wood", modLoc("block/stripped_evergreen_wood"));
-        withExistingParent("evergreen_fence", modLoc("block/evergreen_fence_inventory"));
-        withExistingParent("evergreen_fence_gate", modLoc("block/evergreen_fence_gate"));
+        withExistingParent("evergreen_wood", modLoc("block/evergreen_wood"));
         withExistingParent("evergreen_leaves", modLoc("block/evergreen_leaves"));
-        getBuilder("evergreen_sapling").parent(itemGenerated).texture("layer0", "block/evergreen_sapling");
+        withExistingParent("evergreen_slab", modLoc("block/evergreen_slab"));
+        withExistingParent("evergreen_fence", modLoc("block/evergreen_fence_inventory"));
+        withExistingParent("evergreen_stairs", modLoc("block/evergreen_stairs"));
         withExistingParent("evergreen_button", modLoc("block/evergreen_button_inventory"));
         withExistingParent("evergreen_pressure_plate", modLoc("block/evergreen_pressure_plate"));
+        withExistingParent("evergreen_fence_gate", modLoc("block/evergreen_fence_gate"));
 
         // WILLOW
-        withExistingParent("willow_log", modLoc("block/willow_log"));
-        withExistingParent("willow_wood", modLoc("block/willow_wood"));
         withExistingParent("willow_planks", modLoc("block/willow_planks"));
-        withExistingParent("willow_slab", modLoc("block/willow_slab"));
-        withExistingParent("willow_stairs", modLoc("block/willow_stairs"));
+        getBuilder("willow_sapling").parent(itemGenerated).texture("layer0", "block/willow_sapling");
+        withExistingParent("willow_log", modLoc("block/willow_log"));
         withExistingParent("stripped_willow_log", modLoc("block/stripped_willow_log"));
         withExistingParent("stripped_willow_wood", modLoc("block/stripped_willow_wood"));
-        withExistingParent("willow_fence", modLoc("block/willow_fence_inventory"));
-        withExistingParent("willow_fence_gate", modLoc("block/willow_fence_gate"));
+        withExistingParent("willow_wood", modLoc("block/willow_wood"));
         withExistingParent("willow_leaves", modLoc("block/willow_leaves"));
-        getBuilder("willow_sapling").parent(itemGenerated).texture("layer0", "block/willow_sapling");
+        withExistingParent("willow_slab", modLoc("block/willow_slab"));
+        withExistingParent("willow_fence", modLoc("block/willow_fence_inventory"));
+        withExistingParent("willow_stairs", modLoc("block/willow_stairs"));
         withExistingParent("willow_button", modLoc("block/willow_button_inventory"));
         withExistingParent("willow_pressure_plate", modLoc("block/willow_pressure_plate"));
+        withExistingParent("willow_fence_gate", modLoc("block/willow_fence_gate"));
 
         // NATURAL
-        withExistingParent("limestone", modLoc("block/limestone"));
-        withExistingParent("limestone_slab", modLoc("block/limestone_slab"));
-        withExistingParent("limestone_stairs", modLoc("block/limestone_stairs"));
-        withExistingParent("limestone_wall", modLoc("block/limestone_wall_inventory"));
-
-        withExistingParent("marble", modLoc("block/marble"));
-        withExistingParent("marble_slab", modLoc("block/marble_slab"));
-        withExistingParent("marble_stairs", modLoc("block/marble_stairs"));
-        withExistingParent("marble_wall", modLoc("block/marble_wall_inventory"));
-
-        withExistingParent("slate", modLoc("block/slate"));
-        withExistingParent("slate_slab", modLoc("block/slate_slab"));
-        withExistingParent("slate_stairs", modLoc("block/slate_stairs"));
-        withExistingParent("slate_wall", modLoc("block/slate_wall_inventory"));
-
         withExistingParent("asphalt", modLoc("block/asphalt"));
-
+        withExistingParent("limestone", modLoc("block/limestone"));
         withExistingParent("limestone_bricks", modLoc("block/limestone_bricks"));
-        withExistingParent("limestone_brick_slab", modLoc("block/limestone_brick_slab"));
-        withExistingParent("limestone_brick_stairs", modLoc("block/limestone_brick_stairs"));
-        withExistingParent("limestone_brick_wall", modLoc("block/limestone_brick_wall_inventory"));
-
+        withExistingParent("marble", modLoc("block/marble"));
+        withExistingParent("slate", modLoc("block/slate"));
         withExistingParent("slate_bricks", modLoc("block/slate_bricks"));
+
+        withExistingParent("limestone_slab", modLoc("block/limestone_slab"));
+        withExistingParent("limestone_brick_slab", modLoc("block/limestone_brick_slab"));
+        withExistingParent("marble_slab", modLoc("block/marble_slab"));
+        withExistingParent("slate_slab", modLoc("block/slate_slab"));
         withExistingParent("slate_brick_slab", modLoc("block/slate_brick_slab"));
+
+        withExistingParent("limestone_stairs", modLoc("block/limestone_stairs"));
+        withExistingParent("limestone_brick_stairs", modLoc("block/limestone_brick_stairs"));
+        withExistingParent("marble_stairs", modLoc("block/marble_stairs"));
+        withExistingParent("slate_stairs", modLoc("block/slate_stairs"));
         withExistingParent("slate_brick_stairs", modLoc("block/slate_brick_stairs"));
+
+        withExistingParent("limestone_wall", modLoc("block/limestone_wall_inventory"));
+        withExistingParent("limestone_brick_wall", modLoc("block/limestone_brick_wall_inventory"));
+        withExistingParent("marble_wall", modLoc("block/marble_wall_inventory"));
+        withExistingParent("slate_wall", modLoc("block/slate_wall_inventory"));
         withExistingParent("slate_brick_wall", modLoc("block/slate_brick_wall_inventory"));
 
         withExistingParent("malachite_block", modLoc("block/malachite_block"));
         withExistingParent("tanzanite_block", modLoc("block/tanzanite_block"));
         withExistingParent("topaz_block", modLoc("block/topaz_block"));
 
-        // ORES & BLOCKS
+        // METALS
         withExistingParent("aluminum_block", modLoc("block/aluminum_block"));
         withExistingParent("aluminum_ore", modLoc("block/aluminum_ore"));
         withExistingParent("deepslate_aluminum_ore", modLoc("block/deepslate_aluminum_ore"));
@@ -125,7 +123,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("deepslate_zinc_ore", modLoc("block/deepslate_zinc_ore"));
         withExistingParent("raw_zinc_block", modLoc("block/raw_zinc_block"));
 
-        // ALLOYS
         withExistingParent("bronze_block", modLoc("block/bronze_block"));
         withExistingParent("steel_block", modLoc("block/steel_block"));
 
@@ -192,7 +189,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         // - ITEMS -
-        // NATURAL INGOTS & RAW
+        // RAW & INGOTS
         getBuilder("aluminum_ingot").parent(itemGenerated).texture("layer0", "item/aluminum_ingot");
         getBuilder("raw_aluminum").parent(itemGenerated).texture("layer0", "item/raw_aluminum");
         getBuilder("iridium_ingot").parent(itemGenerated).texture("layer0", "item/iridium_ingot");
@@ -221,7 +218,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("beta_machine_frame").parent(itemGenerated).texture("layer0", "item/beta_machine_frame");
         getBuilder("unstable_machine_frame").parent(itemGenerated).texture("layer0", "item/unstable_machine_frame");
 
-        // ALLOYS
+        // CONSTRUCTING
         getBuilder("bronze_ingot").parent(itemGenerated).texture("layer0", "item/bronze_ingot");
         getBuilder("carbonite").parent(itemGenerated).texture("layer0", "item/carbonite");
         getBuilder("ferroniobium_ingot").parent(itemGenerated).texture("layer0", "item/ferroniobium_ingot");
@@ -232,7 +229,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("alloy_x").parent(itemGenerated).texture("layer0", "item/alloy_x");
         getBuilder("alloy_z").parent(itemGenerated).texture("layer0", "item/alloy_z");
 
-        // PLATES
+        // PRESSING
         getBuilder("alloy_plate").parent(itemGenerated).texture("layer0", "item/alloy_plate");
         getBuilder("bronze_plate").parent(itemGenerated).texture("layer0", "item/bronze_plate");
         getBuilder("carbon_plate").parent(itemGenerated).texture("layer0", "item/carbon_plate");
@@ -360,7 +357,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("rice_bowl").parent(itemGenerated).texture("layer0", "item/rice_bowl");
         getBuilder("tomato").parent(itemGenerated).texture("layer0", "item/tomato");
 
-        // MISC
+        // MISCELLANEOUS
         getBuilder("music_disc_the_caves").parent(itemGenerated).texture("layer0", "item/music_disc_the_caves");
     }
 }
