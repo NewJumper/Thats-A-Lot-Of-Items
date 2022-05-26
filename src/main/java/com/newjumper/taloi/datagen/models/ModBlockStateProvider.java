@@ -4,9 +4,7 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.ButtonBlock;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -72,6 +70,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
         wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
         wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
+
+        axisBlock(ModBlocks.BUNDLED_BAMBOO.get(), modLoc("block/bundled_bamboo_side"), modLoc("block/bundled_bamboo_top"));
+        simpleBlock(ModBlocks.BAMBOO_PLANKS.get());
 
         simpleBlock(ModBlocks.MALACHITE_BLOCK.get());
         simpleBlock(ModBlocks.TANZANITE_BLOCK.get());

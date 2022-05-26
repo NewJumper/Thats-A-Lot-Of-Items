@@ -196,6 +196,12 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("SSS")
                 .unlockedBy("has_material", has(ModBlocks.SLATE_BRICKS.get())).save(consumer);
 
+        ShapedRecipeBuilder.shaped(ModBlocks.BUNDLED_BAMBOO.get(), 1)
+                .define('B', Blocks.BAMBOO)
+                .pattern("BB")
+                .pattern("BB")
+                .unlockedBy("has_material", has(Blocks.BAMBOO)).save(consumer);
+
         ShapedRecipeBuilder.shaped(ModBlocks.MALACHITE_BLOCK.get(), 3)
                 .define('M', ModItems.MALACHITE.get())
                 .pattern("MM")

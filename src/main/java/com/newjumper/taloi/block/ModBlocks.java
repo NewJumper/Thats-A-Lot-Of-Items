@@ -137,6 +137,17 @@ public class ModBlocks {
             .strength(1.5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
+    public static final RegistryObject<RotatedPillarBlock> BUNDLED_BAMBOO = registerBlock("bundled_bamboo", () -> new BundledBambooBlock(BlockBehaviour.Properties.of(Material.BAMBOO)
+            .strength(1f)
+            .sound(SoundType.BAMBOO)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new Block(BlockBehaviour.Properties.of(Material.BAMBOO)
+            .strength(2f)
+            .sound(SoundType.BAMBOO)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> SNOWY_ICE = registerBlock("snowy_ice", () -> new Block(BlockBehaviour.Properties.of(Material.ICE_SOLID)
+            .strength(0.5f)
+            .sound(SoundType.SNOW)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
     public static final RegistryObject<Block> MALACHITE_BLOCK = registerBlock("malachite_block", () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
             .strength(1.5F)
             .sound(SoundType.AMETHYST)

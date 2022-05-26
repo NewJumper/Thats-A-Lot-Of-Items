@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "taloi:block/bundled_bamboo_side",
+    "end": "taloi:block/bundled_bamboo_top"
+  }
+}

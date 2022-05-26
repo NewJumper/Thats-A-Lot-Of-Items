@@ -73,6 +73,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("slate_wall", modLoc("block/slate_wall_inventory"));
         withExistingParent("slate_brick_wall", modLoc("block/slate_brick_wall_inventory"));
 
+        withExistingParent("bundled_bamboo", modLoc("block/bundled_bamboo"));
+        withExistingParent("bamboo_planks", modLoc("block/bamboo_planks"));
+        withExistingParent("snowy_ice", modLoc("block/snowy_ice"));
+
         withExistingParent("malachite_block", modLoc("block/malachite_block"));
         withExistingParent("tanzanite_block", modLoc("block/tanzanite_block"));
         withExistingParent("topaz_block", modLoc("block/topaz_block"));
