@@ -74,7 +74,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("slate_wall", modLoc("block/slate_wall_inventory"));
         withExistingParent("slate_brick_wall", modLoc("block/slate_brick_wall_inventory"));
 
+        withExistingParent("chiseled_andesite", modLoc("block/chiseled_andesite"));
+        withExistingParent("chiseled_diorite", modLoc("block/chiseled_diorite"));
         withExistingParent("chiseled_dripstone_block", modLoc("block/chiseled_dripstone_block"));
+        withExistingParent("chiseled_granite", modLoc("block/chiseled_granite"));
         withExistingParent("chiseled_limestone_bricks", modLoc("block/chiseled_limestone_bricks"));
         withExistingParent("chiseled_marble", modLoc("block/chiseled_marble"));
         withExistingParent("chiseled_slate", modLoc("block/chiseled_slate"));

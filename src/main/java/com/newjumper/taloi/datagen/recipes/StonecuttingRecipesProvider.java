@@ -67,9 +67,20 @@ public class StonecuttingRecipesProvider extends RecipeProvider implements ICond
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.SLATE_BRICKS.get()), ModBlocks.SLATE_BRICK_WALL.get(), 1)
                 .unlockedBy("has_material", has(ModBlocks.SLATE_BRICKS.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "slate_brick_wall_from_slate_bricks_stonecutting"));
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.ANDESITE), ModBlocks.CHISELED_ANDESITE.get(), 1)
+                .unlockedBy("has_material", has(Blocks.ANDESITE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_andesite_from_andesite_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_ANDESITE), ModBlocks.CHISELED_ANDESITE.get(), 1)
+                .unlockedBy("has_material", has(Blocks.POLISHED_ANDESITE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_andesite_from_polished_andesite_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DIORITE), ModBlocks.CHISELED_DIORITE.get(), 1)
+                .unlockedBy("has_material", has(Blocks.DIORITE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_diorite_from_diorite_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_DIORITE), ModBlocks.CHISELED_DIORITE.get(), 1)
+                .unlockedBy("has_material", has(Blocks.POLISHED_DIORITE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_diorite_from_polished_diorite_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), ModBlocks.CHISELED_DRIPSTONE_BLOCK.get(), 1)
                 .unlockedBy("has_material", has(Blocks.DRIPSTONE_BLOCK)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_dripstone_block_from_dripstone_block_stonecutting"));
-
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.GRANITE), ModBlocks.CHISELED_GRANITE.get(), 1)
+                .unlockedBy("has_material", has(Blocks.GRANITE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_granite_from_granite_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_GRANITE), ModBlocks.CHISELED_GRANITE.get(), 1)
+                .unlockedBy("has_material", has(Blocks.POLISHED_GRANITE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_granite_from_polished_granite_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), ModBlocks.POLISHED_TUFF.get(), 1)
                 .unlockedBy("has_material", has(Blocks.TUFF)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "polished_tuff_from_tuff_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), ModBlocks.CHISELED_TUFF.get(), 1)

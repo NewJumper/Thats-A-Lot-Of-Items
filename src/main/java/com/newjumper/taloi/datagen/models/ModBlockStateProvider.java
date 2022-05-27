@@ -72,7 +72,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
         wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
 
+        simpleBlock(ModBlocks.CHISELED_ANDESITE.get());
+        simpleBlock(ModBlocks.CHISELED_DIORITE.get());
         simpleBlock(ModBlocks.CHISELED_DRIPSTONE_BLOCK.get());
+        simpleBlock(ModBlocks.CHISELED_GRANITE.get());
         simpleBlock(ModBlocks.CHISELED_LIMESTONE_BRICKS.get());
         simpleBlock(ModBlocks.CHISELED_MARBLE.get());
         simpleBlock(ModBlocks.CHISELED_SLATE.get());

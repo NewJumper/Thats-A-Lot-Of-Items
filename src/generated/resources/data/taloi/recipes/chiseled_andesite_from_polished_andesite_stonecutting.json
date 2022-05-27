@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:polished_andesite"
+  },
+  "result": "taloi:chiseled_andesite",
+  "count": 1
+}

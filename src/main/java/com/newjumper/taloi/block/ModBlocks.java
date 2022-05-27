@@ -141,9 +141,18 @@ public class ModBlocks {
             .strength(1.5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
+    public static final RegistryObject<Block> CHISELED_ANDESITE = registerBlock("chiseled_andesite", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)
+            .strength(1.5f, 6f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> CHISELED_DIORITE = registerBlock("chiseled_diorite", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIORITE)
+            .strength(1.5f, 6f)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> CHISELED_DRIPSTONE_BLOCK = registerBlock("chiseled_dripstone_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)
             .strength(1.5f, 1.0f)
             .sound(SoundType.DRIPSTONE_BLOCK)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> CHISELED_GRANITE = registerBlock("chiseled_granite", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE)
+            .strength(1.5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> CHISELED_LIMESTONE_BRICKS = registerBlock("chiseled_limestone_bricks", () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.LIMESTONE_BRICKS.get())
             .strength(2f, 6f)
