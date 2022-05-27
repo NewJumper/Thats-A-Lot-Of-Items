@@ -157,7 +157,7 @@ public class ModItems {
     public static final RegistryObject<Item> TUNGSTEN_BOOTS = ITEMS.register("tungsten_boots", () -> new ArmorItem(ModArmorMaterials.TUNGSTEN, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
 
     public static final RegistryObject<Item> SERMIUM_HELMET = ITEMS.register("sermium_helmet", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
-    public static final RegistryObject<Item> SERMIUM_CHESTPLATE = ITEMS.register("sermium_chestplate", () -> new SermiumArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
+    public static final RegistryObject<Item> SERMIUM_CHESTPLATE = ITEMS.register("sermium_chestplate", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
     public static final RegistryObject<Item> SERMIUM_LEGGINGS = ITEMS.register("sermium_leggings", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
     public static final RegistryObject<Item> SERMIUM_BOOTS = ITEMS.register("sermium_boots", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT_TAB)));
 
