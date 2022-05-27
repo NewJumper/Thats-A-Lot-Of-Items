@@ -171,6 +171,11 @@ public class ModBlocks {
             .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
+    public static final RegistryObject<Block> NETHERRACK_BRICKS = registerBlock("netherrack_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
+            .strength(0.5f)
+            .sound(SoundType.NETHERRACK)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
     public static final RegistryObject<RotatedPillarBlock> BUNDLED_BAMBOO = registerBlock("bundled_bamboo", () -> new BundledBambooBlock(BlockBehaviour.Properties.of(Material.BAMBOO)
             .strength(0.5f)
             .sound(SoundType.BAMBOO)), ModCreativeModeTab.TALOI_BLOCK_TAB);

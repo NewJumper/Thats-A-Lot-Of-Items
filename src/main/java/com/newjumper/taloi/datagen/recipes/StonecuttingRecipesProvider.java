@@ -87,6 +87,8 @@ public class StonecuttingRecipesProvider extends RecipeProvider implements ICond
                 .unlockedBy("has_material", has(Blocks.TUFF)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_tuff_from_tuff_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), ModBlocks.CHISELED_TUFF.get(), 1)
                 .unlockedBy("has_material", has(ModBlocks.POLISHED_TUFF.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_tuff_from_polished_tuff_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.NETHERRACK), ModBlocks.NETHERRACK_BRICKS.get(), 1)
+                .unlockedBy("has_material", has(Blocks.NETHERRACK)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "netherrack_bricks_from_netherrack_stonecutting"));
     }
 
     @Override

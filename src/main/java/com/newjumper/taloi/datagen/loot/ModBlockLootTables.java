@@ -77,6 +77,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.CHISELED_SLATE.get());
         this.dropSelf(ModBlocks.CHISELED_TUFF.get());
 
+        this.dropSelf(ModBlocks.NETHERRACK_BRICKS.get());
+
         this.dropSelf(ModBlocks.BUNDLED_BAMBOO.get());
         this.dropSelf(ModBlocks.BAMBOO_PLANKS.get());
 

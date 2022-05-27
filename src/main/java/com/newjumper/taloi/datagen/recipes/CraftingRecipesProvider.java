@@ -203,6 +203,12 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("TT")
                 .unlockedBy("has_material", has(Blocks.TUFF)).save(consumer);
 
+        ShapedRecipeBuilder.shaped(ModBlocks.NETHERRACK_BRICKS.get(), 4)
+                .define('N', Blocks.NETHERRACK)
+                .pattern("NN")
+                .pattern("NN")
+                .unlockedBy("has_material", has(Blocks.NETHERRACK)).save(consumer);
+
         ShapedRecipeBuilder.shaped(ModBlocks.BUNDLED_BAMBOO.get(), 1)
                 .define('B', Blocks.BAMBOO)
                 .pattern("BB")

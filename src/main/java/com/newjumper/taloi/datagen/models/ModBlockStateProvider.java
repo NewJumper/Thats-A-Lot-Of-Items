@@ -81,6 +81,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.CHISELED_SLATE.get());
         simpleBlock(ModBlocks.CHISELED_TUFF.get());
 
+        simpleBlock(ModBlocks.NETHERRACK_BRICKS.get());
+
         axisBlock(ModBlocks.BUNDLED_BAMBOO.get(), modLoc("block/bundled_bamboo_side"), modLoc("block/bundled_bamboo_top"));
         simpleBlock(ModBlocks.BAMBOO_PLANKS.get());
 

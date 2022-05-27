@@ -83,6 +83,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("chiseled_slate", modLoc("block/chiseled_slate"));
         withExistingParent("chiseled_tuff", modLoc("block/chiseled_tuff"));
 
+        withExistingParent("netherrack_bricks", modLoc("block/netherrack_bricks"));
+
         withExistingParent("bundled_bamboo", modLoc("block/bundled_bamboo"));
         withExistingParent("bamboo_planks", modLoc("block/bamboo_planks"));
 
