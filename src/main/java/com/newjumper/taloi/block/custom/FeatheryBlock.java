@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class FeatheryBlock extends Block {
-    public FeatheryBlock(Properties properties) {
-        super(properties);
+    public FeatheryBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override

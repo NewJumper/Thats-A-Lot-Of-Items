@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class GravityBlock extends Block {
-    public GravityBlock(Properties properties) {
-        super(properties);
+    public GravityBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override

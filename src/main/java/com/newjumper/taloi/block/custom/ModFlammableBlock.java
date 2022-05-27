@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class ModFlammableBlock extends Block {
-    public ModFlammableBlock(Properties properties) {
-        super(properties);
+    public ModFlammableBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override

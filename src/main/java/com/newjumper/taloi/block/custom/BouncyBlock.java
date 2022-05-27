@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BouncyBlock extends Block {
-    public BouncyBlock(Properties properties) {
-        super(properties);
+    public BouncyBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override
