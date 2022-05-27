@@ -83,6 +83,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlock(ModBlocks.NETHERRACK_BRICKS.get());
 
+        simpleBlock(ModBlocks.REINFORCED_IRON_BLOCK.get());
+        simpleBlock(ModBlocks.RUSTED_REINFORCED_IRON_BLOCK.get());
+        simpleBlock(ModBlocks.WAXED_REINFORCED_IRON_BLOCK.get(), cubeAll(ModBlocks.REINFORCED_IRON_BLOCK.get()));
+
         axisBlock(ModBlocks.BUNDLED_BAMBOO.get(), modLoc("block/bundled_bamboo_side"), modLoc("block/bundled_bamboo_top"));
         simpleBlock(ModBlocks.BAMBOO_PLANKS.get());
 

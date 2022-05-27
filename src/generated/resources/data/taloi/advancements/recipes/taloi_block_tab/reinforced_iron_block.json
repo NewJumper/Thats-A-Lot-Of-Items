@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:netherrack_bricks"
+      "taloi:reinforced_iron_block"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:netherrack"
+            "tag": "forge:storage_blocks/iron"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:netherrack_bricks"
+        "recipe": "taloi:reinforced_iron_block"
       }
     }
   },

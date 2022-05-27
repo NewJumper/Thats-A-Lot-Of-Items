@@ -74,7 +74,7 @@ public class ModLanguageProvider extends LanguageProvider {
     }
 
     private String convertToName(String key) {
-        if(key.equals("chiseled_dripstone_block") || key.contains("bouncy_") || key.contains("gravity_") || key.contains("feathery_") || key.contains("speedy_") || !key.contains("_block"))
+        if(key.equals("chiseled_dripstone_block") || key.contains("reinforced_iron_block") || key.contains("bouncy_") || key.contains("gravity_") || key.contains("feathery_") || key.contains("speedy_") || !key.contains("_block"))
             key = key.substring(0, 1).toUpperCase() + key.substring(1);
         else key = "Block of " + key.substring(0, 1).toUpperCase() + key.substring(1, key.lastIndexOf('_'));
 

@@ -78,7 +78,6 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF)
             .strength(1.5f, 6f)
-            .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<StairBlock> LIMESTONE_STAIRS = registerBlock("limestone_stairs", () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(LIMESTONE.get())
@@ -168,12 +167,24 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
     public static final RegistryObject<Block> CHISELED_TUFF = registerBlock("chiseled_tuff", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF)
             .strength(1.5f, 6f)
-            .sound(SoundType.TUFF)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<Block> NETHERRACK_BRICKS = registerBlock("netherrack_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
             .strength(0.5f)
             .sound(SoundType.NETHERRACK)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
+    public static final RegistryObject<Block> REINFORCED_IRON_BLOCK = registerBlock("reinforced_iron_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            .strength(5.5f, 7f)
+            .sound(SoundType.COPPER)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> RUSTED_REINFORCED_IRON_BLOCK = registerBlock("rusted_reinforced_iron_block", () -> new ReinforcedIronBlock(RustingIron.RustState.RUSTED, BlockBehaviour.Properties.of(Material.METAL)
+            .strength(6f, 6f)
+            .sound(SoundType.METAL)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> WAXED_REINFORCED_IRON_BLOCK = registerBlock("waxed_reinforced_iron_block", () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.REINFORCED_IRON_BLOCK.get())
+            .strength(5.5f, 7f)
+            .sound(SoundType.METAL)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
     public static final RegistryObject<RotatedPillarBlock> BUNDLED_BAMBOO = registerBlock("bundled_bamboo", () -> new BundledBambooBlock(BlockBehaviour.Properties.of(Material.BAMBOO)

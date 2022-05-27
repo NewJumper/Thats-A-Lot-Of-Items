@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "NN",
-    "NN"
+    "II",
+    "II"
   ],
   "key": {
-    "N": {
-      "tag": "forge:netherrack"
+    "I": {
+      "tag": "forge:storage_blocks/iron"
     }
   },
   "result": {
-    "item": "taloi:netherrack_bricks",
+    "item": "taloi:reinforced_iron_block",
     "count": 4
   }
 }
