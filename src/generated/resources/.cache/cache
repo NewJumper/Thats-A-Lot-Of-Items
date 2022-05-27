@@ -789,6 +789,7 @@ f7055048bf592f901dac62bad5259a332687362f data/forge/tags/items/storage_blocks/zi
 856277b46599e99ad02180e56f8418b80bd68e1d data/minecraft/tags/blocks/fence_gates.json
 5e3a71a3dc7cb51c78bde78a59dd5f1967e2e589 data/minecraft/tags/blocks/leaves.json
 66deedcad2a931ab4964eb5aeae21313f0a01a2e data/minecraft/tags/blocks/logs_that_burn.json
+9c1bd9b5388e67f1ff2aac600236f525d7411b05 data/minecraft/tags/blocks/mineable/axe.json
 5e3a71a3dc7cb51c78bde78a59dd5f1967e2e589 data/minecraft/tags/blocks/mineable/hoe.json
 be45f968ebc0cf5cd94eddecb8ef56cde554f7ae data/minecraft/tags/blocks/mineable/pickaxe.json
 f39d8e046c6b6ab26fc1f96a59b3cd97a8ce7441 data/minecraft/tags/blocks/needs_diamond_tool.json
