@@ -15,12 +15,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags() {
-        tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.BAMBOO_PLANKS.get(), ModBlocks.BUNDLED_BAMBOO.get());
+        tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.BAMBOO_PLANKS.get(), ModBlocks.BUNDLED_BAMBOO.get(), ModBlocks.WOODEN_CRATE.get());
         tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.WILLOW_LEAVES.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(), ModBlocks.POLISHED_TUFF.get(),
                         ModBlocks.CHISELED_ANDESITE.get(), ModBlocks.CHISELED_DIORITE.get(), ModBlocks.CHISELED_DRIPSTONE_BLOCK.get(), ModBlocks.CHISELED_GRANITE.get(), ModBlocks.CHISELED_LIMESTONE_BRICKS.get(), ModBlocks.CHISELED_MARBLE.get(), ModBlocks.CHISELED_SLATE.get(), ModBlocks.CHISELED_TUFF.get(),
                         ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(), ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE_BRICK_SLAB.get(),
-                        ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get())
+                        ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get(),
+                        ModBlocks.IRON_CRATE.get())
                 .addTag(ModTags.Blocks.TALOI_ORES).addTag(ModTags.Blocks.TALOI_STORAGE_BLOCKS).addTag(ModTags.Blocks.MACHINES).addTag(ModTags.Blocks.CONCRETE_SLABS).addTag(ModTags.Blocks.CONCRETE_STAIRS);
         tag(BlockTags.AXOLOTLS_SPAWNABLE_ON).add(ModBlocks.MARBLE.get());
         tag(BlockTags.BEACON_BASE_BLOCKS).add(ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.MAGNESIUM_BLOCK.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.PLATINUM_BLOCK.get(), ModBlocks.TUNGSTEN_BLOCK.get(), ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get());

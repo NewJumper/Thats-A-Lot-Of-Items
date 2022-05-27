@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "ICI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:nuggets/iron"
+    },
+    "C": {
+      "item": "taloi:wooden_crate"
+    }
+  },
+  "result": {
+    "item": "taloi:iron_crate"
+  }
+}

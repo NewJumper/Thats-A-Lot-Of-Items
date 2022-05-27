@@ -195,6 +195,14 @@ public class ModBlocks {
             .sound(SoundType.AMETHYST)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 
+    public static final RegistryObject<Block> WOODEN_CRATE = registerBlock("wooden_crate", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+            .strength(2.5f)
+            .sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCK_TAB);
+    public static final RegistryObject<Block> IRON_CRATE = registerBlock("iron_crate", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            .strength(3f)
+            .sound(SoundType.METAL)
+            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
+
     // METALS
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)

@@ -86,6 +86,9 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.TANZANITE_BLOCK.get());
         this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());
 
+        this.dropSelf(ModBlocks.WOODEN_CRATE.get());
+        this.dropSelf(ModBlocks.IRON_CRATE.get());
+
         // METALS
         this.dropSelf(ModBlocks.ALUMINUM_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());

@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
@@ -223,6 +224,22 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("TT")
                 .pattern("TT")
                 .unlockedBy("has_material", has(ModItems.TOPAZ.get())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.WOODEN_CRATE.get(), 1)
+                .define('P', ItemTags.PLANKS)
+                .define('S', ItemTags.WOODEN_SLABS)
+                .pattern("SSS")
+                .pattern("P P")
+                .pattern("SSS")
+                .unlockedBy("has_material", has(ItemTags.PLANKS)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.IRON_CRATE.get(), 1)
+                .define('I', Tags.Items.NUGGETS_IRON)
+                .define('C', ModBlocks.WOODEN_CRATE.get())
+                .pattern("III")
+                .pattern("ICI")
+                .pattern("III")
+                .unlockedBy("has_material", has(ModBlocks.WOODEN_CRATE.get())).save(consumer);
 
         // ALUMINUM
         ShapedRecipeBuilder.shaped(ModBlocks.ALUMINUM_BLOCK.get(), 1)

@@ -88,6 +88,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.TANZANITE_BLOCK.get());
         simpleBlock(ModBlocks.TOPAZ_BLOCK.get());
 
+        simpleBlock(ModBlocks.WOODEN_CRATE.get());
+        simpleBlock(ModBlocks.IRON_CRATE.get());
+
         // METALS
         simpleBlock(ModBlocks.ALUMINUM_BLOCK.get());
         simpleBlock(ModBlocks.ALUMINUM_ORE.get());
