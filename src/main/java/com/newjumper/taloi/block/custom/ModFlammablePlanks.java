@@ -6,8 +6,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModFlammableBlock extends Block {
-    public ModFlammableBlock(Properties pProperties) {
+public class ModFlammablePlanks extends Block {
+    public ModFlammablePlanks(Properties pProperties) {
         super(pProperties);
     }
 
