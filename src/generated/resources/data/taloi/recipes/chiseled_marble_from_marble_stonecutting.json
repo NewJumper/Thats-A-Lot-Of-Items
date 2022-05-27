@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "taloi:slate_bricks"
+    "item": "taloi:marble"
   },
-  "result": "taloi:slate_brick_slab",
+  "result": "taloi:chiseled_marble",
   "count": 1
 }

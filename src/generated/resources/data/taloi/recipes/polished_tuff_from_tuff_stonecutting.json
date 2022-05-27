@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "taloi:slate_bricks"
+    "item": "minecraft:tuff"
   },
-  "result": "taloi:slate_brick_slab",
+  "result": "taloi:polished_tuff",
   "count": 1
 }

@@ -48,6 +48,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.MARBLE.get());
         this.dropSelf(ModBlocks.SLATE.get());
         this.dropSelf(ModBlocks.SLATE_BRICKS.get());
+        this.dropSelf(ModBlocks.POLISHED_TUFF.get());
 
         this.add(ModBlocks.LIMESTONE_SLAB.get(), BlockLoot::createSlabItemTable);
         this.add(ModBlocks.LIMESTONE_BRICK_SLAB.get(), BlockLoot::createSlabItemTable);
@@ -66,6 +67,12 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.MARBLE_WALL.get());
         this.dropSelf(ModBlocks.SLATE_WALL.get());
         this.dropSelf(ModBlocks.SLATE_BRICK_WALL.get());
+
+        this.dropSelf(ModBlocks.CHISELED_DRIPSTONE_BLOCK.get());
+        this.dropSelf(ModBlocks.CHISELED_LIMESTONE_BRICKS.get());
+        this.dropSelf(ModBlocks.CHISELED_MARBLE.get());
+        this.dropSelf(ModBlocks.CHISELED_SLATE.get());
+        this.dropSelf(ModBlocks.CHISELED_TUFF.get());
 
         this.dropSelf(ModBlocks.BUNDLED_BAMBOO.get());
         this.dropSelf(ModBlocks.BAMBOO_PLANKS.get());

@@ -17,7 +17,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     protected void addTags() {
         tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.BAMBOO_PLANKS.get(), ModBlocks.BUNDLED_BAMBOO.get());
         tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.WILLOW_LEAVES.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(),
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(), ModBlocks.POLISHED_TUFF.get(),
+                        ModBlocks.CHISELED_DRIPSTONE_BLOCK.get(), ModBlocks.CHISELED_LIMESTONE_BRICKS.get(), ModBlocks.CHISELED_MARBLE.get(), ModBlocks.CHISELED_SLATE.get(), ModBlocks.CHISELED_TUFF.get(),
                         ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(), ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE_BRICK_SLAB.get(),
                         ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get())
                 .addTag(ModTags.Blocks.TALOI_ORES).addTag(ModTags.Blocks.TALOI_STORAGE_BLOCKS).addTag(ModTags.Blocks.MACHINES).addTag(ModTags.Blocks.CONCRETE_SLABS).addTag(ModTags.Blocks.CONCRETE_STAIRS);
@@ -36,6 +37,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModBlocks.SILICON_BLOCK.get(), ModBlocks.SILICON_ORE.get(), ModBlocks.RAW_SILICON_BLOCK.get(),
                 ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get());
         tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(),
+                ModBlocks.CHISELED_LIMESTONE_BRICKS.get(), ModBlocks.CHISELED_MARBLE.get(), ModBlocks.CHISELED_SLATE.get(),
                 ModBlocks.DEEPSLATE_ALUMINUM_ORE.get(), ModBlocks.ALUMINUM_BLOCK.get(), ModBlocks.ALUMINUM_ORE.get(), ModBlocks.RAW_ALUMINUM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(), ModBlocks.TIN_BLOCK.get(), ModBlocks.TIN_ORE.get(), ModBlocks.RAW_TIN_BLOCK.get(),
                 ModBlocks.DEEPSLATE_ZINC_ORE.get(), ModBlocks.ZINC_BLOCK.get(), ModBlocks.ZINC_ORE.get(), ModBlocks.RAW_ZINC_BLOCK.get())

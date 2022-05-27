@@ -52,6 +52,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.MARBLE.get());
         simpleBlock(ModBlocks.SLATE.get());
         simpleBlock(ModBlocks.SLATE_BRICKS.get());
+        simpleBlock(ModBlocks.POLISHED_TUFF.get());
 
         slabBlock(ModBlocks.LIMESTONE_SLAB.get(), modLoc("block/limestone"), modLoc("block/limestone"));
         slabBlock(ModBlocks.LIMESTONE_BRICK_SLAB.get(), modLoc("block/limestone_bricks"), modLoc("block/limestone_bricks"));
@@ -70,6 +71,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
         wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
         wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
+
+        simpleBlock(ModBlocks.CHISELED_DRIPSTONE_BLOCK.get());
+        simpleBlock(ModBlocks.CHISELED_LIMESTONE_BRICKS.get());
+        simpleBlock(ModBlocks.CHISELED_MARBLE.get());
+        simpleBlock(ModBlocks.CHISELED_SLATE.get());
+        simpleBlock(ModBlocks.CHISELED_TUFF.get());
 
         axisBlock(ModBlocks.BUNDLED_BAMBOO.get(), modLoc("block/bundled_bamboo_side"), modLoc("block/bundled_bamboo_top"));
         simpleBlock(ModBlocks.BAMBOO_PLANKS.get());

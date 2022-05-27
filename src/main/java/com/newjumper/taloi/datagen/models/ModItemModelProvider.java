@@ -54,6 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("marble", modLoc("block/marble"));
         withExistingParent("slate", modLoc("block/slate"));
         withExistingParent("slate_bricks", modLoc("block/slate_bricks"));
+        withExistingParent("polished_tuff", modLoc("block/polished_tuff"));
 
         withExistingParent("limestone_slab", modLoc("block/limestone_slab"));
         withExistingParent("limestone_brick_slab", modLoc("block/limestone_brick_slab"));
@@ -73,8 +74,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("slate_wall", modLoc("block/slate_wall_inventory"));
         withExistingParent("slate_brick_wall", modLoc("block/slate_brick_wall_inventory"));
 
+        withExistingParent("chiseled_dripstone_block", modLoc("block/chiseled_dripstone_block"));
+        withExistingParent("chiseled_limestone_bricks", modLoc("block/chiseled_limestone_bricks"));
+        withExistingParent("chiseled_marble", modLoc("block/chiseled_marble"));
+        withExistingParent("chiseled_slate", modLoc("block/chiseled_slate"));
+        withExistingParent("chiseled_tuff", modLoc("block/chiseled_tuff"));
+
         withExistingParent("bundled_bamboo", modLoc("block/bundled_bamboo"));
         withExistingParent("bamboo_planks", modLoc("block/bamboo_planks"));
+
         withExistingParent("snowy_ice", modLoc("block/snowy_ice"));
 
         withExistingParent("malachite_block", modLoc("block/malachite_block"));

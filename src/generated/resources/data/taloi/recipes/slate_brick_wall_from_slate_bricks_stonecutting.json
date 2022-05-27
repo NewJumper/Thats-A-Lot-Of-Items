@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "taloi:slate_bricks"
   },
-  "result": "taloi:slate_wall",
+  "result": "taloi:slate_brick_wall",
   "count": 1
 }

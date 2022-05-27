@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "taloi:limestone_bricks"
+  },
+  "result": "taloi:chiseled_limestone_bricks",
+  "count": 1
+}
