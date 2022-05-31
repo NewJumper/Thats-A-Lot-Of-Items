@@ -82,7 +82,7 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.uc");
+        return new TranslatableComponent("container.taloi.uhp");
     }
 
     @Override
