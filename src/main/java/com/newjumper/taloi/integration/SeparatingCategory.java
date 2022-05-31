@@ -23,7 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 
-public class SeparatingRecipeCategory implements IRecipeCategory<SeparatingRecipe> {
+public class SeparatingCategory implements IRecipeCategory<SeparatingRecipe> {
     public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "separating");
     public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/taloi_machine_gui.png");
 
@@ -33,7 +33,7 @@ public class SeparatingRecipeCategory implements IRecipeCategory<SeparatingRecip
     private final int progressTime;
     private final String title;
 
-    public SeparatingRecipeCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
+    public SeparatingCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
         this.background = guiHelper.createDrawable(TEXTURE, 135, 56, 99, 26);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
         this.cachedArrows = CacheBuilder.newBuilder().maximumSize(23).build(new CacheLoader<>() {

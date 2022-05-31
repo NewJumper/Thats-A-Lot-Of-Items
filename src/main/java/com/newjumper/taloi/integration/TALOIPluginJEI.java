@@ -5,6 +5,7 @@ import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.recipe.*;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
@@ -24,11 +25,15 @@ public class TALOIPluginJEI implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_CONSTRUCTOR.get(), "container.taloi.ac", 200));
-//        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.BETA_CONSTRUCTOR.get(), "container.taloi.bc", 100));
-        registration.addRecipeCategories(new UnstableConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.UNSTABLE_CONSTRUCTOR.get(), "container.taloi.uc", 100));
-        registration.addRecipeCategories(new ProcessingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_PROCESSOR.get(), "container.taloi.ap", 200));
-        registration.addRecipeCategories(new SeparatingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_SEPARATOR.get(), "container.taloi.ase", 200));
+        IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
+        String key = "container.taloi.";
+
+        registration.addRecipeCategories(
+                new ConstructingCategory(guiHelper, ModBlocks.ALPHA_CONSTRUCTOR.get(), key + "ac", 200),
+                new UnstableConstructingCategory(guiHelper, ModBlocks.UNSTABLE_CONSTRUCTOR.get(), key + "uc", 100),
+                new ProcessingCategory(guiHelper, ModBlocks.ALPHA_PROCESSOR.get(), key + "ap", 200),
+                new SeparatingCategory(guiHelper, ModBlocks.ALPHA_SEPARATOR.get(), key + "ase", 200)
+        );
     }
 
     @Override
@@ -39,9 +44,9 @@ public class TALOIPluginJEI implements IModPlugin {
         List<ProcessingRecipe> processingRecipes = rm.getAllRecipesFor(ProcessingRecipe.Type.INSTANCE);
         List<SeparatingRecipe> separatingRecipes = rm.getAllRecipesFor(SeparatingRecipe.Type.INSTANCE);
 
-        registration.addRecipes(new RecipeType<>(ConstructingRecipeCategory.UID, ConstructingRecipe.class), constructingRecipes);
-        registration.addRecipes(new RecipeType<>(UnstableConstructingRecipeCategory.UID, UnstableConstructingRecipe.class), unstableConstructingRecipes);
-        registration.addRecipes(new RecipeType<>(ProcessingRecipeCategory.UID, ProcessingRecipe.class), processingRecipes);
-        registration.addRecipes(new RecipeType<>(SeparatingRecipeCategory.UID, SeparatingRecipe.class), separatingRecipes);
+        registration.addRecipes(new RecipeType<>(ConstructingCategory.UID, ConstructingRecipe.class), constructingRecipes);
+        registration.addRecipes(new RecipeType<>(UnstableConstructingCategory.UID, UnstableConstructingRecipe.class), unstableConstructingRecipes);
+        registration.addRecipes(new RecipeType<>(ProcessingCategory.UID, ProcessingRecipe.class), processingRecipes);
+        registration.addRecipes(new RecipeType<>(SeparatingCategory.UID, SeparatingRecipe.class), separatingRecipes);
     }
 }
