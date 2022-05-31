@@ -1,6 +1,7 @@
 package com.newjumper.taloi.integration;
 
 import com.newjumper.taloi.ThatsALotOfItems;
+import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.recipe.*;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -23,7 +24,7 @@ public class TALOIPluginJEI implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_CONSTRUCTOR.get(), 200));
     }
 
     @Override

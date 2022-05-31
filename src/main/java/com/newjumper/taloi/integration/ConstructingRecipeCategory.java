@@ -22,6 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 
 public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingRecipe> {
     public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "constructing");
@@ -30,16 +31,18 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     private final IDrawable background;
     private final IDrawable icon;
     private final LoadingCache<Integer, IDrawableAnimated> cachedArrows;
+    private final int progressTime;
 
-    public ConstructingRecipeCategory(IGuiHelper guiHelper) {
+    public ConstructingRecipeCategory(IGuiHelper guiHelper, Block icon, int progress) {
         this.background = guiHelper.createDrawable(TEXTURE, 68, 16, 78, 54);
-        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.ALPHA_CONSTRUCTOR.get()));
+        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
         this.cachedArrows = CacheBuilder.newBuilder().maximumSize(28).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
                 return guiHelper.drawableBuilder(TEXTURE, 176, 14, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
             }
         });
+        this.progressTime = progress;
     }
 
     @Override
@@ -62,8 +65,8 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     protected void drawCookTime(PoseStack poseStack, int y) {
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
-        int stringWidth = fontRenderer.width("10s");
-        fontRenderer.draw(poseStack, "10s", background.getWidth() - stringWidth, y, 0xFF808080);
+        int stringWidth = fontRenderer.width((progressTime / 20) + "s");
+        fontRenderer.draw(poseStack, (progressTime / 20) + "s", background.getWidth() - stringWidth, y, 0xFF808080);
     }
 
     @Override
