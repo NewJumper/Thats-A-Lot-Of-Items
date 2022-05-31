@@ -23,8 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 
-public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingRecipe> {
-    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "constructing");
+public class UnstableConstructingRecipeCategory implements IRecipeCategory<ConstructingRecipe> {
+    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "unstable_constructing");
     public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/taloi_machine_gui.png");
 
     private final IDrawable background;
@@ -33,13 +33,13 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     private final int progressTime;
     private final String title;
 
-    public ConstructingRecipeCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
-        this.background = guiHelper.createDrawable(TEXTURE, 0, 0, 78, 54);
+    public UnstableConstructingRecipeCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
+        this.background = guiHelper.createDrawable(TEXTURE, 0, 54, 78, 54);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
         this.cachedArrows = CacheBuilder.newBuilder().maximumSize(28).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 78, 0, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
+                return guiHelper.drawableBuilder(TEXTURE, 78, 54, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
             }
         });
         this.title = titleTranslation;
@@ -48,14 +48,15 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
 
     @Override
     public void draw(ConstructingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        getArrow().draw(stack, 21, 7);
+        getArrow().draw(stack, 21, 61);
         drawCookTime(stack, 45);
     }
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, ConstructingRecipe recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 1, 1).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 37).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.INPUT, 1, 19).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.INPUT, 1, 37).addIngredients(recipe.getIngredients().get(2));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 57, 19).addItemStack(recipe.getResultItem());
     }
 

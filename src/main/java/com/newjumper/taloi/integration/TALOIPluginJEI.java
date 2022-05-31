@@ -24,14 +24,18 @@ public class TALOIPluginJEI implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_CONSTRUCTOR.get(), 200));
+        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_CONSTRUCTOR.get(), "container.taloi.ac", 200));
+//        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.BETA_CONSTRUCTOR.get(), "container.taloi.bc", 100));
+        registration.addRecipeCategories(new UnstableConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.UNSTABLE_CONSTRUCTOR.get(), "container.taloi.uc", 100));
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<ConstructingRecipe> constructingRecipes = rm.getAllRecipesFor(ConstructingRecipe.Type.INSTANCE);
+        List<UnstableConstructingRecipe> unstableConstructingRecipes = rm.getAllRecipesFor(UnstableConstructingRecipe.Type.INSTANCE);
 
         registration.addRecipes(new RecipeType<>(ConstructingRecipeCategory.UID, ConstructingRecipe.class), constructingRecipes);
+        registration.addRecipes(new RecipeType<>(UnstableConstructingRecipeCategory.UID, UnstableConstructingRecipe.class), unstableConstructingRecipes);
     }
 }
