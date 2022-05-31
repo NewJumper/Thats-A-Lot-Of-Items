@@ -153,6 +153,9 @@ public class ModTags {
         public static final TagKey<Item> PROCESSOR_INGOTS = taloiTag("machinery/processor_ingots");
         public static final TagKey<Item> SEPARATOR_ORES = taloiTag("machinery/separator_ores");
 
+        public static final TagKey<Item> CONCRETE_STAIRS = taloiTag("concrete_stairs");
+        public static final TagKey<Item> CONCRETE_SLABS = taloiTag("concrete_slabs");
+
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
         }

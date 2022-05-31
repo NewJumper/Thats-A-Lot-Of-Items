@@ -6,6 +6,7 @@ import com.newjumper.taloi.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
@@ -18,6 +19,19 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags() {
+        copy(BlockTags.LEAVES, ItemTags.LEAVES);
+        copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
+        copy(BlockTags.PLANKS, ItemTags.PLANKS);
+        copy(BlockTags.SAPLINGS, ItemTags.SAPLINGS);
+        copy(BlockTags.SLABS, ItemTags.SLABS);
+        copy(BlockTags.STAIRS, ItemTags.STAIRS);
+        copy(BlockTags.WALLS, ItemTags.WALLS);
+        copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+        copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
+        copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+        copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+        copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
+
         copy(ModTags.Blocks.EVERGREEN_LOGS, ModTags.Items.EVERGREEN_LOGS);
         copy(ModTags.Blocks.WILLOW_LOGS, ModTags.Items.WILLOW_LOGS);
 
@@ -57,6 +71,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.STORAGE_ZINC, ModTags.Items.STORAGE_ZINC);
         copy(ModTags.Blocks.RAW_STORAGE_ZINC, ModTags.Items.RAW_STORAGE_ZINC);
         copy(ModTags.Blocks.TALOI_STORAGE_BLOCKS, ModTags.Items.TALOI_STORAGE_BLOCKS);
+
+        copy(ModTags.Blocks.CONCRETE_SLABS, ModTags.Items.CONCRETE_SLABS);
+        copy(ModTags.Blocks.CONCRETE_STAIRS, ModTags.Items.CONCRETE_STAIRS);
 
         tag(ItemTags.BEACON_PAYMENT_ITEMS).add(ModItems.IRIDIUM_INGOT.get(), ModItems.MAGNESIUM_INGOT.get(), ModItems.OSMIUM_INGOT.get(), ModItems.PLATINUM_INGOT.get(), ModItems.TUNGSTEN_INGOT.get(), ModItems.BRONZE_INGOT.get(), ModItems.STEEL_INGOT.get());
         tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(ModItems.MUSIC_DISC_THE_CAVES.get());
