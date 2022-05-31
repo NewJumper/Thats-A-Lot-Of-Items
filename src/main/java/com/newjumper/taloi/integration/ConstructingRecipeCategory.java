@@ -60,12 +60,10 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     }
 
     protected void drawCookTime(PoseStack poseStack, int y) {
-        int cookTimeSeconds = 10;
-        TranslatableComponent timeString = new TranslatableComponent("gui.jei.category.smelting.time.seconds", cookTimeSeconds);
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
-        int stringWidth = fontRenderer.width(timeString);
-        fontRenderer.draw(poseStack, timeString, background.getWidth() - stringWidth, y, 0xFF808080);
+        int stringWidth = fontRenderer.width("10s");
+        fontRenderer.draw(poseStack, "10s", background.getWidth() - stringWidth, y, 0xFF808080);
     }
 
     @Override
