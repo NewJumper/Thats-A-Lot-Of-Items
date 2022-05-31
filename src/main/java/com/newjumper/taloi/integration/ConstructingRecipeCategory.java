@@ -5,7 +5,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.recipe.ConstructingRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -26,7 +25,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingRecipe> {
     public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "constructing");
-    public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/container/constructor.png");
+    public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/taloi_machine_gui.png");
 
     private final IDrawable background;
     private final IDrawable icon;
@@ -34,12 +33,12 @@ public class ConstructingRecipeCategory implements IRecipeCategory<ConstructingR
     private final int progressTime;
 
     public ConstructingRecipeCategory(IGuiHelper guiHelper, Block icon, int progress) {
-        this.background = guiHelper.createDrawable(TEXTURE, 68, 16, 78, 54);
+        this.background = guiHelper.createDrawable(TEXTURE, 0, 0, 78, 54);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
         this.cachedArrows = CacheBuilder.newBuilder().maximumSize(28).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 176, 14, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
+                return guiHelper.drawableBuilder(TEXTURE, 78, 0, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
             }
         });
         this.progressTime = progress;
