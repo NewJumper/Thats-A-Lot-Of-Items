@@ -26,13 +26,14 @@ public class TALOIPluginJEI implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
-        String key = "container.taloi.";
 
         registration.addRecipeCategories(
-                new ConstructingCategory(guiHelper, ModBlocks.ALPHA_CONSTRUCTOR.get(), key + "ac", 200),
-                new UnstableConstructingCategory(guiHelper, ModBlocks.UNSTABLE_CONSTRUCTOR.get(), key + "uc", 100),
-                new ProcessingCategory(guiHelper, ModBlocks.ALPHA_PROCESSOR.get(), key + "ap", 200),
-                new SeparatingCategory(guiHelper, ModBlocks.ALPHA_SEPARATOR.get(), key + "ase", 200)
+                new ConstructingCategory(guiHelper, ModBlocks.ALPHA_CONSTRUCTOR.get(), "container.taloi.ac", 200),
+                new UnstableConstructingCategory(guiHelper, ModBlocks.UNSTABLE_CONSTRUCTOR.get(), "container.taloi.uc", 100),
+                new PressingCategory(guiHelper, ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), "container.taloi.ahp", 200),
+                new UnstablePressingCategory(guiHelper, ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), "container.taloi.uhp", 100),
+                new ProcessingCategory(guiHelper, ModBlocks.ALPHA_PROCESSOR.get(), "container.taloi.ap", 200),
+                new SeparatingCategory(guiHelper, ModBlocks.ALPHA_SEPARATOR.get(), "container.taloi.ase", 200)
         );
     }
 
@@ -41,11 +42,15 @@ public class TALOIPluginJEI implements IModPlugin {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<ConstructingRecipe> constructingRecipes = rm.getAllRecipesFor(ConstructingRecipe.Type.INSTANCE);
         List<UnstableConstructingRecipe> unstableConstructingRecipes = rm.getAllRecipesFor(UnstableConstructingRecipe.Type.INSTANCE);
+        List<PressingRecipe> pressingRecipes = rm.getAllRecipesFor(PressingRecipe.Type.INSTANCE);
+        List<UnstablePressingRecipe> unstablePressingRecipes = rm.getAllRecipesFor(UnstablePressingRecipe.Type.INSTANCE);
         List<ProcessingRecipe> processingRecipes = rm.getAllRecipesFor(ProcessingRecipe.Type.INSTANCE);
         List<SeparatingRecipe> separatingRecipes = rm.getAllRecipesFor(SeparatingRecipe.Type.INSTANCE);
 
         registration.addRecipes(new RecipeType<>(ConstructingCategory.UID, ConstructingRecipe.class), constructingRecipes);
         registration.addRecipes(new RecipeType<>(UnstableConstructingCategory.UID, UnstableConstructingRecipe.class), unstableConstructingRecipes);
+        registration.addRecipes(new RecipeType<>(PressingCategory.UID, PressingRecipe.class), pressingRecipes);
+        registration.addRecipes(new RecipeType<>(UnstablePressingCategory.UID, UnstablePressingRecipe.class), unstablePressingRecipes);
         registration.addRecipes(new RecipeType<>(ProcessingCategory.UID, ProcessingRecipe.class), processingRecipes);
         registration.addRecipes(new RecipeType<>(SeparatingCategory.UID, SeparatingRecipe.class), separatingRecipes);
     }

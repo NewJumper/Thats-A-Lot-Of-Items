@@ -30,8 +30,8 @@ public class UnstableConstructingCategory implements IRecipeCategory<UnstableCon
     private final IDrawable background;
     private final IDrawable icon;
     private final LoadingCache<Integer, IDrawableAnimated> cachedArrows;
-    private final int progressTime;
     private final String title;
+    private final int progressTime;
 
     public UnstableConstructingCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
         this.background = guiHelper.createDrawable(TEXTURE, 0, 54, 78, 54);

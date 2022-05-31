@@ -5,7 +5,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.recipe.ProcessingRecipe;
+import com.newjumper.taloi.recipe.PressingRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -23,8 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 
-public class ProcessingCategory implements IRecipeCategory<ProcessingRecipe> {
-    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "processing");
+public class PressingCategory implements IRecipeCategory<PressingRecipe> {
+    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "pressing");
     public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/taloi_machine_gui.png");
 
     private final IDrawable background;
@@ -33,13 +33,13 @@ public class ProcessingCategory implements IRecipeCategory<ProcessingRecipe> {
     private final String title;
     private final int progressTime;
 
-    public ProcessingCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
-        this.background = guiHelper.createDrawable(TEXTURE, 167, 0, 67, 56);
+    public PressingCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
+        this.background = guiHelper.createDrawable(TEXTURE, 0, 108, 88, 55);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
-        this.cachedArrows = CacheBuilder.newBuilder().maximumSize(19).build(new CacheLoader<>() {
+        this.cachedArrows = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 234, 0, 22, 18).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, false);
+                return guiHelper.drawableBuilder(TEXTURE, 88, 108, 52, 17).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, false);
             }
         });
         this.title = titleTranslation;
@@ -47,16 +47,16 @@ public class ProcessingCategory implements IRecipeCategory<ProcessingRecipe> {
     }
 
     @Override
-    public void draw(ProcessingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        getArrow().draw(stack, 0, 19);
-        drawCookTime(stack, 47);
+    public void draw(PressingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
+        getArrow().draw(stack, 0, 0);
+        drawCookTime(stack, 46);
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, ProcessingRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 3, 1).addIngredients(recipe.getBase());
-        builder.addSlot(RecipeIngredientRole.INPUT, 3, 39).addIngredients(recipe.getIngot());
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 46, 20).addItemStack(recipe.getResultItem());
+    public void setRecipe(IRecipeLayoutBuilder builder, PressingRecipe recipe, IFocusGroup focuses) {
+        builder.addSlot(RecipeIngredientRole.INPUT, 8, 20).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 28, 20).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 67, 20).addItemStack(recipe.getResultItem());
     }
 
     protected IDrawableAnimated getArrow() {
@@ -85,8 +85,8 @@ public class ProcessingCategory implements IRecipeCategory<ProcessingRecipe> {
 
     @SuppressWarnings("removal")
     @Override
-    public Class<? extends ProcessingRecipe> getRecipeClass() {
-        return ProcessingRecipe.class;
+    public Class<? extends PressingRecipe> getRecipeClass() {
+        return PressingRecipe.class;
     }
     @SuppressWarnings("removal")
     @Override
