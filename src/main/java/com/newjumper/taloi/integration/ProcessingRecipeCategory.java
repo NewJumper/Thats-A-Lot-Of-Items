@@ -5,7 +5,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.recipe.ConstructingRecipe;
+import com.newjumper.taloi.recipe.ProcessingRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -23,8 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 
-public class UnstableConstructingRecipeCategory implements IRecipeCategory<ConstructingRecipe> {
-    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "unstable_constructing");
+public class ProcessingRecipeCategory implements IRecipeCategory<ProcessingRecipe> {
+    public final static ResourceLocation UID = new ResourceLocation(ThatsALotOfItems.MOD_ID, "processing");
     public final static ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/taloi_machine_gui.png");
 
     private final IDrawable background;
@@ -33,13 +33,13 @@ public class UnstableConstructingRecipeCategory implements IRecipeCategory<Const
     private final int progressTime;
     private final String title;
 
-    public UnstableConstructingRecipeCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
-        this.background = guiHelper.createDrawable(TEXTURE, 0, 54, 78, 54);
+    public ProcessingRecipeCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
+        this.background = guiHelper.createDrawable(TEXTURE, 167, 0, 67, 56);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
-        this.cachedArrows = CacheBuilder.newBuilder().maximumSize(28).build(new CacheLoader<>() {
+        this.cachedArrows = CacheBuilder.newBuilder().maximumSize(19).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 78, 54, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
+                return guiHelper.drawableBuilder(TEXTURE, 234, 0, 22, 18).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, false);
             }
         });
         this.title = titleTranslation;
@@ -47,17 +47,16 @@ public class UnstableConstructingRecipeCategory implements IRecipeCategory<Const
     }
 
     @Override
-    public void draw(ConstructingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        getArrow().draw(stack, 21, 7);
-        drawCookTime(stack, 45);
+    public void draw(ProcessingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
+        getArrow().draw(stack, 0, 19);
+        drawCookTime(stack, 47);
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, ConstructingRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 1).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 19).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 37).addIngredients(recipe.getIngredients().get(2));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 57, 19).addItemStack(recipe.getResultItem());
+    public void setRecipe(IRecipeLayoutBuilder builder, ProcessingRecipe recipe, IFocusGroup focuses) {
+        builder.addSlot(RecipeIngredientRole.INPUT, 3, 1).addIngredients(recipe.getBase());
+        builder.addSlot(RecipeIngredientRole.INPUT, 3, 39).addIngredients(recipe.getIngot());
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 46, 20).addItemStack(recipe.getResultItem());
     }
 
     protected IDrawableAnimated getArrow() {
@@ -86,8 +85,8 @@ public class UnstableConstructingRecipeCategory implements IRecipeCategory<Const
 
     @SuppressWarnings("removal")
     @Override
-    public Class<? extends ConstructingRecipe> getRecipeClass() {
-        return ConstructingRecipe.class;
+    public Class<? extends ProcessingRecipe> getRecipeClass() {
+        return ProcessingRecipe.class;
     }
     @SuppressWarnings("removal")
     @Override

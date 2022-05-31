@@ -27,6 +27,8 @@ public class TALOIPluginJEI implements IModPlugin {
         registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_CONSTRUCTOR.get(), "container.taloi.ac", 200));
 //        registration.addRecipeCategories(new ConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.BETA_CONSTRUCTOR.get(), "container.taloi.bc", 100));
         registration.addRecipeCategories(new UnstableConstructingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.UNSTABLE_CONSTRUCTOR.get(), "container.taloi.uc", 100));
+        registration.addRecipeCategories(new ProcessingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_PROCESSOR.get(), "container.taloi.ap", 200));
+        registration.addRecipeCategories(new SeparatingRecipeCategory(registration.getJeiHelpers().getGuiHelper(), ModBlocks.ALPHA_SEPARATOR.get(), "container.taloi.ase", 200));
     }
 
     @Override
@@ -34,8 +36,12 @@ public class TALOIPluginJEI implements IModPlugin {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<ConstructingRecipe> constructingRecipes = rm.getAllRecipesFor(ConstructingRecipe.Type.INSTANCE);
         List<UnstableConstructingRecipe> unstableConstructingRecipes = rm.getAllRecipesFor(UnstableConstructingRecipe.Type.INSTANCE);
+        List<ProcessingRecipe> processingRecipes = rm.getAllRecipesFor(ProcessingRecipe.Type.INSTANCE);
+        List<SeparatingRecipe> separatingRecipes = rm.getAllRecipesFor(SeparatingRecipe.Type.INSTANCE);
 
         registration.addRecipes(new RecipeType<>(ConstructingRecipeCategory.UID, ConstructingRecipe.class), constructingRecipes);
         registration.addRecipes(new RecipeType<>(UnstableConstructingRecipeCategory.UID, UnstableConstructingRecipe.class), unstableConstructingRecipes);
+        registration.addRecipes(new RecipeType<>(ProcessingRecipeCategory.UID, ProcessingRecipe.class), processingRecipes);
+        registration.addRecipes(new RecipeType<>(SeparatingRecipeCategory.UID, SeparatingRecipe.class), separatingRecipes);
     }
 }
