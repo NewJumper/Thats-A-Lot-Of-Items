@@ -31,7 +31,8 @@ public class UnstablePressingCategory implements IRecipeCategory<UnstablePressin
     private final IDrawable icon;
     private final String key;
     private final int progressTime;
-    private final LoadingCache<Integer, IDrawableAnimated> cachedArrows;
+    private final LoadingCache<Integer, IDrawableAnimated> pressUpper;
+    private final LoadingCache<Integer, IDrawableAnimated> pressLower;
 
     public UnstablePressingCategory(IGuiHelper guiHelper, Block icon, String translationKey, int progress) {
         this.background = guiHelper.createDrawable(TEXTURE, 0, 163, 98, 55);
@@ -39,17 +40,24 @@ public class UnstablePressingCategory implements IRecipeCategory<UnstablePressin
         this.key = translationKey;
         this.progressTime = progress;
 
-        this.cachedArrows = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
+        this.pressUpper = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
                 return guiHelper.drawableBuilder(TEXTURE, 88, 108, 52, 17).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, false);
+            }
+        });
+        this.pressLower = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
+            @Override
+            public IDrawableAnimated load(Integer time) {
+                return guiHelper.drawableBuilder(TEXTURE, 88, 125, 52, 17).buildAnimated(time, IDrawableAnimated.StartDirection.BOTTOM, false);
             }
         });
     }
 
     @Override
     public void draw(UnstablePressingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        getArrow().draw(stack, 3, 0);
+        getUpperPress().draw(stack, 3, 0);
+        getLowerPress().draw(stack, 3, 39);
         drawCookTime(stack);
     }
 
@@ -61,8 +69,11 @@ public class UnstablePressingCategory implements IRecipeCategory<UnstablePressin
         builder.addSlot(RecipeIngredientRole.OUTPUT, 77, 20).addItemStack(recipe.getResultItem());
     }
 
-    private IDrawableAnimated getArrow() {
-        return this.cachedArrows.getUnchecked(progressTime / 2);
+    private IDrawableAnimated getUpperPress() {
+        return this.pressUpper.getUnchecked(progressTime / 2);
+    }
+    private IDrawableAnimated getLowerPress() {
+        return this.pressUpper.getUnchecked(progressTime / 2);
     }
     private void drawCookTime(PoseStack poseStack) {
         Minecraft minecraft = Minecraft.getInstance();
