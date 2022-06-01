@@ -24,7 +24,6 @@
     "taloi:bronze_block",
     "taloi:steel_block",
     "taloi:reinforced_iron_block",
-    "taloi:rusted_reinforced_iron_block",
-    "taloi:waxed_reinforced_iron_block"
+    "taloi:rusted_reinforced_iron_block"
   ]
 }

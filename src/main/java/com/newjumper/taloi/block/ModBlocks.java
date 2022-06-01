@@ -178,12 +178,8 @@ public class ModBlocks {
             .strength(5.5f, 7f)
             .sound(SoundType.COPPER)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> RUSTED_REINFORCED_IRON_BLOCK = registerBlock("rusted_reinforced_iron_block", () -> new ReinforcedIronBlock(RustingIron.RustState.RUSTED, BlockBehaviour.Properties.of(Material.METAL)
+    public static final RegistryObject<Block> RUSTED_REINFORCED_IRON_BLOCK = registerBlock("rusted_reinforced_iron_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(6f, 6f)
-            .sound(SoundType.METAL)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
-    public static final RegistryObject<Block> WAXED_REINFORCED_IRON_BLOCK = registerBlock("waxed_reinforced_iron_block", () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.REINFORCED_IRON_BLOCK.get())
-            .strength(5.5f, 7f)
             .sound(SoundType.METAL)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCK_TAB);
 

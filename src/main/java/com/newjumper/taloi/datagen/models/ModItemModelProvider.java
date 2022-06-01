@@ -87,7 +87,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent("reinforced_iron_block", modLoc("block/reinforced_iron_block"));
         withExistingParent("rusted_reinforced_iron_block", modLoc("block/rusted_reinforced_iron_block"));
-        withExistingParent("waxed_reinforced_iron_block", modLoc("block/reinforced_iron_block"));
 
         withExistingParent("bundled_bamboo", modLoc("block/bundled_bamboo"));
         withExistingParent("bamboo_planks", modLoc("block/bamboo_planks"));

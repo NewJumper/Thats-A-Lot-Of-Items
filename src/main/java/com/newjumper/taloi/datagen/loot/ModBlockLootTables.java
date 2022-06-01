@@ -81,7 +81,6 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.dropSelf(ModBlocks.REINFORCED_IRON_BLOCK.get());
         this.dropSelf(ModBlocks.RUSTED_REINFORCED_IRON_BLOCK.get());
-        this.dropSelf(ModBlocks.WAXED_REINFORCED_IRON_BLOCK.get());
 
         this.dropSelf(ModBlocks.BUNDLED_BAMBOO.get());
         this.dropSelf(ModBlocks.BAMBOO_PLANKS.get());
