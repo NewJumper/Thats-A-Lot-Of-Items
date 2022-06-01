@@ -25,7 +25,7 @@ public class ModAdvancementsProvider extends AdvancementProvider {
     protected void registerAdvancements(Consumer<Advancement> consumer, ExistingFileHelper fileHelper) {
         String loc = ThatsALotOfItems.MOD_ID + ":main/";
 
-        Advancement root = Advancement.Builder.advancement().display(ModBlocks.LIMESTONE.get(),
+        Advancement root = Advancement.Builder.advancement().display(ModBlocks.SLATE.get(),
                         new TranslatableComponent("advancements.taloi.root.title"),
                         new TranslatableComponent("advancements.taloi.root.description"),
                         new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/advancements/backgrounds/taloi.png"),
