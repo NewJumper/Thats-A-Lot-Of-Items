@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:osmium_ore"
-            ]
+            "tag": "forge:raw_materials/osmium"
           }
         ]
       }

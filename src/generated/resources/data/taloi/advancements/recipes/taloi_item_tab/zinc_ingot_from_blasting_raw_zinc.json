@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:zinc_ore"
-            ]
+            "tag": "forge:raw_materials/zinc"
           }
         ]
       }

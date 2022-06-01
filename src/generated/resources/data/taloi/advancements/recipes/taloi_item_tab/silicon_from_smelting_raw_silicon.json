@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:silicon_ore"
-            ]
+            "tag": "forge:raw_materials/silicon"
           }
         ]
       }

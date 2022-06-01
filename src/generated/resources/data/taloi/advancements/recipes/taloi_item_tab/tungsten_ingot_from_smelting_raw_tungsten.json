@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:tungsten_ore"
-            ]
+            "tag": "forge:raw_materials/tungsten"
           }
         ]
       }

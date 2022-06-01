@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:iridium_ore"
-            ]
+            "tag": "forge:raw_materials/iridium"
           }
         ]
       }

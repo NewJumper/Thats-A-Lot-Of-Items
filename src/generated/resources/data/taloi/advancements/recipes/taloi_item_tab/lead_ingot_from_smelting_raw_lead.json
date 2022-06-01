@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:lead_ore"
-            ]
+            "tag": "forge:raw_materials/lead"
           }
         ]
       }
