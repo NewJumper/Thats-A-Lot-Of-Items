@@ -73,8 +73,8 @@ public class ModConfiguredFeatures {
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_MAGNESIUM = FeatureUtils.register("magnesium_ore", Feature.ORE, new OreConfiguration(ORE_MAGNESIUM_TARGET_LIST, 10));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_OSMIUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.OSMIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_OSMIUM_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM = FeatureUtils.register("osmium_ore", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 7));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM_BURIED = FeatureUtils.register("osmium_ore_buried", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 8, 1f));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM = FeatureUtils.register("osmium_ore", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 5));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM_BURIED = FeatureUtils.register("osmium_ore_buried", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 6, 1f));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_PLATINUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.PLATINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_PLATINUM_ORE.get().defaultBlockState()));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PLATINUM = FeatureUtils.register("platinum_ore", Feature.ORE, new OreConfiguration(ORE_PLATINUM_TARGET_LIST, 3));
