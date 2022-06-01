@@ -54,8 +54,8 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModItems.FUTURITE.get())).save(consumer);
 
         new PressingRecipeBuilder(ModItems.GOLD_DISK.get(), 1, 0f)
-                .requires(ModTags.Items.INGOTS_SILICON)
                 .requires(Tags.Items.INGOTS_GOLD)
+                .requires(ModTags.Items.INGOTS_SILICON)
                 .unlockedBy("has_material", has(Tags.Items.INGOTS_GOLD)).save(consumer);
 
         new UnstablePressingRecipeBuilder(ModItems.INDUCTION_PLATE.get(), 1, 0f)

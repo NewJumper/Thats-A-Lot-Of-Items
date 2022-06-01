@@ -2,10 +2,10 @@
   "type": "taloi:pressing",
   "ingredients": [
     {
-      "tag": "forge:ingots/silicon"
+      "tag": "forge:ingots/gold"
     },
     {
-      "tag": "forge:ingots/gold"
+      "tag": "forge:ingots/silicon"
     }
   ],
   "result": {
