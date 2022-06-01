@@ -4,6 +4,6 @@
     "item": "taloi:aluminum_ore"
   },
   "result": "taloi:aluminum_ingot",
-  "experience": 1.0,
+  "experience": 0.7,
   "cookingtime": 200
 }
