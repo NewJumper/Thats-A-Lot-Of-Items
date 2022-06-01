@@ -29,27 +29,28 @@ public class UnstableConstructingCategory implements IRecipeCategory<UnstableCon
 
     private final IDrawable background;
     private final IDrawable icon;
-    private final LoadingCache<Integer, IDrawableAnimated> cachedArrows;
-    private final String title;
+    private final String key;
     private final int progressTime;
+    private final LoadingCache<Integer, IDrawableAnimated> cachedArrows;
 
-    public UnstableConstructingCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
+    public UnstableConstructingCategory(IGuiHelper guiHelper, Block icon, String translationKey, int progress) {
         this.background = guiHelper.createDrawable(TEXTURE, 0, 54, 78, 54);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
+        this.key = translationKey;
+        this.progressTime = progress;
+
         this.cachedArrows = CacheBuilder.newBuilder().maximumSize(28).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
                 return guiHelper.drawableBuilder(TEXTURE, 78, 54, 27, 40).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
             }
         });
-        this.title = titleTranslation;
-        this.progressTime = progress;
     }
 
     @Override
     public void draw(UnstableConstructingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
         getArrow().draw(stack, 21, 7);
-        drawCookTime(stack, 45);
+        drawCookTime(stack);
     }
 
     @Override
@@ -60,15 +61,14 @@ public class UnstableConstructingCategory implements IRecipeCategory<UnstableCon
         builder.addSlot(RecipeIngredientRole.OUTPUT, 57, 19).addItemStack(recipe.getResultItem());
     }
 
-    protected IDrawableAnimated getArrow() {
+    private IDrawableAnimated getArrow() {
         return this.cachedArrows.getUnchecked(progressTime / 2);
     }
-
-    protected void drawCookTime(PoseStack poseStack, int y) {
+    private void drawCookTime(PoseStack poseStack) {
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
         int stringWidth = fontRenderer.width((progressTime / 20) + "s");
-        fontRenderer.draw(poseStack, (progressTime / 20) + "s", background.getWidth() - stringWidth, y, 0xFF808080);
+        fontRenderer.draw(poseStack, (progressTime / 20) + "s", background.getWidth() - stringWidth, 45, 0xFF808080);
     }
 
     @Override
@@ -81,7 +81,7 @@ public class UnstableConstructingCategory implements IRecipeCategory<UnstableCon
     }
     @Override
     public Component getTitle() {
-        return new TranslatableComponent(title);
+        return new TranslatableComponent(key);
     }
 
     @SuppressWarnings("removal")

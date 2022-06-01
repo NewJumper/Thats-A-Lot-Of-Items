@@ -29,27 +29,36 @@ public class PressingCategory implements IRecipeCategory<PressingRecipe> {
 
     private final IDrawable background;
     private final IDrawable icon;
-    private final LoadingCache<Integer, IDrawableAnimated> cachedArrows;
-    private final String title;
+    private final String key;
     private final int progressTime;
+    private final LoadingCache<Integer, IDrawableAnimated> pressUpper;
+    private final LoadingCache<Integer, IDrawableAnimated> pressLower;
 
-    public PressingCategory(IGuiHelper guiHelper, Block icon, String titleTranslation, int progress) {
+    public PressingCategory(IGuiHelper guiHelper, Block icon, String translationKey, int progress) {
         this.background = guiHelper.createDrawable(TEXTURE, 0, 108, 88, 55);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(icon));
-        this.cachedArrows = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
+        this.key = translationKey;
+        this.progressTime = progress;
+
+        this.pressUpper = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
                 return guiHelper.drawableBuilder(TEXTURE, 88, 108, 52, 17).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, false);
             }
         });
-        this.title = titleTranslation;
-        this.progressTime = progress;
+        this.pressLower = CacheBuilder.newBuilder().maximumSize(18).build(new CacheLoader<>() {
+            @Override
+            public IDrawableAnimated load(Integer time) {
+                return guiHelper.drawableBuilder(TEXTURE, 88, 125, 52, 17).buildAnimated(time, IDrawableAnimated.StartDirection.BOTTOM, false);
+            }
+        });
     }
 
     @Override
     public void draw(PressingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        getArrow().draw(stack, 0, 0);
-        drawCookTime(stack, 46);
+        getUpperPress().draw(stack, 0, 0);
+        getLowerPress().draw(stack, 0, 39);
+        drawCookTime(stack);
     }
 
     @Override
@@ -59,15 +68,17 @@ public class PressingCategory implements IRecipeCategory<PressingRecipe> {
         builder.addSlot(RecipeIngredientRole.OUTPUT, 67, 20).addItemStack(recipe.getResultItem());
     }
 
-    protected IDrawableAnimated getArrow() {
-        return this.cachedArrows.getUnchecked(progressTime / 2);
+    private IDrawableAnimated getUpperPress() {
+        return this.pressUpper.getUnchecked(progressTime / 2);
     }
-
-    protected void drawCookTime(PoseStack poseStack, int y) {
+    private IDrawableAnimated getLowerPress() {
+        return this.pressLower.getUnchecked(progressTime / 2);
+    }
+    private void drawCookTime(PoseStack poseStack) {
         Minecraft minecraft = Minecraft.getInstance();
         Font fontRenderer = minecraft.font;
         int stringWidth = fontRenderer.width((progressTime / 20) + "s");
-        fontRenderer.draw(poseStack, (progressTime / 20) + "s", background.getWidth() - stringWidth, y, 0xFF808080);
+        fontRenderer.draw(poseStack, (progressTime / 20) + "s", background.getWidth() - stringWidth, 46, 0xFF808080);
     }
 
     @Override
@@ -80,7 +91,7 @@ public class PressingCategory implements IRecipeCategory<PressingRecipe> {
     }
     @Override
     public Component getTitle() {
-        return new TranslatableComponent(title);
+        return new TranslatableComponent(key);
     }
 
     @SuppressWarnings("removal")
