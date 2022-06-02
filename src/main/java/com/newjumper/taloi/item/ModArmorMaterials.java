@@ -11,18 +11,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.of(ModItems.OSMIUM_INGOT.get());
-    }),
-    TUNGSTEN("tungsten", 39, new int[]{ 4, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.of(ModItems.TUNGSTEN_INGOT.get());
-    }),
-    SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> {
-        return Ingredient.of(ModItems.SERMIUM.get());
-    }),
-    FUTURITE("futurite", 42, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.2F, () -> {
-        return Ingredient.of(ModItems.FUTURITE.get());
-    });
+    OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.OSMIUM_INGOT.get())),
+    TUNGSTEN("tungsten", 39, new int[]{ 4, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.TUNGSTEN_INGOT.get())),
+    SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> Ingredient.of(ModItems.SERMIUM.get())),
+    FUTURITE("futurite", 42, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.2F, () -> Ingredient.of(ModItems.FUTURITE.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{ 13, 15, 16, 11 };
     private final String name;
