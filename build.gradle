@@ -105,6 +105,13 @@ dependencies {
 
     compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195")
+
+    compileOnly fg.deobf("mcjty.theoneprobe:theoneprobe:1.18-5.1.0-8:api") {
+        transitive = false
+    }
+    runtimeOnly fg.deobf("mcjty.theoneprobe:theoneprobe:1.18-5.1.0-8") {
+        transitive = false
+    }
 }
 
 jar {
