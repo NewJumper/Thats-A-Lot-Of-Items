@@ -1,15 +1,16 @@
 {
-  "type": "taloi:pressing",
-  "ingredients": [
-    {
-      "tag": "forge:ingots/silicon"
-    },
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
       "tag": "forge:ingots/silicon"
     }
-  ],
+  },
   "result": {
     "item": "taloi:silicon_plate"
-  },
-  "experience": 0.0
+  }
 }

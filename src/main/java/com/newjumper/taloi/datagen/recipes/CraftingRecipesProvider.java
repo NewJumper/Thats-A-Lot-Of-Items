@@ -12,6 +12,7 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -554,6 +555,23 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
         ShapelessRecipeBuilder.shapeless(ModItems.STEEL_INGOT.get(), 9)
                 .requires(ModBlocks.STEEL_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_steel_block"));
+        ShapelessRecipeBuilder.shapeless(ModItems.STEEL_INGOT.get(), 1)
+                .requires(Ingredient.of(Tags.Items.INGOTS_IRON), 2)
+                .requires(Items.COAL, 2)
+                .unlockedBy("has_material", has(Tags.Items.INGOTS_IRON)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.SILICON_PLATE.get(), 1)
+                .define('S', ModTags.Items.INGOTS_SILICON)
+                .pattern("S")
+                .pattern("S")
+                .pattern("S")
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_SILICON)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.STEEL_PLATE.get(), 1)
+                .define('S', ModTags.Items.INGOTS_STEEL)
+                .pattern("S")
+                .pattern("S")
+                .pattern("S")
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer);
 
         // IRIDIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SWORD.get(), 1)

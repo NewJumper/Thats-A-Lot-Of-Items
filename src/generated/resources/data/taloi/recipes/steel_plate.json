@@ -1,15 +1,16 @@
 {
-  "type": "taloi:pressing",
-  "ingredients": [
-    {
-      "tag": "forge:ingots/steel"
-    },
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
       "tag": "forge:ingots/steel"
     }
-  ],
+  },
   "result": {
     "item": "taloi:steel_plate"
-  },
-  "experience": 0.0
+  }
 }

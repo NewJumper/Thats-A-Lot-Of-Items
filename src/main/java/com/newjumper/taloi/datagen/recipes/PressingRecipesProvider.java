@@ -1,5 +1,6 @@
 package com.newjumper.taloi.datagen.recipes;
 
+import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.datagen.recipes.custom.PressingRecipeBuilder;
 import com.newjumper.taloi.datagen.recipes.custom.UnstablePressingRecipeBuilder;
 import com.newjumper.taloi.item.ModItems;
@@ -7,6 +8,7 @@ import com.newjumper.taloi.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -86,11 +88,11 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
 
         new PressingRecipeBuilder(ModItems.SILICON_PLATE.get(), 1, 0f)
                 .requires(ModTags.Items.INGOTS_SILICON, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOTS_SILICON)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_plate_from_pressing"));
 
         new PressingRecipeBuilder(ModItems.STEEL_PLATE.get(), 1, 0f)
                 .requires(ModTags.Items.INGOTS_STEEL, 2)
-                .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer);
+                .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_plate_from_pressing"));
 
         new PressingRecipeBuilder(ModItems.TUNGSTEN_PLATE.get(), 1, 0f)
                 .requires(ModTags.Items.INGOTS_TUNGSTEN, 2)
