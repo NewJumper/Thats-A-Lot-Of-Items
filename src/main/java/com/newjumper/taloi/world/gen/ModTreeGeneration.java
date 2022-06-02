@@ -18,11 +18,8 @@ public class ModTreeGeneration {
         ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.PLAINS)) {
-            List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-
-            base.add(ModPlacedFeatures.EVERGREEN_PLACED);
-            base.add(ModPlacedFeatures.WILLOW_PLACED);
-        }
+        List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+        if(types.contains(BiomeDictionary.Type.SNOWY)) base.add(ModPlacedFeatures.EVERGREEN_PLACED);
+        if(types.contains(BiomeDictionary.Type.SAVANNA)) base.add(ModPlacedFeatures.WILLOW_PLACED);
     }
 }
