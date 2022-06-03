@@ -5,35 +5,35 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTab {
-    public static final CreativeModeTab TALOI_BLOCK_TAB = new CreativeModeTab("taloi_block_tab") {
+    public static final CreativeModeTab TALOI_BLOCKS = new CreativeModeTab("taloi_blocks") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModBlocks.TUNGSTEN_BLOCK.get());
         }
     };
 
-    public static final CreativeModeTab TALOI_MACHINERY_TAB = new CreativeModeTab("taloi_machinery_tab") {
+    public static final CreativeModeTab TALOI_MACHINES = new CreativeModeTab("taloi_machines") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.ALPHA_CONSTRUCTOR.get());
+            return new ItemStack(ModBlocks.BETA_CONSTRUCTOR.get());
         }
     };
 
-    public static final CreativeModeTab TALOI_ITEM_TAB = new CreativeModeTab("taloi_item_tab") {
+    public static final CreativeModeTab TALOI_ITEMS = new CreativeModeTab("taloi_items") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.FUTURITE.get());
         }
     };
 
-    public static final CreativeModeTab TALOI_TOOL_TAB = new CreativeModeTab("taloi_tool_tab") {
+    public static final CreativeModeTab TALOI_TOOLS = new CreativeModeTab("taloi_tools") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.FUTURITE_PICKAXE.get());
         }
     };
 
-    public static final CreativeModeTab TALOI_COMBAT_TAB = new CreativeModeTab("taloi_combat_tab") {
+    public static final CreativeModeTab TALOI_COMBAT = new CreativeModeTab("taloi_combat") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.SERMIUM_CHESTPLATE.get());

@@ -19,11 +19,11 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add("itemGroup.taloi_block_tab", "TALOI Blocks");
-        add("itemGroup.taloi_machinery_tab", "TALOI Machinery");
-        add("itemGroup.taloi_item_tab", "TALOI Items");
-        add("itemGroup.taloi_tool_tab", "TALOI Tools");
-        add("itemGroup.taloi_combat_tab", "TALOI Combat");
+        add("itemGroup.taloi_blocks", "TALOI Blocks");
+        add("itemGroup.taloi_machines", "TALOI Machines");
+        add("itemGroup.taloi_items", "TALOI Items");
+        add("itemGroup.taloi_tools", "TALOI Tools");
+        add("itemGroup.taloi_combat", "TALOI Combat");
 
         ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(this::addBlock);
         ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).filter(item -> !(item instanceof BlockItem)).forEach(this::addItem);

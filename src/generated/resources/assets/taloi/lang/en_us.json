@@ -335,9 +335,9 @@
   "item.taloi.uranium_bit": "Uranium Bit",
   "item.taloi.zinc_ingot": "Zinc Ingot",
   "item.taloi.zinc_nugget": "Zinc Nugget",
-  "itemGroup.taloi_block_tab": "TALOI Blocks",
-  "itemGroup.taloi_combat_tab": "TALOI Combat",
-  "itemGroup.taloi_item_tab": "TALOI Items",
-  "itemGroup.taloi_machinery_tab": "TALOI Machinery",
-  "itemGroup.taloi_tool_tab": "TALOI Tools"
+  "itemGroup.taloi_blocks": "TALOI Blocks",
+  "itemGroup.taloi_combat": "TALOI Combat",
+  "itemGroup.taloi_items": "TALOI Items",
+  "itemGroup.taloi_machines": "TALOI Machines",
+  "itemGroup.taloi_tools": "TALOI Tools"
 }
