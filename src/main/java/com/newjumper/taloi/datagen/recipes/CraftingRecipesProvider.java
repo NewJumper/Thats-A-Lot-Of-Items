@@ -222,17 +222,17 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("BB")
                 .unlockedBy("has_material", has(Blocks.BAMBOO)).save(consumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.MALACHITE_BLOCK.get(), 3)
+        ShapedRecipeBuilder.shaped(ModBlocks.MALACHITE_BLOCK.get(), 2)
                 .define('M', ModItems.MALACHITE.get())
                 .pattern("MM")
                 .pattern("MM")
                 .unlockedBy("has_material", has(ModItems.MALACHITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.TANZANITE_BLOCK.get(), 3)
+        ShapedRecipeBuilder.shaped(ModBlocks.TANZANITE_BLOCK.get(), 2)
                 .define('T', ModItems.TANZANITE.get())
                 .pattern("TT")
                 .pattern("TT")
                 .unlockedBy("has_material", has(ModItems.TANZANITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.TOPAZ_BLOCK.get(), 3)
+        ShapedRecipeBuilder.shaped(ModBlocks.TOPAZ_BLOCK.get(), 2)
                 .define('T', ModItems.TOPAZ.get())
                 .pattern("TT")
                 .pattern("TT")
