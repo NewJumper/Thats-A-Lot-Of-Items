@@ -10,8 +10,8 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class ModPlacedFeatures {
     // TREES
-    public static final Holder<PlacedFeature> EVERGREEN_PLACED = PlacementUtils.register("evergreen_placed", ModConfiguredFeatures.EVERGREEN_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.2f, 1)));
-    public static final Holder<PlacedFeature> WILLOW_PLACED = PlacementUtils.register("willow_placed", ModConfiguredFeatures.WILLOW_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.2f, 1)));
+    public static final Holder<PlacedFeature> EVERGREEN_PLACED = PlacementUtils.register("evergreen_placed", ModConfiguredFeatures.EVERGREEN_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 1)));
+    public static final Holder<PlacedFeature> WILLOW_PLACED = PlacementUtils.register("willow_placed", ModConfiguredFeatures.WILLOW_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 1)));
 
     // NATURAL
     public static final Holder<PlacedFeature> ORE_LIMESTONE = PlacementUtils.register("ore_limestone", ModConfiguredFeatures.LIMESTONE, ModOrePlacement.commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(62))));
