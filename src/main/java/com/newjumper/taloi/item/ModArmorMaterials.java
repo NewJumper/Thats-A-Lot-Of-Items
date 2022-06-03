@@ -1,6 +1,7 @@
 package com.newjumper.taloi.item;
 
 import com.newjumper.taloi.ThatsALotOfItems;
+import com.newjumper.taloi.util.ModTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -11,10 +12,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.OSMIUM_INGOT.get())),
-    TUNGSTEN("tungsten", 39, new int[]{ 4, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.TUNGSTEN_INGOT.get())),
-    SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> Ingredient.of(ModItems.SERMIUM.get())),
-    FUTURITE("futurite", 42, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.2F, () -> Ingredient.of(ModItems.FUTURITE.get()));
+    PLATINUM("platinum", 37, new int[]{ 3, 6, 8, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_PLATINUM)),
+    IRIDIUM("iridium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_IRIDIUM)),
+    OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_OSMIUM)),
+    TUNGSTEN("tungsten", 39, new int[]{ 4, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_TUNGSTEN)),
+    SERMIUM("sermium", 42, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0f, 0.2f, () -> Ingredient.of(ModItems.SERMIUM.get())),
+    FUTURITE("futurite", 42, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0f, 0.2f, () -> Ingredient.of(ModItems.FUTURITE.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{ 13, 15, 16, 11 };
     private final String name;
