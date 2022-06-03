@@ -59,22 +59,22 @@ public class ModConfiguredFeatures {
 
     // ORES
     public static final List<OreConfiguration.TargetBlockState> ORE_ALUMINUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ALUMINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ALUMINUM_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM = FeatureUtils.register("aluminum_ore", Feature.ORE, new OreConfiguration(ORE_ALUMINUM_TARGET_LIST, 8));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM_LARGE = FeatureUtils.register("aluminum_ore_large", Feature.ORE, new OreConfiguration(ORE_ALUMINUM_TARGET_LIST, 10, 0.5f));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM = FeatureUtils.register("aluminum_ore", Feature.ORE, new OreConfiguration(ORE_ALUMINUM_TARGET_LIST, 7));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ALUMINUM_LARGE = FeatureUtils.register("aluminum_ore_large", Feature.ORE, new OreConfiguration(ORE_ALUMINUM_TARGET_LIST, 9, 0.5f));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_IRIDIUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.IRIDIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_IRIDIUM_ORE.get().defaultBlockState()));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_IRIDIUM = FeatureUtils.register("iridium_ore", Feature.ORE, new OreConfiguration(ORE_IRIDIUM_TARGET_LIST, 5));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_LEAD_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.LEAD_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_LEAD_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD = FeatureUtils.register("lead_ore", Feature.ORE, new OreConfiguration(ORE_LEAD_TARGET_LIST, 6));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD_LARGE = FeatureUtils.register("lead_ore_large", Feature.ORE, new OreConfiguration(ORE_LEAD_TARGET_LIST, 10));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD = FeatureUtils.register("lead_ore", Feature.ORE, new OreConfiguration(ORE_LEAD_TARGET_LIST, 5));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_LEAD_LARGE = FeatureUtils.register("lead_ore_large", Feature.ORE, new OreConfiguration(ORE_LEAD_TARGET_LIST, 7));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_MAGNESIUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MAGNESIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_MAGNESIUM_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_MAGNESIUM = FeatureUtils.register("magnesium_ore", Feature.ORE, new OreConfiguration(ORE_MAGNESIUM_TARGET_LIST, 10));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_MAGNESIUM = FeatureUtils.register("magnesium_ore", Feature.ORE, new OreConfiguration(ORE_MAGNESIUM_TARGET_LIST, 6));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_OSMIUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.OSMIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_OSMIUM_ORE.get().defaultBlockState()));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM = FeatureUtils.register("osmium_ore", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 4));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM_BURIED = FeatureUtils.register("osmium_ore_buried", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 5, 1f));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_OSMIUM_BURIED = FeatureUtils.register("osmium_ore_buried", Feature.ORE, new OreConfiguration(ORE_OSMIUM_TARGET_LIST, 5, 0.9f));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_PLATINUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.PLATINUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_PLATINUM_ORE.get().defaultBlockState()));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_PLATINUM = FeatureUtils.register("platinum_ore", Feature.ORE, new OreConfiguration(ORE_PLATINUM_TARGET_LIST, 4));
@@ -83,16 +83,16 @@ public class ModConfiguredFeatures {
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_SILICON = FeatureUtils.register("silicon_ore", Feature.ORE, new OreConfiguration(ORE_SILICON_TARGET_LIST, 5));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_TIN_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.TIN_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TIN_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN = FeatureUtils.register("tin_ore", Feature.ORE, new OreConfiguration(ORE_TIN_TARGET_LIST, 10));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN = FeatureUtils.register("tin_ore", Feature.ORE, new OreConfiguration(ORE_TIN_TARGET_LIST, 8));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_TUNGSTEN_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.TUNGSTEN_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get().defaultBlockState()));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TUNGSTEN = FeatureUtils.register("tungsten_ore", Feature.ORE, new OreConfiguration(ORE_TUNGSTEN_TARGET_LIST, 4));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TUNGSTEN_LARGE = FeatureUtils.register("tungsten_ore_large", Feature.ORE, new OreConfiguration(ORE_TUNGSTEN_TARGET_LIST, 7, 0.6f));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TUNGSTEN_LARGE = FeatureUtils.register("tungsten_ore_large", Feature.ORE, new OreConfiguration(ORE_TUNGSTEN_TARGET_LIST, 7, 0.8f));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_URANIUM_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.URANIUM_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_URANIUM_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM = FeatureUtils.register("uranium_ore", Feature.ORE, new OreConfiguration(ORE_URANIUM_TARGET_LIST, 6));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM_SMALL = FeatureUtils.register("uranium_ore_small", Feature.ORE, new OreConfiguration(ORE_URANIUM_TARGET_LIST, 2, 0.4f));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM = FeatureUtils.register("uranium_ore", Feature.ORE, new OreConfiguration(ORE_URANIUM_TARGET_LIST, 5));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_URANIUM_SMALL = FeatureUtils.register("uranium_ore_small", Feature.ORE, new OreConfiguration(ORE_URANIUM_TARGET_LIST, 2, 0.5f));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_ZINC_TARGET_LIST = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ZINC_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ZINC_ORE.get().defaultBlockState()));
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ZINC = FeatureUtils.register("zinc_ore", Feature.ORE, new OreConfiguration(ORE_ZINC_TARGET_LIST, 8));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ZINC = FeatureUtils.register("zinc_ore", Feature.ORE, new OreConfiguration(ORE_ZINC_TARGET_LIST, 7));
 }
