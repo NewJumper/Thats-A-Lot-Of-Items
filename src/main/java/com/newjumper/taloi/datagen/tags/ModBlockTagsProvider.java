@@ -28,18 +28,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.FENCE_GATES).add(ModBlocks.EVERGREEN_FENCE_GATE.get(), ModBlocks.WILLOW_FENCE_GATE.get());
         tag(BlockTags.LEAVES).add(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.WILLOW_LEAVES.get());
         tag(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.EVERGREEN_LOGS).addTag(ModTags.Blocks.WILLOW_LOGS);
-        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(), ModBlocks.PLATINUM_BLOCK.get(), ModBlocks.PLATINUM_ORE.get(), ModBlocks.RAW_PLATINUM_BLOCK.get(),
-                ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), ModBlocks.TUNGSTEN_BLOCK.get(), ModBlocks.TUNGSTEN_ORE.get(), ModBlocks.RAW_TUNGSTEN_BLOCK.get(),
-                ModBlocks.DEEPSLATE_URANIUM_ORE.get(), ModBlocks.URANIUM_BLOCK.get(), ModBlocks.URANIUM_ORE.get(), ModBlocks.RAW_URANIUM_BLOCK.get());
-        tag(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.DEEPSLATE_IRIDIUM_ORE.get(), ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.IRIDIUM_ORE.get(), ModBlocks.RAW_IRIDIUM_BLOCK.get(),
-                ModBlocks.DEEPSLATE_LEAD_ORE.get(), ModBlocks.LEAD_BLOCK.get(), ModBlocks.LEAD_ORE.get(), ModBlocks.RAW_LEAD_BLOCK.get(),
-                ModBlocks.DEEPSLATE_MAGNESIUM_ORE.get(), ModBlocks.MAGNESIUM_BLOCK.get(), ModBlocks.MAGNESIUM_ORE.get(), ModBlocks.RAW_MAGNESIUM_BLOCK.get(),
+        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(), ModBlocks.PLATINUM_ORE.get(), ModBlocks.DEEPSLATE_URANIUM_ORE.get(), ModBlocks.URANIUM_ORE.get(),
+                ModBlocks.DEEPSLATE_IRIDIUM_ORE.get(), ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.IRIDIUM_ORE.get(), ModBlocks.RAW_IRIDIUM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_OSMIUM_ORE.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.OSMIUM_ORE.get(), ModBlocks.RAW_OSMIUM_BLOCK.get(),
+                ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), ModBlocks.TUNGSTEN_BLOCK.get(), ModBlocks.TUNGSTEN_ORE.get(), ModBlocks.RAW_TUNGSTEN_BLOCK.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.DEEPSLATE_MAGNESIUM_ORE.get(), ModBlocks.MAGNESIUM_BLOCK.get(), ModBlocks.MAGNESIUM_ORE.get(), ModBlocks.RAW_MAGNESIUM_BLOCK.get(),
+                ModBlocks.PLATINUM_BLOCK.get(), ModBlocks.RAW_PLATINUM_BLOCK.get(), ModBlocks.URANIUM_BLOCK.get(), ModBlocks.RAW_URANIUM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_SILICON_ORE.get(), ModBlocks.SILICON_BLOCK.get(), ModBlocks.SILICON_ORE.get(), ModBlocks.RAW_SILICON_BLOCK.get(),
                 ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get(), ModBlocks.REINFORCED_IRON_BLOCK.get(), ModBlocks.RUSTED_REINFORCED_IRON_BLOCK.get());
         tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(),
                 ModBlocks.CHISELED_LIMESTONE_BRICKS.get(), ModBlocks.CHISELED_MARBLE.get(), ModBlocks.CHISELED_SLATE.get(),
                 ModBlocks.DEEPSLATE_ALUMINUM_ORE.get(), ModBlocks.ALUMINUM_BLOCK.get(), ModBlocks.ALUMINUM_ORE.get(), ModBlocks.RAW_ALUMINUM_BLOCK.get(),
+                ModBlocks.DEEPSLATE_LEAD_ORE.get(), ModBlocks.LEAD_BLOCK.get(), ModBlocks.LEAD_ORE.get(), ModBlocks.RAW_LEAD_BLOCK.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(), ModBlocks.TIN_BLOCK.get(), ModBlocks.TIN_ORE.get(), ModBlocks.RAW_TIN_BLOCK.get(),
                 ModBlocks.DEEPSLATE_ZINC_ORE.get(), ModBlocks.ZINC_BLOCK.get(), ModBlocks.ZINC_ORE.get(), ModBlocks.RAW_ZINC_BLOCK.get())
                 .addTag(ModTags.Blocks.MACHINES);

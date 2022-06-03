@@ -834,9 +834,9 @@ f7055048bf592f901dac62bad5259a332687362f data/forge/tags/items/storage_blocks/zi
 6ea07b760d4ee8670d2ddc5ce307008c7199afa0 data/minecraft/tags/blocks/mineable/axe.json
 5e3a71a3dc7cb51c78bde78a59dd5f1967e2e589 data/minecraft/tags/blocks/mineable/hoe.json
 6c43caded6465fab29c69254065a05cd56e55eb8 data/minecraft/tags/blocks/mineable/pickaxe.json
-f39d8e046c6b6ab26fc1f96a59b3cd97a8ce7441 data/minecraft/tags/blocks/needs_diamond_tool.json
-735cfa36d82806fccd2f8cbe5b8932db1ff035e6 data/minecraft/tags/blocks/needs_iron_tool.json
-f84c31d107b06fede59fddd62c35f132c3149389 data/minecraft/tags/blocks/needs_stone_tool.json
+6e88fb2765042adb05d87880189ae4be89fa0ad5 data/minecraft/tags/blocks/needs_diamond_tool.json
+8731ff830132a579720c9fb72fafadd172bbbec0 data/minecraft/tags/blocks/needs_iron_tool.json
+e37f31fe7a80f8cd23b7e77a0468f35feb1ddc96 data/minecraft/tags/blocks/needs_stone_tool.json
 54940b7bd7491ae4b2696085a4fc7e3561747553 data/minecraft/tags/blocks/planks.json
 f03ff957a8c20b62d0569bf0ca69e24c7a4f902b data/minecraft/tags/blocks/saplings.json
 f9cdb2364bd946d010c3a20a9d19273ffa2c049e data/minecraft/tags/blocks/slabs.json
