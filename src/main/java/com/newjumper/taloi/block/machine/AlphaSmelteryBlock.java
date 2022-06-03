@@ -13,8 +13,8 @@ import org.jetbrains.annotations.Nullable;
 public class AlphaSmelteryBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public AlphaSmelteryBlock(Properties properties) {
-        super(properties);
+    public AlphaSmelteryBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override

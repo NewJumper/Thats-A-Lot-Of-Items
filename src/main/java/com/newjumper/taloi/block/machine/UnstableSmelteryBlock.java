@@ -13,8 +13,8 @@ import org.jetbrains.annotations.Nullable;
 public class UnstableSmelteryBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public UnstableSmelteryBlock(Properties properties) {
-        super(properties);
+    public UnstableSmelteryBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override
