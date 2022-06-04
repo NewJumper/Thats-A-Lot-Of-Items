@@ -534,7 +534,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("###")
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
 
-        // BRONZE
+        // ALLOYS
         ShapedRecipeBuilder.shaped(ModBlocks.BRONZE_BLOCK.get(), 1)
                 .define('B', ModTags.Items.INGOTS_BRONZE)
                 .pattern("BBB")
@@ -545,7 +545,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(ModBlocks.BRONZE_BLOCK.get())
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_BRONZE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_bronze_block"));
 
-        // STEEL
         ShapedRecipeBuilder.shaped(ModBlocks.STEEL_BLOCK.get(), 1)
                 .define('S', ModTags.Items.INGOTS_STEEL)
                 .pattern("SSS")
@@ -559,6 +558,13 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(Ingredient.of(Tags.Items.INGOTS_IRON), 2)
                 .requires(Items.COAL, 2)
                 .unlockedBy("has_material", has(Tags.Items.INGOTS_IRON)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.FUTURITE.get(), 1)
+                .define('#', ModItems.FUTURITE_BIT.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_material", has(ModItems.FUTURITE_BIT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_from_futurite_bit"));
 
         ShapedRecipeBuilder.shaped(ModItems.SILICON_PLATE.get(), 1)
                 .define('S', ModTags.Items.INGOTS_SILICON)
@@ -576,7 +582,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
         // IRIDIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SWORD.get(), 1)
                 .define('X', ModTags.Items.INGOTS_IRIDIUM)
-                .define('#', Items.STICK)
+                .define('#', Tags.Items.RODS_WOODEN)
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
