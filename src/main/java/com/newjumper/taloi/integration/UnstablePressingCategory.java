@@ -57,7 +57,7 @@ public class UnstablePressingCategory implements IRecipeCategory<UnstablePressin
     @Override
     public void draw(UnstablePressingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
         getUpperPress().draw(stack, 3, 0);
-        getLowerPress().draw(stack, 3, 39);
+        getLowerPress().draw(stack, 3, 38);
         drawCookTime(stack);
     }
 

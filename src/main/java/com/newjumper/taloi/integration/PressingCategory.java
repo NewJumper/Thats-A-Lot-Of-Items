@@ -57,7 +57,7 @@ public class PressingCategory implements IRecipeCategory<PressingRecipe> {
     @Override
     public void draw(PressingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
         getUpperPress().draw(stack, 0, 0);
-        getLowerPress().draw(stack, 0, 39);
+        getLowerPress().draw(stack, 0, 38);
         drawCookTime(stack);
     }
 
