@@ -73,7 +73,7 @@ public class UnstablePressingCategory implements IRecipeCategory<UnstablePressin
         return this.pressUpper.getUnchecked(progressTime / 2);
     }
     private IDrawableAnimated getLowerPress() {
-        return this.pressUpper.getUnchecked(progressTime / 2);
+        return this.pressLower.getUnchecked(progressTime / 2);
     }
     private void drawCookTime(PoseStack poseStack) {
         Minecraft minecraft = Minecraft.getInstance();
