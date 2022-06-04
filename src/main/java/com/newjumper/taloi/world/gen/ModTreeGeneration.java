@@ -19,7 +19,7 @@ public class ModTreeGeneration {
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
         List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-        if(types.contains(BiomeDictionary.Type.FOREST)) base.add(ModPlacedFeatures.EVERGREEN_PLACED);
+        if(types.contains(BiomeDictionary.Type.CONIFEROUS)) base.add(ModPlacedFeatures.EVERGREEN_PLACED);
         if(types.contains(BiomeDictionary.Type.SAVANNA)) base.add(ModPlacedFeatures.WILLOW_PLACED);
     }
 }
