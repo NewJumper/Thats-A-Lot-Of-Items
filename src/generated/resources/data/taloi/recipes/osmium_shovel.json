@@ -10,7 +10,7 @@
       "tag": "forge:ingots/osmium"
     },
     "#": {
-      "item": "minecraft:stick"
+      "tag": "forge:rods/wooden"
     }
   },
   "result": {
