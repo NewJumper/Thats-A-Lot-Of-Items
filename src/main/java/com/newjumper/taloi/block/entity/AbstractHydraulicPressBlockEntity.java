@@ -1,12 +1,16 @@
 package com.newjumper.taloi.block.entity;
 
 import com.newjumper.taloi.recipe.PressingRecipe;
+import com.newjumper.taloi.screen.HydraulicPressMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -63,12 +67,17 @@ public abstract class AbstractHydraulicPressBlockEntity extends BlockEntity impl
         super(pType, pWorldPosition, pBlockState);
 
         this.recipeType = pRecipeType;
-        this.itemHandler = new ItemStackHandler(5) {
+        this.itemHandler = new ItemStackHandler(4) {
             @Override
             protected void onContentsChanged(int slot) {
                 setChanged();
             }
         };
+    }
+
+    @Override
+    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
+        return new HydraulicPressMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
