@@ -6,9 +6,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class UnstableProcessorBlockEntity extends ProcessorBlockEntity {
+public class UnstableProcessorBlockEntity extends AbstractProcessorBlockEntity {
     public UnstableProcessorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBlockEntities.UNSTABLE_PROCESSOR.get(), pWorldPosition, pBlockState, ProcessingRecipe.Type.INSTANCE, 4);
+        super(ModBlockEntities.UNSTABLE_PROCESSOR.get(), pWorldPosition, pBlockState, ProcessingRecipe.Type.INSTANCE);
         data.set(3, 60);
     }
 

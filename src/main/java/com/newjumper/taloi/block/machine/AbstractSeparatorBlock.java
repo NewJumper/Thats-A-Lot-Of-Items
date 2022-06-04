@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.machine;
 
-import com.newjumper.taloi.block.entity.SeparatorBlockEntity;
+import com.newjumper.taloi.block.entity.AbstractSeparatorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -53,8 +53,8 @@ public abstract class AbstractSeparatorBlock extends BaseEntityBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if(blockEntity instanceof SeparatorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (SeparatorBlockEntity)blockEntity, pPos);
+            if(blockEntity instanceof AbstractSeparatorBlockEntity) {
+                NetworkHooks.openGui(((ServerPlayer)pPlayer), (AbstractSeparatorBlockEntity)blockEntity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }
@@ -67,8 +67,8 @@ public abstract class AbstractSeparatorBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof SeparatorBlockEntity) {
-                ((SeparatorBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof AbstractSeparatorBlockEntity) {
+                ((AbstractSeparatorBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);

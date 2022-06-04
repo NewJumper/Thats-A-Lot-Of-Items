@@ -6,7 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class UnstableSeparatorBlockEntity extends SeparatorBlockEntity {
+public class UnstableSeparatorBlockEntity extends AbstractSeparatorBlockEntity {
     public UnstableSeparatorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.UNSTABLE_SEPARATOR.get(), pWorldPosition, pBlockState, SeparatingRecipe.Type.INSTANCE);
         data.set(3, 60);

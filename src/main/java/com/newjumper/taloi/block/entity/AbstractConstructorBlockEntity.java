@@ -1,23 +1,16 @@
 package com.newjumper.taloi.block.entity;
 
-import com.newjumper.taloi.recipe.ProcessingRecipe;
-import com.newjumper.taloi.screen.ProcessorMenu;
+import com.newjumper.taloi.recipe.ConstructingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -32,31 +25,31 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
-public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
+public abstract class AbstractConstructorBlockEntity extends BlockEntity implements MenuProvider {
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final ItemStackHandler itemHandler;
     private int litTime;
     private int maxLitTime;
     private int currentProgress;
     private int maxProgress;
-    private final RecipeType<? extends ProcessingRecipe> recipeType;
+    private final RecipeType<? extends ConstructingRecipe> recipeType;
     protected final ContainerData data = new ContainerData() {
         public int get(int index) {
             return switch (index) {
-                case 0 -> ProcessorBlockEntity.this.litTime;
-                case 1 -> ProcessorBlockEntity.this.maxLitTime;
-                case 2 -> ProcessorBlockEntity.this.currentProgress;
-                case 3 -> ProcessorBlockEntity.this.maxProgress;
+                case 0 -> AbstractConstructorBlockEntity.this.litTime;
+                case 1 -> AbstractConstructorBlockEntity.this.maxLitTime;
+                case 2 -> AbstractConstructorBlockEntity.this.currentProgress;
+                case 3 -> AbstractConstructorBlockEntity.this.maxProgress;
                 default -> 0;
             };
         }
 
         public void set(int index, int value) {
             switch (index) {
-                case 0 -> ProcessorBlockEntity.this.litTime = value;
-                case 1 -> ProcessorBlockEntity.this.maxLitTime = value;
-                case 2 -> ProcessorBlockEntity.this.currentProgress = value;
-                case 3 -> ProcessorBlockEntity.this.maxProgress = value;
+                case 0 -> AbstractConstructorBlockEntity.this.litTime = value;
+                case 1 -> AbstractConstructorBlockEntity.this.maxLitTime = value;
+                case 2 -> AbstractConstructorBlockEntity.this.currentProgress = value;
+                case 3 -> AbstractConstructorBlockEntity.this.maxProgress = value;
             }
         }
 
@@ -64,50 +57,38 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
             return 4;
         }
     };
-    private static int lastSlotIndex;
+    protected static int lastSlotIndex;
 
-    public ProcessorBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends ProcessingRecipe> pRecipeType, int slots) {
+    public AbstractConstructorBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends ConstructingRecipe> pRecipeType) {
         super(pType, pWorldPosition, pBlockState);
 
         this.recipeType = pRecipeType;
-        this.itemHandler = new ItemStackHandler(slots) {
+        this.itemHandler = new ItemStackHandler(5) {
             @Override
             protected void onContentsChanged(int slot) {
                 setChanged();
             }
         };
-
-        lastSlotIndex = slots - 1;
-    }
-
-    @Override
-    public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.ap");
-    }
-
-    @Override
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new ProcessorMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(@NotNull CompoundTag nbt) {
         super.saveAdditional(nbt);
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("processor.litTime", this.litTime);
-        nbt.putInt("processor.maxLitTime", this.maxLitTime);
-        nbt.putInt("processor.currentProgress", this.currentProgress);
-        nbt.putInt("processor.maxProgress", this.maxProgress);
+        nbt.putInt("constructor.litTime", this.litTime);
+        nbt.putInt("constructor.maxLitTime", this.maxLitTime);
+        nbt.putInt("constructor.currentProgress", this.currentProgress);
+        nbt.putInt("constructor.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("processor.litTime");
-        this.maxLitTime = nbt.getInt("processor.maxLitTime");
-        this.currentProgress = nbt.getInt("processor.currentProgress");
-        this.maxProgress = nbt.getInt("processor.maxProgress");
+        this.litTime = nbt.getInt("constructor.litTime");
+        this.maxLitTime = nbt.getInt("constructor.maxLitTime");
+        this.currentProgress = nbt.getInt("constructor.currentProgress");
+        this.maxProgress = nbt.getInt("constructor.maxProgress");
     }
 
     @Override
@@ -141,16 +122,16 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ProcessorBlockEntity pBlockEntity) {
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, AbstractConstructorBlockEntity pBlockEntity) {
         if(pBlockEntity.isLit()) pBlockEntity.litTime--;
-        if(canProcess(pBlockEntity) && !pBlockEntity.isLit()) {
+        if(canConstruct(pBlockEntity) && !pBlockEntity.isLit()) {
             int constant = pBlockEntity.getBurnDuration(pBlockEntity.itemHandler.getStackInSlot(0)) / 200;
             pBlockEntity.maxLitTime = pBlockEntity.maxProgress * constant;
             pBlockEntity.litTime = pBlockEntity.maxLitTime;
             pBlockEntity.itemHandler.extractItem(0, 1, false);
         }
 
-        if(canProcess(pBlockEntity) && pBlockEntity.isLit()) {
+        if(canConstruct(pBlockEntity) && pBlockEntity.isLit()) {
             pBlockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
 
@@ -161,7 +142,7 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
                     inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
                 }
 
-                Optional<? extends ProcessingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
+                Optional<? extends ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
                     for(int i = 1; i < lastSlotIndex; i++) {
                         pBlockEntity.itemHandler.extractItem(i, 1, false);
@@ -181,14 +162,14 @@ public class ProcessorBlockEntity extends BlockEntity implements MenuProvider {
         return this.litTime > 0;
     }
 
-    private static boolean canProcess(ProcessorBlockEntity pBlockEntity) {
+    private static boolean canConstruct(AbstractConstructorBlockEntity pBlockEntity) {
         Level level = pBlockEntity.level;
         SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
         for (int i = 0; i < pBlockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<? extends ProcessingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
+        Optional<? extends ConstructingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
         return match.isPresent() && hasValidOutput(inventory, match.get().getResultItem());
     }
 

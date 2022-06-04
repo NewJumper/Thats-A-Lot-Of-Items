@@ -1,12 +1,10 @@
 package com.newjumper.taloi.block.entity;
 
-import com.newjumper.taloi.recipe.PressingRecipe;
-import com.newjumper.taloi.screen.HydraulicPressMenu;
+import com.newjumper.taloi.recipe.SeparatingRecipe;
+import com.newjumper.taloi.screen.SeparatorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -17,7 +15,6 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -32,31 +29,31 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
-public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvider {
+public abstract class AbstractSeparatorBlockEntity extends BlockEntity implements MenuProvider {
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final ItemStackHandler itemHandler;
     private int litTime;
     private int maxLitTime;
     private int currentProgress;
     private int maxProgress;
-    private final RecipeType<? extends PressingRecipe> recipeType;
+    private final RecipeType<? extends SeparatingRecipe> recipeType;
     protected final ContainerData data = new ContainerData() {
         public int get(int index) {
             return switch (index) {
-                case 0 -> HydraulicPressBlockEntity.this.litTime;
-                case 1 -> HydraulicPressBlockEntity.this.maxLitTime;
-                case 2 -> HydraulicPressBlockEntity.this.currentProgress;
-                case 3 -> HydraulicPressBlockEntity.this.maxProgress;
+                case 0 -> AbstractSeparatorBlockEntity.this.litTime;
+                case 1 -> AbstractSeparatorBlockEntity.this.maxLitTime;
+                case 2 -> AbstractSeparatorBlockEntity.this.currentProgress;
+                case 3 -> AbstractSeparatorBlockEntity.this.maxProgress;
                 default -> 0;
             };
         }
 
         public void set(int index, int value) {
             switch (index) {
-                case 0 -> HydraulicPressBlockEntity.this.litTime = value;
-                case 1 -> HydraulicPressBlockEntity.this.maxLitTime = value;
-                case 2 -> HydraulicPressBlockEntity.this.currentProgress = value;
-                case 3 -> HydraulicPressBlockEntity.this.maxProgress = value;
+                case 0 -> AbstractSeparatorBlockEntity.this.litTime = value;
+                case 1 -> AbstractSeparatorBlockEntity.this.maxLitTime = value;
+                case 2 -> AbstractSeparatorBlockEntity.this.currentProgress = value;
+                case 3 -> AbstractSeparatorBlockEntity.this.maxProgress = value;
             }
         }
 
@@ -64,50 +61,42 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
             return 4;
         }
     };
-    private static int lastSlotIndex;
 
-    public HydraulicPressBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends PressingRecipe> pRecipeType, int slots) {
+    public AbstractSeparatorBlockEntity(BlockEntityType<?> pType, BlockPos pWorldPosition, BlockState pBlockState, RecipeType<? extends SeparatingRecipe> pRecipeType) {
         super(pType, pWorldPosition, pBlockState);
 
         this.recipeType = pRecipeType;
-        this.itemHandler = new ItemStackHandler(slots) {
+        this.itemHandler = new ItemStackHandler(4) {
             @Override
             protected void onContentsChanged(int slot) {
                 setChanged();
             }
         };
-
-        lastSlotIndex = slots - 1;
-    }
-
-    @Override
-    public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.ahp");
     }
 
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new HydraulicPressMenu(pContainerId, pInventory, this, this.data);
+        return new SeparatorMenu(pContainerId, pInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(@NotNull CompoundTag nbt) {
         super.saveAdditional(nbt);
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("press.litTime", this.litTime);
-        nbt.putInt("press.maxLitTime", this.maxLitTime);
-        nbt.putInt("press.currentProgress", this.currentProgress);
-        nbt.putInt("press.maxProgress", this.maxProgress);
+        nbt.putInt("separator.litTime", this.litTime);
+        nbt.putInt("separator.maxLitTime", this.maxLitTime);
+        nbt.putInt("separator.currentProgress", this.currentProgress);
+        nbt.putInt("separator.maxProgress", this.maxProgress);
     }
 
     @Override
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        this.litTime = nbt.getInt("press.litTime");
-        this.maxLitTime = nbt.getInt("press.maxLitTime");
-        this.currentProgress = nbt.getInt("press.currentProgress");
-        this.maxProgress = nbt.getInt("press.maxProgress");
+        this.litTime = nbt.getInt("separator.litTime");
+        this.maxLitTime = nbt.getInt("separator.maxLitTime");
+        this.currentProgress = nbt.getInt("separator.currentProgress");
+        this.maxProgress = nbt.getInt("separator.maxProgress");
     }
 
     @Override
@@ -141,16 +130,16 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, HydraulicPressBlockEntity pBlockEntity) {
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, AbstractSeparatorBlockEntity pBlockEntity) {
         if(pBlockEntity.isLit()) pBlockEntity.litTime--;
-        if(canPress(pBlockEntity) && !pBlockEntity.isLit()) {
+        if(canSeparate(pBlockEntity) && !pBlockEntity.isLit()) {
             int constant = pBlockEntity.getBurnDuration(pBlockEntity.itemHandler.getStackInSlot(0)) / 200;
             pBlockEntity.maxLitTime = pBlockEntity.maxProgress * constant;
             pBlockEntity.litTime = pBlockEntity.maxLitTime;
             pBlockEntity.itemHandler.extractItem(0, 1, false);
         }
 
-        if(canPress(pBlockEntity) && pBlockEntity.isLit()) {
+        if(canSeparate(pBlockEntity) && pBlockEntity.isLit()) {
             pBlockEntity.currentProgress++;
             setChanged(pLevel, pPos, pState);
 
@@ -161,13 +150,11 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
                     inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
                 }
 
-                Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
+                Optional<? extends SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
                 if(match.isPresent()) {
-                    for(int i = 1; i < lastSlotIndex; i++) {
-                        pBlockEntity.itemHandler.extractItem(i, 1, false);
-                    }
-
-                    pBlockEntity.itemHandler.setStackInSlot(lastSlotIndex, new ItemStack(match.get().getResultItem().getItem(), pBlockEntity.itemHandler.getStackInSlot(lastSlotIndex).getCount() + 1));
+                    pBlockEntity.itemHandler.extractItem(1,1, false);
+                    pBlockEntity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(), pBlockEntity.itemHandler.getStackInSlot(2).getCount() + 2));
+                    pBlockEntity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultOre().getItem(), pBlockEntity.itemHandler.getStackInSlot(3).getCount() + 1));
                     pBlockEntity.currentProgress = 0;
                 }
             }
@@ -181,20 +168,20 @@ public class HydraulicPressBlockEntity extends BlockEntity implements MenuProvid
         return this.litTime > 0;
     }
 
-    private static boolean canPress(HydraulicPressBlockEntity pBlockEntity) {
+    private static boolean canSeparate(AbstractSeparatorBlockEntity pBlockEntity) {
         Level level = pBlockEntity.level;
         SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
         for (int i = 0; i < pBlockEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, pBlockEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<? extends PressingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
-        return match.isPresent() && hasValidOutput(inventory, match.get().getResultItem());
+        Optional<? extends SeparatingRecipe> match = level.getRecipeManager().getRecipeFor(pBlockEntity.recipeType, inventory, level);
+        return match.isPresent() && hasValidOutput(inventory, match.get().getResultItem(), match.get().getResultOre());
     }
 
-    private static boolean hasValidOutput(SimpleContainer pContainer, ItemStack pResult) {
-        return (pContainer.getItem(lastSlotIndex).getItem() == pResult.getItem() || pContainer.getItem(lastSlotIndex).isEmpty()) &&
-               (pContainer.getItem(lastSlotIndex).getCount() < pContainer.getItem(lastSlotIndex).getMaxStackSize());
+    private static boolean hasValidOutput(SimpleContainer pContainer, ItemStack pResultOre, ItemStack pResultRaw) {
+        return ((pContainer.getItem(2).getItem() == pResultOre.getItem() || pContainer.getItem(2).isEmpty()) && (pContainer.getItem(3).getItem() == pResultRaw.getItem() || pContainer.getItem(3).isEmpty())) &&
+               ((pContainer.getItem(2).getCount() < pContainer.getItem(2).getMaxStackSize()) && (pContainer.getItem(3).getCount() < pContainer.getItem(3).getMaxStackSize()));
     }
 
     private int getBurnDuration(ItemStack pFuel) {
