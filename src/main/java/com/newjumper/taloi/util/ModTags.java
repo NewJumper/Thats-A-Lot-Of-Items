@@ -150,7 +150,7 @@ public class ModTags {
 
         // MACHINERY
         public static final TagKey<Item> PROCESSOR_BASE = taloiTag("machinery/processor_base");
-        public static final TagKey<Item> PROCESSOR_INGOTS = taloiTag("machinery/processor_ingots");
+        public static final TagKey<Item> PROCESSOR_RAW = taloiTag("machinery/processor_raw");
         public static final TagKey<Item> SEPARATOR_ORES = taloiTag("machinery/separator_ores");
 
         public static final TagKey<Item> CONCRETE_STAIRS = taloiTag("concrete_stairs");

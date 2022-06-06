@@ -1774,7 +1774,7 @@ c08fc986747c8bf4b2cdd65a917cfbd2bb3c355e data/taloi/tags/items/concrete_slabs.js
 edaab137df2b634e3e157e11adb79268bbdf220e data/taloi/tags/items/concrete_stairs.json
 202ff714d6a7f6bb8802ef3a14c2512895e83614 data/taloi/tags/items/evergreen_logs.json
 70727478f794edc5580b6886e78918012db9af11 data/taloi/tags/items/machinery/processor_base.json
-218d9a0f6df0a50c21c1bd7c8fe7f6f9ef35e70c data/taloi/tags/items/machinery/processor_ingots.json
+218d9a0f6df0a50c21c1bd7c8fe7f6f9ef35e70c data/taloi/tags/items/machinery/processor_raw.json
 92dfd4c04bb4390a4a848cb4b8070c407da7a9eb data/taloi/tags/items/machinery/separator_ores.json
 bb7bebab2d2d2670538d3972a48cac8a045092ed data/taloi/tags/items/taloi_ingots.json
 cf1683821d1531226538528b5eeeb896783fd791 data/taloi/tags/items/taloi_nuggets.json

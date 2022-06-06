@@ -119,7 +119,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModTags.Items.TALOI_NUGGETS).add(ModItems.ALUMINUM_NUGGET.get(), ModItems.IRIDIUM_NUGGET.get(), ModItems.LEAD_NUGGET.get(), ModItems.MAGNESIUM_NUGGET.get(), ModItems.OSMIUM_NUGGET.get(), ModItems.PLATINUM_NUGGET.get(), ModItems.TIN_NUGGET.get(), ModItems.TUNGSTEN_NUGGET.get(), ModItems.URANIUM_BIT.get(), ModItems.ZINC_NUGGET.get());
 
         tag(ModTags.Items.PROCESSOR_BASE).add(Items.COAL, Items.DIAMOND, Items.EMERALD, ModItems.FUTURITE_PLATE.get(), ModItems.SERMIUM_PLATE.get());
-        tag(ModTags.Items.PROCESSOR_INGOTS).add(ModItems.STEEL_INGOT.get()).addTag(Tags.Items.RAW_MATERIALS_IRON).addTag(Tags.Items.INGOTS_NETHERITE).addTag(ModTags.Items.RAW_LEAD).addTag(ModTags.Items.RAW_OSMIUM).addTag(ModTags.Items.RAW_URANIUM).addTag(ModTags.Items.RAW_TIN).addTag(ModTags.Items.RAW_TUNGSTEN).addTag(ModTags.Items.RAW_ZINC);
+        tag(ModTags.Items.PROCESSOR_RAW).add(ModItems.STEEL_INGOT.get()).addTag(Tags.Items.RAW_MATERIALS_IRON).addTag(Tags.Items.INGOTS_NETHERITE).addTag(ModTags.Items.RAW_LEAD).addTag(ModTags.Items.RAW_OSMIUM).addTag(ModTags.Items.RAW_URANIUM).addTag(ModTags.Items.RAW_TIN).addTag(ModTags.Items.RAW_TUNGSTEN).addTag(ModTags.Items.RAW_ZINC);
         tag(ModTags.Items.SEPARATOR_ORES).addTag(Tags.Items.ORES).addTag(ModTags.Items.TALOI_ORES);
     }
 }

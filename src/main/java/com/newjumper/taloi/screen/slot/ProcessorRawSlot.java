@@ -13,6 +13,6 @@ public class ProcessorIngotSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(@NotNull ItemStack stack) {
-        return stack.is(ModTags.Items.PROCESSOR_INGOTS);
+        return stack.is(ModTags.Items.PROCESSOR_RAW);
     }
 }
