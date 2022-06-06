@@ -1,5 +1,6 @@
 package com.newjumper.taloi.block.entity.machine;
 
+import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.recipe.ConstructingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

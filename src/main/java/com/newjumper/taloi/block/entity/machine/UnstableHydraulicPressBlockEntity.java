@@ -1,5 +1,6 @@
 package com.newjumper.taloi.block.entity.machine;
 
+import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.recipe.PressingRecipe;
 import com.newjumper.taloi.recipe.UnstablePressingRecipe;
 import com.newjumper.taloi.screen.UnstableHydraulicPressMenu;

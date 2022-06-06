@@ -2,7 +2,7 @@ package com.newjumper.taloi.datagen.lang;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.ModBlocks;
-import com.newjumper.taloi.block.entity.machine.ModBlockEntities;
+import com.newjumper.taloi.block.entity.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.BlockItem;

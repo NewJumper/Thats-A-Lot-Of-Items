@@ -1,7 +1,8 @@
-package com.newjumper.taloi.block.entity.machine;
+package com.newjumper.taloi.block.entity;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.entity.machine.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
