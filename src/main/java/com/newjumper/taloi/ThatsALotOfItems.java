@@ -2,7 +2,7 @@ package com.newjumper.taloi;
 
 import com.mojang.logging.LogUtils;
 import com.newjumper.taloi.block.ModBlocks;
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.machine.ModBlockEntities;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.painting.ModPaintings;
 import com.newjumper.taloi.recipe.ModRecipes;

@@ -2,7 +2,7 @@ package com.newjumper.taloi.block;
 
 import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.custom.*;
-import com.newjumper.taloi.block.machine.*;
+import com.newjumper.taloi.block.custom.machine.*;
 import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.world.features.tree.EvergreenTreeGrower;
