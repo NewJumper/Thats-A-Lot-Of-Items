@@ -7,6 +7,7 @@ import com.newjumper.taloi.item.ModCreativeModeTab;
 import com.newjumper.taloi.item.ModItems;
 import com.newjumper.taloi.world.features.tree.EvergreenTreeGrower;
 import com.newjumper.taloi.world.features.tree.WillowTreeGrower;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -544,17 +545,13 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
 
     // MISCELLANEOUS
-    public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new BouncyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(-1f)), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.JUMP, 20, 3), ModCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<Block> FEATHERY_BLOCK = registerBlock("feathery_block", () -> new FeatheryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(-1f)), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> FEATHERY_BLOCK = registerBlock("feathery_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.SLOW_FALLING, 80, 0), ModCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<Block> GRAVITY_BLOCK = registerBlock("gravity_block", () -> new GravityBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(-1f)), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> GRAVITY_BLOCK = registerBlock("gravity_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.LEVITATION, 140, 0), ModCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(-1f)), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.MOVEMENT_SPEED, 30, 2), ModCreativeModeTab.TALOI_BLOCKS);
 
     // register blocks
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
