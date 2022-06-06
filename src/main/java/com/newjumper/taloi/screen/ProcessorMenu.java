@@ -4,7 +4,7 @@ import com.newjumper.taloi.block.ModBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
 import com.newjumper.taloi.screen.slot.ProcessorBaseSlot;
-import com.newjumper.taloi.screen.slot.ProcessorIngotSlot;
+import com.newjumper.taloi.screen.slot.ProcessorRawSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -21,6 +21,7 @@ public class ProcessorMenu extends AbstractContainerMenu {
     private final BlockEntity blockEntity;
     private final ContainerData containerData;
     private final Level level;
+    private Slot rawSlot;
 
     public ProcessorMenu(int pContainerId, Inventory pInventory, FriendlyByteBuf pBuffer) {
         this(pContainerId, pInventory, pInventory.player.level.getBlockEntity(pBuffer.readBlockPos()), new SimpleContainerData(4));
@@ -38,7 +39,7 @@ public class ProcessorMenu extends AbstractContainerMenu {
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new ModFuelSlot(handler, 0, 41, 43));
             this.addSlot(new ProcessorBaseSlot(handler, 1, 76, 16));
-            this.addSlot(new ProcessorIngotSlot(handler, 2, 76, 54));
+            this.rawSlot = this.addSlot(new ProcessorRawSlot(handler, 2, 76, 54));
             this.addSlot(new ModResultSlot(handler, 3, 119, 35));
         });
 
@@ -111,5 +112,9 @@ public class ProcessorMenu extends AbstractContainerMenu {
         int litDuration = this.containerData.get(1);
 
         return litDuration != 0 && litTime != 0 ? (-13 * (litTime - litDuration)) / litDuration : 0;
+    }
+
+    public Slot getRawSlot() {
+        return this.rawSlot;
     }
 }
