@@ -566,6 +566,12 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("###")
                 .unlockedBy("has_material", has(ModItems.FUTURITE_BIT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_from_futurite_bit"));
 
+        ShapedRecipeBuilder.shaped(ModItems.COPPER_PLATE.get(), 1)
+                .define('C', Tags.Items.INGOTS_COPPER)
+                .pattern("C")
+                .pattern("C")
+                .pattern("C")
+                .unlockedBy("has_material", has(Tags.Items.INGOTS_COPPER)).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.SILICON_PLATE.get(), 1)
                 .define('S', ModTags.Items.INGOTS_SILICON)
                 .pattern("S")
