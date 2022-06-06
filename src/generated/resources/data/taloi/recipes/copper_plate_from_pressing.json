@@ -1,0 +1,15 @@
+{
+  "type": "taloi:pressing",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/copper"
+    },
+    {
+      "tag": "forge:ingots/copper"
+    }
+  ],
+  "result": {
+    "item": "taloi:copper_plate"
+  },
+  "experience": 0.0
+}

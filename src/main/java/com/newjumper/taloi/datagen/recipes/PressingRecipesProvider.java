@@ -37,7 +37,7 @@ public class PressingRecipesProvider extends RecipeProvider implements IConditio
 
         new PressingRecipeBuilder(ModItems.COPPER_PLATE.get(), 1, 0f)
                 .requires(Tags.Items.INGOTS_COPPER, 2)
-                .unlockedBy("has_material", has(Tags.Items.INGOTS_COPPER)).save(consumer);
+                .unlockedBy("has_material", has(Tags.Items.INGOTS_COPPER)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "copper_plate_from_pressing"));
 
         new PressingRecipeBuilder(ModItems.DIAMOND_PLATE.get(), 1, 0f)
                 .requires(Tags.Items.GEMS_DIAMOND, 2)
