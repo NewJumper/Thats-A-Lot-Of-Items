@@ -101,10 +101,10 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.47'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.48'
 
-    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195")
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.196:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.196")
 
     compileOnly fg.deobf("mcjty.theoneprobe:theoneprobe:1.18-5.1.0-8:api") {
         transitive = false
