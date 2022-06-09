@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(DataGenerator pGenerator, ExistingFileHelper existingFileHelper) {
+public class ModBlockStatesProvider extends BlockStateProvider {
+    public ModBlockStatesProvider(DataGenerator pGenerator, ExistingFileHelper existingFileHelper) {
         super(pGenerator, ThatsALotOfItems.MOD_ID, existingFileHelper);
     }
 
