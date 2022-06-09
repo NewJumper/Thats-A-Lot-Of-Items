@@ -1,8 +1,12 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "side": "taloi:block/unstable_hydraulic_press_side",
-    "front": "taloi:block/unstable_hydraulic_press_front",
-    "top": "taloi:block/hydraulic_press_top"
+    "down": "taloi:block/machine_bottom",
+    "up": "taloi:block/press_top",
+    "north": "taloi:block/unstable_press_front",
+    "south": "taloi:block/unstable_machine_back",
+    "east": "taloi:block/unstable_press_right",
+    "west": "taloi:block/unstable_press_left",
+    "particle": "taloi:block/press_top"
   }
 }
