@@ -1,8 +1,12 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "side": "taloi:block/beta_processor_side",
-    "front": "taloi:block/processor_front",
-    "top": "taloi:block/processor_top"
+    "down": "taloi:block/machine_bottom",
+    "up": "taloi:block/processor_top",
+    "north": "taloi:block/beta_processor_front",
+    "south": "taloi:block/beta_machine_back",
+    "east": "taloi:block/beta_processor_right",
+    "west": "taloi:block/beta_processor_left",
+    "particle": "taloi:block/processor_top"
   }
 }

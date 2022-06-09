@@ -166,9 +166,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_HYDRAULIC_PRESS.get(), models().cube("beta_hydraulic_press", modLoc("machine_bottom"), modLoc("press_top"), modLoc("beta_press_front"), modLoc("beta_machine_back"), modLoc("beta_press_right"), modLoc("beta_press_left")).texture("particle", modLoc("press_top")));
         horizontalBlock(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), models().cube("unstable_hydraulic_press", modLoc("machine_bottom"), modLoc("press_top"), modLoc("unstable_press_front"), modLoc("unstable_machine_back"), modLoc("unstable_press_right"), modLoc("unstable_press_left")).texture("particle", modLoc("press_top")));
 
-        horizontalBlock(ModBlocks.ALPHA_PROCESSOR.get(), modLoc("alpha_processor_side"), modLoc("processor_front"), modLoc("processor_top"));
-        horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), modLoc("beta_processor_side"), modLoc("processor_front"), modLoc("processor_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), modLoc("unstable_processor_side"), modLoc("unstable_processor_front"), modLoc("processor_top"));
+        horizontalBlock(ModBlocks.ALPHA_PROCESSOR.get(), models().cube("alpha_processor", modLoc("machine_bottom"), modLoc("processor_top"), modLoc("alpha_processor_front"), modLoc("alpha_machine_back"), modLoc("alpha_processor_right"), modLoc("alpha_processor_left")).texture("particle", modLoc("processor_top")));
+        horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), models().cube("beta_processor", modLoc("machine_bottom"), modLoc("processor_top"), modLoc("beta_processor_front"), modLoc("beta_machine_back"), modLoc("beta_processor_right"), modLoc("beta_processor_left")).texture("particle", modLoc("processor_top")));
+        horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), models().cube("unstable_processor", modLoc("machine_bottom"), modLoc("processor_top"), modLoc("unstable_processor_front"), modLoc("unstable_machine_back"), modLoc("unstable_processor_right"), modLoc("unstable_processor_left")).texture("particle", modLoc("processor_top")));
 
         horizontalBlock(ModBlocks.ALPHA_SEPARATOR.get(), modLoc("alpha_separator_side"), modLoc("separator_front"), modLoc("separator_top"));
         horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), modLoc("beta_separator_side"), modLoc("separator_front"), modLoc("separator_top"));
