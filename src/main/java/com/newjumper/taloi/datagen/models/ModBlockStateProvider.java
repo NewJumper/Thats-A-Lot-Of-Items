@@ -158,9 +158,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.STEEL_BLOCK.get());
 
         // MACHINERY
-        horizontalBlock(ModBlocks.ALPHA_CONSTRUCTOR.get(), models().cube("alpha_constructor", modLoc("constructor_bottom"), modLoc("constructor_top"), modLoc("alpha_constructor_front"), modLoc("alpha_constructor_back"), modLoc("alpha_constructor_right"), modLoc("alpha_constructor_left")).texture("particle", modLoc("constructor_top")));
-        horizontalBlock(ModBlocks.BETA_CONSTRUCTOR.get(), models().cube("beta_constructor", modLoc("constructor_bottom"), modLoc("constructor_top"), modLoc("beta_constructor_front"), modLoc("beta_constructor_back"), modLoc("beta_constructor_right"), modLoc("beta_constructor_left")).texture("particle", modLoc("constructor_top")));
-        horizontalBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), models().cube("unstable_constructor", modLoc("constructor_bottom"), modLoc("constructor_top"), modLoc("unstable_constructor_front"), modLoc("unstable_constructor_back"), modLoc("unstable_constructor_right"), modLoc("unstable_constructor_left")).texture("particle", modLoc("constructor_top")));
+        horizontalBlock(ModBlocks.ALPHA_CONSTRUCTOR.get(), models().cube("alpha_constructor", modLoc("machine_bottom"), modLoc("constructor_top"), modLoc("alpha_constructor_front"), modLoc("alpha_constructor_back"), modLoc("alpha_constructor_right"), modLoc("alpha_constructor_left")).texture("particle", modLoc("constructor_top")));
+        horizontalBlock(ModBlocks.BETA_CONSTRUCTOR.get(), models().cube("beta_constructor", modLoc("machine_bottom"), modLoc("constructor_top"), modLoc("beta_constructor_front"), modLoc("beta_constructor_back"), modLoc("beta_constructor_right"), modLoc("beta_constructor_left")).texture("particle", modLoc("constructor_top")));
+        horizontalBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), models().cube("unstable_constructor", modLoc("machine_bottom"), modLoc("constructor_top"), modLoc("unstable_constructor_front"), modLoc("unstable_constructor_back"), modLoc("unstable_constructor_right"), modLoc("unstable_constructor_left")).texture("particle", modLoc("constructor_top")));
 
         horizontalBlock(ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), modLoc("alpha_hydraulic_press_side"), modLoc("hydraulic_press_front"), modLoc("hydraulic_press_top"));
         horizontalBlock(ModBlocks.BETA_HYDRAULIC_PRESS.get(), modLoc("beta_hydraulic_press_side"), modLoc("hydraulic_press_front"), modLoc("hydraulic_press_top"));

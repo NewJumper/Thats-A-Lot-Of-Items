@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "taloi:block/constructor_bottom",
+    "down": "taloi:block/machine_bottom",
     "up": "taloi:block/constructor_top",
     "north": "taloi:block/beta_constructor_front",
     "south": "taloi:block/beta_constructor_back",
