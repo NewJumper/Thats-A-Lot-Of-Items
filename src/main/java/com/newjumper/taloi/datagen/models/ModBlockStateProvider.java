@@ -170,9 +170,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), models().cube("beta_processor", modLoc("machine_bottom"), modLoc("processor_top"), modLoc("beta_processor_front"), modLoc("beta_machine_back"), modLoc("beta_processor_right"), modLoc("beta_processor_left")).texture("particle", modLoc("processor_top")));
         horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), models().cube("unstable_processor", modLoc("machine_bottom"), modLoc("processor_top"), modLoc("unstable_processor_front"), modLoc("unstable_machine_back"), modLoc("unstable_processor_right"), modLoc("unstable_processor_left")).texture("particle", modLoc("processor_top")));
 
-        horizontalBlock(ModBlocks.ALPHA_SEPARATOR.get(), modLoc("alpha_separator_side"), modLoc("separator_front"), modLoc("separator_top"));
-        horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), modLoc("beta_separator_side"), modLoc("separator_front"), modLoc("separator_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), modLoc("unstable_separator_side"), modLoc("unstable_separator_front"), modLoc("separator_top"));
+        horizontalBlock(ModBlocks.ALPHA_SEPARATOR.get(), models().cube("alpha_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("alpha_separator_front"), modLoc("alpha_machine_back"), modLoc("alpha_separator_right"), modLoc("alpha_separator_left")).texture("particle", modLoc("separator_top")));
+        horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), models().cube("beta_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("beta_separator_front"), modLoc("beta_machine_back"), modLoc("beta_separator_right"), modLoc("beta_separator_left")).texture("particle", modLoc("separator_top")));
+        horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), models().cube("unstable_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("unstable_separator_front"), modLoc("unstable_machine_back"), modLoc("unstable_separator_right"), modLoc("unstable_separator_left")).texture("particle", modLoc("separator_top")));
 
         horizontalBlock(ModBlocks.ALPHA_SMELTERY.get(), modLoc("alpha_smeltery_side"), modLoc("smeltery_front"), modLoc("smeltery_top"));
         horizontalBlock(ModBlocks.BETA_SMELTERY.get(), modLoc("beta_smeltery_side"), modLoc("smeltery_front"), modLoc("smeltery_top"));
