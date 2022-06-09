@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "taloi:block/snowy_ice_top",
+    "side": "taloi:block/snowy_ice_side",
     "bottom": "taloi:block/snowy_ice_bottom",
-    "side": "taloi:block/snowy_ice_side"
+    "top": "taloi:block/snowy_ice_top"
   }
 }

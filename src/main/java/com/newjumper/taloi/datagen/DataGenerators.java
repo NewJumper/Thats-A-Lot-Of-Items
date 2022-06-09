@@ -31,8 +31,8 @@ public class DataGenerators {
         generator.addProvider(new ModLootTableProvider(generator));
 
         // models
-        generator.addProvider(new ModBlockStatesProvider(generator, fileHelper));
-        generator.addProvider(new ModItemModelsProvider(generator, fileHelper));
+        generator.addProvider(new ModBlockStateProvider(generator, fileHelper));
+        generator.addProvider(new ModItemModelProvider(generator, fileHelper));
 
         // recipes
         generator.addProvider(new CraftingRecipesProvider(generator));

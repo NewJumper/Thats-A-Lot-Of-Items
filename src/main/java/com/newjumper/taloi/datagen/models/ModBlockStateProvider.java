@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModBlockStatesProvider extends BlockStateProvider {
-    public ModBlockStatesProvider(DataGenerator pGenerator, ExistingFileHelper existingFileHelper) {
+public class ModBlockStateProvider extends BlockStateProvider {
+    public ModBlockStateProvider(DataGenerator pGenerator, ExistingFileHelper existingFileHelper) {
         super(pGenerator, ThatsALotOfItems.MOD_ID, existingFileHelper);
     }
 
@@ -17,33 +17,33 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         // EVERGREEN
         simpleBlock(ModBlocks.EVERGREEN_PLANKS.get());
-        simpleBlock(ModBlocks.EVERGREEN_SAPLING.get(), models().cross("evergreen_sapling", modLoc("block/evergreen_sapling")));
-        axisBlock(ModBlocks.EVERGREEN_LOG.get(), modLoc("block/evergreen_log"), modLoc("block/evergreen_log_top"));
-        axisBlock(ModBlocks.STRIPPED_EVERGREEN_LOG.get(), modLoc("block/stripped_evergreen_log"), modLoc("block/stripped_evergreen_log_top"));
-        simpleBlock(ModBlocks.STRIPPED_EVERGREEN_WOOD.get(), models().cubeAll("stripped_evergreen_wood", modLoc("block/stripped_evergreen_log")));
-        simpleBlock(ModBlocks.EVERGREEN_WOOD.get(), models().cubeAll("evergreen_wood", modLoc("block/evergreen_log")));
+        simpleBlock(ModBlocks.EVERGREEN_SAPLING.get(), models().cross("evergreen_sapling", modLoc("evergreen_sapling")));
+        axisBlock(ModBlocks.EVERGREEN_LOG.get(), modLoc("evergreen_log"), modLoc("evergreen_log_top"));
+        axisBlock(ModBlocks.STRIPPED_EVERGREEN_LOG.get(), modLoc("stripped_evergreen_log"), modLoc("stripped_evergreen_log_top"));
+        simpleBlock(ModBlocks.STRIPPED_EVERGREEN_WOOD.get(), models().cubeAll("stripped_evergreen_wood", modLoc("stripped_evergreen_log")));
+        simpleBlock(ModBlocks.EVERGREEN_WOOD.get(), models().cubeAll("evergreen_wood", modLoc("evergreen_log")));
         simpleBlock(ModBlocks.EVERGREEN_LEAVES.get());
-        slabBlock(ModBlocks.EVERGREEN_SLAB.get(), modLoc("block/evergreen_planks"), modLoc("block/evergreen_planks"));
-        fenceBlock(ModBlocks.EVERGREEN_FENCE.get(), modLoc("block/evergreen_planks"));
-        stairsBlock(ModBlocks.EVERGREEN_STAIRS.get(), modLoc("block/evergreen_planks"));
-        buttonBlock(ModBlocks.EVERGREEN_BUTTON.get(), modLoc("block/evergreen_planks"));
-        pressurePlateBlock(ModBlocks.EVERGREEN_PRESSURE_PLATE.get(), modLoc("block/evergreen_planks"));
-        fenceGateBlock(ModBlocks.EVERGREEN_FENCE_GATE.get(), modLoc("block/evergreen_planks"));
+        slabBlock(ModBlocks.EVERGREEN_SLAB.get(), modLoc("evergreen_planks"), modLoc("evergreen_planks"));
+        fenceBlock(ModBlocks.EVERGREEN_FENCE.get(), modLoc("evergreen_planks"));
+        stairsBlock(ModBlocks.EVERGREEN_STAIRS.get(), modLoc("evergreen_planks"));
+        buttonBlock(ModBlocks.EVERGREEN_BUTTON.get(), modLoc("evergreen_planks"));
+        pressurePlateBlock(ModBlocks.EVERGREEN_PRESSURE_PLATE.get(), modLoc("evergreen_planks"));
+        fenceGateBlock(ModBlocks.EVERGREEN_FENCE_GATE.get(), modLoc("evergreen_planks"));
 
         // WILLOW
         simpleBlock(ModBlocks.WILLOW_PLANKS.get());
-        simpleBlock(ModBlocks.WILLOW_SAPLING.get(), models().cross("willow_sapling", modLoc("block/willow_sapling")));
-        axisBlock(ModBlocks.WILLOW_LOG.get(), modLoc("block/willow_log"), modLoc("block/willow_log_top"));
-        axisBlock(ModBlocks.STRIPPED_WILLOW_LOG.get(), modLoc("block/stripped_willow_log"), modLoc("block/stripped_willow_log_top"));
-        simpleBlock(ModBlocks.STRIPPED_WILLOW_WOOD.get(), models().cubeAll("stripped_willow_wood", modLoc("block/stripped_willow_log")));
-        simpleBlock(ModBlocks.WILLOW_WOOD.get(), models().cubeAll("willow_wood", modLoc("block/willow_log")));
+        simpleBlock(ModBlocks.WILLOW_SAPLING.get(), models().cross("willow_sapling", modLoc("willow_sapling")));
+        axisBlock(ModBlocks.WILLOW_LOG.get(), modLoc("willow_log"), modLoc("willow_log_top"));
+        axisBlock(ModBlocks.STRIPPED_WILLOW_LOG.get(), modLoc("stripped_willow_log"), modLoc("stripped_willow_log_top"));
+        simpleBlock(ModBlocks.STRIPPED_WILLOW_WOOD.get(), models().cubeAll("stripped_willow_wood", modLoc("stripped_willow_log")));
+        simpleBlock(ModBlocks.WILLOW_WOOD.get(), models().cubeAll("willow_wood", modLoc("willow_log")));
         simpleBlock(ModBlocks.WILLOW_LEAVES.get());
-        slabBlock(ModBlocks.WILLOW_SLAB.get(), modLoc("block/willow_planks"), modLoc("block/willow_planks"));
-        fenceBlock(ModBlocks.WILLOW_FENCE.get(), modLoc("block/willow_planks"));
-        stairsBlock(ModBlocks.WILLOW_STAIRS.get(), modLoc("block/willow_planks"));
-        buttonBlock(ModBlocks.WILLOW_BUTTON.get(), modLoc("block/willow_planks"));
-        pressurePlateBlock(ModBlocks.WILLOW_PRESSURE_PLATE.get(), modLoc("block/willow_planks"));
-        fenceGateBlock(ModBlocks.WILLOW_FENCE_GATE.get(), modLoc("block/willow_planks"));
+        slabBlock(ModBlocks.WILLOW_SLAB.get(), modLoc("willow_planks"), modLoc("willow_planks"));
+        fenceBlock(ModBlocks.WILLOW_FENCE.get(), modLoc("willow_planks"));
+        stairsBlock(ModBlocks.WILLOW_STAIRS.get(), modLoc("willow_planks"));
+        buttonBlock(ModBlocks.WILLOW_BUTTON.get(), modLoc("willow_planks"));
+        pressurePlateBlock(ModBlocks.WILLOW_PRESSURE_PLATE.get(), modLoc("willow_planks"));
+        fenceGateBlock(ModBlocks.WILLOW_FENCE_GATE.get(), modLoc("willow_planks"));
 
         // NATURAL & DECORATION
         simpleBlock(ModBlocks.ASPHALT.get());
@@ -54,23 +54,23 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.SLATE_BRICKS.get());
         simpleBlock(ModBlocks.POLISHED_TUFF.get());
 
-        slabBlock(ModBlocks.LIMESTONE_SLAB.get(), modLoc("block/limestone"), modLoc("block/limestone"));
-        slabBlock(ModBlocks.LIMESTONE_BRICK_SLAB.get(), modLoc("block/limestone_bricks"), modLoc("block/limestone_bricks"));
-        slabBlock(ModBlocks.MARBLE_SLAB.get(), modLoc("block/marble"), modLoc("block/marble"));
-        slabBlock(ModBlocks.SLATE_SLAB.get(), modLoc("block/slate"), modLoc("block/slate"));
-        slabBlock(ModBlocks.SLATE_BRICK_SLAB.get(), modLoc("block/slate_bricks"), modLoc("block/slate_bricks"));
+        slabBlock(ModBlocks.LIMESTONE_SLAB.get(), modLoc("limestone"), modLoc("limestone"));
+        slabBlock(ModBlocks.LIMESTONE_BRICK_SLAB.get(), modLoc("limestone_bricks"), modLoc("limestone_bricks"));
+        slabBlock(ModBlocks.MARBLE_SLAB.get(), modLoc("marble"), modLoc("marble"));
+        slabBlock(ModBlocks.SLATE_SLAB.get(), modLoc("slate"), modLoc("slate"));
+        slabBlock(ModBlocks.SLATE_BRICK_SLAB.get(), modLoc("slate_bricks"), modLoc("slate_bricks"));
 
-        stairsBlock(ModBlocks.LIMESTONE_STAIRS.get(), modLoc("block/limestone"));
-        stairsBlock(ModBlocks.LIMESTONE_BRICK_STAIRS.get(), modLoc("block/limestone_bricks"));
-        stairsBlock(ModBlocks.MARBLE_STAIRS.get(), modLoc("block/marble"));
-        stairsBlock(ModBlocks.SLATE_STAIRS.get(), modLoc("block/slate"));
-        stairsBlock(ModBlocks.SLATE_BRICK_STAIRS.get(), modLoc("block/slate_bricks"));
+        stairsBlock(ModBlocks.LIMESTONE_STAIRS.get(), modLoc("limestone"));
+        stairsBlock(ModBlocks.LIMESTONE_BRICK_STAIRS.get(), modLoc("limestone_bricks"));
+        stairsBlock(ModBlocks.MARBLE_STAIRS.get(), modLoc("marble"));
+        stairsBlock(ModBlocks.SLATE_STAIRS.get(), modLoc("slate"));
+        stairsBlock(ModBlocks.SLATE_BRICK_STAIRS.get(), modLoc("slate_bricks"));
 
-        wallBlock(ModBlocks.LIMESTONE_WALL.get(), modLoc("block/limestone"));
-        wallBlock(ModBlocks.LIMESTONE_BRICK_WALL.get(), modLoc("block/limestone_bricks"));
-        wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("block/marble"));
-        wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("block/slate"));
-        wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("block/slate_bricks"));
+        wallBlock(ModBlocks.LIMESTONE_WALL.get(), modLoc("limestone"));
+        wallBlock(ModBlocks.LIMESTONE_BRICK_WALL.get(), modLoc("limestone_bricks"));
+        wallBlock(ModBlocks.MARBLE_WALL.get(), modLoc("marble"));
+        wallBlock(ModBlocks.SLATE_WALL.get(), modLoc("slate"));
+        wallBlock(ModBlocks.SLATE_BRICK_WALL.get(), modLoc("slate_bricks"));
 
         simpleBlock(ModBlocks.CHISELED_ANDESITE.get());
         simpleBlock(ModBlocks.CHISELED_DIORITE.get());
@@ -86,8 +86,10 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.REINFORCED_IRON_BLOCK.get());
         simpleBlock(ModBlocks.RUSTED_REINFORCED_IRON_BLOCK.get());
 
-        axisBlock(ModBlocks.BUNDLED_BAMBOO.get(), modLoc("block/bundled_bamboo_side"), modLoc("block/bundled_bamboo_top"));
+        axisBlock(ModBlocks.BUNDLED_BAMBOO.get(), modLoc("bundled_bamboo_side"), modLoc("bundled_bamboo_top"));
         simpleBlock(ModBlocks.BAMBOO_PLANKS.get());
+
+        simpleBlock(ModBlocks.SNOWY_ICE.get(), models().cubeBottomTop("snowy_ice", modLoc("snowy_ice_side"), modLoc("snowy_ice_bottom"), modLoc("snowy_ice_top")));
 
         simpleBlock(ModBlocks.MALACHITE_BLOCK.get());
         simpleBlock(ModBlocks.TANZANITE_BLOCK.get());
@@ -156,25 +158,25 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.STEEL_BLOCK.get());
 
         // MACHINERY
-//        horizontalBlock(ModBlocks.ALPHA_CONSTRUCTOR.get(), modLoc("block/alpha_constructor_side"), modLoc("block/constructor_front"), modLoc("block/constructor_top"));
-//        horizontalBlock(ModBlocks.BETA_CONSTRUCTOR.get(), modLoc("block/beta_constructor_side"), modLoc("block/constructor_front"), modLoc("block/constructor_top"));
-//        horizontalBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), modLoc("block/unstable_constructor_side"), modLoc("block/unstable_constructor_front"), modLoc("block/constructor_top"));
+        horizontalBlock(ModBlocks.ALPHA_CONSTRUCTOR.get(), models().cube("alpha_constructor", modLoc("constructor_bottom"), modLoc("constructor_top"), modLoc("alpha_constructor_front"), modLoc("alpha_constructor_back"), modLoc("alpha_constructor_right"), modLoc("alpha_constructor_left")).texture("particle", modLoc("constructor_top")));
+        horizontalBlock(ModBlocks.BETA_CONSTRUCTOR.get(), models().cube("beta_constructor", modLoc("constructor_bottom"), modLoc("constructor_top"), modLoc("beta_constructor_front"), modLoc("beta_constructor_back"), modLoc("beta_constructor_right"), modLoc("beta_constructor_left")).texture("particle", modLoc("constructor_top")));
+        horizontalBlock(ModBlocks.UNSTABLE_CONSTRUCTOR.get(), models().cube("unstable_constructor", modLoc("constructor_bottom"), modLoc("constructor_top"), modLoc("unstable_constructor_front"), modLoc("unstable_constructor_back"), modLoc("unstable_constructor_right"), modLoc("unstable_constructor_left")).texture("particle", modLoc("constructor_top")));
 
-        horizontalBlock(ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), modLoc("block/alpha_hydraulic_press_side"), modLoc("block/hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
-        horizontalBlock(ModBlocks.BETA_HYDRAULIC_PRESS.get(), modLoc("block/beta_hydraulic_press_side"), modLoc("block/hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), modLoc("block/unstable_hydraulic_press_side"), modLoc("block/unstable_hydraulic_press_front"), modLoc("block/hydraulic_press_top"));
+        horizontalBlock(ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), modLoc("alpha_hydraulic_press_side"), modLoc("hydraulic_press_front"), modLoc("hydraulic_press_top"));
+        horizontalBlock(ModBlocks.BETA_HYDRAULIC_PRESS.get(), modLoc("beta_hydraulic_press_side"), modLoc("hydraulic_press_front"), modLoc("hydraulic_press_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), modLoc("unstable_hydraulic_press_side"), modLoc("unstable_hydraulic_press_front"), modLoc("hydraulic_press_top"));
 
-        horizontalBlock(ModBlocks.ALPHA_PROCESSOR.get(), modLoc("block/alpha_processor_side"), modLoc("block/processor_front"), modLoc("block/processor_top"));
-        horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), modLoc("block/beta_processor_side"), modLoc("block/processor_front"), modLoc("block/processor_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), modLoc("block/unstable_processor_side"), modLoc("block/unstable_processor_front"), modLoc("block/processor_top"));
+        horizontalBlock(ModBlocks.ALPHA_PROCESSOR.get(), modLoc("alpha_processor_side"), modLoc("processor_front"), modLoc("processor_top"));
+        horizontalBlock(ModBlocks.BETA_PROCESSOR.get(), modLoc("beta_processor_side"), modLoc("processor_front"), modLoc("processor_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_PROCESSOR.get(), modLoc("unstable_processor_side"), modLoc("unstable_processor_front"), modLoc("processor_top"));
 
-        horizontalBlock(ModBlocks.ALPHA_SEPARATOR.get(), modLoc("block/alpha_separator_side"), modLoc("block/separator_front"), modLoc("block/separator_top"));
-        horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), modLoc("block/beta_separator_side"), modLoc("block/separator_front"), modLoc("block/separator_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), modLoc("block/unstable_separator_side"), modLoc("block/unstable_separator_front"), modLoc("block/separator_top"));
+        horizontalBlock(ModBlocks.ALPHA_SEPARATOR.get(), modLoc("alpha_separator_side"), modLoc("separator_front"), modLoc("separator_top"));
+        horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), modLoc("beta_separator_side"), modLoc("separator_front"), modLoc("separator_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), modLoc("unstable_separator_side"), modLoc("unstable_separator_front"), modLoc("separator_top"));
 
-        horizontalBlock(ModBlocks.ALPHA_SMELTERY.get(), modLoc("block/alpha_smeltery_side"), modLoc("block/smeltery_front"), modLoc("block/smeltery_top"));
-        horizontalBlock(ModBlocks.BETA_SMELTERY.get(), modLoc("block/beta_smeltery_side"), modLoc("block/smeltery_front"), modLoc("block/smeltery_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_SMELTERY.get(), modLoc("block/unstable_smeltery_side"), modLoc("block/unstable_smeltery_front"), modLoc("block/smeltery_top"));
+        horizontalBlock(ModBlocks.ALPHA_SMELTERY.get(), modLoc("alpha_smeltery_side"), modLoc("smeltery_front"), modLoc("smeltery_top"));
+        horizontalBlock(ModBlocks.BETA_SMELTERY.get(), modLoc("beta_smeltery_side"), modLoc("smeltery_front"), modLoc("smeltery_top"));
+        horizontalBlock(ModBlocks.UNSTABLE_SMELTERY.get(), modLoc("unstable_smeltery_side"), modLoc("unstable_smeltery_front"), modLoc("smeltery_top"));
 
         // CONCRETE
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));
@@ -248,5 +250,10 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     public void wallBlock(WallBlock block, ResourceLocation texture) {
         super.wallBlock(block, texture);
         models().wallInventory(block.getRegistryName().toString() + "_inventory", texture);
+    }
+
+    @Override
+    public ResourceLocation modLoc(String name) {
+        return super.modLoc("block/" + name);
     }
 }
