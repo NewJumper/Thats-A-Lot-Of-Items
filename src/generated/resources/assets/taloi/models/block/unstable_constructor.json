@@ -4,7 +4,7 @@
     "down": "taloi:block/machine_bottom",
     "up": "taloi:block/constructor_top",
     "north": "taloi:block/unstable_constructor_front",
-    "south": "taloi:block/unstable_constructor_back",
+    "south": "taloi:block/unstable_machine_back",
     "east": "taloi:block/unstable_constructor_right",
     "west": "taloi:block/unstable_constructor_left",
     "particle": "taloi:block/constructor_top"
