@@ -421,16 +421,6 @@ public class ModBlocks {
             .strength(4f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINES);
 
-    public static final RegistryObject<Block> ALPHA_SMELTERY = registerBlock("alpha_smeltery", () -> new AlphaSmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(3.5f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINES);
-    public static final RegistryObject<Block> BETA_SMELTERY = registerBlock("beta_smeltery", () -> new BetaSmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(3.5f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINES);
-    public static final RegistryObject<Block> UNSTABLE_SMELTERY = registerBlock("unstable_smeltery", () -> new UnstableSmelteryBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-            .strength(4f)
-            .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_MACHINES);
-
     // CONCRETE STAIRS & SLABS
     public static final RegistryObject<StairBlock> WHITE_CONCRETE_STAIRS = registerBlock("white_concrete_stairs", () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.of(Material.STONE)
             .strength(1.8f)

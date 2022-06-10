@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "side": "taloi:block/unstable_smeltery_side",
-    "front": "taloi:block/unstable_smeltery_front",
-    "top": "taloi:block/smeltery_top"
-  }
-}

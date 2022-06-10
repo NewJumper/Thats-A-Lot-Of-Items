@@ -12,9 +12,6 @@
     "taloi:unstable_processor",
     "taloi:alpha_separator",
     "taloi:beta_separator",
-    "taloi:unstable_separator",
-    "taloi:alpha_smeltery",
-    "taloi:beta_smeltery",
-    "taloi:unstable_smeltery"
+    "taloi:unstable_separator"
   ]
 }

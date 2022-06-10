@@ -101,8 +101,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.MACHINES).add(ModBlocks.ALPHA_CONSTRUCTOR.get(), ModBlocks.BETA_CONSTRUCTOR.get(), ModBlocks.UNSTABLE_CONSTRUCTOR.get(),
                 ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), ModBlocks.BETA_HYDRAULIC_PRESS.get(), ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(),
                 ModBlocks.ALPHA_PROCESSOR.get(), ModBlocks.BETA_PROCESSOR.get(), ModBlocks.UNSTABLE_PROCESSOR.get(),
-                ModBlocks.ALPHA_SEPARATOR.get(), ModBlocks.BETA_SEPARATOR.get(), ModBlocks.UNSTABLE_SEPARATOR.get(),
-                ModBlocks.ALPHA_SMELTERY.get(), ModBlocks.BETA_SMELTERY.get(), ModBlocks.UNSTABLE_SMELTERY.get());
+                ModBlocks.ALPHA_SEPARATOR.get(), ModBlocks.BETA_SEPARATOR.get(), ModBlocks.UNSTABLE_SEPARATOR.get());
 
         tag(ModTags.Blocks.CONCRETE_SLABS).add(ModBlocks.WHITE_CONCRETE_SLAB.get(), ModBlocks.ORANGE_CONCRETE_SLAB.get(), ModBlocks.MAGENTA_CONCRETE_SLAB.get(), ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), ModBlocks.YELLOW_CONCRETE_SLAB.get(), ModBlocks.LIME_CONCRETE_SLAB.get(), ModBlocks.PINK_CONCRETE_SLAB.get(), ModBlocks.GRAY_CONCRETE_SLAB.get(),
                 ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), ModBlocks.CYAN_CONCRETE_SLAB.get(), ModBlocks.PURPLE_CONCRETE_SLAB.get(), ModBlocks.BLUE_CONCRETE_SLAB.get(), ModBlocks.BROWN_CONCRETE_SLAB.get(), ModBlocks.GREEN_CONCRETE_SLAB.get(), ModBlocks.RED_CONCRETE_SLAB.get(), ModBlocks.BLACK_CONCRETE_SLAB.get());

@@ -174,10 +174,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), models().cube("beta_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("beta_separator_front"), modLoc("beta_machine_back"), modLoc("beta_separator_right"), modLoc("beta_separator_left")).texture("particle", modLoc("separator_top")));
         horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), models().cube("unstable_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("unstable_separator_front"), modLoc("unstable_machine_back"), modLoc("unstable_separator_right"), modLoc("unstable_separator_left")).texture("particle", modLoc("separator_top")));
 
-        horizontalBlock(ModBlocks.ALPHA_SMELTERY.get(), modLoc("alpha_smeltery_side"), modLoc("smeltery_front"), modLoc("smeltery_top"));
-        horizontalBlock(ModBlocks.BETA_SMELTERY.get(), modLoc("beta_smeltery_side"), modLoc("smeltery_front"), modLoc("smeltery_top"));
-        horizontalBlock(ModBlocks.UNSTABLE_SMELTERY.get(), modLoc("unstable_smeltery_side"), modLoc("unstable_smeltery_front"), modLoc("smeltery_top"));
-
         // CONCRETE
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));
         stairsBlock(ModBlocks.WHITE_CONCRETE_STAIRS.get(), mcLoc("block/white_concrete"));

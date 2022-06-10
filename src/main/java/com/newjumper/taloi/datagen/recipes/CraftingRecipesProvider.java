@@ -1030,41 +1030,6 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("FBF")
                 .unlockedBy("has_material", has(ModBlocks.BETA_SEPARATOR.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.ALPHA_SMELTERY.get(), 1)
-                .define('R', Tags.Items.DUSTS_REDSTONE)
-                .define('P', Items.BLAZE_POWDER)
-                .define('B', Blocks.BLAST_FURNACE)
-                .define('S', Blocks.SMOKER)
-                .define('F', Blocks.FURNACE)
-                .define('M', ModItems.ALPHA_MACHINE_FRAME.get())
-                .define('I', ModItems.SILICON_PLATE.get())
-                .pattern("RPR")
-                .pattern("BMS")
-                .pattern("IFI")
-                .unlockedBy("has_material", has(ModItems.ALPHA_MACHINE_FRAME.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.BETA_SMELTERY.get(), 1)
-                .define('G', Blocks.GLASS)
-                .define('E', ModItems.EMERALD_INFUSED_TUNGSTEN_INGOT.get())
-                .define('H', ModItems.HARDENED_CARBONITE.get())
-                .define('M', ModItems.BETA_MACHINE_FRAME.get())
-                .define('D', ModItems.DIAMOND_INFUSED_URANIUM.get())
-                .define('A', ModBlocks.ALPHA_SMELTERY.get())
-                .pattern("EHE")
-                .pattern("GMG")
-                .pattern("DAD")
-                .unlockedBy("has_material", has(ModBlocks.ALPHA_SMELTERY.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(ModBlocks.UNSTABLE_SMELTERY.get(), 1)
-                .define('I', ModItems.INDUCTION_PLATE.get())
-                .define('S', ModItems.SERMIUM_PLATE.get())
-                .define('T', ModItems.TUNGSTEN_PLATE.get())
-                .define('M', ModItems.UNSTABLE_MACHINE_FRAME.get())
-                .define('F', ModItems.FORGE_PLATE.get())
-                .define('B', ModBlocks.BETA_SMELTERY.get())
-                .pattern("ISI")
-                .pattern("TMT")
-                .pattern("FBF")
-                .unlockedBy("has_material", has(ModBlocks.BETA_SMELTERY.get())).save(consumer);
-
         // FOOD
         ShapedRecipeBuilder.shaped(ModItems.DIAMOND_APPLE.get(), 1)
                 .define('D', Tags.Items.GEMS_DIAMOND)
