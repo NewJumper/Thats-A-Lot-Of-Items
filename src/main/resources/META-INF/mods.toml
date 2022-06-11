@@ -4,7 +4,7 @@ license="AGPL-3.0"
 
 [[mods]]
     modId="taloi"
-    version="0.18.2"
+    version="0.19.0"
 
     displayName="That's A Lot Of Items"
     authors="NewJumper"
