@@ -1031,6 +1031,16 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(ModBlocks.BETA_SEPARATOR.get())).save(consumer);
 
         // FOOD
+        ShapelessRecipeBuilder.shapeless(ModItems.APPLE_PIE.get())
+                .requires(Items.APPLE)
+                .requires(Items.SUGAR)
+                .requires(Tags.Items.EGGS)
+                .unlockedBy("has_material", has(Items.APPLE)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(ModItems.BLUEBERRY_PIE.get())
+                .requires(ModItems.BLUEBERRIES.get())
+                .requires(Items.SUGAR)
+                .requires(Tags.Items.EGGS)
+                .unlockedBy("has_material", has(ModItems.BLUEBERRIES.get())).save(consumer);
         ShapedRecipeBuilder.shaped(ModItems.DIAMOND_APPLE.get(), 1)
                 .define('D', Tags.Items.GEMS_DIAMOND)
                 .define('G', Items.GOLDEN_APPLE)
@@ -1053,6 +1063,11 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(Items.BOWL)
                 .requires(Items.WHEAT, 3)
                 .unlockedBy("has_material", has(Items.BOWL)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(ModItems.SWEET_BERRY_PIE.get())
+                .requires(Items.SWEET_BERRIES)
+                .requires(Items.SUGAR)
+                .requires(Tags.Items.EGGS)
+                .unlockedBy("has_material", has(Items.SWEET_BERRIES)).save(consumer);
 
         // MISCELLANEOUS
         ShapelessRecipeBuilder.shapeless(Items.RED_DYE, 1)

@@ -370,11 +370,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("topaz").parent(itemGenerated).texture("layer0", "item/topaz");
 
         // FOOD
+        getBuilder("apple_pie").parent(itemGenerated).texture("layer0", "item/apple_pie");
         getBuilder("blueberries").parent(itemGenerated).texture("layer0", "item/blueberries");
+        getBuilder("blueberry_pie").parent(itemGenerated).texture("layer0", "item/blueberry_pie");
         getBuilder("destabilized_futurite_apple").parent(itemGenerated).texture("layer0", "item/destabilized_futurite_apple");
         getBuilder("diamond_apple").parent(itemGenerated).texture("layer0", "item/diamond_apple");
         getBuilder("futurite_apple").parent(itemGenerated).texture("layer0", "item/futurite_apple");
         getBuilder("rice_bowl").parent(itemGenerated).texture("layer0", "item/rice_bowl");
+        getBuilder("sweet_berry_pie").parent(itemGenerated).texture("layer0", "item/sweet_berry_pie");
         getBuilder("tomato").parent(itemGenerated).texture("layer0", "item/tomato");
 
         // MISCELLANEOUS

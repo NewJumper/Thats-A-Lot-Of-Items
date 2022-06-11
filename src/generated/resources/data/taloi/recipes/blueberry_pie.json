@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:blueberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "result": {
+    "item": "taloi:blueberry_pie"
+  }
+}

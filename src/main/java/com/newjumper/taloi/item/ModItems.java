@@ -174,8 +174,11 @@ public class ModItems {
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEMS)));
 
     // FOOD & CROPS
-    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new Item(new Item.Properties().food(Foods.SWEET_BERRIES).tab(ModCreativeModeTab.TALOI_ITEMS)));
+    public static final RegistryObject<Item> APPLE_PIE = ITEMS.register("apple_pie", () -> new Item(new Item.Properties().food(ModFoods.APPLE_PIE).tab(ModCreativeModeTab.TALOI_ITEMS)));
+    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new Item(new Item.Properties().food(ModFoods.BLUEBERRIES).tab(ModCreativeModeTab.TALOI_ITEMS)));
+    public static final RegistryObject<Item> BLUEBERRY_PIE = ITEMS.register("blueberry_pie", () -> new Item(new Item.Properties().food(ModFoods.BLUEBERRY_PIE).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () -> new BowlFoodItem(new Item.Properties().food(ModFoods.RICE_BOWL).stacksTo(1).tab(ModCreativeModeTab.TALOI_ITEMS)));
+    public static final RegistryObject<Item> SWEET_BERRY_PIE = ITEMS.register("sweet_berry_pie", () -> new Item(new Item.Properties().food(ModFoods.SWEET_BERRY_PIE).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().food(ModFoods.TOMATO).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> DIAMOND_APPLE = ITEMS.register("diamond_apple", () -> new Item(new Item.Properties().rarity(Rarity.RARE).food(ModFoods.DIAMOND_APPLE).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> DESTABILIZED_FUTURITE_APPLE = ITEMS.register("destabilized_futurite_apple", () -> new DestabilizedFuturiteAppleItem(new Item.Properties().rarity(Rarity.EPIC).food(ModFoods.FUTURITE_APPLE).stacksTo(32).tab(ModCreativeModeTab.TALOI_ITEMS)));
