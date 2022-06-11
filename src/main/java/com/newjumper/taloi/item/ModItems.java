@@ -4,6 +4,7 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.item.custom.*;
 import com.newjumper.taloi.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -173,6 +174,7 @@ public class ModItems {
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEMS)));
 
     // FOOD & CROPS
+    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new Item(new Item.Properties().food(Foods.SWEET_BERRIES).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl", () -> new BowlFoodItem(new Item.Properties().food(ModFoods.RICE_BOWL).stacksTo(1).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().food(ModFoods.TOMATO).tab(ModCreativeModeTab.TALOI_ITEMS)));
     public static final RegistryObject<Item> DIAMOND_APPLE = ITEMS.register("diamond_apple", () -> new Item(new Item.Properties().rarity(Rarity.RARE).food(ModFoods.DIAMOND_APPLE).tab(ModCreativeModeTab.TALOI_ITEMS)));

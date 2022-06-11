@@ -1058,6 +1058,9 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
         ShapelessRecipeBuilder.shapeless(Items.RED_DYE, 1)
                 .requires(Items.SWEET_BERRIES)
                 .unlockedBy("has_material", has(Items.SWEET_BERRIES)).save(consumer, "red_dye_from_sweet_berries");
+        ShapelessRecipeBuilder.shapeless(Items.BLUE_DYE, 1)
+                .requires(ModItems.BLUEBERRIES.get())
+                .unlockedBy("has_material", has(ModItems.BLUEBERRIES.get())).save(consumer, "blue_dye_from_blueberries");
 
         ShapedRecipeBuilder.shaped(ModItems.SERMIUM_CORE.get(), 2)
                 .define('C', Items.COAL)

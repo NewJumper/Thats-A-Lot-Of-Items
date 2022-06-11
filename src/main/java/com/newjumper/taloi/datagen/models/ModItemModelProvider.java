@@ -370,6 +370,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("topaz").parent(itemGenerated).texture("layer0", "item/topaz");
 
         // FOOD
+        getBuilder("blueberries").parent(itemGenerated).texture("layer0", "item/blueberries");
         getBuilder("destabilized_futurite_apple").parent(itemGenerated).texture("layer0", "item/destabilized_futurite_apple");
         getBuilder("diamond_apple").parent(itemGenerated).texture("layer0", "item/diamond_apple");
         getBuilder("futurite_apple").parent(itemGenerated).texture("layer0", "item/futurite_apple");
