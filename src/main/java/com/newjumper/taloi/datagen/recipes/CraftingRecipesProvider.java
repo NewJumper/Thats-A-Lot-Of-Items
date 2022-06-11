@@ -585,6 +585,43 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("S")
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_STEEL)).save(consumer);
 
+        // EMERALD TOOLS
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_SWORD.get(), 1)
+                .define('X', Tags.Items.GEMS_EMERALD)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("X")
+                .pattern("X")
+                .pattern("#")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_SHOVEL.get(), 1)
+                .define('X', Tags.Items.GEMS_EMERALD)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("X")
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_PICKAXE.get(), 1)
+                .define('X', Tags.Items.GEMS_EMERALD)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("XXX")
+                .pattern(" # ")
+                .pattern(" # ")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_AXE.get(), 1)
+                .define('X', Tags.Items.GEMS_EMERALD)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("XX")
+                .pattern("X#")
+                .pattern(" #")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_HOE.get(), 1)
+                .define('X', Tags.Items.GEMS_EMERALD)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("XX")
+                .pattern(" #")
+                .pattern(" #")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+
         // IRIDIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_SWORD.get(), 1)
                 .define('X', ModTags.Items.INGOTS_IRIDIUM)
@@ -732,6 +769,30 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern(" #")
                 .pattern(" #")
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_TUNGSTEN)).save(consumer);
+
+        // EMERALD ARMOR
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_HELMET.get(), 1)
+                .define('E', Tags.Items.GEMS_EMERALD)
+                .pattern("EEE")
+                .pattern("E E")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_CHESTPLATE.get(), 1)
+                .define('E', Tags.Items.GEMS_EMERALD)
+                .pattern("E E")
+                .pattern("EEE")
+                .pattern("EEE")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_LEGGINGS.get(), 1)
+                .define('E', Tags.Items.GEMS_EMERALD)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("E E")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.EMERALD_BOOTS.get(), 1)
+                .define('E', Tags.Items.GEMS_EMERALD)
+                .pattern("E E")
+                .pattern("E E")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_EMERALD)).save(consumer);
         
         // IRIDIUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.IRIDIUM_HELMET.get(), 1)

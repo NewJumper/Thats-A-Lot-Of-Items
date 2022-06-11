@@ -8,14 +8,16 @@ import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
+    EMERALD("emerald", 10, new int[]{ 2, 3, 5, 2 }, 24, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.of(Tags.Items.GEMS_EMERALD)),
     PLATINUM("platinum", 37, new int[]{ 3, 6, 8, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_PLATINUM)),
     IRIDIUM("iridium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_IRIDIUM)),
     OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_OSMIUM)),
-    TUNGSTEN("tungsten", 39, new int[]{ 4, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_TUNGSTEN)),
+    TUNGSTEN("tungsten", 39, new int[]{ 3, 7, 8, 4 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_TUNGSTEN)),
     SERMIUM("sermium", 41, new int[]{ 4, 7, 9, 4 }, 17, SoundEvents.ARMOR_EQUIP_NETHERITE, 4f, 0.2f, () -> Ingredient.of(ModItems.SERMIUM.get())),
     FUTURITE("futurite", 42, new int[]{ 5, 8, 10, 5 }, 19, SoundEvents.ARMOR_EQUIP_NETHERITE, 5f, 0.2f, () -> Ingredient.of(ModItems.FUTURITE.get()));
 
@@ -27,7 +29,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final SoundEvent sound;
     private final float toughness;
     private final float knockbackResistance;
-    private final LazyLoadedValue<Ingredient> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
 
     ModArmorMaterials(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
@@ -37,7 +39,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
         this.sound = sound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
-        this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
+        this.repairIngredient = repairIngredient;
     }
 
     public String getName() {

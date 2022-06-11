@@ -6,6 +6,7 @@ import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.Tags;
 
 public class ModTiers {
+    public static final ForgeTier EMERALD = new ForgeTier(0, 64, 13f, 0f, 22, Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(Tags.Items.GEMS_EMERALD));
     public static final ForgeTier PLATINUM = new ForgeTier(4, 2031, 9, 4f, 15, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(ModTags.Items.INGOTS_PLATINUM));
     public static final ForgeTier IRIDIUM = new ForgeTier(4, 2521, 11f, 4f, 16, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(ModTags.Items.INGOTS_IRIDIUM));
     public static final ForgeTier OSMIUM = new ForgeTier(4, 2521, 11f, 4f, 16, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(ModTags.Items.INGOTS_OSMIUM));
