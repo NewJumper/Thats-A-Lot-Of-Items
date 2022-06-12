@@ -15,8 +15,8 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = ThatsALotOfItems.MOD_ID)
 public class ModEvents {
     @SubscribeEvent
-    public static void addCustomTrades(WandererTradesEvent tradesEvent) {
-        List<VillagerTrades.ItemListing> wanderingTrades = tradesEvent.getRareTrades();
+    public static void addCustomTrades(WandererTradesEvent pTradesEvent) {
+        List<VillagerTrades.ItemListing> wanderingTrades = pTradesEvent.getRareTrades();
         ItemStack amethyst = new ItemStack(Items.AMETHYST_SHARD, 4);
         ItemStack malachite = new ItemStack(ModItems.MALACHITE.get(), 6);
         ItemStack tanzanite = new ItemStack(ModItems.TANZANITE.get(), 6);

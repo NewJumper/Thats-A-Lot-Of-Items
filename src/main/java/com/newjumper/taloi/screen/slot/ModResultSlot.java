@@ -11,7 +11,7 @@ public class ModResultSlot extends SlotItemHandler {
     }
 
     @Override
-    public boolean mayPlace(@NotNull ItemStack stack) {
+    public boolean mayPlace(@NotNull ItemStack pStack) {
         return false;
     }
 }

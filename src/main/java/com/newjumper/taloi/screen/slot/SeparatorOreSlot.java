@@ -12,7 +12,7 @@ public class SeparatorOreSlot extends SlotItemHandler {
     }
 
     @Override
-    public boolean mayPlace(@NotNull ItemStack stack) {
-        return stack.is(ModTags.Items.SEPARATOR_ORES);
+    public boolean mayPlace(@NotNull ItemStack pStack) {
+        return pStack.is(ModTags.Items.SEPARATOR_ORES);
     }
 }

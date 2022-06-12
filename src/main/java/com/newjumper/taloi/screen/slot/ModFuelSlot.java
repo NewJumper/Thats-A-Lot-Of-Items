@@ -12,7 +12,7 @@ public class ModFuelSlot extends SlotItemHandler {
     }
 
     @Override
-    public boolean mayPlace(@NotNull ItemStack stack) {
-        return AbstractFurnaceBlockEntity.isFuel(stack);
+    public boolean mayPlace(@NotNull ItemStack pStack) {
+        return AbstractFurnaceBlockEntity.isFuel(pStack);
     }
 }

@@ -17,22 +17,22 @@ import java.util.List;
 public class TheCavesAddition extends LootModifier {
     private final Item addition;
 
-    public TheCavesAddition(LootItemCondition[] conditionsIn, Item addition) {
-        super(conditionsIn);
-        this.addition = addition;
+    public TheCavesAddition(LootItemCondition[] pConditionsIn, Item pAddition) {
+        super(pConditionsIn);
+        this.addition = pAddition;
     }
 
     @Nonnull
     @Override
-    protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
-        if(context.getRandom().nextFloat() < 0.04)
-            generatedLoot.add(new ItemStack(addition, 1));
-        return generatedLoot;
+    protected List<ItemStack> doApply(List<ItemStack> pGeneratedLoot, LootContext pContext) {
+        if(pContext.getRandom().nextFloat() < 0.04)
+            pGeneratedLoot.add(new ItemStack(addition, 1));
+        return pGeneratedLoot;
     }
 
     public static class Serializer extends GlobalLootModifierSerializer<TheCavesAddition> {
         @Override
-        public TheCavesAddition read(ResourceLocation name, JsonObject object, LootItemCondition[] conditionsIn) {
+        public TheCavesAddition read(ResourceLocation location, JsonObject object, LootItemCondition[] conditionsIn) {
             Item addition = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "addition")));
             return new TheCavesAddition(conditionsIn, addition);
         }

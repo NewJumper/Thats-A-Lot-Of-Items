@@ -12,7 +12,7 @@ public class ProcessorRawSlot extends SlotItemHandler {
     }
 
     @Override
-    public boolean mayPlace(@NotNull ItemStack stack) {
-        return stack.is(ModTags.Items.PROCESSOR_RAW);
+    public boolean mayPlace(@NotNull ItemStack pStack) {
+        return pStack.is(ModTags.Items.PROCESSOR_RAW);
     }
 }

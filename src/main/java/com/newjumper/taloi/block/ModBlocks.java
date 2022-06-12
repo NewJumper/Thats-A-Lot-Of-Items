@@ -208,6 +208,7 @@ public class ModBlocks {
             .sound(SoundType.AMETHYST)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
 
+    // CONTAINERS
     public static final RegistryObject<Block> WOODEN_CRATE = registerBlock("wooden_crate", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
             .strength(2.5f)
             .sound(SoundType.WOOD)), ModCreativeModeTab.TALOI_BLOCKS);
@@ -535,23 +536,22 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
 
     // MISCELLANEOUS
-    public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.JUMP, 20, 3), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new EffectBlock(MobEffects.JUMP, 20, 3), ModCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<Block> FEATHERY_BLOCK = registerBlock("feathery_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.SLOW_FALLING, 80, 0), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> FEATHERY_BLOCK = registerBlock("feathery_block", () -> new EffectBlock(MobEffects.SLOW_FALLING, 80, 0), ModCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<Block> GRAVITY_BLOCK = registerBlock("gravity_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.LEVITATION, 140, 0), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> GRAVITY_BLOCK = registerBlock("gravity_block", () -> new EffectBlock(MobEffects.LEVITATION, 140, 0), ModCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () -> new EffectBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(-1f), MobEffects.MOVEMENT_SPEED, 30, 2), ModCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () -> new EffectBlock(MobEffects.MOVEMENT_SPEED, 30, 2), ModCreativeModeTab.TALOI_BLOCKS);
 
-    // register blocks
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> pBlock, CreativeModeTab pTab) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, pBlock);
+        registerBlockItem(name, toReturn, pTab);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> pBlock, CreativeModeTab pTab) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(pBlock.get(), new Item.Properties().tab(pTab)));
     }
 
     public static void register(IEventBus eventbus) {

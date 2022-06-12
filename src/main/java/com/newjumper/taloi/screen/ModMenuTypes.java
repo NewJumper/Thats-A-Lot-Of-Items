@@ -13,15 +13,15 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, ThatsALotOfItems.MOD_ID);
 
-    public static final RegistryObject<MenuType<ConstructorMenu>> CONSTRUCTOR_MENU = registerMenuType(ConstructorMenu::new, "constructor_menu");
-    public static final RegistryObject<MenuType<UnstableConstructorMenu>> UNSTABLE_CONSTRUCTOR_MENU = registerMenuType(UnstableConstructorMenu::new, "unstable_constructor_menu");
-    public static final RegistryObject<MenuType<HydraulicPressMenu>> HYDRAULIC_PRESS_MENU = registerMenuType(HydraulicPressMenu::new, "hydraulic_press_menu");
-    public static final RegistryObject<MenuType<UnstableHydraulicPressMenu>> UNSTABLE_HYDRAULIC_PRESS_MENU = registerMenuType(UnstableHydraulicPressMenu::new, "unstable_hydraulic_press_menu");
-    public static final RegistryObject<MenuType<ProcessorMenu>> PROCESSOR_MENU = registerMenuType(ProcessorMenu::new, "processor_menu");
-    public static final RegistryObject<MenuType<SeparatorMenu>> SEPARATOR_MENU = registerMenuType(SeparatorMenu::new, "separator_menu");
+    public static final RegistryObject<MenuType<ConstructorMenu>> CONSTRUCTOR_MENU = registerMenuType("constructor_menu", ConstructorMenu::new);
+    public static final RegistryObject<MenuType<UnstableConstructorMenu>> UNSTABLE_CONSTRUCTOR_MENU = registerMenuType("unstable_constructor_menu", UnstableConstructorMenu::new);
+    public static final RegistryObject<MenuType<HydraulicPressMenu>> HYDRAULIC_PRESS_MENU = registerMenuType("hydraulic_press_menu", HydraulicPressMenu::new);
+    public static final RegistryObject<MenuType<UnstableHydraulicPressMenu>> UNSTABLE_HYDRAULIC_PRESS_MENU = registerMenuType("unstable_hydraulic_press_menu", UnstableHydraulicPressMenu::new);
+    public static final RegistryObject<MenuType<ProcessorMenu>> PROCESSOR_MENU = registerMenuType("processor_menu", ProcessorMenu::new);
+    public static final RegistryObject<MenuType<SeparatorMenu>> SEPARATOR_MENU = registerMenuType("separator_menu", SeparatorMenu::new);
 
-    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
-        return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> pFactory) {
+        return MENUS.register(name, () -> IForgeMenuType.create(pFactory));
     }
 
     public static void register(IEventBus eventBus) {

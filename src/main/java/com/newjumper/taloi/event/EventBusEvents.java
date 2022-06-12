@@ -16,12 +16,12 @@ import javax.annotation.Nonnull;
 @Mod.EventBusSubscriber(modid = ThatsALotOfItems.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EventBusEvents {
     @SubscribeEvent
-    public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
-        event.getRegistry().registerAll(new TheCavesAddition.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"the_caves_from_dungeon")));
+    public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> pEvent) {
+        pEvent.getRegistry().registerAll(new TheCavesAddition.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"the_caves_from_dungeon")));
     }
 
     @SubscribeEvent
-    public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> registryEvent) {
+    public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> pRegistryEvent) {
         Registry.register(Registry.RECIPE_TYPE, "constructing", ConstructingRecipe.Type.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, "unstable_constructing", UnstableConstructingRecipe.Type.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, "pressing", PressingRecipe.Type.INSTANCE);

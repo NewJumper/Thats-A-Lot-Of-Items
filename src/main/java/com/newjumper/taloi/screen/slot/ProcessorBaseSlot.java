@@ -12,7 +12,7 @@ public class ProcessorBaseSlot extends SlotItemHandler {
     }
 
     @Override
-    public boolean mayPlace(@NotNull ItemStack stack) {
-        return stack.is(ModTags.Items.PROCESSOR_BASE);
+    public boolean mayPlace(@NotNull ItemStack pStack) {
+        return pStack.is(ModTags.Items.PROCESSOR_BASE);
     }
 }
