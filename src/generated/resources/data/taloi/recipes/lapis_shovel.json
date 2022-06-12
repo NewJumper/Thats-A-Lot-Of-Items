@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:gems/lapis"
+    },
+    "#": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "taloi:lapis_shovel"
+  }
+}

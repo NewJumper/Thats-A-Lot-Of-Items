@@ -4,7 +4,6 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.util.ModTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -14,6 +13,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     EMERALD("emerald", 10, new int[]{ 2, 3, 5, 2 }, 24, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.of(Tags.Items.GEMS_EMERALD)),
+    LAPIS("lapis", 10, new int[]{ 1, 4, 5, 2 }, 12, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(Tags.Items.GEMS_LAPIS)),
     PLATINUM("platinum", 37, new int[]{ 3, 6, 8, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_PLATINUM)),
     IRIDIUM("iridium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_IRIDIUM)),
     OSMIUM("osmium", 38, new int[]{ 3, 7, 8, 3 }, 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModTags.Items.INGOTS_OSMIUM)),

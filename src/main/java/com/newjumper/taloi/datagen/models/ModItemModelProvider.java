@@ -304,6 +304,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("iridium_leggings").parent(itemGenerated).texture("layer0", "item/iridium_leggings");
         getBuilder("iridium_boots").parent(itemGenerated).texture("layer0", "item/iridium_boots");
 
+        getBuilder("lapis_helmet").parent(itemGenerated).texture("layer0", "item/lapis_helmet");
+        getBuilder("lapis_chestplate").parent(itemGenerated).texture("layer0", "item/lapis_chestplate");
+        getBuilder("lapis_leggings").parent(itemGenerated).texture("layer0", "item/lapis_leggings");
+        getBuilder("lapis_boots").parent(itemGenerated).texture("layer0", "item/lapis_boots");
+
         getBuilder("osmium_helmet").parent(itemGenerated).texture("layer0", "item/osmium_helmet");
         getBuilder("osmium_chestplate").parent(itemGenerated).texture("layer0", "item/osmium_chestplate");
         getBuilder("osmium_leggings").parent(itemGenerated).texture("layer0", "item/osmium_leggings");
@@ -340,6 +345,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder("iridium_axe").parent(itemHandheld).texture("layer0", "item/iridium_axe");
         getBuilder("iridium_hoe").parent(itemHandheld).texture("layer0", "item/iridium_hoe");
 
+        getBuilder("lapis_shovel").parent(itemHandheld).texture("layer0", "item/lapis_shovel");
+        getBuilder("lapis_pickaxe").parent(itemHandheld).texture("layer0", "item/lapis_pickaxe");
+        getBuilder("lapis_axe").parent(itemHandheld).texture("layer0", "item/lapis_axe");
+        getBuilder("lapis_hoe").parent(itemHandheld).texture("layer0", "item/lapis_hoe");
+
         getBuilder("osmium_shovel").parent(itemHandheld).texture("layer0", "item/osmium_shovel");
         getBuilder("osmium_pickaxe").parent(itemHandheld).texture("layer0", "item/osmium_pickaxe");
         getBuilder("osmium_axe").parent(itemHandheld).texture("layer0", "item/osmium_axe");
@@ -366,6 +376,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         // WEAPONS
         getBuilder("emerald_sword").parent(itemHandheld).texture("layer0", "item/emerald_sword");
         getBuilder("iridium_sword").parent(itemHandheld).texture("layer0", "item/iridium_sword");
+        getBuilder("lapis_sword").parent(itemHandheld).texture("layer0", "item/lapis_sword");
         getBuilder("osmium_sword").parent(itemHandheld).texture("layer0", "item/osmium_sword");
         getBuilder("platinum_sword").parent(itemHandheld).texture("layer0", "item/platinum_sword");
         getBuilder("tungsten_sword").parent(itemHandheld).texture("layer0", "item/tungsten_sword");

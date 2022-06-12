@@ -659,6 +659,43 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern(" #")
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
 
+        // LAPIS TOOLS
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_SWORD.get(), 1)
+                .define('X', Tags.Items.GEMS_LAPIS)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("X")
+                .pattern("X")
+                .pattern("#")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_SHOVEL.get(), 1)
+                .define('X', Tags.Items.GEMS_LAPIS)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("X")
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_PICKAXE.get(), 1)
+                .define('X', Tags.Items.GEMS_LAPIS)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("XXX")
+                .pattern(" # ")
+                .pattern(" # ")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_AXE.get(), 1)
+                .define('X', Tags.Items.GEMS_LAPIS)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("XX")
+                .pattern("X#")
+                .pattern(" #")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_HOE.get(), 1)
+                .define('X', Tags.Items.GEMS_LAPIS)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("XX")
+                .pattern(" #")
+                .pattern(" #")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+
         // OSMIUM TOOLS
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_SWORD.get(), 1)
                 .define('X', ModTags.Items.INGOTS_OSMIUM)
@@ -817,6 +854,30 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("A A")
                 .pattern("A A")
                 .unlockedBy("has_material", has(ModTags.Items.INGOTS_IRIDIUM)).save(consumer);
+
+        // LAPIS ARMOR
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_HELMET.get(), 1)
+                .define('L', Tags.Items.GEMS_LAPIS)
+                .pattern("LLL")
+                .pattern("L L")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_CHESTPLATE.get(), 1)
+                .define('L', Tags.Items.GEMS_LAPIS)
+                .pattern("L L")
+                .pattern("LLL")
+                .pattern("LLL")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_LEGGINGS.get(), 1)
+                .define('L', Tags.Items.GEMS_LAPIS)
+                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.LAPIS_BOOTS.get(), 1)
+                .define('L', Tags.Items.GEMS_LAPIS)
+                .pattern("L L")
+                .pattern("L L")
+                .unlockedBy("has_material", has(Tags.Items.GEMS_LAPIS)).save(consumer);
 
         // OSMIUM ARMOR
         ShapedRecipeBuilder.shaped(ModItems.OSMIUM_HELMET.get(), 1)

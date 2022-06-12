@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "L L",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "forge:gems/lapis"
+    }
+  },
+  "result": {
+    "item": "taloi:lapis_chestplate"
+  }
+}
