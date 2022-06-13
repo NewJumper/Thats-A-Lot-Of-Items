@@ -7,7 +7,6 @@ import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -16,16 +15,13 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureCo
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.List;
-import java.util.OptionalInt;
 
 import static net.minecraft.data.worldgen.features.OreFeatures.NATURAL_STONE;
 

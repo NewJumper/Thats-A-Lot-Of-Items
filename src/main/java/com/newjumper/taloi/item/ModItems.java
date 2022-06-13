@@ -4,7 +4,6 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.item.custom.*;
 import com.newjumper.taloi.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

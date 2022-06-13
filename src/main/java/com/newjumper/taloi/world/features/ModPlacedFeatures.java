@@ -1,7 +1,6 @@
 package com.newjumper.taloi.world.features;
 
 import net.minecraft.core.Holder;
-import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.levelgen.VerticalAnchor;

@@ -1,7 +1,7 @@
 package com.newjumper.taloi.block.custom.machine;
 
-import com.newjumper.taloi.block.entity.machine.BetaHydraulicPressBlockEntity;
 import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.machine.BetaHydraulicPressBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;

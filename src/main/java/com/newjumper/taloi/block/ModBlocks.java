@@ -221,10 +221,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> ALUMINUM_ORE = registerBlock("aluminum_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> ALUMINUM_ORE = registerBlock("aluminum_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = registerBlock("deepslate_aluminum_ore", () -> new Block(BlockBehaviour.Properties.copy(ALUMINUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = registerBlock("deepslate_aluminum_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(ALUMINUM_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -235,10 +235,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> IRIDIUM_BLOCK = registerBlock("iridium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(11f, 11f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> IRIDIUM_ORE = registerBlock("iridium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> IRIDIUM_ORE = registerBlock("iridium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_IRIDIUM_ORE = registerBlock("deepslate_iridium_ore", () -> new Block(BlockBehaviour.Properties.copy(IRIDIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_IRIDIUM_ORE = registerBlock("deepslate_iridium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(IRIDIUM_ORE.get())
             .strength(10f, 8f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -249,10 +249,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> LEAD_BLOCK = registerBlock("lead_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> LEAD_ORE = registerBlock("lead_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> LEAD_ORE = registerBlock("lead_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore", () -> new Block(BlockBehaviour.Properties.copy(LEAD_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(LEAD_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -263,10 +263,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGNESIUM_BLOCK = registerBlock("magnesium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> MAGNESIUM_ORE = registerBlock("magnesium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> MAGNESIUM_ORE = registerBlock("magnesium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_MAGNESIUM_ORE = registerBlock("deepslate_magnesium_ore", () -> new Block(BlockBehaviour.Properties.copy(MAGNESIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_MAGNESIUM_ORE = registerBlock("deepslate_magnesium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(MAGNESIUM_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -277,10 +277,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> OSMIUM_BLOCK = registerBlock("osmium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(12f, 12f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> OSMIUM_ORE = registerBlock("osmium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> OSMIUM_ORE = registerBlock("osmium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(9f, 10f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_OSMIUM_ORE = registerBlock("deepslate_osmium_ore", () -> new Block(BlockBehaviour.Properties.copy(OSMIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_OSMIUM_ORE = registerBlock("deepslate_osmium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(OSMIUM_ORE.get())
             .strength(13f, 10f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -291,10 +291,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> PLATINUM_BLOCK = registerBlock("platinum_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(11f, 11f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore", () -> new Block(BlockBehaviour.Properties.copy(PLATINUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(PLATINUM_ORE.get())
             .strength(10f, 8f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -305,10 +305,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILICON_BLOCK = registerBlock("silicon_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> SILICON_ORE = registerBlock("silicon_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> SILICON_ORE = registerBlock("silicon_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_SILICON_ORE = registerBlock("deepslate_silicon_ore", () -> new Block(BlockBehaviour.Properties.copy(SILICON_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_SILICON_ORE = registerBlock("deepslate_silicon_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(SILICON_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -319,10 +319,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.copy(TIN_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(TIN_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -333,10 +333,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> TUNGSTEN_BLOCK = registerBlock("tungsten_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(10f, 10f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = registerBlock("deepslate_tungsten_ore", () -> new Block(BlockBehaviour.Properties.copy(TUNGSTEN_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = registerBlock("deepslate_tungsten_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(TUNGSTEN_ORE.get())
             .strength(10f, 8f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -347,10 +347,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(6f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore", () -> new Block(BlockBehaviour.Properties.copy(URANIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(URANIUM_ORE.get())
             .strength(8f, 6f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
@@ -361,10 +361,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> ZINC_BLOCK = registerBlock("zinc_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> ZINC_ORE = registerBlock("zinc_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> ZINC_ORE = registerBlock("zinc_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", () -> new Block(BlockBehaviour.Properties.copy(ZINC_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(ZINC_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), ModCreativeModeTab.TALOI_BLOCKS);
