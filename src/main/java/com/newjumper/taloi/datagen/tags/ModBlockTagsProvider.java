@@ -15,7 +15,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags() {
-        tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.BAMBOO_PLANKS.get(), ModBlocks.BUNDLED_BAMBOO.get(), ModBlocks.WOODEN_CRATE.get());
+        tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.BAMBOO_PLANKS.get(), ModBlocks.BUNDLED_BAMBOO.get(), ModBlocks.WOODEN_CRATE.get(),
+                ModBlocks.OAK_WOOD_SLAB.get(), ModBlocks.SPRUCE_WOOD_SLAB.get(), ModBlocks.BIRCH_WOOD_SLAB.get(), ModBlocks.JUNGLE_WOOD_SLAB.get(), ModBlocks.ACACIA_WOOD_SLAB.get(), ModBlocks.DARK_OAK_WOOD_SLAB.get(), ModBlocks.EVERGREEN_WOOD_SLAB.get(), ModBlocks.WILLOW_WOOD_SLAB.get(),
+                ModBlocks.OAK_WOOD_STAIRS.get(), ModBlocks.SPRUCE_WOOD_STAIRS.get(), ModBlocks.BIRCH_WOOD_STAIRS.get(), ModBlocks.JUNGLE_WOOD_STAIRS.get(), ModBlocks.ACACIA_WOOD_STAIRS.get(), ModBlocks.DARK_OAK_WOOD_STAIRS.get(), ModBlocks.EVERGREEN_WOOD_STAIRS.get(), ModBlocks.WILLOW_WOOD_STAIRS.get(),
+                ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), ModBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get(), ModBlocks.STRIPPED_BIRCH_WOOD_SLAB.get(), ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get(), ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(),
+                ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), ModBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get(), ModBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get(), ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get(), ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get());
         tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.WILLOW_LEAVES.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ASPHALT.get(), ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.MARBLE.get(), ModBlocks.SLATE.get(), ModBlocks.SLATE_BRICKS.get(), ModBlocks.POLISHED_TUFF.get(),
                 ModBlocks.CHISELED_ANDESITE.get(), ModBlocks.CHISELED_DIORITE.get(), ModBlocks.CHISELED_DRIPSTONE_BLOCK.get(), ModBlocks.CHISELED_GRANITE.get(), ModBlocks.CHISELED_LIMESTONE_BRICKS.get(), ModBlocks.CHISELED_MARBLE.get(), ModBlocks.CHISELED_SLATE.get(), ModBlocks.CHISELED_TUFF.get(),
@@ -27,7 +31,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.BEACON_BASE_BLOCKS).add(ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.MAGNESIUM_BLOCK.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.PLATINUM_BLOCK.get(), ModBlocks.TUNGSTEN_BLOCK.get(), ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.EVERGREEN_FENCE_GATE.get(), ModBlocks.WILLOW_FENCE_GATE.get());
         tag(BlockTags.LEAVES).add(ModBlocks.EVERGREEN_LEAVES.get(), ModBlocks.WILLOW_LEAVES.get());
-        tag(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.EVERGREEN_LOGS).addTag(ModTags.Blocks.WILLOW_LOGS);
+        tag(BlockTags.LOGS_THAT_BURN).add(ModBlocks.OAK_WOOD_SLAB.get(), ModBlocks.SPRUCE_WOOD_SLAB.get(), ModBlocks.BIRCH_WOOD_SLAB.get(), ModBlocks.JUNGLE_WOOD_SLAB.get(), ModBlocks.ACACIA_WOOD_SLAB.get(), ModBlocks.DARK_OAK_WOOD_SLAB.get(), ModBlocks.EVERGREEN_WOOD_SLAB.get(), ModBlocks.WILLOW_WOOD_SLAB.get(),
+                ModBlocks.OAK_WOOD_STAIRS.get(), ModBlocks.SPRUCE_WOOD_STAIRS.get(), ModBlocks.BIRCH_WOOD_STAIRS.get(), ModBlocks.JUNGLE_WOOD_STAIRS.get(), ModBlocks.ACACIA_WOOD_STAIRS.get(), ModBlocks.DARK_OAK_WOOD_STAIRS.get(), ModBlocks.EVERGREEN_WOOD_STAIRS.get(), ModBlocks.WILLOW_WOOD_STAIRS.get(),
+                ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), ModBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get(), ModBlocks.STRIPPED_BIRCH_WOOD_SLAB.get(), ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get(), ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(),
+                ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), ModBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get(), ModBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get(), ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get(), ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get())
+                .addTag(ModTags.Blocks.EVERGREEN_LOGS).addTag(ModTags.Blocks.WILLOW_LOGS);
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(), ModBlocks.PLATINUM_ORE.get(), ModBlocks.DEEPSLATE_URANIUM_ORE.get(), ModBlocks.URANIUM_ORE.get(),
                 ModBlocks.DEEPSLATE_IRIDIUM_ORE.get(), ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.IRIDIUM_ORE.get(), ModBlocks.RAW_IRIDIUM_BLOCK.get(),
                 ModBlocks.DEEPSLATE_OSMIUM_ORE.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.OSMIUM_ORE.get(), ModBlocks.RAW_OSMIUM_BLOCK.get(),
@@ -53,8 +61,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.WOODEN_BUTTONS).add(ModBlocks.EVERGREEN_BUTTON.get(), ModBlocks.WILLOW_BUTTON.get());
         tag(BlockTags.WOODEN_FENCES).add(ModBlocks.EVERGREEN_FENCE.get(), ModBlocks.WILLOW_FENCE.get());
         tag(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.EVERGREEN_PRESSURE_PLATE.get(), ModBlocks.WILLOW_PRESSURE_PLATE.get());
-        tag(BlockTags.WOODEN_SLABS).add(ModBlocks.EVERGREEN_SLAB.get(), ModBlocks.WILLOW_SLAB.get());
-        tag(BlockTags.WOODEN_STAIRS).add(ModBlocks.EVERGREEN_STAIRS.get(), ModBlocks.WILLOW_STAIRS.get());
+        tag(BlockTags.WOODEN_SLABS).add(ModBlocks.EVERGREEN_SLAB.get(), ModBlocks.WILLOW_SLAB.get(),
+                ModBlocks.OAK_WOOD_SLAB.get(), ModBlocks.SPRUCE_WOOD_SLAB.get(), ModBlocks.BIRCH_WOOD_SLAB.get(), ModBlocks.JUNGLE_WOOD_SLAB.get(), ModBlocks.ACACIA_WOOD_SLAB.get(), ModBlocks.DARK_OAK_WOOD_SLAB.get(), ModBlocks.EVERGREEN_WOOD_SLAB.get(), ModBlocks.WILLOW_WOOD_SLAB.get(),
+                ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), ModBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get(), ModBlocks.STRIPPED_BIRCH_WOOD_SLAB.get(), ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get(), ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get());
+        tag(BlockTags.WOODEN_STAIRS).add(ModBlocks.EVERGREEN_STAIRS.get(), ModBlocks.WILLOW_STAIRS.get(),
+                ModBlocks.OAK_WOOD_STAIRS.get(), ModBlocks.SPRUCE_WOOD_STAIRS.get(), ModBlocks.BIRCH_WOOD_STAIRS.get(), ModBlocks.JUNGLE_WOOD_STAIRS.get(), ModBlocks.ACACIA_WOOD_STAIRS.get(), ModBlocks.DARK_OAK_WOOD_STAIRS.get(), ModBlocks.EVERGREEN_WOOD_STAIRS.get(), ModBlocks.WILLOW_WOOD_STAIRS.get(),
+                ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), ModBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get(), ModBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get(), ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get(), ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get());
 
         tag(ModTags.Blocks.EVERGREEN_LOGS).add(ModBlocks.EVERGREEN_LOG.get(), ModBlocks.EVERGREEN_WOOD.get(), ModBlocks.STRIPPED_EVERGREEN_LOG.get(), ModBlocks.STRIPPED_EVERGREEN_WOOD.get());
         tag(ModTags.Blocks.WILLOW_LOGS).add(ModBlocks.WILLOW_LOG.get(), ModBlocks.WILLOW_WOOD.get(), ModBlocks.STRIPPED_WILLOW_LOG.get(), ModBlocks.STRIPPED_WILLOW_WOOD.get());

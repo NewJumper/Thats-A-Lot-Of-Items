@@ -29,6 +29,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock(ModBlocks.EVERGREEN_BUTTON.get(), modLoc("evergreen_planks"));
         pressurePlateBlock(ModBlocks.EVERGREEN_PRESSURE_PLATE.get(), modLoc("evergreen_planks"));
         fenceGateBlock(ModBlocks.EVERGREEN_FENCE_GATE.get(), modLoc("evergreen_planks"));
+        slabBlock(ModBlocks.EVERGREEN_WOOD_SLAB.get(), modLoc("evergreen_wood"), modLoc("evergreen_log"));
+        stairsBlock(ModBlocks.EVERGREEN_WOOD_STAIRS.get(), modLoc("evergreen_log"));
+        slabBlock(ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), modLoc("stripped_evergreen_wood"), modLoc("stripped_evergreen_log"));
+        stairsBlock(ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), modLoc("stripped_evergreen_log"));
 
         // WILLOW
         simpleBlock(ModBlocks.WILLOW_PLANKS.get());
@@ -44,6 +48,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock(ModBlocks.WILLOW_BUTTON.get(), modLoc("willow_planks"));
         pressurePlateBlock(ModBlocks.WILLOW_PRESSURE_PLATE.get(), modLoc("willow_planks"));
         fenceGateBlock(ModBlocks.WILLOW_FENCE_GATE.get(), modLoc("willow_planks"));
+        slabBlock(ModBlocks.WILLOW_WOOD_SLAB.get(), modLoc("willow_wood"), modLoc("willow_log"));
+        stairsBlock(ModBlocks.WILLOW_WOOD_STAIRS.get(), modLoc("willow_log"));
+        slabBlock(ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(), modLoc("stripped_willow_wood"), modLoc("stripped_willow_log"));
+        stairsBlock(ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get(), modLoc("stripped_willow_log"));
 
         // NATURAL & DECORATION
         simpleBlock(ModBlocks.ASPHALT.get());
@@ -174,52 +182,63 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(ModBlocks.BETA_SEPARATOR.get(), models().cube("beta_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("beta_separator_front"), modLoc("beta_machine_back"), modLoc("beta_separator_right"), modLoc("beta_separator_left")).texture("particle", modLoc("separator_top")));
         horizontalBlock(ModBlocks.UNSTABLE_SEPARATOR.get(), models().cube("unstable_separator", modLoc("machine_bottom"), modLoc("separator_top"), modLoc("unstable_separator_front"), modLoc("unstable_machine_back"), modLoc("unstable_separator_right"), modLoc("unstable_separator_left")).texture("particle", modLoc("separator_top")));
 
-        // CONCRETE
+        // VANILLA
+        stairsBlock(ModBlocks.OAK_WOOD_STAIRS.get(), mcLoc("block/oak_log"));
+        slabBlock(ModBlocks.OAK_WOOD_SLAB.get(), mcLoc("block/oak_wood"), mcLoc("block/oak_log"));
+        stairsBlock(ModBlocks.SPRUCE_WOOD_STAIRS.get(), mcLoc("block/spruce_log"));
+        slabBlock(ModBlocks.SPRUCE_WOOD_SLAB.get(), mcLoc("block/spruce_wood"), mcLoc("block/spruce_log"));
+        stairsBlock(ModBlocks.BIRCH_WOOD_STAIRS.get(), mcLoc("block/birch_log"));
+        slabBlock(ModBlocks.BIRCH_WOOD_SLAB.get(), mcLoc("block/birch_wood"), mcLoc("block/birch_log"));
+        stairsBlock(ModBlocks.JUNGLE_WOOD_STAIRS.get(), mcLoc("block/jungle_log"));
+        slabBlock(ModBlocks.JUNGLE_WOOD_SLAB.get(), mcLoc("block/jungle_wood"), mcLoc("block/jungle_log"));
+        stairsBlock(ModBlocks.ACACIA_WOOD_STAIRS.get(), mcLoc("block/acacia_log"));
+        slabBlock(ModBlocks.ACACIA_WOOD_SLAB.get(), mcLoc("block/acacia_wood"), mcLoc("block/acacia_log"));
+        stairsBlock(ModBlocks.DARK_OAK_WOOD_STAIRS.get(), mcLoc("block/dark_oak_log"));
+        slabBlock(ModBlocks.DARK_OAK_WOOD_SLAB.get(), mcLoc("block/dark_oak_wood"), mcLoc("block/dark_oak_log"));
+
+        stairsBlock(ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), mcLoc("block/stripped_oak_log"));
+        slabBlock(ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), mcLoc("block/stripped_oak_wood"), mcLoc("block/stripped_oak_log"));
+        stairsBlock(ModBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get(), mcLoc("block/stripped_spruce_log"));
+        slabBlock(ModBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get(), mcLoc("block/stripped_spruce_wood"), mcLoc("block/stripped_spruce_log"));
+        stairsBlock(ModBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get(), mcLoc("block/stripped_birch_log"));
+        slabBlock(ModBlocks.STRIPPED_BIRCH_WOOD_SLAB.get(), mcLoc("block/stripped_birch_wood"), mcLoc("block/stripped_birch_log"));
+        stairsBlock(ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get(), mcLoc("block/stripped_jungle_log"));
+        slabBlock(ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get(), mcLoc("block/stripped_jungle_wood"), mcLoc("block/stripped_jungle_log"));
+        stairsBlock(ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), mcLoc("block/stripped_acacia_log"));
+        slabBlock(ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), mcLoc("block/stripped_acacia_wood"), mcLoc("block/stripped_acacia_log"));
+        stairsBlock(ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), mcLoc("block/stripped_dark_oak_log"));
+        slabBlock(ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), mcLoc("block/stripped_dark_oak_wood"), mcLoc("block/stripped_dark_oak_log"));
+
         slabBlock(ModBlocks.WHITE_CONCRETE_SLAB.get(), mcLoc("block/white_concrete"), mcLoc("block/white_concrete"));
         stairsBlock(ModBlocks.WHITE_CONCRETE_STAIRS.get(), mcLoc("block/white_concrete"));
-
         slabBlock(ModBlocks.ORANGE_CONCRETE_SLAB.get(), mcLoc("block/orange_concrete"), mcLoc("block/orange_concrete"));
         stairsBlock(ModBlocks.ORANGE_CONCRETE_STAIRS.get(), mcLoc("block/orange_concrete"));
-
         slabBlock(ModBlocks.MAGENTA_CONCRETE_SLAB.get(), mcLoc("block/magenta_concrete"), mcLoc("block/magenta_concrete"));
         stairsBlock(ModBlocks.MAGENTA_CONCRETE_STAIRS.get(), mcLoc("block/magenta_concrete"));
-
         slabBlock(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), mcLoc("block/light_blue_concrete"), mcLoc("block/light_blue_concrete"));
         stairsBlock(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(), mcLoc("block/light_blue_concrete"));
-
         slabBlock(ModBlocks.YELLOW_CONCRETE_SLAB.get(), mcLoc("block/yellow_concrete"), mcLoc("block/yellow_concrete"));
         stairsBlock(ModBlocks.YELLOW_CONCRETE_STAIRS.get(), mcLoc("block/yellow_concrete"));
-
         slabBlock(ModBlocks.LIME_CONCRETE_SLAB.get(), mcLoc("block/lime_concrete"), mcLoc("block/lime_concrete"));
         stairsBlock(ModBlocks.LIME_CONCRETE_STAIRS.get(), mcLoc("block/lime_concrete"));
-
         slabBlock(ModBlocks.PINK_CONCRETE_SLAB.get(), mcLoc("block/pink_concrete"), mcLoc("block/pink_concrete"));
         stairsBlock(ModBlocks.PINK_CONCRETE_STAIRS.get(), mcLoc("block/pink_concrete"));
-
         slabBlock(ModBlocks.GRAY_CONCRETE_SLAB.get(), mcLoc("block/gray_concrete"), mcLoc("block/gray_concrete"));
         stairsBlock(ModBlocks.GRAY_CONCRETE_STAIRS.get(), mcLoc("block/gray_concrete"));
-
         slabBlock(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), mcLoc("block/light_gray_concrete"), mcLoc("block/light_gray_concrete"));
         stairsBlock(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(), mcLoc("block/light_gray_concrete"));
-
         slabBlock(ModBlocks.CYAN_CONCRETE_SLAB.get(), mcLoc("block/cyan_concrete"), mcLoc("block/cyan_concrete"));
         stairsBlock(ModBlocks.CYAN_CONCRETE_STAIRS.get(), mcLoc("block/cyan_concrete"));
-
         slabBlock(ModBlocks.PURPLE_CONCRETE_SLAB.get(), mcLoc("block/purple_concrete"), mcLoc("block/purple_concrete"));
         stairsBlock(ModBlocks.PURPLE_CONCRETE_STAIRS.get(), mcLoc("block/purple_concrete"));
-
         slabBlock(ModBlocks.BLUE_CONCRETE_SLAB.get(), mcLoc("block/blue_concrete"), mcLoc("block/blue_concrete"));
         stairsBlock(ModBlocks.BLUE_CONCRETE_STAIRS.get(), mcLoc("block/blue_concrete"));
-
         slabBlock(ModBlocks.BROWN_CONCRETE_SLAB.get(), mcLoc("block/brown_concrete"), mcLoc("block/brown_concrete"));
         stairsBlock(ModBlocks.BROWN_CONCRETE_STAIRS.get(), mcLoc("block/brown_concrete"));
-
         slabBlock(ModBlocks.GREEN_CONCRETE_SLAB.get(), mcLoc("block/green_concrete"), mcLoc("block/green_concrete"));
         stairsBlock(ModBlocks.GREEN_CONCRETE_STAIRS.get(), mcLoc("block/green_concrete"));
-
         slabBlock(ModBlocks.RED_CONCRETE_SLAB.get(), mcLoc("block/red_concrete"), mcLoc("block/red_concrete"));
         stairsBlock(ModBlocks.RED_CONCRETE_STAIRS.get(), mcLoc("block/red_concrete"));
-
         slabBlock(ModBlocks.BLACK_CONCRETE_SLAB.get(), mcLoc("block/black_concrete"), mcLoc("block/black_concrete"));
         stairsBlock(ModBlocks.BLACK_CONCRETE_STAIRS.get(), mcLoc("block/black_concrete"));
 

@@ -25,6 +25,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.EVERGREEN_BUTTON.get());
         this.dropSelf(ModBlocks.EVERGREEN_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.EVERGREEN_FENCE_GATE.get());
+        this.add(ModBlocks.EVERGREEN_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.EVERGREEN_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get());
 
         // WILLOW
         this.dropSelf(ModBlocks.WILLOW_PLANKS.get());
@@ -40,6 +44,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.WILLOW_BUTTON.get());
         this.dropSelf(ModBlocks.WILLOW_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.WILLOW_FENCE_GATE.get());
+        this.add(ModBlocks.WILLOW_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.WILLOW_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get());
 
         // NATURAL & DECORATION
         this.dropSelf(ModBlocks.ASPHALT.get());
@@ -170,39 +178,65 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.BETA_SEPARATOR.get());
         this.dropSelf(ModBlocks.UNSTABLE_SEPARATOR.get());
 
-        // CONCRETE
-        this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
+        // VANILLA
+        this.add(ModBlocks.OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.OAK_WOOD_STAIRS.get());
+        this.add(ModBlocks.SPRUCE_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.SPRUCE_WOOD_STAIRS.get());
+        this.add(ModBlocks.BIRCH_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.BIRCH_WOOD_STAIRS.get());
+        this.add(ModBlocks.JUNGLE_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.JUNGLE_WOOD_STAIRS.get());
+        this.add(ModBlocks.ACACIA_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.ACACIA_WOOD_STAIRS.get());
+        this.add(ModBlocks.DARK_OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.DARK_OAK_WOOD_STAIRS.get());
+
+        this.add(ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_BIRCH_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get());
+
         this.add(ModBlocks.WHITE_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
         this.add(ModBlocks.ORANGE_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
         this.add(ModBlocks.MAGENTA_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
         this.add(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
         this.add(ModBlocks.YELLOW_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.LIME_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
         this.add(ModBlocks.LIME_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.PINK_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIME_CONCRETE_STAIRS.get());
         this.add(ModBlocks.PINK_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.GRAY_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.PINK_CONCRETE_STAIRS.get());
         this.add(ModBlocks.GRAY_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.GRAY_CONCRETE_STAIRS.get());
         this.add(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.CYAN_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
         this.add(ModBlocks.CYAN_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.CYAN_CONCRETE_STAIRS.get());
         this.add(ModBlocks.PURPLE_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.BLUE_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
         this.add(ModBlocks.BLUE_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.BROWN_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.BLUE_CONCRETE_STAIRS.get());
         this.add(ModBlocks.BROWN_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.GREEN_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.BROWN_CONCRETE_STAIRS.get());
         this.add(ModBlocks.GREEN_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.RED_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.GREEN_CONCRETE_STAIRS.get());
         this.add(ModBlocks.RED_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
-        this.dropSelf(ModBlocks.BLACK_CONCRETE_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_CONCRETE_STAIRS.get());
         this.add(ModBlocks.BLACK_CONCRETE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.BLACK_CONCRETE_STAIRS.get());
 
         // MISCELLANEOUS
         this.dropSelf(ModBlocks.BOUNCY_BLOCK.get());

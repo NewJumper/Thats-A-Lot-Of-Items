@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "taloi:block/stripped_evergreen_log",
+    "bottom": "taloi:block/stripped_evergreen_log",
+    "top": "taloi:block/stripped_evergreen_log"
+  }
+}
