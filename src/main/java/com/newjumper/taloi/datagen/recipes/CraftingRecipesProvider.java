@@ -62,6 +62,26 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("SES")
                 .pattern("SES")
                 .unlockedBy("has_material", has(ModBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.EVERGREEN_WOOD_SLAB.get(), 6)
+                .define('E', ModBlocks.EVERGREEN_WOOD.get())
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.EVERGREEN_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.EVERGREEN_WOOD_STAIRS.get(), 4)
+                .define('E', ModBlocks.EVERGREEN_WOOD.get())
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.EVERGREEN_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), 6)
+                .define('E', ModBlocks.STRIPPED_EVERGREEN_WOOD.get())
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.STRIPPED_EVERGREEN_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), 4)
+                .define('E', ModBlocks.STRIPPED_EVERGREEN_WOOD.get())
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.STRIPPED_EVERGREEN_WOOD.get())).save(consumer);
 
         // WILLOW
         ShapedRecipeBuilder.shaped(ModBlocks.WILLOW_WOOD.get(), 3)
@@ -99,6 +119,26 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("SWS")
                 .pattern("SWS")
                 .unlockedBy("has_material", has(ModBlocks.WILLOW_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.WILLOW_WOOD_SLAB.get(), 6)
+                .define('E', ModBlocks.WILLOW_WOOD.get())
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.WILLOW_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.WILLOW_WOOD_STAIRS.get(), 4)
+                .define('E', ModBlocks.WILLOW_WOOD.get())
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.WILLOW_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(), 6)
+                .define('E', ModBlocks.STRIPPED_WILLOW_WOOD.get())
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.STRIPPED_WILLOW_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get(), 4)
+                .define('E', ModBlocks.STRIPPED_WILLOW_WOOD.get())
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .unlockedBy("has_material", has(ModBlocks.STRIPPED_WILLOW_WOOD.get())).save(consumer);
 
         // NATURAL & DECORATION
         ShapedRecipeBuilder.shaped(ModBlocks.ASPHALT.get(), 4)

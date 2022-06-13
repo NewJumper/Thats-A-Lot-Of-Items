@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E  ",
+    "EE ",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "taloi:stripped_willow_wood"
+    }
+  },
+  "result": {
+    "item": "taloi:stripped_willow_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "taloi:evergreen_wood"
+    }
+  },
+  "result": {
+    "item": "taloi:evergreen_wood_slab",
+    "count": 6
+  }
+}
