@@ -33,7 +33,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("evergreen_fence_gate", modLoc("block/evergreen_fence_gate"));
         withExistingParent("evergreen_wood_slab", modLoc("block/evergreen_wood_slab"));
         withExistingParent("evergreen_wood_stairs", modLoc("block/evergreen_wood_stairs"));
-
         withExistingParent("stripped_evergreen_wood_slab", modLoc("block/stripped_evergreen_wood_slab"));
         withExistingParent("stripped_evergreen_wood_stairs", modLoc("block/stripped_evergreen_wood_stairs"));
 
@@ -53,7 +52,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("willow_fence_gate", modLoc("block/willow_fence_gate"));
         withExistingParent("willow_wood_slab", modLoc("block/willow_wood_slab"));
         withExistingParent("willow_wood_stairs", modLoc("block/willow_wood_stairs"));
-
         withExistingParent("stripped_willow_wood_slab", modLoc("block/stripped_willow_wood_slab"));
         withExistingParent("stripped_willow_wood_stairs", modLoc("block/stripped_willow_wood_stairs"));
 
@@ -202,6 +200,39 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("stripped_acacia_wood_stairs", modLoc("block/stripped_acacia_wood_stairs"));
         withExistingParent("stripped_dark_oak_wood_slab", modLoc("block/stripped_dark_oak_wood_slab"));
         withExistingParent("stripped_dark_oak_wood_stairs", modLoc("block/stripped_dark_oak_wood_stairs"));
+
+        withExistingParent("white_terracotta_slab", modLoc("block/white_terracotta_slab"));
+        withExistingParent("white_terracotta_stairs", modLoc("block/white_terracotta_stairs"));
+        withExistingParent("orange_terracotta_slab", modLoc("block/orange_terracotta_slab"));
+        withExistingParent("orange_terracotta_stairs", modLoc("block/orange_terracotta_stairs"));
+        withExistingParent("magenta_terracotta_slab", modLoc("block/magenta_terracotta_slab"));
+        withExistingParent("magenta_terracotta_stairs", modLoc("block/magenta_terracotta_stairs"));
+        withExistingParent("light_blue_terracotta_slab", modLoc("block/light_blue_terracotta_slab"));
+        withExistingParent("light_blue_terracotta_stairs", modLoc("block/light_blue_terracotta_stairs"));
+        withExistingParent("yellow_terracotta_slab", modLoc("block/yellow_terracotta_slab"));
+        withExistingParent("yellow_terracotta_stairs", modLoc("block/yellow_terracotta_stairs"));
+        withExistingParent("lime_terracotta_slab", modLoc("block/lime_terracotta_slab"));
+        withExistingParent("lime_terracotta_stairs", modLoc("block/lime_terracotta_stairs"));
+        withExistingParent("pink_terracotta_slab", modLoc("block/pink_terracotta_slab"));
+        withExistingParent("pink_terracotta_stairs", modLoc("block/pink_terracotta_stairs"));
+        withExistingParent("gray_terracotta_slab", modLoc("block/gray_terracotta_slab"));
+        withExistingParent("gray_terracotta_stairs", modLoc("block/gray_terracotta_stairs"));
+        withExistingParent("light_gray_terracotta_slab", modLoc("block/light_gray_terracotta_slab"));
+        withExistingParent("light_gray_terracotta_stairs", modLoc("block/light_gray_terracotta_stairs"));
+        withExistingParent("cyan_terracotta_slab", modLoc("block/cyan_terracotta_slab"));
+        withExistingParent("cyan_terracotta_stairs", modLoc("block/cyan_terracotta_stairs"));
+        withExistingParent("purple_terracotta_slab", modLoc("block/purple_terracotta_slab"));
+        withExistingParent("purple_terracotta_stairs", modLoc("block/purple_terracotta_stairs"));
+        withExistingParent("blue_terracotta_slab", modLoc("block/blue_terracotta_slab"));
+        withExistingParent("blue_terracotta_stairs", modLoc("block/blue_terracotta_stairs"));
+        withExistingParent("brown_terracotta_slab", modLoc("block/brown_terracotta_slab"));
+        withExistingParent("brown_terracotta_stairs", modLoc("block/brown_terracotta_stairs"));
+        withExistingParent("green_terracotta_slab", modLoc("block/green_terracotta_slab"));
+        withExistingParent("green_terracotta_stairs", modLoc("block/green_terracotta_stairs"));
+        withExistingParent("red_terracotta_slab", modLoc("block/red_terracotta_slab"));
+        withExistingParent("red_terracotta_stairs", modLoc("block/red_terracotta_stairs"));
+        withExistingParent("black_terracotta_slab", modLoc("block/black_terracotta_slab"));
+        withExistingParent("black_terracotta_stairs", modLoc("block/black_terracotta_stairs"));
 
         withExistingParent("white_concrete_slab", modLoc("block/white_concrete_slab"));
         withExistingParent("white_concrete_stairs", modLoc("block/white_concrete_stairs"));

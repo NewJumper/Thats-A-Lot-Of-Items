@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "taloi:white_terracotta_slab",
+    "taloi:orange_terracotta_slab",
+    "taloi:magenta_terracotta_slab",
+    "taloi:light_blue_terracotta_slab",
+    "taloi:yellow_terracotta_slab",
+    "taloi:lime_terracotta_slab",
+    "taloi:pink_terracotta_slab",
+    "taloi:gray_terracotta_slab",
+    "taloi:light_gray_terracotta_slab",
+    "taloi:cyan_terracotta_slab",
+    "taloi:purple_terracotta_slab",
+    "taloi:blue_terracotta_slab",
+    "taloi:brown_terracotta_slab",
+    "taloi:green_terracotta_slab",
+    "taloi:red_terracotta_slab",
+    "taloi:black_terracotta_slab"
+  ]
+}

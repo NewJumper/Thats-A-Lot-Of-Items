@@ -26,7 +26,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(), ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE_BRICK_SLAB.get(),
                 ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get(),
                 ModBlocks.IRON_CRATE.get(), ModBlocks.NETHERRACK_BRICKS.get(), ModBlocks.REINFORCED_IRON_BLOCK.get(), ModBlocks.RUSTED_REINFORCED_IRON_BLOCK.get())
-                .addTag(ModTags.Blocks.TALOI_ORES).addTag(ModTags.Blocks.TALOI_STORAGE_BLOCKS).addTag(ModTags.Blocks.MACHINES).addTag(ModTags.Blocks.CONCRETE_SLABS).addTag(ModTags.Blocks.CONCRETE_STAIRS);
+                .addTag(ModTags.Blocks.TALOI_ORES).addTag(ModTags.Blocks.TALOI_STORAGE_BLOCKS).addTag(ModTags.Blocks.MACHINES).addTag(ModTags.Blocks.CONCRETE_SLABS).addTag(ModTags.Blocks.CONCRETE_STAIRS).addTag(ModTags.Blocks.TERRACOTTA_SLABS).addTag(ModTags.Blocks.TERRACOTTA_STAIRS);
         tag(BlockTags.AXOLOTLS_SPAWNABLE_ON).add(ModBlocks.MARBLE.get());
         tag(BlockTags.BEACON_BASE_BLOCKS).add(ModBlocks.IRIDIUM_BLOCK.get(), ModBlocks.MAGNESIUM_BLOCK.get(), ModBlocks.OSMIUM_BLOCK.get(), ModBlocks.PLATINUM_BLOCK.get(), ModBlocks.TUNGSTEN_BLOCK.get(), ModBlocks.BRONZE_BLOCK.get(), ModBlocks.STEEL_BLOCK.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.EVERGREEN_FENCE_GATE.get(), ModBlocks.WILLOW_FENCE_GATE.get());
@@ -54,9 +54,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.PLANKS).add(ModBlocks.EVERGREEN_PLANKS.get(), ModBlocks.WILLOW_PLANKS.get());
         tag(BlockTags.SAPLINGS).add(ModBlocks.EVERGREEN_SAPLING.get(), ModBlocks.WILLOW_SAPLING.get());
         tag(BlockTags.SLABS).add(ModBlocks.LIMESTONE_SLAB.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), ModBlocks.MARBLE_SLAB.get(), ModBlocks.SLATE_SLAB.get(), ModBlocks.SLATE_BRICK_SLAB.get())
-                .addTag(ModTags.Blocks.CONCRETE_SLABS);
+                .addTag(ModTags.Blocks.CONCRETE_SLABS).addTag(ModTags.Blocks.TERRACOTTA_SLABS);
         tag(BlockTags.STAIRS).add(ModBlocks.LIMESTONE_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.MARBLE_STAIRS.get(), ModBlocks.SLATE_STAIRS.get(), ModBlocks.SLATE_BRICK_STAIRS.get())
-                .addTag(ModTags.Blocks.CONCRETE_STAIRS);
+                .addTag(ModTags.Blocks.CONCRETE_STAIRS).addTag(ModTags.Blocks.TERRACOTTA_STAIRS);
         tag(BlockTags.WALLS).add(ModBlocks.LIMESTONE_WALL.get(), ModBlocks.LIMESTONE_BRICK_WALL.get(), ModBlocks.MARBLE_WALL.get(), ModBlocks.SLATE_WALL.get(), ModBlocks.SLATE_BRICK_WALL.get());
         tag(BlockTags.WOODEN_BUTTONS).add(ModBlocks.EVERGREEN_BUTTON.get(), ModBlocks.WILLOW_BUTTON.get());
         tag(BlockTags.WOODEN_FENCES).add(ModBlocks.EVERGREEN_FENCE.get(), ModBlocks.WILLOW_FENCE.get());
@@ -114,6 +114,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), ModBlocks.BETA_HYDRAULIC_PRESS.get(), ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(),
                 ModBlocks.ALPHA_PROCESSOR.get(), ModBlocks.BETA_PROCESSOR.get(), ModBlocks.UNSTABLE_PROCESSOR.get(),
                 ModBlocks.ALPHA_SEPARATOR.get(), ModBlocks.BETA_SEPARATOR.get(), ModBlocks.UNSTABLE_SEPARATOR.get());
+
+        tag(ModTags.Blocks.TERRACOTTA_SLABS).add(ModBlocks.WHITE_TERRACOTTA_SLAB.get(), ModBlocks.ORANGE_TERRACOTTA_SLAB.get(), ModBlocks.MAGENTA_TERRACOTTA_SLAB.get(), ModBlocks.LIGHT_BLUE_TERRACOTTA_SLAB.get(), ModBlocks.YELLOW_TERRACOTTA_SLAB.get(), ModBlocks.LIME_TERRACOTTA_SLAB.get(), ModBlocks.PINK_TERRACOTTA_SLAB.get(), ModBlocks.GRAY_TERRACOTTA_SLAB.get(),
+                ModBlocks.LIGHT_GRAY_TERRACOTTA_SLAB.get(), ModBlocks.CYAN_TERRACOTTA_SLAB.get(), ModBlocks.PURPLE_TERRACOTTA_SLAB.get(), ModBlocks.BLUE_TERRACOTTA_SLAB.get(), ModBlocks.BROWN_TERRACOTTA_SLAB.get(), ModBlocks.GREEN_TERRACOTTA_SLAB.get(), ModBlocks.RED_TERRACOTTA_SLAB.get(), ModBlocks.BLACK_TERRACOTTA_SLAB.get());
+        tag(ModTags.Blocks.TERRACOTTA_STAIRS).add(ModBlocks.WHITE_TERRACOTTA_STAIRS.get(), ModBlocks.ORANGE_TERRACOTTA_STAIRS.get(), ModBlocks.MAGENTA_TERRACOTTA_STAIRS.get(), ModBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS.get(), ModBlocks.YELLOW_TERRACOTTA_STAIRS.get(), ModBlocks.LIME_TERRACOTTA_STAIRS.get(), ModBlocks.PINK_TERRACOTTA_STAIRS.get(), ModBlocks.GRAY_TERRACOTTA_STAIRS.get(),
+                ModBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS.get(), ModBlocks.CYAN_TERRACOTTA_STAIRS.get(), ModBlocks.PURPLE_TERRACOTTA_STAIRS.get(), ModBlocks.BLUE_TERRACOTTA_STAIRS.get(), ModBlocks.BROWN_TERRACOTTA_STAIRS.get(), ModBlocks.GREEN_TERRACOTTA_STAIRS.get(), ModBlocks.RED_TERRACOTTA_STAIRS.get(), ModBlocks.BLACK_TERRACOTTA_STAIRS.get());
 
         tag(ModTags.Blocks.CONCRETE_SLABS).add(ModBlocks.WHITE_CONCRETE_SLAB.get(), ModBlocks.ORANGE_CONCRETE_SLAB.get(), ModBlocks.MAGENTA_CONCRETE_SLAB.get(), ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), ModBlocks.YELLOW_CONCRETE_SLAB.get(), ModBlocks.LIME_CONCRETE_SLAB.get(), ModBlocks.PINK_CONCRETE_SLAB.get(), ModBlocks.GRAY_CONCRETE_SLAB.get(),
                 ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), ModBlocks.CYAN_CONCRETE_SLAB.get(), ModBlocks.PURPLE_CONCRETE_SLAB.get(), ModBlocks.BLUE_CONCRETE_SLAB.get(), ModBlocks.BROWN_CONCRETE_SLAB.get(), ModBlocks.GREEN_CONCRETE_SLAB.get(), ModBlocks.RED_CONCRETE_SLAB.get(), ModBlocks.BLACK_CONCRETE_SLAB.get());

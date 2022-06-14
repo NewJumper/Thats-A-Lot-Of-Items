@@ -1,6 +1,7 @@
-package com.newjumper.taloi.item;
+package com.newjumper.taloi.util;
 
 import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

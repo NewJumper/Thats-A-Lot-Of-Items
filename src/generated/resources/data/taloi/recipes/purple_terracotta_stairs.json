@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "T  ",
+    "TT ",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:purple_terracotta"
+    }
+  },
+  "result": {
+    "item": "taloi:purple_terracotta_stairs",
+    "count": 4
+  }
+}

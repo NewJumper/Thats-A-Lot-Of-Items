@@ -34,6 +34,8 @@
     "#taloi:taloi_storage_blocks",
     "#taloi:machines",
     "#taloi:concrete_slabs",
-    "#taloi:concrete_stairs"
+    "#taloi:concrete_stairs",
+    "#taloi:terracotta_slabs",
+    "#taloi:terracotta_stairs"
   ]
 }

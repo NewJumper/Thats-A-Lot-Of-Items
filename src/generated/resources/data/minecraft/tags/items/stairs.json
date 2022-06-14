@@ -6,6 +6,7 @@
     "taloi:marble_stairs",
     "taloi:slate_stairs",
     "taloi:slate_brick_stairs",
-    "#taloi:concrete_stairs"
+    "#taloi:concrete_stairs",
+    "#taloi:terracotta_stairs"
   ]
 }

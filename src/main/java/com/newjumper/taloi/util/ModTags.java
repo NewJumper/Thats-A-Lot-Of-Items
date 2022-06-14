@@ -52,6 +52,8 @@ public class ModTags {
 
         public static final TagKey<Block> MACHINES = taloiTag("machines");
 
+        public static final TagKey<Block> TERRACOTTA_STAIRS = taloiTag("terracotta_stairs");
+        public static final TagKey<Block> TERRACOTTA_SLABS = taloiTag("terracotta_slabs");
         public static final TagKey<Block> CONCRETE_STAIRS = taloiTag("concrete_stairs");
         public static final TagKey<Block> CONCRETE_SLABS = taloiTag("concrete_slabs");
 
@@ -153,6 +155,8 @@ public class ModTags {
         public static final TagKey<Item> PROCESSOR_RAW = taloiTag("machinery/processor_raw");
         public static final TagKey<Item> SEPARATOR_ORES = taloiTag("machinery/separator_ores");
 
+        public static final TagKey<Item> TERRACOTTA_STAIRS = taloiTag("terracotta_stairs");
+        public static final TagKey<Item> TERRACOTTA_SLABS = taloiTag("terracotta_slabs");
         public static final TagKey<Item> CONCRETE_STAIRS = taloiTag("concrete_stairs");
         public static final TagKey<Item> CONCRETE_SLABS = taloiTag("concrete_slabs");
 

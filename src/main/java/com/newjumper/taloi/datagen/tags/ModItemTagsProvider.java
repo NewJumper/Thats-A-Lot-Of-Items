@@ -72,6 +72,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.RAW_STORAGE_ZINC, ModTags.Items.RAW_STORAGE_ZINC);
         copy(ModTags.Blocks.TALOI_STORAGE_BLOCKS, ModTags.Items.TALOI_STORAGE_BLOCKS);
 
+        copy(ModTags.Blocks.TERRACOTTA_SLABS, ModTags.Items.TERRACOTTA_SLABS);
+        copy(ModTags.Blocks.TERRACOTTA_STAIRS, ModTags.Items.TERRACOTTA_STAIRS);
         copy(ModTags.Blocks.CONCRETE_SLABS, ModTags.Items.CONCRETE_SLABS);
         copy(ModTags.Blocks.CONCRETE_STAIRS, ModTags.Items.CONCRETE_STAIRS);
 
