@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W  ",
+    "WW ",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:dark_oak_wood"
+    }
+  },
+  "result": {
+    "item": "taloi:dark_oak_wood_stairs",
+    "count": 4
+  }
+}

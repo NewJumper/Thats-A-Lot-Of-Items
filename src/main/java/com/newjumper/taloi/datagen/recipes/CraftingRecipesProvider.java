@@ -1232,6 +1232,32 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(Items.SWEET_BERRIES)).save(consumer);
 
         // VANILLA
+        ShapedRecipeBuilder.shaped(ModBlocks.OAK_WOOD_SLAB.get(), 6).define('W', Blocks.OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.SPRUCE_WOOD_SLAB.get(), 6).define('W', Blocks.SPRUCE_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.SPRUCE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.SPRUCE_WOOD_STAIRS.get(), 4).define('W', Blocks.SPRUCE_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.SPRUCE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BIRCH_WOOD_SLAB.get(), 6).define('W', Blocks.BIRCH_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.BIRCH_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BIRCH_WOOD_STAIRS.get(), 4).define('W', Blocks.BIRCH_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.BIRCH_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.JUNGLE_WOOD_SLAB.get(), 6).define('W', Blocks.JUNGLE_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.JUNGLE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.JUNGLE_WOOD_STAIRS.get(), 4).define('W', Blocks.JUNGLE_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.JUNGLE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.ACACIA_WOOD_SLAB.get(), 6).define('W', Blocks.ACACIA_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.ACACIA_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.ACACIA_WOOD_STAIRS.get(), 4).define('W', Blocks.ACACIA_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.ACACIA_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.DARK_OAK_WOOD_SLAB.get(), 6).define('W', Blocks.DARK_OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.DARK_OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.DARK_OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.DARK_OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.DARK_OAK_WOOD)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_SPRUCE_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_SPRUCE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_SPRUCE_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_SPRUCE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_BIRCH_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_BIRCH_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_BIRCH_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_BIRCH_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_BIRCH_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_JUNGLE_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_JUNGLE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_JUNGLE_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_JUNGLE_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_ACACIA_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_ACACIA_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_ACACIA_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_ACACIA_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_DARK_OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_DARK_OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_DARK_OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_DARK_OAK_WOOD)).save(consumer);
+
         ShapedRecipeBuilder.shaped(ModBlocks.WHITE_CONCRETE_SLAB.get(), 6).define('C', Blocks.WHITE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.WHITE_CONCRETE)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.WHITE_CONCRETE_STAIRS.get(), 4).define('C', Blocks.WHITE_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.WHITE_CONCRETE)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.ORANGE_CONCRETE_SLAB.get(), 6).define('C', Blocks.ORANGE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.ORANGE_CONCRETE)).save(consumer);
