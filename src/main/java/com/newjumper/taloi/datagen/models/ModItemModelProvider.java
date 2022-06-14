@@ -187,6 +187,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("acacia_wood_stairs", modLoc("block/acacia_wood_stairs"));
         withExistingParent("dark_oak_wood_slab", modLoc("block/dark_oak_wood_slab"));
         withExistingParent("dark_oak_wood_stairs", modLoc("block/dark_oak_wood_stairs"));
+        withExistingParent("crimson_hyphae_slab", modLoc("block/crimson_hyphae_slab"));
+        withExistingParent("crimson_hyphae_stairs", modLoc("block/crimson_hyphae_stairs"));
+        withExistingParent("warped_hyphae_slab", modLoc("block/warped_hyphae_slab"));
+        withExistingParent("warped_hyphae_stairs", modLoc("block/warped_hyphae_stairs"));
 
         withExistingParent("stripped_oak_wood_slab", modLoc("block/stripped_oak_wood_slab"));
         withExistingParent("stripped_oak_wood_stairs", modLoc("block/stripped_oak_wood_stairs"));
@@ -200,6 +204,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("stripped_acacia_wood_stairs", modLoc("block/stripped_acacia_wood_stairs"));
         withExistingParent("stripped_dark_oak_wood_slab", modLoc("block/stripped_dark_oak_wood_slab"));
         withExistingParent("stripped_dark_oak_wood_stairs", modLoc("block/stripped_dark_oak_wood_stairs"));
+        withExistingParent("stripped_crimson_hyphae_slab", modLoc("block/stripped_crimson_hyphae_slab"));
+        withExistingParent("stripped_crimson_hyphae_stairs", modLoc("block/stripped_crimson_hyphae_stairs"));
+        withExistingParent("stripped_warped_hyphae_slab", modLoc("block/stripped_warped_hyphae_slab"));
+        withExistingParent("stripped_warped_hyphae_stairs", modLoc("block/stripped_warped_hyphae_stairs"));
 
         withExistingParent("white_terracotta_slab", modLoc("block/white_terracotta_slab"));
         withExistingParent("white_terracotta_stairs", modLoc("block/white_terracotta_stairs"));

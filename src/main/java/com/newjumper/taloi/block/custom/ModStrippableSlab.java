@@ -21,6 +21,8 @@ public class ModStrippableSlab extends SlabBlock {
             if(state.is(ModBlocks.JUNGLE_WOOD_SLAB.get())) return ModBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(ModBlocks.ACACIA_WOOD_SLAB.get())) return ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(ModBlocks.DARK_OAK_WOOD_SLAB.get())) return ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get().withPropertiesOf(state);
+            if(state.is(ModBlocks.CRIMSON_HYPHAE_SLAB.get())) return ModBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get().withPropertiesOf(state);
+            if(state.is(ModBlocks.WARPED_HYPHAE_SLAB.get())) return ModBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get().withPropertiesOf(state);
             if(state.is(ModBlocks.EVERGREEN_WOOD_SLAB.get())) return ModBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(ModBlocks.WILLOW_WOOD_SLAB.get())) return ModBlocks.STRIPPED_WILLOW_WOOD_SLAB.get().withPropertiesOf(state);
         }

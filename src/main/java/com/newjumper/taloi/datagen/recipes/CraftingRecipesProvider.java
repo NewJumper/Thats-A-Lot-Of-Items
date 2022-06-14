@@ -1244,6 +1244,10 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
         ShapedRecipeBuilder.shaped(ModBlocks.ACACIA_WOOD_STAIRS.get(), 4).define('W', Blocks.ACACIA_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.ACACIA_WOOD)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.DARK_OAK_WOOD_SLAB.get(), 6).define('W', Blocks.DARK_OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.DARK_OAK_WOOD)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.DARK_OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.DARK_OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.DARK_OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.CRIMSON_HYPHAE_SLAB.get(), 6).define('H', Blocks.CRIMSON_HYPHAE).pattern("HHH").unlockedBy("has_material", has(Blocks.CRIMSON_HYPHAE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.CRIMSON_HYPHAE_STAIRS.get(), 4).define('H', Blocks.CRIMSON_HYPHAE).pattern("H  ").pattern("HH ").pattern("HHH").unlockedBy("has_material", has(Blocks.CRIMSON_HYPHAE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.WARPED_HYPHAE_SLAB.get(), 6).define('H', Blocks.WARPED_HYPHAE).pattern("HHH").unlockedBy("has_material", has(Blocks.WARPED_HYPHAE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.WARPED_HYPHAE_STAIRS.get(), 4).define('H', Blocks.WARPED_HYPHAE).pattern("H  ").pattern("HH ").pattern("HHH").unlockedBy("has_material", has(Blocks.WARPED_HYPHAE)).save(consumer);
 
         ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_OAK_WOOD)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_OAK_WOOD)).save(consumer);
@@ -1257,6 +1261,10 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
         ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_ACACIA_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_ACACIA_WOOD)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), 6).define('W', Blocks.STRIPPED_DARK_OAK_WOOD).pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_DARK_OAK_WOOD)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), 4).define('W', Blocks.STRIPPED_DARK_OAK_WOOD).pattern("W  ").pattern("WW ").pattern("WWW").unlockedBy("has_material", has(Blocks.STRIPPED_DARK_OAK_WOOD)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), 6).define('H', Blocks.STRIPPED_CRIMSON_HYPHAE).pattern("HHH").unlockedBy("has_material", has(Blocks.STRIPPED_CRIMSON_HYPHAE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get(), 4).define('H', Blocks.STRIPPED_CRIMSON_HYPHAE).pattern("H  ").pattern("HH ").pattern("HHH").unlockedBy("has_material", has(Blocks.STRIPPED_CRIMSON_HYPHAE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), 6).define('H', Blocks.STRIPPED_WARPED_HYPHAE).pattern("HHH").unlockedBy("has_material", has(Blocks.STRIPPED_WARPED_HYPHAE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get(), 4).define('H', Blocks.STRIPPED_WARPED_HYPHAE).pattern("H  ").pattern("HH ").pattern("HHH").unlockedBy("has_material", has(Blocks.STRIPPED_WARPED_HYPHAE)).save(consumer);
 
         ShapedRecipeBuilder.shaped(ModBlocks.WHITE_TERRACOTTA_SLAB.get(), 6).define('T', Blocks.WHITE_TERRACOTTA).pattern("TTT").unlockedBy("has_material", has(Blocks.WHITE_TERRACOTTA)).save(consumer);
         ShapedRecipeBuilder.shaped(ModBlocks.WHITE_TERRACOTTA_STAIRS.get(), 4).define('T', Blocks.WHITE_TERRACOTTA).pattern("T  ").pattern("TT ").pattern("TTT").unlockedBy("has_material", has(Blocks.WHITE_TERRACOTTA)).save(consumer);

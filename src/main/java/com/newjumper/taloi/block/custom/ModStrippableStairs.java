@@ -23,6 +23,8 @@ public class ModStrippableStairs extends StairBlock {
             if(state.is(ModBlocks.JUNGLE_WOOD_STAIRS.get())) return ModBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get().withPropertiesOf(state);
             if(state.is(ModBlocks.ACACIA_WOOD_STAIRS.get())) return ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get().withPropertiesOf(state);
             if(state.is(ModBlocks.DARK_OAK_WOOD_STAIRS.get())) return ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get().withPropertiesOf(state);
+            if(state.is(ModBlocks.CRIMSON_HYPHAE_STAIRS.get())) return ModBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get().withPropertiesOf(state);
+            if(state.is(ModBlocks.WARPED_HYPHAE_STAIRS.get())) return ModBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get().withPropertiesOf(state);
             if(state.is(ModBlocks.EVERGREEN_WOOD_STAIRS.get())) return ModBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get().withPropertiesOf(state);
             if(state.is(ModBlocks.WILLOW_WOOD_STAIRS.get())) return ModBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get().withPropertiesOf(state);
         }

@@ -195,6 +195,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(ModBlocks.ACACIA_WOOD_SLAB.get(), mcLoc("block/acacia_wood"), mcLoc("block/acacia_log"));
         stairsBlock(ModBlocks.DARK_OAK_WOOD_STAIRS.get(), mcLoc("block/dark_oak_log"));
         slabBlock(ModBlocks.DARK_OAK_WOOD_SLAB.get(), mcLoc("block/dark_oak_wood"), mcLoc("block/dark_oak_log"));
+        stairsBlock(ModBlocks.CRIMSON_HYPHAE_STAIRS.get(), mcLoc("block/crimson_stem"));
+        slabBlock(ModBlocks.CRIMSON_HYPHAE_SLAB.get(), mcLoc("block/crimson_hyphae"), mcLoc("block/crimson_stem"));
+        stairsBlock(ModBlocks.WARPED_HYPHAE_STAIRS.get(), mcLoc("block/warped_stem"));
+        slabBlock(ModBlocks.WARPED_HYPHAE_SLAB.get(), mcLoc("block/warped_hyphae"), mcLoc("block/warped_stem"));
 
         stairsBlock(ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), mcLoc("block/stripped_oak_log"));
         slabBlock(ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), mcLoc("block/stripped_oak_wood"), mcLoc("block/stripped_oak_log"));
@@ -208,6 +212,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(ModBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), mcLoc("block/stripped_acacia_wood"), mcLoc("block/stripped_acacia_log"));
         stairsBlock(ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), mcLoc("block/stripped_dark_oak_log"));
         slabBlock(ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), mcLoc("block/stripped_dark_oak_wood"), mcLoc("block/stripped_dark_oak_log"));
+        stairsBlock(ModBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get(), mcLoc("block/stripped_crimson_stem"));
+        slabBlock(ModBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), mcLoc("block/stripped_crimson_hyphae"), mcLoc("block/stripped_crimson_stem"));
+        stairsBlock(ModBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get(), mcLoc("block/stripped_warped_stem"));
+        slabBlock(ModBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), mcLoc("block/stripped_warped_hyphae"), mcLoc("block/stripped_warped_stem"));
 
         slabBlock(ModBlocks.WHITE_TERRACOTTA_SLAB.get(), mcLoc("block/white_terracotta"), mcLoc("block/white_terracotta"));
         stairsBlock(ModBlocks.WHITE_TERRACOTTA_STAIRS.get(), mcLoc("block/white_terracotta"));

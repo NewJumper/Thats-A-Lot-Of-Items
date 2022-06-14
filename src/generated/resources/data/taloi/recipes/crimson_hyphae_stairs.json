@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H  ",
+    "HH ",
+    "HHH"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:crimson_hyphae"
+    }
+  },
+  "result": {
+    "item": "taloi:crimson_hyphae_stairs",
+    "count": 4
+  }
+}

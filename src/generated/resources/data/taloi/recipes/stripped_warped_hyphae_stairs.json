@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H  ",
+    "HH ",
+    "HHH"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:stripped_warped_hyphae"
+    }
+  },
+  "result": {
+    "item": "taloi:stripped_warped_hyphae_stairs",
+    "count": 4
+  }
+}

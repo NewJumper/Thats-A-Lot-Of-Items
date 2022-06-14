@@ -191,6 +191,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ACACIA_WOOD_STAIRS.get());
         this.add(ModBlocks.DARK_OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(ModBlocks.DARK_OAK_WOOD_STAIRS.get());
+        this.add(ModBlocks.CRIMSON_HYPHAE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.CRIMSON_HYPHAE_STAIRS.get());
+        this.add(ModBlocks.WARPED_HYPHAE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.WARPED_HYPHAE_STAIRS.get());
 
         this.add(ModBlocks.STRIPPED_OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(ModBlocks.STRIPPED_OAK_WOOD_STAIRS.get());
@@ -204,6 +208,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get());
         this.add(ModBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(ModBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get());
+        this.add(ModBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.dropSelf(ModBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get());
 
         this.add(ModBlocks.WHITE_TERRACOTTA_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(ModBlocks.WHITE_TERRACOTTA_STAIRS.get());
