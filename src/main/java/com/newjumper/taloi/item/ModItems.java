@@ -138,7 +138,7 @@ public class ModItems {
     public static final RegistryObject<Item> FUTURITE_PICKAXE = ITEMS.register("futurite_pickaxe", () -> new PickaxeItem(ModTiers.FUTURITE, 1, -2.7f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
     public static final RegistryObject<Item> FUTURITE_AXE = ITEMS.register("futurite_axe", () -> new AxeItem(ModTiers.FUTURITE, 6, -3f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEMS).durability(1700)));
+    public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT).durability(1700)));
 
     // COMBAT
     public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(ModTiers.EMERALD, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
