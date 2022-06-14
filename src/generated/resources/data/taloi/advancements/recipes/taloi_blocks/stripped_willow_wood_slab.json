@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:stripped_willow_stairs"
+      "taloi:stripped_willow_wood_slab"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:stripped_willow_stairs"
+        "recipe": "taloi:stripped_willow_wood_slab"
       }
     }
   },

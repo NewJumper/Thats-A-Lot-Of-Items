@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "taloi:stripped_evergreen_stairs"
+      "taloi:stripped_willow_wood_stairs"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "taloi:stripped_evergreen_wood"
+              "taloi:stripped_willow_wood"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "taloi:stripped_evergreen_stairs"
+        "recipe": "taloi:stripped_willow_wood_stairs"
       }
     }
   },

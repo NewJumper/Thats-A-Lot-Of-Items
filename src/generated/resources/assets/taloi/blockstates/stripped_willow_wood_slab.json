@@ -1,10 +1,10 @@
 {
   "variants": {
     "type=top": {
-      "model": "taloi:block/stripped_willow_slab_top"
+      "model": "taloi:block/stripped_willow_wood_slab_top"
     },
     "type=bottom": {
-      "model": "taloi:block/stripped_willow_slab"
+      "model": "taloi:block/stripped_willow_wood_slab"
     },
     "type=double": {
       "model": "taloi:block/stripped_willow_wood"

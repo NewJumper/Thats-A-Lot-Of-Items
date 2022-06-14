@@ -5,11 +5,11 @@
   ],
   "key": {
     "E": {
-      "item": "taloi:stripped_evergreen_wood"
+      "item": "taloi:stripped_willow_wood"
     }
   },
   "result": {
-    "item": "taloi:stripped_evergreen_slab",
+    "item": "taloi:stripped_willow_wood_slab",
     "count": 6
   }
 }

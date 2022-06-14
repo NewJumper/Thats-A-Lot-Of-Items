@@ -34,8 +34,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("evergreen_wood_slab", modLoc("block/evergreen_wood_slab"));
         withExistingParent("evergreen_wood_stairs", modLoc("block/evergreen_wood_stairs"));
 
-//        withExistingParent("stripped_evergreen_wood_slab", modLoc("block/stripped_evergreen_wood_slab"));
-//        withExistingParent("stripped_evergreen_wood_stairs", modLoc("block/stripped_evergreen_wood_stairs"));
+        withExistingParent("stripped_evergreen_wood_slab", modLoc("block/stripped_evergreen_wood_slab"));
+        withExistingParent("stripped_evergreen_wood_stairs", modLoc("block/stripped_evergreen_wood_stairs"));
 
         // WILLOW
         withExistingParent("willow_planks", modLoc("block/willow_planks"));
@@ -54,8 +54,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("willow_wood_slab", modLoc("block/willow_wood_slab"));
         withExistingParent("willow_wood_stairs", modLoc("block/willow_wood_stairs"));
 
-//        withExistingParent("stripped_willow_wood_slab", modLoc("block/stripped_willow_wood_slab"));
-//        withExistingParent("stripped_willow_wood_stairs", modLoc("block/stripped_willow_wood_stairs"));
+        withExistingParent("stripped_willow_wood_slab", modLoc("block/stripped_willow_wood_slab"));
+        withExistingParent("stripped_willow_wood_stairs", modLoc("block/stripped_willow_wood_stairs"));
 
         // NATURAL
         withExistingParent("asphalt", modLoc("block/asphalt"));
