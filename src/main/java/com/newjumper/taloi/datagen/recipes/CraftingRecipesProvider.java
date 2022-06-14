@@ -1231,6 +1231,40 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .requires(Tags.Items.EGGS)
                 .unlockedBy("has_material", has(Items.SWEET_BERRIES)).save(consumer);
 
+        // VANILLA
+        ShapedRecipeBuilder.shaped(ModBlocks.WHITE_CONCRETE_SLAB.get(), 6).define('C', Blocks.WHITE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.WHITE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.WHITE_CONCRETE_STAIRS.get(), 4).define('C', Blocks.WHITE_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.WHITE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.ORANGE_CONCRETE_SLAB.get(), 6).define('C', Blocks.ORANGE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.ORANGE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.ORANGE_CONCRETE_STAIRS.get(), 4).define('C', Blocks.ORANGE_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.ORANGE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.MAGENTA_CONCRETE_SLAB.get(), 6).define('C', Blocks.MAGENTA_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.MAGENTA_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.MAGENTA_CONCRETE_STAIRS.get(), 4).define('C', Blocks.MAGENTA_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.MAGENTA_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), 6).define('C', Blocks.LIGHT_BLUE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.LIGHT_BLUE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(), 4).define('C', Blocks.LIGHT_BLUE_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.LIGHT_BLUE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.YELLOW_CONCRETE_SLAB.get(), 6).define('C', Blocks.YELLOW_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.YELLOW_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.YELLOW_CONCRETE_STAIRS.get(), 4).define('C', Blocks.YELLOW_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.YELLOW_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIME_CONCRETE_SLAB.get(), 6).define('C', Blocks.LIME_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.LIME_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIME_CONCRETE_STAIRS.get(), 4).define('C', Blocks.LIME_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.LIME_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PINK_CONCRETE_SLAB.get(), 6).define('C', Blocks.PINK_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.PINK_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PINK_CONCRETE_STAIRS.get(), 4).define('C', Blocks.PINK_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.PINK_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.GRAY_CONCRETE_SLAB.get(), 6).define('C', Blocks.GRAY_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.GRAY_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.GRAY_CONCRETE_STAIRS.get(), 4).define('C', Blocks.GRAY_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.GRAY_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), 6).define('C', Blocks.LIGHT_GRAY_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.LIGHT_GRAY_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(), 4).define('C', Blocks.LIGHT_GRAY_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.LIGHT_GRAY_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.CYAN_CONCRETE_SLAB.get(), 6).define('C', Blocks.CYAN_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.CYAN_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.CYAN_CONCRETE_STAIRS.get(), 4).define('C', Blocks.CYAN_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.CYAN_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PURPLE_CONCRETE_SLAB.get(), 6).define('C', Blocks.PURPLE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.PURPLE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.PURPLE_CONCRETE_STAIRS.get(), 4).define('C', Blocks.PURPLE_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.PURPLE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BLUE_CONCRETE_SLAB.get(), 6).define('C', Blocks.BLUE_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.BLUE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BLUE_CONCRETE_STAIRS.get(), 4).define('C', Blocks.BLUE_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.BLUE_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BROWN_CONCRETE_SLAB.get(), 6).define('C', Blocks.BROWN_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.BROWN_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BROWN_CONCRETE_STAIRS.get(), 4).define('C', Blocks.BROWN_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.BROWN_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.GREEN_CONCRETE_SLAB.get(), 6).define('C', Blocks.GREEN_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.GREEN_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.GREEN_CONCRETE_STAIRS.get(), 4).define('C', Blocks.GREEN_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.GREEN_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.RED_CONCRETE_SLAB.get(), 6).define('C', Blocks.RED_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.RED_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.RED_CONCRETE_STAIRS.get(), 4).define('C', Blocks.RED_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.RED_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BLACK_CONCRETE_SLAB.get(), 6).define('C', Blocks.BLACK_CONCRETE).pattern("CCC").unlockedBy("has_material", has(Blocks.BLACK_CONCRETE)).save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.BLACK_CONCRETE_STAIRS.get(), 4).define('C', Blocks.BLACK_CONCRETE).pattern("C  ").pattern("CC ").pattern("CCC").unlockedBy("has_material", has(Blocks.BLACK_CONCRETE)).save(consumer);
+
         // MISCELLANEOUS
         ShapelessRecipeBuilder.shapeless(Items.RED_DYE, 1)
                 .requires(Items.SWEET_BERRIES)

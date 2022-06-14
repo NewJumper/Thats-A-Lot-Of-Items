@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:white_concrete"
+    }
+  },
+  "result": {
+    "item": "taloi:white_concrete_slab",
+    "count": 6
+  }
+}
