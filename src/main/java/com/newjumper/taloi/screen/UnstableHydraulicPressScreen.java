@@ -38,10 +38,10 @@ public class UnstableHydraulicPressScreen extends AbstractContainerScreen<Unstab
         int y = this.topPos;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
-        if(menu.isLit()) blit(pPoseStack, x + 24, y + 30 + menu.getFuelProgress(), 176, menu.getFuelProgress(), 14, 14 - menu.getFuelProgress());
+        if(menu.isLit()) blit(pPoseStack, x + 24, y + 32 + menu.getFuelProgress(), 176, menu.getFuelProgress(), 14, 14 - menu.getFuelProgress());
         if(menu.hasIngredients()) {
-            blit(pPoseStack, x + 58, y + 15, 176, 14, 52, menu.getProgress());
-            blit(pPoseStack, x + 58, y + 70 - menu.getProgress(), 176, 48 - menu.getProgress(), 52, menu.getProgress());
+            blit(pPoseStack, x + 58, y + 17, 176, 14, 52, menu.getProgress());
+            blit(pPoseStack, x + 58, y + 72 - menu.getProgress(), 176, 48 - menu.getProgress(), 52, menu.getProgress());
         }
     }
 }

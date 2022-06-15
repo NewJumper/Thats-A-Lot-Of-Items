@@ -37,10 +37,10 @@ public class ProcessorMenu extends AbstractContainerMenu {
         addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new ModFuelSlot(handler, 0, 41, 43));
-            this.addSlot(new ProcessorBaseSlot(handler, 1, 76, 16));
-            this.rawSlot = this.addSlot(new ProcessorRawSlot(handler, 2, 76, 54));
-            this.addSlot(new ModResultSlot(handler, 3, 119, 35));
+            this.addSlot(new ModFuelSlot(handler, 0, 41, 45));
+            this.addSlot(new ProcessorBaseSlot(handler, 1, 76, 18));
+            this.rawSlot = this.addSlot(new ProcessorRawSlot(handler, 2, 76, 56));
+            this.addSlot(new ModResultSlot(handler, 3, 119, 37));
         });
 
         addDataSlots(pContainerData);

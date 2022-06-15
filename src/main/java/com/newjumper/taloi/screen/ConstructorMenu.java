@@ -35,10 +35,10 @@ public class ConstructorMenu extends AbstractContainerMenu {
         addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new ModFuelSlot(handler, 0, 31, 47));
-            this.addSlot(new SlotItemHandler(handler, 1, 69, 17));
-            this.addSlot(new SlotItemHandler(handler, 2, 69, 53));
-            this.addSlot(new ModResultSlot(handler, 3, 125, 35));
+            this.addSlot(new ModFuelSlot(handler, 0, 31, 49));
+            this.addSlot(new SlotItemHandler(handler, 1, 69, 19));
+            this.addSlot(new SlotItemHandler(handler, 2, 69, 55));
+            this.addSlot(new ModResultSlot(handler, 3, 125, 37));
         });
 
         addDataSlots(pContainerData);
