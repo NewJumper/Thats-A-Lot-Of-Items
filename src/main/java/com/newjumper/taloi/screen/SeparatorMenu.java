@@ -35,10 +35,10 @@ public class SeparatorMenu extends AbstractContainerMenu {
         addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new ModFuelSlot(handler, 0, 30, 43));
-            this.addSlot(new SeparatorOreSlot(handler, 1, 51, 43));
-            this.addSlot(new ModResultSlot(handler, 2, 102, 39));
-            this.addSlot(new ModResultSlot(handler, 3, 128, 39));
+            this.addSlot(new ModFuelSlot(handler, 0, 30, 41));
+            this.addSlot(new SeparatorOreSlot(handler, 1, 51, 41));
+            this.addSlot(new ModResultSlot(handler, 2, 102, 37));
+            this.addSlot(new ModResultSlot(handler, 3, 128, 37));
         });
 
         addDataSlots(pContainerData);
