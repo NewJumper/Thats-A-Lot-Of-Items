@@ -17,17 +17,9 @@ public class SeparatorScreen extends AbstractContainerScreen<SeparatorMenu> {
     }
 
     @Override
-    protected void renderBg(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, TEXTURE);
-        int x = (width - imageWidth) / 2;
-        int y = (height - imageHeight) / 2;
-
-        this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
-
-        if(menu.isLit()) blit(pPoseStack, x + 30, y + 24 + menu.getFuelProgress(), 176, menu.getFuelProgress(), 14, 14 - menu.getFuelProgress());
-        if(menu.hasIngredients()) blit(pPoseStack, x + 71, y + 37, 176, 14, menu.getProgress(), 21);
+    protected void init() {
+        super.init();
+        this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
     }
 
     @Override
@@ -35,5 +27,18 @@ public class SeparatorScreen extends AbstractContainerScreen<SeparatorMenu> {
         renderBackground(pPoseStack);
         super.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
         renderTooltip(pPoseStack, pMouseX, pMouseY);
+    }
+
+    @Override
+    protected void renderBg(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderTexture(0, TEXTURE);
+        int x = this.leftPos;
+        int y = this.topPos;
+
+        this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+        if(menu.isLit()) blit(pPoseStack, x + 30, y + 24 + menu.getFuelProgress(), 176, menu.getFuelProgress(), 14, 14 - menu.getFuelProgress());
+        if(menu.hasIngredients()) blit(pPoseStack, x + 71, y + 37, 176, 14, menu.getProgress(), 21);
     }
 }
