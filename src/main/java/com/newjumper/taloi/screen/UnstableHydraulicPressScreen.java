@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class UnstableHydraulicPressScreen extends AbstractContainerScreen<UnstableHydraulicPressMenu> {
-    public static final ResourceLocation TEXTURE = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/container/unstable_press.png");
+    public static final ResourceLocation GUI = new ResourceLocation(ThatsALotOfItems.MOD_ID, "textures/gui/container/unstable_press.png");
 
     public UnstableHydraulicPressScreen(UnstableHydraulicPressMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
@@ -33,7 +33,7 @@ public class UnstableHydraulicPressScreen extends AbstractContainerScreen<Unstab
     protected void renderBg(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, TEXTURE);
+        RenderSystem.setShaderTexture(0, GUI);
         int x = this.leftPos;
         int y = this.topPos;
 
