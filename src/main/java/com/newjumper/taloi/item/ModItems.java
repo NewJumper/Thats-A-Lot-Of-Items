@@ -185,10 +185,10 @@ public class ModItems {
     public static final RegistryObject<Item> SERMIUM_LEGGINGS = ITEMS.register("sermium_leggings", () -> new ArmorItem(TaloiArmorMaterials.SERMIUM, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
     public static final RegistryObject<Item> SERMIUM_BOOTS = ITEMS.register("sermium_boots", () -> new ArmorItem(TaloiArmorMaterials.SERMIUM, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> FUTURITE_HELMET = ITEMS.register("futurite_helmet", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.HEAD, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_CHESTPLATE = ITEMS.register("futurite_chestplate", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.CHEST, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_LEGGINGS = ITEMS.register("futurite_leggings", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_BOOTS = ITEMS.register("futurite_boots", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_HELMET = ITEMS.register("futurite_helmet", () -> new FuturiteArmor(TaloiArmorMaterials.FUTURITE, EquipmentSlot.HEAD, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_CHESTPLATE = ITEMS.register("futurite_chestplate", () -> new FuturiteArmor(TaloiArmorMaterials.FUTURITE, EquipmentSlot.CHEST, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_LEGGINGS = ITEMS.register("futurite_leggings", () -> new FuturiteArmor(TaloiArmorMaterials.FUTURITE, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_BOOTS = ITEMS.register("futurite_boots", () -> new FuturiteArmor(TaloiArmorMaterials.FUTURITE, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
     // GEMS
     public static final RegistryObject<Item> MALACHITE = ITEMS.register("malachite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEMS)));
