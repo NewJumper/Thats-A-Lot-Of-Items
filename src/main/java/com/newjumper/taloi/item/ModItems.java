@@ -100,95 +100,95 @@ public class ModItems {
     public static final RegistryObject<Item> FUTURITE_BIT = ITEMS.register("futurite_bit", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEMS)));
 
     // TOOLS
-    public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(ModTiers.EMERALD, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(ModTiers.EMERALD, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(ModTiers.EMERALD, 6, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(ModTiers.EMERALD, 0, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(TaloiTiers.EMERALD, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(TaloiTiers.EMERALD, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(TaloiTiers.EMERALD, 6, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(TaloiTiers.EMERALD, 0, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> IRIDIUM_SHOVEL = ITEMS.register("iridium_shovel", () -> new ShovelItem(ModTiers.IRIDIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> IRIDIUM_PICKAXE = ITEMS.register("iridium_pickaxe", () -> new PickaxeItem(ModTiers.IRIDIUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> IRIDIUM_AXE = ITEMS.register("iridium_axe", () -> new AxeItem(ModTiers.IRIDIUM, 4, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe", () -> new HoeItem(ModTiers.IRIDIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> IRIDIUM_SHOVEL = ITEMS.register("iridium_shovel", () -> new ShovelItem(TaloiTiers.IRIDIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> IRIDIUM_PICKAXE = ITEMS.register("iridium_pickaxe", () -> new PickaxeItem(TaloiTiers.IRIDIUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> IRIDIUM_AXE = ITEMS.register("iridium_axe", () -> new AxeItem(TaloiTiers.IRIDIUM, 4, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe", () -> new HoeItem(TaloiTiers.IRIDIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> LAPIS_SHOVEL = ITEMS.register("lapis_shovel", () -> new ShovelItem(ModTiers.LAPIS, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> LAPIS_PICKAXE = ITEMS.register("lapis_pickaxe", () -> new PickaxeItem(ModTiers.LAPIS, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> LAPIS_AXE = ITEMS.register("lapis_axe", () -> new AxeItem(ModTiers.LAPIS, 7, -3.2f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> LAPIS_HOE = ITEMS.register("lapis_hoe", () -> new HoeItem(ModTiers.LAPIS, -1, -2f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> LAPIS_SHOVEL = ITEMS.register("lapis_shovel", () -> new ShovelItem(TaloiTiers.LAPIS, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> LAPIS_PICKAXE = ITEMS.register("lapis_pickaxe", () -> new PickaxeItem(TaloiTiers.LAPIS, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> LAPIS_AXE = ITEMS.register("lapis_axe", () -> new AxeItem(TaloiTiers.LAPIS, 7, -3.2f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> LAPIS_HOE = ITEMS.register("lapis_hoe", () -> new HoeItem(TaloiTiers.LAPIS, -1, -2f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> OSMIUM_SHOVEL = ITEMS.register("osmium_shovel", () -> new ShovelItem(ModTiers.OSMIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> OSMIUM_PICKAXE = ITEMS.register("osmium_pickaxe", () -> new PickaxeItem(ModTiers.OSMIUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> OSMIUM_AXE = ITEMS.register("osmium_axe", () -> new AxeItem(ModTiers.OSMIUM, 4, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> OSMIUM_HOE = ITEMS.register("osmium_hoe", () -> new HoeItem(ModTiers.OSMIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> OSMIUM_SHOVEL = ITEMS.register("osmium_shovel", () -> new ShovelItem(TaloiTiers.OSMIUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> OSMIUM_PICKAXE = ITEMS.register("osmium_pickaxe", () -> new PickaxeItem(TaloiTiers.OSMIUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> OSMIUM_AXE = ITEMS.register("osmium_axe", () -> new AxeItem(TaloiTiers.OSMIUM, 4, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> OSMIUM_HOE = ITEMS.register("osmium_hoe", () -> new HoeItem(TaloiTiers.OSMIUM, -5, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> PLATINUM_SHOVEL = ITEMS.register("platinum_shovel", () -> new ShovelItem(ModTiers.PLATINUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> PLATINUM_PICKAXE = ITEMS.register("platinum_pickaxe", () -> new PickaxeItem(ModTiers.PLATINUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> PLATINUM_AXE = ITEMS.register("platinum_axe", () -> new AxeItem(ModTiers.PLATINUM, 5, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe", () -> new HoeItem(ModTiers.PLATINUM, -3, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> PLATINUM_SHOVEL = ITEMS.register("platinum_shovel", () -> new ShovelItem(TaloiTiers.PLATINUM, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> PLATINUM_PICKAXE = ITEMS.register("platinum_pickaxe", () -> new PickaxeItem(TaloiTiers.PLATINUM, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> PLATINUM_AXE = ITEMS.register("platinum_axe", () -> new AxeItem(TaloiTiers.PLATINUM, 5, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe", () -> new HoeItem(TaloiTiers.PLATINUM, -3, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> TUNGSTEN_SHOVEL = ITEMS.register("tungsten_shovel", () -> new ShovelItem(ModTiers.TUNGSTEN, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> TUNGSTEN_PICKAXE = ITEMS.register("tungsten_pickaxe", () -> new PickaxeItem(ModTiers.TUNGSTEN, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> TUNGSTEN_AXE = ITEMS.register("tungsten_axe", () -> new AxeItem(ModTiers.TUNGSTEN, 5, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> TUNGSTEN_HOE = ITEMS.register("tungsten_hoe", () -> new HoeItem(ModTiers.TUNGSTEN, -4, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> TUNGSTEN_SHOVEL = ITEMS.register("tungsten_shovel", () -> new ShovelItem(TaloiTiers.TUNGSTEN, 1.5f, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> TUNGSTEN_PICKAXE = ITEMS.register("tungsten_pickaxe", () -> new PickaxeItem(TaloiTiers.TUNGSTEN, 1, -2.8f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> TUNGSTEN_AXE = ITEMS.register("tungsten_axe", () -> new AxeItem(TaloiTiers.TUNGSTEN, 5, -3f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> TUNGSTEN_HOE = ITEMS.register("tungsten_hoe", () -> new HoeItem(TaloiTiers.TUNGSTEN, -4, 0f, new Item.Properties().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> SERMIUM_SHOVEL = ITEMS.register("sermium_shovel", () -> new ShovelItem(ModTiers.SERMIUM, 1.5f, -2.9f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> SERMIUM_PICKAXE = ITEMS.register("sermium_pickaxe", () -> new PickaxeItem(ModTiers.SERMIUM, 1, -2.8f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> SERMIUM_AXE = ITEMS.register("sermium_axe", () -> new AxeItem(ModTiers.SERMIUM, 6, -3f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> SERMIUM_SHOVEL = ITEMS.register("sermium_shovel", () -> new ShovelItem(TaloiTiers.SERMIUM, 1.5f, -2.9f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> SERMIUM_PICKAXE = ITEMS.register("sermium_pickaxe", () -> new PickaxeItem(TaloiTiers.SERMIUM, 1, -2.8f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> SERMIUM_AXE = ITEMS.register("sermium_axe", () -> new AxeItem(TaloiTiers.SERMIUM, 6, -3f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
-    public static final RegistryObject<Item> FUTURITE_SHOVEL = ITEMS.register("futurite_shovel", () -> new ShovelItem(ModTiers.FUTURITE, 1.5f, -2.9f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> FUTURITE_PICKAXE = ITEMS.register("futurite_pickaxe", () -> new PickaxeItem(ModTiers.FUTURITE, 1, -2.7f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
-    public static final RegistryObject<Item> FUTURITE_AXE = ITEMS.register("futurite_axe", () -> new AxeItem(ModTiers.FUTURITE, 6, -3f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> FUTURITE_SHOVEL = ITEMS.register("futurite_shovel", () -> new ShovelItem(TaloiTiers.FUTURITE, 1.5f, -2.9f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> FUTURITE_PICKAXE = ITEMS.register("futurite_pickaxe", () -> new PickaxeItem(TaloiTiers.FUTURITE, 1, -2.7f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
+    public static final RegistryObject<Item> FUTURITE_AXE = ITEMS.register("futurite_axe", () -> new AxeItem(TaloiTiers.FUTURITE, 6, -3f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_TOOLS)));
 
     public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT).durability(1700)));
 
     // COMBAT
-    public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(ModTiers.EMERALD, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> IRIDIUM_SWORD = ITEMS.register("iridium_sword", () -> new SwordItem(ModTiers.IRIDIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> LAPIS_SWORD = ITEMS.register("lapis_sword", () -> new SwordItem(ModTiers.LAPIS, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> OSMIUM_SWORD = ITEMS.register("osmium_sword", () -> new SwordItem(ModTiers.OSMIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", () -> new SwordItem(ModTiers.PLATINUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> TUNGSTEN_SWORD = ITEMS.register("tungsten_sword", () -> new SwordItem(ModTiers.TUNGSTEN, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> SERMIUM_SWORD = ITEMS.register("sermium_sword", () -> new SwordItem(ModTiers.SERMIUM, 4, -2.2f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_SWORD = ITEMS.register("futurite_sword", () -> new SwordItem(ModTiers.FUTURITE, 4, -2f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(TaloiTiers.EMERALD, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> IRIDIUM_SWORD = ITEMS.register("iridium_sword", () -> new SwordItem(TaloiTiers.IRIDIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> LAPIS_SWORD = ITEMS.register("lapis_sword", () -> new SwordItem(TaloiTiers.LAPIS, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> OSMIUM_SWORD = ITEMS.register("osmium_sword", () -> new SwordItem(TaloiTiers.OSMIUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", () -> new SwordItem(TaloiTiers.PLATINUM, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> TUNGSTEN_SWORD = ITEMS.register("tungsten_sword", () -> new SwordItem(TaloiTiers.TUNGSTEN, 3, -2.4f, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> SERMIUM_SWORD = ITEMS.register("sermium_sword", () -> new SwordItem(TaloiTiers.SERMIUM, 4, -2.2f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_SWORD = ITEMS.register("futurite_sword", () -> new SwordItem(TaloiTiers.FUTURITE, 4, -2f, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(TaloiArmorMaterials.EMERALD, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(TaloiArmorMaterials.EMERALD, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(TaloiArmorMaterials.EMERALD, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(TaloiArmorMaterials.EMERALD, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> IRIDIUM_HELMET = ITEMS.register("iridium_helmet", () -> new ArmorItem(ModArmorMaterials.IRIDIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> IRIDIUM_CHESTPLATE = ITEMS.register("iridium_chestplate", () -> new ArmorItem(ModArmorMaterials.IRIDIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> IRIDIUM_LEGGINGS = ITEMS.register("iridium_leggings", () -> new ArmorItem(ModArmorMaterials.IRIDIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> IRIDIUM_BOOTS = ITEMS.register("iridium_boots", () -> new ArmorItem(ModArmorMaterials.IRIDIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> IRIDIUM_HELMET = ITEMS.register("iridium_helmet", () -> new ArmorItem(TaloiArmorMaterials.IRIDIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> IRIDIUM_CHESTPLATE = ITEMS.register("iridium_chestplate", () -> new ArmorItem(TaloiArmorMaterials.IRIDIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> IRIDIUM_LEGGINGS = ITEMS.register("iridium_leggings", () -> new ArmorItem(TaloiArmorMaterials.IRIDIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> IRIDIUM_BOOTS = ITEMS.register("iridium_boots", () -> new ArmorItem(TaloiArmorMaterials.IRIDIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> LAPIS_HELMET = ITEMS.register("lapis_helmet", () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots", () -> new ArmorItem(ModArmorMaterials.LAPIS, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> LAPIS_HELMET = ITEMS.register("lapis_helmet", () -> new ArmorItem(TaloiArmorMaterials.LAPIS, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> LAPIS_CHESTPLATE = ITEMS.register("lapis_chestplate", () -> new ArmorItem(TaloiArmorMaterials.LAPIS, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> LAPIS_LEGGINGS = ITEMS.register("lapis_leggings", () -> new ArmorItem(TaloiArmorMaterials.LAPIS, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> LAPIS_BOOTS = ITEMS.register("lapis_boots", () -> new ArmorItem(TaloiArmorMaterials.LAPIS, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> OSMIUM_HELMET = ITEMS.register("osmium_helmet", () -> new ArmorItem(ModArmorMaterials.OSMIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> OSMIUM_CHESTPLATE = ITEMS.register("osmium_chestplate", () -> new ArmorItem(ModArmorMaterials.OSMIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> OSMIUM_LEGGINGS = ITEMS.register("osmium_leggings", () -> new ArmorItem(ModArmorMaterials.OSMIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> OSMIUM_BOOTS = ITEMS.register("osmium_boots", () -> new ArmorItem(ModArmorMaterials.OSMIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> OSMIUM_HELMET = ITEMS.register("osmium_helmet", () -> new ArmorItem(TaloiArmorMaterials.OSMIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> OSMIUM_CHESTPLATE = ITEMS.register("osmium_chestplate", () -> new ArmorItem(TaloiArmorMaterials.OSMIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> OSMIUM_LEGGINGS = ITEMS.register("osmium_leggings", () -> new ArmorItem(TaloiArmorMaterials.OSMIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> OSMIUM_BOOTS = ITEMS.register("osmium_boots", () -> new ArmorItem(TaloiArmorMaterials.OSMIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> PLATINUM_HELMET = ITEMS.register("platinum_helmet", () -> new ArmorItem(ModArmorMaterials.PLATINUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> PLATINUM_CHESTPLATE = ITEMS.register("platinum_chestplate", () -> new ArmorItem(ModArmorMaterials.PLATINUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> PLATINUM_LEGGINGS = ITEMS.register("platinum_leggings", () -> new ArmorItem(ModArmorMaterials.PLATINUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> PLATINUM_BOOTS = ITEMS.register("platinum_boots", () -> new ArmorItem(ModArmorMaterials.PLATINUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> PLATINUM_HELMET = ITEMS.register("platinum_helmet", () -> new ArmorItem(TaloiArmorMaterials.PLATINUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> PLATINUM_CHESTPLATE = ITEMS.register("platinum_chestplate", () -> new ArmorItem(TaloiArmorMaterials.PLATINUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> PLATINUM_LEGGINGS = ITEMS.register("platinum_leggings", () -> new ArmorItem(TaloiArmorMaterials.PLATINUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> PLATINUM_BOOTS = ITEMS.register("platinum_boots", () -> new ArmorItem(TaloiArmorMaterials.PLATINUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> TUNGSTEN_HELMET = ITEMS.register("tungsten_helmet", () -> new ArmorItem(ModArmorMaterials.TUNGSTEN, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> TUNGSTEN_CHESTPLATE = ITEMS.register("tungsten_chestplate", () -> new ArmorItem(ModArmorMaterials.TUNGSTEN, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> TUNGSTEN_LEGGINGS = ITEMS.register("tungsten_leggings", () -> new ArmorItem(ModArmorMaterials.TUNGSTEN, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> TUNGSTEN_BOOTS = ITEMS.register("tungsten_boots", () -> new ArmorItem(ModArmorMaterials.TUNGSTEN, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> TUNGSTEN_HELMET = ITEMS.register("tungsten_helmet", () -> new ArmorItem(TaloiArmorMaterials.TUNGSTEN, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> TUNGSTEN_CHESTPLATE = ITEMS.register("tungsten_chestplate", () -> new ArmorItem(TaloiArmorMaterials.TUNGSTEN, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> TUNGSTEN_LEGGINGS = ITEMS.register("tungsten_leggings", () -> new ArmorItem(TaloiArmorMaterials.TUNGSTEN, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> TUNGSTEN_BOOTS = ITEMS.register("tungsten_boots", () -> new ArmorItem(TaloiArmorMaterials.TUNGSTEN, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> SERMIUM_HELMET = ITEMS.register("sermium_helmet", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.HEAD, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> SERMIUM_CHESTPLATE = ITEMS.register("sermium_chestplate", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.CHEST, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> SERMIUM_LEGGINGS = ITEMS.register("sermium_leggings", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> SERMIUM_BOOTS = ITEMS.register("sermium_boots", () -> new ArmorItem(ModArmorMaterials.SERMIUM, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> SERMIUM_HELMET = ITEMS.register("sermium_helmet", () -> new ArmorItem(TaloiArmorMaterials.SERMIUM, EquipmentSlot.HEAD, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> SERMIUM_CHESTPLATE = ITEMS.register("sermium_chestplate", () -> new ArmorItem(TaloiArmorMaterials.SERMIUM, EquipmentSlot.CHEST, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> SERMIUM_LEGGINGS = ITEMS.register("sermium_leggings", () -> new ArmorItem(TaloiArmorMaterials.SERMIUM, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> SERMIUM_BOOTS = ITEMS.register("sermium_boots", () -> new ArmorItem(TaloiArmorMaterials.SERMIUM, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
-    public static final RegistryObject<Item> FUTURITE_HELMET = ITEMS.register("futurite_helmet", () -> new ArmorItem(ModArmorMaterials.FUTURITE, EquipmentSlot.HEAD, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_CHESTPLATE = ITEMS.register("futurite_chestplate", () -> new ArmorItem(ModArmorMaterials.FUTURITE, EquipmentSlot.CHEST, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_LEGGINGS = ITEMS.register("futurite_leggings", () -> new ArmorItem(ModArmorMaterials.FUTURITE, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
-    public static final RegistryObject<Item> FUTURITE_BOOTS = ITEMS.register("futurite_boots", () -> new ArmorItem(ModArmorMaterials.FUTURITE, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_HELMET = ITEMS.register("futurite_helmet", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.HEAD, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_CHESTPLATE = ITEMS.register("futurite_chestplate", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.CHEST, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_LEGGINGS = ITEMS.register("futurite_leggings", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.LEGS, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
+    public static final RegistryObject<Item> FUTURITE_BOOTS = ITEMS.register("futurite_boots", () -> new ArmorItem(TaloiArmorMaterials.FUTURITE, EquipmentSlot.FEET, new Item.Properties().fireResistant().tab(ModCreativeModeTab.TALOI_COMBAT)));
 
     // GEMS
     public static final RegistryObject<Item> MALACHITE = ITEMS.register("malachite", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TALOI_ITEMS)));
