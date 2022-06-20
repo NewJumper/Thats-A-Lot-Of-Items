@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.custom.machine;
 
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.block.entity.machine.UnstableSeparatorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -18,7 +18,7 @@ public class UnstableSeparatorBlock extends AbstractSeparatorBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.UNSTABLE_SEPARATOR.get(), UnstableSeparatorBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, TaloiBlockEntities.UNSTABLE_SEPARATOR.get(), UnstableSeparatorBlockEntity::tick);
     }
 
     @Nullable

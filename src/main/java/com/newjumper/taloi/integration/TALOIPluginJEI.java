@@ -1,7 +1,7 @@
 package com.newjumper.taloi.integration;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import com.newjumper.taloi.recipe.*;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -28,12 +28,12 @@ public class TALOIPluginJEI implements IModPlugin {
         IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
 
         registration.addRecipeCategories(
-                new ConstructingCategory(guiHelper, ModBlocks.ALPHA_CONSTRUCTOR.get(), "container.taloi.ac", 200),
-                new UnstableConstructingCategory(guiHelper, ModBlocks.UNSTABLE_CONSTRUCTOR.get(), "container.taloi.uc", 100),
-                new PressingCategory(guiHelper, ModBlocks.ALPHA_HYDRAULIC_PRESS.get(), "container.taloi.ahp", 200),
-                new UnstablePressingCategory(guiHelper, ModBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), "container.taloi.uhp", 100),
-                new ProcessingCategory(guiHelper, ModBlocks.ALPHA_PROCESSOR.get(), "container.taloi.ap", 200),
-                new SeparatingCategory(guiHelper, ModBlocks.ALPHA_SEPARATOR.get(), "container.taloi.ase", 200)
+                new ConstructingCategory(guiHelper, TaloiBlocks.ALPHA_CONSTRUCTOR.get(), "container.taloi.ac", 200),
+                new UnstableConstructingCategory(guiHelper, TaloiBlocks.UNSTABLE_CONSTRUCTOR.get(), "container.taloi.uc", 100),
+                new PressingCategory(guiHelper, TaloiBlocks.ALPHA_HYDRAULIC_PRESS.get(), "container.taloi.ahp", 200),
+                new UnstablePressingCategory(guiHelper, TaloiBlocks.UNSTABLE_HYDRAULIC_PRESS.get(), "container.taloi.uhp", 100),
+                new ProcessingCategory(guiHelper, TaloiBlocks.ALPHA_PROCESSOR.get(), "container.taloi.ap", 200),
+                new SeparatingCategory(guiHelper, TaloiBlocks.ALPHA_SEPARATOR.get(), "container.taloi.ase", 200)
         );
     }
 

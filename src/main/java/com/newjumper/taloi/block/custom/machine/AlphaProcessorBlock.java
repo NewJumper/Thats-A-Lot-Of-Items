@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.custom.machine;
 
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.block.entity.machine.AlphaProcessorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -18,7 +18,7 @@ public class AlphaProcessorBlock extends AbstractProcessorBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.ALPHA_PROCESSOR.get(), AlphaProcessorBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, TaloiBlockEntities.ALPHA_PROCESSOR.get(), AlphaProcessorBlockEntity::tick);
     }
 
     @Nullable

@@ -1,6 +1,6 @@
 package com.newjumper.taloi.screen;
 
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
@@ -75,8 +75,8 @@ public class HydraulicPressMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_HYDRAULIC_PRESS.get()) ||
-               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_HYDRAULIC_PRESS.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.ALPHA_HYDRAULIC_PRESS.get()) ||
+               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.BETA_HYDRAULIC_PRESS.get());
     }
 
     private void addInventorySlots(Inventory pInventory) {

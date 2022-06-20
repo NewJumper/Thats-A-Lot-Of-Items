@@ -1,9 +1,9 @@
 package com.newjumper.taloi.datagen.recipes;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import com.newjumper.taloi.datagen.recipes.custom.SeparatingRecipeBuilder;
-import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.item.TaloiItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -64,60 +64,60 @@ public class SeparatingRecipesProvider extends RecipeProvider implements ICondit
                 .unlockedBy("has_material", has(Blocks.DEEPSLATE_REDSTONE_ORE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_redstone_ore_separating"));
 
         // TALOI
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.ALUMINUM_ORE.get()), Blocks.STONE, ModItems.RAW_ALUMINUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.ALUMINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_ALUMINUM_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_ALUMINUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_ALUMINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_aluminum_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.ALUMINUM_ORE.get()), Blocks.STONE, TaloiItems.RAW_ALUMINUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.ALUMINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_ALUMINUM_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_ALUMINUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_ALUMINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_aluminum_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.IRIDIUM_ORE.get()), Blocks.STONE, ModItems.RAW_IRIDIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.IRIDIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_IRIDIUM_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_IRIDIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_IRIDIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_iridium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.IRIDIUM_ORE.get()), Blocks.STONE, TaloiItems.RAW_IRIDIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.IRIDIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_IRIDIUM_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_IRIDIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_IRIDIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_iridium_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.LEAD_ORE.get()), Blocks.STONE, ModItems.RAW_LEAD.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.LEAD_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_LEAD_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_LEAD.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_LEAD_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_lead_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.LEAD_ORE.get()), Blocks.STONE, TaloiItems.RAW_LEAD.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.LEAD_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_LEAD_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_LEAD.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_LEAD_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_lead_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.MAGNESIUM_ORE.get()), Blocks.STONE, ModItems.RAW_MAGNESIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.MAGNESIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_MAGNESIUM_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_MAGNESIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_MAGNESIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_magnesium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.MAGNESIUM_ORE.get()), Blocks.STONE, TaloiItems.RAW_MAGNESIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.MAGNESIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_MAGNESIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_magnesium_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.OSMIUM_ORE.get()), Blocks.STONE, ModItems.RAW_OSMIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.OSMIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_OSMIUM_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_OSMIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_OSMIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_osmium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.OSMIUM_ORE.get()), Blocks.STONE, TaloiItems.RAW_OSMIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.OSMIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_OSMIUM_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_OSMIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_OSMIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_osmium_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.PLATINUM_ORE.get()), Blocks.STONE, ModItems.RAW_PLATINUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.PLATINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_PLATINUM_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_PLATINUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_PLATINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_platinum_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.PLATINUM_ORE.get()), Blocks.STONE, TaloiItems.RAW_PLATINUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.PLATINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_PLATINUM_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_PLATINUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_PLATINUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_platinum_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.SILICON_ORE.get()), Blocks.STONE, ModItems.RAW_SILICON.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.SILICON_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_SILICON_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_SILICON.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_SILICON_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_silicon_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.SILICON_ORE.get()), Blocks.STONE, TaloiItems.RAW_SILICON.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.SILICON_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_SILICON_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_SILICON.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_SILICON_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_silicon_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.TIN_ORE.get()), Blocks.STONE, ModItems.RAW_TIN.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.TIN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_TIN_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_TIN.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_TIN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_tin_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.TIN_ORE.get()), Blocks.STONE, TaloiItems.RAW_TIN.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.TIN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_TIN_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_TIN.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_TIN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_tin_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.TUNGSTEN_ORE.get()), Blocks.STONE, ModItems.RAW_TUNGSTEN.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.TUNGSTEN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_TUNGSTEN.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_tungsten_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.TUNGSTEN_ORE.get()), Blocks.STONE, TaloiItems.RAW_TUNGSTEN.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.TUNGSTEN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_TUNGSTEN.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_tungsten_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.URANIUM_ORE.get()), Blocks.STONE, ModItems.RAW_URANIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.URANIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "uranium_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_URANIUM_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_URANIUM.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_URANIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_uranium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.URANIUM_ORE.get()), Blocks.STONE, TaloiItems.RAW_URANIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.URANIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "uranium_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_URANIUM_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_URANIUM.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_URANIUM_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_uranium_ore_separating"));
 
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.ZINC_ORE.get()), Blocks.STONE, ModItems.RAW_ZINC.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.ZINC_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(ModBlocks.DEEPSLATE_ZINC_ORE.get()), Blocks.DEEPSLATE, ModItems.RAW_ZINC.get(), 2, 0f)
-                .unlockedBy("has_material", has(ModBlocks.DEEPSLATE_ZINC_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_zinc_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.ZINC_ORE.get()), Blocks.STONE, TaloiItems.RAW_ZINC.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.ZINC_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ore_separating"));
+        new SeparatingRecipeBuilder(Ingredient.of(TaloiBlocks.DEEPSLATE_ZINC_ORE.get()), Blocks.DEEPSLATE, TaloiItems.RAW_ZINC.get(), 2, 0f)
+                .unlockedBy("has_material", has(TaloiBlocks.DEEPSLATE_ZINC_ORE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_zinc_ore_separating"));
     }
 
     @Override

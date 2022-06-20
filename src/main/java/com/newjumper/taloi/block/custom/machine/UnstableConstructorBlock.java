@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.custom.machine;
 
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.block.entity.machine.UnstableConstructorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -49,7 +49,7 @@ public class UnstableConstructorBlock extends AbstractConstructorBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.UNSTABLE_CONSTRUCTOR.get(), UnstableConstructorBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, TaloiBlockEntities.UNSTABLE_CONSTRUCTOR.get(), UnstableConstructorBlockEntity::tick);
     }
 
     @Nullable

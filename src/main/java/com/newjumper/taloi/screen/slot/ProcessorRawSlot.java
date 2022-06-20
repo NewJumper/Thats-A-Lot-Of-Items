@@ -1,6 +1,6 @@
 package com.newjumper.taloi.screen.slot;
 
-import com.newjumper.taloi.util.ModTags;
+import com.newjumper.taloi.util.TaloiTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -13,6 +13,6 @@ public class ProcessorRawSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(@NotNull ItemStack pStack) {
-        return pStack.is(ModTags.Items.PROCESSOR_RAW);
+        return pStack.is(TaloiTags.Items.PROCESSOR_RAW);
     }
 }

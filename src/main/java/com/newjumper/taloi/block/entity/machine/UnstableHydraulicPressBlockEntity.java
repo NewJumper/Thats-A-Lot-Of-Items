@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.entity.machine;
 
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.recipe.PressingRecipe;
 import com.newjumper.taloi.recipe.UnstablePressingRecipe;
 import com.newjumper.taloi.screen.UnstableHydraulicPressMenu;
@@ -67,7 +67,7 @@ public class UnstableHydraulicPressBlockEntity extends BlockEntity implements Me
     private static int lastSlotIndex;
 
     public UnstableHydraulicPressBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBlockEntities.UNSTABLE_HYDRAULIC_PRESS.get(), pWorldPosition, pBlockState);
+        super(TaloiBlockEntities.UNSTABLE_HYDRAULIC_PRESS.get(), pWorldPosition, pBlockState);
 
         this.recipeType = UnstablePressingRecipe.Type.INSTANCE;
         this.itemHandler = new ItemStackHandler(5) {

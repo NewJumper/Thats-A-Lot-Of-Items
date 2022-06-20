@@ -1,9 +1,9 @@
 package com.newjumper.taloi.datagen.lang;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.block.ModBlocks;
-import com.newjumper.taloi.block.entity.ModBlockEntities;
-import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.block.TaloiBlocks;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
+import com.newjumper.taloi.item.TaloiItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,9 +25,9 @@ public class ModLanguageProvider extends LanguageProvider {
         add("itemGroup.taloi_tools", "TALOI Tools");
         add("itemGroup.taloi_combat", "TALOI Combat");
 
-        ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(this::addBlock);
-        ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).filter(item -> !(item instanceof BlockItem)).forEach(this::addItem);
-        ModBlockEntities.BLOCK_ENTITIES.getEntries().stream().map(RegistryObject::get).forEach(this::addContainer);
+        TaloiBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(this::addBlock);
+        TaloiItems.ITEMS.getEntries().stream().map(RegistryObject::get).filter(item -> !(item instanceof BlockItem)).forEach(this::addItem);
+        TaloiBlockEntities.BLOCK_ENTITIES.getEntries().stream().map(RegistryObject::get).forEach(this::addContainer);
 
         add("advancements.taloi.root.title", "That IS Indeed A Lot Of Items");
         add("advancements.taloi.root.description", "The beginning of a new end");

@@ -8,7 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-public class ModTags {
+public class TaloiTags {
     public static class Blocks {
         public static final TagKey<Block> EVERGREEN_LOGS = taloiTag("evergreen_logs");
         public static final TagKey<Block> WILLOW_LOGS = taloiTag("willow_logs");

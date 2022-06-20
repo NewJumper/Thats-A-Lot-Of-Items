@@ -1,13 +1,13 @@
 package com.newjumper.taloi.util;
 
-import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.item.TaloiItems;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 
 public class ModItemProperties {
     public static void addItemProperties() {
-        addBow(ModItems.NETHERITE_BOW.get());
+        addBow(TaloiItems.NETHERITE_BOW.get());
     }
 
     private static void addBow(Item pItem) {

@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.custom.machine;
 
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.block.entity.machine.AlphaSeparatorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -18,7 +18,7 @@ public class AlphaSeparatorBlock extends AbstractSeparatorBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.ALPHA_SEPARATOR.get(), AlphaSeparatorBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, TaloiBlockEntities.ALPHA_SEPARATOR.get(), AlphaSeparatorBlockEntity::tick);
     }
 
     @Nullable

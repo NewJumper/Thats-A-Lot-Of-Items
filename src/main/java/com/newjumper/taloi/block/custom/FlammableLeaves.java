@@ -6,8 +6,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModFlammableLeaves extends LeavesBlock {
-    public ModFlammableLeaves(Properties pProperties) {
+public class FlammableLeaves extends LeavesBlock {
+    public FlammableLeaves(Properties pProperties) {
         super(pProperties);
     }
 

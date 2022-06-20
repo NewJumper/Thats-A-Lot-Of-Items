@@ -1,6 +1,6 @@
 package com.newjumper.taloi.screen;
 
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
@@ -76,7 +76,7 @@ public class UnstableConstructorMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.UNSTABLE_CONSTRUCTOR.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.UNSTABLE_CONSTRUCTOR.get());
     }
 
     private void addInventorySlots(Inventory pInventory) {

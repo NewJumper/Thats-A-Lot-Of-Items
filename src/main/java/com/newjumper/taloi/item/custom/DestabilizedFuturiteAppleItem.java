@@ -1,6 +1,6 @@
 package com.newjumper.taloi.item.custom;
 
-import com.newjumper.taloi.item.ModItems;
+import com.newjumper.taloi.item.TaloiItems;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -34,10 +34,10 @@ public class DestabilizedFuturiteAppleItem extends Item {
         }
 
         if (pStack.isEmpty()) {
-            return new ItemStack(ModItems.DIAMOND_APPLE.get());
+            return new ItemStack(TaloiItems.DIAMOND_APPLE.get());
         } else {
             if (pEntityLiving instanceof Player && !((Player)pEntityLiving).getAbilities().instabuild) {
-                ItemStack itemstack = new ItemStack(ModItems.DIAMOND_APPLE.get());
+                ItemStack itemstack = new ItemStack(TaloiItems.DIAMOND_APPLE.get());
                 Player player = (Player)pEntityLiving;
                 if (!player.getInventory().add(itemstack)) {
                     player.drop(itemstack, false);

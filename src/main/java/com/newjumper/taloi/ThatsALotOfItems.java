@@ -1,21 +1,16 @@
 package com.newjumper.taloi;
 
 import com.mojang.logging.LogUtils;
-import com.newjumper.taloi.block.ModBlocks;
-import com.newjumper.taloi.block.entity.ModBlockEntities;
-import com.newjumper.taloi.item.ModItems;
-import com.newjumper.taloi.painting.ModPaintings;
+import com.newjumper.taloi.block.TaloiBlocks;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
+import com.newjumper.taloi.item.TaloiItems;
+import com.newjumper.taloi.painting.TaloiPaintings;
 import com.newjumper.taloi.recipe.ModRecipes;
 import com.newjumper.taloi.screen.*;
 import com.newjumper.taloi.sound.ModSounds;
-import com.newjumper.taloi.util.ModItemProperties;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -27,31 +22,14 @@ public class ThatsALotOfItems {
     public ThatsALotOfItems() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModBlocks.register(eventBus);
-        ModItems.register(eventBus);
-        ModBlockEntities.register(eventBus);
+        TaloiBlocks.register(eventBus);
+        TaloiItems.register(eventBus);
+        TaloiBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
-        ModPaintings.register(eventBus);
+        TaloiPaintings.register(eventBus);
         ModRecipes.register(eventBus);
         ModSounds.register(eventBus);
 
-        eventBus.addListener(this::clientSetup);
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EVERGREEN_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
-
-        MenuScreens.register(ModMenuTypes.CONSTRUCTOR_MENU.get(), ConstructorScreen::new);
-        MenuScreens.register(ModMenuTypes.UNSTABLE_CONSTRUCTOR_MENU.get(), UnstableConstructorScreen::new);
-        MenuScreens.register(ModMenuTypes.HYDRAULIC_PRESS_MENU.get(), HydraulicPressScreen::new);
-        MenuScreens.register(ModMenuTypes.UNSTABLE_HYDRAULIC_PRESS_MENU.get(), UnstableHydraulicPressScreen::new);
-        MenuScreens.register(ModMenuTypes.PROCESSOR_MENU.get(), ProcessorScreen::new);
-        MenuScreens.register(ModMenuTypes.SEPARATOR_MENU.get(), SeparatorScreen::new);
-
-        ModItemProperties.addItemProperties();
     }
 }

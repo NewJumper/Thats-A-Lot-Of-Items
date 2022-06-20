@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(modid = ThatsALotOfItems.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class EventBusEvents {
+public class TaloiEventBus {
     @SubscribeEvent
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> pEvent) {
         pEvent.getRegistry().registerAll(new TheCavesAddition.Serializer().setRegistryName(new ResourceLocation(ThatsALotOfItems.MOD_ID,"the_caves_from_dungeon")));

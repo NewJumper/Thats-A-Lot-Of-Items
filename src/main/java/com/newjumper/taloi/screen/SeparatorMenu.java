@@ -1,6 +1,6 @@
 package com.newjumper.taloi.screen;
 
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import com.newjumper.taloi.screen.slot.ModFuelSlot;
 import com.newjumper.taloi.screen.slot.ModResultSlot;
 import com.newjumper.taloi.screen.slot.SeparatorOreSlot;
@@ -75,9 +75,9 @@ public class SeparatorMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.ALPHA_SEPARATOR.get()) ||
-               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.BETA_SEPARATOR.get()) ||
-               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, ModBlocks.UNSTABLE_SEPARATOR.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.ALPHA_SEPARATOR.get()) ||
+               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.BETA_SEPARATOR.get()) ||
+               stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.UNSTABLE_SEPARATOR.get());
     }
 
     private void addInventorySlots(Inventory pInventory) {

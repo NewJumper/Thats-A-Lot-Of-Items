@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.custom;
 
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.UseOnContext;
@@ -12,8 +12,8 @@ import net.minecraftforge.common.ToolActions;
 
 import javax.annotation.Nullable;
 
-public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
-    public ModFlammableRotatedPillarBlock(Properties pProperties) {
+public class FlammableRotatedPillarBlock extends RotatedPillarBlock {
+    public FlammableRotatedPillarBlock(Properties pProperties) {
         super(pProperties);
     }
 
@@ -36,17 +36,17 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
     @Override
     public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
         if(toolAction.equals(ToolActions.AXE_STRIP)) {
-            if(state.is(ModBlocks.EVERGREEN_LOG.get())) {
-                return ModBlocks.STRIPPED_EVERGREEN_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(TaloiBlocks.EVERGREEN_LOG.get())) {
+                return TaloiBlocks.STRIPPED_EVERGREEN_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.EVERGREEN_WOOD.get())) {
-                return ModBlocks.STRIPPED_EVERGREEN_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(TaloiBlocks.EVERGREEN_WOOD.get())) {
+                return TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.WILLOW_LOG.get())) {
-                return ModBlocks.STRIPPED_WILLOW_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(TaloiBlocks.WILLOW_LOG.get())) {
+                return TaloiBlocks.STRIPPED_WILLOW_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.WILLOW_WOOD.get())) {
-                return ModBlocks.STRIPPED_WILLOW_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(TaloiBlocks.WILLOW_WOOD.get())) {
+                return TaloiBlocks.STRIPPED_WILLOW_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
 

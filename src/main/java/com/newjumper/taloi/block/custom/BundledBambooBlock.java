@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.custom;
 
-import com.newjumper.taloi.block.ModBlocks;
+import com.newjumper.taloi.block.TaloiBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.UseOnContext;
@@ -35,8 +35,8 @@ public class BundledBambooBlock extends RotatedPillarBlock {
     @Override
     public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
         if(toolAction.equals(ToolActions.AXE_STRIP)) {
-            if(state.is(ModBlocks.BUNDLED_BAMBOO.get())) {
-                return ModBlocks.BAMBOO_PLANKS.get().defaultBlockState();
+            if(state.is(TaloiBlocks.BUNDLED_BAMBOO.get())) {
+                return TaloiBlocks.BAMBOO_PLANKS.get().defaultBlockState();
             }
         }
 

@@ -7,7 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModPaintings {
+public class TaloiPaintings {
     public static final DeferredRegister<Motive> PAINTING_MOTIVES = DeferredRegister.create(ForgeRegistries.PAINTING_TYPES, ThatsALotOfItems.MOD_ID);
 
     public static final RegistryObject<Motive> SPACE = PAINTING_MOTIVES.register("space", () -> new Motive(32, 32));

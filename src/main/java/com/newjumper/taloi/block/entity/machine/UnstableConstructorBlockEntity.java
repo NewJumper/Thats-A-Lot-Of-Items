@@ -1,6 +1,6 @@
 package com.newjumper.taloi.block.entity.machine;
 
-import com.newjumper.taloi.block.entity.ModBlockEntities;
+import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.recipe.ConstructingRecipe;
 import com.newjumper.taloi.recipe.UnstableConstructingRecipe;
 import com.newjumper.taloi.screen.UnstableConstructorMenu;
@@ -67,7 +67,7 @@ public class UnstableConstructorBlockEntity extends BlockEntity implements MenuP
     protected static int lastSlotIndex;
 
     public UnstableConstructorBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBlockEntities.UNSTABLE_CONSTRUCTOR.get(), pWorldPosition, pBlockState);
+        super(TaloiBlockEntities.UNSTABLE_CONSTRUCTOR.get(), pWorldPosition, pBlockState);
 
         this.recipeType = UnstableConstructingRecipe.Type.INSTANCE;
         this.itemHandler = new ItemStackHandler(5) {

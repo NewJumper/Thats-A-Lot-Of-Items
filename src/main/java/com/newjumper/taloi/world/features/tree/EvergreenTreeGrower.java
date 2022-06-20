@@ -1,6 +1,6 @@
 package com.newjumper.taloi.world.features.tree;
 
-import com.newjumper.taloi.world.features.ModConfiguredFeatures;
+import com.newjumper.taloi.world.features.TaloiConfiguredFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -12,6 +12,6 @@ public class EvergreenTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(Random pRandom, boolean pLargeHive) {
-        return ModConfiguredFeatures.EVERGREEN;
+        return TaloiConfiguredFeatures.EVERGREEN;
     }
 }
