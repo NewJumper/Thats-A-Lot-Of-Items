@@ -26,8 +26,8 @@ public class FuturiteArmor extends ArmorItem {
     }
 
     private boolean hasArmorEquipped(Player player) {
-        for(int i = 0; i < 4; i++) {
-            ItemStack stack = player.getInventory().getArmor(i);
+        for(ItemStack stack : player.getInventory().armor) {
+            if(!(stack.getItem() instanceof ArmorItem)) return false;
             if(stack.isEmpty() || ((ArmorItem)stack.getItem()).getMaterial() != TaloiArmorMaterials.FUTURITE) return false;
         }
 
