@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "silicon",
   "ingredients": [
     {
-      "item": "taloi:silicon_block"
+      "tag": "forge:storage_blocks/silicon"
     }
   ],
   "result": {

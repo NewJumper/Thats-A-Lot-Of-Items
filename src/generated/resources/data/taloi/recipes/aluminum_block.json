@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "A": {
+    "I": {
       "tag": "forge:ingots/aluminum"
     }
   },

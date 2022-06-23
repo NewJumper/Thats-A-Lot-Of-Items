@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:raw_platinum_block"
+      "tag": "forge:storage_blocks/raw_platinum"
     }
   ],
   "result": {

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SSS",
-    "SSS",
-    "SSS"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "S": {
+    "I": {
       "tag": "forge:ingots/silicon"
     }
   },

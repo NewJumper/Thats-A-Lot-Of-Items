@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:ingots/platinum"
+            "tag": "forge:nuggets/platinum"
           }
         ]
       }

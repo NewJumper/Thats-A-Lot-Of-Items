@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "tin",
   "ingredients": [
     {
-      "item": "taloi:tin_block"
+      "tag": "forge:storage_blocks/tin"
     }
   ],
   "result": {

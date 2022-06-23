@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:raw_materials/osmium"
+            "tag": "forge:storage_blocks/raw_osmium"
           }
         ]
       }

@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "zinc",
   "ingredients": [
     {
-      "item": "taloi:zinc_block"
+      "tag": "forge:storage_blocks/zinc"
     }
   ],
   "result": {

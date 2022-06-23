@@ -296,14 +296,14 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
         // ALUMINUM
         ShapedRecipeBuilder.shaped(TaloiBlocks.ALUMINUM_BLOCK.get(), 1)
-                .define('A', TaloiTags.Items.INGOTS_ALUMINUM)
-                .pattern("AAA")
-                .pattern("AAA")
-                .pattern("AAA")
+                .define('I', TaloiTags.Items.INGOTS_ALUMINUM)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.ALUMINUM_INGOT.get(), 9)
-                .requires(TaloiBlocks.ALUMINUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.ALUMINUM_INGOT.get(), 9).group("aluminum")
+                .requires(TaloiTags.Items.STORAGE_ALUMINUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_ALUMINUM_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_ALUMINUM)
                 .pattern("RRR")
@@ -311,14 +311,14 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_ALUMINUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_ALUMINUM.get(), 9)
-                .requires(TaloiBlocks.RAW_ALUMINUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.ALUMINUM_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_ALUMINUM)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_ALUMINUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_ALUMINUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.ALUMINUM_INGOT.get(), 1).group("aluminum")
+                .define('N', TaloiTags.Items.NUGGETS_ALUMINUM)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_nugget"));
 
         // IRIDIUM
         ShapedRecipeBuilder.shaped(TaloiBlocks.IRIDIUM_BLOCK.get(), 1)
@@ -327,9 +327,9 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("III")
                 .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.IRIDIUM_INGOT.get(), 9)
-                .requires(TaloiBlocks.IRIDIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.IRIDIUM_INGOT.get(), 9).group("iridium")
+                .requires(TaloiTags.Items.STORAGE_IRIDIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_IRIDIUM_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_IRIDIUM)
                 .pattern("RRR")
@@ -337,25 +337,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_IRIDIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_IRIDIUM.get(), 9)
-                .requires(TaloiBlocks.RAW_IRIDIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_IRIDIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.IRIDIUM_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_IRIDIUM)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_IRIDIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_IRIDIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.IRIDIUM_INGOT.get(), 1).group("iridium")
+                .define('N', TaloiTags.Items.NUGGETS_IRIDIUM)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_nugget"));
 
         // LEAD
         ShapedRecipeBuilder.shaped(TaloiBlocks.LEAD_BLOCK.get(), 1)
-                .define('L', TaloiTags.Items.INGOTS_LEAD)
-                .pattern("LLL")
-                .pattern("LLL")
-                .pattern("LLL")
+                .define('I', TaloiTags.Items.INGOTS_LEAD)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.LEAD_INGOT.get(), 9)
-                .requires(TaloiBlocks.LEAD_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.LEAD_INGOT.get(), 9).group("lead")
+                .requires(TaloiTags.Items.STORAGE_LEAD)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_LEAD_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_LEAD)
                 .pattern("RRR")
@@ -363,25 +363,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_LEAD)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_LEAD.get(), 9)
-                .requires(TaloiBlocks.RAW_LEAD_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_LEAD)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.LEAD_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_LEAD)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_LEAD)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_LEAD)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.LEAD_INGOT.get(), 1).group("lead")
+                .define('N', TaloiTags.Items.NUGGETS_LEAD)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_nugget"));
 
         // MAGNESIUM
         ShapedRecipeBuilder.shaped(TaloiBlocks.MAGNESIUM_BLOCK.get(), 1)
-                .define('M', TaloiTags.Items.INGOTS_MAGNESIUM)
-                .pattern("MMM")
-                .pattern("MMM")
-                .pattern("MMM")
+                .define('I', TaloiTags.Items.INGOTS_MAGNESIUM)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.MAGNESIUM_INGOT.get(), 9)
-                .requires(TaloiBlocks.MAGNESIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.MAGNESIUM_INGOT.get(), 9).group("magnesium")
+                .requires(TaloiTags.Items.STORAGE_MAGNESIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_MAGNESIUM_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_MAGNESIUM)
                 .pattern("RRR")
@@ -389,25 +389,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_MAGNESIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_MAGNESIUM.get(), 9)
-                .requires(TaloiBlocks.RAW_MAGNESIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_MAGNESIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.MAGNESIUM_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_MAGNESIUM)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_MAGNESIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_MAGNESIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.MAGNESIUM_INGOT.get(), 1).group("magnesium")
+                .define('N', TaloiTags.Items.NUGGETS_MAGNESIUM)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_nugget"));
 
         // OSMIUM
         ShapedRecipeBuilder.shaped(TaloiBlocks.OSMIUM_BLOCK.get(), 1)
-                .define('O', TaloiTags.Items.INGOTS_OSMIUM)
-                .pattern("OOO")
-                .pattern("OOO")
-                .pattern("OOO")
+                .define('I', TaloiTags.Items.INGOTS_OSMIUM)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.OSMIUM_INGOT.get(), 9)
-                .requires(TaloiBlocks.OSMIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.OSMIUM_INGOT.get(), 9).group("osmium")
+                .requires(TaloiTags.Items.STORAGE_OSMIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_OSMIUM_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_OSMIUM)
                 .pattern("RRR")
@@ -415,25 +415,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_OSMIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_OSMIUM.get(), 9)
-                .requires(TaloiBlocks.RAW_OSMIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_OSMIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.OSMIUM_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_OSMIUM)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_OSMIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_OSMIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.OSMIUM_INGOT.get(), 1).group("osmium")
+                .define('N', TaloiTags.Items.NUGGETS_OSMIUM)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_nugget"));
 
         // PLATINUM
         ShapedRecipeBuilder.shaped(TaloiBlocks.PLATINUM_BLOCK.get(), 1)
-                .define('P', TaloiTags.Items.INGOTS_PLATINUM)
-                .pattern("PPP")
-                .pattern("PPP")
-                .pattern("PPP")
+                .define('I', TaloiTags.Items.INGOTS_PLATINUM)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.PLATINUM_INGOT.get(), 9)
-                .requires(TaloiBlocks.PLATINUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.PLATINUM_INGOT.get(), 9).group("platinum")
+                .requires(TaloiTags.Items.STORAGE_PLATINUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_PLATINUM_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_PLATINUM)
                 .pattern("RRR")
@@ -441,25 +441,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_PLATINUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_PLATINUM.get(), 9)
-                .requires(TaloiBlocks.RAW_PLATINUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_PLATINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.PLATINUM_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_PLATINUM)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_PLATINUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_PLATINUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.PLATINUM_INGOT.get(), 1).group("platinum")
+                .define('N', TaloiTags.Items.NUGGETS_PLATINUM)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_nugget"));
 
         // SILICON
         ShapedRecipeBuilder.shaped(TaloiBlocks.SILICON_BLOCK.get(), 1)
-                .define('S', TaloiTags.Items.INGOTS_SILICON)
-                .pattern("SSS")
-                .pattern("SSS")
-                .pattern("SSS")
+                .define('I', TaloiTags.Items.INGOTS_SILICON)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_SILICON)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.SILICON.get(), 9)
-                .requires(TaloiBlocks.SILICON_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.SILICON.get(), 9).group("silicon")
+                .requires(TaloiTags.Items.STORAGE_SILICON)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_SILICON_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_SILICON)
                 .pattern("RRR")
@@ -467,19 +467,19 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_SILICON)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_SILICON.get(), 9)
-                .requires(TaloiBlocks.RAW_SILICON_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_SILICON)).save(consumer);
+                .requires(TaloiTags.Items.RAW_STORAGE_SILICON)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_SILICON)).save(consumer);
 
         // TIN
         ShapedRecipeBuilder.shaped(TaloiBlocks.TIN_BLOCK.get(), 1)
-                .define('T', TaloiTags.Items.INGOTS_TIN)
-                .pattern("TTT")
-                .pattern("TTT")
-                .pattern("TTT")
+                .define('I', TaloiTags.Items.INGOTS_TIN)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TIN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.TIN_INGOT.get(), 9)
-                .requires(TaloiBlocks.TIN_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.TIN_INGOT.get(), 9).group("tin")
+                .requires(TaloiTags.Items.STORAGE_TIN)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_TIN_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_TIN)
                 .pattern("RRR")
@@ -487,25 +487,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_TIN)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_TIN.get(), 9)
-                .requires(TaloiBlocks.RAW_TIN_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.TIN_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_TIN)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_TIN)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_TIN)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.TIN_INGOT.get(), 1).group("tin")
+                .define('N', TaloiTags.Items.NUGGETS_TIN)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_nugget"));
 
         // TUNGSTEN
         ShapedRecipeBuilder.shaped(TaloiBlocks.TUNGSTEN_BLOCK.get(), 1)
-                .define('T', TaloiTags.Items.INGOTS_TUNGSTEN)
-                .pattern("TTT")
-                .pattern("TTT")
-                .pattern("TTT")
+                .define('I', TaloiTags.Items.INGOTS_TUNGSTEN)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.TUNGSTEN_INGOT.get(), 9)
-                .requires(TaloiBlocks.TUNGSTEN_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.TUNGSTEN_INGOT.get(), 9).group("tungsten")
+                .requires(TaloiTags.Items.STORAGE_TUNGSTEN)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_TUNGSTEN_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_TUNGSTEN)
                 .pattern("RRR")
@@ -513,25 +513,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_TUNGSTEN)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_TUNGSTEN.get(), 9)
-                .requires(TaloiBlocks.RAW_TUNGSTEN_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_TUNGSTEN)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.TUNGSTEN_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_TUNGSTEN)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_TUNGSTEN)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_TUNGSTEN)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.TUNGSTEN_INGOT.get(), 1).group("tungsten")
+                .define('N', TaloiTags.Items.NUGGETS_TUNGSTEN)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_nugget"));
 
         // URANIUM
         ShapedRecipeBuilder.shaped(TaloiBlocks.URANIUM_BLOCK.get(), 1)
-                .define('U', TaloiTags.Items.INGOTS_URANIUM)
-                .pattern("UUU")
-                .pattern("UUU")
-                .pattern("UUU")
+                .define('I', TaloiTags.Items.INGOTS_URANIUM)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.REFINED_URANIUM.get(), 9)
-                .requires(TaloiBlocks.URANIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.REFINED_URANIUM.get(), 9).group("uranium")
+                .requires(TaloiTags.Items.STORAGE_URANIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_URANIUM_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_URANIUM)
                 .pattern("RRR")
@@ -539,25 +539,25 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_URANIUM)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_URANIUM.get(), 9)
-                .requires(TaloiBlocks.RAW_URANIUM_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_URANIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.REFINED_URANIUM.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_URANIUM)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_bit"));
+                .requires(TaloiTags.Items.RAW_STORAGE_URANIUM)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_URANIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.REFINED_URANIUM.get(), 1).group("uranium")
+                .define('N', TaloiTags.Items.NUGGETS_URANIUM)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_bit"));
 
         // ZINC
         ShapedRecipeBuilder.shaped(TaloiBlocks.ZINC_BLOCK.get(), 1)
-                .define('Z', TaloiTags.Items.INGOTS_ZINC)
-                .pattern("ZZZ")
-                .pattern("ZZZ")
-                .pattern("ZZZ")
+                .define('I', TaloiTags.Items.INGOTS_ZINC)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.ZINC_INGOT.get(), 9)
-                .requires(TaloiBlocks.ZINC_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.ZINC_INGOT.get(), 9).group("zinc")
+                .requires(TaloiTags.Items.STORAGE_ZINC)
+                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_block"));
         ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_ZINC_BLOCK.get(), 1)
                 .define('R', TaloiTags.Items.RAW_ZINC)
                 .pattern("RRR")
@@ -565,14 +565,14 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .pattern("RRR")
                 .unlockedBy("has_material", has(TaloiTags.Items.RAW_ZINC)).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_ZINC.get(), 9)
-                .requires(TaloiBlocks.RAW_ZINC_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_ZINC)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.ZINC_INGOT.get(), 1)
-                .define('#', TaloiTags.Items.NUGGETS_ZINC)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
+                .requires(TaloiTags.Items.RAW_STORAGE_ZINC)
+                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_ZINC)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.ZINC_INGOT.get(), 1).group("zinc")
+                .define('N', TaloiTags.Items.NUGGETS_ZINC)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
 
         // ALLOYS
         ShapedRecipeBuilder.shaped(TaloiBlocks.BRONZE_BLOCK.get(), 1)
@@ -992,39 +992,17 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
                 .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer);
 
         // NUGGETS
-        ShapelessRecipeBuilder.shapeless(TaloiItems.ALUMINUM_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_ALUMINUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.IRIDIUM_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_IRIDIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.LEAD_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_LEAD)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.MAGNESIUM_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_MAGNESIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.OSMIUM_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_OSMIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.PLATINUM_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_PLATINUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.TIN_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_TIN)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TIN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.TUNGSTEN_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_TUNGSTEN)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.URANIUM_BIT.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_URANIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.ZINC_NUGGET.get(), 9)
-                .requires(TaloiTags.Items.INGOTS_ZINC)
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.FUTURITE_BIT.get(), 9)
-                .requires(TaloiItems.FUTURITE.get())
-                .unlockedBy("has_material", has(TaloiItems.FUTURITE.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.ALUMINUM_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_ALUMINUM).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.IRIDIUM_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_IRIDIUM).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.LEAD_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_LEAD).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.MAGNESIUM_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_MAGNESIUM).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.OSMIUM_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_OSMIUM).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.PLATINUM_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_PLATINUM).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.TIN_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_TIN).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TIN)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.TUNGSTEN_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_TUNGSTEN).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.URANIUM_BIT.get(), 9).requires(TaloiTags.Items.INGOTS_URANIUM).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.ZINC_NUGGET.get(), 9).requires(TaloiTags.Items.INGOTS_ZINC).unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.FUTURITE_BIT.get(), 9).requires(TaloiItems.FUTURITE.get()).unlockedBy("has_material", has(TaloiItems.FUTURITE.get())).save(consumer);
 
         // MACHINERY
         ShapedRecipeBuilder.shaped(TaloiItems.ALPHA_MACHINE_FRAME.get(), 1)

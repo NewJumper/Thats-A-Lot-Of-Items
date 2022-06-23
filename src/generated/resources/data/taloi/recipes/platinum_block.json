@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PPP",
-    "PPP",
-    "PPP"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "P": {
+    "I": {
       "tag": "forge:ingots/platinum"
     }
   },

@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "uranium",
   "ingredients": [
     {
-      "item": "taloi:uranium_block"
+      "tag": "forge:storage_blocks/uranium"
     }
   ],
   "result": {

@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "tungsten",
   "ingredients": [
     {
-      "item": "taloi:tungsten_block"
+      "tag": "forge:storage_blocks/tungsten"
     }
   ],
   "result": {

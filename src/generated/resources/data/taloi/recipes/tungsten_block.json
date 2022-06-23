@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "TTT",
-    "TTT",
-    "TTT"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "T": {
+    "I": {
       "tag": "forge:ingots/tungsten"
     }
   },

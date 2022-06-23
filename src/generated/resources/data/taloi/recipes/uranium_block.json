@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "UUU",
-    "UUU",
-    "UUU"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "U": {
+    "I": {
       "tag": "forge:ingots/uranium"
     }
   },

@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "platinum",
   "ingredients": [
     {
-      "item": "taloi:platinum_block"
+      "tag": "forge:storage_blocks/platinum"
     }
   ],
   "result": {

@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "magnesium",
   "ingredients": [
     {
-      "item": "taloi:magnesium_block"
+      "tag": "forge:storage_blocks/magnesium"
     }
   ],
   "result": {

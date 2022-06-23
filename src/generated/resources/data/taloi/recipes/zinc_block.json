@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ZZZ",
-    "ZZZ",
-    "ZZZ"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "Z": {
+    "I": {
       "tag": "forge:ingots/zinc"
     }
   },

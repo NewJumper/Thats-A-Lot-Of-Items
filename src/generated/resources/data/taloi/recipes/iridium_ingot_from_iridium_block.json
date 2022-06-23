@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "iridium",
   "ingredients": [
     {
-      "item": "taloi:iridium_block"
+      "tag": "forge:storage_blocks/iridium"
     }
   ],
   "result": {

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "LLL",
-    "LLL",
-    "LLL"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "L": {
+    "I": {
       "tag": "forge:ingots/lead"
     }
   },

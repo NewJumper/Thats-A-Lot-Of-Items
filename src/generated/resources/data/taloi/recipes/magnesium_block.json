@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "MMM",
-    "MMM",
-    "MMM"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "M": {
+    "I": {
       "tag": "forge:ingots/magnesium"
     }
   },
