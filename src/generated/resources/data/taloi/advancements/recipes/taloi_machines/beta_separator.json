@@ -6,7 +6,19 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_beta_machine_frame": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:beta_machine_frame"
+            ]
+          }
+        ]
+      }
+    },
+    "has_alpha_separator": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_beta_machine_frame",
+      "has_alpha_separator",
       "has_the_recipe"
     ]
   ]

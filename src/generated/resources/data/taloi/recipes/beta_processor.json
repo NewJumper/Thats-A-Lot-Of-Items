@@ -7,7 +7,7 @@
   ],
   "key": {
     "G": {
-      "item": "minecraft:glass"
+      "tag": "forge:glass"
     },
     "E": {
       "item": "taloi:emerald_infused_osmium_ingot"

@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "EEE",
-    "E E"
+    "GGG",
+    "G G"
   ],
   "key": {
-    "E": {
+    "G": {
       "tag": "forge:gems/emerald"
     }
   },

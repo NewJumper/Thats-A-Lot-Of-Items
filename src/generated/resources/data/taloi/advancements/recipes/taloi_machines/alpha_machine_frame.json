@@ -6,7 +6,19 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:copper_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_steel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_copper",
+      "has_steel",
       "has_the_recipe"
     ]
   ]

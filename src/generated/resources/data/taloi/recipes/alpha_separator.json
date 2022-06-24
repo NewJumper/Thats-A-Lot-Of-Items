@@ -9,14 +9,14 @@
     "R": {
       "tag": "forge:dusts/redstone"
     },
+    "G": {
+      "tag": "forge:glass"
+    },
     "C": {
       "tag": "forge:ingots/copper"
     },
     "I": {
       "item": "minecraft:iron_pickaxe"
-    },
-    "G": {
-      "item": "minecraft:glass"
     },
     "M": {
       "item": "taloi:alpha_machine_frame"

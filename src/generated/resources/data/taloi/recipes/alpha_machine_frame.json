@@ -10,7 +10,7 @@
       "tag": "forge:dusts/redstone"
     },
     "G": {
-      "item": "minecraft:glass"
+      "tag": "forge:glass"
     },
     "O": {
       "item": "minecraft:obsidian"

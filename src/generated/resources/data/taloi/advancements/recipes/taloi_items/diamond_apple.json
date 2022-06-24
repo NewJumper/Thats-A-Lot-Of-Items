@@ -6,7 +6,17 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:gems/diamond"
+          }
+        ]
+      }
+    },
+    "has_golden_apple": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +37,8 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_diamond",
+      "has_golden_apple",
       "has_the_recipe"
     ]
   ]

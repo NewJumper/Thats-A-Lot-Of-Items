@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_bowl": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -14,6 +14,16 @@
             "items": [
               "minecraft:bowl"
             ]
+          }
+        ]
+      }
+    },
+    "has_wheat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:crops/wheat"
           }
         ]
       }
@@ -27,7 +37,8 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_bowl",
+      "has_wheat",
       "has_the_recipe"
     ]
   ]

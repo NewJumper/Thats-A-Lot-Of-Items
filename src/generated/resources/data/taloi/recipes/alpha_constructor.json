@@ -16,7 +16,7 @@
       "tag": "forge:ingots/copper"
     },
     "S": {
-      "item": "taloi:steel_ingot"
+      "tag": "forge:ingots/steel"
     },
     "M": {
       "item": "taloi:alpha_machine_frame"

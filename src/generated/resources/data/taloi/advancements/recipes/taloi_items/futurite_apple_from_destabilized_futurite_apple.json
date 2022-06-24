@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_destabilized_apple": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:diamond_apple"
+              "taloi:destabilized_futurite_apple"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_destabilized_apple",
       "has_the_recipe"
     ]
   ]

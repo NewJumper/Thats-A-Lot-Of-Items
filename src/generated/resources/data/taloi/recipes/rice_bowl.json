@@ -5,13 +5,13 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "minecraft:wheat"
+      "tag": "forge:crops/wheat"
     },
     {
-      "item": "minecraft:wheat"
+      "tag": "forge:crops/wheat"
     },
     {
-      "item": "minecraft:wheat"
+      "tag": "forge:crops/wheat"
     }
   ],
   "result": {

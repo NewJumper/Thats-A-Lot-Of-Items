@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_raw_material": {
+    "has_raw_silicon": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_raw_material",
+      "has_raw_silicon",
       "has_the_recipe"
     ]
   ]

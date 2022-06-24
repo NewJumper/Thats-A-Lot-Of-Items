@@ -6,7 +6,19 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_futurite_bit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:futurite_bit"
+            ]
+          }
+        ]
+      }
+    },
+    "has_diamond_apple": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_futurite_bit",
+      "has_diamond_apple",
       "has_the_recipe"
     ]
   ]

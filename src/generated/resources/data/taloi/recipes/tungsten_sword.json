@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X",
-    "X",
-    "#"
+    "I",
+    "I",
+    "S"
   ],
   "key": {
-    "X": {
+    "I": {
       "tag": "forge:ingots/tungsten"
     },
-    "#": {
+    "S": {
       "tag": "forge:rods/wooden"
     }
   },

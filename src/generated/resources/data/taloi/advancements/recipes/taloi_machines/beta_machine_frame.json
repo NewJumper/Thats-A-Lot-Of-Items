@@ -6,7 +6,31 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_reinforced_copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:reinforced_copper_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_alloy_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "taloi:alloy_plate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_alpha_machine_frame": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +51,9 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_reinforced_copper",
+      "has_alloy_plate",
+      "has_alpha_machine_frame",
       "has_the_recipe"
     ]
   ]

@@ -9,14 +9,14 @@
     "R": {
       "tag": "forge:dusts/redstone"
     },
+    "C": {
+      "tag": "forge:storage_blocks/coal"
+    },
     "I": {
       "tag": "forge:ingots/copper"
     },
     "B": {
       "item": "minecraft:blaze_powder"
-    },
-    "C": {
-      "item": "minecraft:coal_block"
     },
     "M": {
       "item": "taloi:alpha_machine_frame"

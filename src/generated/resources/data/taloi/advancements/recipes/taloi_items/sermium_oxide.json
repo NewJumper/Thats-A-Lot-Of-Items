@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_sermium_core": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "taloi:sermium"
+              "taloi:sermium_core"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_sermium_core",
       "has_the_recipe"
     ]
   ]

@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "L L",
-    "L L"
+    "G G",
+    "G G"
   ],
   "key": {
-    "L": {
+    "G": {
       "tag": "forge:gems/lapis"
     }
   },

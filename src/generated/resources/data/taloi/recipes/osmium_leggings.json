@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
-    "A A",
-    "A A"
+    "III",
+    "I I",
+    "I I"
   ],
   "key": {
-    "A": {
+    "I": {
       "tag": "forge:ingots/osmium"
     }
   },
