@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "E  ",
-    "EE ",
-    "EEE"
+    "W  ",
+    "WW ",
+    "WWW"
   ],
   "key": {
-    "E": {
+    "W": {
       "item": "taloi:stripped_willow_wood"
     }
   },

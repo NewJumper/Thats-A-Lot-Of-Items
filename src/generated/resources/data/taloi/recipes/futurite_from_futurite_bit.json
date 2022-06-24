@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "BBB",
+    "BBB",
+    "BBB"
   ],
   "key": {
-    "#": {
+    "B": {
       "item": "taloi:futurite_bit"
     }
   },

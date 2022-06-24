@@ -6,14 +6,12 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_log": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "taloi:evergreen_log"
-            ]
+            "tag": "taloi:evergreen_logs"
           }
         ]
       }
@@ -27,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_log",
       "has_the_recipe"
     ]
   ]

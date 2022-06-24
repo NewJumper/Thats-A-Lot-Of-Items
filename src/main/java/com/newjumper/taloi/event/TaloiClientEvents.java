@@ -18,8 +18,12 @@ public class TaloiClientEvents {
     public static void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.EVERGREEN_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.EVERGREEN_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.EVERGREEN_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.EVERGREEN_TRAPDOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.WILLOW_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TaloiBlocks.WILLOW_TRAPDOOR.get(), RenderType.translucent());
 
         MenuScreens.register(ModMenuTypes.CONSTRUCTOR_MENU.get(), ConstructorScreen::new);
         MenuScreens.register(ModMenuTypes.UNSTABLE_CONSTRUCTOR_MENU.get(), UnstableConstructorScreen::new);

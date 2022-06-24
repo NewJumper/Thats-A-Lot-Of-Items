@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WW",
-    "WW"
+    "LL",
+    "LL"
   ],
   "key": {
-    "W": {
+    "L": {
       "item": "taloi:stripped_willow_log"
     }
   },

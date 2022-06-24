@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "bottom": "taloi:block/willow_door_bottom",
+    "top": "taloi:block/willow_door_top"
+  }
+}

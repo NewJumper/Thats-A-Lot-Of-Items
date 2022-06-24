@@ -6,7 +6,19 @@
     ]
   },
   "criteria": {
-    "has_material": {
+    "has_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sand"
+            ]
+          }
+        ]
+      }
+    },
+    "has_stone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_material",
+      "has_sand",
+      "has_stone",
       "has_the_recipe"
     ]
   ]

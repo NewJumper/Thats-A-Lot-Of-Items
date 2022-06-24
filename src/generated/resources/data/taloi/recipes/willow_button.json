@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "taloi:willow_planks"
+    }
+  ],
+  "result": {
+    "item": "taloi:willow_button"
+  }
+}

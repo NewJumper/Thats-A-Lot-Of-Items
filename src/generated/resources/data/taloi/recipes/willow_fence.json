@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WSW",
-    "WSW"
+    "PSP",
+    "PSP"
   ],
   "key": {
-    "W": {
+    "P": {
       "item": "taloi:willow_planks"
     },
     "S": {

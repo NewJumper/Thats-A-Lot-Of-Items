@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ESE",
-    "ESE"
+    "PSP",
+    "PSP"
   ],
   "key": {
-    "E": {
+    "P": {
       "item": "taloi:evergreen_planks"
     },
     "S": {

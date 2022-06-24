@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "E  ",
-    "EE ",
-    "EEE"
+    "P  ",
+    "PP ",
+    "PPP"
   ],
   "key": {
-    "E": {
+    "P": {
       "item": "taloi:evergreen_planks"
     }
   },

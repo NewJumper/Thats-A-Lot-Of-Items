@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "EE",
-    "EE"
+    "LL",
+    "LL"
   ],
   "key": {
-    "E": {
+    "L": {
       "item": "taloi:stripped_evergreen_log"
     }
   },

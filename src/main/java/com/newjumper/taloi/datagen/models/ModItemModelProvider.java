@@ -30,6 +30,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("evergreen_stairs", modLoc("block/evergreen_stairs"));
         withExistingParent("evergreen_button", modLoc("block/evergreen_button_inventory"));
         withExistingParent("evergreen_pressure_plate", modLoc("block/evergreen_pressure_plate"));
+        getBuilder("evergreen_door").parent(itemGenerated).texture("layer0", "item/evergreen_door");
+        withExistingParent("evergreen_trapdoor", modLoc("block/evergreen_trapdoor_bottom"));
         withExistingParent("evergreen_fence_gate", modLoc("block/evergreen_fence_gate"));
         withExistingParent("evergreen_wood_slab", modLoc("block/evergreen_wood_slab"));
         withExistingParent("evergreen_wood_stairs", modLoc("block/evergreen_wood_stairs"));
@@ -49,6 +51,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("willow_stairs", modLoc("block/willow_stairs"));
         withExistingParent("willow_button", modLoc("block/willow_button_inventory"));
         withExistingParent("willow_pressure_plate", modLoc("block/willow_pressure_plate"));
+        getBuilder("willow_door").parent(itemGenerated).texture("layer0", "item/willow_door");
+        withExistingParent("willow_trapdoor", modLoc("block/willow_trapdoor_bottom"));
         withExistingParent("willow_fence_gate", modLoc("block/willow_fence_gate"));
         withExistingParent("willow_wood_slab", modLoc("block/willow_wood_slab"));
         withExistingParent("willow_wood_stairs", modLoc("block/willow_wood_stairs"));

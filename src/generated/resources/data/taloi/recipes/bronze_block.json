@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BBB",
-    "BBB",
-    "BBB"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
-    "B": {
+    "I": {
       "tag": "forge:ingots/bronze"
     }
   },

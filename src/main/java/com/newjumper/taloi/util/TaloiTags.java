@@ -48,6 +48,8 @@ public class TaloiTags {
         public static final TagKey<Block> RAW_STORAGE_URANIUM = forgeTag("storage_blocks/raw_uranium");
         public static final TagKey<Block> STORAGE_ZINC = forgeTag("storage_blocks/zinc");
         public static final TagKey<Block> RAW_STORAGE_ZINC = forgeTag("storage_blocks/raw_zinc");
+        public static final TagKey<Block> STORAGE_BRONZE = forgeTag("storage_blocks/bronze");
+        public static final TagKey<Block> STORAGE_STEEL = forgeTag("storage_blocks/steel");
         public static final TagKey<Block> TALOI_STORAGE_BLOCKS = taloiTag("taloi_storage_blocks");
 
         public static final TagKey<Block> MACHINES = taloiTag("machines");
@@ -105,6 +107,8 @@ public class TaloiTags {
         public static final TagKey<Item> RAW_STORAGE_URANIUM = forgeTag("storage_blocks/raw_uranium");
         public static final TagKey<Item> STORAGE_ZINC = forgeTag("storage_blocks/zinc");
         public static final TagKey<Item> RAW_STORAGE_ZINC = forgeTag("storage_blocks/raw_zinc");
+        public static final TagKey<Item> STORAGE_BRONZE = forgeTag("storage_blocks/bronze");
+        public static final TagKey<Item> STORAGE_STEEL = forgeTag("storage_blocks/steel");
         public static final TagKey<Item> TALOI_STORAGE_BLOCKS = taloiTag("taloi_storage_blocks");
 
         // INGOTS

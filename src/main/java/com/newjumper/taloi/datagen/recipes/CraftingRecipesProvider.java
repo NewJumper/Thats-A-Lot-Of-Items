@@ -27,603 +27,281 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         // EVERGREEN
-        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_WOOD.get(), 3)
-                .define('E', TaloiBlocks.EVERGREEN_LOG.get())
-                .pattern("EE")
-                .pattern("EE")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_LOG.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get(), 3)
-                .define('E', TaloiBlocks.STRIPPED_EVERGREEN_LOG.get())
-                .pattern("EE")
-                .pattern("EE")
-                .unlockedBy("has_material", has(TaloiBlocks.STRIPPED_EVERGREEN_LOG.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(TaloiBlocks.EVERGREEN_PLANKS.get(), 4)
-                .requires(TaloiBlocks.EVERGREEN_LOG.get())
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_LOG.get())).save(consumer);
+                .requires(TaloiTags.Items.EVERGREEN_LOGS)
+                .unlockedBy("has_log", has(TaloiTags.Items.EVERGREEN_LOGS)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get(), 3)
+                .define('L', TaloiBlocks.STRIPPED_EVERGREEN_LOG.get())
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_log", has(TaloiBlocks.STRIPPED_EVERGREEN_LOG.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_WOOD.get(), 3)
+                .define('L', TaloiBlocks.EVERGREEN_LOG.get())
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_log", has(TaloiBlocks.EVERGREEN_LOG.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_SLAB.get(), 6)
-                .define('E', TaloiBlocks.EVERGREEN_PLANKS.get())
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_STAIRS.get(), 4)
-                .define('E', TaloiBlocks.EVERGREEN_PLANKS.get())
-                .pattern("E  ")
-                .pattern("EE ")
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_FENCE.get(), 3)
-                .define('E', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
                 .define('S', Tags.Items.RODS_WOODEN)
-                .pattern("ESE")
-                .pattern("ESE")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+                .pattern("PSP")
+                .pattern("PSP")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_STAIRS.get(), 4)
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .pattern("P  ")
+                .pattern("PP ")
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiBlocks.EVERGREEN_BUTTON.get(), 1)
+                .requires(TaloiBlocks.EVERGREEN_PLANKS.get())
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_PRESSURE_PLATE.get(), 1)
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .pattern("PP")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_DOOR.get(), 3)
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .pattern("PP")
+                .pattern("PP")
+                .pattern("PP")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_TRAPDOOR.get(), 2)
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .pattern("PPP")
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_FENCE_GATE.get(), 1)
-                .define('E', TaloiBlocks.EVERGREEN_PLANKS.get())
+                .define('P', TaloiBlocks.EVERGREEN_PLANKS.get())
                 .define('S', Tags.Items.RODS_WOODEN)
-                .pattern("SES")
-                .pattern("SES")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_WOOD_SLAB.get(), 6)
-                .define('E', TaloiBlocks.EVERGREEN_WOOD.get())
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_WOOD.get())).save(consumer);
+                .pattern("SPS")
+                .pattern("SPS")
+                .unlockedBy("has_planks", has(TaloiBlocks.EVERGREEN_PLANKS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_WOOD_STAIRS.get(), 4)
-                .define('E', TaloiBlocks.EVERGREEN_WOOD.get())
-                .pattern("E  ")
-                .pattern("EE ")
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.EVERGREEN_WOOD.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), 6)
-                .define('E', TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), 4)
-                .define('E', TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())
-                .pattern("E  ")
-                .pattern("EE ")
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())).save(consumer);
-
-        // WILLOW
-        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_WOOD.get(), 3)
-                .define('W', TaloiBlocks.WILLOW_LOG.get())
-                .pattern("WW")
-                .pattern("WW")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_LOG.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_WILLOW_WOOD.get(), 3)
-                .define('W', TaloiBlocks.STRIPPED_WILLOW_LOG.get())
-                .pattern("WW")
-                .pattern("WW")
-                .unlockedBy("has_material", has(TaloiBlocks.STRIPPED_WILLOW_LOG.get())).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiBlocks.WILLOW_PLANKS.get(), 4)
-                .requires(TaloiBlocks.WILLOW_LOG.get())
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_LOG.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_SLAB.get(), 6)
-                .define('W', TaloiBlocks.WILLOW_PLANKS.get())
-                .pattern("WWW")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_STAIRS.get(), 4)
-                .define('W', TaloiBlocks.WILLOW_PLANKS.get())
+                .define('W', TaloiBlocks.EVERGREEN_WOOD.get())
                 .pattern("W  ")
                 .pattern("WW ")
                 .pattern("WWW")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+                .unlockedBy("has_wood", has(TaloiBlocks.EVERGREEN_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.EVERGREEN_WOOD_SLAB.get(), 6)
+                .define('W', TaloiBlocks.EVERGREEN_WOOD.get())
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.EVERGREEN_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), 4)
+                .define('W', TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())
+                .pattern("W  ")
+                .pattern("WW ")
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_EVERGREEN_WOOD_SLAB.get(), 6)
+                .define('W', TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get())).save(consumer);
+
+        // WILLOW
+        ShapelessRecipeBuilder.shapeless(TaloiBlocks.WILLOW_PLANKS.get(), 4)
+                .requires(TaloiTags.Items.WILLOW_LOGS)
+                .unlockedBy("has_log", has(TaloiTags.Items.WILLOW_LOGS)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_WILLOW_WOOD.get(), 3)
+                .define('L', TaloiBlocks.STRIPPED_WILLOW_LOG.get())
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_log", has(TaloiBlocks.STRIPPED_WILLOW_LOG.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_WOOD.get(), 3)
+                .define('L', TaloiBlocks.WILLOW_LOG.get())
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_log", has(TaloiBlocks.WILLOW_LOG.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_SLAB.get(), 6)
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_FENCE.get(), 3)
-                .define('W', TaloiBlocks.WILLOW_PLANKS.get())
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
                 .define('S', Tags.Items.RODS_WOODEN)
-                .pattern("WSW")
-                .pattern("WSW")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+                .pattern("PSP")
+                .pattern("PSP")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_STAIRS.get(), 4)
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
+                .pattern("P  ")
+                .pattern("PP ")
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiBlocks.WILLOW_BUTTON.get(), 1)
+                .requires(TaloiBlocks.WILLOW_PLANKS.get())
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_PRESSURE_PLATE.get(), 1)
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
+                .pattern("PP")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_DOOR.get(), 3)
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
+                .pattern("PP")
+                .pattern("PP")
+                .pattern("PP")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_TRAPDOOR.get(), 2)
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
+                .pattern("PPP")
+                .pattern("PPP")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_FENCE_GATE.get(), 1)
-                .define('W', TaloiBlocks.WILLOW_PLANKS.get())
+                .define('P', TaloiBlocks.WILLOW_PLANKS.get())
                 .define('S', Tags.Items.RODS_WOODEN)
-                .pattern("SWS")
-                .pattern("SWS")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_WOOD_SLAB.get(), 6)
-                .define('E', TaloiBlocks.WILLOW_WOOD.get())
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_WOOD.get())).save(consumer);
+                .pattern("SPS")
+                .pattern("SPS")
+                .unlockedBy("has_planks", has(TaloiBlocks.WILLOW_PLANKS.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_WOOD_STAIRS.get(), 4)
-                .define('E', TaloiBlocks.WILLOW_WOOD.get())
-                .pattern("E  ")
-                .pattern("EE ")
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.WILLOW_WOOD.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(), 6)
-                .define('E', TaloiBlocks.STRIPPED_WILLOW_WOOD.get())
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.STRIPPED_WILLOW_WOOD.get())).save(consumer);
+                .define('W', TaloiBlocks.WILLOW_WOOD.get())
+                .pattern("W  ")
+                .pattern("WW ")
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.WILLOW_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WILLOW_WOOD_SLAB.get(), 6)
+                .define('W', TaloiBlocks.WILLOW_WOOD.get())
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.WILLOW_WOOD.get())).save(consumer);
         ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get(), 4)
-                .define('E', TaloiBlocks.STRIPPED_WILLOW_WOOD.get())
-                .pattern("E  ")
-                .pattern("EE ")
-                .pattern("EEE")
-                .unlockedBy("has_material", has(TaloiBlocks.STRIPPED_WILLOW_WOOD.get())).save(consumer);
+                .define('W', TaloiBlocks.STRIPPED_WILLOW_WOOD.get())
+                .pattern("W  ")
+                .pattern("WW ")
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.STRIPPED_WILLOW_WOOD.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.STRIPPED_WILLOW_WOOD_SLAB.get(), 6)
+                .define('W', TaloiBlocks.STRIPPED_WILLOW_WOOD.get())
+                .pattern("WWW")
+                .unlockedBy("has_wood", has(TaloiBlocks.STRIPPED_WILLOW_WOOD.get())).save(consumer);
 
         // NATURAL & DECORATION
-        ShapedRecipeBuilder.shaped(TaloiBlocks.ASPHALT.get(), 4)
-                .define('S', Blocks.SAND)
-                .define('T', Blocks.STONE)
-                .pattern("ST")
-                .pattern("TS")
-                .unlockedBy("has_material", has(Blocks.STONE)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.ASPHALT.get(), 4).define('S', Blocks.SAND).define('T', Blocks.STONE).pattern("ST").pattern("TS").unlockedBy("has_sand", has(Blocks.SAND)).unlockedBy("has_stone", has(Blocks.STONE)).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_SLAB.get(), 6)
-                .define('L', TaloiBlocks.LIMESTONE.get())
-                .pattern("LLL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_STAIRS.get(), 4)
-                .define('L', TaloiBlocks.LIMESTONE.get())
-                .pattern("L  ")
-                .pattern("LL ")
-                .pattern("LLL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_WALL.get(), 6)
-                .define('L', TaloiBlocks.LIMESTONE.get())
-                .pattern("LLL")
-                .pattern("LLL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_SLAB.get(), 6).define('L', TaloiBlocks.LIMESTONE.get()).pattern("LLL").unlockedBy("has_limestone", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_STAIRS.get(), 4).define('L', TaloiBlocks.LIMESTONE.get()).pattern("L  ").pattern("LL ").pattern("LLL").unlockedBy("has_limestone", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_WALL.get(), 6).define('L', TaloiBlocks.LIMESTONE.get()).pattern("LLL").pattern("LLL").unlockedBy("has_limestone", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICKS.get(), 4)
-                .define('L', TaloiBlocks.LIMESTONE.get())
-                .pattern("LL")
-                .pattern("LL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICK_SLAB.get(), 6)
-                .define('L', TaloiBlocks.LIMESTONE_BRICKS.get())
-                .pattern("LLL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE_BRICKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICK_STAIRS.get(), 4)
-                .define('L', TaloiBlocks.LIMESTONE_BRICKS.get())
-                .pattern("L  ")
-                .pattern("LL ")
-                .pattern("LLL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE_BRICKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICK_WALL.get(), 6)
-                .define('L', TaloiBlocks.LIMESTONE_BRICKS.get())
-                .pattern("LLL")
-                .pattern("LLL")
-                .unlockedBy("has_material", has(TaloiBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICKS.get(), 4).define('L', TaloiBlocks.LIMESTONE.get()).pattern("LL").pattern("LL").unlockedBy("has_limestone", has(TaloiBlocks.LIMESTONE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICK_SLAB.get(), 6).define('L', TaloiBlocks.LIMESTONE_BRICKS.get()).pattern("LLL").unlockedBy("has_limestone_bricks", has(TaloiBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICK_STAIRS.get(), 4).define('L', TaloiBlocks.LIMESTONE_BRICKS.get()).pattern("L  ").pattern("LL ").pattern("LLL").unlockedBy("has_limestone_bricks", has(TaloiBlocks.LIMESTONE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LIMESTONE_BRICK_WALL.get(), 6).define('L', TaloiBlocks.LIMESTONE_BRICKS.get()).pattern("LLL").pattern("LLL").unlockedBy("has_limestone_bricks", has(TaloiBlocks.LIMESTONE_BRICKS.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.MARBLE_SLAB.get(), 6)
-                .define('M', TaloiBlocks.MARBLE.get())
-                .pattern("MMM")
-                .unlockedBy("has_material", has(TaloiBlocks.MARBLE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.MARBLE_STAIRS.get(), 4)
-                .define('M', TaloiBlocks.MARBLE.get())
-                .pattern("M  ")
-                .pattern("MM ")
-                .pattern("MMM")
-                .unlockedBy("has_material", has(TaloiBlocks.MARBLE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.MARBLE_WALL.get(), 6)
-                .define('M', TaloiBlocks.MARBLE.get())
-                .pattern("MMM")
-                .pattern("MMM")
-                .unlockedBy("has_material", has(TaloiBlocks.MARBLE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.MARBLE_SLAB.get(), 6).define('M', TaloiBlocks.MARBLE.get()).pattern("MMM").unlockedBy("has_marble", has(TaloiBlocks.MARBLE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.MARBLE_STAIRS.get(), 4).define('M', TaloiBlocks.MARBLE.get()).pattern("M  ").pattern("MM ").pattern("MMM").unlockedBy("has_marble", has(TaloiBlocks.MARBLE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.MARBLE_WALL.get(), 6).define('M', TaloiBlocks.MARBLE.get()).pattern("MMM").pattern("MMM").unlockedBy("has_marble", has(TaloiBlocks.MARBLE.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_SLAB.get(), 6)
-                .define('S', TaloiBlocks.SLATE.get())
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_STAIRS.get(), 4)
-                .define('S', TaloiBlocks.SLATE.get())
-                .pattern("S  ")
-                .pattern("SS ")
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_WALL.get(), 6)
-                .define('S', TaloiBlocks.SLATE.get())
-                .pattern("SSS")
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_SLAB.get(), 6).define('S', TaloiBlocks.SLATE.get()).pattern("SSS").unlockedBy("has_slate", has(TaloiBlocks.SLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_STAIRS.get(), 4).define('S', TaloiBlocks.SLATE.get()).pattern("S  ").pattern("SS ").pattern("SSS").unlockedBy("has_slate", has(TaloiBlocks.SLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_WALL.get(), 6).define('S', TaloiBlocks.SLATE.get()).pattern("SSS").pattern("SSS").unlockedBy("has_slate", has(TaloiBlocks.SLATE.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICKS.get(), 4)
-                .define('S', TaloiBlocks.SLATE.get())
-                .pattern("SS")
-                .pattern("SS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICK_SLAB.get(), 6)
-                .define('S', TaloiBlocks.SLATE_BRICKS.get())
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE_BRICKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICK_STAIRS.get(), 4)
-                .define('S', TaloiBlocks.SLATE_BRICKS.get())
-                .pattern("S  ")
-                .pattern("SS ")
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE_BRICKS.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICK_WALL.get(), 6)
-                .define('S', TaloiBlocks.SLATE_BRICKS.get())
-                .pattern("SSS")
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiBlocks.SLATE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICKS.get(), 4).define('S', TaloiBlocks.SLATE.get()).pattern("SS").pattern("SS").unlockedBy("has_slate", has(TaloiBlocks.SLATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICK_SLAB.get(), 6).define('S', TaloiBlocks.SLATE_BRICKS.get()).pattern("SSS").unlockedBy("has_slate_bricks", has(TaloiBlocks.SLATE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICK_STAIRS.get(), 4).define('S', TaloiBlocks.SLATE_BRICKS.get()).pattern("S  ").pattern("SS ").pattern("SSS").unlockedBy("has_slate_bricks", has(TaloiBlocks.SLATE_BRICKS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SLATE_BRICK_WALL.get(), 6).define('S', TaloiBlocks.SLATE_BRICKS.get()).pattern("SSS").pattern("SSS").unlockedBy("has_slate_bricks", has(TaloiBlocks.SLATE_BRICKS.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.POLISHED_TUFF.get(), 3)
-                .define('T', Blocks.TUFF)
-                .pattern("TT")
-                .pattern("TT")
-                .unlockedBy("has_material", has(Blocks.TUFF)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.POLISHED_TUFF.get(), 4).define('T', Blocks.TUFF).pattern("TT").pattern("TT").unlockedBy("has_tuff", has(Blocks.TUFF)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.NETHERRACK_BRICKS.get(), 4).define('N', Tags.Items.NETHERRACK).pattern("NN").pattern("NN").unlockedBy("has_netherrack", has(Tags.Items.NETHERRACK)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.REINFORCED_IRON_BLOCK.get(), 4).define('I', Tags.Items.STORAGE_BLOCKS_IRON).pattern("II").pattern("II").unlockedBy("has_iron_block", has(Tags.Items.STORAGE_BLOCKS_IRON)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.BUNDLED_BAMBOO.get(), 1).define('B', Blocks.BAMBOO).pattern("BB").pattern("BB").unlockedBy("has_bamboo", has(Blocks.BAMBOO)).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.NETHERRACK_BRICKS.get(), 4)
-                .define('N', Tags.Items.NETHERRACK)
-                .pattern("NN")
-                .pattern("NN")
-                .unlockedBy("has_material", has(Tags.Items.NETHERRACK)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.MALACHITE_BLOCK.get(), 2).define('M', TaloiItems.MALACHITE.get()).pattern("MM").pattern("MM").unlockedBy("has_malachite", has(TaloiItems.MALACHITE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.TANZANITE_BLOCK.get(), 2).define('T', TaloiItems.TANZANITE.get()).pattern("TT").pattern("TT").unlockedBy("has_tanzanite", has(TaloiItems.TANZANITE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.TOPAZ_BLOCK.get(), 2).define('T', TaloiItems.TOPAZ.get()).pattern("TT").pattern("TT").unlockedBy("has_topaz", has(TaloiItems.TOPAZ.get())).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.REINFORCED_IRON_BLOCK.get(), 4)
-                .define('I', Tags.Items.STORAGE_BLOCKS_IRON)
-                .pattern("II")
-                .pattern("II")
-                .unlockedBy("has_material", has(Tags.Items.STORAGE_BLOCKS_IRON)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(TaloiBlocks.BUNDLED_BAMBOO.get(), 1)
-                .define('B', Blocks.BAMBOO)
-                .pattern("BB")
-                .pattern("BB")
-                .unlockedBy("has_material", has(Blocks.BAMBOO)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(TaloiBlocks.MALACHITE_BLOCK.get(), 2)
-                .define('M', TaloiItems.MALACHITE.get())
-                .pattern("MM")
-                .pattern("MM")
-                .unlockedBy("has_material", has(TaloiItems.MALACHITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.TANZANITE_BLOCK.get(), 2)
-                .define('T', TaloiItems.TANZANITE.get())
-                .pattern("TT")
-                .pattern("TT")
-                .unlockedBy("has_material", has(TaloiItems.TANZANITE.get())).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiBlocks.TOPAZ_BLOCK.get(), 2)
-                .define('T', TaloiItems.TOPAZ.get())
-                .pattern("TT")
-                .pattern("TT")
-                .unlockedBy("has_material", has(TaloiItems.TOPAZ.get())).save(consumer);
-
-        ShapedRecipeBuilder.shaped(TaloiBlocks.WOODEN_CRATE.get(), 1)
-                .define('P', ItemTags.PLANKS)
-                .define('S', ItemTags.WOODEN_SLABS)
-                .pattern("SSS")
-                .pattern("P P")
-                .pattern("SSS")
-                .unlockedBy("has_material", has(ItemTags.PLANKS)).save(consumer);
-
-        ShapedRecipeBuilder.shaped(TaloiBlocks.IRON_CRATE.get(), 1)
-                .define('I', Tags.Items.NUGGETS_IRON)
-                .define('C', TaloiBlocks.WOODEN_CRATE.get())
-                .pattern("III")
-                .pattern("ICI")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiBlocks.WOODEN_CRATE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.WOODEN_CRATE.get(), 1).define('P', ItemTags.PLANKS).define('S', ItemTags.WOODEN_SLABS).pattern("SSS").pattern("P P").pattern("SSS").unlockedBy("has_planks", has(ItemTags.PLANKS)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.IRON_CRATE.get(), 1).define('N', Tags.Items.NUGGETS_IRON).define('C', TaloiBlocks.WOODEN_CRATE.get()).pattern("NNN").pattern("NCN").pattern("NNN").unlockedBy("has_wooden_crate", has(TaloiBlocks.WOODEN_CRATE.get())).save(consumer);
 
         // ALUMINUM
-        ShapedRecipeBuilder.shaped(TaloiBlocks.ALUMINUM_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_ALUMINUM)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.ALUMINUM_INGOT.get(), 9).group("aluminum")
-                .requires(TaloiTags.Items.STORAGE_ALUMINUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_ALUMINUM_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_ALUMINUM)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_ALUMINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_ALUMINUM.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_ALUMINUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_ALUMINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.ALUMINUM_INGOT.get(), 1).group("aluminum")
-                .define('N', TaloiTags.Items.NUGGETS_ALUMINUM)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.ALUMINUM_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_ALUMINUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_ALUMINUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.ALUMINUM_INGOT.get(), 9).group("aluminum").requires(TaloiTags.Items.STORAGE_ALUMINUM).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_ALUMINUM_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_ALUMINUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_ALUMINUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_ALUMINUM.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_ALUMINUM).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_ALUMINUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.ALUMINUM_INGOT.get(), 1).group("aluminum").define('N', TaloiTags.Items.NUGGETS_ALUMINUM).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_ALUMINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "aluminum_ingot_from_aluminum_nugget"));
 
         // IRIDIUM
-        ShapedRecipeBuilder.shaped(TaloiBlocks.IRIDIUM_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_IRIDIUM)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.IRIDIUM_INGOT.get(), 9).group("iridium")
-                .requires(TaloiTags.Items.STORAGE_IRIDIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_IRIDIUM_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_IRIDIUM)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_IRIDIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_IRIDIUM.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_IRIDIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_IRIDIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.IRIDIUM_INGOT.get(), 1).group("iridium")
-                .define('N', TaloiTags.Items.NUGGETS_IRIDIUM)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.IRIDIUM_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_IRIDIUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_IRIDIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.IRIDIUM_INGOT.get(), 9).group("iridium").requires(TaloiTags.Items.STORAGE_IRIDIUM).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_IRIDIUM_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_IRIDIUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_IRIDIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_IRIDIUM.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_IRIDIUM).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_IRIDIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.IRIDIUM_INGOT.get(), 1).group("iridium").define('N', TaloiTags.Items.NUGGETS_IRIDIUM).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_IRIDIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "iridium_ingot_from_iridium_nugget"));
 
         // LEAD
-        ShapedRecipeBuilder.shaped(TaloiBlocks.LEAD_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_LEAD)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.LEAD_INGOT.get(), 9).group("lead")
-                .requires(TaloiTags.Items.STORAGE_LEAD)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_LEAD_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_LEAD)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_LEAD)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_LEAD.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_LEAD)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_LEAD)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.LEAD_INGOT.get(), 1).group("lead")
-                .define('N', TaloiTags.Items.NUGGETS_LEAD)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.LEAD_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_LEAD).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_LEAD)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.LEAD_INGOT.get(), 9).group("lead").requires(TaloiTags.Items.STORAGE_LEAD).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_LEAD_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_LEAD).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_LEAD)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_LEAD.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_LEAD).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_LEAD)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.LEAD_INGOT.get(), 1).group("lead").define('N', TaloiTags.Items.NUGGETS_LEAD).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_LEAD)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "lead_ingot_from_lead_nugget"));
 
         // MAGNESIUM
-        ShapedRecipeBuilder.shaped(TaloiBlocks.MAGNESIUM_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_MAGNESIUM)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.MAGNESIUM_INGOT.get(), 9).group("magnesium")
-                .requires(TaloiTags.Items.STORAGE_MAGNESIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_MAGNESIUM_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_MAGNESIUM)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_MAGNESIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_MAGNESIUM.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_MAGNESIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_MAGNESIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.MAGNESIUM_INGOT.get(), 1).group("magnesium")
-                .define('N', TaloiTags.Items.NUGGETS_MAGNESIUM)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.MAGNESIUM_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_MAGNESIUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_MAGNESIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.MAGNESIUM_INGOT.get(), 9).group("magnesium").requires(TaloiTags.Items.STORAGE_MAGNESIUM).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_MAGNESIUM_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_MAGNESIUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_MAGNESIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_MAGNESIUM.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_MAGNESIUM).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_MAGNESIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.MAGNESIUM_INGOT.get(), 1).group("magnesium").define('N', TaloiTags.Items.NUGGETS_MAGNESIUM).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_MAGNESIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "magnesium_ingot_from_magnesium_nugget"));
 
         // OSMIUM
-        ShapedRecipeBuilder.shaped(TaloiBlocks.OSMIUM_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_OSMIUM)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.OSMIUM_INGOT.get(), 9).group("osmium")
-                .requires(TaloiTags.Items.STORAGE_OSMIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_OSMIUM_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_OSMIUM)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_OSMIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_OSMIUM.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_OSMIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_OSMIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.OSMIUM_INGOT.get(), 1).group("osmium")
-                .define('N', TaloiTags.Items.NUGGETS_OSMIUM)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.OSMIUM_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_OSMIUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_OSMIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.OSMIUM_INGOT.get(), 9).group("osmium").requires(TaloiTags.Items.STORAGE_OSMIUM).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_OSMIUM_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_OSMIUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_OSMIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_OSMIUM.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_OSMIUM).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_OSMIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.OSMIUM_INGOT.get(), 1).group("osmium").define('N', TaloiTags.Items.NUGGETS_OSMIUM).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_OSMIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "osmium_ingot_from_osmium_nugget"));
 
         // PLATINUM
-        ShapedRecipeBuilder.shaped(TaloiBlocks.PLATINUM_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_PLATINUM)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.PLATINUM_INGOT.get(), 9).group("platinum")
-                .requires(TaloiTags.Items.STORAGE_PLATINUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_PLATINUM_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_PLATINUM)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_PLATINUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_PLATINUM.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_PLATINUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_PLATINUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.PLATINUM_INGOT.get(), 1).group("platinum")
-                .define('N', TaloiTags.Items.NUGGETS_PLATINUM)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.PLATINUM_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_PLATINUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_PLATINUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.PLATINUM_INGOT.get(), 9).group("platinum").requires(TaloiTags.Items.STORAGE_PLATINUM).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_PLATINUM_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_PLATINUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_PLATINUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_PLATINUM.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_PLATINUM).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_PLATINUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.PLATINUM_INGOT.get(), 1).group("platinum").define('N', TaloiTags.Items.NUGGETS_PLATINUM).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_PLATINUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "platinum_ingot_from_platinum_nugget"));
 
         // SILICON
-        ShapedRecipeBuilder.shaped(TaloiBlocks.SILICON_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_SILICON)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_SILICON)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.SILICON.get(), 9).group("silicon")
-                .requires(TaloiTags.Items.STORAGE_SILICON)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_SILICON_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_SILICON)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_SILICON)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_SILICON.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_SILICON)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_SILICON)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.SILICON_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_SILICON).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_SILICON)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.SILICON.get(), 9).group("silicon").requires(TaloiTags.Items.STORAGE_SILICON).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_SILICON)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "silicon_from_silicon_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_SILICON_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_SILICON).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_SILICON)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_SILICON.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_SILICON).unlockedBy("has_nugget", has(TaloiTags.Items.RAW_STORAGE_SILICON)).save(consumer);
 
         // TIN
-        ShapedRecipeBuilder.shaped(TaloiBlocks.TIN_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_TIN)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TIN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.TIN_INGOT.get(), 9).group("tin")
-                .requires(TaloiTags.Items.STORAGE_TIN)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_TIN_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_TIN)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_TIN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_TIN.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_TIN)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_TIN)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.TIN_INGOT.get(), 1).group("tin")
-                .define('N', TaloiTags.Items.NUGGETS_TIN)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.TIN_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_TIN).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_TIN)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.TIN_INGOT.get(), 9).group("tin").requires(TaloiTags.Items.STORAGE_TIN).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_TIN_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_TIN).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_TIN)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_TIN.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_TIN).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_TIN)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.TIN_INGOT.get(), 1).group("tin").define('N', TaloiTags.Items.NUGGETS_TIN).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_TIN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tin_ingot_from_tin_nugget"));
 
         // TUNGSTEN
-        ShapedRecipeBuilder.shaped(TaloiBlocks.TUNGSTEN_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_TUNGSTEN)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.TUNGSTEN_INGOT.get(), 9).group("tungsten")
-                .requires(TaloiTags.Items.STORAGE_TUNGSTEN)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_TUNGSTEN_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_TUNGSTEN)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_TUNGSTEN)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_TUNGSTEN.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_TUNGSTEN)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_TUNGSTEN)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.TUNGSTEN_INGOT.get(), 1).group("tungsten")
-                .define('N', TaloiTags.Items.NUGGETS_TUNGSTEN)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.TUNGSTEN_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_TUNGSTEN).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_TUNGSTEN)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.TUNGSTEN_INGOT.get(), 9).group("tungsten").requires(TaloiTags.Items.STORAGE_TUNGSTEN).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_TUNGSTEN_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_TUNGSTEN).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_TUNGSTEN)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_TUNGSTEN.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_TUNGSTEN).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_TUNGSTEN)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.TUNGSTEN_INGOT.get(), 1).group("tungsten").define('N', TaloiTags.Items.NUGGETS_TUNGSTEN).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_TUNGSTEN)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "tungsten_ingot_from_tungsten_nugget"));
 
         // URANIUM
-        ShapedRecipeBuilder.shaped(TaloiBlocks.URANIUM_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_URANIUM)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.REFINED_URANIUM.get(), 9).group("uranium")
-                .requires(TaloiTags.Items.STORAGE_URANIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_URANIUM_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_URANIUM)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_URANIUM)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_URANIUM.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_URANIUM)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_URANIUM)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.REFINED_URANIUM.get(), 1).group("uranium")
-                .define('N', TaloiTags.Items.NUGGETS_URANIUM)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_bit"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.URANIUM_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_URANIUM).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_URANIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.REFINED_URANIUM.get(), 9).group("uranium").requires(TaloiTags.Items.STORAGE_URANIUM).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_URANIUM_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_URANIUM).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_URANIUM)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_URANIUM.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_URANIUM).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_URANIUM)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.REFINED_URANIUM.get(), 1).group("uranium").define('N', TaloiTags.Items.NUGGETS_URANIUM).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_URANIUM)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "refined_uranium_from_uranium_bit"));
 
         // ZINC
-        ShapedRecipeBuilder.shaped(TaloiBlocks.ZINC_BLOCK.get(), 1)
-                .define('I', TaloiTags.Items.INGOTS_ZINC)
-                .pattern("III")
-                .pattern("III")
-                .pattern("III")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.ZINC_INGOT.get(), 9).group("zinc")
-                .requires(TaloiTags.Items.STORAGE_ZINC)
-                .unlockedBy("has_material", has(TaloiTags.Items.STORAGE_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_block"));
-        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_ZINC_BLOCK.get(), 1)
-                .define('R', TaloiTags.Items.RAW_ZINC)
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_ZINC)).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_ZINC.get(), 9)
-                .requires(TaloiTags.Items.RAW_STORAGE_ZINC)
-                .unlockedBy("has_material", has(TaloiTags.Items.RAW_STORAGE_ZINC)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.ZINC_INGOT.get(), 1).group("zinc")
-                .define('N', TaloiTags.Items.NUGGETS_ZINC)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .unlockedBy("has_material", has(TaloiTags.Items.NUGGETS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.ZINC_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_ZINC).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_ZINC)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.ZINC_INGOT.get(), 9).group("zinc").requires(TaloiTags.Items.STORAGE_ZINC).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.RAW_ZINC_BLOCK.get(), 1).define('R', TaloiTags.Items.RAW_ZINC).pattern("RRR").pattern("RRR").pattern("RRR").unlockedBy("has_raw_material", has(TaloiTags.Items.RAW_ZINC)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.RAW_ZINC.get(), 9).requires(TaloiTags.Items.RAW_STORAGE_ZINC).unlockedBy("has_raw_storage", has(TaloiTags.Items.RAW_STORAGE_ZINC)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.ZINC_INGOT.get(), 1).group("zinc").define('N', TaloiTags.Items.NUGGETS_ZINC).pattern("NNN").pattern("NNN").pattern("NNN").unlockedBy("has_nugget", has(TaloiTags.Items.NUGGETS_ZINC)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "zinc_ingot_from_zinc_nugget"));
 
         // ALLOYS
-        ShapedRecipeBuilder.shaped(TaloiBlocks.BRONZE_BLOCK.get(), 1)
-                .define('B', TaloiTags.Items.INGOTS_BRONZE)
-                .pattern("BBB")
-                .pattern("BBB")
-                .pattern("BBB")
-                .unlockedBy("has_material", has(TaloiItems.BRONZE_INGOT.get())).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.BRONZE_INGOT.get(), 9)
-                .requires(TaloiBlocks.BRONZE_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_BRONZE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_bronze_block"));
+        ShapedRecipeBuilder.shaped(TaloiBlocks.BRONZE_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_BRONZE).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_BRONZE)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.BRONZE_INGOT.get(), 9).requires(TaloiTags.Items.STORAGE_BRONZE).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_BRONZE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "bronze_ingot_from_bronze_block"));
 
-        ShapedRecipeBuilder.shaped(TaloiBlocks.STEEL_BLOCK.get(), 1)
-                .define('S', TaloiTags.Items.INGOTS_STEEL)
-                .pattern("SSS")
-                .pattern("SSS")
-                .pattern("SSS")
-                .unlockedBy("has_material", has(TaloiItems.STEEL_INGOT.get())).save(consumer);
-        ShapelessRecipeBuilder.shapeless(TaloiItems.STEEL_INGOT.get(), 9)
-                .requires(TaloiBlocks.STEEL_BLOCK.get())
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_steel_block"));
-        ShapelessRecipeBuilder.shapeless(TaloiItems.STEEL_INGOT.get(), 1)
-                .requires(Ingredient.of(Tags.Items.INGOTS_IRON), 2)
-                .requires(Items.COAL, 2)
-                .unlockedBy("has_material", has(Tags.Items.INGOTS_IRON)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiBlocks.STEEL_BLOCK.get(), 1).define('I', TaloiTags.Items.INGOTS_STEEL).pattern("III").pattern("III").pattern("III").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_STEEL)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(TaloiItems.STEEL_INGOT.get(), 9).requires(TaloiTags.Items.STORAGE_STEEL).unlockedBy("has_storage_block", has(TaloiTags.Items.STORAGE_STEEL)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "steel_ingot_from_steel_block"));
+        ShapelessRecipeBuilder.shapeless(TaloiItems.STEEL_INGOT.get(), 1).requires(Ingredient.of(Tags.Items.INGOTS_IRON), 2).requires(Items.COAL, 2).unlockedBy("has_iron", has(Tags.Items.INGOTS_IRON)).unlockedBy("has_coal", has(Items.COAL)).save(consumer);
 
-        ShapedRecipeBuilder.shaped(TaloiItems.FUTURITE.get(), 1)
-                .define('#', TaloiItems.FUTURITE_BIT.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_material", has(TaloiItems.FUTURITE_BIT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_from_futurite_bit"));
+        ShapedRecipeBuilder.shaped(TaloiItems.FUTURITE.get(), 1).define('B', TaloiItems.FUTURITE_BIT.get()).pattern("BBB").pattern("BBB").pattern("BBB").unlockedBy("has_bit", has(TaloiItems.FUTURITE_BIT.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "futurite_from_futurite_bit"));
 
-        ShapedRecipeBuilder.shaped(TaloiItems.COPPER_PLATE.get(), 1)
-                .define('C', Tags.Items.INGOTS_COPPER)
-                .pattern("C")
-                .pattern("C")
-                .pattern("C")
-                .unlockedBy("has_material", has(Tags.Items.INGOTS_COPPER)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.SILICON_PLATE.get(), 1)
-                .define('S', TaloiTags.Items.INGOTS_SILICON)
-                .pattern("S")
-                .pattern("S")
-                .pattern("S")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_SILICON)).save(consumer);
-        ShapedRecipeBuilder.shaped(TaloiItems.STEEL_PLATE.get(), 1)
-                .define('S', TaloiTags.Items.INGOTS_STEEL)
-                .pattern("S")
-                .pattern("S")
-                .pattern("S")
-                .unlockedBy("has_material", has(TaloiTags.Items.INGOTS_STEEL)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.COPPER_PLATE.get(), 1).define('I', Tags.Items.INGOTS_COPPER).pattern("I").pattern("I").pattern("I").unlockedBy("has_ingot", has(Tags.Items.INGOTS_COPPER)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.SILICON_PLATE.get(), 1).define('S', TaloiTags.Items.INGOTS_SILICON).pattern("S").pattern("S").pattern("S").unlockedBy("has_silicon", has(TaloiTags.Items.INGOTS_SILICON)).save(consumer);
+        ShapedRecipeBuilder.shaped(TaloiItems.STEEL_PLATE.get(), 1).define('I', TaloiTags.Items.INGOTS_STEEL).pattern("I").pattern("I").pattern("I").unlockedBy("has_ingot", has(TaloiTags.Items.INGOTS_STEEL)).save(consumer);
 
         // EMERALD TOOLS
         ShapedRecipeBuilder.shaped(TaloiItems.EMERALD_SWORD.get(), 1)

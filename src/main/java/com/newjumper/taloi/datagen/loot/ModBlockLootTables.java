@@ -24,6 +24,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(TaloiBlocks.EVERGREEN_STAIRS.get());
         this.dropSelf(TaloiBlocks.EVERGREEN_BUTTON.get());
         this.dropSelf(TaloiBlocks.EVERGREEN_PRESSURE_PLATE.get());
+        this.add(TaloiBlocks.EVERGREEN_DOOR.get(), BlockLoot::createDoorTable);
+        this.dropSelf(TaloiBlocks.EVERGREEN_TRAPDOOR.get());
         this.dropSelf(TaloiBlocks.EVERGREEN_FENCE_GATE.get());
         this.add(TaloiBlocks.EVERGREEN_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(TaloiBlocks.EVERGREEN_WOOD_STAIRS.get());
@@ -43,6 +45,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(TaloiBlocks.WILLOW_STAIRS.get());
         this.dropSelf(TaloiBlocks.WILLOW_BUTTON.get());
         this.dropSelf(TaloiBlocks.WILLOW_PRESSURE_PLATE.get());
+        this.add(TaloiBlocks.WILLOW_DOOR.get(), BlockLoot::createDoorTable);
+        this.dropSelf(TaloiBlocks.WILLOW_TRAPDOOR.get());
         this.dropSelf(TaloiBlocks.WILLOW_FENCE_GATE.get());
         this.add(TaloiBlocks.WILLOW_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
         this.dropSelf(TaloiBlocks.WILLOW_WOOD_STAIRS.get());

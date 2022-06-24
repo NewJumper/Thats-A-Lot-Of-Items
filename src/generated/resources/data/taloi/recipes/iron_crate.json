@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "III",
-    "ICI",
-    "III"
+    "NNN",
+    "NCN",
+    "NNN"
   ],
   "key": {
-    "I": {
+    "N": {
       "tag": "forge:nuggets/iron"
     },
     "C": {

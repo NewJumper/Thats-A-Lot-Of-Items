@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "taloi:evergreen_log"
+      "tag": "taloi:evergreen_logs"
     }
   ],
   "result": {

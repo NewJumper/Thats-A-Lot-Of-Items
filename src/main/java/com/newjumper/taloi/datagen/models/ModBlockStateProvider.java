@@ -28,6 +28,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(TaloiBlocks.EVERGREEN_STAIRS.get(), modLoc("evergreen_planks"));
         buttonBlock(TaloiBlocks.EVERGREEN_BUTTON.get(), modLoc("evergreen_planks"));
         pressurePlateBlock(TaloiBlocks.EVERGREEN_PRESSURE_PLATE.get(), modLoc("evergreen_planks"));
+        doorBlock(TaloiBlocks.EVERGREEN_DOOR.get(), modLoc("evergreen_door_bottom"), modLoc("evergreen_door_top"));
+        trapdoorBlock(TaloiBlocks.EVERGREEN_TRAPDOOR.get(), modLoc("evergreen_trapdoor"), true);
         fenceGateBlock(TaloiBlocks.EVERGREEN_FENCE_GATE.get(), modLoc("evergreen_planks"));
         slabBlock(TaloiBlocks.EVERGREEN_WOOD_SLAB.get(), modLoc("evergreen_wood"), modLoc("evergreen_log"));
         stairsBlock(TaloiBlocks.EVERGREEN_WOOD_STAIRS.get(), modLoc("evergreen_log"));
@@ -47,6 +49,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(TaloiBlocks.WILLOW_STAIRS.get(), modLoc("willow_planks"));
         buttonBlock(TaloiBlocks.WILLOW_BUTTON.get(), modLoc("willow_planks"));
         pressurePlateBlock(TaloiBlocks.WILLOW_PRESSURE_PLATE.get(), modLoc("willow_planks"));
+        doorBlock(TaloiBlocks.WILLOW_DOOR.get(), modLoc("willow_door_bottom"), modLoc("willow_door_top"));
+        trapdoorBlock(TaloiBlocks.WILLOW_TRAPDOOR.get(), modLoc("willow_trapdoor"), true);
         fenceGateBlock(TaloiBlocks.WILLOW_FENCE_GATE.get(), modLoc("willow_planks"));
         slabBlock(TaloiBlocks.WILLOW_WOOD_SLAB.get(), modLoc("willow_wood"), modLoc("willow_log"));
         stairsBlock(TaloiBlocks.WILLOW_WOOD_STAIRS.get(), modLoc("willow_log"));

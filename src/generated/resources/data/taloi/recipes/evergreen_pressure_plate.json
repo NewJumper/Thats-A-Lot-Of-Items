@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP"
+  ],
+  "key": {
+    "P": {
+      "item": "taloi:evergreen_planks"
+    }
+  },
+  "result": {
+    "item": "taloi:evergreen_pressure_plate"
+  }
+}

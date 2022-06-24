@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "S",
-    "S",
-    "S"
+    "I",
+    "I",
+    "I"
   ],
   "key": {
-    "S": {
+    "I": {
       "tag": "forge:ingots/steel"
     }
   },
