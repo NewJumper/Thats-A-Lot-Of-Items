@@ -59,6 +59,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .addTag(TaloiTags.Blocks.CONCRETE_STAIRS).addTag(TaloiTags.Blocks.TERRACOTTA_STAIRS);
         tag(BlockTags.WALLS).add(TaloiBlocks.LIMESTONE_WALL.get(), TaloiBlocks.LIMESTONE_BRICK_WALL.get(), TaloiBlocks.MARBLE_WALL.get(), TaloiBlocks.SLATE_WALL.get(), TaloiBlocks.SLATE_BRICK_WALL.get());
         tag(BlockTags.WOODEN_BUTTONS).add(TaloiBlocks.EVERGREEN_BUTTON.get(), TaloiBlocks.WILLOW_BUTTON.get());
+        tag(BlockTags.WOODEN_DOORS).add(TaloiBlocks.EVERGREEN_DOOR.get(), TaloiBlocks.WILLOW_DOOR.get());
         tag(BlockTags.WOODEN_FENCES).add(TaloiBlocks.EVERGREEN_FENCE.get(), TaloiBlocks.WILLOW_FENCE.get());
         tag(BlockTags.WOODEN_PRESSURE_PLATES).add(TaloiBlocks.EVERGREEN_PRESSURE_PLATE.get(), TaloiBlocks.WILLOW_PRESSURE_PLATE.get());
         tag(BlockTags.WOODEN_SLABS).add(TaloiBlocks.EVERGREEN_SLAB.get(), TaloiBlocks.WILLOW_SLAB.get(),
@@ -67,6 +68,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.WOODEN_STAIRS).add(TaloiBlocks.EVERGREEN_STAIRS.get(), TaloiBlocks.WILLOW_STAIRS.get(),
                 TaloiBlocks.OAK_WOOD_STAIRS.get(), TaloiBlocks.SPRUCE_WOOD_STAIRS.get(), TaloiBlocks.BIRCH_WOOD_STAIRS.get(), TaloiBlocks.JUNGLE_WOOD_STAIRS.get(), TaloiBlocks.ACACIA_WOOD_STAIRS.get(), TaloiBlocks.DARK_OAK_WOOD_STAIRS.get(), TaloiBlocks.EVERGREEN_WOOD_STAIRS.get(), TaloiBlocks.WILLOW_WOOD_STAIRS.get(),
                 TaloiBlocks.STRIPPED_OAK_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_SPRUCE_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_BIRCH_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_EVERGREEN_WOOD_STAIRS.get(), TaloiBlocks.STRIPPED_WILLOW_WOOD_STAIRS.get());
+        tag(BlockTags.WOODEN_TRAPDOORS).add(TaloiBlocks.EVERGREEN_TRAPDOOR.get(), TaloiBlocks.WILLOW_TRAPDOOR.get());
 
         tag(TaloiTags.Blocks.EVERGREEN_LOGS).add(TaloiBlocks.EVERGREEN_LOG.get(), TaloiBlocks.EVERGREEN_WOOD.get(), TaloiBlocks.STRIPPED_EVERGREEN_LOG.get(), TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get());
         tag(TaloiTags.Blocks.WILLOW_LOGS).add(TaloiBlocks.WILLOW_LOG.get(), TaloiBlocks.WILLOW_WOOD.get(), TaloiBlocks.STRIPPED_WILLOW_LOG.get(), TaloiBlocks.STRIPPED_WILLOW_WOOD.get());
