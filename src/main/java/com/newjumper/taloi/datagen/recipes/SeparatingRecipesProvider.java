@@ -60,7 +60,7 @@ public class SeparatingRecipesProvider extends RecipeProvider implements ICondit
 
         new SeparatingRecipeBuilder(Ingredient.of(Blocks.REDSTONE_ORE), Blocks.STONE, Items.REDSTONE, 2, 0f)
                 .unlockedBy("has_material", has(Blocks.REDSTONE_ORE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "redstone_ore_separating"));
-        new SeparatingRecipeBuilder(Ingredient.of(Blocks.DEEPSLATE_REDSTONE_ORE), Blocks.STONE, Items.REDSTONE, 2, 0f)
+        new SeparatingRecipeBuilder(Ingredient.of(Blocks.DEEPSLATE_REDSTONE_ORE), Blocks.DEEPSLATE, Items.REDSTONE, 2, 0f)
                 .unlockedBy("has_material", has(Blocks.DEEPSLATE_REDSTONE_ORE)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "deepslate_redstone_ore_separating"));
 
         // TALOI

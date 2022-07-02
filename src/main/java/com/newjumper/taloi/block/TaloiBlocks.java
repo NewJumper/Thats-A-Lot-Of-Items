@@ -537,11 +537,8 @@ public class TaloiBlocks {
 
     // MISCELLANEOUS
     public static final RegistryObject<Block> BOUNCY_BLOCK = registerBlock("bouncy_block", () -> new EffectBlock(MobEffects.JUMP, 20, 3), TaloiCreativeModeTab.TALOI_BLOCKS);
-
     public static final RegistryObject<Block> FEATHERY_BLOCK = registerBlock("feathery_block", () -> new EffectBlock(MobEffects.SLOW_FALLING, 80, 0), TaloiCreativeModeTab.TALOI_BLOCKS);
-
     public static final RegistryObject<Block> GRAVITY_BLOCK = registerBlock("gravity_block", () -> new EffectBlock(MobEffects.LEVITATION, 140, 0), TaloiCreativeModeTab.TALOI_BLOCKS);
-
     public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () -> new EffectBlock(MobEffects.MOVEMENT_SPEED, 30, 2), TaloiCreativeModeTab.TALOI_BLOCKS);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> pBlock, CreativeModeTab pTab) {
