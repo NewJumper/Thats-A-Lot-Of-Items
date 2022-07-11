@@ -6,7 +6,7 @@ import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.item.TaloiItems;
 import com.newjumper.taloi.painting.TaloiPaintings;
 import com.newjumper.taloi.recipe.ModRecipes;
-import com.newjumper.taloi.screen.*;
+import com.newjumper.taloi.screen.ModMenuTypes;
 import com.newjumper.taloi.sound.ModSounds;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
