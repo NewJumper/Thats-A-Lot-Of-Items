@@ -24,7 +24,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        // ALUMINUM
         blastingRecipe(consumer, TaloiBlocks.ALUMINUM_ORE.get(), TaloiItems.ALUMINUM_INGOT.get(), 0.7f, "aluminum_ingot_from_blasting_aluminum_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_ALUMINUM_ORE.get(), TaloiItems.ALUMINUM_INGOT.get(), 0.7f, "aluminum_ingot_from_blasting_deepslate_aluminum_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_ALUMINUM, TaloiItems.ALUMINUM_INGOT.get(), 0.7f, "aluminum_ingot_from_blasting_raw_aluminum");
@@ -32,7 +31,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_ALUMINUM_ORE.get(), TaloiItems.ALUMINUM_INGOT.get(), 0.7f, "aluminum_ingot_from_smelting_deepslate_aluminum_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_ALUMINUM, TaloiItems.ALUMINUM_INGOT.get(), 0.7f, "aluminum_ingot_from_smelting_raw_aluminum");
 
-        // IRIDIUM
         blastingRecipe(consumer, TaloiBlocks.IRIDIUM_ORE.get(), TaloiItems.IRIDIUM_INGOT.get(), 1.7f, "iridium_ingot_from_blasting_iridium_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_IRIDIUM_ORE.get(), TaloiItems.IRIDIUM_INGOT.get(), 1.7f, "iridium_ingot_from_blasting_deepslate_iridium_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_IRIDIUM, TaloiItems.IRIDIUM_INGOT.get(), 1.7f, "iridium_ingot_from_blasting_raw_iridium");
@@ -40,7 +38,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_IRIDIUM_ORE.get(), TaloiItems.IRIDIUM_INGOT.get(), 1.7f, "iridium_ingot_from_smelting_deepslate_iridium_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_IRIDIUM, TaloiItems.IRIDIUM_INGOT.get(), 1.7f, "iridium_ingot_from_smelting_raw_iridium");
 
-        // LEAD
         blastingRecipe(consumer, TaloiBlocks.LEAD_ORE.get(), TaloiItems.LEAD_INGOT.get(), 0.7f, "lead_ingot_from_blasting_lead_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_LEAD_ORE.get(), TaloiItems.LEAD_INGOT.get(), 0.7f, "lead_ingot_from_blasting_deepslate_lead_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_LEAD, TaloiItems.LEAD_INGOT.get(), 0.7f, "lead_ingot_from_blasting_raw_lead");
@@ -48,7 +45,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_LEAD_ORE.get(), TaloiItems.LEAD_INGOT.get(), 0.7f, "lead_ingot_from_smelting_deepslate_lead_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_LEAD, TaloiItems.LEAD_INGOT.get(), 0.7f, "lead_ingot_from_smelting_raw_lead");
 
-        // MAGNESIUM
         blastingRecipe(consumer, TaloiBlocks.MAGNESIUM_ORE.get(), TaloiItems.MAGNESIUM_INGOT.get(), 0.7f, "magnesium_ingot_from_blasting_magnesium_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE.get(), TaloiItems.MAGNESIUM_INGOT.get(), 0.7f, "magnesium_ingot_from_blasting_deepslate_magnesium_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_MAGNESIUM, TaloiItems.MAGNESIUM_INGOT.get(), 0.7f, "magnesium_ingot_from_blasting_raw_magnesium");
@@ -56,7 +52,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE.get(), TaloiItems.MAGNESIUM_INGOT.get(), 0.7f, "magnesium_ingot_from_smelting_deepslate_magnesium_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_MAGNESIUM, TaloiItems.MAGNESIUM_INGOT.get(), 0.7f, "magnesium_ingot_from_smelting_raw_magnesium");
 
-        // OSMIUM
         blastingRecipe(consumer, TaloiBlocks.OSMIUM_ORE.get(), TaloiItems.OSMIUM_INGOT.get(), 1.7f, "osmium_ingot_from_blasting_osmium_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_OSMIUM_ORE.get(), TaloiItems.OSMIUM_INGOT.get(), 1.7f, "osmium_ingot_from_blasting_deepslate_osmium_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_OSMIUM, TaloiItems.OSMIUM_INGOT.get(), 1.7f, "osmium_ingot_from_blasting_raw_osmium");
@@ -64,7 +59,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_OSMIUM_ORE.get(), TaloiItems.OSMIUM_INGOT.get(), 1.7f, "osmium_ingot_from_smelting_deepslate_osmium_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_OSMIUM, TaloiItems.OSMIUM_INGOT.get(), 1.7f, "osmium_ingot_from_smelting_raw_osmium");
 
-        // PLATINUM
         blastingRecipe(consumer, TaloiBlocks.PLATINUM_ORE.get(), TaloiItems.PLATINUM_INGOT.get(), 1.5f, "platinum_ingot_from_blasting_platinum_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_PLATINUM_ORE.get(), TaloiItems.PLATINUM_INGOT.get(), 1.5f, "platinum_ingot_from_blasting_deepslate_platinum_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_PLATINUM, TaloiItems.PLATINUM_INGOT.get(), 1.5f, "platinum_ingot_from_blasting_raw_platinum");
@@ -72,7 +66,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_PLATINUM_ORE.get(), TaloiItems.PLATINUM_INGOT.get(), 1.5f, "platinum_ingot_from_smelting_deepslate_platinum_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_PLATINUM, TaloiItems.PLATINUM_INGOT.get(), 1.5f, "platinum_ingot_from_smelting_raw_platinum");
 
-        // SILICON
         blastingRecipe(consumer, TaloiBlocks.SILICON_ORE.get(), TaloiItems.SILICON.get(), 0.7f, "silicon_from_blasting_silicon_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_SILICON_ORE.get(), TaloiItems.SILICON.get(), 0.7f, "silicon_from_blasting_deepslate_silicon_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_SILICON, TaloiItems.SILICON.get(), 0.7f, "silicon_from_blasting_raw_silicon");
@@ -80,7 +73,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_SILICON_ORE.get(), TaloiItems.SILICON.get(), 0.7f, "silicon_from_smelting_deepslate_silicon_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_SILICON, TaloiItems.SILICON.get(), 0.7f, "silicon_from_smelting_raw_silicon");
 
-        // TIN
         blastingRecipe(consumer, TaloiBlocks.TIN_ORE.get(), TaloiItems.TIN_INGOT.get(), 0.7f, "tin_ingot_from_blasting_tin_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_TIN_ORE.get(), TaloiItems.TIN_INGOT.get(), 0.7f, "tin_ingot_from_blasting_deepslate_tin_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_TIN, TaloiItems.TIN_INGOT.get(), 0.7f, "tin_ingot_from_blasting_raw_tin");
@@ -88,7 +80,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_TIN_ORE.get(), TaloiItems.TIN_INGOT.get(), 0.7f, "tin_ingot_from_smelting_deepslate_tin_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_TIN, TaloiItems.TIN_INGOT.get(), 0.7f, "tin_ingot_from_smelting_raw_tin");
 
-        // TUNGSTEN
         blastingRecipe(consumer, TaloiBlocks.TUNGSTEN_ORE.get(), TaloiItems.TUNGSTEN_INGOT.get(), 2f, "tungsten_ingot_from_blasting_tungsten_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), TaloiItems.TUNGSTEN_INGOT.get(), 2f, "tungsten_ingot_from_blasting_deepslate_tungsten_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_TUNGSTEN, TaloiItems.TUNGSTEN_INGOT.get(), 2f, "tungsten_ingot_from_blasting_raw_tungsten");
@@ -96,7 +87,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), TaloiItems.TUNGSTEN_INGOT.get(), 2f, "tungsten_ingot_from_smelting_deepslate_tungsten_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_TUNGSTEN, TaloiItems.TUNGSTEN_INGOT.get(), 2f, "tungsten_ingot_from_smelting_raw_tungsten");
 
-        // URANIUM
         blastingRecipe(consumer, TaloiBlocks.URANIUM_ORE.get(), TaloiItems.REFINED_URANIUM.get(), 1f, "refined_uranium_from_blasting_uranium_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_URANIUM_ORE.get(), TaloiItems.REFINED_URANIUM.get(), 1f, "refined_uranium_from_blasting_deepslate_uranium_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_URANIUM, TaloiItems.REFINED_URANIUM.get(), 1f, "refined_uranium_from_blasting_raw_uranium");
@@ -104,7 +94,6 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiBlocks.DEEPSLATE_URANIUM_ORE.get(), TaloiItems.REFINED_URANIUM.get(), 1f, "refined_uranium_from_smelting_deepslate_uranium_ore");
         smeltingRecipe(consumer, TaloiTags.Items.RAW_URANIUM, TaloiItems.REFINED_URANIUM.get(), 1f, "refined_uranium_from_smelting_raw_uranium");
 
-        // ZINC
         blastingRecipe(consumer, TaloiBlocks.ZINC_ORE.get(), TaloiItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot_from_blasting_zinc_ore");
         blastingRecipe(consumer, TaloiBlocks.DEEPSLATE_ZINC_ORE.get(), TaloiItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot_from_blasting_deepslate_zinc_ore");
         blastingRecipe(consumer, TaloiTags.Items.RAW_ZINC, TaloiItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot_from_blasting_raw_zinc");
@@ -113,22 +102,22 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
         smeltingRecipe(consumer, TaloiTags.Items.RAW_ZINC, TaloiItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot_from_smelting_raw_zinc");
     }
 
-    private void blastingRecipe(Consumer<FinishedRecipe> consumer, Block block, Item pResult, float pExperience, String pPath) {
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(block), pResult, pExperience, 100)
-                .unlockedBy("has_material", has(block)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
+    private void blastingRecipe(Consumer<FinishedRecipe> consumer, Block block, Item result, float experience, String path) {
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(block), result, experience, 100)
+                .unlockedBy("has_material", has(block)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, path));
     }
-    private void blastingRecipe(Consumer<FinishedRecipe> consumer, TagKey<Item> pTag, Item pResult, float pExperience, String pPath) {
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(pTag), pResult, pExperience, 100)
-                .unlockedBy("has_material", has(pTag)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
+    private void blastingRecipe(Consumer<FinishedRecipe> consumer, TagKey<Item> pTag, Item result, float experience, String path) {
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(pTag), result, experience, 100)
+                .unlockedBy("has_material", has(pTag)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, path));
     }
 
-    private void smeltingRecipe(Consumer<FinishedRecipe> consumer, Block block, Item pResult, float pExperience, String pPath) {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(block), pResult, pExperience, 200)
-                .unlockedBy("has_material", has(block)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
+    private void smeltingRecipe(Consumer<FinishedRecipe> consumer, Block block, Item result, float experience, String path) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(block), result, experience, 200)
+                .unlockedBy("has_material", has(block)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, path));
     }
-    private void smeltingRecipe(Consumer<FinishedRecipe> consumer, TagKey<Item> pTag, Item pResult, float pExperience, String pPath) {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(pTag), pResult, pExperience, 200)
-                .unlockedBy("has_material", has(pTag)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, pPath));
+    private void smeltingRecipe(Consumer<FinishedRecipe> consumer, TagKey<Item> pTag, Item result, float experience, String path) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(pTag), result, experience, 200)
+                .unlockedBy("has_material", has(pTag)).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, path));
     }
 
     @Override
