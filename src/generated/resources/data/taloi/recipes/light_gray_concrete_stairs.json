@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "C  ",
-    "CC ",
-    "CCC"
-  ],
   "key": {
     "C": {
       "item": "minecraft:light_gray_concrete"
     }
   },
+  "pattern": [
+    "C  ",
+    "CC ",
+    "CCC"
+  ],
   "result": {
-    "item": "taloi:light_gray_concrete_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:light_gray_concrete_stairs"
   }
 }

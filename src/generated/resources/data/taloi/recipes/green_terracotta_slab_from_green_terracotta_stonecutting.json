@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:green_terracotta"
   },
-  "result": "taloi:green_terracotta_slab",
-  "count": 1
+  "result": "taloi:green_terracotta_slab"
 }

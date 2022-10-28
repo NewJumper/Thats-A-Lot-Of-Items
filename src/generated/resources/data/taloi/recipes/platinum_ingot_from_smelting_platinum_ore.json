@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.5,
   "ingredient": {
     "item": "taloi:platinum_ore"
   },
-  "result": "taloi:platinum_ingot",
-  "experience": 1.5,
-  "cookingtime": 200
+  "result": "taloi:platinum_ingot"
 }

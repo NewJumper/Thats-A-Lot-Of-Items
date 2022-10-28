@@ -1,5 +1,6 @@
 {
   "type": "taloi:pressing",
+  "experience": 0.0,
   "ingredients": [
     {
       "tag": "forge:ingots/silicon"
@@ -10,6 +11,5 @@
   ],
   "result": {
     "item": "taloi:silicon_plate"
-  },
-  "experience": 0.0
+  }
 }

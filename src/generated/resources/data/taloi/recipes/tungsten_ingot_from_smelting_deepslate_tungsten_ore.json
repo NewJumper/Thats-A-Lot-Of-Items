@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 2.0,
   "ingredient": {
     "item": "taloi:deepslate_tungsten_ore"
   },
-  "result": "taloi:tungsten_ingot",
-  "experience": 2.0,
-  "cookingtime": 200
+  "result": "taloi:tungsten_ingot"
 }

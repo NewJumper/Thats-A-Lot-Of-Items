@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PSP",
-    "PSP"
-  ],
   "key": {
     "P": {
       "item": "taloi:willow_planks"
@@ -12,8 +8,12 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "PSP",
+    "PSP"
+  ],
   "result": {
-    "item": "taloi:willow_fence",
-    "count": 3
+    "count": 3,
+    "item": "taloi:willow_fence"
   }
 }

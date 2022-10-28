@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "T  ",
-    "TT ",
-    "TTT"
-  ],
   "key": {
     "T": {
       "item": "minecraft:orange_terracotta"
     }
   },
+  "pattern": [
+    "T  ",
+    "TT ",
+    "TTT"
+  ],
   "result": {
-    "item": "taloi:orange_terracotta_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:orange_terracotta_stairs"
   }
 }

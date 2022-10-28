@@ -1,19 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "RIR",
-    "GMG",
-    "SCS"
-  ],
   "key": {
-    "R": {
-      "tag": "forge:dusts/redstone"
+    "C": {
+      "tag": "forge:ingots/copper"
     },
     "G": {
       "tag": "forge:glass"
-    },
-    "C": {
-      "tag": "forge:ingots/copper"
     },
     "I": {
       "item": "minecraft:iron_pickaxe"
@@ -21,10 +13,18 @@
     "M": {
       "item": "taloi:alpha_machine_frame"
     },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
     "S": {
       "item": "taloi:silicon_plate"
     }
   },
+  "pattern": [
+    "RIR",
+    "GMG",
+    "SCS"
+  ],
   "result": {
     "item": "taloi:alpha_separator"
   }

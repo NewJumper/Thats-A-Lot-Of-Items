@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "G G",
-    "GGG",
-    "GGG"
-  ],
   "key": {
     "G": {
       "tag": "forge:gems/emerald"
     }
   },
+  "pattern": [
+    "G G",
+    "GGG",
+    "GGG"
+  ],
   "result": {
     "item": "taloi:emerald_chestplate"
   }

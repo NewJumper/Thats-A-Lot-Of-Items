@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "WWW"
-  ],
   "key": {
     "W": {
       "item": "minecraft:jungle_wood"
     }
   },
+  "pattern": [
+    "WWW"
+  ],
   "result": {
-    "item": "taloi:jungle_wood_slab",
-    "count": 6
+    "count": 6,
+    "item": "taloi:jungle_wood_slab"
   }
 }

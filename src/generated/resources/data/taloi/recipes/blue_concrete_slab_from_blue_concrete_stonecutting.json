@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:blue_concrete"
   },
-  "result": "taloi:blue_concrete_slab",
-  "count": 1
+  "result": "taloi:blue_concrete_slab"
 }

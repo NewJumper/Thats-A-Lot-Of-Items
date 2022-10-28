@@ -1,27 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "taloi:alloy_plate"
+    },
+    "C": {
+      "item": "taloi:reinforced_copper_plate"
+    },
+    "G": {
+      "tag": "forge:ingots/gold"
+    },
+    "M": {
+      "item": "taloi:alpha_machine_frame"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
   "pattern": [
     "GCG",
     "AMA",
     "GOG"
   ],
-  "key": {
-    "G": {
-      "tag": "forge:ingots/gold"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "C": {
-      "item": "taloi:reinforced_copper_plate"
-    },
-    "A": {
-      "item": "taloi:alloy_plate"
-    },
-    "M": {
-      "item": "taloi:alpha_machine_frame"
-    }
-  },
   "result": {
     "item": "taloi:beta_machine_frame"
   }

@@ -4,7 +4,6 @@ import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.recipe.PressingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BetaHydraulicPressBlockEntity extends AbstractHydraulicPressBlockEntity {
@@ -16,6 +15,6 @@ public class BetaHydraulicPressBlockEntity extends AbstractHydraulicPressBlockEn
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.bhp");
+        return Component.translatable("container.taloi.bhp");
     }
 }

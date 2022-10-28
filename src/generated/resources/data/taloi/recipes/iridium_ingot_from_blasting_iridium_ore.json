@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.7,
   "ingredient": {
     "item": "taloi:iridium_ore"
   },
-  "result": "taloi:iridium_ingot",
-  "experience": 1.7,
-  "cookingtime": 100
+  "result": "taloi:iridium_ingot"
 }

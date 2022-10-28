@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
-    "side": "taloi:block/evergreen_log",
-    "end": "taloi:block/evergreen_log_top"
+    "end": "taloi:block/evergreen_log_top",
+    "side": "taloi:block/evergreen_log"
   }
 }

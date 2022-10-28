@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "taloi:refined_uranium",
-    "count": 9
+    "count": 9,
+    "item": "taloi:refined_uranium"
   }
 }

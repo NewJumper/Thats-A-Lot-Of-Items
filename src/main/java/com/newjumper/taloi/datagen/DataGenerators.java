@@ -1,18 +1,20 @@
 package com.newjumper.taloi.datagen;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.datagen.advancements.ModAdvancementsProvider;
-import com.newjumper.taloi.datagen.lang.ModLanguageProvider;
-import com.newjumper.taloi.datagen.loot.ModLootTableProvider;
-import com.newjumper.taloi.datagen.models.*;
-import com.newjumper.taloi.datagen.recipes.*;
-import com.newjumper.taloi.datagen.sounds.ModSoundsProvider;
-import com.newjumper.taloi.datagen.tags.*;
+import com.newjumper.taloi.datagen.assets.ENLanguageProvider;
+import com.newjumper.taloi.datagen.assets.ModBlockStateProvider;
+import com.newjumper.taloi.datagen.assets.ModItemModelProvider;
+import com.newjumper.taloi.datagen.assets.ModSoundsProvider;
+import com.newjumper.taloi.datagen.data.ModAdvancementsProvider;
+import com.newjumper.taloi.datagen.data.ModBlockTagsProvider;
+import com.newjumper.taloi.datagen.data.ModItemTagsProvider;
+import com.newjumper.taloi.datagen.data.ModLootTableProvider;
+import com.newjumper.taloi.datagen.data.recipes.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = ThatsALotOfItems.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
@@ -21,36 +23,30 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
 
-        // advancements
-        generator.addProvider(new ModAdvancementsProvider(generator, fileHelper));
+        // assets
+        generator.addProvider(event.includeClient(), new ENLanguageProvider(generator));
 
-        // languages
-        generator.addProvider(new ModLanguageProvider(generator));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(generator, fileHelper));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(generator, fileHelper));
 
-        // loot
-        generator.addProvider(new ModLootTableProvider(generator));
+        generator.addProvider(event.includeClient(), new ModSoundsProvider(generator, fileHelper));
 
-        // models
-        generator.addProvider(new ModBlockStateProvider(generator, fileHelper));
-        generator.addProvider(new ModItemModelProvider(generator, fileHelper));
+        // data
+        generator.addProvider(event.includeServer(), new CraftingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new SmithingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new StonecuttingRecipesProvider(generator));
 
-        // recipes
-        generator.addProvider(new CraftingRecipesProvider(generator));
-        generator.addProvider(new SmeltingRecipesProvider(generator));
-        generator.addProvider(new SmithingRecipesProvider(generator));
-        generator.addProvider(new StonecuttingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new ConstructingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new PressingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new ProcessingRecipesProvider(generator));
+        generator.addProvider(event.includeServer(), new SeparatingRecipesProvider(generator));
 
-        generator.addProvider(new ConstructingRecipesProvider(generator));
-        generator.addProvider(new PressingRecipesProvider(generator));
-        generator.addProvider(new ProcessingRecipesProvider(generator));
-        generator.addProvider(new SeparatingRecipesProvider(generator));
-
-        // sounds
-        generator.addProvider(new ModSoundsProvider(generator, fileHelper));
-
-        // tags
         ModBlockTagsProvider blockTags = new ModBlockTagsProvider(generator, fileHelper);
-        generator.addProvider(blockTags);
-        generator.addProvider(new ModItemTagsProvider(generator, blockTags, fileHelper));
+        generator.addProvider(event.includeServer(), blockTags);
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(generator, blockTags, fileHelper));
+
+        generator.addProvider(event.includeServer(), new ModAdvancementsProvider(generator, fileHelper));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(generator));
     }
 }

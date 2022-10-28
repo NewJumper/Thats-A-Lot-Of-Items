@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "aluminum",
-  "pattern": [
-    "NNN",
-    "NNN",
-    "NNN"
-  ],
   "key": {
     "N": {
       "tag": "forge:nuggets/aluminum"
     }
   },
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
   "result": {
     "item": "taloi:aluminum_ingot"
   }

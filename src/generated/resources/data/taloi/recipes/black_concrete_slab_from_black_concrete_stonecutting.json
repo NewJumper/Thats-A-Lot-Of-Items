@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:black_concrete"
   },
-  "result": "taloi:black_concrete_slab",
-  "count": 1
+  "result": "taloi:black_concrete_slab"
 }

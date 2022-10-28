@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
-    "side": "taloi:block/bundled_bamboo_side",
-    "end": "taloi:block/bundled_bamboo_top"
+    "end": "taloi:block/bundled_bamboo_top",
+    "side": "taloi:block/bundled_bamboo_side"
   }
 }

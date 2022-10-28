@@ -1,5 +1,6 @@
 {
   "type": "taloi:constructing",
+  "experience": 0.0,
   "ingredients": [
     {
       "tag": "forge:ingots/copper"
@@ -10,6 +11,5 @@
   ],
   "result": {
     "item": "taloi:bronze_ingot"
-  },
-  "experience": 0.0
+  }
 }

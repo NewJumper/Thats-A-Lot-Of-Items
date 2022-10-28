@@ -1,26 +1,7 @@
 {
   "parent": "taloi:main/construct_alloy",
-  "display": {
-    "icon": {
-      "item": "taloi:sermium"
-    },
-    "title": {
-      "translate": "advancements.taloi.obtain_sermium.title"
-    },
-    "description": {
-      "translate": "advancements.taloi.obtain_sermium.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "rewards": {
-    "experience": 25
-  },
   "criteria": {
     "sermium": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -29,12 +10,31 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.taloi.obtain_sermium.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "taloi:sermium"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.taloi.obtain_sermium.title"
     }
   },
   "requirements": [
     [
       "sermium"
     ]
-  ]
+  ],
+  "rewards": {
+    "experience": 25
+  }
 }

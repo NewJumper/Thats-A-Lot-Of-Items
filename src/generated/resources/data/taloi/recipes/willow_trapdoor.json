@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PPP",
-    "PPP"
-  ],
   "key": {
     "P": {
       "item": "taloi:willow_planks"
     }
   },
+  "pattern": [
+    "PPP",
+    "PPP"
+  ],
   "result": {
-    "item": "taloi:willow_trapdoor",
-    "count": 2
+    "count": 2,
+    "item": "taloi:willow_trapdoor"
   }
 }

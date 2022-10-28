@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SPS",
-    "SPS"
-  ],
   "key": {
     "P": {
       "item": "taloi:willow_planks"
@@ -12,6 +8,10 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "SPS",
+    "SPS"
+  ],
   "result": {
     "item": "taloi:willow_fence_gate"
   }

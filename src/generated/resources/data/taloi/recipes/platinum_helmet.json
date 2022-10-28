@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "III",
-    "I I"
-  ],
   "key": {
     "I": {
       "tag": "forge:ingots/platinum"
     }
   },
+  "pattern": [
+    "III",
+    "I I"
+  ],
   "result": {
     "item": "taloi:platinum_helmet"
   }

@@ -1,20 +1,15 @@
 package com.newjumper.taloi.painting;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import net.minecraft.world.entity.decoration.Motive;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class TaloiPaintings {
-    public static final DeferredRegister<Motive> PAINTING_MOTIVES = DeferredRegister.create(ForgeRegistries.PAINTING_TYPES, ThatsALotOfItems.MOD_ID);
+    public static final DeferredRegister<PaintingVariant> PAINTINGS = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, ThatsALotOfItems.MOD_ID);
 
-    public static final RegistryObject<Motive> SPACE = PAINTING_MOTIVES.register("space", () -> new Motive(32, 32));
-    public static final RegistryObject<Motive> THE_PROCESS = PAINTING_MOTIVES.register("the_process", () -> new Motive(48, 48));
-    public static final RegistryObject<Motive> TOMATO = PAINTING_MOTIVES.register("tomato", () -> new Motive(32, 32));
-
-    public static void register(IEventBus eventBus) {
-        PAINTING_MOTIVES.register(eventBus);
-    }
+    public static final RegistryObject<PaintingVariant> SPACE = PAINTINGS.register("space", () -> new PaintingVariant(32, 32));
+    public static final RegistryObject<PaintingVariant> THE_PROCESS = PAINTINGS.register("the_process", () -> new PaintingVariant(48, 48));
+    public static final RegistryObject<PaintingVariant> TOMATO = PAINTINGS.register("tomato", () -> new PaintingVariant(32, 32));
 }

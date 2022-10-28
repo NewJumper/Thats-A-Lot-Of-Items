@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "TTT"
-  ],
   "key": {
     "T": {
       "item": "minecraft:white_terracotta"
     }
   },
+  "pattern": [
+    "TTT"
+  ],
   "result": {
-    "item": "taloi:white_terracotta_slab",
-    "count": 6
+    "count": 6,
+    "item": "taloi:white_terracotta_slab"
   }
 }

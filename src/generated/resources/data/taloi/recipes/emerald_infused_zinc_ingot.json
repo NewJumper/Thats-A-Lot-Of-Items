@@ -3,11 +3,11 @@
   "base": {
     "item": "minecraft:emerald"
   },
+  "experience": 0.0,
   "ingot": {
     "tag": "forge:raw_materials/zinc"
   },
   "result": {
     "item": "taloi:emerald_infused_zinc_ingot"
-  },
-  "experience": 0.0
+  }
 }

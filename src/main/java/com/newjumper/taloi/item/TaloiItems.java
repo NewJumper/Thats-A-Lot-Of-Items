@@ -1,12 +1,14 @@
 package com.newjumper.taloi.item;
 
 import com.newjumper.taloi.ThatsALotOfItems;
-import com.newjumper.taloi.item.custom.*;
-import com.newjumper.taloi.sound.ModSounds;
+import com.newjumper.taloi.item.custom.DestabilizedFuturiteAppleItem;
+import com.newjumper.taloi.item.custom.FuturiteAppleItem;
+import com.newjumper.taloi.item.custom.FuturiteArmor;
+import com.newjumper.taloi.item.custom.SermiumOxideItem;
+import com.newjumper.taloi.sound.TaloiSounds;
 import com.newjumper.taloi.util.TaloiCreativeModeTab;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -207,9 +209,5 @@ public class TaloiItems {
     public static final RegistryObject<Item> FUTURITE_APPLE = ITEMS.register("futurite_apple", () -> new FuturiteAppleItem(new Item.Properties().rarity(Rarity.EPIC).food(TaloiFoods.FUTURITE_APPLE).stacksTo(16).tab(TaloiCreativeModeTab.TALOI_ITEMS)));
 
     // MISCELLANEOUS
-    public static final RegistryObject<Item> MUSIC_DISC_THE_CAVES = ITEMS.register("music_disc_the_caves", () -> new RecordItem(11, ModSounds.THE_CAVES, new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(TaloiCreativeModeTab.TALOI_ITEMS)));
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
+    public static final RegistryObject<Item> MUSIC_DISC_THE_CAVES = ITEMS.register("music_disc_the_caves", () -> new RecordItem(11, TaloiSounds.THE_CAVES, new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(TaloiCreativeModeTab.TALOI_ITEMS), 2560));
 }

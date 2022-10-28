@@ -1,26 +1,21 @@
 ---
-name: Bug Report
-about: Found a bug?
-labels: minor bug
+name: Report Issues
+about: Bug hunting time!
+labels: bug
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Description**
+Explanation of the current issue versus what is intended to happen or not happen, depending on the case.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+**Steps To Reproduce**
 1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+2. Try '...'
+3. Boom, error
 
 **Additional context**
 Add any other context about the problem here.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.

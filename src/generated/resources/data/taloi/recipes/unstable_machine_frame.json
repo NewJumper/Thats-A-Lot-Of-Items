@@ -1,27 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "taloi:alloy_plate"
+    },
+    "C": {
+      "item": "taloi:reinforced_copper_plate"
+    },
+    "D": {
+      "item": "taloi:diamond_plate"
+    },
+    "M": {
+      "item": "taloi:beta_machine_frame"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
   "pattern": [
     "DCD",
     "AMA",
     "DOD"
   ],
-  "key": {
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "D": {
-      "item": "taloi:diamond_plate"
-    },
-    "C": {
-      "item": "taloi:reinforced_copper_plate"
-    },
-    "A": {
-      "item": "taloi:alloy_plate"
-    },
-    "M": {
-      "item": "taloi:beta_machine_frame"
-    }
-  },
   "result": {
     "item": "taloi:unstable_machine_frame"
   }

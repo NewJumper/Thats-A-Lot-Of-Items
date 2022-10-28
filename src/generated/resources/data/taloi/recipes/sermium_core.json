@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "C",
-    "S",
-    "C"
-  ],
   "key": {
     "C": {
       "item": "minecraft:coal"
@@ -13,8 +8,13 @@
       "item": "taloi:sermium"
     }
   },
+  "pattern": [
+    "C",
+    "S",
+    "C"
+  ],
   "result": {
-    "item": "taloi:sermium_core",
-    "count": 2
+    "count": 2,
+    "item": "taloi:sermium_core"
   }
 }

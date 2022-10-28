@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "zinc",
-  "pattern": [
-    "NNN",
-    "NNN",
-    "NNN"
-  ],
   "key": {
     "N": {
       "tag": "forge:nuggets/zinc"
     }
   },
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
   "result": {
     "item": "taloi:zinc_ingot"
   }

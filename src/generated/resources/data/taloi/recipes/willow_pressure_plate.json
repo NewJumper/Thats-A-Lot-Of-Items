@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PP"
-  ],
   "key": {
     "P": {
       "item": "taloi:willow_planks"
     }
   },
+  "pattern": [
+    "PP"
+  ],
   "result": {
     "item": "taloi:willow_pressure_plate"
   }

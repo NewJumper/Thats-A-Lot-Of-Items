@@ -1,13 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "RCR",
-    "SGS",
-    "ROR"
-  ],
   "key": {
-    "R": {
-      "tag": "forge:dusts/redstone"
+    "C": {
+      "item": "taloi:copper_plate"
     },
     "G": {
       "tag": "forge:glass"
@@ -15,13 +10,18 @@
     "O": {
       "item": "minecraft:obsidian"
     },
-    "C": {
-      "item": "taloi:copper_plate"
+    "R": {
+      "tag": "forge:dusts/redstone"
     },
     "S": {
       "item": "taloi:steel_plate"
     }
   },
+  "pattern": [
+    "RCR",
+    "SGS",
+    "ROR"
+  ],
   "result": {
     "item": "taloi:alpha_machine_frame"
   }

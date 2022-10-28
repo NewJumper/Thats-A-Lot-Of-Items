@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "LLL",
-    "LLL"
-  ],
   "key": {
     "L": {
       "item": "taloi:limestone"
     }
   },
+  "pattern": [
+    "LLL",
+    "LLL"
+  ],
   "result": {
-    "item": "taloi:limestone_wall",
-    "count": 6
+    "count": 6,
+    "item": "taloi:limestone_wall"
   }
 }

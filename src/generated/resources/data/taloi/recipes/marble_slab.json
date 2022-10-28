@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "MMM"
-  ],
   "key": {
     "M": {
       "item": "taloi:marble"
     }
   },
+  "pattern": [
+    "MMM"
+  ],
   "result": {
-    "item": "taloi:marble_slab",
-    "count": 6
+    "count": 6,
+    "item": "taloi:marble_slab"
   }
 }

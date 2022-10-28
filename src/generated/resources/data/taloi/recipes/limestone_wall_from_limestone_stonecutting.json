@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "taloi:limestone"
   },
-  "result": "taloi:limestone_wall",
-  "count": 1
+  "result": "taloi:limestone_wall"
 }

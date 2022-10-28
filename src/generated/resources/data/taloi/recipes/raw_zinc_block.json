@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "RRR",
-    "RRR",
-    "RRR"
-  ],
   "key": {
     "R": {
       "tag": "forge:raw_materials/zinc"
     }
   },
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
   "result": {
     "item": "taloi:raw_zinc_block"
   }

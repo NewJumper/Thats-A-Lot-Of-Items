@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "P  ",
-    "PP ",
-    "PPP"
-  ],
   "key": {
     "P": {
       "item": "taloi:evergreen_planks"
     }
   },
+  "pattern": [
+    "P  ",
+    "PP ",
+    "PPP"
+  ],
   "result": {
-    "item": "taloi:evergreen_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:evergreen_stairs"
   }
 }

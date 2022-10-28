@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:white_terracotta"
   },
-  "result": "taloi:white_terracotta_slab",
-  "count": 1
+  "result": "taloi:white_terracotta_slab"
 }

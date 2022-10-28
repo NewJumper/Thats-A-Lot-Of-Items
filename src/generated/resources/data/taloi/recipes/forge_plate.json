@@ -1,5 +1,6 @@
 {
   "type": "taloi:unstable_pressing",
+  "experience": 0.0,
   "ingredients": [
     {
       "item": "taloi:ferroniobium_ingot"
@@ -13,6 +14,5 @@
   ],
   "result": {
     "item": "taloi:forge_plate"
-  },
-  "experience": 0.0
+  }
 }

@@ -1,23 +1,7 @@
 {
   "parent": "taloi:main/root",
-  "display": {
-    "icon": {
-      "item": "taloi:topaz"
-    },
-    "title": {
-      "translate": "advancements.taloi.shiny.title"
-    },
-    "description": {
-      "translate": "advancements.taloi.shiny.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
   "criteria": {
     "malachite": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -26,10 +10,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "tanzanite": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -38,10 +22,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "topaz": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -50,7 +34,23 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.taloi.shiny.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "taloi:topaz"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.taloi.shiny.title"
     }
   },
   "requirements": [

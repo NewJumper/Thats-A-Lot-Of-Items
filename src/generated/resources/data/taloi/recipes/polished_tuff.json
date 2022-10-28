@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "TT",
-    "TT"
-  ],
   "key": {
     "T": {
       "item": "minecraft:tuff"
     }
   },
+  "pattern": [
+    "TT",
+    "TT"
+  ],
   "result": {
-    "item": "taloi:polished_tuff",
-    "count": 4
+    "count": 4,
+    "item": "taloi:polished_tuff"
   }
 }

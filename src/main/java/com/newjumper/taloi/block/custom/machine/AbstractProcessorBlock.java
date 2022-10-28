@@ -56,7 +56,7 @@ public abstract class AbstractProcessorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof AbstractProcessorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (AbstractProcessorBlockEntity)blockEntity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (AbstractProcessorBlockEntity)blockEntity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }

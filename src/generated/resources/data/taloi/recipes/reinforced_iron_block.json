@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "II",
-    "II"
-  ],
   "key": {
     "I": {
       "tag": "forge:storage_blocks/iron"
     }
   },
+  "pattern": [
+    "II",
+    "II"
+  ],
   "result": {
-    "item": "taloi:reinforced_iron_block",
-    "count": 4
+    "count": 4,
+    "item": "taloi:reinforced_iron_block"
   }
 }

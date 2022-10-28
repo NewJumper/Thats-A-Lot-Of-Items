@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GGG",
-    " S ",
-    " S "
-  ],
   "key": {
     "G": {
       "tag": "forge:gems/lapis"
@@ -13,6 +8,11 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "GGG",
+    " S ",
+    " S "
+  ],
   "result": {
     "item": "taloi:lapis_pickaxe"
   }

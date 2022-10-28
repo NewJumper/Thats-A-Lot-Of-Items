@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.0,
   "ingredient": {
     "item": "taloi:uranium_ore"
   },
-  "result": "taloi:refined_uranium",
-  "experience": 1.0,
-  "cookingtime": 200
+  "result": "taloi:refined_uranium"
 }

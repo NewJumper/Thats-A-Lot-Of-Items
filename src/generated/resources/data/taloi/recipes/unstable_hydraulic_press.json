@@ -1,16 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ETE",
-    "TMT",
-    "SBS"
-  ],
   "key": {
+    "B": {
+      "item": "taloi:beta_hydraulic_press"
+    },
     "E": {
       "item": "taloi:emerald_infused_osmium_ingot"
-    },
-    "T": {
-      "item": "taloi:tungsten_plate"
     },
     "M": {
       "item": "taloi:unstable_machine_frame"
@@ -18,10 +13,15 @@
     "S": {
       "item": "taloi:semiconductor_plate"
     },
-    "B": {
-      "item": "taloi:beta_hydraulic_press"
+    "T": {
+      "item": "taloi:tungsten_plate"
     }
   },
+  "pattern": [
+    "ETE",
+    "TMT",
+    "SBS"
+  ],
   "result": {
     "item": "taloi:unstable_hydraulic_press"
   }

@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "BB",
-    "BB"
-  ],
   "key": {
     "B": {
       "item": "minecraft:bamboo"
     }
   },
+  "pattern": [
+    "BB",
+    "BB"
+  ],
   "result": {
     "item": "taloi:bundled_bamboo"
   }

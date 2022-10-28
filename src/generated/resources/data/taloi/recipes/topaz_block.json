@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "TT",
-    "TT"
-  ],
   "key": {
     "T": {
       "item": "taloi:topaz"
     }
   },
+  "pattern": [
+    "TT",
+    "TT"
+  ],
   "result": {
-    "item": "taloi:topaz_block",
-    "count": 2
+    "count": 2,
+    "item": "taloi:topaz_block"
   }
 }

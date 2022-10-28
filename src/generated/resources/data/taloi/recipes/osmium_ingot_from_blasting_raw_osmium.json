@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.7,
   "ingredient": {
     "tag": "forge:raw_materials/osmium"
   },
-  "result": "taloi:osmium_ingot",
-  "experience": 1.7,
-  "cookingtime": 100
+  "result": "taloi:osmium_ingot"
 }

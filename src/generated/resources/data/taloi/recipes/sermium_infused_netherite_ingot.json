@@ -3,11 +3,11 @@
   "base": {
     "item": "taloi:sermium_plate"
   },
+  "experience": 0.0,
   "ingot": {
     "tag": "forge:ingots/netherite"
   },
   "result": {
     "item": "taloi:sermium_infused_netherite_ingot"
-  },
-  "experience": 0.0
+  }
 }

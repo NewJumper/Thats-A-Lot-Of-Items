@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "W  ",
-    "WW ",
-    "WWW"
-  ],
   "key": {
     "W": {
       "item": "taloi:evergreen_wood"
     }
   },
+  "pattern": [
+    "W  ",
+    "WW ",
+    "WWW"
+  ],
   "result": {
-    "item": "taloi:evergreen_wood_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:evergreen_wood_stairs"
   }
 }

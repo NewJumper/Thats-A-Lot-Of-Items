@@ -26,7 +26,7 @@ public class UnstableHydraulicPressBlock extends AbstractHydraulicPressBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof UnstableHydraulicPressBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (UnstableHydraulicPressBlockEntity)blockEntity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (UnstableHydraulicPressBlockEntity)blockEntity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }

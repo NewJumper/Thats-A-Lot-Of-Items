@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+import org.jetbrains.annotations.NotNull;
 
 public class EffectBlock extends Block {
     private final MobEffect effect;
@@ -24,7 +25,7 @@ public class EffectBlock extends Block {
     }
 
     @Override
-    public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
+    public void stepOn(Level pLevel, @NotNull BlockPos pPos, @NotNull BlockState pState, @NotNull Entity pEntity) {
         if(!pLevel.isClientSide()) {
             if(pEntity instanceof Player entity) entity.addEffect(new MobEffectInstance(effect, duration, amplifier));
         }

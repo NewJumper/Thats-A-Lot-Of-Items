@@ -5,8 +5,8 @@ import com.newjumper.taloi.block.custom.*;
 import com.newjumper.taloi.block.custom.machine.*;
 import com.newjumper.taloi.item.TaloiItems;
 import com.newjumper.taloi.util.TaloiCreativeModeTab;
-import com.newjumper.taloi.world.features.tree.EvergreenTreeGrower;
-import com.newjumper.taloi.world.features.tree.WillowTreeGrower;
+import com.newjumper.taloi.world.trees.EvergreenTreeGrower;
+import com.newjumper.taloi.world.trees.WillowTreeGrower;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,7 +14,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,13 +24,13 @@ public class TaloiBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ThatsALotOfItems.MOD_ID);
 
     // EVERGREEN
-    public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () -> new FlammablePlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> EVERGREEN_PLANKS = registerBlock("evergreen_planks", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<Block> EVERGREEN_SAPLING = registerBlock("evergreen_sapling", () -> new SaplingBlock(new EvergreenTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<RotatedPillarBlock> EVERGREEN_LOG = registerBlock("evergreen_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<RotatedPillarBlock> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> STRIPPED_EVERGREEN_WOOD = registerBlock("stripped_evergreen_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () -> new FlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<RotatedPillarBlock> EVERGREEN_LOG = registerBlock("evergreen_log", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_EVERGREEN_LOG = registerBlock("stripped_evergreen_log", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_EVERGREEN_WOOD = registerBlock("stripped_evergreen_wood", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> EVERGREEN_WOOD = registerBlock("evergreen_wood", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> EVERGREEN_LEAVES = registerBlock("evergreen_leaves", () -> new FlammableLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> EVERGREEN_SLAB = registerBlock("evergreen_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<FenceBlock> EVERGREEN_FENCE = registerBlock("evergreen_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<StairBlock> EVERGREEN_STAIRS = registerBlock("evergreen_stairs", () -> new StairBlock(EVERGREEN_PLANKS.get()::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -40,19 +39,19 @@ public class TaloiBlocks {
     public static final RegistryObject<DoorBlock> EVERGREEN_DOOR = registerBlock("evergreen_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3f).sound(SoundType.WOOD).noOcclusion()), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<TrapDoorBlock> EVERGREEN_TRAPDOOR = registerBlock("evergreen_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3f).sound(SoundType.WOOD).noOcclusion()), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<FenceGateBlock> EVERGREEN_FENCE_GATE = registerBlock("evergreen_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> EVERGREEN_WOOD_STAIRS = registerBlock("evergreen_wood_stairs", () -> new StrippableStairs(EVERGREEN_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> EVERGREEN_WOOD_SLAB = registerBlock("evergreen_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_EVERGREEN_WOOD_STAIRS = registerBlock("stripped_evergreen_wood_stairs", () -> new StrippableStairs(STRIPPED_EVERGREEN_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> EVERGREEN_WOOD_STAIRS = registerBlock("evergreen_wood_stairs", () -> new StrippableStairBlock(EVERGREEN_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> EVERGREEN_WOOD_SLAB = registerBlock("evergreen_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_EVERGREEN_WOOD_STAIRS = registerBlock("stripped_evergreen_wood_stairs", () -> new StrippableStairBlock(STRIPPED_EVERGREEN_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_EVERGREEN_WOOD_SLAB = registerBlock("stripped_evergreen_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(STRIPPED_EVERGREEN_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
 
     // WILLOW
-    public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () -> new FlammablePlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling", () -> new SaplingBlock(new WillowTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<RotatedPillarBlock> WILLOW_LOG = registerBlock("willow_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<RotatedPillarBlock> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () -> new FlammableLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<RotatedPillarBlock> WILLOW_LOG = registerBlock("willow_log", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood", () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves", () -> new FlammableLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> WILLOW_SLAB = registerBlock("willow_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<FenceBlock> WILLOW_FENCE = registerBlock("willow_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<StairBlock> WILLOW_STAIRS = registerBlock("willow_stairs", () -> new StairBlock(WILLOW_PLANKS.get()::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -61,9 +60,9 @@ public class TaloiBlocks {
     public static final RegistryObject<DoorBlock> WILLOW_DOOR = registerBlock("willow_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3f).sound(SoundType.WOOD).noOcclusion()), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<TrapDoorBlock> WILLOW_TRAPDOOR = registerBlock("willow_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3f).sound(SoundType.WOOD).noOcclusion()), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<FenceGateBlock> WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> WILLOW_WOOD_STAIRS = registerBlock("willow_wood_stairs", () -> new StrippableStairs(WILLOW_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> WILLOW_WOOD_SLAB = registerBlock("willow_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_WILLOW_WOOD_STAIRS = registerBlock("stripped_willow_wood_stairs", () -> new StrippableStairs(STRIPPED_WILLOW_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> WILLOW_WOOD_STAIRS = registerBlock("willow_wood_stairs", () -> new StrippableStairBlock(WILLOW_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> WILLOW_WOOD_SLAB = registerBlock("willow_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_WILLOW_WOOD_STAIRS = registerBlock("stripped_willow_wood_stairs", () -> new StrippableStairBlock(STRIPPED_WILLOW_WOOD.get()::defaultBlockState, BlockBehaviour.Properties.copy(STRIPPED_WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_WILLOW_WOOD_SLAB = registerBlock("stripped_willow_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(STRIPPED_WILLOW_WOOD.get()).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
 
     // NATURAL & DECORATION
@@ -199,7 +198,7 @@ public class TaloiBlocks {
     public static final RegistryObject<RotatedPillarBlock> BUNDLED_BAMBOO = registerBlock("bundled_bamboo", () -> new BundledBambooBlock(BlockBehaviour.Properties.of(Material.BAMBOO)
             .strength(0.5f)
             .sound(SoundType.BAMBOO)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new FlammablePlanks(BlockBehaviour.Properties.of(Material.BAMBOO)
+    public static final RegistryObject<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new FlammableBlock(BlockBehaviour.Properties.of(Material.BAMBOO)
             .strength(1f)
             .sound(SoundType.BAMBOO)), TaloiCreativeModeTab.TALOI_BLOCKS);
 
@@ -233,10 +232,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> ALUMINUM_ORE = registerBlock("aluminum_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> ALUMINUM_ORE = registerBlock("aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = registerBlock("deepslate_aluminum_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(ALUMINUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = registerBlock("deepslate_aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(ALUMINUM_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -247,10 +246,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> IRIDIUM_BLOCK = registerBlock("iridium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(11f, 11f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> IRIDIUM_ORE = registerBlock("iridium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> IRIDIUM_ORE = registerBlock("iridium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_IRIDIUM_ORE = registerBlock("deepslate_iridium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(IRIDIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_IRIDIUM_ORE = registerBlock("deepslate_iridium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(IRIDIUM_ORE.get())
             .strength(10f, 8f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -261,10 +260,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> LEAD_BLOCK = registerBlock("lead_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> LEAD_ORE = registerBlock("lead_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> LEAD_ORE = registerBlock("lead_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(LEAD_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(LEAD_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -275,10 +274,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> MAGNESIUM_BLOCK = registerBlock("magnesium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> MAGNESIUM_ORE = registerBlock("magnesium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> MAGNESIUM_ORE = registerBlock("magnesium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_MAGNESIUM_ORE = registerBlock("deepslate_magnesium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(MAGNESIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_MAGNESIUM_ORE = registerBlock("deepslate_magnesium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(MAGNESIUM_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -289,10 +288,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> OSMIUM_BLOCK = registerBlock("osmium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(12f, 12f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> OSMIUM_ORE = registerBlock("osmium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> OSMIUM_ORE = registerBlock("osmium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(9f, 10f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_OSMIUM_ORE = registerBlock("deepslate_osmium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(OSMIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_OSMIUM_ORE = registerBlock("deepslate_osmium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(OSMIUM_ORE.get())
             .strength(13f, 10f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -303,10 +302,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> PLATINUM_BLOCK = registerBlock("platinum_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(11f, 11f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(PLATINUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(PLATINUM_ORE.get())
             .strength(10f, 8f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -317,10 +316,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> SILICON_BLOCK = registerBlock("silicon_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> SILICON_ORE = registerBlock("silicon_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> SILICON_ORE = registerBlock("silicon_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_SILICON_ORE = registerBlock("deepslate_silicon_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(SILICON_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_SILICON_ORE = registerBlock("deepslate_silicon_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(SILICON_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -331,10 +330,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(TIN_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(TIN_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -345,10 +344,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> TUNGSTEN_BLOCK = registerBlock("tungsten_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(10f, 10f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> TUNGSTEN_ORE = registerBlock("tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = registerBlock("deepslate_tungsten_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(TUNGSTEN_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = registerBlock("deepslate_tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(TUNGSTEN_ORE.get())
             .strength(10f, 8f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -359,10 +358,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(8f, 8f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(6f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(URANIUM_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(URANIUM_ORE.get())
             .strength(8f, 6f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -373,10 +372,10 @@ public class TaloiBlocks {
     public static final RegistryObject<Block> ZINC_BLOCK = registerBlock("zinc_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
             .strength(5f, 6f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> ZINC_ORE = registerBlock("zinc_ore", () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> ZINC_ORE = registerBlock("zinc_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
             .strength(3f, 3f)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<Block> DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", () -> new OreBlock(BlockBehaviour.Properties.copy(ZINC_ORE.get())
+    public static final RegistryObject<Block> DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(ZINC_ORE.get())
             .strength(4.5f, 3f)
             .sound(SoundType.DEEPSLATE)
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -435,39 +434,39 @@ public class TaloiBlocks {
             .requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_MACHINES);
 
     // VANILLA STAIRS & SLABS
-    public static final RegistryObject<StairBlock> OAK_WOOD_STAIRS = registerBlock("oak_wood_stairs", () -> new StrippableStairs(Blocks.OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> OAK_WOOD_SLAB = registerBlock("oak_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> SPRUCE_WOOD_STAIRS = registerBlock("spruce_wood_stairs", () -> new StrippableStairs(Blocks.SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> SPRUCE_WOOD_SLAB = registerBlock("spruce_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> BIRCH_WOOD_STAIRS = registerBlock("birch_wood_stairs", () -> new StrippableStairs(Blocks.BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> BIRCH_WOOD_SLAB = registerBlock("birch_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> JUNGLE_WOOD_STAIRS = registerBlock("jungle_wood_stairs", () -> new StrippableStairs(Blocks.JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> JUNGLE_WOOD_SLAB = registerBlock("jungle_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> ACACIA_WOOD_STAIRS = registerBlock("acacia_wood_stairs", () -> new StrippableStairs(Blocks.ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> ACACIA_WOOD_SLAB = registerBlock("acacia_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> DARK_OAK_WOOD_STAIRS = registerBlock("dark_oak_wood_stairs", () -> new StrippableStairs(Blocks.DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> DARK_OAK_WOOD_SLAB = registerBlock("dark_oak_wood_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> CRIMSON_HYPHAE_STAIRS = registerBlock("crimson_hyphae_stairs", () -> new StrippableStairs(Blocks.CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> CRIMSON_HYPHAE_SLAB = registerBlock("crimson_hyphae_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> WARPED_HYPHAE_STAIRS = registerBlock("warped_hyphae_stairs", () -> new StrippableStairs(Blocks.WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> WARPED_HYPHAE_SLAB = registerBlock("warped_hyphae_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> OAK_WOOD_STAIRS = registerBlock("oak_wood_stairs", () -> new StrippableStairBlock(Blocks.OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> OAK_WOOD_SLAB = registerBlock("oak_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> SPRUCE_WOOD_STAIRS = registerBlock("spruce_wood_stairs", () -> new StrippableStairBlock(Blocks.SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> SPRUCE_WOOD_SLAB = registerBlock("spruce_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> BIRCH_WOOD_STAIRS = registerBlock("birch_wood_stairs", () -> new StrippableStairBlock(Blocks.BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> BIRCH_WOOD_SLAB = registerBlock("birch_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> JUNGLE_WOOD_STAIRS = registerBlock("jungle_wood_stairs", () -> new StrippableStairBlock(Blocks.JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> JUNGLE_WOOD_SLAB = registerBlock("jungle_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> ACACIA_WOOD_STAIRS = registerBlock("acacia_wood_stairs", () -> new StrippableStairBlock(Blocks.ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> ACACIA_WOOD_SLAB = registerBlock("acacia_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> DARK_OAK_WOOD_STAIRS = registerBlock("dark_oak_wood_stairs", () -> new StrippableStairBlock(Blocks.DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> DARK_OAK_WOOD_SLAB = registerBlock("dark_oak_wood_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> CRIMSON_HYPHAE_STAIRS = registerBlock("crimson_hyphae_stairs", () -> new StrippableStairBlock(Blocks.CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> CRIMSON_HYPHAE_SLAB = registerBlock("crimson_hyphae_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> WARPED_HYPHAE_STAIRS = registerBlock("warped_hyphae_stairs", () -> new StrippableStairBlock(Blocks.WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> WARPED_HYPHAE_SLAB = registerBlock("warped_hyphae_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
 
-    public static final RegistryObject<StairBlock> STRIPPED_OAK_WOOD_STAIRS = registerBlock("stripped_oak_wood_stairs", () -> new StrippableStairs(Blocks.STRIPPED_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_OAK_WOOD_STAIRS = registerBlock("stripped_oak_wood_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_OAK_WOOD_SLAB = registerBlock("stripped_oak_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_SPRUCE_WOOD_STAIRS = registerBlock("stripped_spruce_wood_stairs", () -> new StrippableStairs(Blocks.STRIPPED_SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_SPRUCE_WOOD_STAIRS = registerBlock("stripped_spruce_wood_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_SPRUCE_WOOD_SLAB = registerBlock("stripped_spruce_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_BIRCH_WOOD_STAIRS = registerBlock("stripped_birch_wood_stairs", () -> new StrippableStairs(Blocks.STRIPPED_BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_BIRCH_WOOD_STAIRS = registerBlock("stripped_birch_wood_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_BIRCH_WOOD_SLAB = registerBlock("stripped_birch_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_JUNGLE_WOOD_STAIRS = registerBlock("stripped_jungle_wood_stairs", () -> new StrippableStairs(Blocks.STRIPPED_JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_JUNGLE_WOOD_STAIRS = registerBlock("stripped_jungle_wood_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_JUNGLE_WOOD_SLAB = registerBlock("stripped_jungle_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_ACACIA_WOOD_STAIRS = registerBlock("stripped_acacia_wood_stairs", () -> new StrippableStairs(Blocks.STRIPPED_ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_ACACIA_WOOD_STAIRS = registerBlock("stripped_acacia_wood_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_ACACIA_WOOD_SLAB = registerBlock("stripped_acacia_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_DARK_OAK_WOOD_STAIRS = registerBlock("stripped_dark_oak_wood_stairs", () -> new StrippableStairs(Blocks.STRIPPED_DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_DARK_OAK_WOOD_STAIRS = registerBlock("stripped_dark_oak_wood_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> STRIPPED_DARK_OAK_WOOD_SLAB = registerBlock("stripped_dark_oak_wood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD).strength(2f).sound(SoundType.WOOD)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_CRIMSON_HYPHAE_STAIRS = registerBlock("stripped_crimson_hyphae_stairs", () -> new StrippableStairs(Blocks.STRIPPED_CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> STRIPPED_CRIMSON_HYPHAE_SLAB = registerBlock("stripped_crimson_hyphae_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<StairBlock> STRIPPED_WARPED_HYPHAE_STAIRS = registerBlock("stripped_warped_hyphae_stairs", () -> new StrippableStairs(Blocks.STRIPPED_WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
-    public static final RegistryObject<SlabBlock> STRIPPED_WARPED_HYPHAE_SLAB = registerBlock("stripped_warped_hyphae_slab", () -> new StrippableSlab(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_CRIMSON_HYPHAE_STAIRS = registerBlock("stripped_crimson_hyphae_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> STRIPPED_CRIMSON_HYPHAE_SLAB = registerBlock("stripped_crimson_hyphae_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<StairBlock> STRIPPED_WARPED_HYPHAE_STAIRS = registerBlock("stripped_warped_hyphae_stairs", () -> new StrippableStairBlock(Blocks.STRIPPED_WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
+    public static final RegistryObject<SlabBlock> STRIPPED_WARPED_HYPHAE_SLAB = registerBlock("stripped_warped_hyphae_slab", () -> new StrippableSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).strength(2f).sound(SoundType.STEM)), TaloiCreativeModeTab.TALOI_BLOCKS);
 
     public static final RegistryObject<StairBlock> WHITE_TERRACOTTA_STAIRS = registerBlock("white_terracotta_stairs", () -> new StairBlock(Blocks.WHITE_TERRACOTTA::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA).strength(1.25f, 4.2f).requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
     public static final RegistryObject<SlabBlock> WHITE_TERRACOTTA_SLAB = registerBlock("white_terracotta_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA).strength(1.25f, 4.2f).requiresCorrectToolForDrops()), TaloiCreativeModeTab.TALOI_BLOCKS);
@@ -549,9 +548,5 @@ public class TaloiBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> pBlock, CreativeModeTab pTab) {
         TaloiItems.ITEMS.register(name, () -> new BlockItem(pBlock.get(), new Item.Properties().tab(pTab)));
-    }
-
-    public static void register(IEventBus eventbus) {
-        BLOCKS.register(eventbus);
     }
 }

@@ -24,8 +24,7 @@ public class DestabilizedFuturiteAppleItem extends Item {
 
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
         super.finishUsingItem(pStack, pLevel, pEntityLiving);
-        if (pEntityLiving instanceof ServerPlayer) {
-            ServerPlayer serverplayer = (ServerPlayer)pEntityLiving;
+        if (pEntityLiving instanceof ServerPlayer serverplayer) {
             CriteriaTriggers.CONSUME_ITEM.trigger(serverplayer, pStack);
             serverplayer.awardStat(Stats.ITEM_USED.get(this));
         }
@@ -39,11 +38,10 @@ public class DestabilizedFuturiteAppleItem extends Item {
         if (pStack.isEmpty()) {
             return new ItemStack(TaloiItems.DIAMOND_APPLE.get());
         } else {
-            if (pEntityLiving instanceof Player && !((Player)pEntityLiving).getAbilities().instabuild) {
-                ItemStack itemstack = new ItemStack(TaloiItems.DIAMOND_APPLE.get());
-                Player player = (Player)pEntityLiving;
-                if (!player.getInventory().add(itemstack)) {
-                    player.drop(itemstack, false);
+            if (pEntityLiving instanceof Player player && !((Player)pEntityLiving).getAbilities().instabuild) {
+                ItemStack stack = new ItemStack(TaloiItems.DIAMOND_APPLE.get());
+                if (!player.getInventory().add(stack)) {
+                    player.drop(stack, false);
                 }
             }
 

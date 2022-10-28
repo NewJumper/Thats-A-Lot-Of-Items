@@ -1,5 +1,6 @@
 {
   "type": "taloi:separating",
+  "experience": 0.0,
   "ore": {
     "item": "taloi:iridium_ore"
   },
@@ -8,6 +9,5 @@
   },
   "resultraw": {
     "item": "taloi:raw_iridium"
-  },
-  "experience": 0.0
+  }
 }

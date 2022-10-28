@@ -1,9 +1,9 @@
 package com.newjumper.taloi.screen;
 
 import com.newjumper.taloi.block.TaloiBlocks;
-import com.newjumper.taloi.screen.slot.ModFuelSlot;
-import com.newjumper.taloi.screen.slot.ModResultSlot;
-import com.newjumper.taloi.screen.slot.SeparatorOreSlot;
+import com.newjumper.taloi.screen.slot.FuelSlot;
+import com.newjumper.taloi.screen.slot.ResultSlot;
+import com.newjumper.taloi.util.TaloiTags;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -11,14 +11,15 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNull;
 
 public class SeparatorMenu extends AbstractContainerMenu {
-    private static final int VANILLA_SLOT_COUNT = 36;
-    private static final int BLOCK_SLOT_COUNT = 4;
-    private static final int BLOCK_FIRST_SLOT_INDEX = VANILLA_SLOT_COUNT;
+    private static final int INV_SLOTS = 36;
+    private static final int MENU_SLOTS = 4;
     private final BlockEntity blockEntity;
-    private final ContainerData containerData;
+    private final ContainerData data;
     private final Level level;
 
     public SeparatorMenu(int pContainerId, Inventory pInventory, FriendlyByteBuf pBuffer) {
@@ -26,89 +27,78 @@ public class SeparatorMenu extends AbstractContainerMenu {
     }
 
     public SeparatorMenu(int pContainerId, Inventory pInventory, BlockEntity pBlockEntity, ContainerData pContainerData) {
-        super(ModMenuTypes.SEPARATOR_MENU.get(), pContainerId);
+        super(TaloiMenuTypes.SEPARATOR_MENU.get(), pContainerId);
         this.blockEntity = pBlockEntity;
         this.level = pInventory.player.level;
-        this.containerData = pContainerData;
+        this.data = pContainerData;
 
-        checkContainerSize(pInventory, 4);
+        checkContainerSize(pInventory, MENU_SLOTS);
         addInventorySlots(pInventory);
-
-        this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new ModFuelSlot(handler, 0, 30, 41));
-            this.addSlot(new SeparatorOreSlot(handler, 1, 51, 41));
-            this.addSlot(new ModResultSlot(handler, 2, 102, 37));
-            this.addSlot(new ModResultSlot(handler, 3, 128, 37));
-        });
-
         addDataSlots(pContainerData);
+
+        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
+            this.addSlot(new FuelSlot(handler, 0, 30, 41));
+            this.addSlot(new SlotItemHandler(handler, 1, 51, 41) {
+                @Override
+                public boolean mayPlace(@NotNull ItemStack stack) {
+                    return stack.is(TaloiTags.Items.SEPARATOR_ORES);
+                }
+            });
+            this.addSlot(new ResultSlot(handler, 2, 102, 37));
+            this.addSlot(new ResultSlot(handler, 3, 128, 37));
+        });
     }
 
-    @Override
-    public ItemStack quickMoveStack(Player playerIn, int index) {
-        Slot sourceSlot = slots.get(index);
-
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
-
-        ItemStack sourceStack = sourceSlot.getItem();
-        ItemStack copyOfSourceStack = sourceStack.copy();
-
-        if (index < VANILLA_SLOT_COUNT) {
-            if (!moveItemStackTo(sourceStack, BLOCK_FIRST_SLOT_INDEX, BLOCK_FIRST_SLOT_INDEX + BLOCK_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;
-            }
-        } else if (index < BLOCK_FIRST_SLOT_INDEX + BLOCK_SLOT_COUNT) {
-            if (!moveItemStackTo(sourceStack, 0, VANILLA_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;
-            }
-        } else {
-            System.out.println("Invalid slotIndex:" + index);
-            return ItemStack.EMPTY;
+    private void addInventorySlots(Inventory inventory) {
+        for(int i = 0; i < 9; i++) {
+            this.addSlot(new Slot(inventory, i, 8 + i * 18, 142));
         }
 
-        if (sourceStack.getCount() == 0) sourceSlot.set(ItemStack.EMPTY);
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 9; j++) {
+                this.addSlot(new Slot(inventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+            }
+        }
+    }
+
+    @NotNull
+    @Override
+    public ItemStack quickMoveStack(@NotNull Player pPlayer, int pIndex) {
+        Slot sourceSlot = slots.get(pIndex);
+        if(!sourceSlot.hasItem()) return ItemStack.EMPTY;
+
+        ItemStack sourceItem = sourceSlot.getItem();
+        if(pIndex < INV_SLOTS) {
+            if(!moveItemStackTo(sourceItem, INV_SLOTS, INV_SLOTS + MENU_SLOTS, false)) return ItemStack.EMPTY;
+        } else if(pIndex < INV_SLOTS + MENU_SLOTS) {
+            if(!moveItemStackTo(sourceItem, 0, INV_SLOTS, false)) return ItemStack.EMPTY;
+        } else return ItemStack.EMPTY;
+
+        if(sourceItem.getCount() == 0) sourceSlot.set(ItemStack.EMPTY);
         else sourceSlot.setChanged();
 
-        sourceSlot.onTake(playerIn, sourceStack);
-        return copyOfSourceStack;
+        sourceSlot.onTake(pPlayer, sourceItem);
+        return sourceItem;
     }
 
     @Override
-    public boolean stillValid(Player pPlayer) {
+    public boolean stillValid(@NotNull Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.ALPHA_SEPARATOR.get()) ||
                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.BETA_SEPARATOR.get()) ||
                stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, TaloiBlocks.UNSTABLE_SEPARATOR.get());
     }
 
-    private void addInventorySlots(Inventory pInventory) {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 9; j++) {
-                this.addSlot(new Slot(pInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
-            }
-        }
+    public int drawFuel() {
+        int fuel = this.data.get(0);
+        int max = this.data.get(1);
 
-        for (int i = 0; i < 9; i++) {
-            this.addSlot(new Slot(pInventory, i, 8 + i * 18, 142));
-        }
+        return fuel == 0 ? -1 : Math.max((-14 * (fuel - max)) / max, 0);
     }
 
-    public boolean isLit() {
-        return containerData.get(0) > 0;
-    }
-    public boolean hasIngredients() {
-        return containerData.get(2) > 0;
-    }
-    public int getProgress() {
-        int currentProgress = this.containerData.get(2);
-        int maxProgress = this.containerData.get(3);
-        int progressBarLength = 22;
+    public int drawProgress() {
+        double progress = this.data.get(2);
+        int max = this.data.get(3);
 
-        return maxProgress != 0 && currentProgress != 0 ? currentProgress * progressBarLength / maxProgress : 0;
-    }
-    public int getFuelProgress() {
-        int litTime = this.containerData.get(0);
-        int litDuration = this.containerData.get(1);
-
-        return litDuration != 0 && litTime != 0 ? (-13 * (litTime - litDuration)) / litDuration : 0;
+        return progress == 0 ? 0 : (int) (progress / max * 22);
     }
 }

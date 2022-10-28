@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GGG",
-    "G G",
-    "G G"
-  ],
   "key": {
     "G": {
       "tag": "forge:gems/lapis"
     }
   },
+  "pattern": [
+    "GGG",
+    "G G",
+    "G G"
+  ],
   "result": {
     "item": "taloi:lapis_leggings"
   }

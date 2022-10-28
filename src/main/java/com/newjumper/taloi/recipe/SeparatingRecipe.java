@@ -1,7 +1,6 @@
 package com.newjumper.taloi.recipe;
 
 import com.google.gson.JsonObject;
-import com.newjumper.taloi.ThatsALotOfItems;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -9,7 +8,6 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
 public class SeparatingRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
@@ -64,7 +62,7 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.SEPARATING.get();
+        return TaloiRecipes.SEPARATING.get();
     }
 
     @Override
@@ -79,7 +77,6 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<SeparatingRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(ThatsALotOfItems.MOD_ID,"separating");
 
         @Override
         public SeparatingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
@@ -107,27 +104,6 @@ public class SeparatingRecipe implements Recipe<SimpleContainer> {
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
             pBuffer.writeItemStack(pRecipe.getResultOre(), false);
             pBuffer.writeFloat(pRecipe.getExperience());
-        }
-
-        @Override
-        public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-            return INSTANCE;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getRegistryName() {
-            return ID;
-        }
-
-        @Override
-        public Class<RecipeSerializer<?>> getRegistryType() {
-            return Serializer.castClass(RecipeSerializer.class);
-        }
-
-        @SuppressWarnings("unchecked")
-        private static <G> Class<G> castClass(Class<?> cls) {
-            return (Class<G>) cls;
         }
     }
 }

@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "taloi:diamond_apple"
+    },
+    "F": {
+      "item": "taloi:futurite_bit"
+    }
+  },
   "pattern": [
     "FFF",
     "FDF",
     "FFF"
   ],
-  "key": {
-    "F": {
-      "item": "taloi:futurite_bit"
-    },
-    "D": {
-      "item": "taloi:diamond_apple"
-    }
-  },
   "result": {
     "item": "taloi:futurite_apple"
   }

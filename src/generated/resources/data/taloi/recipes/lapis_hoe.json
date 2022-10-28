@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GG",
-    " S",
-    " S"
-  ],
   "key": {
     "G": {
       "tag": "forge:gems/lapis"
@@ -13,6 +8,11 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "GG",
+    " S",
+    " S"
+  ],
   "result": {
     "item": "taloi:lapis_hoe"
   }

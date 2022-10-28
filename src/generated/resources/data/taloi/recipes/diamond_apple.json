@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "DDD",
-    "DGD",
-    "DDD"
-  ],
   "key": {
     "D": {
       "tag": "forge:gems/diamond"
@@ -13,6 +8,11 @@
       "item": "minecraft:golden_apple"
     }
   },
+  "pattern": [
+    "DDD",
+    "DGD",
+    "DDD"
+  ],
   "result": {
     "item": "taloi:diamond_apple"
   }

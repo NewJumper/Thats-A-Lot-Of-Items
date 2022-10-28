@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:netherite_leggings"
-  },
   "addition": {
     "item": "taloi:sermium_infused_netherite_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
   },
   "result": {
     "item": "taloi:sermium_leggings"

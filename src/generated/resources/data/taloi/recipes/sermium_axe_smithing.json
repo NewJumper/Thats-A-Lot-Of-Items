@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:netherite_axe"
-  },
   "addition": {
     "item": "taloi:sermium_infused_netherite_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
   },
   "result": {
     "item": "taloi:sermium_axe"

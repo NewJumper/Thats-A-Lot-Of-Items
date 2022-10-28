@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "G G",
-    "G G"
-  ],
   "key": {
     "G": {
       "tag": "forge:gems/emerald"
     }
   },
+  "pattern": [
+    "G G",
+    "G G"
+  ],
   "result": {
     "item": "taloi:emerald_boots"
   }

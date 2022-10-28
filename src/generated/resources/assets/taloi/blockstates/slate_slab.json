@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "taloi:block/slate_slab_top"
-    },
     "type=bottom": {
       "model": "taloi:block/slate_slab"
     },
     "type=double": {
       "model": "taloi:block/slate"
+    },
+    "type=top": {
+      "model": "taloi:block/slate_slab_top"
     }
   }
 }

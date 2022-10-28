@@ -1,5 +1,6 @@
 {
   "type": "taloi:constructing",
+  "experience": 0.0,
   "ingredients": [
     {
       "item": "taloi:carbon_plate"
@@ -10,6 +11,5 @@
   ],
   "result": {
     "item": "taloi:hardened_carbonite"
-  },
-  "experience": 0.0
+  }
 }

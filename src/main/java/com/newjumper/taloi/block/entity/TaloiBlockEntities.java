@@ -4,13 +4,12 @@ import com.newjumper.taloi.ThatsALotOfItems;
 import com.newjumper.taloi.block.TaloiBlocks;
 import com.newjumper.taloi.block.entity.machine.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class TaloiBlockEntities {
-    public static DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, ThatsALotOfItems.MOD_ID);
+    public static DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ThatsALotOfItems.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<AlphaConstructorBlockEntity>> ALPHA_CONSTRUCTOR = BLOCK_ENTITIES.register("alpha_constructor", () -> BlockEntityType.Builder.of(AlphaConstructorBlockEntity::new, TaloiBlocks.ALPHA_CONSTRUCTOR.get()).build(null));
     public static final RegistryObject<BlockEntityType<BetaConstructorBlockEntity>> BETA_CONSTRUCTOR = BLOCK_ENTITIES.register("beta_constructor", () -> BlockEntityType.Builder.of(BetaConstructorBlockEntity::new, TaloiBlocks.BETA_CONSTRUCTOR.get()).build(null));
@@ -27,8 +26,4 @@ public class TaloiBlockEntities {
     public static final RegistryObject<BlockEntityType<AlphaSeparatorBlockEntity>> ALPHA_SEPARATOR = BLOCK_ENTITIES.register("alpha_separator", () -> BlockEntityType.Builder.of(AlphaSeparatorBlockEntity::new, TaloiBlocks.ALPHA_SEPARATOR.get()).build(null));
     public static final RegistryObject<BlockEntityType<BetaSeparatorBlockEntity>> BETA_SEPARATOR = BLOCK_ENTITIES.register("beta_separator", () -> BlockEntityType.Builder.of(BetaSeparatorBlockEntity::new, TaloiBlocks.BETA_SEPARATOR.get()).build(null));
     public static final RegistryObject<BlockEntityType<UnstableSeparatorBlockEntity>> UNSTABLE_SEPARATOR = BLOCK_ENTITIES.register("unstable_separator", () -> BlockEntityType.Builder.of(UnstableSeparatorBlockEntity::new, TaloiBlocks.UNSTABLE_SEPARATOR.get()).build(null));
-
-    public static void register(IEventBus eventBus) {
-        BLOCK_ENTITIES.register(eventBus);
-    }
 }

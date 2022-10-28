@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "uranium",
-  "pattern": [
-    "NNN",
-    "NNN",
-    "NNN"
-  ],
   "key": {
     "N": {
       "tag": "forge:nuggets/uranium"
     }
   },
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
   "result": {
     "item": "taloi:refined_uranium"
   }

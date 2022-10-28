@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
   "ingredient": {
     "item": "taloi:deepslate_silicon_ore"
   },
-  "result": "taloi:silicon",
-  "experience": 0.7,
-  "cookingtime": 200
+  "result": "taloi:silicon"
 }

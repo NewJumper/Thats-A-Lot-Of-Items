@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "W  ",
-    "WW ",
-    "WWW"
-  ],
   "key": {
     "W": {
       "item": "minecraft:spruce_wood"
     }
   },
+  "pattern": [
+    "W  ",
+    "WW ",
+    "WWW"
+  ],
   "result": {
-    "item": "taloi:spruce_wood_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:spruce_wood_stairs"
   }
 }

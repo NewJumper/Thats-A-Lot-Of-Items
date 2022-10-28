@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "MM",
-    "MM"
-  ],
   "key": {
     "M": {
       "item": "taloi:malachite"
     }
   },
+  "pattern": [
+    "MM",
+    "MM"
+  ],
   "result": {
-    "item": "taloi:malachite_block",
-    "count": 2
+    "count": 2,
+    "item": "taloi:malachite_block"
   }
 }

@@ -1,9 +1,24 @@
 {
   "variants": {
+    "facing=east,lit=false": {
+      "model": "taloi:block/alpha_hydraulic_press",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "taloi:block/alpha_hydraulic_press",
+      "y": 90
+    },
     "facing=north,lit=false": {
       "model": "taloi:block/alpha_hydraulic_press"
     },
+    "facing=north,lit=true": {
+      "model": "taloi:block/alpha_hydraulic_press"
+    },
     "facing=south,lit=false": {
+      "model": "taloi:block/alpha_hydraulic_press",
+      "y": 180
+    },
+    "facing=south,lit=true": {
       "model": "taloi:block/alpha_hydraulic_press",
       "y": 180
     },
@@ -11,24 +26,9 @@
       "model": "taloi:block/alpha_hydraulic_press",
       "y": 270
     },
-    "facing=east,lit=false": {
-      "model": "taloi:block/alpha_hydraulic_press",
-      "y": 90
-    },
-    "facing=north,lit=true": {
-      "model": "taloi:block/alpha_hydraulic_press"
-    },
-    "facing=south,lit=true": {
-      "model": "taloi:block/alpha_hydraulic_press",
-      "y": 180
-    },
     "facing=west,lit=true": {
       "model": "taloi:block/alpha_hydraulic_press",
       "y": 270
-    },
-    "facing=east,lit=true": {
-      "model": "taloi:block/alpha_hydraulic_press",
-      "y": 90
     }
   }
 }

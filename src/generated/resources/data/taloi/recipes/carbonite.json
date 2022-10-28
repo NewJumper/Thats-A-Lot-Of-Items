@@ -1,5 +1,6 @@
 {
   "type": "taloi:constructing",
+  "experience": 0.0,
   "ingredients": [
     {
       "item": "minecraft:blaze_powder"
@@ -10,6 +11,5 @@
   ],
   "result": {
     "item": "taloi:carbonite"
-  },
-  "experience": 0.0
+  }
 }

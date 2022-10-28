@@ -1,5 +1,6 @@
 {
   "type": "taloi:constructing",
+  "experience": 0.0,
   "ingredients": [
     {
       "item": "minecraft:coal"
@@ -10,6 +11,5 @@
   ],
   "result": {
     "item": "taloi:steel_ingot"
-  },
-  "experience": 0.0
+  }
 }

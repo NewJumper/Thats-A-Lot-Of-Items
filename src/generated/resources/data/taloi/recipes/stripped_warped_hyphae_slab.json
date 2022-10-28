@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "HHH"
-  ],
   "key": {
     "H": {
       "item": "minecraft:stripped_warped_hyphae"
     }
   },
+  "pattern": [
+    "HHH"
+  ],
   "result": {
-    "item": "taloi:stripped_warped_hyphae_slab",
-    "count": 6
+    "count": 6,
+    "item": "taloi:stripped_warped_hyphae_slab"
   }
 }

@@ -1,26 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "taloi:tungsten_ingot_from_tungsten_nugget"
-    ]
-  },
   "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "taloi:tungsten_ingot_from_tungsten_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
     "has_tungsten_nugget": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "tag": "forge:nuggets/tungsten"
           }
         ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "taloi:tungsten_ingot_from_tungsten_nugget"
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
@@ -28,5 +23,10 @@
       "has_tungsten_nugget",
       "has_the_recipe"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "taloi:tungsten_ingot_from_tungsten_nugget"
+    ]
+  }
 }

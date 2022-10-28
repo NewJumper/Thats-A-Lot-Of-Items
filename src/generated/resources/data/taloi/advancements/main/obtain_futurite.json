@@ -1,26 +1,7 @@
 {
   "parent": "taloi:main/obtain_sermium",
-  "display": {
-    "icon": {
-      "item": "taloi:futurite"
-    },
-    "title": {
-      "translate": "advancements.taloi.obtain_futurite.title"
-    },
-    "description": {
-      "translate": "advancements.taloi.obtain_futurite.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "rewards": {
-    "experience": 25
-  },
   "criteria": {
     "futurite": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -29,12 +10,31 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.taloi.obtain_futurite.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "taloi:futurite"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.taloi.obtain_futurite.title"
     }
   },
   "requirements": [
     [
       "futurite"
     ]
-  ]
+  ],
+  "rewards": {
+    "experience": 25
+  }
 }

@@ -56,7 +56,7 @@ public abstract class AbstractSeparatorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof AbstractSeparatorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (AbstractSeparatorBlockEntity)blockEntity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (AbstractSeparatorBlockEntity)blockEntity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }

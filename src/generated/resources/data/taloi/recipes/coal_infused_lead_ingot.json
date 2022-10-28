@@ -3,11 +3,11 @@
   "base": {
     "item": "minecraft:coal"
   },
+  "experience": 0.0,
   "ingot": {
     "tag": "forge:raw_materials/lead"
   },
   "result": {
     "item": "taloi:coal_infused_lead_ingot"
-  },
-  "experience": 0.0
+  }
 }

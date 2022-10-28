@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "W  ",
-    "WW ",
-    "WWW"
-  ],
   "key": {
     "W": {
       "item": "minecraft:stripped_birch_wood"
     }
   },
+  "pattern": [
+    "W  ",
+    "WW ",
+    "WWW"
+  ],
   "result": {
-    "item": "taloi:stripped_birch_wood_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:stripped_birch_wood_stairs"
   }
 }

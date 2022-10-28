@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "taloi:slate"
   },
-  "result": "taloi:slate_bricks",
-  "count": 1
+  "result": "taloi:slate_bricks"
 }

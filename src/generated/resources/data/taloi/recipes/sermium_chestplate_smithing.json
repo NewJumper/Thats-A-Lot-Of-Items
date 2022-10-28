@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:netherite_chestplate"
-  },
   "addition": {
     "item": "taloi:sermium_infused_netherite_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_chestplate"
   },
   "result": {
     "item": "taloi:sermium_chestplate"

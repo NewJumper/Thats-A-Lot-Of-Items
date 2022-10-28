@@ -3,11 +3,11 @@
   "base": {
     "item": "minecraft:diamond"
   },
+  "experience": 0.0,
   "ingot": {
     "tag": "forge:ingots/steel"
   },
   "result": {
     "item": "taloi:diamond_infused_steel_ingot"
-  },
-  "experience": 0.0
+  }
 }

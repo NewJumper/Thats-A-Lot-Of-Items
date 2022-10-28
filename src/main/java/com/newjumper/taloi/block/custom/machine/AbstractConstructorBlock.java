@@ -56,7 +56,7 @@ public abstract class AbstractConstructorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof AbstractConstructorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (AbstractConstructorBlockEntity) blockEntity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (AbstractConstructorBlockEntity) blockEntity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }

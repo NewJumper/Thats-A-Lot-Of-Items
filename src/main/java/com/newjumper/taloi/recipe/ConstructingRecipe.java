@@ -2,7 +2,6 @@ package com.newjumper.taloi.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.newjumper.taloi.ThatsALotOfItems;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -11,7 +10,6 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
 public class ConstructingRecipe implements Recipe<SimpleContainer> {
     protected final ResourceLocation id;
@@ -63,7 +61,7 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.CONSTRUCTING.get();
+        return TaloiRecipes.CONSTRUCTING.get();
     }
 
     @Override
@@ -78,7 +76,6 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<ConstructingRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(ThatsALotOfItems.MOD_ID,"constructing");
 
         @Override
         public ConstructingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
@@ -87,7 +84,6 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
             for (int i = 0; i < ingredients.size(); i++) {
                 ingredients.set(i, Ingredient.fromJson(input.get(i)));
             }
-
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
             float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
 
@@ -97,10 +93,7 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
         @Override
         public ConstructingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> ingredients = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
-            for (int i = 0; i < ingredients.size(); i++) {
-                ingredients.set(i, Ingredient.fromNetwork(pBuffer));
-            }
-
+            ingredients.replaceAll(ignored -> Ingredient.fromNetwork(pBuffer));
             ItemStack result = pBuffer.readItem();
             float experience = pBuffer.readFloat();
 
@@ -113,30 +106,8 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
             for (Ingredient ingredient : pRecipe.getIngredients()) {
                 ingredient.toNetwork(pBuffer);
             }
-
             pBuffer.writeItemStack(pRecipe.getResultItem(), false);
             pBuffer.writeFloat(pRecipe.getExperience());
-        }
-
-        @Override
-        public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-            return INSTANCE;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getRegistryName() {
-            return ID;
-        }
-
-        @Override
-        public Class<RecipeSerializer<?>> getRegistryType() {
-            return Serializer.castClass(RecipeSerializer.class);
-        }
-
-        @SuppressWarnings("unchecked")
-        private static <G> Class<G> castClass(Class<?> cls) {
-            return (Class<G>) cls;
         }
     }
 }

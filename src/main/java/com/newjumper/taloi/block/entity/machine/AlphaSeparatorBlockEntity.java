@@ -4,7 +4,6 @@ import com.newjumper.taloi.block.entity.TaloiBlockEntities;
 import com.newjumper.taloi.recipe.SeparatingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class AlphaSeparatorBlockEntity extends AbstractSeparatorBlockEntity {
@@ -15,6 +14,6 @@ public class AlphaSeparatorBlockEntity extends AbstractSeparatorBlockEntity {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("container.taloi.ase");
+        return Component.translatable("container.taloi.ase");
     }
 }

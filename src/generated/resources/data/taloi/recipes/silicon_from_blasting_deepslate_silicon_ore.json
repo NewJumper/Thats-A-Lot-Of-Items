@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
   "ingredient": {
     "item": "taloi:deepslate_silicon_ore"
   },
-  "result": "taloi:silicon",
-  "experience": 0.7,
-  "cookingtime": 100
+  "result": "taloi:silicon"
 }

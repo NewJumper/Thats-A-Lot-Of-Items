@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
   "ingredient": {
     "item": "taloi:lead_ore"
   },
-  "result": "taloi:lead_ingot",
-  "experience": 0.7,
-  "cookingtime": 100
+  "result": "taloi:lead_ingot"
 }

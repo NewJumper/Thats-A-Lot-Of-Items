@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SPS",
-    "SPS"
-  ],
   "key": {
     "P": {
       "item": "taloi:evergreen_planks"
@@ -12,6 +8,10 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "SPS",
+    "SPS"
+  ],
   "result": {
     "item": "taloi:evergreen_fence_gate"
   }

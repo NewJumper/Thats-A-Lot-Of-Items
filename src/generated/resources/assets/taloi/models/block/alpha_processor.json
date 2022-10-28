@@ -2,11 +2,11 @@
   "parent": "minecraft:block/cube",
   "textures": {
     "down": "taloi:block/machine_bottom",
-    "up": "taloi:block/processor_top",
-    "north": "taloi:block/alpha_processor_front",
-    "south": "taloi:block/alpha_machine_back",
     "east": "taloi:block/alpha_processor_right",
-    "west": "taloi:block/alpha_processor_left",
-    "particle": "taloi:block/processor_top"
+    "north": "taloi:block/alpha_processor_front",
+    "particle": "taloi:block/processor_top",
+    "south": "taloi:block/alpha_machine_back",
+    "up": "taloi:block/processor_top",
+    "west": "taloi:block/alpha_processor_left"
   }
 }

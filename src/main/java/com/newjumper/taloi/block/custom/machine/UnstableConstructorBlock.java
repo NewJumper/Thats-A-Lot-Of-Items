@@ -26,7 +26,7 @@ public class UnstableConstructorBlock extends AbstractConstructorBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if(blockEntity instanceof UnstableConstructorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (UnstableConstructorBlockEntity)blockEntity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (UnstableConstructorBlockEntity)blockEntity, pPos);
             } else {
                 throw new IllegalStateException("Container provider missing");
             }

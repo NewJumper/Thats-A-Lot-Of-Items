@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "WWW"
-  ],
   "key": {
     "W": {
       "item": "minecraft:stripped_dark_oak_wood"
     }
   },
+  "pattern": [
+    "WWW"
+  ],
   "result": {
-    "item": "taloi:stripped_dark_oak_wood_slab",
-    "count": 6
+    "count": 6,
+    "item": "taloi:stripped_dark_oak_wood_slab"
   }
 }

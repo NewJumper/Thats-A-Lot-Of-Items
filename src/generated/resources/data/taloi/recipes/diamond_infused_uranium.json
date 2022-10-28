@@ -3,11 +3,11 @@
   "base": {
     "item": "minecraft:diamond"
   },
+  "experience": 0.0,
   "ingot": {
     "tag": "forge:raw_materials/uranium"
   },
   "result": {
     "item": "taloi:diamond_infused_uranium"
-  },
-  "experience": 0.0
+  }
 }

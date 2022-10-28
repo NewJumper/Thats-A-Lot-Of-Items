@@ -1,30 +1,30 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ISI",
-    "TMT",
-    "FBF"
-  ],
   "key": {
+    "B": {
+      "item": "taloi:beta_processor"
+    },
+    "F": {
+      "item": "taloi:forge_plate"
+    },
     "I": {
       "item": "taloi:induction_plate"
+    },
+    "M": {
+      "item": "taloi:unstable_machine_frame"
     },
     "S": {
       "item": "taloi:sermium_plate"
     },
     "T": {
       "item": "taloi:tungsten_plate"
-    },
-    "M": {
-      "item": "taloi:unstable_machine_frame"
-    },
-    "F": {
-      "item": "taloi:forge_plate"
-    },
-    "B": {
-      "item": "taloi:beta_processor"
     }
   },
+  "pattern": [
+    "ISI",
+    "TMT",
+    "FBF"
+  ],
   "result": {
     "item": "taloi:unstable_processor"
   }

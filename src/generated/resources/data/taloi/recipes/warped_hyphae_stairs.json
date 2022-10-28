@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "H  ",
-    "HH ",
-    "HHH"
-  ],
   "key": {
     "H": {
       "item": "minecraft:warped_hyphae"
     }
   },
+  "pattern": [
+    "H  ",
+    "HH ",
+    "HHH"
+  ],
   "result": {
-    "item": "taloi:warped_hyphae_stairs",
-    "count": 4
+    "count": 4,
+    "item": "taloi:warped_hyphae_stairs"
   }
 }

@@ -1,5 +1,6 @@
 {
   "type": "taloi:pressing",
+  "experience": 0.0,
   "ingredients": [
     {
       "item": "taloi:carbonite"
@@ -10,6 +11,5 @@
   ],
   "result": {
     "item": "taloi:carbon_plate"
-  },
-  "experience": 0.0
+  }
 }

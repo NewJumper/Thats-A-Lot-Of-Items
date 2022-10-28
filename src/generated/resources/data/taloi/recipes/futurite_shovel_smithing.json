@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing",
-  "base": {
-    "item": "taloi:sermium_shovel"
-  },
   "addition": {
     "item": "taloi:futurite_infused_netherite_ingot"
+  },
+  "base": {
+    "item": "taloi:sermium_shovel"
   },
   "result": {
     "item": "taloi:futurite_shovel"

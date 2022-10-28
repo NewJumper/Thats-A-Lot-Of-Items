@@ -1,23 +1,6 @@
 {
-  "display": {
-    "icon": {
-      "item": "taloi:slate"
-    },
-    "title": {
-      "translate": "advancements.taloi.root.title"
-    },
-    "description": {
-      "translate": "advancements.taloi.root.description"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "taloi:textures/gui/advancements/backgrounds/taloi.png"
-  },
   "criteria": {
     "evergreen": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -26,10 +9,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "limestone": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -38,10 +21,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "marble": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -50,10 +33,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "slate": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -62,10 +45,10 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "willow": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -74,7 +57,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "taloi:textures/gui/advancements/backgrounds/taloi.png",
+    "description": {
+      "translate": "advancements.taloi.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "taloi:slate"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.taloi.root.title"
     }
   },
   "requirements": [

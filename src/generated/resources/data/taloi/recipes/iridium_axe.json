@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "II",
-    "IS",
-    " S"
-  ],
   "key": {
     "I": {
       "tag": "forge:ingots/iridium"
@@ -13,6 +8,11 @@
       "tag": "forge:rods/wooden"
     }
   },
+  "pattern": [
+    "II",
+    "IS",
+    " S"
+  ],
   "result": {
     "item": "taloi:iridium_axe"
   }
