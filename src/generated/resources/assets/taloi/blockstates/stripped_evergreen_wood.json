@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "taloi:block/stripped_evergreen_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "taloi:block/stripped_evergreen_wood"
+    },
+    "axis=z": {
+      "model": "taloi:block/stripped_evergreen_wood",
+      "x": 90
     }
   }
 }

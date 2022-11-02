@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "taloi:block/evergreen_log"
+    "end": "taloi:block/evergreen_log",
+    "side": "taloi:block/evergreen_log"
   }
 }

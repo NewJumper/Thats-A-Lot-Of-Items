@@ -24,8 +24,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(TaloiBlocks.EVERGREEN_SAPLING.get(), models().cross("evergreen_sapling", blockLoc(TaloiBlocks.EVERGREEN_SAPLING)).renderType("cutout"));
         axisBlock(TaloiBlocks.EVERGREEN_LOG.get(), blockLoc(TaloiBlocks.EVERGREEN_LOG), blockLoc(TaloiBlocks.EVERGREEN_LOG, "top"));
         axisBlock(TaloiBlocks.STRIPPED_EVERGREEN_LOG.get(), blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG), blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG, "top"));
-        simpleBlock(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get(), models().cubeAll("stripped_evergreen_wood", blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG)));
-        simpleBlock(TaloiBlocks.EVERGREEN_WOOD.get(), models().cubeAll("evergreen_wood", blockLoc(TaloiBlocks.EVERGREEN_LOG)));
+        axisBlock(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.get(), models().cubeColumn("stripped_evergreen_wood", blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG), blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG)), models().cubeColumn(TaloiBlocks.STRIPPED_EVERGREEN_WOOD.getId().getPath(), blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG), blockLoc(TaloiBlocks.STRIPPED_EVERGREEN_LOG)));
+        axisBlock(TaloiBlocks.EVERGREEN_WOOD.get(), models().cubeColumn("evergreen_wood", blockLoc(TaloiBlocks.EVERGREEN_LOG), blockLoc(TaloiBlocks.EVERGREEN_LOG)), models().cubeColumn(TaloiBlocks.EVERGREEN_WOOD.getId().getPath(), blockLoc(TaloiBlocks.EVERGREEN_LOG), blockLoc(TaloiBlocks.EVERGREEN_LOG)));
         simpleBlock(TaloiBlocks.EVERGREEN_LEAVES.get(), models().cubeAll("evergreen_leaves", blockLoc(TaloiBlocks.EVERGREEN_LEAVES)).renderType("cutout"));
         slabBlock(TaloiBlocks.EVERGREEN_SLAB.get(), blockLoc(TaloiBlocks.EVERGREEN_PLANKS), blockLoc(TaloiBlocks.EVERGREEN_PLANKS));
         fenceBlock(TaloiBlocks.EVERGREEN_FENCE, blockLoc(TaloiBlocks.EVERGREEN_PLANKS));
@@ -45,8 +45,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(TaloiBlocks.WILLOW_SAPLING.get(), models().cross("willow_sapling", blockLoc(TaloiBlocks.WILLOW_SAPLING)).renderType("cutout"));
         axisBlock(TaloiBlocks.WILLOW_LOG.get(), blockLoc(TaloiBlocks.WILLOW_LOG), blockLoc(TaloiBlocks.WILLOW_LOG, "top"));
         axisBlock(TaloiBlocks.STRIPPED_WILLOW_LOG.get(), blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG), blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG, "top"));
-        simpleBlock(TaloiBlocks.STRIPPED_WILLOW_WOOD.get(), models().cubeAll("stripped_willow_wood", blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG)));
-        simpleBlock(TaloiBlocks.WILLOW_WOOD.get(), models().cubeAll("willow_wood", blockLoc(TaloiBlocks.WILLOW_LOG)));
+        axisBlock(TaloiBlocks.STRIPPED_WILLOW_WOOD.get(), models().cubeColumn("stripped_willow_wood", blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG), blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG)), models().cubeColumn(TaloiBlocks.STRIPPED_WILLOW_WOOD.getId().getPath(), blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG), blockLoc(TaloiBlocks.STRIPPED_WILLOW_LOG)));
+        axisBlock(TaloiBlocks.WILLOW_WOOD.get(), models().cubeColumn("willow_wood", blockLoc(TaloiBlocks.WILLOW_LOG), blockLoc(TaloiBlocks.WILLOW_LOG)), models().cubeColumn(TaloiBlocks.WILLOW_WOOD.getId().getPath(), blockLoc(TaloiBlocks.WILLOW_LOG), blockLoc(TaloiBlocks.WILLOW_LOG)));
         simpleBlock(TaloiBlocks.WILLOW_LEAVES.get(), models().cubeAll("willow_leaves", blockLoc(TaloiBlocks.WILLOW_LEAVES)).renderType("cutout"));
         slabBlock(TaloiBlocks.WILLOW_SLAB.get(), blockLoc(TaloiBlocks.WILLOW_PLANKS), blockLoc(TaloiBlocks.WILLOW_PLANKS));
         fenceBlock(TaloiBlocks.WILLOW_FENCE, blockLoc(TaloiBlocks.WILLOW_PLANKS));

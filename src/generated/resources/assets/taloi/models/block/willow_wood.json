@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "taloi:block/willow_log"
+    "end": "taloi:block/willow_log",
+    "side": "taloi:block/willow_log"
   }
 }
