@@ -31,12 +31,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.EVERGREEN_WOOD);
         blockModel(TaloiBlocks.EVERGREEN_LEAVES);
         blockModel(TaloiBlocks.EVERGREEN_SLAB);
-        withExistingParent("evergreen_fence", modLoc("block/evergreen_fence_inventory"));
+        blockModel(TaloiBlocks.EVERGREEN_FENCE, "inventory");
         blockModel(TaloiBlocks.EVERGREEN_STAIRS);
-        withExistingParent("evergreen_button", modLoc("block/evergreen_button_inventory"));
+        blockModel(TaloiBlocks.EVERGREEN_BUTTON, "inventory");
         blockModel(TaloiBlocks.EVERGREEN_PRESSURE_PLATE);
         getBuilder("evergreen_door").parent(GENERATED).texture("layer0", "item/evergreen_door");
-        withExistingParent("evergreen_trapdoor", modLoc("block/evergreen_trapdoor_bottom"));
+        blockModel(TaloiBlocks.EVERGREEN_TRAPDOOR, "bottom");
         blockModel(TaloiBlocks.EVERGREEN_FENCE_GATE);
         blockModel(TaloiBlocks.EVERGREEN_WOOD_SLAB);
         blockModel(TaloiBlocks.EVERGREEN_WOOD_STAIRS);
@@ -52,12 +52,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.WILLOW_WOOD);
         blockModel(TaloiBlocks.WILLOW_LEAVES);
         blockModel(TaloiBlocks.WILLOW_SLAB);
-        withExistingParent("willow_fence", modLoc("block/willow_fence_inventory"));
+        blockModel(TaloiBlocks.WILLOW_FENCE, "inventory");
         blockModel(TaloiBlocks.WILLOW_STAIRS);
-        withExistingParent("willow_button", modLoc("block/willow_button_inventory"));
+        blockModel(TaloiBlocks.WILLOW_BUTTON, "inventory");
         blockModel(TaloiBlocks.WILLOW_PRESSURE_PLATE);
         getBuilder("willow_door").parent(GENERATED).texture("layer0", "item/willow_door");
-        withExistingParent("willow_trapdoor", modLoc("block/willow_trapdoor_bottom"));
+        blockModel(TaloiBlocks.WILLOW_TRAPDOOR, "bottom");
         blockModel(TaloiBlocks.WILLOW_FENCE_GATE);
         blockModel(TaloiBlocks.WILLOW_WOOD_SLAB);
         blockModel(TaloiBlocks.WILLOW_WOOD_STAIRS);
@@ -85,11 +85,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.SLATE_STAIRS);
         blockModel(TaloiBlocks.SLATE_BRICK_STAIRS);
 
-        withExistingParent("limestone_wall", modLoc("block/limestone_wall_inventory"));
-        withExistingParent("limestone_brick_wall", modLoc("block/limestone_brick_wall_inventory"));
-        withExistingParent("marble_wall", modLoc("block/marble_wall_inventory"));
-        withExistingParent("slate_wall", modLoc("block/slate_wall_inventory"));
-        withExistingParent("slate_brick_wall", modLoc("block/slate_brick_wall_inventory"));
+        blockModel(TaloiBlocks.LIMESTONE_WALL, "inventory");
+        blockModel(TaloiBlocks.LIMESTONE_BRICK_WALL, "inventory");
+        blockModel(TaloiBlocks.MARBLE_WALL, "inventory");
+        blockModel(TaloiBlocks.SLATE_WALL, "inventory");
+        blockModel(TaloiBlocks.SLATE_BRICK_WALL, "inventory");
 
         blockModel(TaloiBlocks.CHISELED_ANDESITE);
         blockModel(TaloiBlocks.CHISELED_DIORITE);
@@ -487,6 +487,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void blockModel(RegistryObject<? extends Block> block) {
         withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath()));
+    }
+
+    public void blockModel(RegistryObject<? extends Block> block, String suffix) {
+        withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_" + suffix));
     }
 
     public void itemModel(RegistryObject<Item> item, ModelFile parent) {
