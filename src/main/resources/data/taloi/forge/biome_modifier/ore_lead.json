@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_lead",
+  "features": "taloi:ore_lead",
   "step": "underground_ores"
 }

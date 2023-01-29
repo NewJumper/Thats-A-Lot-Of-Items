@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_platinum",
+  "features": "taloi:ore_platinum",
   "step": "underground_ores"
 }

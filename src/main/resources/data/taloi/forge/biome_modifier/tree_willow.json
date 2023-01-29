@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "minecraft:meadow",
-  "features": "spacedustry:tree_willow",
+  "features": "taloi:tree_willow",
   "step": "vegetal_decoration"
 }

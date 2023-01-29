@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_uranium_small",
+  "features": "taloi:ore_uranium_small",
   "step": "underground_ores"
 }

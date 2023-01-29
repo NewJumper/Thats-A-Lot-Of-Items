@@ -15,8 +15,8 @@ import java.util.List;
 public class PlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, ThatsALotOfItems.MOD_ID);
 
-    public static final RegistryObject<PlacedFeature> EVERGREEN_PLANT = PlacedFeatures.PLACED_FEATURES.register("evergreen_plant", () -> new PlacedFeature(ConfiguredFeatures.EVERGREEN.getHolder().get(), List.of(PlacementUtils.filteredByBlockSurvival(TaloiBlocks.EVERGREEN_SAPLING.get()))));
-    public static final RegistryObject<PlacedFeature> WILLOW_PLANT = PlacedFeatures.PLACED_FEATURES.register("willow_plant", () -> new PlacedFeature(ConfiguredFeatures.WILLOW.getHolder().get(), List.of(PlacementUtils.filteredByBlockSurvival(TaloiBlocks.WILLOW_SAPLING.get()))));
+    public static final RegistryObject<PlacedFeature> EVERGREEN_PLANT = PLACED_FEATURES.register("evergreen_plant", () -> new PlacedFeature(ConfiguredFeatures.EVERGREEN.getHolder().get(), List.of(PlacementUtils.filteredByBlockSurvival(TaloiBlocks.EVERGREEN_SAPLING.get()))));
+    public static final RegistryObject<PlacedFeature> WILLOW_PLANT = PLACED_FEATURES.register("willow_plant", () -> new PlacedFeature(ConfiguredFeatures.WILLOW.getHolder().get(), List.of(PlacementUtils.filteredByBlockSurvival(TaloiBlocks.WILLOW_SAPLING.get()))));
     public static final RegistryObject<PlacedFeature> TREE_EVERGREEN = PLACED_FEATURES.register("tree_evergreen", () -> new PlacedFeature(ConfiguredFeatures.EVERGREEN_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.2f, 1))));
     public static final RegistryObject<PlacedFeature> TREE_WILLOW = PLACED_FEATURES.register("tree_willow", () -> new PlacedFeature(ConfiguredFeatures.WILLOW_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.5f, 1))));
 

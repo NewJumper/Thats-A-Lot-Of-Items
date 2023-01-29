@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_tin",
+  "features": "taloi:ore_tin",
   "step": "underground_ores"
 }

@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_osmium_buried",
+  "features": "taloi:ore_osmium_buried",
   "step": "underground_ores"
 }

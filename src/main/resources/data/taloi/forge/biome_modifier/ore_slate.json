@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_slate",
+  "features": "taloi:ore_slate",
   "step": "underground_ores"
 }
