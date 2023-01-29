@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/NewJumper/Thats-A-Lot-Of-Items/blob/mc-1.18.x/src/main/resources/logo_blue_white.png" alt="Logo" width="1024"></p>
 <h1 align="center">
-  <a href="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"><img src="https://img.shields.io/badge/Mod Version-1.0.0-54c3d6"></a>
+  <a href="https://www.curseforge.com/minecraft/mc-mods/thats-a-lot-of-items"><img src="https://img.shields.io/badge/Mod Version-1.0.1-54c3d6"></a>
   <a><img src="https://img.shields.io/badge/Minecraft-1.19.2-71c46e"></a>
   <a href="https://files.minecraftforge.net/net/minecraftforge/forge/"><img src="https://img.shields.io/badge/Forge-43.2.0-d68f54"></a>
   <a href="https://discord.gg/vrX8g7PGvg"><img src="https://img.shields.io/discord/631321825439383553?color=4d7591&label=Discord" alt="Discord"></a>

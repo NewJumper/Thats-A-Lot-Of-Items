@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[43,44)"
 license="AGPL-3.0"
 
 [[mods]]
     modId="taloi"
-    version="1.0.0"
+    version="1.0.1"
 
     displayName="That's A Lot Of Items"
     authors="NewJumper"
@@ -14,11 +14,11 @@ license="AGPL-3.0"
 [[dependencies.taloi]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2, 1.20)"
+    versionRange="[1.19.2, 1.19.3)"
     side="BOTH"
 
 [[dependencies.taloi]]
     modId="forge"
     mandatory=true
-    versionRange="[43,)"
+    versionRange="[43,44)"
     side="BOTH"
