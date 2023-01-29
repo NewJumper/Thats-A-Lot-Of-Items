@@ -1,10 +1,10 @@
 package com.newjumper.taloi.datagen.data;
 
 import com.newjumper.taloi.block.TaloiBlocks;
-import com.newjumper.taloi.item.TaloiItems;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 public class ModBlockLootTables extends BlockLoot {
     private static final float[] LEAVES_SAPLING_CHANCES = new float[] { 0.05f, 0.0625f, 0.083333336f, 0.1f };
@@ -105,82 +105,6 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.dropSelf(TaloiBlocks.WOODEN_CRATE.get());
         this.dropSelf(TaloiBlocks.IRON_CRATE.get());
-
-        // METALS
-        this.dropSelf(TaloiBlocks.ALUMINUM_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_ALUMINUM_BLOCK.get());
-        this.add(TaloiBlocks.ALUMINUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.ALUMINUM_ORE.get(), TaloiItems.RAW_ALUMINUM.get()));
-        this.add(TaloiBlocks.DEEPSLATE_ALUMINUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_ALUMINUM_ORE.get(), TaloiItems.RAW_ALUMINUM.get()));
-
-        this.dropSelf(TaloiBlocks.IRIDIUM_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_IRIDIUM_BLOCK.get());
-        this.add(TaloiBlocks.IRIDIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.IRIDIUM_ORE.get(), TaloiItems.RAW_IRIDIUM.get()));
-        this.add(TaloiBlocks.DEEPSLATE_IRIDIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_IRIDIUM_ORE.get(), TaloiItems.RAW_IRIDIUM.get()));
-
-        this.dropSelf(TaloiBlocks.LEAD_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_LEAD_BLOCK.get());
-        this.add(TaloiBlocks.LEAD_ORE.get(), (block) -> createOreDrop(TaloiBlocks.LEAD_ORE.get(), TaloiItems.RAW_LEAD.get()));
-        this.add(TaloiBlocks.DEEPSLATE_LEAD_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_LEAD_ORE.get(), TaloiItems.RAW_LEAD.get()));
-
-        this.dropSelf(TaloiBlocks.MAGNESIUM_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_MAGNESIUM_BLOCK.get());
-        this.add(TaloiBlocks.MAGNESIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.MAGNESIUM_ORE.get(), TaloiItems.RAW_MAGNESIUM.get()));
-        this.add(TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE.get(), TaloiItems.RAW_MAGNESIUM.get()));
-
-        this.dropSelf(TaloiBlocks.OSMIUM_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_OSMIUM_BLOCK.get());
-        this.add(TaloiBlocks.OSMIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.OSMIUM_ORE.get(), TaloiItems.RAW_OSMIUM.get()));
-        this.add(TaloiBlocks.DEEPSLATE_OSMIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_OSMIUM_ORE.get(), TaloiItems.RAW_OSMIUM.get()));
-
-        this.dropSelf(TaloiBlocks.PLATINUM_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_PLATINUM_BLOCK.get());
-        this.add(TaloiBlocks.PLATINUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.PLATINUM_ORE.get(), TaloiItems.RAW_PLATINUM.get()));
-        this.add(TaloiBlocks.DEEPSLATE_PLATINUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_PLATINUM_ORE.get(), TaloiItems.RAW_PLATINUM.get()));
-
-        this.dropSelf(TaloiBlocks.SILICON_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_SILICON_BLOCK.get());
-        this.add(TaloiBlocks.SILICON_ORE.get(), (block) -> createOreDrop(TaloiBlocks.SILICON_ORE.get(), TaloiItems.RAW_SILICON.get()));
-        this.add(TaloiBlocks.DEEPSLATE_SILICON_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_SILICON_ORE.get(), TaloiItems.RAW_SILICON.get()));
-
-        this.dropSelf(TaloiBlocks.TIN_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_TIN_BLOCK.get());
-        this.add(TaloiBlocks.TIN_ORE.get(), (block) -> createOreDrop(TaloiBlocks.TIN_ORE.get(), TaloiItems.RAW_TIN.get()));
-        this.add(TaloiBlocks.DEEPSLATE_TIN_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_TIN_ORE.get(), TaloiItems.RAW_TIN.get()));
-
-        this.dropSelf(TaloiBlocks.TUNGSTEN_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_TUNGSTEN_BLOCK.get());
-        this.add(TaloiBlocks.TUNGSTEN_ORE.get(), (block) -> createOreDrop(TaloiBlocks.TUNGSTEN_ORE.get(), TaloiItems.RAW_TUNGSTEN.get()));
-        this.add(TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), TaloiItems.RAW_TUNGSTEN.get()));
-
-        this.dropSelf(TaloiBlocks.URANIUM_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_URANIUM_BLOCK.get());
-        this.add(TaloiBlocks.URANIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.URANIUM_ORE.get(), TaloiItems.RAW_URANIUM.get()));
-        this.add(TaloiBlocks.DEEPSLATE_URANIUM_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_URANIUM_ORE.get(), TaloiItems.RAW_URANIUM.get()));
-
-        this.dropSelf(TaloiBlocks.ZINC_BLOCK.get());
-        this.dropSelf(TaloiBlocks.RAW_ZINC_BLOCK.get());
-        this.add(TaloiBlocks.ZINC_ORE.get(), (block) -> createOreDrop(TaloiBlocks.ZINC_ORE.get(), TaloiItems.RAW_ZINC.get()));
-        this.add(TaloiBlocks.DEEPSLATE_ZINC_ORE.get(), (block) -> createOreDrop(TaloiBlocks.DEEPSLATE_ZINC_ORE.get(), TaloiItems.RAW_ZINC.get()));
-
-        this.dropSelf(TaloiBlocks.BRONZE_BLOCK.get());
-        this.dropSelf(TaloiBlocks.STEEL_BLOCK.get());
-
-        // MACHINERY
-        this.dropSelf(TaloiBlocks.ALPHA_CONSTRUCTOR.get());
-        this.dropSelf(TaloiBlocks.BETA_CONSTRUCTOR.get());
-        this.dropSelf(TaloiBlocks.UNSTABLE_CONSTRUCTOR.get());
-
-        this.dropSelf(TaloiBlocks.ALPHA_HYDRAULIC_PRESS.get());
-        this.dropSelf(TaloiBlocks.BETA_HYDRAULIC_PRESS.get());
-        this.dropSelf(TaloiBlocks.UNSTABLE_HYDRAULIC_PRESS.get());
-
-        this.dropSelf(TaloiBlocks.ALPHA_PROCESSOR.get());
-        this.dropSelf(TaloiBlocks.BETA_PROCESSOR.get());
-        this.dropSelf(TaloiBlocks.UNSTABLE_PROCESSOR.get());
-
-        this.dropSelf(TaloiBlocks.ALPHA_SEPARATOR.get());
-        this.dropSelf(TaloiBlocks.BETA_SEPARATOR.get());
-        this.dropSelf(TaloiBlocks.UNSTABLE_SEPARATOR.get());
 
         // VANILLA
         this.add(TaloiBlocks.OAK_WOOD_SLAB.get(), BlockLoot::createSlabItemTable);
@@ -291,7 +215,7 @@ public class ModBlockLootTables extends BlockLoot {
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return TaloiBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }

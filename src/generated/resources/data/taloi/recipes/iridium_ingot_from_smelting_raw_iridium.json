@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "cookingtime": 200,
-  "experience": 1.7,
-  "ingredient": {
-    "tag": "forge:raw_materials/iridium"
-  },
-  "result": "taloi:iridium_ingot"
-}

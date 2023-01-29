@@ -10,9 +10,9 @@ import net.minecraftforge.registries.RegistryObject;
 public class TaloiSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ThatsALotOfItems.MOD_ID);
 
-    public static RegistryObject<SoundEvent> THE_CAVES = registerSoundEvent("the_caves");
+    public static RegistryObject<SoundEvent> THE_CAVES = registerSoundEvent();
 
-    private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
-        return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(ThatsALotOfItems.MOD_ID, name)));
+    private static RegistryObject<SoundEvent> registerSoundEvent() {
+        return SOUND_EVENTS.register("the_caves", () -> new SoundEvent(new ResourceLocation(ThatsALotOfItems.MOD_ID, "the_caves")));
     }
 }

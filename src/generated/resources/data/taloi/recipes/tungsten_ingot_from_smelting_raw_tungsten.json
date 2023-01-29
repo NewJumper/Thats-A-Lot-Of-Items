@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "cookingtime": 200,
-  "experience": 2.0,
-  "ingredient": {
-    "tag": "forge:raw_materials/tungsten"
-  },
-  "result": "taloi:tungsten_ingot"
-}

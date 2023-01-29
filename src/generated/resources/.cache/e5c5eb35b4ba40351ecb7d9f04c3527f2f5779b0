@@ -1,13 +1,3 @@
-// 1.19.2	2022-10-25T23:22:46.6202851	Advancements
-6c310e84c86a85c7dbccecce32bc91f42dd905b6 data/taloi/advancements/main/construct_alloy.json
-77bd7c553b0c596bc8c1a8e63398c6b4bc44f192 data/taloi/advancements/main/eat_futurite_apple.json
-deceacaefbae52460d149b41a6fe4f15f2d51195 data/taloi/advancements/main/futurite_armor.json
-e8bd963926f6cf0eb28b8ea5d7d2a58fe323cda8 data/taloi/advancements/main/infuse_ingot.json
-37dee79f758bd0ce822bf11b1d3a271855f547c1 data/taloi/advancements/main/machinery.json
-307997cd0330421619d227e9658b72455cb0d192 data/taloi/advancements/main/obtain_futurite.json
-83bf26af84a65ecdc96f09e64a0ed71ff24cb009 data/taloi/advancements/main/obtain_sermium.json
-41c918e58da5bbcd45525f99df3e8a08cfbcc838 data/taloi/advancements/main/press_material.json
-b9519267be905cf65301bfaecd6ab3629e6cc5a7 data/taloi/advancements/main/radioactive.json
+// 1.19.2	2023-01-29T16:36:58.8002133	Advancements
 1d7501328e86da1cb165d9d1b14cf084aaed9014 data/taloi/advancements/main/root.json
-f6828a46e67e599a63dd2f9a43ee4a6ec29d3ebb data/taloi/advancements/main/sermium_armor.json
 c47be4b575e1a5c7b51c1ac892cb49f10dcdc7dd data/taloi/advancements/main/shiny.json

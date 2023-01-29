@@ -117,69 +117,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.WOODEN_CRATE);
         blockModel(TaloiBlocks.IRON_CRATE);
 
-        // METALS
-        blockModel(TaloiBlocks.ALUMINUM_BLOCK);
-        blockModel(TaloiBlocks.ALUMINUM_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_ALUMINUM_ORE);
-        blockModel(TaloiBlocks.RAW_ALUMINUM_BLOCK);
-        blockModel(TaloiBlocks.IRIDIUM_BLOCK);
-        blockModel(TaloiBlocks.IRIDIUM_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_IRIDIUM_ORE);
-        blockModel(TaloiBlocks.RAW_IRIDIUM_BLOCK);
-        blockModel(TaloiBlocks.LEAD_BLOCK);
-        blockModel(TaloiBlocks.LEAD_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_LEAD_ORE);
-        blockModel(TaloiBlocks.RAW_LEAD_BLOCK);
-        blockModel(TaloiBlocks.MAGNESIUM_BLOCK);
-        blockModel(TaloiBlocks.MAGNESIUM_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_MAGNESIUM_ORE);
-        blockModel(TaloiBlocks.RAW_MAGNESIUM_BLOCK);
-        blockModel(TaloiBlocks.OSMIUM_BLOCK);
-        blockModel(TaloiBlocks.OSMIUM_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_OSMIUM_ORE);
-        blockModel(TaloiBlocks.RAW_OSMIUM_BLOCK);
-        blockModel(TaloiBlocks.PLATINUM_BLOCK);
-        blockModel(TaloiBlocks.PLATINUM_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_PLATINUM_ORE);
-        blockModel(TaloiBlocks.RAW_PLATINUM_BLOCK);
-        blockModel(TaloiBlocks.SILICON_BLOCK);
-        blockModel(TaloiBlocks.SILICON_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_SILICON_ORE);
-        blockModel(TaloiBlocks.RAW_SILICON_BLOCK);
-        blockModel(TaloiBlocks.TIN_BLOCK);
-        blockModel(TaloiBlocks.TIN_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_TIN_ORE);
-        blockModel(TaloiBlocks.RAW_TIN_BLOCK);
-        blockModel(TaloiBlocks.TUNGSTEN_BLOCK);
-        blockModel(TaloiBlocks.TUNGSTEN_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_TUNGSTEN_ORE);
-        blockModel(TaloiBlocks.RAW_TUNGSTEN_BLOCK);
-        blockModel(TaloiBlocks.URANIUM_BLOCK);
-        blockModel(TaloiBlocks.URANIUM_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_URANIUM_ORE);
-        blockModel(TaloiBlocks.RAW_URANIUM_BLOCK);
-        blockModel(TaloiBlocks.ZINC_BLOCK);
-        blockModel(TaloiBlocks.ZINC_ORE);
-        blockModel(TaloiBlocks.DEEPSLATE_ZINC_ORE);
-        blockModel(TaloiBlocks.RAW_ZINC_BLOCK);
-
-        blockModel(TaloiBlocks.BRONZE_BLOCK);
-        blockModel(TaloiBlocks.STEEL_BLOCK);
-
-        // MACHINERY
-        blockModel(TaloiBlocks.ALPHA_CONSTRUCTOR);
-        blockModel(TaloiBlocks.BETA_CONSTRUCTOR);
-        blockModel(TaloiBlocks.UNSTABLE_CONSTRUCTOR);
-        blockModel(TaloiBlocks.ALPHA_HYDRAULIC_PRESS);
-        blockModel(TaloiBlocks.BETA_HYDRAULIC_PRESS);
-        blockModel(TaloiBlocks.UNSTABLE_HYDRAULIC_PRESS);
-        blockModel(TaloiBlocks.ALPHA_PROCESSOR);
-        blockModel(TaloiBlocks.BETA_PROCESSOR);
-        blockModel(TaloiBlocks.UNSTABLE_PROCESSOR);
-        blockModel(TaloiBlocks.ALPHA_SEPARATOR);
-        blockModel(TaloiBlocks.BETA_SEPARATOR);
-        blockModel(TaloiBlocks.UNSTABLE_SEPARATOR);
-
         // VANILLA
         blockModel(TaloiBlocks.OAK_WOOD_SLAB);
         blockModel(TaloiBlocks.OAK_WOOD_STAIRS);
@@ -288,131 +225,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.SPEEDY_BLOCK);
 
         // - ITEMS -
-        // RAW & INGOTS
-        itemModel(TaloiItems.ALUMINUM_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_ALUMINUM, GENERATED);
-        itemModel(TaloiItems.IRIDIUM_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_IRIDIUM, GENERATED);
-        itemModel(TaloiItems.LEAD_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_LEAD, GENERATED);
-        itemModel(TaloiItems.MAGNESIUM_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_MAGNESIUM, GENERATED);
-        itemModel(TaloiItems.OSMIUM_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_OSMIUM, GENERATED);
-        itemModel(TaloiItems.PLATINUM_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_PLATINUM, GENERATED);
-        itemModel(TaloiItems.SILICON, GENERATED);
-        itemModel(TaloiItems.RAW_SILICON, GENERATED);
-        itemModel(TaloiItems.TIN_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_TIN, GENERATED);
-        itemModel(TaloiItems.TUNGSTEN_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_TUNGSTEN, GENERATED);
-        itemModel(TaloiItems.REFINED_URANIUM, GENERATED);
-        itemModel(TaloiItems.RAW_URANIUM, GENERATED);
-        itemModel(TaloiItems.ZINC_INGOT, GENERATED);
-        itemModel(TaloiItems.RAW_ZINC, GENERATED);
-
-        // MACHINERY
-        itemModel(TaloiItems.ALPHA_MACHINE_FRAME, GENERATED);
-        itemModel(TaloiItems.BETA_MACHINE_FRAME, GENERATED);
-        itemModel(TaloiItems.UNSTABLE_MACHINE_FRAME, GENERATED);
-
-        // CONSTRUCTING
-        itemModel(TaloiItems.BRONZE_INGOT, GENERATED);
-        itemModel(TaloiItems.CARBONITE, GENERATED);
-        itemModel(TaloiItems.FERRONIOBIUM_INGOT, GENERATED);
-        itemModel(TaloiItems.FUTURITE, GENERATED);
-        itemModel(TaloiItems.HARDENED_CARBONITE, GENERATED);
-        itemModel(TaloiItems.SERMIUM, GENERATED);
-        itemModel(TaloiItems.STEEL_INGOT, GENERATED);
-        itemModel(TaloiItems.ALLOY_X, GENERATED);
-        itemModel(TaloiItems.ALLOY_Z, GENERATED);
-
-        // PRESSING
-        itemModel(TaloiItems.ALLOY_PLATE, GENERATED);
-        itemModel(TaloiItems.BRONZE_PLATE, GENERATED);
-        itemModel(TaloiItems.CARBON_PLATE, GENERATED);
-        itemModel(TaloiItems.COPPER_PLATE, GENERATED);
-        itemModel(TaloiItems.DIAMOND_PLATE, GENERATED);
-        itemModel(TaloiItems.FORGE_PLATE, GENERATED);
-        itemModel(TaloiItems.FUTURITE_PLATE, GENERATED);
-        itemModel(TaloiItems.GOLD_DISK, GENERATED);
-        itemModel(TaloiItems.INDUCTION_PLATE, GENERATED);
-        itemModel(TaloiItems.MAGNESIUM_PLATE, GENERATED);
-        itemModel(TaloiItems.REINFORCED_COPPER_PLATE, GENERATED);
-        itemModel(TaloiItems.SEMICONDUCTOR_PLATE, GENERATED);
-        itemModel(TaloiItems.SERMIUM_PLATE, GENERATED);
-        itemModel(TaloiItems.SILICON_PLATE, GENERATED);
-        itemModel(TaloiItems.STEEL_PLATE, GENERATED);
-        itemModel(TaloiItems.TUNGSTEN_PLATE, GENERATED);
-
-        // PROCESSING
-        itemModel(TaloiItems.COAL_INFUSED_IRON_INGOT, GENERATED);
-        itemModel(TaloiItems.COAL_INFUSED_LEAD_INGOT, GENERATED);
-        itemModel(TaloiItems.DIAMOND_INFUSED_STEEL_INGOT, GENERATED);
-        itemModel(TaloiItems.DIAMOND_INFUSED_TIN_INGOT, GENERATED);
-        itemModel(TaloiItems.DIAMOND_INFUSED_URANIUM, GENERATED);
-        itemModel(TaloiItems.EMERALD_INFUSED_OSMIUM_INGOT, GENERATED);
-        itemModel(TaloiItems.EMERALD_INFUSED_TUNGSTEN_INGOT, GENERATED);
-        itemModel(TaloiItems.EMERALD_INFUSED_ZINC_INGOT, GENERATED);
-        itemModel(TaloiItems.FUTURITE_INFUSED_NETHERITE_INGOT, GENERATED);
-        itemModel(TaloiItems.SERMIUM_INFUSED_NETHERITE_INGOT, GENERATED);
-        itemModel(TaloiItems.SERMIUM_CORE, GENERATED);
-        itemModel(TaloiItems.SERMIUM_OXIDE, GENERATED);
-
-        // NUGGETS
-        itemModel(TaloiItems.ALUMINUM_NUGGET, GENERATED);
-        itemModel(TaloiItems.IRIDIUM_NUGGET, GENERATED);
-        itemModel(TaloiItems.LEAD_NUGGET, GENERATED);
-        itemModel(TaloiItems.MAGNESIUM_NUGGET, GENERATED);
-        itemModel(TaloiItems.OSMIUM_NUGGET, GENERATED);
-        itemModel(TaloiItems.PLATINUM_NUGGET, GENERATED);
-        itemModel(TaloiItems.TIN_NUGGET, GENERATED);
-        itemModel(TaloiItems.TUNGSTEN_NUGGET, GENERATED);
-        itemModel(TaloiItems.URANIUM_BIT, GENERATED);
-        itemModel(TaloiItems.ZINC_NUGGET, GENERATED);
-        itemModel(TaloiItems.FUTURITE_BIT, GENERATED);
-
         // ARMOR
         itemModel(TaloiItems.EMERALD_HELMET, GENERATED);
         itemModel(TaloiItems.EMERALD_CHESTPLATE, GENERATED);
         itemModel(TaloiItems.EMERALD_LEGGINGS, GENERATED);
         itemModel(TaloiItems.EMERALD_BOOTS, GENERATED);
 
-        itemModel(TaloiItems.IRIDIUM_HELMET, GENERATED);
-        itemModel(TaloiItems.IRIDIUM_CHESTPLATE, GENERATED);
-        itemModel(TaloiItems.IRIDIUM_LEGGINGS, GENERATED);
-        itemModel(TaloiItems.IRIDIUM_BOOTS, GENERATED);
-
         itemModel(TaloiItems.LAPIS_HELMET, GENERATED);
         itemModel(TaloiItems.LAPIS_CHESTPLATE, GENERATED);
         itemModel(TaloiItems.LAPIS_LEGGINGS, GENERATED);
         itemModel(TaloiItems.LAPIS_BOOTS, GENERATED);
-
-        itemModel(TaloiItems.OSMIUM_HELMET, GENERATED);
-        itemModel(TaloiItems.OSMIUM_CHESTPLATE, GENERATED);
-        itemModel(TaloiItems.OSMIUM_LEGGINGS, GENERATED);
-        itemModel(TaloiItems.OSMIUM_BOOTS, GENERATED);
-
-        itemModel(TaloiItems.PLATINUM_HELMET, GENERATED);
-        itemModel(TaloiItems.PLATINUM_CHESTPLATE, GENERATED);
-        itemModel(TaloiItems.PLATINUM_LEGGINGS, GENERATED);
-        itemModel(TaloiItems.PLATINUM_BOOTS, GENERATED);
-
-        itemModel(TaloiItems.TUNGSTEN_HELMET, GENERATED);
-        itemModel(TaloiItems.TUNGSTEN_CHESTPLATE, GENERATED);
-        itemModel(TaloiItems.TUNGSTEN_LEGGINGS, GENERATED);
-        itemModel(TaloiItems.TUNGSTEN_BOOTS, GENERATED);
-
-        itemModel(TaloiItems.FUTURITE_HELMET, GENERATED);
-        itemModel(TaloiItems.FUTURITE_CHESTPLATE, GENERATED);
-        itemModel(TaloiItems.FUTURITE_LEGGINGS, GENERATED);
-        itemModel(TaloiItems.FUTURITE_BOOTS, GENERATED);
-
-        itemModel(TaloiItems.SERMIUM_HELMET, GENERATED);
-        itemModel(TaloiItems.SERMIUM_CHESTPLATE, GENERATED);
-        itemModel(TaloiItems.SERMIUM_LEGGINGS, GENERATED);
-        itemModel(TaloiItems.SERMIUM_BOOTS, GENERATED);
 
         // TOOLS
         itemModel(TaloiItems.EMERALD_SHOVEL, HANDHELD);
@@ -420,48 +242,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         itemModel(TaloiItems.EMERALD_AXE, HANDHELD);
         itemModel(TaloiItems.EMERALD_HOE, HANDHELD);
 
-        itemModel(TaloiItems.IRIDIUM_SHOVEL, HANDHELD);
-        itemModel(TaloiItems.IRIDIUM_PICKAXE, HANDHELD);
-        itemModel(TaloiItems.IRIDIUM_AXE, HANDHELD);
-        itemModel(TaloiItems.IRIDIUM_HOE, HANDHELD);
-
         itemModel(TaloiItems.LAPIS_SHOVEL, HANDHELD);
         itemModel(TaloiItems.LAPIS_PICKAXE, HANDHELD);
         itemModel(TaloiItems.LAPIS_AXE, HANDHELD);
         itemModel(TaloiItems.LAPIS_HOE, HANDHELD);
 
-        itemModel(TaloiItems.OSMIUM_SHOVEL, HANDHELD);
-        itemModel(TaloiItems.OSMIUM_PICKAXE, HANDHELD);
-        itemModel(TaloiItems.OSMIUM_AXE, HANDHELD);
-        itemModel(TaloiItems.OSMIUM_HOE, HANDHELD);
-
-        itemModel(TaloiItems.PLATINUM_SHOVEL, HANDHELD);
-        itemModel(TaloiItems.PLATINUM_PICKAXE, HANDHELD);
-        itemModel(TaloiItems.PLATINUM_AXE, HANDHELD);
-        itemModel(TaloiItems.PLATINUM_HOE, HANDHELD);
-
-        itemModel(TaloiItems.TUNGSTEN_SHOVEL, HANDHELD);
-        itemModel(TaloiItems.TUNGSTEN_PICKAXE, HANDHELD);
-        itemModel(TaloiItems.TUNGSTEN_AXE, HANDHELD);
-        itemModel(TaloiItems.TUNGSTEN_HOE, HANDHELD);
-
-        itemModel(TaloiItems.FUTURITE_SHOVEL, HANDHELD);
-        itemModel(TaloiItems.FUTURITE_PICKAXE, HANDHELD);
-        itemModel(TaloiItems.FUTURITE_AXE, HANDHELD);
-
-        itemModel(TaloiItems.SERMIUM_SHOVEL, HANDHELD);
-        itemModel(TaloiItems.SERMIUM_PICKAXE, HANDHELD);
-        itemModel(TaloiItems.SERMIUM_AXE, HANDHELD);
-
         // WEAPONS
         itemModel(TaloiItems.EMERALD_SWORD, HANDHELD);
-        itemModel(TaloiItems.IRIDIUM_SWORD, HANDHELD);
         itemModel(TaloiItems.LAPIS_SWORD, HANDHELD);
-        itemModel(TaloiItems.OSMIUM_SWORD, HANDHELD);
-        itemModel(TaloiItems.PLATINUM_SWORD, HANDHELD);
-        itemModel(TaloiItems.TUNGSTEN_SWORD, HANDHELD);
-        itemModel(TaloiItems.FUTURITE_SWORD, HANDHELD);
-        itemModel(TaloiItems.SERMIUM_SWORD, HANDHELD);
         getBuilder("netherite_bow_pulling_0").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_0");
         getBuilder("netherite_bow_pulling_1").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_1");
         getBuilder("netherite_bow_pulling_2").parent(getExistingFile(modLoc("item/netherite_bow"))).texture("layer0", "item/netherite_bow_pulling_2");
@@ -475,9 +263,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         itemModel(TaloiItems.APPLE_PIE, GENERATED);
         itemModel(TaloiItems.BLUEBERRIES, GENERATED);
         itemModel(TaloiItems.BLUEBERRY_PIE, GENERATED);
-        itemModel(TaloiItems.DESTABILIZED_FUTURITE_APPLE, GENERATED);
         itemModel(TaloiItems.DIAMOND_APPLE, GENERATED);
-        itemModel(TaloiItems.FUTURITE_APPLE, GENERATED);
         itemModel(TaloiItems.RICE_BOWL, GENERATED);
         itemModel(TaloiItems.SWEET_BERRY_PIE, GENERATED);
         itemModel(TaloiItems.TOMATO, GENERATED);

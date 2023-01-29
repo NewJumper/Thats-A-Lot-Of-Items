@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
@@ -19,7 +20,7 @@ public class StonecuttingRecipesProvider extends RecipeProvider implements ICond
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(TaloiBlocks.LIMESTONE.get()), TaloiBlocks.CHISELED_LIMESTONE_BRICKS.get(), 1).unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "chiseled_limestone_bricks_from_limestone_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(TaloiBlocks.LIMESTONE.get()), TaloiBlocks.LIMESTONE_SLAB.get(), 1).unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "limestone_slab_from_limestone_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(TaloiBlocks.LIMESTONE.get()), TaloiBlocks.LIMESTONE_STAIRS.get(), 1).unlockedBy("has_material", has(TaloiBlocks.LIMESTONE.get())).save(consumer, new ResourceLocation(ThatsALotOfItems.MOD_ID, "limestone_stairs_from_limestone_stonecutting"));
@@ -126,7 +127,7 @@ public class StonecuttingRecipesProvider extends RecipeProvider implements ICond
     }
 
     @Override
-    public String getName() {
+    public @NotNull String getName() {
         return "Stonecutting Recipes";
     }
 }

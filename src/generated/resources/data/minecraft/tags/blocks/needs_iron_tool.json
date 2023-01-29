@@ -1,19 +1,5 @@
 {
   "values": [
-    "taloi:deepslate_magnesium_ore",
-    "taloi:magnesium_block",
-    "taloi:magnesium_ore",
-    "taloi:raw_magnesium_block",
-    "taloi:platinum_block",
-    "taloi:raw_platinum_block",
-    "taloi:uranium_block",
-    "taloi:raw_uranium_block",
-    "taloi:deepslate_silicon_ore",
-    "taloi:silicon_block",
-    "taloi:silicon_ore",
-    "taloi:raw_silicon_block",
-    "taloi:bronze_block",
-    "taloi:steel_block",
     "taloi:reinforced_iron_block",
     "taloi:rusted_reinforced_iron_block"
   ]

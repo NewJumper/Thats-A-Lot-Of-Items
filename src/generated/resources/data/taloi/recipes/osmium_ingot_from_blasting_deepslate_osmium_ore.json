@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "cookingtime": 100,
-  "experience": 1.7,
-  "ingredient": {
-    "item": "taloi:deepslate_osmium_ore"
-  },
-  "result": "taloi:osmium_ingot"
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "taloi:item/futurite_infused_netherite_ingot"
-  }
-}

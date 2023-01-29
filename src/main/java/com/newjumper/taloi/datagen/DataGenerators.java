@@ -9,7 +9,9 @@ import com.newjumper.taloi.datagen.data.ModAdvancementsProvider;
 import com.newjumper.taloi.datagen.data.ModBlockTagsProvider;
 import com.newjumper.taloi.datagen.data.ModItemTagsProvider;
 import com.newjumper.taloi.datagen.data.ModLootTableProvider;
-import com.newjumper.taloi.datagen.data.recipes.*;
+import com.newjumper.taloi.datagen.data.recipes.CraftingRecipesProvider;
+import com.newjumper.taloi.datagen.data.recipes.SmithingRecipesProvider;
+import com.newjumper.taloi.datagen.data.recipes.StonecuttingRecipesProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -33,14 +35,8 @@ public class DataGenerators {
 
         // data
         generator.addProvider(event.includeServer(), new CraftingRecipesProvider(generator));
-        generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(generator));
         generator.addProvider(event.includeServer(), new SmithingRecipesProvider(generator));
         generator.addProvider(event.includeServer(), new StonecuttingRecipesProvider(generator));
-
-        generator.addProvider(event.includeServer(), new ConstructingRecipesProvider(generator));
-        generator.addProvider(event.includeServer(), new PressingRecipesProvider(generator));
-        generator.addProvider(event.includeServer(), new ProcessingRecipesProvider(generator));
-        generator.addProvider(event.includeServer(), new SeparatingRecipesProvider(generator));
 
         ModBlockTagsProvider blockTags = new ModBlockTagsProvider(generator, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);

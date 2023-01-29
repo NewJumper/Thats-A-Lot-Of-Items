@@ -1,24 +1,18 @@
 package com.newjumper.taloi.item;
 
-import com.newjumper.taloi.util.TaloiTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
 public enum TaloiTiers implements Tier {
     EMERALD(0, 64, 13f, 0f, 22,Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(Tags.Items.GEMS_EMERALD)),
-    LAPIS(1, 168, 4f, 1f, 6, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Tags.Items.GEMS_LAPIS)),
-    PLATINUM(4, 2031, 9, 4f, 15, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(TaloiTags.Items.INGOTS_PLATINUM)),
-    IRIDIUM(4, 2521, 11f, 4f, 16, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(TaloiTags.Items.INGOTS_IRIDIUM)),
-    OSMIUM(4, 2521, 11f, 4f, 16, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(TaloiTags.Items.INGOTS_OSMIUM)),
-    TUNGSTEN(5, 3249, 12f, 5f, 18, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(TaloiTags.Items.INGOTS_TUNGSTEN)),
-    SERMIUM(6, 4096, 14f, 6f, 19, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(TaloiItems.SERMIUM.get())),
-    FUTURITE(7, 4622, 15f, 7f, 20, Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(TaloiItems.FUTURITE.get()));
+    LAPIS(1, 168, 4f, 1f, 6, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Tags.Items.GEMS_LAPIS));
 
     private final int level;
     private final int uses;
@@ -63,7 +57,7 @@ public enum TaloiTiers implements Tier {
         return this.tag;
     }
     @Override
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
 }
