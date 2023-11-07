@@ -26,10 +26,10 @@ public class ThatsALotOfItems {
     public ThatsALotOfItems() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        TaloiCreativeTab.CREATIVE_MODE_TABS.register(eventBus);
         TaloiBlocks.BLOCKS.register(eventBus);
         TaloiBlocks.ITEMS.register(eventBus);
         TaloiPaintings.PAINTINGS.register(eventBus);
+        TaloiCreativeTab.CREATIVE_MODE_TABS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         eventBus.addListener(TaloiCreativeTab::buildCreativeTab);

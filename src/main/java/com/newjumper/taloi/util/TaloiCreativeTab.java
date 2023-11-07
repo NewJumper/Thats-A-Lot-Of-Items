@@ -15,8 +15,6 @@ public class TaloiCreativeTab {
     public static final RegistryObject<CreativeModeTab> DEEPER_DARKER = CREATIVE_MODE_TABS.register("deeper_darker", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup." + ThatsALotOfItems.MOD_ID)).icon(() -> new ItemStack(TaloiBlocks.OAK_WOOD_STAIRS.get())).build());
 
     public static void buildCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTab() == DEEPER_DARKER.get()) {
-            TaloiBlocks.BLOCKS.getEntries().forEach(event::accept);
-        }
+        if(event.getTab() == DEEPER_DARKER.get()) TaloiBlocks.BLOCKS.getEntries().forEach(event::accept);
     }
 }
