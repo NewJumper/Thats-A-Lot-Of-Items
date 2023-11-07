@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "C": {
+    "#": {
       "item": "minecraft:brown_concrete"
     }
   },
   "pattern": [
-    "CCC"
+    "###"
   ],
   "result": {
     "count": 6,
     "item": "taloi:brown_concrete_slab"
-  }
+  },
+  "show_notification": true
 }

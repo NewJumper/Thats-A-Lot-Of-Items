@@ -1,10 +1,5 @@
 {
   "values": [
-    "taloi:limestone_stairs",
-    "taloi:limestone_brick_stairs",
-    "taloi:marble_stairs",
-    "taloi:slate_stairs",
-    "taloi:slate_brick_stairs",
     "#taloi:concrete_stairs",
     "#taloi:terracotta_stairs"
   ]

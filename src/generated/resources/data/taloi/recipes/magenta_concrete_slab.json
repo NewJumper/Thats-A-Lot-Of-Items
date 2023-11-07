@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "C": {
+    "#": {
       "item": "minecraft:magenta_concrete"
     }
   },
   "pattern": [
-    "CCC"
+    "###"
   ],
   "result": {
     "count": 6,
     "item": "taloi:magenta_concrete_slab"
-  }
+  },
+  "show_notification": true
 }

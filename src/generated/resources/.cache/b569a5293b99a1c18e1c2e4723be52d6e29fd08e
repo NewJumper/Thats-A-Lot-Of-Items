@@ -1,0 +1,11 @@
+// 1.20.1	2023-11-06T19:57:44.5702213	Tags for minecraft:block mod id taloi
+8c42bc881cd5bc0654d4c0b823abbe9e3ca12900 data/minecraft/tags/blocks/logs_that_burn.json
+be14982f10e685846c9fa9dace42e6017746b8d2 data/minecraft/tags/blocks/mineable/axe.json
+7e2b58acb2c4537b5689ef7adff5c523b07ac7d0 data/minecraft/tags/blocks/slabs.json
+af024bcb67ca45dd82b5316f0ec4cfad86159f19 data/minecraft/tags/blocks/stairs.json
+12498567a9db764964cb6a24e97b1ccfaf4cfe9e data/minecraft/tags/blocks/wooden_slabs.json
+b1ae346fd2310dd697c7b1c06c38417886b0b64a data/minecraft/tags/blocks/wooden_stairs.json
+5f51aad5996b10eace146879ae265fcf826f17a5 data/taloi/tags/blocks/concrete_slabs.json
+61328059dfb130ff79ac8000637414a2aa9b250d data/taloi/tags/blocks/concrete_stairs.json
+23d16976a94040ac330c086004c05f726683d2be data/taloi/tags/blocks/terracotta_slabs.json
+b0ac9873012e6fa1efac22d4b57c1bb6421d2bff data/taloi/tags/blocks/terracotta_stairs.json

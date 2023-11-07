@@ -1,8 +1,5 @@
 {
   "values": [
-    "taloi:bamboo_planks",
-    "taloi:bundled_bamboo",
-    "taloi:wooden_crate",
     "taloi:oak_wood_slab",
     "taloi:spruce_wood_slab",
     "taloi:birch_wood_slab",
@@ -11,8 +8,6 @@
     "taloi:dark_oak_wood_slab",
     "taloi:crimson_hyphae_slab",
     "taloi:warped_hyphae_slab",
-    "taloi:evergreen_wood_slab",
-    "taloi:willow_wood_slab",
     "taloi:oak_wood_stairs",
     "taloi:spruce_wood_stairs",
     "taloi:birch_wood_stairs",
@@ -21,8 +16,6 @@
     "taloi:dark_oak_wood_stairs",
     "taloi:crimson_hyphae_stairs",
     "taloi:warped_hyphae_stairs",
-    "taloi:evergreen_wood_stairs",
-    "taloi:willow_wood_stairs",
     "taloi:stripped_oak_wood_slab",
     "taloi:stripped_spruce_wood_slab",
     "taloi:stripped_birch_wood_slab",
@@ -31,8 +24,6 @@
     "taloi:stripped_dark_oak_wood_slab",
     "taloi:stripped_crimson_hyphae_slab",
     "taloi:stripped_warped_hyphae_slab",
-    "taloi:stripped_evergreen_wood_slab",
-    "taloi:stripped_willow_wood_slab",
     "taloi:stripped_oak_wood_stairs",
     "taloi:stripped_spruce_wood_stairs",
     "taloi:stripped_birch_wood_stairs",
@@ -40,8 +31,6 @@
     "taloi:stripped_acacia_wood_stairs",
     "taloi:stripped_dark_oak_wood_stairs",
     "taloi:stripped_crimson_hyphae_stairs",
-    "taloi:stripped_warped_hyphae_stairs",
-    "taloi:stripped_evergreen_wood_stairs",
-    "taloi:stripped_willow_wood_stairs"
+    "taloi:stripped_warped_hyphae_stairs"
   ]
 }

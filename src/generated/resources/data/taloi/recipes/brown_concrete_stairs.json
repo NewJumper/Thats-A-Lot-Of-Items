@@ -1,17 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "C": {
+    "#": {
       "item": "minecraft:brown_concrete"
     }
   },
   "pattern": [
-    "C  ",
-    "CC ",
-    "CCC"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,
     "item": "taloi:brown_concrete_stairs"
-  }
+  },
+  "show_notification": true
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "taloi:block/stripped_willow_log_top",
-    "side": "taloi:block/stripped_willow_log"
-  }
-}

@@ -1,17 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "W": {
+    "#": {
       "item": "minecraft:jungle_wood"
     }
   },
   "pattern": [
-    "W  ",
-    "WW ",
-    "WWW"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,
     "item": "taloi:jungle_wood_stairs"
-  }
+  },
+  "show_notification": true
 }

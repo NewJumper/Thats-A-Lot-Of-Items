@@ -1,24 +1,26 @@
 modLoader="javafml"
-loaderVersion="[43,44)"
-license="AGPL-3.0"
+loaderVersion="${forge_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/NewJumper/Thats-A-Lot-Of-Items/issues"
 
 [[mods]]
-    modId="taloi"
-    version="1.1.0"
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
+    logoFile="banner.png"
+    authors="${mod_authors}"
+    description='''${mod_description}'''
 
-    displayName="That's A Lot Of Items"
-    authors="NewJumper"
-    logoFile="logo_blue_white.png"
-    description='''A mod that features a bunch of random content dumped into a block game.'''
-
-[[dependencies.taloi]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2, 1.19.3)"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
     side="BOTH"
 
-[[dependencies.taloi]]
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
-    versionRange="[43,44)"
+    versionRange="${forge_version_range}"
+    ordering="NONE"
     side="BOTH"

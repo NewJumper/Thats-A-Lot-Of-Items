@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:meadow",
-  "features": "taloi:tree_willow",
-  "step": "vegetal_decoration"
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "taloi:slate_bricks"
-  },
-  "result": "taloi:slate_brick_stairs"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "taloi:block/slate",
-    "side": "taloi:block/slate",
-    "top": "taloi:block/slate"
-  }
-}

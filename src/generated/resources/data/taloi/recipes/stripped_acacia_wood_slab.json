@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "W": {
+    "#": {
       "item": "minecraft:stripped_acacia_wood"
     }
   },
   "pattern": [
-    "WWW"
+    "###"
   ],
   "result": {
     "count": 6,
     "item": "taloi:stripped_acacia_wood_slab"
-  }
+  },
+  "show_notification": true
 }

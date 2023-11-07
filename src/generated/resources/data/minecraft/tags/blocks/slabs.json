@@ -1,10 +1,5 @@
 {
   "values": [
-    "taloi:limestone_slab",
-    "taloi:limestone_brick_slab",
-    "taloi:marble_slab",
-    "taloi:slate_slab",
-    "taloi:slate_brick_slab",
     "#taloi:concrete_slabs",
     "#taloi:terracotta_slabs"
   ]

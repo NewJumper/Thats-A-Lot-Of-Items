@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "taloi:block/stripped_willow_log",
-    "side": "taloi:block/stripped_willow_log",
-    "top": "taloi:block/stripped_willow_log"
-  }
-}

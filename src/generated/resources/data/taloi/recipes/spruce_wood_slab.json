@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "W": {
+    "#": {
       "item": "minecraft:spruce_wood"
     }
   },
   "pattern": [
-    "WWW"
+    "###"
   ],
   "result": {
     "count": 6,
     "item": "taloi:spruce_wood_slab"
-  }
+  },
+  "show_notification": true
 }

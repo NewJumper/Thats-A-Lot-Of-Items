@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:snowy_plains",
-  "features": "taloi:tree_evergreen",
-  "step": "vegetal_decoration"
-}

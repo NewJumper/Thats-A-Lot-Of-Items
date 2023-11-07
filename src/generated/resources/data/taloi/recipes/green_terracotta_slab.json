@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "T": {
+    "#": {
       "item": "minecraft:green_terracotta"
     }
   },
   "pattern": [
-    "TTT"
+    "###"
   ],
   "result": {
     "count": 6,
     "item": "taloi:green_terracotta_slab"
-  }
+  },
+  "show_notification": true
 }

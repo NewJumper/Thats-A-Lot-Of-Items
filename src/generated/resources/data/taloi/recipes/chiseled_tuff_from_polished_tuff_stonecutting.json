@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "taloi:polished_tuff"
-  },
-  "result": "taloi:chiseled_tuff"
-}

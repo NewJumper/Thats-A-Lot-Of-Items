@@ -1,6 +1,0 @@
-{
-  "parent": "taloi:item/netherite_bow",
-  "textures": {
-    "layer0": "taloi:item/netherite_bow_pulling_2"
-  }
-}
