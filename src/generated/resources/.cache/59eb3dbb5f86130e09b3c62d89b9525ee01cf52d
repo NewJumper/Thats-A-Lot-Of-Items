@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-06T19:57:44.5591189	Loot Tables
+// 1.20.1	2023-11-06T21:58:36.4369861	Loot Tables
 72b7290fa1fba9baec0b5fcaf42f48d8e780722f data/taloi/loot_tables/blocks/acacia_wood_slab.json
 22839fc885f64ed50c678c3fbf4af97d8390db85 data/taloi/loot_tables/blocks/acacia_wood_stairs.json
 9bcac72e5ae10a6193dbf70e124cd0d68c0d0149 data/taloi/loot_tables/blocks/birch_wood_slab.json
@@ -15,6 +15,8 @@ de20d1c442bbf8eecaf4b01b3eef9594224636c6 data/taloi/loot_tables/blocks/blue_terr
 d0d8b19bb4f65a832ca6993da97bfa4dbda1dc9b data/taloi/loot_tables/blocks/brown_concrete_stairs.json
 8509b2d17300e9bbfca3af7b9000f6f9faccb703 data/taloi/loot_tables/blocks/brown_terracotta_slab.json
 ec484472a3f126b3f268e80e0c963524c6a7497b data/taloi/loot_tables/blocks/brown_terracotta_stairs.json
+234be008ed32273aed52bde5845a1d4082f2e95b data/taloi/loot_tables/blocks/cherry_wood_slab.json
+e956ba83eea92231d042f0d3852476c229b12933 data/taloi/loot_tables/blocks/cherry_wood_stairs.json
 92c6126d254652ce008ab54ccfdd15848b2afa2c data/taloi/loot_tables/blocks/crimson_hyphae_slab.json
 c6698f267a443c81bd1d4a2e294cd36bf2ca1d49 data/taloi/loot_tables/blocks/crimson_hyphae_stairs.json
 e583ddc2d568ad5de17f6767825839a6e2218cb6 data/taloi/loot_tables/blocks/cyan_concrete_slab.json
@@ -49,6 +51,8 @@ b656c402aa4e0dbefea67d1151961ba0a4e34dea data/taloi/loot_tables/blocks/light_gra
 7813b42d9fde52f3324a1a5b0832ba909a82e9ca data/taloi/loot_tables/blocks/magenta_concrete_stairs.json
 4e682734b5cf1555b065be15823d9232f8b5d0f2 data/taloi/loot_tables/blocks/magenta_terracotta_slab.json
 19713e7197424a38cafdea1fe98ff59a71802eb5 data/taloi/loot_tables/blocks/magenta_terracotta_stairs.json
+fba0f35dcad34bf9de922ac299d00854a83a9a4c data/taloi/loot_tables/blocks/mangrove_wood_slab.json
+41a39b10c05d5af07ccdb709722d889642a44332 data/taloi/loot_tables/blocks/mangrove_wood_stairs.json
 fc9457167b4cd5a68fb1a5590aad2132e5ecdf72 data/taloi/loot_tables/blocks/oak_wood_slab.json
 544747a2b17db9214c48928fb917d6c80b902d15 data/taloi/loot_tables/blocks/oak_wood_stairs.json
 444cf6f40f860fac177f78f7700a400b02a02ff4 data/taloi/loot_tables/blocks/orange_concrete_slab.json

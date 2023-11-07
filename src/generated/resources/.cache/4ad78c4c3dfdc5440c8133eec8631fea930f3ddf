@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-06T19:57:44.5561181	Item Models: taloi
+// 1.20.1	2023-11-06T21:58:36.4339872	Item Models: taloi
 8f9bb9ae24840e4beb06d9e19c2d588ac1edba2d assets/taloi/models/item/acacia_wood_slab.json
 51a161fe529e9dcc2b1f332b04016fdfee2bd750 assets/taloi/models/item/acacia_wood_stairs.json
 ca3c7cac645a0e2de649438c98cafbb92585dceb assets/taloi/models/item/birch_wood_slab.json
@@ -15,6 +15,8 @@ ac4779e3d9400116b6cd5a6fc21e8948fe89f3d9 assets/taloi/models/item/blue_concrete_
 2e0b92b6aaefe4c17586a429995d1525bd9451ad assets/taloi/models/item/brown_concrete_stairs.json
 53b5a6cb14333c9ccbc4dd14f808c0196facf9b6 assets/taloi/models/item/brown_terracotta_slab.json
 7a27afded59222cc1b89b706f101f59bb87e0684 assets/taloi/models/item/brown_terracotta_stairs.json
+a1f952fb179d67efeef83ee0ffda11ffd84e8d35 assets/taloi/models/item/cherry_wood_slab.json
+d5e01f747e805ae509f530337d38ba7ba200f080 assets/taloi/models/item/cherry_wood_stairs.json
 b20af6ea77c23b8862beb9f4fa89d2fed2a0f6b5 assets/taloi/models/item/crimson_hyphae_slab.json
 f98216d731779a0b58b958717668ea8c1742878c assets/taloi/models/item/crimson_hyphae_stairs.json
 0d9770965a883372ddc152fd6bac0062d16e86a1 assets/taloi/models/item/cyan_concrete_slab.json
@@ -49,6 +51,8 @@ bd1a0a4794d9d9e36d27b4233e22b7aa23e64583 assets/taloi/models/item/lime_terracott
 df0398419479200875e8e57ec451d8acee0c06a7 assets/taloi/models/item/magenta_concrete_stairs.json
 d24e8dd78536560aad0067e2e75574d31bf92128 assets/taloi/models/item/magenta_terracotta_slab.json
 cf5eaa7db01525f6b056fb85cb2ce553c623c413 assets/taloi/models/item/magenta_terracotta_stairs.json
+52ae06f21de191ef5ea2e26cb4e4be9538ac50c5 assets/taloi/models/item/mangrove_wood_slab.json
+5f148d66c7c5619616accf5c4ff0b8b13139ee2f assets/taloi/models/item/mangrove_wood_stairs.json
 d2fdc09b18efc2ac175267282021bfa29cceeace assets/taloi/models/item/oak_wood_slab.json
 9ef2445a2f33678b7ea7dfb279c42cea210fcf9e assets/taloi/models/item/oak_wood_stairs.json
 1360d05c3d4fcdcc86212bb2369d2e8a54fdbe20 assets/taloi/models/item/orange_concrete_slab.json

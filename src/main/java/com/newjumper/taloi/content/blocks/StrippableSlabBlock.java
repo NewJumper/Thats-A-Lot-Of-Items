@@ -21,6 +21,8 @@ public class StrippableSlabBlock extends SlabBlock {
             if(state.is(TaloiBlocks.JUNGLE_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_JUNGLE_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.ACACIA_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_ACACIA_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.DARK_OAK_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get().withPropertiesOf(state);
+//            if(state.is(TaloiBlocks.MANGROVE_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_MANGROVE_WOOD_SLAB.get().withPropertiesOf(state);
+//            if(state.is(TaloiBlocks.CHERRY_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_CHERRY_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.CRIMSON_HYPHAE_SLAB.get())) return TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.WARPED_HYPHAE_SLAB.get())) return TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get().withPropertiesOf(state);
         }

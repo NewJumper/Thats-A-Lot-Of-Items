@@ -38,6 +38,10 @@ public class TaloiRecipesProvider extends RecipeProvider implements IConditionBu
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.ACACIA_WOOD_SLAB.get(), Blocks.ACACIA_WOOD);
         stairRecipe(TaloiBlocks.DARK_OAK_WOOD_STAIRS, Blocks.DARK_OAK_WOOD, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.DARK_OAK_WOOD_SLAB.get(), Blocks.DARK_OAK_WOOD);
+        stairRecipe(TaloiBlocks.MANGROVE_WOOD_STAIRS, Blocks.MANGROVE_WOOD, pWriter);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.MANGROVE_WOOD_SLAB.get(), Blocks.MANGROVE_WOOD);
+        stairRecipe(TaloiBlocks.CHERRY_WOOD_STAIRS, Blocks.CHERRY_WOOD, pWriter);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.CHERRY_WOOD_SLAB.get(), Blocks.CHERRY_WOOD);
         stairRecipe(TaloiBlocks.CRIMSON_HYPHAE_STAIRS, Blocks.CRIMSON_HYPHAE, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.CRIMSON_HYPHAE_SLAB.get(), Blocks.CRIMSON_HYPHAE);
         stairRecipe(TaloiBlocks.WARPED_HYPHAE_STAIRS, Blocks.WARPED_HYPHAE, pWriter);
@@ -55,7 +59,11 @@ public class TaloiRecipesProvider extends RecipeProvider implements IConditionBu
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), Blocks.STRIPPED_ACACIA_WOOD);
         stairRecipe(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS, Blocks.STRIPPED_DARK_OAK_WOOD, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), Blocks.STRIPPED_DARK_OAK_WOOD);
-        stairRecipe(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS, Blocks.STRIPPED_CRIMSON_HYPHAE, pWriter);
+        /*stairRecipe(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS, Blocks.STRIPPED_MANGROVE_WOOD, pWriter);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_MANGROVE_WOOD_SLAB.get(), Blocks.STRIPPED_MANGROVE_WOOD);
+        stairRecipe(TaloiBlocks.STRIPPED_CHERRY_WOOD_STAIRS, Blocks.STRIPPED_CHERRY_WOOD, pWriter);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_CHERRY_WOOD_SLAB.get(), Blocks.STRIPPED_CHERRY_WOOD);
+        */stairRecipe(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS, Blocks.STRIPPED_CRIMSON_HYPHAE, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), Blocks.STRIPPED_CRIMSON_HYPHAE);
         stairRecipe(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS, Blocks.STRIPPED_WARPED_HYPHAE, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), Blocks.STRIPPED_WARPED_HYPHAE);

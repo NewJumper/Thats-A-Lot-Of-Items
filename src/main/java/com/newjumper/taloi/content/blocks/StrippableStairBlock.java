@@ -23,6 +23,8 @@ public class StrippableStairBlock extends StairBlock {
             if(state.is(TaloiBlocks.JUNGLE_WOOD_STAIRS.get())) return TaloiBlocks.STRIPPED_JUNGLE_WOOD_STAIRS.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.ACACIA_WOOD_STAIRS.get())) return TaloiBlocks.STRIPPED_ACACIA_WOOD_STAIRS.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.DARK_OAK_WOOD_STAIRS.get())) return TaloiBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get().withPropertiesOf(state);
+//            if(state.is(TaloiBlocks.MANGROVE_WOOD_STAIRS.get())) return TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS.get().withPropertiesOf(state);
+//            if(state.is(TaloiBlocks.CHERRY_WOOD_STAIRS.get())) return TaloiBlocks.STRIPPED_CHERRY_WOOD_STAIRS.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.CRIMSON_HYPHAE_STAIRS.get())) return TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.WARPED_HYPHAE_STAIRS.get())) return TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get().withPropertiesOf(state);
         }
