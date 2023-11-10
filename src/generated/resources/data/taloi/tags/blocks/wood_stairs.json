@@ -8,6 +8,8 @@
     "taloi:dark_oak_wood_stairs",
     "taloi:mangrove_wood_stairs",
     "taloi:cherry_wood_stairs",
+    "taloi:crimson_hyphae_stairs",
+    "taloi:warped_hyphae_stairs",
     "taloi:stripped_oak_wood_stairs",
     "taloi:stripped_spruce_wood_stairs",
     "taloi:stripped_birch_wood_stairs",
@@ -15,6 +17,8 @@
     "taloi:stripped_acacia_wood_stairs",
     "taloi:stripped_dark_oak_wood_stairs",
     "taloi:stripped_mangrove_wood_stairs",
-    "taloi:stripped_cherry_wood_stairs"
+    "taloi:stripped_cherry_wood_stairs",
+    "taloi:stripped_crimson_hyphae_stairs",
+    "taloi:stripped_warped_hyphae_stairs"
   ]
 }

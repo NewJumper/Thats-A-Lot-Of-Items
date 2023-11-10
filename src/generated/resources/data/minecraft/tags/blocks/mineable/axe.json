@@ -2,13 +2,7 @@
   "values": [
     "#taloi:wood_stairs",
     "#taloi:wood_slabs",
-    "taloi:crimson_hyphae_stairs",
-    "taloi:warped_hyphae_stairs",
-    "taloi:crimson_hyphae_slab",
-    "taloi:warped_hyphae_slab",
-    "taloi:stripped_crimson_hyphae_stairs",
-    "taloi:stripped_warped_hyphae_stairs",
-    "taloi:stripped_crimson_hyphae_slab",
-    "taloi:stripped_warped_hyphae_slab"
+    "#taloi:wood_fences",
+    "#taloi:wood_gates"
   ]
 }

@@ -65,6 +65,48 @@ public class BlockLootTables extends BlockLootSubProvider {
         this.dropSelf(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get());
         this.add(TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), this::createSlabItemTable);
 
+        this.dropSelf(TaloiBlocks.OAK_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.OAK_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.SPRUCE_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.SPRUCE_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.BIRCH_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.BIRCH_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.JUNGLE_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.JUNGLE_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.ACACIA_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.ACACIA_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.DARK_OAK_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.DARK_OAK_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.MANGROVE_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.MANGROVE_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.CHERRY_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.CHERRY_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.CRIMSON_HYPHAE_FENCE.get());
+        this.dropSelf(TaloiBlocks.CRIMSON_HYPHAE_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.WARPED_HYPHAE_FENCE.get());
+        this.dropSelf(TaloiBlocks.WARPED_HYPHAE_FENCE_GATE.get());
+
+        this.dropSelf(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE_GATE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE_GATE.get());
+
         this.dropSelf(TaloiBlocks.WHITE_TERRACOTTA_STAIRS.get());
         this.add(TaloiBlocks.WHITE_TERRACOTTA_SLAB.get(), this::createSlabItemTable);
         this.dropSelf(TaloiBlocks.ORANGE_TERRACOTTA_STAIRS.get());

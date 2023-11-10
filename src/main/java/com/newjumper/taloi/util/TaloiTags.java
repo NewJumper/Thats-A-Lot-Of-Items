@@ -12,6 +12,8 @@ public class TaloiTags {
     public static class Blocks {
         public static final TagKey<Block> WOOD_STAIRS = tag("wood_stairs");
         public static final TagKey<Block> WOOD_SLABS = tag("wood_slabs");
+        public static final TagKey<Block> WOOD_FENCES = tag("wood_fences");
+        public static final TagKey<Block> WOOD_FENCE_GATES = tag("wood_gates");
         public static final TagKey<Block> TERRACOTTA_STAIRS = tag("terracotta_stairs");
         public static final TagKey<Block> TERRACOTTA_SLABS = tag("terracotta_slabs");
         public static final TagKey<Block> CONCRETE_STAIRS = tag("concrete_stairs");
@@ -25,6 +27,8 @@ public class TaloiTags {
     public static class Items {
         public static final TagKey<Item> WOOD_STAIRS = tag("wood_stairs");
         public static final TagKey<Item> WOOD_SLABS = tag("wood_slabs");
+        public static final TagKey<Item> WOOD_FENCES = tag("wood_fences");
+        public static final TagKey<Item> WOOD_FENCE_GATES = tag("wood_gates");
         public static final TagKey<Item> TERRACOTTA_STAIRS = tag("terracotta_stairs");
         public static final TagKey<Item> TERRACOTTA_SLABS = tag("terracotta_slabs");
         public static final TagKey<Item> CONCRETE_STAIRS = tag("concrete_stairs");

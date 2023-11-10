@@ -8,6 +8,8 @@
     "taloi:dark_oak_wood_slab",
     "taloi:mangrove_wood_slab",
     "taloi:cherry_wood_slab",
+    "taloi:crimson_hyphae_slab",
+    "taloi:warped_hyphae_slab",
     "taloi:stripped_oak_wood_slab",
     "taloi:stripped_spruce_wood_slab",
     "taloi:stripped_birch_wood_slab",
@@ -15,6 +17,8 @@
     "taloi:stripped_acacia_wood_slab",
     "taloi:stripped_dark_oak_wood_slab",
     "taloi:stripped_mangrove_wood_slab",
-    "taloi:stripped_cherry_wood_slab"
+    "taloi:stripped_cherry_wood_slab",
+    "taloi:stripped_crimson_hyphae_slab",
+    "taloi:stripped_warped_hyphae_slab"
   ]
 }

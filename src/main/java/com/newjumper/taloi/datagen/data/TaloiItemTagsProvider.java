@@ -21,14 +21,17 @@ public class TaloiItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
-        copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
         copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
         copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+        copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
+        copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
         copy(BlockTags.STAIRS, ItemTags.STAIRS);
         copy(BlockTags.SLABS, ItemTags.SLABS);
 
         copy(TaloiTags.Blocks.WOOD_STAIRS, TaloiTags.Items.WOOD_STAIRS);
         copy(TaloiTags.Blocks.WOOD_SLABS, TaloiTags.Items.WOOD_SLABS);
+        copy(TaloiTags.Blocks.WOOD_FENCES, TaloiTags.Items.WOOD_FENCES);
+        copy(TaloiTags.Blocks.WOOD_FENCE_GATES, TaloiTags.Items.WOOD_FENCE_GATES);
         copy(TaloiTags.Blocks.CONCRETE_STAIRS, TaloiTags.Items.CONCRETE_STAIRS);
         copy(TaloiTags.Blocks.CONCRETE_SLABS, TaloiTags.Items.CONCRETE_SLABS);
         copy(TaloiTags.Blocks.TERRACOTTA_STAIRS, TaloiTags.Items.TERRACOTTA_STAIRS);

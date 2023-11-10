@@ -11,6 +11,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.RegistryObject;
@@ -67,6 +69,48 @@ public class TaloiRecipesProvider extends RecipeProvider implements IConditionBu
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), Blocks.STRIPPED_CRIMSON_HYPHAE);
         stairRecipe(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS, Blocks.STRIPPED_WARPED_HYPHAE, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), Blocks.STRIPPED_WARPED_HYPHAE);
+
+        fenceRecipe(TaloiBlocks.OAK_WOOD_FENCE, Blocks.OAK_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.OAK_WOOD_FENCE_GATE, Blocks.OAK_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.SPRUCE_WOOD_FENCE, Blocks.SPRUCE_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.SPRUCE_WOOD_FENCE_GATE, Blocks.SPRUCE_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.BIRCH_WOOD_FENCE, Blocks.BIRCH_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.BIRCH_WOOD_FENCE_GATE, Blocks.BIRCH_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.JUNGLE_WOOD_FENCE, Blocks.JUNGLE_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.JUNGLE_WOOD_FENCE_GATE, Blocks.JUNGLE_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.ACACIA_WOOD_FENCE, Blocks.ACACIA_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.ACACIA_WOOD_FENCE_GATE, Blocks.ACACIA_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.DARK_OAK_WOOD_FENCE, Blocks.DARK_OAK_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.DARK_OAK_WOOD_FENCE_GATE, Blocks.DARK_OAK_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.MANGROVE_WOOD_FENCE, Blocks.MANGROVE_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.MANGROVE_WOOD_FENCE_GATE, Blocks.MANGROVE_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.CHERRY_WOOD_FENCE, Blocks.CHERRY_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.CHERRY_WOOD_FENCE_GATE, Blocks.CHERRY_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.CRIMSON_HYPHAE_FENCE, Blocks.CRIMSON_HYPHAE, pWriter);
+        fenceGateRecipe(TaloiBlocks.CRIMSON_HYPHAE_FENCE_GATE, Blocks.CRIMSON_HYPHAE, pWriter);
+        fenceRecipe(TaloiBlocks.WARPED_HYPHAE_FENCE, Blocks.WARPED_HYPHAE, pWriter);
+        fenceGateRecipe(TaloiBlocks.WARPED_HYPHAE_FENCE_GATE, Blocks.WARPED_HYPHAE, pWriter);
+
+        fenceRecipe(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE, Blocks.STRIPPED_OAK_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE_GATE, Blocks.STRIPPED_OAK_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE, Blocks.STRIPPED_SPRUCE_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE_GATE, Blocks.STRIPPED_SPRUCE_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE, Blocks.STRIPPED_BIRCH_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE_GATE, Blocks.STRIPPED_BIRCH_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE, Blocks.STRIPPED_JUNGLE_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE_GATE, Blocks.STRIPPED_JUNGLE_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE, Blocks.STRIPPED_ACACIA_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE_GATE, Blocks.STRIPPED_ACACIA_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE, Blocks.STRIPPED_DARK_OAK_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE_GATE, Blocks.STRIPPED_DARK_OAK_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE, Blocks.STRIPPED_MANGROVE_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE_GATE, Blocks.STRIPPED_MANGROVE_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE, Blocks.STRIPPED_CHERRY_WOOD, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE_GATE, Blocks.STRIPPED_CHERRY_WOOD, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE, Blocks.STRIPPED_CRIMSON_HYPHAE, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE_GATE, Blocks.STRIPPED_CRIMSON_HYPHAE, pWriter);
+        fenceRecipe(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE, Blocks.STRIPPED_WARPED_HYPHAE, pWriter);
+        fenceGateRecipe(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE_GATE, Blocks.STRIPPED_WARPED_HYPHAE, pWriter);
 
         stairRecipe(TaloiBlocks.WHITE_TERRACOTTA_STAIRS, Blocks.WHITE_TERRACOTTA, pWriter);
         slab(pWriter, RecipeCategory.BUILDING_BLOCKS, TaloiBlocks.WHITE_TERRACOTTA_SLAB.get(), Blocks.WHITE_TERRACOTTA);
@@ -199,10 +243,20 @@ public class TaloiRecipesProvider extends RecipeProvider implements IConditionBu
         stonecuttingRecipe(pWriter, Blocks.RED_CONCRETE, TaloiBlocks.RED_CONCRETE_SLAB.get(), 2);
         stonecuttingRecipe(pWriter, Blocks.BLACK_CONCRETE, TaloiBlocks.BLACK_CONCRETE_STAIRS.get(), 1);
         stonecuttingRecipe(pWriter, Blocks.BLACK_CONCRETE, TaloiBlocks.BLACK_CONCRETE_SLAB.get(), 2);
+
+
     }
 
     private static void stairRecipe(RegistryObject<StairBlock> stairs, ItemLike ingredient, Consumer<FinishedRecipe> writer) {
         stairBuilder(stairs.get(), Ingredient.of(ingredient)).unlockedBy(getHasName(ingredient), has(ingredient)).save(writer);
+    }
+
+    private static void fenceRecipe(RegistryObject<FenceBlock> fence, ItemLike ingredient, Consumer<FinishedRecipe> writer) {
+        fenceBuilder(fence.get(), Ingredient.of(ingredient)).unlockedBy(getHasName(ingredient), has(ingredient)).save(writer);
+    }
+
+    private static void fenceGateRecipe(RegistryObject<FenceGateBlock> fenceGate, ItemLike ingredient, Consumer<FinishedRecipe> writer) {
+        fenceGateBuilder(fenceGate.get(), Ingredient.of(ingredient)).unlockedBy(getHasName(ingredient), has(ingredient)).save(writer);
     }
 
     private void stonecuttingRecipe(Consumer<FinishedRecipe> writer, ItemLike ingredient, ItemLike result, int count) {

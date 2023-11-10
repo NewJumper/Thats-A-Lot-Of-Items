@@ -14,7 +14,7 @@ public class StrippableSlabBlock extends SlabBlock {
 
     @Override
     public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-        if(toolAction.equals(ToolActions.AXE_STRIP)) {
+        if(toolAction == ToolActions.AXE_STRIP) {
             if(state.is(TaloiBlocks.OAK_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_OAK_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.SPRUCE_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_SPRUCE_WOOD_SLAB.get().withPropertiesOf(state);
             if(state.is(TaloiBlocks.BIRCH_WOOD_SLAB.get())) return TaloiBlocks.STRIPPED_BIRCH_WOOD_SLAB.get().withPropertiesOf(state);

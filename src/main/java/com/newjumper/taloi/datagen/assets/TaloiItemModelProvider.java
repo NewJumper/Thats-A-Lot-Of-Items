@@ -57,6 +57,48 @@ public class TaloiItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS);
         blockModel(TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB);
 
+        blockModel(TaloiBlocks.OAK_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.OAK_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.SPRUCE_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.SPRUCE_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.BIRCH_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.BIRCH_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.JUNGLE_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.JUNGLE_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.ACACIA_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.ACACIA_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.DARK_OAK_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.DARK_OAK_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.MANGROVE_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.MANGROVE_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.CHERRY_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.CHERRY_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.CRIMSON_HYPHAE_FENCE, "inventory");
+        blockModel(TaloiBlocks.CRIMSON_HYPHAE_FENCE_GATE);
+        blockModel(TaloiBlocks.WARPED_HYPHAE_FENCE, "inventory");
+        blockModel(TaloiBlocks.WARPED_HYPHAE_FENCE_GATE);
+
+        blockModel(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE_GATE);
+        blockModel(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE, "inventory");
+        blockModel(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE_GATE);
+
         blockModel(TaloiBlocks.WHITE_TERRACOTTA_STAIRS);
         blockModel(TaloiBlocks.WHITE_TERRACOTTA_SLAB);
         blockModel(TaloiBlocks.ORANGE_TERRACOTTA_STAIRS);
@@ -126,5 +168,9 @@ public class TaloiItemModelProvider extends ItemModelProvider {
 
     public void blockModel(RegistryObject<? extends Block> block) {
         withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath()));
+    }
+
+    public void blockModel(RegistryObject<? extends Block> block, String suffix) {
+        withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath() + "_" + suffix));
     }
 }

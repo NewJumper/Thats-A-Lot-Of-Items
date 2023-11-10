@@ -6,9 +6,11 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FenceBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Objects;
 
@@ -60,6 +62,48 @@ public class TaloiBlockStateProvider extends BlockStateProvider {
         slabBlock(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), mcLoc(Blocks.STRIPPED_CRIMSON_HYPHAE), mcLoc(Blocks.STRIPPED_CRIMSON_STEM));
         stairsBlock(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get(), mcLoc(Blocks.STRIPPED_WARPED_STEM));
         slabBlock(TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), mcLoc(Blocks.STRIPPED_WARPED_HYPHAE), mcLoc(Blocks.STRIPPED_WARPED_STEM));
+
+        fenceBlock(TaloiBlocks.OAK_WOOD_FENCE, mcLoc(Blocks.OAK_LOG));
+        fenceGateBlock(TaloiBlocks.OAK_WOOD_FENCE_GATE.get(), mcLoc(Blocks.OAK_LOG));
+        fenceBlock(TaloiBlocks.SPRUCE_WOOD_FENCE, mcLoc(Blocks.SPRUCE_LOG));
+        fenceGateBlock(TaloiBlocks.SPRUCE_WOOD_FENCE_GATE.get(), mcLoc(Blocks.SPRUCE_LOG));
+        fenceBlock(TaloiBlocks.BIRCH_WOOD_FENCE, mcLoc(Blocks.BIRCH_LOG));
+        fenceGateBlock(TaloiBlocks.BIRCH_WOOD_FENCE_GATE.get(), mcLoc(Blocks.BIRCH_LOG));
+        fenceBlock(TaloiBlocks.JUNGLE_WOOD_FENCE, mcLoc(Blocks.JUNGLE_LOG));
+        fenceGateBlock(TaloiBlocks.JUNGLE_WOOD_FENCE_GATE.get(), mcLoc(Blocks.JUNGLE_LOG));
+        fenceBlock(TaloiBlocks.ACACIA_WOOD_FENCE, mcLoc(Blocks.ACACIA_LOG));
+        fenceGateBlock(TaloiBlocks.ACACIA_WOOD_FENCE_GATE.get(), mcLoc(Blocks.ACACIA_LOG));
+        fenceBlock(TaloiBlocks.DARK_OAK_WOOD_FENCE, mcLoc(Blocks.DARK_OAK_LOG));
+        fenceGateBlock(TaloiBlocks.DARK_OAK_WOOD_FENCE_GATE.get(), mcLoc(Blocks.DARK_OAK_LOG));
+        fenceBlock(TaloiBlocks.MANGROVE_WOOD_FENCE, mcLoc(Blocks.MANGROVE_LOG));
+        fenceGateBlock(TaloiBlocks.MANGROVE_WOOD_FENCE_GATE.get(), mcLoc(Blocks.MANGROVE_LOG));
+        fenceBlock(TaloiBlocks.CHERRY_WOOD_FENCE, mcLoc(Blocks.CHERRY_LOG));
+        fenceGateBlock(TaloiBlocks.CHERRY_WOOD_FENCE_GATE.get(), mcLoc(Blocks.CHERRY_LOG));
+        fenceBlock(TaloiBlocks.CRIMSON_HYPHAE_FENCE, mcLoc(Blocks.CRIMSON_STEM));
+        fenceGateBlock(TaloiBlocks.CRIMSON_HYPHAE_FENCE_GATE.get(), mcLoc(Blocks.CRIMSON_STEM));
+        fenceBlock(TaloiBlocks.WARPED_HYPHAE_FENCE, mcLoc(Blocks.WARPED_STEM));
+        fenceGateBlock(TaloiBlocks.WARPED_HYPHAE_FENCE_GATE.get(), mcLoc(Blocks.WARPED_STEM));
+
+        fenceBlock(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE, mcLoc(Blocks.STRIPPED_OAK_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_OAK_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_OAK_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE, mcLoc(Blocks.STRIPPED_SPRUCE_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_SPRUCE_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_SPRUCE_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE, mcLoc(Blocks.STRIPPED_BIRCH_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_BIRCH_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_BIRCH_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE, mcLoc(Blocks.STRIPPED_JUNGLE_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_JUNGLE_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_JUNGLE_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE, mcLoc(Blocks.STRIPPED_ACACIA_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_ACACIA_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_ACACIA_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE, mcLoc(Blocks.STRIPPED_DARK_OAK_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_DARK_OAK_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE, mcLoc(Blocks.STRIPPED_MANGROVE_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_MANGROVE_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_MANGROVE_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE, mcLoc(Blocks.STRIPPED_CHERRY_LOG));
+        fenceGateBlock(TaloiBlocks.STRIPPED_CHERRY_WOOD_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_CHERRY_LOG));
+        fenceBlock(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE, mcLoc(Blocks.STRIPPED_CRIMSON_STEM));
+        fenceGateBlock(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_CRIMSON_STEM));
+        fenceBlock(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE, mcLoc(Blocks.STRIPPED_WARPED_STEM));
+        fenceGateBlock(TaloiBlocks.STRIPPED_WARPED_HYPHAE_FENCE_GATE.get(), mcLoc(Blocks.STRIPPED_WARPED_STEM));
 
         stairsBlock(TaloiBlocks.WHITE_TERRACOTTA_STAIRS.get(), mcLoc(Blocks.WHITE_TERRACOTTA));
         slabBlock(TaloiBlocks.WHITE_TERRACOTTA_SLAB.get(), mcLoc(Blocks.WHITE_TERRACOTTA), mcLoc(Blocks.WHITE_TERRACOTTA));
@@ -126,6 +170,11 @@ public class TaloiBlockStateProvider extends BlockStateProvider {
         slabBlock(TaloiBlocks.RED_CONCRETE_SLAB.get(), mcLoc(Blocks.RED_CONCRETE), mcLoc(Blocks.RED_CONCRETE));
         stairsBlock(TaloiBlocks.BLACK_CONCRETE_STAIRS.get(), mcLoc(Blocks.BLACK_CONCRETE));
         slabBlock(TaloiBlocks.BLACK_CONCRETE_SLAB.get(), mcLoc(Blocks.BLACK_CONCRETE), mcLoc(Blocks.BLACK_CONCRETE));
+    }
+
+    private void fenceBlock(RegistryObject<FenceBlock> block, ResourceLocation texture) {
+        super.fenceBlock(block.get(), texture);
+        models().fenceInventory(block.getId().getPath() + "_inventory", texture);
     }
 
     public ResourceLocation mcLoc(Block block) {
