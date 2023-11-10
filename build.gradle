@@ -69,9 +69,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-
-    compileOnly fg.deobf("mcjty.theoneprobe:theoneprobe:${top_version}:api") { transitive = false }
-    runtimeOnly fg.deobf("mcjty.theoneprobe:theoneprobe:${top_version}") { transitive = false }
 }
 
 tasks.named('processResources', ProcessResources).configure {
