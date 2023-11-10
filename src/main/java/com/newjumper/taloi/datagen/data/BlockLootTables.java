@@ -56,11 +56,11 @@ public class BlockLootTables extends BlockLootSubProvider {
         this.add(TaloiBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), this::createSlabItemTable);
         this.dropSelf(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get());
         this.add(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), this::createSlabItemTable);
-        /*this.dropSelf(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS.get());
         this.add(TaloiBlocks.STRIPPED_MANGROVE_WOOD_SLAB.get(), this::createSlabItemTable);
         this.dropSelf(TaloiBlocks.STRIPPED_CHERRY_WOOD_STAIRS.get());
         this.add(TaloiBlocks.STRIPPED_CHERRY_WOOD_SLAB.get(), this::createSlabItemTable);
-        */this.dropSelf(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get());
+        this.dropSelf(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get());
         this.add(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), this::createSlabItemTable);
         this.dropSelf(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get());
         this.add(TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), this::createSlabItemTable);

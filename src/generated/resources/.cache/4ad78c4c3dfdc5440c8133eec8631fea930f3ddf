@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-06T21:58:36.4339872	Item Models: taloi
+// 1.20.1	2023-11-09T21:31:46.1836653	Item Models: taloi
 8f9bb9ae24840e4beb06d9e19c2d588ac1edba2d assets/taloi/models/item/acacia_wood_slab.json
 51a161fe529e9dcc2b1f332b04016fdfee2bd750 assets/taloi/models/item/acacia_wood_stairs.json
 ca3c7cac645a0e2de649438c98cafbb92585dceb assets/taloi/models/item/birch_wood_slab.json
@@ -77,12 +77,16 @@ b023d18823e85d9f50e02599f04794a3afbaf9d9 assets/taloi/models/item/spruce_wood_st
 19f22d28e8f1fbe796198952beed478311292dee assets/taloi/models/item/stripped_acacia_wood_stairs.json
 f7c7aa45740433f873c0485ccb8685cd9bf067c2 assets/taloi/models/item/stripped_birch_wood_slab.json
 c7b36950ed1a5b4eb7cc0eafe505a2cfe1ed5e0d assets/taloi/models/item/stripped_birch_wood_stairs.json
+d43c7dae54639a15ed4a51e82fa4e35716203088 assets/taloi/models/item/stripped_cherry_wood_slab.json
+a37447d294c077eb6320936a01a2e2d6ed1b8285 assets/taloi/models/item/stripped_cherry_wood_stairs.json
 9f8e1b9db12186b961024725e0cc1a2afe1769e5 assets/taloi/models/item/stripped_crimson_hyphae_slab.json
 4c09c4c9bc8dd6c2b4d84b1a738693b07a64f0c0 assets/taloi/models/item/stripped_crimson_hyphae_stairs.json
 7db8c37a531fcfe1b8b9f59be62d24d8320bbb03 assets/taloi/models/item/stripped_dark_oak_wood_slab.json
 a3d569cdb625406072b0f68c9aee0a1fba7e3082 assets/taloi/models/item/stripped_dark_oak_wood_stairs.json
 39e6b6f00109e25317422c309f8fcf5deafe08ae assets/taloi/models/item/stripped_jungle_wood_slab.json
 0ac433d7cb650bd4125d450797e6dca46fac6e5f assets/taloi/models/item/stripped_jungle_wood_stairs.json
+c192a3ec7cb254523eaf38facadc0bdca7b5c9ff assets/taloi/models/item/stripped_mangrove_wood_slab.json
+b7f651777f0dc400e94e08d22d375a2c071bc137 assets/taloi/models/item/stripped_mangrove_wood_stairs.json
 b2799ad3e51efa797fb664985b88f65f14d5f4ec assets/taloi/models/item/stripped_oak_wood_slab.json
 fc89f217b5f18b2d5b0386f3b0549adf9bf2fea2 assets/taloi/models/item/stripped_oak_wood_stairs.json
 25e32de7f44e671e96d956c4ba6bc4f81c261d16 assets/taloi/models/item/stripped_spruce_wood_slab.json

@@ -52,11 +52,11 @@ public class TaloiBlockStateProvider extends BlockStateProvider {
         slabBlock(TaloiBlocks.STRIPPED_ACACIA_WOOD_SLAB.get(), mcLoc(Blocks.STRIPPED_ACACIA_WOOD), mcLoc(Blocks.STRIPPED_ACACIA_LOG));
         stairsBlock(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS.get(), mcLoc(Blocks.STRIPPED_DARK_OAK_LOG));
         slabBlock(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_SLAB.get(), mcLoc(Blocks.STRIPPED_DARK_OAK_WOOD), mcLoc(Blocks.STRIPPED_DARK_OAK_LOG));
-        /*stairsBlock(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS.get(), mcLoc(Blocks.STRIPPED_MANGROVE_LOG));
+        stairsBlock(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS.get(), mcLoc(Blocks.STRIPPED_MANGROVE_LOG));
         slabBlock(TaloiBlocks.STRIPPED_MANGROVE_WOOD_SLAB.get(), mcLoc(Blocks.STRIPPED_MANGROVE_WOOD), mcLoc(Blocks.STRIPPED_MANGROVE_LOG));
         stairsBlock(TaloiBlocks.STRIPPED_CHERRY_WOOD_STAIRS.get(), mcLoc(Blocks.STRIPPED_CHERRY_LOG));
         slabBlock(TaloiBlocks.STRIPPED_CHERRY_WOOD_SLAB.get(), mcLoc(Blocks.STRIPPED_CHERRY_WOOD), mcLoc(Blocks.STRIPPED_CHERRY_LOG));
-        */stairsBlock(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get(), mcLoc(Blocks.STRIPPED_CRIMSON_STEM));
+        stairsBlock(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS.get(), mcLoc(Blocks.STRIPPED_CRIMSON_STEM));
         slabBlock(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB.get(), mcLoc(Blocks.STRIPPED_CRIMSON_HYPHAE), mcLoc(Blocks.STRIPPED_CRIMSON_STEM));
         stairsBlock(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS.get(), mcLoc(Blocks.STRIPPED_WARPED_STEM));
         slabBlock(TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB.get(), mcLoc(Blocks.STRIPPED_WARPED_HYPHAE), mcLoc(Blocks.STRIPPED_WARPED_STEM));

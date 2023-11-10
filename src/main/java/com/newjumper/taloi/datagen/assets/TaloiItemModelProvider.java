@@ -48,11 +48,11 @@ public class TaloiItemModelProvider extends ItemModelProvider {
         blockModel(TaloiBlocks.STRIPPED_ACACIA_WOOD_SLAB);
         blockModel(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_STAIRS);
         blockModel(TaloiBlocks.STRIPPED_DARK_OAK_WOOD_SLAB);
-        /*blockModel(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS);
+        blockModel(TaloiBlocks.STRIPPED_MANGROVE_WOOD_STAIRS);
         blockModel(TaloiBlocks.STRIPPED_MANGROVE_WOOD_SLAB);
         blockModel(TaloiBlocks.STRIPPED_CHERRY_WOOD_STAIRS);
         blockModel(TaloiBlocks.STRIPPED_CHERRY_WOOD_SLAB);
-        */blockModel(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS);
+        blockModel(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_STAIRS);
         blockModel(TaloiBlocks.STRIPPED_CRIMSON_HYPHAE_SLAB);
         blockModel(TaloiBlocks.STRIPPED_WARPED_HYPHAE_STAIRS);
         blockModel(TaloiBlocks.STRIPPED_WARPED_HYPHAE_SLAB);
