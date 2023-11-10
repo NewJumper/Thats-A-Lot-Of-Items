@@ -1,11 +1,13 @@
-// 1.20.1	2023-11-09T21:31:46.2021747	Tags for minecraft:block mod id taloi
-f6a6bdb83b6b93756215c5e9f89f11adb9c95874 data/minecraft/tags/blocks/logs_that_burn.json
-f389eecd0a27612eeb2f7f05561eccd2bbd93bee data/minecraft/tags/blocks/mineable/axe.json
+// 1.20.1	2023-11-09T22:29:47.962891	Tags for minecraft:block mod id taloi
+70fb5471718dba97674ab5c9bcab86859e01a238 data/minecraft/tags/blocks/logs_that_burn.json
+50894269d78600758b6d228deb98e1c5814b55b4 data/minecraft/tags/blocks/mineable/axe.json
 7e2b58acb2c4537b5689ef7adff5c523b07ac7d0 data/minecraft/tags/blocks/slabs.json
 af024bcb67ca45dd82b5316f0ec4cfad86159f19 data/minecraft/tags/blocks/stairs.json
-24517fd843343e83e72c51a5f4a824a024aa7a92 data/minecraft/tags/blocks/wooden_slabs.json
-981c7152e1b3b72564158c5e344d4bf4d7db5726 data/minecraft/tags/blocks/wooden_stairs.json
+d04722cb8abd269f3cd6c5e6b16967571266352a data/minecraft/tags/blocks/wooden_slabs.json
+d23e4f08969733367d234db7f97f2185447e5a54 data/minecraft/tags/blocks/wooden_stairs.json
 5f51aad5996b10eace146879ae265fcf826f17a5 data/taloi/tags/blocks/concrete_slabs.json
 61328059dfb130ff79ac8000637414a2aa9b250d data/taloi/tags/blocks/concrete_stairs.json
 23d16976a94040ac330c086004c05f726683d2be data/taloi/tags/blocks/terracotta_slabs.json
 b0ac9873012e6fa1efac22d4b57c1bb6421d2bff data/taloi/tags/blocks/terracotta_stairs.json
+24517fd843343e83e72c51a5f4a824a024aa7a92 data/taloi/tags/blocks/wood_slabs.json
+981c7152e1b3b72564158c5e344d4bf4d7db5726 data/taloi/tags/blocks/wood_stairs.json

@@ -27,6 +27,8 @@ public class TaloiItemTagsProvider extends ItemTagsProvider {
         copy(BlockTags.STAIRS, ItemTags.STAIRS);
         copy(BlockTags.SLABS, ItemTags.SLABS);
 
+        copy(TaloiTags.Blocks.WOOD_STAIRS, TaloiTags.Items.WOOD_STAIRS);
+        copy(TaloiTags.Blocks.WOOD_SLABS, TaloiTags.Items.WOOD_SLABS);
         copy(TaloiTags.Blocks.CONCRETE_STAIRS, TaloiTags.Items.CONCRETE_STAIRS);
         copy(TaloiTags.Blocks.CONCRETE_SLABS, TaloiTags.Items.CONCRETE_SLABS);
         copy(TaloiTags.Blocks.TERRACOTTA_STAIRS, TaloiTags.Items.TERRACOTTA_STAIRS);

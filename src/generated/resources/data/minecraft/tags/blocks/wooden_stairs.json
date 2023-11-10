@@ -1,20 +1,5 @@
 {
   "values": [
-    "taloi:oak_wood_stairs",
-    "taloi:spruce_wood_stairs",
-    "taloi:birch_wood_stairs",
-    "taloi:jungle_wood_stairs",
-    "taloi:acacia_wood_stairs",
-    "taloi:dark_oak_wood_stairs",
-    "taloi:mangrove_wood_stairs",
-    "taloi:cherry_wood_stairs",
-    "taloi:stripped_oak_wood_stairs",
-    "taloi:stripped_spruce_wood_stairs",
-    "taloi:stripped_birch_wood_stairs",
-    "taloi:stripped_jungle_wood_stairs",
-    "taloi:stripped_acacia_wood_stairs",
-    "taloi:stripped_dark_oak_wood_stairs",
-    "taloi:stripped_mangrove_wood_stairs",
-    "taloi:stripped_cherry_wood_stairs"
+    "#taloi:wood_stairs"
   ]
 }
